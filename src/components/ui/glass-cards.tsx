@@ -1,269 +1,181 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Link from 'next/link';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 import {
-  Code2, Smartphone, TrendingUp, Server,
-  Zap, Users, Lightbulb, ArrowRight, type LucideIcon,
-} from 'lucide-react';
-import { cardData } from '@/lib/utils';
+  ArrowRight,
+  Code2,
+  Lightbulb,
+  Server,
+  Smartphone,
+  TrendingUp,
+  Users,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const iconMap: Record<number, LucideIcon> = {
-  1: Code2,
-  2: Smartphone,
-  3: TrendingUp,
-  4: Server,
-  5: Zap,
-  6: Users,
-  7: Lightbulb,
-};
-
-interface CardProps {
+type WhatWeDoCard = {
   id: number;
   title: string;
   description: string;
+  href: string;
+  icon: LucideIcon;
+};
+
+const whatWeDoCards: WhatWeDoCard[] = [
+  {
+    id: 1,
+    title: "Web & Software Development",
+    description:
+      "Custom web platforms, SaaS products, and internal tools engineered for performance, usability, and long-term scale.",
+    href: "/services/web-development",
+    icon: Code2,
+  },
+  {
+    id: 2,
+    title: "Mobile App Development",
+    description:
+      "Native and cross-platform mobile experiences that help customers and teams get things done from anywhere.",
+    href: "/services/mobile-app-development",
+    icon: Smartphone,
+  },
+  {
+    id: 3,
+    title: "Digital Growth & SEO",
+    description:
+      "Search, content, analytics, and conversion systems that make your digital presence easier to discover and act on.",
+    href: "/services/digital-marketing",
+    icon: TrendingUp,
+  },
+  {
+    id: 4,
+    title: "Cloud Infrastructure",
+    description:
+      "Reliable hosting, deployment pipelines, monitoring, and cloud architecture built for secure everyday operations.",
+    href: "/services/hosting-infrastructure",
+    icon: Server,
+  },
+  {
+    id: 5,
+    title: "Workflow Automation",
+    description:
+      "Smart automations that connect tools, reduce manual effort, and keep important business processes moving.",
+    href: "/services/automation",
+    icon: Zap,
+  },
+  {
+    id: 6,
+    title: "Customer Experience",
+    description:
+      "Connected CRM, support, and communication systems that turn every customer touchpoint into a better experience.",
+    href: "/services/customer-exp-management",
+    icon: Users,
+  },
+  {
+    id: 7,
+    title: "Technology Consulting",
+    description:
+      "Practical technical guidance for architecture, vendor choices, delivery planning, and ongoing technology decisions.",
+    href: "/services/it-consulting-it-services",
+    icon: Lightbulb,
+  },
+];
+
+function Card({ card, index, totalCards }: {
+  card: WhatWeDoCard;
   index: number;
   totalCards: number;
-  color: string;
-  href: string;
-}
-
-const Card: React.FC<CardProps> = ({ id, title, description, index, totalCards, color, href }) => {
+}) {
   const cardRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const Icon = iconMap[id];
+  const Icon = card.icon;
 
   useEffect(() => {
-    const card = cardRef.current;
+    const cardElement = cardRef.current;
     const container = containerRef.current;
-    if (!card || !container) return;
+    if (!cardElement || !container) return;
 
     const targetScale = 1 - (totalCards - index) * 0.05;
 
-    gsap.set(card, {
+    gsap.set(cardElement, {
       scale: 1,
-      transformOrigin: 'center top',
+      transformOrigin: "center top",
     });
 
     const trigger = ScrollTrigger.create({
       trigger: container,
-      start: 'top center',
-      end: 'bottom center',
+      start: "top center",
+      end: "bottom center",
       scrub: 1,
       onUpdate: (self) => {
-        const progress = self.progress;
-        const scale = gsap.utils.interpolate(1, targetScale, progress);
-        gsap.set(card, {
+        const scale = gsap.utils.interpolate(1, targetScale, self.progress);
+        gsap.set(cardElement, {
           scale: Math.max(scale, targetScale),
-          transformOrigin: 'center top',
+          transformOrigin: "center top",
         });
       },
     });
 
-    return () => {
-      trigger.kill();
-    };
+    return () => trigger.kill();
   }, [index, totalCards]);
 
   return (
     <div
       ref={containerRef}
-      style={{
-        height: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'sticky',
-        top: 0,
-      }}
+      className="sticky top-0 flex h-screen items-center justify-center"
     >
       <div
         ref={cardRef}
+        className="relative h-[450px] w-full overflow-hidden rounded-3xl border border-stone-200/80 bg-white/80 p-7 shadow-[0_26px_90px_rgba(15,23,42,0.14)] backdrop-blur-xl md:p-9"
         style={{
-          position: 'relative',
-          width: '70%',
-          height: '450px',
-          borderRadius: '24px',
-          isolation: 'isolate',
           top: `calc(-5vh + ${index * 25}px)`,
-          transformOrigin: 'top',
+          isolation: "isolate",
+          transformOrigin: "top",
         }}
       >
-        {/* Electric Border */}
         <div
+          className="pointer-events-none absolute inset-0"
           style={{
-            position: 'absolute',
-            inset: '-3px',
-            borderRadius: '27px',
-            padding: '3px',
-            background: `conic-gradient(
-              from 0deg,
-              transparent 0deg,
-              ${color} 60deg,
-              ${color.replace('0.8', '0.6')} 120deg,
-              transparent 180deg,
-              ${color.replace('0.8', '0.4')} 240deg,
-              transparent 360deg
-            )`,
-            zIndex: -1,
+            background:
+              "linear-gradient(135deg, rgba(255,255,255,0.95), rgba(210,247,255,0.18) 52%, rgba(255,255,255,0.75))",
           }}
+          aria-hidden="true"
         />
-
-        {/* Main Card Content */}
         <div
-          style={{
-            position: 'relative',
-            width: '100%',
-            height: '100%',
-            borderRadius: '24px',
-            background: `linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))`,
-            backdropFilter: 'blur(25px) saturate(180%)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            boxShadow: `
-              0 8px 32px rgba(0,0,0,0.3),
-              0 2px 8px rgba(0,0,0,0.2),
-              inset 0 1px 0 rgba(255,255,255,0.3),
-              inset 0 -1px 0 rgba(255,255,255,0.1)
-            `,
-            overflow: 'hidden',
-          }}
-        >
-          {/* Glass reflection overlay */}
-          <div
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              height: '60%',
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.1) 50%, transparent 100%)',
-              pointerEvents: 'none',
-              borderRadius: '24px 24px 0 0',
-            }}
-          />
-          {/* Glass shine */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '10px',
-              left: '10px',
-              right: '10px',
-              height: '2px',
-              background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%)',
-              borderRadius: '1px',
-              pointerEvents: 'none',
-            }}
-          />
-          {/* Side reflection */}
-          <div
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '2px',
-              height: '100%',
-              background: 'linear-gradient(180deg, rgba(255,255,255,0.3) 0%, transparent 50%)',
-              borderRadius: '24px 0 0 24px',
-              pointerEvents: 'none',
-            }}
-          />
-          {/* Frosted texture */}
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              backgroundImage: `
-                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 1px, transparent 2px),
-                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 1px, transparent 2px),
-                radial-gradient(circle at 40% 80%, rgba(255,255,255,0.06) 1px, transparent 2px)
-              `,
-              backgroundSize: '30px 30px, 25px 25px, 35px 35px',
-              pointerEvents: 'none',
-              borderRadius: '24px',
-              opacity: 0.7,
-            }}
-          />
+          className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent"
+          aria-hidden="true"
+        />
+        <span className="pointer-events-none absolute right-8 top-6 font-display text-6xl font-bold leading-none text-stone-200 md:text-7xl">
+          {String(card.id).padStart(2, "0")}
+        </span>
 
-          {/* Card Content */}
-          <div
-            style={{
-              position: 'relative',
-              zIndex: 2,
-              padding: '2.5rem 3rem',
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-            }}
-          >
-            {Icon && (
-              <div
-                style={{
-                  width: 48,
-                  height: 48,
-                  borderRadius: 12,
-                  background: 'rgba(255,255,255,0.15)',
-                  border: '1px solid rgba(255,255,255,0.25)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: '1.5rem',
-                  color: '#ffffff',
-                  flexShrink: 0,
-                }}
-              >
-                <Icon size={22} />
-              </div>
-            )}
-            <h3
-              style={{
-                fontSize: 'clamp(1.25rem, 2vw, 1.5rem)',
-                fontWeight: 700,
-                color: '#ffffff',
-                marginBottom: '0.75rem',
-                lineHeight: 1.2,
-              }}
-            >
-              {title}
-            </h3>
-            <p
-              style={{
-                fontSize: '1rem',
-                color: 'rgba(255,255,255,0.7)',
-                lineHeight: 1.65,
-                marginBottom: '2rem',
-                maxWidth: '520px',
-              }}
-            >
-              {description}
-            </p>
-            <Link
-              href={href}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.375rem',
-                fontSize: '13px',
-                fontWeight: 600,
-                color: 'rgba(220, 200, 255, 1)',
-                textDecoration: 'none',
-                transition: 'gap 0.15s ease',
-              }}
-            >
-              Explore <ArrowRight size={13} />
-            </Link>
+        <div className="relative z-10 max-w-2xl">
+          <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#D2F7FF] bg-[#D2F7FF]/45 text-[#487F89] shadow-[0_12px_36px_rgba(72,127,137,0.16)]">
+            <Icon size={24} aria-hidden="true" />
           </div>
+          <h3 className="font-display text-2xl font-semibold leading-tight text-[#0F172A] md:text-3xl">
+            {card.title}
+          </h3>
+          <p className="mt-4 text-base leading-7 text-stone-600 md:text-lg">
+            {card.description}
+          </p>
+          <Link
+            href={card.href}
+            className="mt-8 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white/75 px-4 py-2 text-sm font-semibold text-[#487F89] shadow-sm transition hover:-translate-y-0.5 hover:border-[#D2F7FF] hover:bg-white"
+          >
+            Explore <ArrowRight size={14} aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </div>
   );
-};
+}
 
-export const StackedCards: React.FC = () => {
+export function StackedCards() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -273,24 +185,27 @@ export const StackedCards: React.FC = () => {
     gsap.fromTo(
       container,
       { opacity: 0 },
-      { opacity: 1, duration: 1.2, ease: 'power2.out' }
+      { opacity: 1, duration: 0.8, ease: "power2.out" }
     );
+
+    ScrollTrigger.refresh();
   }, []);
 
   return (
-    <div ref={containerRef} style={{ background: '#0a0a0a' }}>
-      {cardData.map((card, index) => (
-        <Card
-          key={card.id}
-          id={card.id}
-          title={card.title}
-          description={card.description}
-          index={index}
-          totalCards={cardData.length}
-          color={card.color}
-          href={card.href}
-        />
-      ))}
+    <div
+      ref={containerRef}
+      className="relative min-h-[520vh] pb-24"
+    >
+      <div className="relative">
+        {whatWeDoCards.map((card, index) => (
+          <Card
+            key={card.id}
+            card={card}
+            index={index}
+            totalCards={whatWeDoCards.length}
+          />
+        ))}
+      </div>
     </div>
   );
-};
+}
