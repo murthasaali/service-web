@@ -198,7 +198,54 @@
   50%       { opacity: 0.28; }
 }
 
+@keyframes float-tech {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+
+@keyframes spark-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
 @layer utilities {
+  .animate-spark-border {
+    animation: spark-border calc(var(--duration) * 1s) linear infinite;
+  }
+
+  .animate-sparkle {
+    animation: sparkle 1.8s ease-in-out infinite;
+  }
+
+  .animate-shine-sweep {
+    animation: shine-sweep 1s ease-out;
+  }
+
   /* Amethyst gradient text — hero accent word(s) ONLY */
   .gradient-text {
     @apply bg-clip-text text-transparent;

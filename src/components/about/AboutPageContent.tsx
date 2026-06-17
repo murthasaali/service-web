@@ -52,23 +52,6 @@ const whyUs = [
   { icon: Target, title: "Outcomes, Not Activity",   desc: "We are measured on results, not effort. Every engagement begins with clearly agreed success metrics — and we are held accountable to those, not to a statement of hours worked." },
 ];
 
-// ─── Avatar helper ────────────────────────────────────────────────────────────
-
-function Avatar({ initials, size }: { initials: string; size: number }) {
-  return (
-    <div
-      className="rounded-full text-white font-bold flex items-center justify-center shrink-0"
-      style={{
-        width: size, height: size, fontSize: size * 0.32,
-        background: "linear-gradient(120deg, #6D28D9, #A21CAF)",
-      }}
-      aria-hidden="true"
-    >
-      {initials}
-    </div>
-  );
-}
-
 // ─── Team photo banner ────────────────────────────────────────────────────────
 
 function TeamPhotoBanner() {
