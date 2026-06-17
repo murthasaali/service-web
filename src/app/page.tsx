@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import GlobalPresence from "@/components/sections/GlobalPresence";
 import HowWeWork from "@/components/sections/HowWeWork";
 import Testimonials from "@/components/sections/Testimonials";
 import CTABanner from "@/components/sections/CTABanner";
@@ -28,6 +29,7 @@ export default function Home() {
         <HeroSection />
         <ServicesGrid />
         <WhyChooseUs />
+        <GlobalPresence />
         <HowWeWork />
         <Testimonials />
         <CTABanner />
