@@ -96,7 +96,10 @@ export default function HowWeWork() {
 				<div className='grid gap-10 items-start'>
 					<AnimatedSection>
 						<div className='rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm'>
-							<RadialOrbitalTimeline timelineData={timelineData} theme="light" />
+							<RadialOrbitalTimeline
+								timelineData={timelineData}
+								theme='light'
+							/>
 						</div>
 					</AnimatedSection>
 				</div>
