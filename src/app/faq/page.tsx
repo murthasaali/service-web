@@ -7,7 +7,7 @@ import FAQAccordion from "./FAQAccordion";
 
 const faqs = [
   {
-    question: "What type of technology services does space-ai provide?",
+    question: "What type of technology services does aibizmode provide?",
     answer:
       "We help businesses with web platforms, mobile apps, cloud infrastructure, automation, digital marketing, customer experience systems, and IT consulting.",
   },
@@ -77,7 +77,7 @@ const faqs = [
       "Yes. We can support SEO, analytics setup, campaign landing pages, conversion tracking, content direction, and performance-focused improvements.",
   },
   {
-    question: "How can we contact space-ai to discuss a project?",
+    question: "How can we contact aibizmode to discuss a project?",
     answer:
       "You can use the contact page to share your goals, timeline, and project details. The team will review it and get back with the next practical step.",
   },
@@ -86,11 +86,11 @@ const faqs = [
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Answers to common questions about space-ai technology services, delivery process, support, automation, and product development.",
+    "Answers to common questions about aibizmode technology services, delivery process, support, automation, and product development.",
   openGraph: {
-    title: "FAQ | space-ai",
+    title: "FAQ | aibizmode",
     description:
-      "Answers to common questions about space-ai technology services, delivery process, support, automation, and product development.",
+      "Answers to common questions about aibizmode technology services, delivery process, support, automation, and product development.",
     url: "/faq",
   },
 };
@@ -120,7 +120,7 @@ export default function FAQPage() {
               style={{ fontSize: "clamp(38px, 6vw, 72px)", lineHeight: 1.02 }}
             >
               Questions about building with{" "}
-              <span className="gradient-text font-normal">space-ai</span>
+              <span className="gradient-text font-normal">aibizmode</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
               Clear answers about our process, services, support, and how we
