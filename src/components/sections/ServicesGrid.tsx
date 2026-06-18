@@ -22,11 +22,11 @@ export default function ServicesGrid() {
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
         <div className="lg:sticky lg:top-28">
           <AnimatedSection>
-            <span className="text-sm font-semibold uppercase tracking-[0.16em] text-[#487F89]">
+            <span className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
               What We Do
             </span>
             <h2
-              className="mt-5 font-display font-bold text-[#0F172A] text-balance"
+              className="mt-5 font-display font-bold text-primary text-balance"
               style={{
                 fontSize: "clamp(34px, 5vw, 56px)",
                 lineHeight: 1.1,
@@ -42,16 +42,6 @@ export default function ServicesGrid() {
               here. We add value with services that simplify workflows, improve
               efficiency, and strengthen your decisions.
             </p>
-            <div className="mt-8 grid grid-cols-3 gap-3 max-w-md">
-              {["Build", "Connect", "Scale"].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-2xl border border-stone-200 bg-white/65 px-4 py-3 text-center text-sm font-semibold text-[#0F172A] shadow-sm backdrop-blur"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
           </AnimatedSection>
         </div>
 

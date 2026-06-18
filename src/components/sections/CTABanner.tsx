@@ -31,22 +31,20 @@ export default function CTABanner() {
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <AnimatedSection>
 
-          {/* Gold eyebrow label */}
+          {/* Eyebrow label */}
           <span
             className="inline-flex items-center gap-1.5 text-label font-semibold uppercase tracking-widest mb-6"
             style={{ color: "#B8860B" }}
           >
-            <span aria-hidden="true">✦</span>
             Start Today
           </span>
 
-          {/* Gradient headline */}
+          {/* Headline */}
           <h2
             className="font-display font-bold text-white text-balance"
             style={{
               fontSize: "clamp(32px, 4.5vw, 52px)",
               lineHeight: 1.08,
-              letterSpacing: "-0.02em",
             }}
           >
             Ready to Build Something{" "}

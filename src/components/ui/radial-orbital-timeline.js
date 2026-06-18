@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports, @typescript-eslint/no-unused-vars */
 "use client";
 "use strict";
 var __assign = (this && this.__assign) || function () {

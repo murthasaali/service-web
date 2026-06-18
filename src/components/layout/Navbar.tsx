@@ -71,10 +71,11 @@ const navLinks = [
   { label: "Blog",     href: "/blog" },
   { label: "About",    href: "/about" },
   { label: "Contact",  href: "/contact" },
+  { label: "FAQ",      href: "/faq" },
 ];
 
 const springTransition = {
-  type: "spring",
+  type: "spring" as const,
   stiffness: 140,
   damping: 22,
   mass: 1.1,
@@ -150,13 +151,13 @@ export default function Navbar() {
         >
           <Link
             href="/"
-            aria-label="space-ai — go to home"
+            aria-label="aibizmode — go to home"
             className={`font-display font-bold text-[19px] tracking-tight select-none rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 transition-colors duration-300 ${
               scrolled ? "text-white" : "text-ink"
             }`}
           >
-            <span>space</span>
-            <span className="text-cyan-400">-ai</span>
+            <span>aibiz</span>
+            <span className="text-cyan-400">mode</span>
           </Link>
         </motion.div>
 
@@ -334,7 +335,9 @@ export default function Navbar() {
                         className="focus-visible:outline-none rounded-full"
                       >
                         <div
-                          className="relative flex items-center justify-center transition-all duration-300 rounded-full text-muted-foreground hover:text-ink px-4 py-2 text-[13px] font-medium"
+                          className={`relative flex flex-col items-center justify-center transition-all duration-300 rounded-full px-4 py-2 text-[13px] font-medium ${
+                            active ? "text-royal-deep font-semibold" : "text-muted-foreground hover:text-ink"
+                          }`}
                         >
                           {/* Shared hover background tab */}
                           {hoveredIndex === index && (
@@ -345,6 +348,16 @@ export default function Navbar() {
                             />
                           )}
                           <span className="relative z-10">{item.label}</span>
+                          {/* Active dot */}
+                          {active && (
+                            <motion.span
+                              layoutId="nav-active-dot"
+                              className="mt-0.5 h-[3px] w-[3px] rounded-full bg-[#0891B2]"
+                              initial={{ opacity: 0, scale: 0 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ type: "spring", stiffness: 400, damping: 28 }}
+                            />
+                          )}
                         </div>
                       </Link>
                     </motion.li>
@@ -362,7 +375,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   aria-current={active ? "page" : undefined}
-                  className={`relative text-[13px] font-medium px-4 py-2 transition-colors duration-300 rounded-full focus-visible:outline-none ${
+                  className={`relative flex flex-col items-center text-[13px] font-medium px-4 py-2 transition-colors duration-300 rounded-full focus-visible:outline-none ${
                     scrolled
                       ? active
                         ? "text-cyan-400 font-semibold"
@@ -385,6 +398,18 @@ export default function Navbar() {
                     />
                   )}
                   <span className="relative z-10">{item.label}</span>
+                  {/* Active dot */}
+                  {active && (
+                    <motion.span
+                      layoutId="nav-active-dot"
+                      className={`mt-0.5 h-[3px] w-[3px] rounded-full ${
+                        scrolled ? "bg-cyan-400" : "bg-[#0891B2]"
+                      }`}
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 28 }}
+                    />
+                  )}
                 </Link>
               </li>
             );

@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
 import {
   ArrowRight,
   Code2,
@@ -15,6 +14,7 @@ import {
   Zap,
   type LucideIcon,
 } from "lucide-react";
+import { StarButton } from "@/components/ui/star-button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,7 +130,7 @@ function Card({ card, index, totalCards }: {
     >
       <div
         ref={cardRef}
-        className="relative h-[450px] w-full overflow-hidden rounded-3xl border border-stone-200/80 bg-white/80 p-7 shadow-[0_26px_90px_rgba(15,23,42,0.14)] backdrop-blur-xl md:p-9"
+        className="relative h-[320px] w-full overflow-hidden rounded-3xl border border-stone-200/80 bg-white/80 p-6 shadow-[0_26px_90px_rgba(15,23,42,0.14)] backdrop-blur-xl md:p-8"
         style={{
           top: `calc(-5vh + ${index * 25}px)`,
           isolation: "isolate",
@@ -149,12 +149,12 @@ function Card({ card, index, totalCards }: {
           className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent"
           aria-hidden="true"
         />
-        <span className="pointer-events-none absolute right-8 top-6 font-display text-6xl font-bold leading-none text-stone-200 md:text-7xl">
+        <span className="pointer-events-none absolute right-8 top-6 font-display text-6xl font-bold leading-none text-[#0F172A]/15 md:text-7xl">
           {String(card.id).padStart(2, "0")}
         </span>
 
         <div className="relative z-10 max-w-2xl">
-          <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#D2F7FF] bg-[#D2F7FF]/45 text-[#487F89] shadow-[0_12px_36px_rgba(72,127,137,0.16)]">
+          <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#D2F7FF] bg-[#D2F7FF]/45 text-[#487F89] shadow-[0_12px_36px_rgba(72,127,137,0.16)]">
             <Icon size={24} aria-hidden="true" />
           </div>
           <h3 className="font-display text-2xl font-semibold leading-tight text-[#0F172A] md:text-3xl">
@@ -163,12 +163,15 @@ function Card({ card, index, totalCards }: {
           <p className="mt-4 text-base leading-7 text-stone-600 md:text-lg">
             {card.description}
           </p>
-          <Link
-            href={card.href}
-            className="mt-8 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white/75 px-4 py-2 text-sm font-semibold text-[#487F89] shadow-sm transition hover:-translate-y-0.5 hover:border-[#D2F7FF] hover:bg-white"
+          <StarButton
+            as="span"
+            lightColor="#38bdf8"
+            backgroundColor="#0f172a"
+            className="mt-4 h-11 font-semibold shadow-[0_0_12px_rgba(56,189,248,0.25)] hover:shadow-[0_0_20px_rgba(6,182,212,0.55),0_0_4px_rgba(56,189,248,0.7)] transition hover:-translate-y-0.5 duration-300 cursor-pointer"
+            onClick={() => { window.location.href = card.href; }}
           >
             Explore <ArrowRight size={14} aria-hidden="true" />
-          </Link>
+          </StarButton>
         </div>
       </div>
     </div>

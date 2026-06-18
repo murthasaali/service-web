@@ -4,18 +4,18 @@ import AnimatedSection from "@/components/common/AnimatedSection";
 import { Globe } from "@/components/ui/Globe";
 
 const markers = [
-  { id: "nyc", label: "New York", location: [40.7128, -74.006] },
-  { id: "ldn", label: "London", location: [51.5074, -0.1278] },
-  { id: "blr", label: "Bengaluru", location: [12.9716, 77.5946] },
-  { id: "sgp", label: "Singapore", location: [1.3521, 103.8198] },
-  { id: "syd", label: "Sydney", location: [-33.8688, 151.2093] },
+  { id: "nyc", label: "New York", location: [40.7128, -74.006] as [number, number] },
+  { id: "ldn", label: "London", location: [51.5074, -0.1278] as [number, number] },
+  { id: "blr", label: "Bengaluru", location: [12.9716, 77.5946] as [number, number] },
+  { id: "sgp", label: "Singapore", location: [1.3521, 103.8198] as [number, number] },
+  { id: "syd", label: "Sydney", location: [-33.8688, 151.2093] as [number, number] },
 ];
 
 const arcs = [
-  { id: "nyc-ldn", from: [40.7128, -74.006], to: [51.5074, -0.1278], label: "NY → LD" },
-  { id: "ldn-blr", from: [51.5074, -0.1278], to: [12.9716, 77.5946], label: "LD → BLR" },
-  { id: "blr-sgp", from: [12.9716, 77.5946], to: [1.3521, 103.8198], label: "BLR → SG" },
-  { id: "sgp-syd", from: [1.3521, 103.8198], to: [-33.8688, 151.2093], label: "SG → SYD" },
+  { id: "nyc-ldn", from: [40.7128, -74.006] as [number, number], to: [51.5074, -0.1278] as [number, number], label: "NY → LD" },
+  { id: "ldn-blr", from: [51.5074, -0.1278] as [number, number], to: [12.9716, 77.5946] as [number, number], label: "LD → BLR" },
+  { id: "blr-sgp", from: [12.9716, 77.5946] as [number, number], to: [1.3521, 103.8198] as [number, number], label: "BLR → SG" },
+  { id: "sgp-syd", from: [1.3521, 103.8198] as [number, number], to: [-33.8688, 151.2093] as [number, number], label: "SG → SYD" },
 ];
 
 export default function GlobalPresence() {
@@ -24,13 +24,14 @@ export default function GlobalPresence() {
       <div className="max-w-7xl mx-auto">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
           <AnimatedSection>
-            <span className="eyebrow">✦Global Presence</span>
+            <span className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
+              Global Presence
+            </span>
             <h2
-              className="mt-6 font-display font-bold text-ink text-balance"
+              className="mt-5 font-display font-bold text-primary text-balance"
               style={{
                 fontSize: "clamp(30px, 4vw, 42px)",
                 lineHeight: 1.08,
-                letterSpacing: "-0.02em",
               }}
             >
               Interactive footprint across every major market.

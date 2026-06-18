@@ -51,7 +51,10 @@ export default function Services() {
     <section id="services" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-5xl font-bold">
+          <span className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
+            What We Build
+          </span>
+          <h2 className="mt-5 font-heading text-3xl md:text-5xl font-bold text-primary">
             What we <span className="gradient-text">build</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">

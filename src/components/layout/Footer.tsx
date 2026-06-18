@@ -1,5 +1,17 @@
+"use client";
+
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
+import React, { useState } from "react";
+import { Phone, MapPin, ArrowRight } from "lucide-react";
+import { StarButton } from "@/components/ui/star-button";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPinterestP,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const services = [
   { label: "Web & Software Development",   href: "/services/web-development" },
@@ -12,146 +24,278 @@ const services = [
 ];
 
 const company = [
-  { label: "About",           href: "/about" },
+  { label: "About Us",        href: "/about" },
   { label: "Blog",            href: "/blog" },
   { label: "Careers",         href: "/careers" },
+  { label: "FAQs",            href: "/faq" },
+];
+
+const legal = [
   { label: "Privacy Policy",  href: "/privacy" },
   { label: "Terms of Service",href: "/terms" },
 ];
 
-const social = [
+const socials = [
   {
     label: "LinkedIn",
     href: "https://linkedin.com",
-    svg: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width={18} height={18} aria-hidden="true">
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-        <rect x="2" y="9" width="4" height="12" />
-        <circle cx="4" cy="4" r="2" />
-      </svg>
-    ),
+    icon: FaLinkedinIn,
   },
   {
-    label: "GitHub",
-    href: "https://github.com",
-    svg: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width={18} height={18} aria-hidden="true">
-        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
-      </svg>
-    ),
+    label: "Instagram",
+    href: "https://instagram.com",
+    icon: FaInstagram,
   },
   {
-    label: "X / Twitter",
-    href: "https://twitter.com",
-    svg: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width={18} height={18} aria-hidden="true">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-      </svg>
-    ),
+    label: "Pinterest",
+    href: "https://pinterest.com",
+    icon: FaPinterestP,
+  },
+  {
+    label: "Facebook",
+    href: "https://facebook.com",
+    icon: FaFacebookF,
+  },
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/",
+    icon: FaWhatsapp,
+  },
+  {
+    label: "Email",
+    href: "mailto:hello@aibizmode.com",
+    icon: MdEmail,
   },
 ];
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setStatus("loading");
+    setTimeout(() => {
+      setStatus("success");
+      setEmail("");
+    }, 1000);
+  };
+
   return (
-    <footer className="bg-ink">
-      <div className="max-w-7xl mx-auto px-6 pt-16 pb-10">
+    <footer className="relative z-10 bg-black text-white/70 transition-colors duration-300">
+      {/* Start Today Section */}
+      <div className="max-w-7xl mx-auto px-6 border-b border-white/10 py-12 md:py-20">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-10">
+          <div className="max-w-3xl space-y-4">
+            <span className="text-[11.5px] font-bold uppercase tracking-[0.2em] text-[#22D3EE] block">
+              Start Today
+            </span>
+            <h2 className="font-display text-[32px] sm:text-[44px] md:text-[52px] leading-[1.05] tracking-tight text-white font-medium">
+              Ready to Build Something <span className="text-[#22D3EE] font-semibold">Remarkable?</span>
+            </h2>
+            <p className="font-sans text-[14px] sm:text-[16px] leading-[1.6] text-white/50 max-w-2xl">
+              We partner with ambitious companies to turn ideas into impactful digital products — on time and built to last.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-4 shrink-0">
+            <Link href="/contact" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded-3xl shrink-0">
+              <StarButton
+                lightColor="#22D3EE"
+                backgroundColor="#ffffff"
+                textColor="text-black"
+                className="font-sans font-semibold text-[11px] uppercase tracking-[0.2em]"
+              >
+                Start a Project
+                <ArrowRight className="h-4 w-4 group-hover/star-button:translate-x-1 transition-transform duration-300 text-black" />
+              </StarButton>
+            </Link>
+            <Link href="/services" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 rounded-3xl shrink-0">
+              <StarButton
+                lightColor="#FAFAFA"
+                backgroundColor="#ffffff"
+                textColor="text-black"
+                className="font-sans font-semibold text-[11px] uppercase tracking-[0.2em]"
+              >
+                View Services
+              </StarButton>
+            </Link>
+          </div>
+        </div>
+      </div>
 
-        {/* 4-column grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
-
-          {/* Col 1 — Logo + tagline */}
-          <div>
-            <span className="gold-rule-sm" aria-hidden="true" />
+      {/* Main Grid Section */}
+      <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+          {/* Brand & Inquiries Column */}
+          <div className="md:col-span-3 space-y-6">
             <Link
               href="/"
-              className="inline-block font-display font-bold text-[20px] tracking-tight select-none
-                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-1 focus-visible:ring-offset-ink rounded"
+              className="inline-block font-display font-bold text-[24px] tracking-tight select-none
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 rounded"
               style={{ color: "#CFFAFE" }}
             >
-              space<span style={{ color: "#22D3EE" }}>-ai</span>
+              aibiz<span style={{ color: "#22D3EE" }}>mode</span>
             </Link>
-            <p className="mt-4 text-[14px] leading-relaxed max-w-xs" style={{ color: "#94A3B8" }}>
-              Intelligent technology services that help businesses navigate the
-              AI-driven future with clarity and confidence.
+            <p className="font-sans text-[13px] leading-[1.7] text-white/60 max-w-[280px]">
+              aibizmode is a digital growth and intelligent technology firm — helping businesses navigate the AI-driven future, build stronger digital presence, and scale with confidence.
             </p>
-            <div className="mt-6 flex items-center gap-2">
-              {social.map(({ label, href, svg }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="footer-social"
-                >
-                  {svg}
-                </a>
-              ))}
+            <div className="pt-2">
+              <p className="font-sans text-[11px] text-white/40 uppercase tracking-widest mb-1.5">Inquiries</p>
+              <a
+                href="mailto:hello@aibizmode.com"
+                className="font-serif text-[20px] text-white hover:text-[#22D3EE] transition-colors font-semibold"
+              >
+                hello@aibizmode.com
+              </a>
             </div>
           </div>
 
-          {/* Col 2 — Services */}
-          <div>
-            <span className="footer-heading">Services</span>
-            <ul className="space-y-3">
-              {services.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href} className="footer-link">
-                    {item.label}
-                  </Link>
+          {/* Links Grid Column (6 out of 12) */}
+          <div className="md:col-span-6 grid grid-cols-2 sm:grid-cols-4 gap-8">
+            {/* Services */}
+            <div>
+              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-5">Services</h5>
+              <ul className="space-y-3.5">
+                {services.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-[13.5px] text-white/60 hover:text-white transition-colors duration-150 relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 hover:after:w-full after:bg-white/30 after:transition-all after:duration-300"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-5">Company</h5>
+              <ul className="space-y-3.5">
+                {company.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-[13.5px] text-white/60 hover:text-white transition-colors duration-150 relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 hover:after:w-full after:bg-white/30 after:transition-all after:duration-300"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-5">Legal</h5>
+              <ul className="space-y-3.5">
+                {legal.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-[13.5px] text-white/60 hover:text-white transition-colors duration-150 relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 hover:after:w-full after:bg-white/30 after:transition-all after:duration-300"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Office / Contact */}
+            <div>
+              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-5">Office</h5>
+              <ul className="space-y-4 text-[13px] text-white/60">
+                <li className="flex items-start gap-2.5">
+                  <Phone size={14} className="mt-0.5 shrink-0 text-[#22D3EE]" />
+                  <a href="tel:+442079460958" className="hover:text-white transition-colors">
+                    +44 (0) 20 7946 0958
+                  </a>
                 </li>
-              ))}
-            </ul>
+                <li className="flex items-start gap-2.5 leading-relaxed">
+                  <MapPin size={14} className="mt-0.5 shrink-0 text-[#22D3EE]" />
+                  <span>
+                    12 Innovation Street,<br />
+                    London, EC2A 4NE
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          {/* Col 3 — Company */}
-          <div>
-            <span className="footer-heading">Company</span>
-            <ul className="space-y-3">
-              {company.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href} className="footer-link">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Newsletter Column */}
+          <div className="md:col-span-3 flex flex-col justify-between h-full space-y-6">
+            <div>
+              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-4">Newsletter</h5>
+              <p className="font-sans text-[12px] text-white/50 mb-5 leading-relaxed">
+                Insights on digital growth and intelligent automation.
+              </p>
+              <form onSubmit={handleSubscribe} className="relative group">
+                <input
+                  type="email"
+                  required
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={status === "loading"}
+                  className="w-full bg-transparent border-b border-white/10 py-2.5 pr-8 text-[13px] text-white focus:outline-none focus:border-[#22D3EE] transition-all duration-300 placeholder:text-white/20 disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="absolute right-0 bottom-3 text-white/40 hover:text-[#22D3EE] transition-all duration-300 disabled:opacity-50 cursor-pointer"
+                  aria-label="Subscribe"
+                >
+                  <ArrowRight size={16} />
+                </button>
+              </form>
+              {status === "success" && (
+                <p className="text-[11px] text-emerald-400 mt-2">
+                  Thank you for subscribing!
+                </p>
+              )}
+              <p className="text-[10px] text-white/30 font-sans mt-3">
+                By subscribing, you agree to our{" "}
+                <Link href="/privacy" className="underline hover:text-[#22D3EE] transition-colors">
+                  Privacy Policy
+                </Link>
+                .
+              </p>
+            </div>
 
-          {/* Col 4 — Contact */}
-          <div>
-            <span className="footer-heading">Contact</span>
-            <ul className="space-y-4">
-              <li>
-                <a href="mailto:hello@space-ai.com" className="footer-contact-link">
-                  <Mail size={16} className="mt-0.5 shrink-0" style={{ color: "#B8860B" }} />
-                  hello@space-ai.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:+442079460958" className="footer-contact-link">
-                  <Phone size={16} className="mt-0.5 shrink-0" style={{ color: "#B8860B" }} />
-                  +44 (0) 20 7946 0958
-                </a>
-              </li>
-              <li className="footer-contact-link" style={{ cursor: "default" }}>
-                <MapPin size={16} className="mt-0.5 shrink-0" style={{ color: "#B8860B" }} />
-                12 Innovation Street, London, EC2A 4NE
-              </li>
-            </ul>
+            {/* Social Links */}
+            <div className="pt-6 flex gap-4 flex-wrap md:justify-start">
+              {socials.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={item.label}
+                    className="text-white/30 hover:text-[#22D3EE] transition-all duration-300 transform hover:-translate-y-1"
+                  >
+                    <Icon size={18} />
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[12px]" style={{ color: "rgba(167,139,204,0.5)" }}>
-            &copy; {new Date().getFullYear()} space-ai. All rights reserved.
-          </p>
-          <p className="text-[12px]" style={{ color: "rgba(167,139,204,0.5)" }}>
-            Built with Next.js &amp; Tailwind CSS
-          </p>
+      {/* Bottom Bar Section */}
+      <div className="max-w-7xl mx-auto px-6 border-t border-white/10 py-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] text-white/40">
+          <p>&copy; {new Date().getFullYear()} aibizmode Ltd. All rights reserved.</p>
+          <p>Registered in England &amp; Wales: 12948572. VAT: 948572839</p>
         </div>
-
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[10px] text-white/25 border-t border-white/5 pt-3 mt-3">
+          <p>Designed &amp; Developed with care. Built with Next.js &amp; Tailwind CSS.</p>
+        </div>
       </div>
     </footer>
   );

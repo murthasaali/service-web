@@ -10,6 +10,7 @@ interface StarButtonProps extends HTMLAttributes<HTMLElement> {
   lightColor?: string;
   backgroundColor?: string;
   borderWidth?: number;
+  textColor?: string;
 }
 
 export function StarButton({
@@ -19,6 +20,7 @@ export function StarButton({
   lightColor = "#FAFAFA",
   backgroundColor = "#0f1111",
   borderWidth = 1.5,
+  textColor = "text-white",
   className,
   ...props
 }: StarButtonProps) {
@@ -46,7 +48,7 @@ export function StarButton({
         aria-hidden="true"
       />
 
-      <span className="relative z-10 inline-flex h-full w-full items-center justify-center gap-2 rounded-[calc(1.5rem-var(--border-width))] bg-[var(--button-bg)] px-6 py-2.5 text-white">
+      <span className={cn("relative z-10 inline-flex h-full w-full items-center justify-center gap-2 rounded-[calc(1.5rem-var(--border-width))] bg-[var(--button-bg)] px-6 py-2.5", textColor)}>
         <span className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[linear-gradient(110deg,transparent_20%,rgba(255,255,255,0.22)_45%,transparent_68%)] opacity-0 transition-opacity duration-300 group-hover/star-button:animate-shine-sweep group-hover/star-button:opacity-100" />
         <span className="relative z-10 inline-flex items-center gap-2">
           {children}
@@ -55,3 +57,4 @@ export function StarButton({
     </Component>
   );
 }
+

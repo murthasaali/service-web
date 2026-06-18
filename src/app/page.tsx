@@ -7,14 +7,14 @@ import WhyChooseUs from '@/components/sections/WhyChooseUs';
 import GlobalPresence from '@/components/sections/GlobalPresence';
 import HowWeWork from '@/components/sections/HowWeWork';
 import Testimonials from '@/components/sections/Testimonials';
-import CTABanner from '@/components/sections/CTABanner';
+import FAQSection from '@/components/sections/FAQSection';
 
 export const metadata: Metadata = {
-	title: { absolute: 'space-ai | Intelligent Tech Services' },
+	title: { absolute: 'aibizmode | Intelligent Tech Services' },
 	description:
 		'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
 	openGraph: {
-		title: 'space-ai | Intelligent Tech Services',
+		title: 'aibizmode | Intelligent Tech Services',
 		description:
 			'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
 		url: '/',
@@ -32,9 +32,10 @@ export default function Home() {
 				<GlobalPresence />
 				<HowWeWork />
 				<Testimonials />
-				<CTABanner />
+				<FAQSection />
 			</main>
 			<Footer />
 		</>
 	);
 }
+

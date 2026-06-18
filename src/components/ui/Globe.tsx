@@ -242,6 +242,7 @@ export function Globe({
       if (globe) globe.destroy();
       if (observer) observer.disconnect();
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [arcs, arcColor, arcHeight, arcWidth, baseColor, dark, diffuse, mapBrightness, mapSamples, markerColor, markerElevation, markerSize, markers, speed, theta]);
 
   return (
@@ -264,6 +265,7 @@ export function Globe({
           key={m.id}
           style={{
             position: "absolute",
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             positionAnchor: `--cobe-${m.id}` as any,
             bottom: "anchor(top)",
             left: "anchor(center)",
@@ -303,7 +305,8 @@ export function Globe({
             key={a.id}
             style={{
               position: "absolute",
-              positionAnchor: `--cobe-arc-${a.id}` as any,
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            positionAnchor: `--cobe-arc-${a.id}` as any,
               bottom: "anchor(top)",
               left: "anchor(center)",
               translate: "-50% 0",

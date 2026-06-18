@@ -13,12 +13,15 @@ export default function About() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <AnimatedSection direction="left">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold leading-tight">
+            <span className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
+              About Us
+            </span>
+            <h2 className="mt-5 font-heading text-3xl md:text-5xl font-bold leading-tight text-primary">
               We are the team{" "}
               <span className="gradient-text">behind the tech</span>
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              space-ai was founded by engineers who believed that technology
+              aibizmode was founded by engineers who believed that technology
               should be intelligent, accessible, and beautifully crafted.
               Today, we partner with startups and enterprises alike to design
               systems that scale.
