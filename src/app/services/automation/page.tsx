@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Business process and workflow automation — from RPA to AI-powered pipelines that eliminate manual work and accelerate operations.",
   openGraph: {
-    title: "Automation | space-ai",
+    title: "Automation | aibizmode",
     description:
       "Business process and workflow automation — from RPA to AI-powered pipelines that eliminate manual work and accelerate operations.",
     url: "/services/automation",

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Scalable, secure cloud infrastructure on AWS, GCP, and Azure — designed, built, and managed by our infrastructure team.",
   openGraph: {
-    title: "Hosting & Infrastructure | space-ai",
+    title: "Hosting & Infrastructure | aibizmode",
     description:
       "Scalable, secure cloud infrastructure on AWS, GCP, and Azure — designed, built, and managed by our infrastructure team.",
     url: "/services/hosting-infrastructure",

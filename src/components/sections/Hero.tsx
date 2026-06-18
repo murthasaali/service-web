@@ -39,7 +39,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance"
         >
-          space-ai builds intelligent systems, cloud infrastructure, and
+          aibizmode builds intelligent systems, cloud infrastructure, and
           data-driven software — engineered to scale with your ambitions.
         </motion.p>
 

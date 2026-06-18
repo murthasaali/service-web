@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Custom web applications and enterprise software engineered for scale, performance, and long-term maintainability.",
   openGraph: {
-    title: "Web & Software Development | space-ai",
+    title: "Web & Software Development | aibizmode",
     description:
       "Custom web applications and enterprise software engineered for scale, performance, and long-term maintainability.",
     url: "/services/web-development",

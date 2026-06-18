@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Comprehensive technology solutions tailored to your business goals — web development, mobile apps, cloud infrastructure, automation, and more.",
   openGraph: {
-    title: "Services | space-ai",
+    title: "Services | aibizmode",
     description:
       "Comprehensive technology solutions tailored to your business goals — web development, mobile apps, cloud infrastructure, automation, and more.",
     url: "/services",

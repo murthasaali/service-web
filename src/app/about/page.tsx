@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "A team of builders, thinkers, and technologists on a mission to help businesses grow through technology.",
   openGraph: {
-    title: "About Us | space-ai",
+    title: "About Us | aibizmode",
     description:
       "A team of builders, thinkers, and technologists on a mission to help businesses grow through technology.",
     url: "/about",

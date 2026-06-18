@@ -45,8 +45,8 @@ const contactDetails = [
 	{
 		icon: Mail,
 		label: 'Email',
-		value: 'hello@space-ai.com',
-		href: 'mailto:hello@space-ai.com',
+		value: 'hello@aibizmode.com',
+		href: 'mailto:hello@aibizmode.com',
 	},
 	{
 		icon: Phone,
@@ -188,7 +188,7 @@ function MapPlaceholder() {
 				className='absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-card border border-border p-4 min-w-[172px]'
 				style={{ boxShadow: '0 4px 20px rgba(30,22,38,0.08)' }}
 			>
-				<p className='text-sm font-bold text-ink'>space-ai</p>
+				<p className='text-sm font-bold text-ink'>aibizmode</p>
 				<p className='text-xs text-muted-foreground mt-1 leading-relaxed'>
 					12 Innovation Street
 					<br />
@@ -388,7 +388,7 @@ export default function ContactPageContent() {
 											href='https://linkedin.com'
 											target='_blank'
 											rel='noopener noreferrer'
-											aria-label='space-ai on LinkedIn'
+											aria-label='aibizmode on LinkedIn'
 											className='w-9 h-9 rounded-btn flex items-center justify-center transition-all duration-150 text-royal'
 											style={{
 												background: '#ECFEFF',
@@ -425,7 +425,7 @@ export default function ContactPageContent() {
 											href='https://x.com'
 											target='_blank'
 											rel='noopener noreferrer'
-											aria-label='space-ai on X'
+											aria-label='aibizmode on X'
 											className='w-9 h-9 rounded-btn flex items-center justify-center transition-all duration-150 text-royal'
 											style={{
 												background: '#ECFEFF',
@@ -460,7 +460,7 @@ export default function ContactPageContent() {
 											href='https://github.com'
 											target='_blank'
 											rel='noopener noreferrer'
-											aria-label='space-ai on GitHub'
+											aria-label='aibizmode on GitHub'
 											className='w-9 h-9 rounded-btn flex items-center justify-center transition-all duration-150 text-royal'
 											style={{
 												background: '#ECFEFF',

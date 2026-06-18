@@ -6,11 +6,11 @@ import BlogPageContent from "@/components/blog/BlogPageContent";
 export const metadata: Metadata = {
   title: "Blog — Insights & Updates",
   description:
-    "Tech tips, industry trends, and company news from the space-ai team.",
+    "Tech tips, industry trends, and company news from the aibizmode team.",
   openGraph: {
-    title: "Blog — Insights & Updates | space-ai",
+    title: "Blog — Insights & Updates | aibizmode",
     description:
-      "Tech tips, industry trends, and company news from the space-ai team.",
+      "Tech tips, industry trends, and company news from the aibizmode team.",
     url: "/blog",
   },
 };

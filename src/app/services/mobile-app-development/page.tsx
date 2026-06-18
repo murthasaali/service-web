@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Native and cross-platform mobile applications for iOS and Android — from UX design to App Store launch.",
   openGraph: {
-    title: "Mobile App Development | space-ai",
+    title: "Mobile App Development | aibizmode",
     description:
       "Native and cross-platform mobile applications for iOS and Android — from UX design to App Store launch.",
     url: "/services/mobile-app-development",
