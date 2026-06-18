@@ -114,7 +114,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
             aria-hidden="true"
             style={{
               background:
-                "radial-gradient(ellipse at top right, rgba(126,34,206,0.07) 0%, transparent 65%)",
+                "radial-gradient(ellipse at top right, rgba(6,182,212,0.07) 0%, transparent 65%)",
             }}
           />
 
@@ -305,7 +305,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                   aria-hidden="true"
                   style={{
                     background:
-                      "linear-gradient(90deg, rgba(126,34,206,0.5) 0%, rgba(162,28,175,0.2) 100%)",
+                      "linear-gradient(90deg, rgba(6,182,212,0.5) 0%, rgba(14,165,233,0.2) 100%)",
                   }}
                 />
                 <div className="relative grid grid-cols-4 gap-6">
@@ -324,7 +324,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                             <Icon size={22} className="text-white" aria-hidden="true" />
                             <span
                               className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full text-white text-[10px] font-bold flex items-center justify-center"
-                              style={{ background: "linear-gradient(120deg, #6D28D9, #A21CAF)" }}
+                              style={{ background: "linear-gradient(120deg, #06B6D4, #3B82F6)" }}
                               aria-hidden="true"
                             >
                               {i + 1}
@@ -362,7 +362,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                           <Icon size={18} className="text-white" aria-hidden="true" />
                           <span
                             className="absolute -top-1 -right-1 w-5 h-5 rounded-full text-white text-[9px] font-bold flex items-center justify-center"
-                            style={{ background: "linear-gradient(120deg, #6D28D9, #A21CAF)" }}
+                            style={{ background: "linear-gradient(120deg, #06B6D4, #3B82F6)" }}
                             aria-hidden="true"
                           >
                             {i + 1}
@@ -372,7 +372,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                           <div
                             className="w-px flex-1 my-2"
                             aria-hidden="true"
-                            style={{ background: "rgba(126,34,206,0.25)" }}
+                            style={{ background: "rgba(6,182,212,0.25)" }}
                           />
                         )}
                       </div>
@@ -420,18 +420,18 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                     key={tech}
                     className="px-4 py-2 rounded-pill text-sm font-medium text-ink cursor-default transition-colors"
                     style={{
-                      background: "#F7F0FF",
+                      background: "#ECFEFF",
                       border: "1px solid rgba(184,134,11,0.18)",
                     }}
                     onMouseEnter={(e) => {
                       const el = e.currentTarget as HTMLElement;
-                      el.style.borderColor = "rgba(126,34,206,0.35)";
-                      el.style.background = "#EDE0FB";
+                      el.style.borderColor = "rgba(6,182,212,0.35)";
+                      el.style.background = "#E0F2FE";
                     }}
                     onMouseLeave={(e) => {
                       const el = e.currentTarget as HTMLElement;
                       el.style.borderColor = "rgba(184,134,11,0.18)";
-                      el.style.background = "#F7F0FF";
+                      el.style.background = "#ECFEFF";
                     }}
                   >
                     {tech}
@@ -480,7 +480,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
             className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
             aria-hidden="true"
             style={{
-              background: "radial-gradient(circle, rgba(109,40,217,1) 0%, transparent 70%)",
+              background: "radial-gradient(circle, rgba(6,182,212,0.7) 0%, transparent 70%)",
               animation: "glow-pulse 6s ease-in-out infinite",
             }}
           />
@@ -488,7 +488,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
             className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none"
             aria-hidden="true"
             style={{
-              background: "radial-gradient(circle, rgba(162,28,175,1) 0%, transparent 70%)",
+              background: "radial-gradient(circle, rgba(14,165,233,0.6) 0%, transparent 70%)",
               animation: "glow-pulse 6s ease-in-out infinite",
               animationDelay: "3s",
             }}

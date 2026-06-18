@@ -53,7 +53,7 @@ export function Globe({
   speed = 0.003,
   theta = 0.2,
   diffuse = 1.5,
-  mapSamples = 16000,
+  mapSamples = 12000,
 }: GlobeProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointerInteracting = useRef<{ x: number; y: number } | null>(null);
@@ -121,12 +121,14 @@ export function Globe({
     let globe: ReturnType<typeof createGlobe> | null = null;
     let animationId: number;
     let phi = 0;
+    let isVisible = false;
+    let observer: IntersectionObserver | null = null;
 
     function init() {
       const width = canvas.offsetWidth;
       if (width === 0 || globe) return;
 
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       globe = createGlobe(canvas, {
         devicePixelRatio: dpr,
         width,
@@ -198,28 +200,47 @@ export function Globe({
             id: a.id,
           })),
         });
-        animationId = requestAnimationFrame(animate);
+
+        if (isVisible) {
+          animationId = requestAnimationFrame(animate);
+        }
       }
 
-      animate();
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          const wasVisible = isVisible;
+          isVisible = entry.isIntersecting;
+          if (isVisible && !wasVisible) {
+            animationId = requestAnimationFrame(animate);
+          } else if (!isVisible && wasVisible) {
+            cancelAnimationFrame(animationId);
+          }
+        },
+        { threshold: 0 }
+      );
+      observer.observe(canvas);
+
       setTimeout(() => canvas && (canvas.style.opacity = "1"));
     }
+
+    const ro = new ResizeObserver((entries) => {
+      if (entries[0]?.contentRect.width > 0) {
+        ro.disconnect();
+        init();
+      }
+    });
 
     if (canvas.offsetWidth > 0) {
       init();
     } else {
-      const ro = new ResizeObserver((entries) => {
-        if (entries[0]?.contentRect.width > 0) {
-          ro.disconnect();
-          init();
-        }
-      });
       ro.observe(canvas);
     }
 
     return () => {
+      ro.disconnect();
       if (animationId) cancelAnimationFrame(animationId);
       if (globe) globe.destroy();
+      if (observer) observer.disconnect();
     };
   }, [arcs, arcColor, arcHeight, arcWidth, baseColor, dark, diffuse, mapBrightness, mapSamples, markerColor, markerElevation, markerSize, markers, speed, theta]);
 

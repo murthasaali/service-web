@@ -13,7 +13,7 @@ export default function CTABanner() {
         className="absolute top-0 right-0 w-[560px] h-[560px] rounded-full pointer-events-none"
         aria-hidden="true"
         style={{
-          background: "radial-gradient(circle, rgba(109,40,217,1) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(6,182,212,0.7) 0%, transparent 70%)",
           animation: "glow-pulse 6s ease-in-out infinite",
           animationDelay: "0s",
         }}
@@ -22,7 +22,7 @@ export default function CTABanner() {
         className="absolute bottom-0 left-0 w-[440px] h-[440px] rounded-full pointer-events-none"
         aria-hidden="true"
         style={{
-          background: "radial-gradient(circle, rgba(162,28,175,1) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(14,165,233,0.6) 0%, transparent 70%)",
           animation: "glow-pulse 6s ease-in-out infinite",
           animationDelay: "3s",
         }}

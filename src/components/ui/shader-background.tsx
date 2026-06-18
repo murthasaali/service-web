@@ -40,7 +40,7 @@ const fsSource = `
   const float offsetSpeed = 1.33 * overallSpeed;
   const float minOffsetSpread = 0.6;
   const float maxOffsetSpread = 2.0;
-  const int linesPerGroup = 16;
+  const int linesPerGroup = 5;
 
   #define drawCircle(pos, radius, coord) smoothstep(radius + gridSmoothWidth, radius, length(coord - (pos)))
   #define drawSmoothLine(pos, halfWidth, t) smoothstep(halfWidth, 0.0, abs(pos - (t)))
@@ -189,7 +189,7 @@ export default function ShaderBackground({ className }: ShaderBackgroundProps) {
     };
 
     const resizeCanvas = () => {
-      const pixelRatio = window.devicePixelRatio || 1;
+      const pixelRatio = 1.0; // Cap pixel ratio to 1.0 to save performance
       const width = Math.max(1, Math.floor(canvas.clientWidth * pixelRatio));
       const height = Math.max(1, Math.floor(canvas.clientHeight * pixelRatio));
 
@@ -207,6 +207,7 @@ export default function ShaderBackground({ className }: ShaderBackgroundProps) {
 
     const startTime = performance.now();
     let animationFrameId = 0;
+    let isVisible = false;
 
     const render = () => {
       const currentTime = (performance.now() - startTime) / 1000;
@@ -231,14 +232,30 @@ export default function ShaderBackground({ className }: ShaderBackgroundProps) {
       gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
 
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-      animationFrameId = requestAnimationFrame(render);
+
+      if (isVisible) {
+        animationFrameId = requestAnimationFrame(render);
+      }
     };
 
-    animationFrameId = requestAnimationFrame(render);
+    const intersectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        const wasVisible = isVisible;
+        isVisible = entry.isIntersecting;
+        if (isVisible && !wasVisible) {
+          animationFrameId = requestAnimationFrame(render);
+        } else if (!isVisible && wasVisible) {
+          cancelAnimationFrame(animationFrameId);
+        }
+      },
+      { threshold: 0 }
+    );
+    intersectionObserver.observe(canvas);
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
       resizeObserver.disconnect();
+      intersectionObserver.disconnect();
       gl.deleteBuffer(positionBuffer);
       gl.deleteProgram(shaderProgram);
     };

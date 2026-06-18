@@ -136,7 +136,7 @@ function MapPlaceholder() {
 			className='relative w-full h-72 md:h-80 rounded-card overflow-hidden border border-border'
 			style={{
 				background:
-					'linear-gradient(135deg, #F7F0FF 0%, #EDE0FB 60%, #FDFBFF 100%)',
+					'linear-gradient(135deg, #ECFEFF 0%, #E0F2FE 60%, #F8FAFC 100%)',
 			}}
 			role='img'
 			aria-label='Map showing office location at 12 Innovation Street, London'
@@ -147,7 +147,7 @@ function MapPlaceholder() {
 				aria-hidden='true'
 				style={{
 					backgroundImage:
-						'linear-gradient(rgba(126,34,206,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(126,34,206,0.06) 1px, transparent 1px)',
+						'linear-gradient(rgba(6,182,212,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.06) 1px, transparent 1px)',
 					backgroundSize: '52px 52px',
 				}}
 			/>
@@ -167,8 +167,8 @@ function MapPlaceholder() {
 				<div
 					className='w-12 h-12 rounded-full flex items-center justify-center'
 					style={{
-						background: 'linear-gradient(120deg, #6D28D9, #A21CAF)',
-						boxShadow: '0 4px 20px rgba(109,40,217,0.35)',
+						background: 'linear-gradient(120deg, #06B6D4, #3B82F6)',
+						boxShadow: '0 4px 20px rgba(6,182,212,0.35)',
 					}}
 				>
 					<MapPin
@@ -179,7 +179,7 @@ function MapPlaceholder() {
 				</div>
 				<div
 					className='w-3 h-3 rounded-full mt-0.5'
-					style={{ background: 'rgba(109,40,217,0.15)' }}
+					style={{ background: 'rgba(6,182,212,0.15)' }}
 				/>
 			</div>
 
@@ -281,7 +281,7 @@ export default function ContactPageContent() {
 					aria-hidden='true'
 					style={{
 						background:
-							'radial-gradient(ellipse at top right, rgba(126,34,206,0.07) 0%, transparent 65%)',
+							'radial-gradient(ellipse at top right, rgba(6,182,212,0.07) 0%, transparent 65%)',
 					}}
 				/>
 
@@ -391,19 +391,19 @@ export default function ContactPageContent() {
 											aria-label='space-ai on LinkedIn'
 											className='w-9 h-9 rounded-btn flex items-center justify-center transition-all duration-150 text-royal'
 											style={{
-												background: '#F7F0FF',
+												background: '#ECFEFF',
 												border: '1px solid rgba(184,134,11,0.18)',
 											}}
 											onMouseEnter={(e) => {
 												const el = e.currentTarget as HTMLElement;
 												el.style.background =
-													'linear-gradient(120deg, #6D28D9, #A21CAF)';
+													'linear-gradient(120deg, #06B6D4, #3B82F6)';
 												el.style.color = '#fff';
 												el.style.border = '1px solid transparent';
 											}}
 											onMouseLeave={(e) => {
 												const el = e.currentTarget as HTMLElement;
-												el.style.background = '#F7F0FF';
+												el.style.background = '#ECFEFF';
 												el.style.color = '';
 												el.style.border = '1px solid rgba(184,134,11,0.18)';
 											}}
@@ -428,19 +428,19 @@ export default function ContactPageContent() {
 											aria-label='space-ai on X'
 											className='w-9 h-9 rounded-btn flex items-center justify-center transition-all duration-150 text-royal'
 											style={{
-												background: '#F7F0FF',
+												background: '#ECFEFF',
 												border: '1px solid rgba(184,134,11,0.18)',
 											}}
 											onMouseEnter={(e) => {
 												const el = e.currentTarget as HTMLElement;
 												el.style.background =
-													'linear-gradient(120deg, #6D28D9, #A21CAF)';
+													'linear-gradient(120deg, #06B6D4, #3B82F6)';
 												el.style.color = '#fff';
 												el.style.border = '1px solid transparent';
 											}}
 											onMouseLeave={(e) => {
 												const el = e.currentTarget as HTMLElement;
-												el.style.background = '#F7F0FF';
+												el.style.background = '#ECFEFF';
 												el.style.color = '';
 												el.style.border = '1px solid rgba(184,134,11,0.18)';
 											}}
@@ -463,19 +463,19 @@ export default function ContactPageContent() {
 											aria-label='space-ai on GitHub'
 											className='w-9 h-9 rounded-btn flex items-center justify-center transition-all duration-150 text-royal'
 											style={{
-												background: '#F7F0FF',
+												background: '#ECFEFF',
 												border: '1px solid rgba(184,134,11,0.18)',
 											}}
 											onMouseEnter={(e) => {
 												const el = e.currentTarget as HTMLElement;
 												el.style.background =
-													'linear-gradient(120deg, #6D28D9, #A21CAF)';
+													'linear-gradient(120deg, #06B6D4, #3B82F6)';
 												el.style.color = '#fff';
 												el.style.border = '1px solid transparent';
 											}}
 											onMouseLeave={(e) => {
 												const el = e.currentTarget as HTMLElement;
-												el.style.background = '#F7F0FF';
+												el.style.background = '#ECFEFF';
 												el.style.color = '';
 												el.style.border = '1px solid rgba(184,134,11,0.18)';
 											}}
@@ -504,8 +504,8 @@ export default function ContactPageContent() {
 										<div
 											className='w-16 h-16 rounded-full flex items-center justify-center mb-5'
 											style={{
-												background: '#F7F0FF',
-												border: '1px solid rgba(109,40,217,0.20)',
+												background: '#ECFEFF',
+												border: '1px solid rgba(6,182,212,0.20)',
 											}}
 										>
 											<CheckCircle

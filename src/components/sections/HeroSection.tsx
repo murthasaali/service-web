@@ -20,6 +20,7 @@ import {
 } from "react-icons/si";
 import ShaderBackground from "@/components/ui/shader-background";
 import { StarButton } from "@/components/ui/star-button";
+import { TextReveal } from "@/components/ui/cascade-text";
 
 const socials = [
   {
@@ -143,7 +144,15 @@ export default function HeroSection() {
         >
           Bridging Innovation And
           <br />
-          <span style={{ color: "#0F172A" }}>Connectivity</span>
+          <TextReveal
+            text="Connectivity"
+            as="span"
+            fontSize="inherit"
+            color="#0F172A"
+            hoverColor="#0891B2"
+            className="font-thin normal-case tracking-tight"
+            style={{ padding: 0 }}
+          />
         </h1>
 
         <div className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md">
@@ -159,7 +168,7 @@ export default function HeroSection() {
               as="span"
               lightColor="#38bdf8"
               backgroundColor="#0f172a"
-              className="h-12 px-8 font-semibold shadow-[0_18px_48px_rgba(14,165,233,0.26)] transition hover:-translate-y-0.5"
+              className="h-12 font-semibold shadow-[0_0_12px_rgba(56,189,248,0.25)] hover:shadow-[0_0_20px_rgba(6,182,212,0.55),0_0_4px_rgba(56,189,248,0.7)] transition hover:-translate-y-0.5 duration-300"
             >
               Get Started <ArrowRight size={16} aria-hidden="true" />
             </StarButton>

@@ -18,7 +18,7 @@ const data: ServicePageData = {
   tagline:
     "Native performance, cross-platform reach — apps your users love, built to App Store standards.",
   slug: "mobile-app-development",
-  iconColor: "text-violet-600",
+  iconColor: "text-cyan-600",
 
   overview: {
     paragraphs: [

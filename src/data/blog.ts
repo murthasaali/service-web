@@ -42,10 +42,10 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Progressive Web Apps have closed the gap on native mobile apps faster than most predicted. We examine the exact use cases where choosing a PWA over native makes strong business sense — and where it still doesn't.",
     category: "Mobile",
-    author: { name: "Sarah Chen", initials: "SC", avatarColor: "bg-violet-600" },
+    author: { name: "Sarah Chen", initials: "SC", avatarColor: "bg-cyan-600" },
     date: "Jan 10, 2026",
     readTime: "6 min read",
-    imagePlaceholderColor: "from-violet-600 to-purple-700",
+    imagePlaceholderColor: "from-cyan-600 to-sky-700",
   },
   {
     slug: "technical-seo-mistakes",

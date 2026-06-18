@@ -13,7 +13,7 @@ function CategoryBadge({ category }: { category: string }) {
   return (
     <span
       className="inline-block text-[11px] font-semibold px-2.5 py-1 rounded-pill text-royal-deep"
-      style={{ background: "#F7F0FF", border: "1px solid rgba(184,134,11,0.18)" }}
+      style={{ background: "#ECFEFF", border: "1px solid rgba(184,134,11,0.18)" }}
     >
       {category}
     </span>
@@ -31,7 +31,7 @@ function Avatar({ initials, size = 9 }: { initials: string; size?: number }) {
         width: px,
         height: px,
         fontSize: px * 0.3,
-        background: "linear-gradient(120deg, #6D28D9, #A21CAF)",
+        background: "linear-gradient(120deg, #06B6D4, #3B82F6)",
       }}
       aria-hidden="true"
     >
@@ -197,7 +197,7 @@ export default function BlogPageContent() {
           aria-hidden="true"
           style={{
             background:
-              "radial-gradient(ellipse at top right, rgba(126,34,206,0.07) 0%, transparent 65%)",
+              "radial-gradient(ellipse at top right, rgba(6,182,212,0.07) 0%, transparent 65%)",
           }}
         />
 
@@ -257,8 +257,8 @@ export default function BlogPageContent() {
                   className="px-4 py-2 rounded-pill text-sm font-medium transition-all duration-150 whitespace-nowrap"
                   style={
                     activeCategory === cat
-                      ? { background: "linear-gradient(120deg, #6D28D9, #A21CAF)", color: "#fff" }
-                      : { background: "#F7F0FF", border: "1px solid rgba(184,134,11,0.18)", color: "#1E1626" }
+                      ? { background: "linear-gradient(120deg, #06B6D4, #3B82F6)", color: "#fff" }
+                      : { background: "#ECFEFF", border: "1px solid rgba(184,134,11,0.18)", color: "#0F172A" }
                   }
                 >
                   {cat}
@@ -283,7 +283,7 @@ export default function BlogPageContent() {
           className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
           aria-hidden="true"
           style={{
-            background: "radial-gradient(circle, rgba(109,40,217,1) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(6,182,212,0.7) 0%, transparent 70%)",
             animation: "glow-pulse 6s ease-in-out infinite",
           }}
         />
@@ -291,7 +291,7 @@ export default function BlogPageContent() {
           className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none"
           aria-hidden="true"
           style={{
-            background: "radial-gradient(circle, rgba(162,28,175,1) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(14,165,233,0.6) 0%, transparent 70%)",
             animation: "glow-pulse 6s ease-in-out infinite",
             animationDelay: "3s",
           }}

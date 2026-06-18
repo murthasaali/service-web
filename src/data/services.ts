@@ -45,9 +45,9 @@ export const services: ServiceData[] = [
     ],
     href: "/services/mobile-app-development",
     icon: Smartphone,
-    gradient: "from-violet-500/15 to-purple-400/15",
-    iconColor: "text-violet-600",
-    borderHover: "hover:border-violet-400/40",
+    gradient: "from-cyan-500/15 to-sky-400/15",
+    iconColor: "text-cyan-600",
+    borderHover: "hover:border-cyan-400/40",
   },
   {
     id: "digital-marketing",

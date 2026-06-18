@@ -13,12 +13,12 @@ export default function NotFound() {
           <div
             className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full pointer-events-none blur-3xl"
             aria-hidden="true"
-            style={{ background: "radial-gradient(circle, rgba(126,34,206,0.07) 0%, transparent 70%)" }}
+            style={{ background: "radial-gradient(circle, rgba(6,182,212,0.07) 0%, transparent 70%)" }}
           />
           <div
             className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] rounded-full pointer-events-none blur-3xl"
             aria-hidden="true"
-            style={{ background: "radial-gradient(circle, rgba(162,28,175,0.05) 0%, transparent 70%)" }}
+            style={{ background: "radial-gradient(circle, rgba(14,165,233,0.05) 0%, transparent 70%)" }}
           />
 
           {/* Gold rule */}
@@ -29,7 +29,7 @@ export default function NotFound() {
             className="font-display font-bold leading-none tracking-tight select-none bg-clip-text text-transparent"
             style={{
               fontSize: "clamp(90px, 18vw, 160px)",
-              backgroundImage: "linear-gradient(120deg, #6D28D9 0%, #A21CAF 60%, #B8860B 100%)",
+              backgroundImage: "linear-gradient(120deg, #06B6D4 0%, #3B82F6 60%, #B8860B 100%)",
               letterSpacing: "-0.04em",
             }}
             aria-hidden="true"

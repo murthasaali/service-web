@@ -78,12 +78,12 @@ function TeamPhotoBanner() {
       <div
         className="absolute top-1/4 left-1/3 w-72 h-72 rounded-full blur-3xl pointer-events-none"
         aria-hidden="true"
-        style={{ background: "rgba(109,40,217,0.20)" }}
+        style={{ background: "rgba(6,182,212,0.20)" }}
       />
       <div
         className="absolute bottom-1/4 right-1/3 w-48 h-48 rounded-full blur-3xl pointer-events-none"
         aria-hidden="true"
-        style={{ background: "rgba(162,28,175,0.12)" }}
+        style={{ background: "rgba(14,165,233,0.12)" }}
       />
 
       {/* Avatar arrangement */}
@@ -95,7 +95,7 @@ function TeamPhotoBanner() {
               title={m.name}
               className="w-14 h-14 md:w-[72px] md:h-[72px] rounded-full flex items-center justify-center shadow-lg shrink-0"
               style={{
-                background: "linear-gradient(120deg, #6D28D9, #A21CAF)",
+                background: "linear-gradient(120deg, #06B6D4, #3B82F6)",
                 boxShadow: "0 0 0 3px rgba(255,255,255,0.10)",
               }}
             >
@@ -112,7 +112,7 @@ function TeamPhotoBanner() {
               title={m.name}
               className="w-[72px] h-[72px] md:w-24 md:h-24 rounded-full flex items-center justify-center shadow-xl shrink-0"
               style={{
-                background: "linear-gradient(120deg, #6D28D9, #A21CAF)",
+                background: "linear-gradient(120deg, #06B6D4, #3B82F6)",
                 boxShadow: "0 0 0 4px rgba(255,255,255,0.15)",
               }}
             >
@@ -142,14 +142,14 @@ function Timeline() {
             <div
               className="mt-[7px] w-3 h-3 rounded-full shrink-0"
               style={{
-                background: "linear-gradient(120deg, #6D28D9, #A21CAF)",
-                boxShadow: "0 0 0 4px rgba(109,40,217,0.12)",
+                background: "linear-gradient(120deg, #06B6D4, #3B82F6)",
+                boxShadow: "0 0 0 4px rgba(6,182,212,0.12)",
               }}
             />
             {i < milestones.length - 1 && (
               <div
                 className="flex-1 mt-2.5 min-h-[52px]"
-                style={{ width: 1, background: "#EDE0FB" }}
+                style={{ width: 1, background: "#E0F2FE" }}
               />
             )}
           </div>
@@ -178,7 +178,7 @@ export default function AboutPageContent() {
         <div
           className="absolute -top-20 -right-32 w-[600px] h-[600px] rounded-full pointer-events-none"
           aria-hidden="true"
-          style={{ background: "radial-gradient(ellipse at top right, rgba(126,34,206,0.07) 0%, transparent 65%)" }}
+          style={{ background: "radial-gradient(ellipse at top right, rgba(6,182,212,0.07) 0%, transparent 65%)" }}
         />
 
         <div className="max-w-7xl mx-auto relative">
@@ -210,7 +210,7 @@ export default function AboutPageContent() {
           <AnimatedSection delay={0.1}>
             <div
               className="grid grid-cols-2 md:grid-cols-4 gap-px mb-12 max-w-2xl mx-auto overflow-hidden rounded-card"
-              style={{ background: "#EDE0FB", border: "1px solid #EDE0FB" }}
+              style={{ background: "#E0F2FE", border: "1px solid #E0F2FE" }}
             >
               {stats.map(({ value, label }) => (
                 <div key={label} className="py-6 text-center bg-surface">
@@ -328,7 +328,7 @@ export default function AboutPageContent() {
               <div className="h-full bg-ink rounded-card p-8 md:p-10">
                 <div
                   className="w-12 h-12 rounded-btn flex items-center justify-center mb-6"
-                  style={{ background: "rgba(109,40,217,0.20)", border: "1px solid rgba(109,40,217,0.30)" }}
+                  style={{ background: "rgba(6,182,212,0.20)", border: "1px solid rgba(6,182,212,0.30)" }}
                 >
                   <Target size={22} className="text-white" aria-hidden="true" />
                 </div>
@@ -437,8 +437,8 @@ export default function AboutPageContent() {
                   <div
                     className="w-20 h-20 rounded-full flex items-center justify-center mb-4"
                     style={{
-                      background: "linear-gradient(120deg, #6D28D9, #A21CAF)",
-                      boxShadow: "0 4px 20px rgba(109,40,217,0.22)",
+                      background: "linear-gradient(120deg, #06B6D4, #3B82F6)",
+                      boxShadow: "0 4px 20px rgba(6,182,212,0.22)",
                     }}
                     aria-hidden="true"
                   >

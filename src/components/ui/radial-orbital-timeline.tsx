@@ -205,7 +205,7 @@ export default function RadialOrbitalTimeline({
 						}}
 					>
 						<div
-							className='absolute rounded-full bg-gradient-to-br from-purple-500 via-blue-500 to-teal-500 animate-pulse flex items-center justify-center z-10'
+							className='absolute rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-teal-500 animate-pulse flex items-center justify-center z-10'
 							style={{
 								width: orbitRadius * 0.16,
 								height: orbitRadius * 0.16,
@@ -410,7 +410,7 @@ export default function RadialOrbitalTimeline({
 													className={`w-full h-1 ${isLight ? 'bg-slate-200' : 'bg-white/10'} rounded-full overflow-hidden`}
 												>
 													<div
-														className='h-full bg-gradient-to-r from-blue-500 to-purple-500'
+														className='h-full bg-gradient-to-r from-blue-500 to-cyan-500'
 														style={{ width: `${item.energy}%` }}
 													></div>
 												</div>

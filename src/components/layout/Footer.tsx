@@ -66,11 +66,11 @@ export default function Footer() {
               href="/"
               className="inline-block font-display font-bold text-[20px] tracking-tight select-none
                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-1 focus-visible:ring-offset-ink rounded"
-              style={{ color: "#E9D5FF" }}
+              style={{ color: "#CFFAFE" }}
             >
-              space<span style={{ color: "#C4B5FD" }}>-ai</span>
+              space<span style={{ color: "#22D3EE" }}>-ai</span>
             </Link>
-            <p className="mt-4 text-[14px] leading-relaxed max-w-xs" style={{ color: "#A78BCC" }}>
+            <p className="mt-4 text-[14px] leading-relaxed max-w-xs" style={{ color: "#94A3B8" }}>
               Intelligent technology services that help businesses navigate the
               AI-driven future with clarity and confidence.
             </p>

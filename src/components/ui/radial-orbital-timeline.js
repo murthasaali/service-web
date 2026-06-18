@@ -156,7 +156,7 @@ function RadialOrbitalTimeline(_a) {
             perspective: "1000px",
             transform: "translate(".concat(centerOffset.x, "px, ").concat(centerOffset.y, "px)"),
         }}>
-          <div className="absolute rounded-full bg-gradient-to-br from-purple-500 via-blue-500 to-teal-500 animate-pulse flex items-center justify-center z-10" style={{
+          <div className="absolute rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-teal-500 animate-pulse flex items-center justify-center z-10" style={{
             width: orbitRadius * 0.16,
             height: orbitRadius * 0.16,
         }}>
@@ -271,7 +271,7 @@ function RadialOrbitalTimeline(_a) {
                           <span className="font-mono">{item.energy}%</span>
                         </div>
                         <div className={"w-full h-1 ".concat(isLight ? "bg-slate-200" : "bg-white/10", " rounded-full overflow-hidden")}>
-                          <div className="h-full bg-gradient-to-r from-blue-500 to-purple-500" style={{ width: "".concat(item.energy, "%") }}></div>
+                          <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-500" style={{ width: "".concat(item.energy, "%") }}></div>
                         </div>
                       </div>
 

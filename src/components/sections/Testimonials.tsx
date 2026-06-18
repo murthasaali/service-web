@@ -101,7 +101,7 @@ export default function Testimonials() {
                   <div
                     className="w-10 h-10 rounded-full text-white text-sm font-bold flex items-center justify-center shrink-0"
                     style={{
-                      background: "linear-gradient(120deg, #6D28D9, #A21CAF)",
+                      background: "linear-gradient(120deg, #06B6D4, #3B82F6)",
                     }}
                     aria-hidden="true"
                   >

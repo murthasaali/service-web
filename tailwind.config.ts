@@ -11,45 +11,45 @@ const config: Config = {
       colors: {
         // ── Royal Amethyst & Gold — design tokens ────────────────────────
         // Hex values throughout so opacity modifiers (bg-royal/10) work.
-        canvas:        "#FDFBFF",   // warm off-white page bg
+        canvas:        "#F8FAFC",   // cool slate off-white page bg
         surface:       "#FFFFFF",   // cards, nav, raised elements
-        ink:           "#1E1626",   // primary text, warm near-black
-        royal:         "#7E22CE",   // amethyst — icons, highlights, gradient start
-        "royal-deep":  "#581C87",   // body links + small text (WCAG AA on white)
+        ink:           "#0F172A",   // primary text, slate-900
+        royal:         "#0891B2",   // cyan-600 — icons, highlights, gradient start
+        "royal-deep":  "#0E7490",   // body links + small text (WCAG AA on white)
         gold:          "#B8860B",   // antique gold — rules, pill stars, hairlines ONLY
         "gold-light":  "#D4AF37",   // gold gradient highlight end
-        tint:          "#F7F0FF",   // soft violet wash — alt section bg, pill bg
+        tint:          "#ECFEFF",   // soft cyan wash — alt section bg, pill bg
 
         // ── Semantic aliases — remap all existing Tailwind class usages ───
-        background:    "#FDFBFF",
-        foreground:    "#1E1626",
-        border:        "#EDE0FB",
-        input:         "#EDE0FB",
-        ring:          "#7E22CE",
+        background:    "#F8FAFC",
+        foreground:    "#0F172A",
+        border:        "#E0F2FE",
+        input:         "#E0F2FE",
+        ring:          "#0891B2",
 
         card: {
           DEFAULT:    "#FFFFFF",
-          foreground: "#1E1626",
+          foreground: "#0F172A",
         },
         muted: {
-          DEFAULT:    "#F7F0FF",   // bg-muted → soft violet tint
-          foreground: "#6B5C8A",  // text-muted-foreground → muted purple-gray
+          DEFAULT:    "#ECFEFF",   // bg-muted → soft cyan tint
+          foreground: "#475569",  // text-muted-foreground → muted slate-600
         },
         primary: {
-          DEFAULT:    "#7E22CE",
+          DEFAULT:    "#0891B2",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT:    "#F7F0FF",
-          foreground: "#1E1626",
+          DEFAULT:    "#ECFEFF",
+          foreground: "#0F172A",
         },
         accent: {
-          DEFAULT:    "#F7F0FF",
-          foreground: "#581C87",
+          DEFAULT:    "#ECFEFF",
+          foreground: "#0E7490",
         },
         popover: {
           DEFAULT:    "#FFFFFF",
-          foreground: "#1E1626",
+          foreground: "#0F172A",
         },
         destructive: {
           DEFAULT:    "#EF4444",
@@ -89,16 +89,16 @@ const config: Config = {
       },
 
       boxShadow: {
-        card:         "0 4px 24px rgba(30,22,38,0.06)",
-        "card-hover": "0 12px 36px rgba(109,40,217,0.10)",
-        btn:          "0 4px 24px rgba(109,40,217,0.28)",
-        "btn-hover":  "0 8px 32px rgba(109,40,217,0.42)",
-        float:        "0 30px 60px rgba(109,40,217,0.10)",
-        badge:        "0 8px 24px rgba(30,22,38,0.12)",
+        card:         "0 4px 24px rgba(15,23,42,0.06)",
+        "card-hover": "0 12px 36px rgba(8,145,178,0.10)",
+        btn:          "0 4px 24px rgba(8,145,178,0.28)",
+        "btn-hover":  "0 8px 32px rgba(8,145,178,0.42)",
+        float:        "0 30px 60px rgba(8,145,178,0.10)",
+        badge:        "0 8px 24px rgba(15,23,42,0.12)",
       },
 
       backgroundImage: {
-        "royal-gradient": "linear-gradient(120deg, #6D28D9, #A21CAF)",
+        "royal-gradient": "linear-gradient(120deg, #06B6D4, #3B82F6)",
         "gold-rule":      "linear-gradient(90deg, #D4AF37, #B8860B)",
       },
     },
