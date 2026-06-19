@@ -3,6 +3,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ContactPageContent from "@/components/contact/ContactPageContent";
 
+import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
+
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
@@ -19,10 +21,11 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main>
-        <ContactPageContent />
-      </main>
-      <Footer />
+      <StickyFooterLayout footer={<Footer />}>
+        <main>
+          <ContactPageContent />
+        </main>
+      </StickyFooterLayout>
     </>
   );
 }

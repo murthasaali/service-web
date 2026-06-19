@@ -83,15 +83,15 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative z-10 bg-black text-white/70 transition-colors duration-300">
+    <footer className="bg-black text-white/70 transition-colors duration-300 w-full rounded-t-[40px]">
       {/* Start Today Section */}
-      <div className="max-w-7xl mx-auto px-6 border-b border-white/10 py-12 md:py-20">
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-10">
-          <div className="max-w-3xl space-y-4">
-            <span className="text-[11.5px] font-bold uppercase tracking-[0.2em] text-[#22D3EE] block">
+      <div className="max-w-7xl mx-auto px-6 border-b border-white/10 py-6 md:py-8">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+          <div className="max-w-3xl space-y-2">
+            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#22D3EE] block">
               Start Today
             </span>
-            <h2 className="font-display text-[32px] sm:text-[44px] md:text-[52px] leading-[1.05] tracking-tight text-white font-medium">
+            <h2 className="font-display text-[26px] sm:text-[36px] md:text-[42px] leading-[1.05] tracking-tight text-white font-medium">
               Ready to Build Something <span className="text-[#22D3EE] font-semibold">Remarkable?</span>
             </h2>
             <p className="font-sans text-[14px] sm:text-[16px] leading-[1.6] text-white/50 max-w-2xl">
@@ -125,10 +125,10 @@ export default function Footer() {
       </div>
 
       {/* Main Grid Section */}
-      <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+      <div className="max-w-7xl mx-auto px-6 py-6 md:py-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6">
           {/* Brand & Inquiries Column */}
-          <div className="md:col-span-3 space-y-6">
+          <div className="md:col-span-3 space-y-4">
             <Link
               href="/"
               className="inline-block font-display font-bold text-[24px] tracking-tight select-none
@@ -155,8 +155,8 @@ export default function Footer() {
           <div className="md:col-span-6 grid grid-cols-2 sm:grid-cols-4 gap-8">
             {/* Services */}
             <div>
-              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-5">Services</h5>
-              <ul className="space-y-3.5">
+              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-4">Services</h5>
+              <ul className="space-y-2.5">
                 {services.map((item) => (
                   <li key={item.href}>
                     <Link
@@ -172,8 +172,8 @@ export default function Footer() {
 
             {/* Company */}
             <div>
-              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-5">Company</h5>
-              <ul className="space-y-3.5">
+              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-4">Company</h5>
+              <ul className="space-y-2.5">
                 {company.map((item) => (
                   <li key={item.href}>
                     <Link
@@ -189,8 +189,8 @@ export default function Footer() {
 
             {/* Legal */}
             <div>
-              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-5">Legal</h5>
-              <ul className="space-y-3.5">
+              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-4">Legal</h5>
+              <ul className="space-y-2.5">
                 {legal.map((item) => (
                   <li key={item.href}>
                     <Link
@@ -288,7 +288,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar Section */}
-      <div className="max-w-7xl mx-auto px-6 border-t border-white/10 py-6">
+      <div className="max-w-7xl mx-auto px-6 border-t border-white/10 py-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] text-white/40">
           <p>&copy; {new Date().getFullYear()} aibizmode Ltd. All rights reserved.</p>
           <p>Registered in England &amp; Wales: 12948572. VAT: 948572839</p>

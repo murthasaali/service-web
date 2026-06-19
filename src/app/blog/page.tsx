@@ -3,6 +3,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BlogPageContent from "@/components/blog/BlogPageContent";
 
+import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
+
 export const metadata: Metadata = {
   title: "Blog — Insights & Updates",
   description:
@@ -19,10 +21,11 @@ export default function BlogPage() {
   return (
     <>
       <Navbar />
-      <main>
-        <BlogPageContent />
-      </main>
-      <Footer />
+      <StickyFooterLayout footer={<Footer />}>
+        <main>
+          <BlogPageContent />
+        </main>
+      </StickyFooterLayout>
     </>
   );
 }

@@ -3,6 +3,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AboutPageContent from "@/components/about/AboutPageContent";
 
+import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
+
 export const metadata: Metadata = {
   title: "About Us",
   description:
@@ -19,10 +21,11 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <main>
-        <AboutPageContent />
-      </main>
-      <Footer />
+      <StickyFooterLayout footer={<Footer />}>
+        <main>
+          <AboutPageContent />
+        </main>
+      </StickyFooterLayout>
     </>
   );
 }

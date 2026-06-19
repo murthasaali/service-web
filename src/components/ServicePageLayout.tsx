@@ -19,6 +19,7 @@ import Footer from "@/components/layout/Footer";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import ShaderBackground from "@/components/ui/shader-background";
 import { StarButton } from "@/components/ui/star-button";
+import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
 
 // ─── Icon registry ────────────────────────────────────────────────────────────
 
@@ -124,7 +125,8 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
   return (
     <>
       <Navbar />
-      <main className="bg-white text-ink">
+      <StickyFooterLayout footer={<Footer />}>
+        <main className="bg-white text-ink">
 
         {/* ── 1. Hero ─────────────────────────────────────────────────────── */}
         <section className="relative isolate overflow-hidden px-6 pb-20 pt-32 md:pb-28 md:pt-36">
@@ -585,7 +587,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         </section>
 
       </main>
-      <Footer />
+      </StickyFooterLayout>
     </>
   );
 }

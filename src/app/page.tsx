@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import StickyFooterLayout from '@/components/layout/StickyFooterLayout';
 import HeroSection from '@/components/sections/HeroSection';
 import ServicesGrid from '@/components/sections/ServicesGrid';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
@@ -25,16 +26,17 @@ export default function Home() {
 	return (
 		<>
 			<Navbar />
-			<main>
-				<HeroSection />
-				<ServicesGrid />
-				<WhyChooseUs />
-				<GlobalPresence />
-				<HowWeWork />
-				<Testimonials />
-				<FAQSection />
-			</main>
-			<Footer />
+			<StickyFooterLayout footer={<Footer />}>
+				<main>
+					<HeroSection />
+					<ServicesGrid />
+					<WhyChooseUs />
+					<GlobalPresence />
+					<HowWeWork />
+					<Testimonials />
+					<FAQSection />
+				</main>
+			</StickyFooterLayout>
 		</>
 	);
 }
