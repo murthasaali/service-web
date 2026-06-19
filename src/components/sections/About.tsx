@@ -21,7 +21,7 @@ export default function About() {
               <span className="gradient-text">behind the tech</span>
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              aibizmode was founded by engineers who believed that technology
+              aibizmod was founded by engineers who believed that technology
               should be intelligent, accessible, and beautifully crafted.
               Today, we partner with startups and enterprises alike to design
               systems that scale.

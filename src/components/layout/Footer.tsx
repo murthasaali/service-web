@@ -14,7 +14,8 @@ import {
 import { MdEmail } from "react-icons/md";
 
 const services = [
-  { label: "Web & Software Development",   href: "/services/web-development" },
+  { label: "Web Development",              href: "/services/web-development" },
+  { label: "Custom Software Development",   href: "/services/software-development" },
   { label: "Mobile App Development",       href: "/services/mobile-app-development" },
   { label: "Digital Marketing",            href: "/services/digital-marketing" },
   { label: "Hosting & Infrastructure",     href: "/services/hosting-infrastructure" },
@@ -63,7 +64,7 @@ const socials = [
   },
   {
     label: "Email",
-    href: "mailto:hello@aibizmode.com",
+    href: "mailto:hello@aibizmod.com",
     icon: MdEmail,
   },
 ];
@@ -138,15 +139,15 @@ export default function Footer() {
               aibiz<span style={{ color: "#22D3EE" }}>mode</span>
             </Link>
             <p className="font-sans text-[13px] leading-[1.7] text-white/60 max-w-[280px]">
-              aibizmode is a digital growth and intelligent technology firm — helping businesses navigate the AI-driven future, build stronger digital presence, and scale with confidence.
+              aibizmod is a digital growth and intelligent technology firm — helping businesses navigate the AI-driven future, build stronger digital presence, and scale with confidence.
             </p>
             <div className="pt-2">
               <p className="font-sans text-[11px] text-white/40 uppercase tracking-widest mb-1.5">Inquiries</p>
               <a
-                href="mailto:hello@aibizmode.com"
+                href="mailto:hello@aibizmod.com"
                 className="font-serif text-[20px] text-white hover:text-[#22D3EE] transition-colors font-semibold"
               >
-                hello@aibizmode.com
+                hello@aibizmod.com
               </a>
             </div>
           </div>
@@ -290,7 +291,7 @@ export default function Footer() {
       {/* Bottom Bar Section */}
       <div className="max-w-7xl mx-auto px-6 border-t border-white/10 py-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] text-white/40">
-          <p>&copy; {new Date().getFullYear()} aibizmode Ltd. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} aibizmod Ltd. All rights reserved.</p>
           <p>Registered in England &amp; Wales: 12948572. VAT: 948572839</p>
         </div>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[10px] text-white/25 border-t border-white/5 pt-3 mt-3">

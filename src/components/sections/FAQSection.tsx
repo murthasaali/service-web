@@ -13,7 +13,7 @@ export default function FAQSection() {
   const faqs = [
     {
       question: "What services does aibizmode provide?",
-      answer: "We specialize in end-to-end technology services, including custom web & software development, mobile app engineering, digital marketing campaigns, cloud hosting & infrastructure, workflow automation, and strategic IT consulting.",
+      answer: "We specialize in technology services, including web development, custom software development, mobile app engineering, digital marketing campaigns, cloud hosting & infrastructure, workflow automation, and strategic IT consulting.",
     },
     {
       question: "How do you approach pricing and project timelines?",
@@ -29,7 +29,7 @@ export default function FAQSection() {
     },
     {
       question: "How do we get started with a project?",
-      answer: "Simply head over to our contact page or email hello@aibizmode.com. We schedule an initial discovery call within 24 hours to discuss your goals, outline technical recommendations, and prepare a tailored proposal.",
+      answer: "Simply head over to our contact page or email hello@aibizmod.com. We schedule an initial discovery call within 24 hours to discuss your goals, outline technical recommendations, and prepare a tailored proposal.",
     },
   ];
 
@@ -44,7 +44,7 @@ export default function FAQSection() {
               Looking for answers?
             </h2>
             <p className="text-[15px] text-muted-foreground leading-relaxed">
-              Ship beautiful frontends without the overhead — customizable, scalable and developer-friendly UI components.
+              Find answers to common questions about our technical capabilities, pricing models, project delivery, and post-launch support services.
             </p>
           </div>
 

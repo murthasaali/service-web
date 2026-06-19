@@ -48,6 +48,8 @@ const iconMap: Record<IconKey, LucideIcon> = {
 const serviceImages: Record<string, string> = {
   "web-development":
     "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1000&q=80",
+  "software-development":
+    "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=1000&q=80",
   "mobile-app-development":
     "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80",
   "digital-marketing":
@@ -218,7 +220,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_12%,rgba(210,247,255,0.52),transparent_34%)]" />
                 <div className="absolute bottom-6 left-6 right-6 rounded-3xl border border-white/55 bg-white/55 p-5 shadow-[0_16px_45px_rgba(15,23,42,0.15)] backdrop-blur-md">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-700">
-                    aibizmode delivery
+                    aibizmod delivery
                   </p>
                   <p className="mt-2 text-sm leading-6 text-slate-700">
                     Strategy, implementation, launch, and support with one

@@ -7,7 +7,7 @@ import { CardStack } from "@/components/ui/card-stack";
 const testimonials = [
   {
     quote:
-      "aibizmode delivered our entire platform in under 3 months. The quality exceeded our expectations and the team was remarkably responsive throughout.",
+      "aibizmod delivered our entire platform in under 3 months. The quality exceeded our expectations and the team was remarkably responsive throughout.",
     name: "Sarah M.",
     role: "CTO",
     company: "FinVault",
@@ -23,7 +23,7 @@ const testimonials = [
   },
   {
     quote:
-      "We've worked with many agencies, but aibizmode's approach to tech consulting is unmatched. They truly understand business outcomes, not just technology.",
+      "We've worked with many agencies, but aibizmod's approach to tech consulting is unmatched. They truly understand business outcomes, not just technology.",
     name: "Priya R.",
     role: "CEO",
     company: "Nexora",

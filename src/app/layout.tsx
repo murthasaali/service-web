@@ -12,24 +12,24 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 	title: {
-		default: 'aibizmode | Intelligent Tech Services',
-		template: '%s | aibizmode',
+		default: 'aibizmod | Intelligent Tech Services',
+		template: '%s | aibizmod',
 	},
 	description:
 		'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
 	keywords: ['tech services', 'web development', 'mobile apps', 'cloud', 'automation', 'digital marketing'],
-	metadataBase: new URL('https://aibizmode.com'),
+	metadataBase: new URL('https://aibizmod.com'),
 	openGraph: {
 		type: 'website',
 		locale: 'en_GB',
-		siteName: 'aibizmode',
-		title: 'aibizmode | Intelligent Tech Services',
+		siteName: 'aibizmod',
+		title: 'aibizmod | Intelligent Tech Services',
 		description:
 			'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'aibizmode | Intelligent Tech Services',
+		title: 'aibizmod | Intelligent Tech Services',
 		description:
 			'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
 	},

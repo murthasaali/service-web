@@ -37,7 +37,7 @@ export default function Header() {
           href="/"
           className="font-heading text-xl font-bold gradient-text"
         >
-          aibizmode
+          aibizmod
         </Link>
 
         <ul className="hidden md:flex items-center gap-8">

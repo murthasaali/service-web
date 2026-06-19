@@ -11,11 +11,11 @@ import Testimonials from '@/components/sections/Testimonials';
 import FAQSection from '@/components/sections/FAQSection';
 
 export const metadata: Metadata = {
-	title: { absolute: 'aibizmode | Intelligent Tech Services' },
+	title: { absolute: 'aibizmod | Intelligent Tech Services' },
 	description:
 		'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
 	openGraph: {
-		title: 'aibizmode | Intelligent Tech Services',
+		title: 'aibizmod | Intelligent Tech Services',
 		description:
 			'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
 		url: '/',

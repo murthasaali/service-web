@@ -95,7 +95,7 @@ export default function AboutPageContent() {
               </h2>
               <div className="mt-8 space-y-6 text-muted-foreground leading-[1.8]" style={{ fontSize: 15 }}>
                 <p>
-                  aibizmode was founded in 2019 by James and Sarah, former enterprise engineers
+                  aibizmod was founded in 2019 by James and Sarah, former enterprise engineers
                   who saw a need for a firm where technical excellence and business goals align.
                   We focus on bringing clarity to what to build, when to build it, and how to scale it.
                 </p>

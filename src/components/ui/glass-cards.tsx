@@ -12,6 +12,7 @@ import {
   TrendingUp,
   Users,
   Zap,
+  Cpu,
   type LucideIcon,
 } from "lucide-react";
 import { StarButton } from "@/components/ui/star-button";
@@ -29,14 +30,22 @@ type WhatWeDoCard = {
 const whatWeDoCards: WhatWeDoCard[] = [
   {
     id: 1,
-    title: "Web & Software Development",
+    title: "Web Development",
     description:
-      "Custom web platforms, SaaS products, and internal tools engineered for performance, usability, and long-term scale.",
+      "Build fast, scalable, responsive websites and web applications that help businesses grow online.",
     href: "/services/web-development",
     icon: Code2,
   },
   {
     id: 2,
+    title: "Custom Software Development",
+    description:
+      "Custom software solutions built to streamline operations, automate workflows, and support business growth.",
+    href: "/services/software-development",
+    icon: Cpu,
+  },
+  {
+    id: 3,
     title: "Mobile App Development",
     description:
       "Native and cross-platform mobile experiences that help customers and teams get things done from anywhere.",
@@ -44,7 +53,7 @@ const whatWeDoCards: WhatWeDoCard[] = [
     icon: Smartphone,
   },
   {
-    id: 3,
+    id: 4,
     title: "Digital Growth & SEO",
     description:
       "Search, content, analytics, and conversion systems that make your digital presence easier to discover and act on.",
@@ -52,7 +61,7 @@ const whatWeDoCards: WhatWeDoCard[] = [
     icon: TrendingUp,
   },
   {
-    id: 4,
+    id: 5,
     title: "Cloud Infrastructure",
     description:
       "Reliable hosting, deployment pipelines, monitoring, and cloud architecture built for secure everyday operations.",
@@ -60,7 +69,7 @@ const whatWeDoCards: WhatWeDoCard[] = [
     icon: Server,
   },
   {
-    id: 5,
+    id: 6,
     title: "Workflow Automation",
     description:
       "Smart automations that connect tools, reduce manual effort, and keep important business processes moving.",
@@ -68,7 +77,7 @@ const whatWeDoCards: WhatWeDoCard[] = [
     icon: Zap,
   },
   {
-    id: 6,
+    id: 7,
     title: "Customer Experience",
     description:
       "Connected CRM, support, and communication systems that turn every customer touchpoint into a better experience.",
@@ -76,7 +85,7 @@ const whatWeDoCards: WhatWeDoCard[] = [
     icon: Users,
   },
   {
-    id: 7,
+    id: 8,
     title: "Technology Consulting",
     description:
       "Practical technical guidance for architecture, vendor choices, delivery planning, and ongoing technology decisions.",

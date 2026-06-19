@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Data-driven digital marketing strategies — SEO, paid advertising, content, and email automation that drive qualified traffic and revenue.",
   openGraph: {
-    title: "Digital Marketing | aibizmode",
+    title: "Digital Marketing | aibizmod",
     description:
       "Data-driven digital marketing strategies — SEO, paid advertising, content, and email automation that drive qualified traffic and revenue.",
     url: "/services/digital-marketing",
@@ -16,107 +16,111 @@ export const metadata: Metadata = {
 const data: ServicePageData = {
   name: "Digital Marketing",
   tagline:
-    "Data-driven campaigns that grow your brand, generate qualified leads, and convert them into revenue.",
+    "We set up tracking plans, perform search audits, build Looker Studio dashboards, and map keywords for marketing campaigns.",
   slug: "digital-marketing",
   iconColor: "text-emerald-600",
 
   overview: {
     paragraphs: [
-      "Digital marketing at scale requires more than running ads and publishing blog posts. It demands a disciplined, data-led approach — understanding where your audience spends time, what content earns their trust, which channels convert with the best unit economics, and how to allocate budget across them intelligently.",
-      "Our team combines technical SEO expertise, performance advertising, content strategy, and email automation into integrated campaigns that move the metrics that matter: qualified traffic, cost per lead, conversion rate, and revenue. We report on business outcomes, not vanity metrics.",
-      "Every engagement starts with a thorough audit of your current digital presence, competitor landscape, and conversion funnel. We build a strategy from evidence, execute with precision, test relentlessly, and scale what works — cutting what doesn't, without sentiment.",
+      "We provide technical execution for digital marketing setups, search auditing, and analytics tracking. When you engage us, you receive a detailed tracking plan specifying custom event triggers, a comprehensive technical SEO audit report, custom-built Looker Studio reporting dashboards, and structured search campaign maps. We do not write vague marketing copy or buy list directories; we configure direct attribution and measurement systems so you can review actual campaign returns.",
+      "Our services are designed to verify and map customer acquisition routes. For instance, we set up Google Analytics 4 (GA4) with custom conversion logs, audit Google Search Console to fix crawling and schema markup errors, analyze landing page interface friction, and build keyword mapping frameworks for paid search campaigns.",
+      "Previous projects include: a GA4 and GTM conversion audit for an e-commerce company that resolved broken checkout event logs; a Search Console crawl optimization project for a software provider that corrected sitemap errors and indexed missing product pages; and a keyword research and ad campaign setup for a logistics provider targeting commercial business-to-business shipping search terms."
     ],
     benefits: [
-      "Strategy grounded in data and competitor analysis, not assumptions",
-      "Transparent reporting tied directly to revenue and pipeline, not page views",
-      "Full-funnel coverage from brand awareness through to closed deal",
-      "Integrated SEO, paid, content, and email approach for compounding results",
-      "Monthly strategy reviews with actionable recommendations for the next period",
+      "Accurate Google Analytics attribution",
+      "Fixed Search Console crawl indexing errors",
+      "Custom conversion tracking configuration",
+      "Competitor search term comparisons",
+      "Unified dashboards in Looker Studio",
+      "Structured paid campaign frameworks"
     ],
   },
 
   features: [
     {
-      icon: "search",
-      title: "SEO Strategy",
-      desc: "Technical SEO audits, keyword research, on-page optimisation, and link-building campaigns that drive sustainable, compounding organic growth.",
-    },
-    {
       icon: "target",
-      title: "Paid Advertising (PPC)",
-      desc: "Google Ads and Meta Ads campaigns structured for maximum return on ad spend — with continuous A/B testing of copy, creative, and audience targeting.",
+      title: "Tracking Plan",
+      desc: "We map out Google Tag Manager custom variables, tags, triggers, and datalayers to track specific clicks, form submissions, and purchases."
     },
     {
-      icon: "fileText",
-      title: "Content Marketing",
-      desc: "Editorial strategy, long-form content, and thought leadership pieces that build topical authority, earn backlinks, and convert organic visitors.",
-    },
-    {
-      icon: "mail",
-      title: "Email Automation",
-      desc: "Lifecycle email sequences, behavioural triggers, and newsletter programmes that nurture leads through the funnel and re-engage churned users.",
-    },
-    {
-      icon: "megaphone",
-      title: "Social Media Marketing",
-      desc: "Organic and paid social strategies across LinkedIn, Instagram, and X — tailored to your audience's behaviour and your brand's voice.",
+      icon: "search",
+      title: "Audit Report",
+      desc: "We run a technical review of Google Search Console and crawling tools to identify broken page links, metadata gaps, and indexing issues."
     },
     {
       icon: "lineChart",
-      title: "Analytics & Reporting",
-      desc: "GA4 setup, conversion tracking, custom Looker Studio dashboards, and monthly reports tied to KPIs that reflect real business performance.",
+      title: "Reporting Dashboard",
+      desc: "We build custom Looker Studio dashboards connecting GA4, Google Search Console, and paid ad platforms into a single view."
     },
+    {
+      icon: "layers",
+      title: "Campaign Structure",
+      desc: "We compile search campaign ad groups, write targeted text ads, set up keyword matches, and configure bid limits."
+    },
+    {
+      icon: "globe",
+      title: "SEO Recommendations",
+      desc: "We write specific recommendations for page headings, URL routing, site loading speed optimizations, and JSON-LD structured schemas."
+    },
+    {
+      icon: "mail",
+      title: "Conversion Tracking",
+      desc: "We configure conversion parameters in Google Ads, Meta Pixel, and Google Analytics 4 to track outbound responses."
+    }
   ],
 
   process: [
     {
       icon: "search",
-      title: "Discovery & Audit",
-      desc: "Full audit of your digital presence, ad accounts, SEO state, content library, and competitor strategies to establish an accurate baseline.",
+      title: "Analytics & SEO Audit",
+      desc: "We review your existing GA4 tags, Search Console errors, and current search visibility to document technical issues."
     },
     {
       icon: "target",
-      title: "Strategy & Planning",
-      desc: "Channel selection, budget allocation, content calendar, KPI definition, and stakeholder alignment before any campaigns go live.",
+      title: "Tracking & Campaign Mapping",
+      desc: "We design a spreadsheet detailing your keyword map, Looker Studio layout, and GTM tracking plan."
     },
     {
-      icon: "megaphone",
-      title: "Execution & Launch",
-      desc: "Asset creation, campaign setup, content publishing, SEO implementation, and coordinated campaign launch across chosen channels.",
+      icon: "code2",
+      title: "Implementation",
+      desc: "We set up tracking tags, build dashboards in Looker Studio, fix Search Console sitemap issues, and structure paid ad groups."
     },
     {
       icon: "lineChart",
-      title: "Optimise & Report",
-      desc: "Ongoing A/B testing, audience refinement, bid strategy adjustment, and monthly performance reviews against agreed KPIs.",
-    },
+      title: "Review & Verification",
+      desc: "We run test conversions to verify that GA4 and Google Ads capture transaction events correctly."
+    }
   ],
 
   techStack: [
-    "Google Analytics 4", "Google Ads", "Meta Ads Manager", "SEMrush", "Ahrefs",
-    "HubSpot", "Mailchimp", "Klaviyo", "Hotjar", "Looker Studio", "Google Search Console", "LinkedIn Ads",
+    "Google Analytics 4",
+    "Google Search Console",
+    "Google Tag Manager",
+    "Looker Studio",
+    "Google Ads",
+    "Meta Ads Manager",
+    "SEMrush",
+    "Screaming Frog",
+    "Ahrefs"
   ],
 
   faqs: [
     {
-      q: "How soon can I expect results from SEO?",
-      a: "Organic SEO is a long-term investment — most clients see meaningful ranking movement within 3–6 months, with compounding returns building over 12–18 months. Paid advertising (PPC) delivers results within days of launch. For clients who need immediate pipeline alongside long-term organic growth, we run both in parallel from the start.",
+      q: "What deliverables do we receive from a digital marketing setup?",
+      a: "You receive ownership of custom Looker Studio dashboards, configured Google Tag Manager and GA4 accounts, a documented tracking plan spreadsheet, a Search Console audit report PDF, and your live search campaign structure files."
     },
     {
-      q: "How much budget do I need for paid advertising?",
-      a: "Budget depends on your market, competitive landscape, and goals. As a guideline: B2B campaigns typically need £1,500–£3,000/month in ad spend to generate statistically meaningful data; B2C can start from £500–£1,500/month. Our management fee covers strategy, setup, optimisation, and reporting — it is separate from your ad spend.",
+      q: "Do you buy ad space directly on our behalf?",
+      a: "No. We configure and manage the campaigns directly within your own Google Ads or Meta developer accounts. You register your payment details with the platforms directly, so you pay only for direct click cost with no markups from us."
     },
     {
-      q: "How do you measure success?",
-      a: "We establish KPIs at the start of every engagement — typically cost per qualified lead, organic traffic growth, email conversion rates, and revenue influenced by digital channels. Every monthly report is tied directly to these agreed metrics, not surface-level statistics.",
+      q: "Why is Google Search Console auditing important?",
+      a: "Search Console is the direct link between Google's crawling engine and your website. Auditing identifies errors like slow loading pages, broken redirection paths, missing canonical links, and formatting bugs that block Google from index listing."
     },
     {
-      q: "Will you need access to our existing accounts?",
-      a: "Yes. We require admin access to your Google Ads, Meta Ads Manager, GA4, and Search Console accounts to work effectively. We operate within your own accounts at all times — you retain full ownership and can access everything we've built throughout and after the engagement.",
-    },
-    {
-      q: "Do you work with specific industries?",
-      a: "We've run successful campaigns across SaaS, e-commerce, professional services, fintech, healthcare, and logistics. Our team adapts strategy to the specific purchase cycle, regulatory environment, and audience behaviour of your industry — no generic playbooks.",
-    },
+      q: "How do you verify that conversion tracking is functioning correctly?",
+      a: "We use Tag Assistant and browser development consoles to run real-time transaction simulations on your staging website. We verify that specific tag headers fire and that the correct transaction values are received in GA4 and ad dashboards."
+    }
   ],
 };
 
