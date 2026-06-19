@@ -87,6 +87,8 @@ export default function BlogPageContent() {
 	const [email, setEmail] = useState('');
 	const [subscribed, setSubscribed] = useState(false);
 
+	const visiblePosts = activeCategory === 'All' ? blogPosts : blogPosts.filter(post => post.category === activeCategory);
+
 	const handleSubscribe = (e: React.FormEvent) => {
 		e.preventDefault();
 		if (email.trim()) setSubscribed(true);
