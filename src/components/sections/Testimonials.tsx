@@ -61,8 +61,7 @@ export default function Testimonials() {
             className="mt-4 text-muted-foreground max-w-xl mx-auto"
             style={{ fontSize: 17, lineHeight: 1.65 }}
           >
-            Don&apos;t take our word for it — hear directly from the businesses
-            we&apos;ve helped grow.
+            But don&apos;t take our word for it — listen to the businesses we&apos;ve helped grow.
           </p>
         </AnimatedSection>
 

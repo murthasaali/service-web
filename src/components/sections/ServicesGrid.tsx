@@ -40,9 +40,7 @@ export default function ServicesGrid() {
               className="mt-5 text-stone-600"
               style={{ fontSize: 18, lineHeight: 1.7 }}
             >
-              All the innovative solutions you need to grow your business are
-              here. We add value with services that simplify workflows, improve
-              efficiency, and strengthen your decisions.
+              Providing innovative technology solutions that bring teams together, streamline processes and create integrated digital experiences for businesses. 
             </p>
           </AnimatedSection>
         </div>

@@ -121,7 +121,7 @@ function handleMagneticLeave(event: React.MouseEvent<HTMLAnchorElement>) {
 
 export default function HeroSection() {
   return (
-    <section className="relative isolate mt-[68px] h-[calc(100vh-68px)] overflow-hidden bg-white">
+    <section className="relative isolate pt-[68px] h-screen overflow-hidden bg-white">
       <ShaderBackground className="absolute inset-0 z-0 h-full w-full" />
 
       <div className="pointer-events-none absolute inset-0 z-10 hidden md:block" aria-hidden="true">
@@ -157,8 +157,7 @@ export default function HeroSection() {
 
         <div className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/85 px-6 py-4 shadow-[0_18px_55px_rgba(59,130,246,0.12)]">
           <p className="text-sm leading-6 text-stone-600 md:text-base md:leading-7">
-            Empowering businesses with modern technology solutions that connect
-            teams, streamline workflows, and create seamless digital experiences.
+            Providing innovative technology solutions that bring teams together, streamline processes and create integrated digital experiences for businesses.
           </p>
         </div>
 

@@ -44,7 +44,7 @@ export default function FAQSection() {
               Looking for answers?
             </h2>
             <p className="text-[15px] text-muted-foreground leading-relaxed">
-              Find answers to common questions about our technical capabilities, pricing models, project delivery, and post-launch support services.
+              Check out our frequently asked questions regarding technical expertise, pricing, project delivery, and post-launch support services.
             </p>
           </div>
 

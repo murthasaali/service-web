@@ -43,7 +43,7 @@ export default function HowWeWork() {
       <ProcessSection
         subtitle="How We Work"
         title="A Process <br /> You Can Count On"
-        description="We work on a typical matrix of time, effort, and money, following Agile methodologies to deliver exceptional results."
+        description="Our work is based on a typical matrix of time, effort and money and we use Agile methodologies to deliver exceptional results."
         buttonText="Get a Quote"
         items={processItems}
       />

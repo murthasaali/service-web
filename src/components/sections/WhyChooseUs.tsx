@@ -17,17 +17,17 @@ const values: { icon: LucideIcon; title: string; desc: string }[] = [
   {
     icon: Users,
     title: "Expert Multidisciplinary Team",
-    desc: "Our engineers, designers, and strategists work as a unified squad — bringing deep domain expertise across every layer of the product.",
+    desc: "Our engineers, designers and strategists operate as a single squad, bringing deep domain expertise to every layer of the product.",
   },
   {
     icon: Layers,
     title: "Battle-Tested Process",
-    desc: "We follow proven agile frameworks with clear milestones, transparent communication, and consistent delivery — no surprises.",
+    desc: "We work with proven agile models that have clear milestones, transparent communication, and consistent delivery — no surprises.",
   },
   {
     icon: Rocket,
     title: "Future-Ready Technology",
-    desc: "We build with scalable, modern stacks that keep you ahead of the curve — not technical debt that slows you down.",
+    desc: "We build on modern, scalable stacks that keep you ahead of the curve — not technical debt that holds you back.",
   },
 ];
 
@@ -44,21 +44,21 @@ export default function WhyChooseUs() {
           {/* Left Column: Heading and Stats Grid */}
           <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-8">
             <AnimatedSection>
-              <div className="eyebrow">
+              <span className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
                 Why Choose Us
-              </div>
+              </span>
               <h2
-                className="mt-6 font-display font-extrabold text-ink leading-[1.1] tracking-tight text-balance"
+                className="mt-6 font-display font-extrabold text-primary leading-[1.1] tracking-tight text-balance"
                 style={{
                   fontSize: "clamp(30px, 4vw, 44px)",
                 }}
               >
-                Built on Trust, <span className="gradient-text">Driven by Results</span>
+                Built on Trust, Driven by Results
               </h2>
               <p
                 className="mt-4 text-muted-foreground text-[16px] leading-[1.7]"
               >
-                We don&apos;t just ship code — we take full ownership of business outcomes, eliminate technical debt, and hold ourselves to the highest standard of delivery.
+                We are not just about delivering code. We own business outcomes, get rid of technical debt, and deliver at the highest standard.
               </p>
             </AnimatedSection>
 
