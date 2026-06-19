@@ -6,13 +6,13 @@ import BlogPageContent from "@/components/blog/BlogPageContent";
 import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
 
 export const metadata: Metadata = {
-  title: "Blog — aibizmode Journal",
+  title: "Blog — aibizmod Journal",
   description:
-    "Original aibizmode notes on domain launch, SEO service building, generative optimisation, and practical website strategy.",
+    "Original aibizmod notes on domain launch, SEO service building, generative optimisation, and practical website strategy.",
   openGraph: {
-    title: "Blog — aibizmode Journal",
+    title: "Blog — aibizmod Journal",
     description:
-      "Original aibizmode notes on domain launch, SEO service building, generative optimisation, and practical website strategy.",
+      "Original aibizmod notes on domain launch, SEO service building, generative optimisation, and practical website strategy.",
     url: "/blog",
   },
 };

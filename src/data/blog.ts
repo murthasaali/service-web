@@ -9,10 +9,10 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   category: string;
-  date: string;
-  readTime: string;
   image: string;
   imageAlt: string;
+  date: string;
+  readTime: string;
   featured?: boolean;
   author: {
     name: string;
@@ -22,9 +22,9 @@ export interface BlogPost {
 }
 
 export const blogAuthor = {
-  name: "aibizmode Editorial Team",
+  name: "aibizmod Editorial Team",
   initials: "AE",
-  url: "https://aibizmode.com/blog",
+  url: "https://aibizmod.com/blog",
 };
 
 export const categories = [
@@ -37,24 +37,36 @@ export const categories = [
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "buying-aibizmode-domain-first-week",
-    title: "What Buying the aibizmode Domain Taught Us About Starting Properly",
+    slug: "buying-aibizmod-domain-first-week",
+    title: "What Buying the aibizmod Domain Taught Us About Starting Properly",
     excerpt:
       "A domain is a small purchase, but it forces useful decisions: name, promise, structure, tracking, and the first version of trust.",
     category: "Company Notes",
-    date: "June 19, 2026",
-    readTime: "4 min read",
-    image: "/blog/aibizmode-domain-launch.png",
+    image: "/blog/aibizmod-domain-launch.png",
     imageAlt:
-      "Editorial illustration of a clean domain launch workspace with a laptop and cyan network lines",
+      "A quiet desk setup with a laptop, notebook, and coffee while planning the aibizmod domain launch.",
+    date: "June 19, 2026",
+    readTime: "7 min read",
     featured: true,
     author: blogAuthor,
     sections: [
       {
         heading: "The domain made the idea less fuzzy",
         paragraphs: [
-          "Buying `aibizmode.com` was not the finish line. It was the moment the idea stopped floating around and became something we had to shape. A name on a domain asks awkward but useful questions: what do we actually do, who is this for, and what should a visitor understand in the first ten seconds?",
+          "Buying `aibizmod.com` was not the finish line. It was the moment the idea stopped floating around and became something we had to shape. A name on a domain asks awkward but useful questions: what do we actually do, who is this for, and what should a visitor understand in the first ten seconds?",
           "That is why we treated the domain as a starting point, not a trophy. Before adding animations or service pages, we wrote down the core promise: help businesses use websites, apps, automation, cloud systems, and marketing without making the process feel heavier than the problem.",
+        ],
+      },
+      {
+        heading: "What we wrote down before touching the design",
+        paragraphs: [
+          "The first notes were not glamorous. We listed the services we can explain without hiding behind jargon, the clients we can help now, and the claims we should avoid until we have proof on the page.",
+          "That exercise changed the website structure. Instead of leading with every possible service, we kept the first path simple: understand the company, scan the services, read a few honest notes, and contact us without a long maze of forms.",
+        ],
+        bullets: [
+          "A visitor should know what aibizmod does before scrolling twice.",
+          "Every service page needs a practical reason to exist.",
+          "The brand should sound calm, useful, and close to the work.",
         ],
       },
       {
@@ -73,6 +85,7 @@ export const blogPosts: BlogPost[] = [
         heading: "What we will keep improving",
         paragraphs: [
           "The next step is not just adding more pages. It is making the pages more useful. That means clearer examples, stronger local SEO foundations, better service explanations, and more honest notes about how we work.",
+          "We also want the blog to become a record of decisions, not a feed of recycled advice. If we try something on our own site, we can write about what changed, what did not, and what we would do differently for a client.",
           "A domain is rented space. Trust is earned after that, paragraph by paragraph, project by project.",
         ],
       },
@@ -84,11 +97,11 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "SEO work starts with small, practical checks: crawlability, page intent, analytics, local proof, and content that answers real buying questions.",
     category: "SEO",
-    date: "June 18, 2026",
-    readTime: "5 min read",
     image: "/blog/seo-marketing-service-journey.png",
     imageAlt:
-      "Editorial illustration of an SEO planning desk with abstract analytics cards and cyan growth lines",
+      "Printed SEO notes, a laptop analytics screen, and sticky notes on a light office desk.",
+    date: "June 18, 2026",
+    readTime: "8 min read",
     author: blogAuthor,
     sections: [
       {
@@ -96,6 +109,13 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "SEO can become a pile of dashboards very quickly. Our approach is simpler at the start: make sure the site can be found, understood, trusted, and measured.",
           "For a service business, that usually means fixing page titles, matching pages to real search intent, adding useful service details, and setting up analytics before chasing traffic numbers.",
+        ],
+      },
+      {
+        heading: "We are not chasing every keyword",
+        paragraphs: [
+          "The easiest way to make SEO content feel thin is to write for every phrase a tool suggests. We are starting narrower. One page should answer one useful intent, and that answer should help a real buyer decide what to do next.",
+          "For aibizmod, that means writing around the questions we hear in early conversations: what should a service website include, when should a business rebuild instead of patch, how much content is enough, and which technical fixes actually affect enquiries.",
         ],
       },
       {
@@ -113,8 +133,9 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Marketing should make sales conversations easier",
         paragraphs: [
-          "The point is not to rank for every broad keyword. The point is to help the right visitor understand whether aibizmode can solve their problem.",
+          "The point is not to rank for every broad keyword. The point is to help the right visitor understand whether aibizmod can solve their problem.",
           "That means our SEO journey will focus on practical pages first: service explainers, local trust signals, comparison articles, and guides that answer the questions clients ask before they contact us.",
+          "Good SEO should make a sales call shorter and clearer. If the website has already explained the offer, the process, and the likely next step, the first call can focus on the actual problem instead of basic orientation.",
         ],
       },
     ],
@@ -125,11 +146,11 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "AI search changes how people discover service providers. The work starts with clearer pages, stronger proof, and content that answer engines can cite.",
     category: "GEO",
-    date: "June 17, 2026",
-    readTime: "6 min read",
     image: "/blog/generative-engine-optimisation.png",
     imageAlt:
-      "Editorial illustration of AI search panels and connected content nodes on a bright white background",
+      "A desk with a laptop, planning cards, and notes for improving content for generative search.",
+    date: "June 17, 2026",
+    readTime: "8 min read",
     author: blogAuthor,
     sections: [
       {
@@ -140,9 +161,16 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
+        heading: "Answer engines need clean facts",
+        paragraphs: [
+          "A service page that only says 'we build scalable solutions' does not give much for a search system to work with. A stronger page names the audience, describes the process, lists the deliverables, and explains how the team handles follow-up.",
+          "That does not mean stuffing pages with schema or writing robotic Q and A blocks. It means making the useful facts obvious enough that a human visitor and an answer engine can both understand them.",
+        ],
+      },
+      {
         heading: "What we are changing on our own pages",
         paragraphs: [
-          "We are removing vague claims and adding more specific answers. That includes what happens during discovery, what deliverables a client receives, what tools we use, and where aibizmode is a good fit or not a good fit.",
+          "We are removing vague claims and adding more specific answers. That includes what happens during discovery, what deliverables a client receives, what tools we use, and where aibizmod is a good fit or not a good fit.",
         ],
         bullets: [
           "Write direct answers to buyer questions.",
@@ -155,6 +183,7 @@ export const blogPosts: BlogPost[] = [
         heading: "The practical starting point",
         paragraphs: [
           "A good GEO plan begins with content hygiene. Remove duplicate sections, give each service page a unique purpose, and make sure important facts are easy to extract.",
+          "We are also keeping examples close to the service. A web development page should talk about performance, CMS choices, integrations, and handover. A marketing page should talk about tracking, content plans, local visibility, and reporting. Those details matter more than sounding futuristic.",
           "AI search may change the interface, but it still rewards useful, specific, well-structured information. That is where we are putting our effort first.",
         ],
       },
@@ -166,11 +195,11 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Traffic is expensive when the website is unclear. A practical trust pass can fix the basics before spending on campaigns.",
     category: "Website Strategy",
-    date: "June 16, 2026",
-    readTime: "5 min read",
     image: "/blog/website-trust-before-marketing.png",
     imageAlt:
-      "Editorial illustration of a website trust checklist dashboard with cyan network lines",
+      "A laptop, checklist notes, and a phone on a clean desk during a website trust review.",
+    date: "June 16, 2026",
+    readTime: "7 min read",
     author: blogAuthor,
     sections: [
       {
@@ -178,6 +207,13 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "A website does not need to be loud to be convincing. It needs to answer the basic doubts quickly: who are you, what do you do, can you handle my type of problem, and what happens if I contact you?",
           "Before running SEO or ads, we like to run a trust pass. It is a small review of the pages a new visitor will see before they decide to enquire or leave.",
+        ],
+      },
+      {
+        heading: "Trust is often a collection of small signals",
+        paragraphs: [
+          "People notice more than the headline. They notice whether the navigation makes sense, whether the contact page looks alive, whether the services sound copied, and whether the mobile version feels cared for.",
+          "None of those details are dramatic on their own. Together, they decide whether a visitor feels comfortable sharing a project brief, phone number, or budget range.",
         ],
       },
       {
@@ -196,6 +232,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Campaigns work better after clarity",
         paragraphs: [
           "SEO and ads can bring people to the site. They cannot make a confusing page feel safe. That is why we treat content cleanup, speed, mobile layout, and contact flow as marketing work too.",
+          "Before increasing traffic, we want to remove the small doubts: vague service names, old placeholders, missing next steps, unclear pricing language, and pages that sound like they were written for no one in particular.",
           "The goal is simple: when the right visitor arrives, the website should make the next step feel obvious.",
         ],
       },
@@ -209,4 +246,3 @@ export const gridPosts = blogPosts.filter((post) => post.slug !== featuredPost.s
 export function getBlogPost(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
-

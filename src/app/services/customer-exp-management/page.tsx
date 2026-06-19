@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "CX strategy, CRM implementation, and omnichannel communication setup — turning every customer interaction into lasting loyalty.",
   openGraph: {
-    title: "Customer Experience Management | aibizmode",
+    title: "Customer Experience Management | aibizmod",
     description:
       "CX strategy, CRM implementation, and omnichannel communication setup — turning every customer interaction into lasting loyalty.",
     url: "/services/customer-exp-management",

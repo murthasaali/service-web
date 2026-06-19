@@ -155,7 +155,7 @@ export default function Navbar() {
         >
           <Link
             href="/"
-            aria-label="aibizmode — go to home"
+            aria-label="aibizmod — go to home"
             className={`relative px-4 py-2 rounded-full font-display font-bold text-[19px] tracking-tight select-none ${
               scrolled ? "text-white" : "text-ink"
             }`}

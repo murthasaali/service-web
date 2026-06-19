@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, Clock, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AnimatedSection from "@/components/common/AnimatedSection";
-import ShaderBackground from "@/components/ui/shader-background";
-import { StarButton } from "@/components/ui/star-button";
 import { blogAuthor, blogPosts, getBlogPost } from "@/data/blog";
 
 interface BlogDetailPageProps {
@@ -33,7 +31,7 @@ export function generateMetadata({ params }: BlogDetailPageProps): Metadata {
     title: post.title,
     description: post.excerpt,
     openGraph: {
-      title: `${post.title} | aibizmode`,
+      title: `${post.title} | aibizmod`,
       description: post.excerpt,
       url: `/blog/${post.slug}`,
       type: "article",
@@ -57,7 +55,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    image: `https://aibizmode.com${post.image}`,
+    image: `https://aibizmod.com${post.image}`,
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.date).toISOString(),
     author: {
@@ -67,12 +65,12 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
     },
     publisher: {
       "@type": "Organization",
-      name: "aibizmode",
-      url: "https://aibizmode.com",
+      name: "aibizmod",
+      url: "https://aibizmod.com",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://aibizmode.com/blog/${post.slug}`,
+      "@id": `https://aibizmod.com/blog/${post.slug}`,
     },
   };
 
@@ -85,38 +83,39 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
         />
 
-        <section className="relative isolate overflow-hidden bg-white px-6 pb-20 pt-32 md:pb-28 md:pt-36">
-          <ShaderBackground className="absolute inset-0 z-0 h-full w-full opacity-80" />
+        <section className="relative overflow-hidden bg-white px-6 pb-12 pt-44 md:pb-16 md:pt-48">
           <div
-            className="pointer-events-none absolute left-1/2 top-24 z-0 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-200/30 blur-3xl"
+            className="pointer-events-none absolute inset-x-0 top-24 h-48 opacity-50"
+            style={{
+              background:
+                "radial-gradient(circle at 44% 18%, rgba(210,247,255,0.5), transparent 34%), linear-gradient(90deg, transparent, rgba(72,127,137,0.1), transparent)",
+            }}
             aria-hidden="true"
           />
-
-          <div className="relative z-10 mx-auto max-w-5xl">
+          <div className="relative mx-auto max-w-5xl">
             <Link
               href="/blog"
-              className="mb-8 inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-white/55 px-4 py-2 text-sm font-semibold text-[#0F172A] shadow-[0_12px_35px_rgba(59,130,246,0.10)] backdrop-blur-md transition hover:border-cyan-200 hover:bg-white"
+              className="mb-8 inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white/85 px-4 py-2 text-sm font-semibold text-stone-800 shadow-sm backdrop-blur transition hover:border-stone-300"
             >
               <ArrowLeft size={14} aria-hidden="true" />
               Back to Blog
             </Link>
 
             <AnimatedSection>
-              <span className="inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-white/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700 shadow-[0_12px_35px_rgba(59,130,246,0.10)] backdrop-blur-md">
-                <Sparkles size={14} aria-hidden="true" />
+              <span className="inline-flex rounded-full border border-stone-200 bg-white/85 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-stone-500 shadow-sm backdrop-blur">
                 {post.category}
               </span>
               <h1
-                className="mt-7 max-w-4xl font-display font-thin text-[#0F172A] text-balance"
-                style={{ fontSize: "clamp(40px, 6vw, 76px)", lineHeight: 1.02 }}
+                className="mt-7 max-w-4xl font-display font-normal text-[#0F172A] text-balance"
+                style={{ fontSize: "clamp(34px, 5vw, 60px)", lineHeight: 1.04 }}
               >
                 {post.title}
               </h1>
-              <p className="mt-6 max-w-3xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-base leading-8 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md md:text-lg">
+              <p className="mt-6 max-w-3xl text-base leading-8 text-stone-600 md:text-lg">
                 {post.excerpt}
               </p>
-              <div className="mt-7 flex flex-wrap items-center gap-4 text-sm text-slate-500">
-                <span className="font-semibold text-[#0F172A]">
+              <div className="mt-7 flex flex-wrap items-center gap-4 text-sm text-stone-500">
+                <span className="font-semibold text-stone-950">
                   {post.author.name}
                 </span>
                 <span aria-hidden="true">·</span>
@@ -131,28 +130,30 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
           </div>
         </section>
 
-        <section className="px-6 pb-24">
-          <div className="mx-auto max-w-6xl">
+        <section className="border-t border-stone-200 bg-stone-50 px-6 pb-24 pt-10">
+          <div className="mx-auto max-w-5xl">
             <AnimatedSection>
-              <div className="relative aspect-[16/9] overflow-hidden rounded-[32px] border border-cyan-100 bg-cyan-50 shadow-[0_26px_80px_rgba(8,145,178,0.16)]">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-stone-200 bg-stone-100 shadow-[0_18px_48px_rgba(15,23,42,0.08)]">
                 <Image
                   src={post.image}
                   alt={post.imageAlt}
                   fill
                   priority
+                  sizes="(min-width: 1024px) 960px, 100vw"
                   className="object-cover"
-                  sizes="(min-width: 1024px) 1024px, 100vw"
                 />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_12%,rgba(210,247,255,0.36),transparent_34%)]" />
               </div>
             </AnimatedSection>
 
-            <article className="mx-auto mt-16 max-w-3xl">
+            <article className="mx-auto mt-14 max-w-3xl">
               {post.sections.map((section) => (
-                <AnimatedSection key={section.heading} className="mb-14">
+                <AnimatedSection
+                  key={section.heading}
+                  className="mb-14 rounded-2xl border border-stone-200 bg-white px-6 py-8 shadow-[0_14px_36px_rgba(15,23,42,0.05)] last:mb-0 md:px-9"
+                >
                   <h2
-                    className="font-display font-thin text-[#0F172A] text-balance"
-                    style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: 1.1 }}
+                    className="font-display font-normal text-[#0F172A] text-balance"
+                    style={{ fontSize: "clamp(26px, 4vw, 40px)", lineHeight: 1.12 }}
                   >
                     {section.heading}
                   </h2>
@@ -160,20 +161,20 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                     {section.paragraphs.map((paragraph) => (
                       <p
                         key={paragraph}
-                        className="text-base leading-8 text-slate-600 md:text-lg"
+                        className="text-base leading-8 text-stone-600 md:text-lg"
                       >
                         {paragraph}
                       </p>
                     ))}
                   </div>
                   {section.bullets && (
-                    <ul className="mt-6 space-y-3 rounded-[24px] border border-cyan-100 bg-[#ECFEFF]/60 p-6 shadow-[0_18px_55px_rgba(59,130,246,0.08)] backdrop-blur-md">
+                    <ul className="mt-6 space-y-3 rounded-xl border border-stone-200 bg-stone-50 p-5">
                       {section.bullets.map((bullet) => (
                         <li
                           key={bullet}
-                          className="flex gap-3 text-sm leading-7 text-slate-700"
+                          className="flex gap-3 text-sm leading-7 text-stone-700"
                         >
-                          <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-500" />
+                          <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#0F172A]" />
                           <span>{bullet}</span>
                         </li>
                       ))}
@@ -183,27 +184,13 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
               ))}
             </article>
 
-            <AnimatedSection className="mx-auto mt-16 max-w-4xl rounded-[32px] border border-cyan-100 bg-[#ECFEFF]/70 p-8 text-center shadow-[0_22px_70px_rgba(8,145,178,0.12)] backdrop-blur-md md:p-12">
-              <h2
-                className="font-display font-thin text-[#0F172A] text-balance"
-                style={{ fontSize: "clamp(30px, 4vw, 48px)", lineHeight: 1.08 }}
+            <AnimatedSection className="mx-auto mt-14 max-w-3xl border-t border-stone-200 pt-8">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0F172A] transition hover:gap-3"
               >
-                Have a similar project question?
-              </h2>
-              <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-slate-600">
-                Tell us what you are building or improving. We will reply with
-                the most practical next step.
-              </p>
-              <Link href="/contact" className="mt-8 inline-flex">
-                <StarButton
-                  as="span"
-                  lightColor="#38bdf8"
-                  backgroundColor="#0f172a"
-                  className="h-12 font-semibold shadow-[0_0_12px_rgba(56,189,248,0.25)]"
-                >
-                  Talk to Us
-                  <ArrowRight size={16} aria-hidden="true" />
-                </StarButton>
+                More aibizmod notes
+                <ArrowRight size={15} aria-hidden="true" />
               </Link>
             </AnimatedSection>
           </div>
@@ -213,4 +200,3 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
     </>
   );
 }
-

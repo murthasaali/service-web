@@ -12,7 +12,7 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "What services does aibizmode provide?",
+      question: "What services does aibizmod provide?",
       answer: "We specialize in end-to-end technology services, including custom web & software development, mobile app engineering, digital marketing campaigns, cloud hosting & infrastructure, workflow automation, and strategic IT consulting.",
     },
     {
@@ -29,7 +29,7 @@ export default function FAQSection() {
     },
     {
       question: "How do we get started with a project?",
-      answer: "Simply head over to our contact page or email hello@aibizmode.com. We schedule an initial discovery call within 24 hours to discuss your goals, outline technical recommendations, and prepare a tailored proposal.",
+      answer: "Simply head over to our contact page or email hello@aibizmod.com. We schedule an initial discovery call within 24 hours to discuss your goals, outline technical recommendations, and prepare a tailored proposal.",
     },
   ];
 

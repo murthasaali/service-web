@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Strategic technology advisory and managed IT services — fractional CTO support, architecture reviews, and IT project management.",
   openGraph: {
-    title: "IT Consulting & IT Services | aibizmode",
+    title: "IT Consulting & IT Services | aibizmod",
     description:
       "Strategic technology advisory and managed IT services — fractional CTO support, architecture reviews, and IT project management.",
     url: "/services/it-consulting-it-services",

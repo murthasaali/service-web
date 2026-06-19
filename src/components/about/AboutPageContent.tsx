@@ -106,7 +106,7 @@ export default function AboutPageContent() {
                 style={{ fontSize: "clamp(38px, 5.5vw, 64px)", lineHeight: 1.03, letterSpacing: "-0.03em" }}
               >
                 We are{" "}
-                <span className="gradient-text">aibizmode</span>
+                <span className="gradient-text">aibizmod</span>
               </h1>
               <p
                 className="mt-6 text-muted-foreground max-w-2xl mx-auto"
@@ -173,7 +173,7 @@ export default function AboutPageContent() {
               </h2>
               <div className="mt-8 space-y-6 text-muted-foreground leading-[1.8]" style={{ fontSize: 15 }}>
                 <p>
-                  aibizmode was founded in 2019 by James and Sarah, former enterprise engineers
+                  aibizmod was founded in 2019 by James and Sarah, former enterprise engineers
                   who saw a need for a firm where technical excellence and business goals align.
                   We focus on bringing clarity to what to build, when to build it, and how to scale it.
                 </p>
@@ -296,7 +296,7 @@ export default function AboutPageContent() {
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-14">
             <p className="text-[11px] font-semibold uppercase tracking-widest mb-3" style={{ color: "rgba(184,134,11,0.7)" }}>
-              Why aibizmode
+              Why aibizmod
             </p>
             <h2
               className="font-display font-bold text-white text-balance"

@@ -37,8 +37,8 @@ const contactDetails = [
 	{
 		icon: Mail,
 		label: 'Email',
-		value: 'hello@aibizmode.com',
-		href: 'mailto:hello@aibizmode.com',
+		value: 'hello@aibizmod.com',
+		href: 'mailto:hello@aibizmod.com',
 	},
 	{
 		icon: Phone,

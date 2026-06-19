@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Tell us about your project and we'll get back to you within 24 hours.",
   openGraph: {
-    title: "Contact Us | aibizmode",
+    title: "Contact Us | aibizmod",
     description:
       "Tell us about your project and we'll get back to you within 24 hours.",
     url: "/contact",

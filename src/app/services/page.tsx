@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   description:
     "Comprehensive technology solutions tailored to your business goals — web development, mobile apps, cloud infrastructure, automation, and more.",
   openGraph: {
-    title: "Services | aibizmode",
+    title: "Services | aibizmod",
     description:
       "Comprehensive technology solutions tailored to your business goals — web development, mobile apps, cloud infrastructure, automation, and more.",
     url: "/services",

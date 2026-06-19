@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Data-driven digital marketing strategies — SEO, paid advertising, content, and email automation that drive qualified traffic and revenue.",
   openGraph: {
-    title: "Digital Marketing | aibizmode",
+    title: "Digital Marketing | aibizmod",
     description:
       "Data-driven digital marketing strategies — SEO, paid advertising, content, and email automation that drive qualified traffic and revenue.",
     url: "/services/digital-marketing",
