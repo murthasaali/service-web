@@ -147,15 +147,29 @@ export default function Navbar() {
         {/* ── Logo ─────────────────────────────────────────────────────── */}
         <motion.div
           layout
-          className="flex items-center shrink-0"
+          className="flex items-center shrink-0 relative"
+          onMouseEnter={() => setHoveredIndex(999)}
+          onMouseLeave={() => setHoveredIndex(null)}
         >
           <Link
             href="/"
             aria-label="aibizmode — go to home"
-            className={`font-display font-bold text-[19px] tracking-tight select-none rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 transition-colors duration-300 ${
+            className={`relative px-4 py-2 rounded-full font-display font-bold text-[19px] tracking-tight select-none ${
               scrolled ? "text-white" : "text-ink"
             }`}
           >
+            {(hoveredIndex === 999 || pathname === "/") && (
+              <motion.span
+                layoutId="nav-hover-pill"
+                className={`absolute inset-0 rounded-full -z-10 ${
+                  scrolled
+                    ? "bg-white/5 border border-white/5"
+                    : "bg-cyan-500/10 border border-cyan-500/20"
+                }`}
+                transition={{ type: "spring", stiffness: 350, damping: 30 }}
+              />
+            )}
+
             <span>aibiz</span>
             <span className="text-cyan-400">mode</span>
           </Link>

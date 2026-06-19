@@ -130,20 +130,7 @@ export default function FAQPage() {
 
           <FAQAccordion faqs={faqs} />
 
-          <div className="mx-auto mt-14 flex max-w-5xl flex-col items-center justify-between gap-5 rounded-3xl border border-cyan-100 bg-[#ECFEFF]/70 p-6 text-center shadow-[0_18px_55px_rgba(59,130,246,0.10)] backdrop-blur-md md:flex-row md:text-left">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-700">
-                Still deciding?
-              </p>
-              <h2 className="mt-2 font-display text-2xl font-semibold text-[#0F172A]">
-                Tell us what you want to build.
-              </h2>
-            </div>
-            <Link href="/contact" className="btn-primary rounded-full px-6 py-3">
-              Start a Project
-              <ArrowRight size={16} aria-hidden="true" />
-            </Link>
-          </div>
+        
         </section>
       </main>
       <Footer />
