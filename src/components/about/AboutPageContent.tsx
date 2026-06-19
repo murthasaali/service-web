@@ -58,7 +58,11 @@ export default function AboutPageContent() {
                 style={{ fontSize: "clamp(38px, 6vw, 72px)", lineHeight: 1.02 }}
               >
                 We are{" "}
+<<<<<<< HEAD
                 <span className="gradient-text font-normal">aibizmode</span>
+=======
+                <span className="gradient-text">aibizmod</span>
+>>>>>>> 43f6691befdf2d3254b66fa284aca1d81fc7fc84
               </h1>
               <p
                 className="mx-auto mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-base leading-8 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md md:text-lg"
@@ -249,6 +253,55 @@ export default function AboutPageContent() {
 
       <ExpandOnHover />
 
+<<<<<<< HEAD
+=======
+      {/* ── Why Work With Us ─────────────────────────────────────────────── */}
+      <section className="py-20 px-6 bg-ink">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="text-center mb-14">
+            <p className="text-[11px] font-semibold uppercase tracking-widest mb-3" style={{ color: "rgba(184,134,11,0.7)" }}>
+              Why aibizmod
+            </p>
+            <h2
+              className="font-display font-bold text-white text-balance"
+              style={{ fontSize: "clamp(26px, 3.5vw, 38px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
+            >
+              A different kind of technology partner
+            </h2>
+            <p className="mt-4 max-w-lg mx-auto leading-relaxed" style={{ fontSize: 16, color: "rgba(255,255,255,0.50)" }}>
+              The things that make us genuinely worth working with are not the
+              things most agencies lead with.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+            {whyUs.map(({ icon: Icon, title, desc }, i) => (
+              <AnimatedSection key={title} delay={i * 0.1}>
+                <div className="text-center md:text-left">
+                  <div
+                    className="w-14 h-14 rounded-card flex items-center justify-center mb-6 mx-auto md:mx-0"
+                    style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}
+                  >
+                    <Icon size={24} className="text-white" aria-hidden="true" />
+                  </div>
+                  <h3
+                    className="font-display font-semibold text-white mb-3"
+                    style={{ fontSize: 17 }}
+                  >
+                    {title}
+                  </h3>
+                  <p className="leading-relaxed text-sm" style={{ color: "rgba(255,255,255,0.50)" }}>
+                    {desc}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+>>>>>>> 43f6691befdf2d3254b66fa284aca1d81fc7fc84
     </>
   );
 }
