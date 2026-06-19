@@ -11,15 +11,6 @@ import ExpandOnHover from "./ExpandOnHover";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
-const team = [
-  { name: "James Carter",    role: "CEO & Co-Founder",              initials: "JC", specialty: "Product Strategy · Business Growth" },
-  { name: "Sarah Chen",      role: "CTO & Co-Founder",              initials: "SC", specialty: "Software Architecture · Engineering" },
-  { name: "Priya Patel",     role: "Head of Digital Marketing",     initials: "PP", specialty: "SEO · Paid Media · Growth" },
-  { name: "Marcus Williams", role: "Lead Engineer",                  initials: "MW", specialty: "Full-Stack · Automation" },
-  { name: "David Kim",       role: "Head of Cloud & Infrastructure", initials: "DK", specialty: "AWS · DevOps · SRE" },
-  { name: "Aisha Okonkwo",   role: "Client Experience Lead",        initials: "AO", specialty: "CX Strategy · Client Relations" },
-];
-
 const stats = [
   { value: "50+", label: "Projects Delivered" },
   { value: "6",   label: "Years in Business" },
