@@ -4,6 +4,7 @@ import { ArrowRight, HelpCircle } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FAQAccordion from "./FAQAccordion";
+import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
 
 const faqs = [
   {
@@ -94,8 +95,6 @@ export const metadata: Metadata = {
     url: "/faq",
   },
 };
-
-import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
 
 export default function FAQPage() {
   return (
