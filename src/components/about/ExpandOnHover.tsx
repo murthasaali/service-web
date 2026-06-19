@@ -19,16 +19,6 @@ export default function ExpandOnHover() {
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-14">
-          <span
-            className="block mx-auto mb-4"
-            aria-hidden="true"
-            style={{
-              width: 32,
-              height: 2,
-              background: "linear-gradient(90deg,#F59E0B,#FCD34D)",
-              borderRadius: 9999,
-            }}
-          />
           <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "black", border: "none" }}>The People Behind the Work</span>
           <h2 className="mt-6 font-display font-bold" style={{ fontSize: "clamp(26px,3.5vw,38px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "#0E7490" }}>Meet the Team</h2>
           <p className="mt-4 text-muted-foreground max-w-md mx-auto leading-relaxed" style={{ fontSize: 16 }}>
@@ -36,8 +26,29 @@ export default function ExpandOnHover() {
           </p>
         </div>
 
-        {/* Expand-on-hover cards */}
-        <div className="flex w-full items-stretch justify-center gap-2 overflow-hidden">
+        {/* ── Mobile grid (2 columns, always expanded) ── */}
+        <div className="grid grid-cols-2 gap-4 md:hidden">
+          {team.map((member) => (
+            <div
+              key={member.name}
+              className="rounded-2xl border border-[#E0F2FE] bg-white flex flex-col items-center justify-center p-5 text-center"
+              style={{ boxShadow: "0 4px 16px rgba(6,182,212,0.12)" }}
+            >
+              <div
+                className="w-14 h-14 rounded-full flex items-center justify-center mb-4 flex-shrink-0"
+                style={{ background: member.grad, boxShadow: "0 4px 14px rgba(6,182,212,0.20)" }}
+              >
+                <span className="text-white font-bold text-lg select-none">{member.initials}</span>
+              </div>
+              <h3 className="font-display font-bold text-ink text-sm leading-snug">{member.name}</h3>
+              <p className="text-xs font-semibold mt-1" style={{ color: "#06B6D4" }}>{member.role}</p>
+              <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{member.specialty}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* ── Desktop expand-on-hover row ── */}
+        <div className="hidden md:flex w-full items-stretch justify-center gap-2 overflow-hidden">
           {team.map((member, idx) => {
             const isExpanded = expanded === idx;
             return (
@@ -49,72 +60,35 @@ export default function ExpandOnHover() {
                   width: isExpanded ? "320px" : "72px",
                   height: "360px",
                   transition: "width 0.5s cubic-bezier(0.4,0,0.2,1)",
-                  background: isExpanded
-                    ? "white"
-                    : member.grad,
-                  boxShadow: isExpanded
-                    ? "0 8px 32px rgba(6,182,212,0.18)"
-                    : "0 2px 8px rgba(0,0,0,0.08)",
+                  background: isExpanded ? "white" : member.grad,
+                  boxShadow: isExpanded ? "0 8px 32px rgba(6,182,212,0.18)" : "0 2px 8px rgba(0,0,0,0.08)",
                   border: isExpanded ? "1.5px solid #E0F2FE" : "none",
                 }}
               >
-                {/* Collapsed state — vertical initials */}
+                {/* Collapsed — vertical initials */}
                 <div
                   className="absolute inset-0 flex items-center justify-center"
-                  style={{
-                    opacity: isExpanded ? 0 : 1,
-                    transition: "opacity 0.3s ease",
-                    pointerEvents: isExpanded ? "none" : "auto",
-                  }}
+                  style={{ opacity: isExpanded ? 0 : 1, transition: "opacity 0.3s ease", pointerEvents: isExpanded ? "none" : "auto" }}
                 >
-                  <span
-                    style={{
-                      color: "white",
-                      fontWeight: 800,
-                      fontSize: 22,
-                      letterSpacing: "0.05em",
-                      writingMode: "vertical-rl",
-                      textOrientation: "mixed",
-                      userSelect: "none",
-                    }}
-                  >
+                  <span style={{ color: "white", fontWeight: 800, fontSize: 22, letterSpacing: "0.05em", writingMode: "vertical-rl", textOrientation: "mixed", userSelect: "none" }}>
                     {member.initials}
                   </span>
                 </div>
 
-                {/* Expanded state — profile card */}
+                {/* Expanded — profile card */}
                 <div
                   className="absolute inset-0 flex flex-col items-center justify-center p-7 text-center"
-                  style={{
-                    opacity: isExpanded ? 1 : 0,
-                    transition: "opacity 0.35s ease 0.1s",
-                    pointerEvents: isExpanded ? "auto" : "none",
-                    minWidth: 280,
-                  }}
+                  style={{ opacity: isExpanded ? 1 : 0, transition: "opacity 0.35s ease 0.1s", pointerEvents: isExpanded ? "auto" : "none", minWidth: 280 }}
                 >
-                  {/* Avatar */}
                   <div
                     className="w-20 h-20 rounded-full flex items-center justify-center mb-5 flex-shrink-0"
-                    style={{
-                      background: member.grad,
-                      boxShadow: "0 4px 20px rgba(6,182,212,0.25)",
-                    }}
+                    style={{ background: member.grad, boxShadow: "0 4px 20px rgba(6,182,212,0.25)" }}
                   >
-                    <span className="text-white font-bold text-2xl select-none">
-                      {member.initials}
-                    </span>
+                    <span className="text-white font-bold text-2xl select-none">{member.initials}</span>
                   </div>
-
-                  <h3 className="font-display font-bold text-ink text-base leading-snug">
-                    {member.name}
-                  </h3>
-                  <p className="text-xs font-semibold mt-1" style={{ color: "#06B6D4" }}>
-                    {member.role}
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
-                    {member.specialty}
-                  </p>
-
+                  <h3 className="font-display font-bold text-ink text-base leading-snug">{member.name}</h3>
+                  <p className="text-xs font-semibold mt-1" style={{ color: "#06B6D4" }}>{member.role}</p>
+                  <p className="text-xs text-muted-foreground mt-3 leading-relaxed">{member.specialty}</p>
                   <a
                     href="https://linkedin.com"
                     target="_blank"
