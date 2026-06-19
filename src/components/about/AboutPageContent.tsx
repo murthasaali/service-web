@@ -58,7 +58,7 @@ export default function AboutPageContent() {
                 style={{ fontSize: "clamp(38px, 6vw, 72px)", lineHeight: 1.02 }}
               >
                 We are{" "}
-                <span className="gradient-text font-normal">aibizmode</span>
+                <span className="gradient-text font-normal">aibizmod</span>
               </h1>
               <p
                 className="mx-auto mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-base leading-8 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md md:text-lg"
