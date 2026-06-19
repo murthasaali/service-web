@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import { blogAuthor, blogPosts, getBlogPost } from "@/data/blog";
 
@@ -77,11 +78,12 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
   return (
     <>
       <Navbar />
-      <main className="bg-white text-ink">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-        />
+      <StickyFooterLayout footer={<Footer />}>
+        <main className="bg-white text-ink">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+          />
 
         <section className="relative overflow-hidden bg-white px-6 pb-12 pt-44 md:pb-16 md:pt-48">
           <div
@@ -195,8 +197,8 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
             </AnimatedSection>
           </div>
         </section>
-      </main>
-      <Footer />
+        </main>
+      </StickyFooterLayout>
     </>
   );
 }

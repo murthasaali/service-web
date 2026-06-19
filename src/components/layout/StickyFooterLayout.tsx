@@ -66,24 +66,22 @@ export default function StickyFooterLayout({
 
   return (
     <>
+      {/* ── Black backdrop — covers the full viewport behind everything.
+           This makes the page background black so the rounded card corners,
+           the transparent spacer, and the footer all blend seamlessly. */}
+      <div className="fixed inset-0 bg-black" style={{ zIndex: -1 }} aria-hidden="true" />
+
       {/* ── Content layer (z-10) ───────────────────────────────────────
        * We use `pointer-events-none` so that clicks can pass through the transparent bottom spacer
        * to reach the fixed footer underneath.
        */}
       <div className="relative z-10 pointer-events-none">
         {/*
-         * Black shell behind the content card — fills the rounded corner cutouts.
-         * pointer-events-auto is set here so the content card is clickable.
+         * Sections wrapped in the white card — rounded bottom edge.
+         * We restore `pointer-events-auto` here so that the homepage content is fully clickable.
          */}
-        <div className="bg-black pointer-events-auto">
-          {/*
-           * Sections wrapped in the white card — rounded bottom edge.
-           * overflow-hidden clips content to the rounded shape.
-           * The black parent shows through the rounded corners.
-           */}
-          <div className="bg-canvas rounded-b-[40px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
-            {children}
-          </div>
+        <div className="bg-canvas pointer-events-auto rounded-b-[40px] shadow-[0_8px_40px_rgba(0,0,0,0.12)] [&_main]:rounded-b-[40px] [&_section:last-of-type]:rounded-b-[40px] [&_>_*:last-child]:rounded-b-[40px]">
+          {children}
         </div>
 
         {/*
@@ -94,7 +92,7 @@ export default function StickyFooterLayout({
         <div style={{ height: footerHeight }} aria-hidden="true" />
       </div>
 
-      {/* ── Footer (z-0) — fixed to viewport bottom, always stays put ── */}
+      {/* ── Footer (z-0) — fixed to viewport bottom ── */}
       <div
         ref={footerRef}
         className="fixed bottom-0 left-0 right-0 transition-opacity duration-500 ease-in-out"
