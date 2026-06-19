@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu, X, ChevronDown, ArrowRight,
   Code2, Smartphone, TrendingUp, Server,
-  Zap, Users, Lightbulb,
+  Zap, Users, Lightbulb, Cpu,
   type LucideIcon,
 } from "lucide-react";
 
@@ -21,9 +21,15 @@ const serviceItems: {
 }[] = [
   {
     icon: Code2,
-    name: "Web & Software Development",
-    desc: "Custom web apps built for scale",
+    name: "Web Development",
+    desc: "Fast, responsive websites & web apps",
     href: "/services/web-development",
+  },
+  {
+    icon: Cpu,
+    name: "Custom Software Development",
+    desc: "Custom internal & business operations tools",
+    href: "/services/software-development",
   },
   {
     icon: Smartphone,
@@ -34,25 +40,25 @@ const serviceItems: {
   {
     icon: TrendingUp,
     name: "Digital Marketing",
-    desc: "Data-driven campaigns that convert",
+    desc: "Campaign tracking & search optimization",
     href: "/services/digital-marketing",
   },
   {
     icon: Server,
     name: "Hosting & Infrastructure",
-    desc: "Scalable cloud with maximum uptime",
+    desc: "Scalable cloud with environment backups",
     href: "/services/hosting-infrastructure",
   },
   {
     icon: Zap,
     name: "Automation",
-    desc: "Eliminate manual work end-to-end",
+    desc: "Automate routing & CRM sync",
     href: "/services/automation",
   },
   {
     icon: Users,
     name: "Customer Experience",
-    desc: "Turn every interaction into loyalty",
+    desc: "CRM setup, ticket routing & support",
     href: "/services/customer-exp-management",
   },
   {

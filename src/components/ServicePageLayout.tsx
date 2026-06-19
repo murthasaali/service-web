@@ -48,6 +48,8 @@ const iconMap: Record<IconKey, LucideIcon> = {
 const serviceImages: Record<string, string> = {
   "web-development":
     "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1000&q=80",
+  "software-development":
+    "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=1000&q=80",
   "mobile-app-development":
     "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80",
   "digital-marketing":

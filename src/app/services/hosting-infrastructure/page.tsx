@@ -16,107 +16,111 @@ export const metadata: Metadata = {
 const data: ServicePageData = {
   name: "Hosting & Infrastructure",
   tagline:
-    "Reliable, scalable cloud infrastructure — built for uptime, optimised for cost, and managed by experts.",
+    "We set up cloud hosting, configure staging and production environments, establish backups, and build deployment pipelines.",
   slug: "hosting-infrastructure",
   iconColor: "text-orange-500",
 
   overview: {
     paragraphs: [
-      "Cloud infrastructure is no longer an operational afterthought — it is the foundation that your product's reliability, performance, and security are built on. Poorly designed infrastructure costs organisations in downtime, security incidents, spiralling cloud bills, and engineering time spent firefighting instead of building.",
-      "Our infrastructure team brings deep expertise across AWS, Google Cloud, and Azure. We design multi-region architectures, containerised workloads with Kubernetes, and fully automated pipelines that make deployment a predictable, low-risk event rather than a nerve-wracking one. Every environment we provision is codified in Terraform or Pulumi — reproducible, auditable, and version-controlled.",
-      "We also handle the operational side of infrastructure so your engineering team can focus on product. That means proactive monitoring with defined alerting thresholds, incident response with SLA-backed resolution times, capacity planning ahead of traffic spikes, and security hardening against evolving threats.",
+      "We deploy cloud hosting platforms and automate release pipelines. When you engage us, you receive a visual infrastructure diagram, active server and database monitoring systems, a documented backup policy, an automated deployment workflow with rollbacks, a security access checklist, and separated staging and production environments. We write plain-language specifications explaining server costs and resource options so your management team can make clear budget decisions.",
+      "Our infrastructure builds ensure your systems remain stable during releases and traffic fluctuations. We split applications into separate staging and production zones so updates can be tested prior to release, configure daily automated database backups, set up uptime alerts, and build deploy/rollback scripts to restore previous code versions instantly in case of issues.",
+      "Previous projects include: a multi-environment AWS setup for a SaaS company that isolates development, staging, and live production databases; a daily snapshot and automated database recovery system configured on Google Cloud for a billing application; and a git-triggered CI/CD release pipeline using GitHub Actions that deploys code to Vercel and AWS Lambda."
     ],
     benefits: [
-      "Multi-cloud expertise across AWS, GCP, and Azure with no vendor lock-in",
-      "Infrastructure as Code for fully reproducible and auditable environments",
-      "99.9%+ uptime SLAs with automated failover and disaster recovery",
-      "Proactive monitoring and 24/7 incident alerting with defined response times",
-      "Cost optimisation reviews that typically reduce cloud spend by 15–30%",
+      "Separated staging and production systems",
+      "Automated deployment with rollback triggers",
+      "Configured daily database backups",
+      "Active CPU and HTTP alert monitors",
+      "Plain business language billing estimates",
+      "Complete infrastructure codebase access"
     ],
   },
 
   features: [
     {
-      icon: "cloud",
-      title: "Cloud Architecture",
-      desc: "Purpose-built cloud architectures on AWS, GCP, or Azure — designed for your specific scale, compliance requirements, and cost envelope.",
-    },
-    {
-      icon: "workflow",
-      title: "CI/CD Pipelines",
-      desc: "Fully automated build, test, and deployment pipelines that make shipping code safe, fast, and repeatable across every environment.",
-    },
-    {
-      icon: "container",
-      title: "Container Orchestration",
-      desc: "Kubernetes and Docker-based container platforms that scale dynamically with your traffic and isolate workloads for reliability and security.",
-    },
-    {
-      icon: "shield",
-      title: "Security & Compliance",
-      desc: "IAM role management, encryption at rest and in transit, network security policies, and compliance configuration for SOC 2, GDPR, and HIPAA.",
+      icon: "layers",
+      title: "Infrastructure Diagram",
+      desc: "We provide a diagram detailing your virtual networks, server resources, database storage, and external traffic routing."
     },
     {
       icon: "activity",
-      title: "Monitoring & Observability",
-      desc: "Prometheus and Grafana stacks, structured logging, distributed tracing, and alerting that gives you full visibility into system health and performance.",
+      title: "Monitoring Setup",
+      desc: "We set up alert logs on CPU usage, disk space limits, and HTTP response errors, routing warnings directly to email or messaging channels."
     },
     {
-      icon: "refreshCw",
-      title: "Disaster Recovery",
-      desc: "Automated backup strategies, cross-region failover, and RTO/RPO-defined recovery playbooks tested regularly — not just documented.",
+      icon: "database",
+      title: "Backup Policy",
+      desc: "We schedule automated daily database snapshots, set retention limits, and document step-by-step restoration instructions."
     },
+    {
+      icon: "workflow",
+      title: "Deployment Workflow",
+      desc: "We write git-triggered build scripts that run automatic integration checks and push releases to cloud servers without downtime."
+    },
+    {
+      icon: "shield",
+      title: "Security Checklist",
+      desc: "We lock down SSH server access, enforce SSL encryption certificates, and configure IAM role credentials following the least-privilege principle."
+    },
+    {
+      icon: "cloud",
+      title: "Environment Isolation",
+      desc: "We provision distinct development, staging, and production environments with isolated databases to prevent test data leaks."
+    }
   ],
 
   process: [
     {
       icon: "search",
-      title: "Infrastructure Assessment",
-      desc: "We audit your current setup, identify risks and performance bottlenecks, and document the target architecture with clear rationale.",
+      title: "Hosting Assessment",
+      desc: "We review your codebase, estimate traffic requirements, and outline server costs across AWS, Google Cloud, or digital VPS providers."
     },
     {
       icon: "layers",
-      title: "Design & Provision",
-      desc: "We design the full infrastructure plan and provision all environments through IaC (Terraform/Pulumi) for reproducibility and auditability.",
+      title: "IaC & Scripting",
+      desc: "We codify the server setups using Terraform or deployment scripts, allowing environments to be recreated automatically."
     },
     {
       icon: "shield",
-      title: "Migration & Testing",
-      desc: "Staged migration with zero-downtime cutover plans and extensive load testing — no surprises on go-live day.",
+      title: "Staging Setup & QA",
+      desc: "We set up staging, verify database restoration scripts, test rollback actions, and execute load simulations."
     },
     {
-      icon: "activity",
-      title: "Ongoing Management",
-      desc: "Proactive monitoring, security patching, cost reviews, and on-call incident response once your infrastructure is live.",
-    },
+      icon: "rocket",
+      title: "Production Migration",
+      desc: "We migrate production data, configure DNS records, verify SSL certificate layers, and set monitoring systems to live."
+    }
   ],
 
   techStack: [
-    "AWS", "Google Cloud", "Azure", "Terraform", "Pulumi", "Kubernetes",
-    "Docker", "Prometheus", "Grafana", "Nginx", "GitHub Actions", "Vault", "Datadog", "Cloudflare",
+    "AWS",
+    "Google Cloud",
+    "Vercel",
+    "Terraform",
+    "Docker",
+    "GitHub Actions",
+    "Nginx",
+    "PostgreSQL Backups",
+    "Sentry Monitoring"
   ],
 
   faqs: [
     {
-      q: "Can you manage infrastructure you didn't build?",
-      a: "Yes. We regularly take over infrastructure built by other teams or vendors. We start with a thorough audit to understand the current state, identify risks, and recommend improvements before making any changes. We never modify production environments without a clear, agreed plan.",
+      q: "How do you explain the difference between AWS, Google Cloud, and basic hosting?",
+      a: "Basic hosting shares server hardware with other websites, which can cause slowdowns. Cloud providers like AWS and Google Cloud isolate your resources on virtual servers, allowing us to configure isolated environments, set up dedicated database backups, and expand CPU capacity during peak loads."
     },
     {
-      q: "How do you handle incidents and outages?",
-      a: "We set up alerting with defined severity tiers and escalation paths. For managed clients, our on-call rotation responds to critical alerts (system down, data breach risk) within 15 minutes, high-severity issues within 2 hours. Every incident is followed by a post-mortem with root cause analysis and a documented remediation plan.",
+      q: "What happens if a new code deployment crashes our live application?",
+      a: "We build deployment pipelines with a rollback strategy. If the live app encounters errors after a release, our script immediately redirects traffic back to the previously built version. This recovery process takes less than 30 seconds."
     },
     {
-      q: "What does Infrastructure as Code mean in practice?",
-      a: "It means your entire infrastructure — servers, databases, networking, security groups — is defined in version-controlled configuration files (Terraform or Pulumi). Every change is peer-reviewed like application code, every environment is reproducible from scratch, and rollbacks are as simple as reverting a commit. It eliminates snowflake servers and configuration drift.",
+      q: "How do we verify that our database backups actually work?",
+      a: "We establish a restore drill as part of our backup policy. Every month, our scripts restore a recent database snapshot to an isolated staging database and verify that schemas and record counts match the live production state."
     },
     {
-      q: "Can you help us reduce our cloud bill?",
-      a: "Yes. Cost optimisation is a core part of every infrastructure engagement. We conduct regular rightsizing reviews, identify idle or over-provisioned resources, and recommend Reserved Instance or Savings Plan purchases. Clients typically see 15–30% reduction in cloud spend within the first 90 days.",
-    },
-    {
-      q: "Do you support hybrid or multi-cloud setups?",
-      a: "Yes. We design hybrid architectures that connect on-premise systems with cloud services using Direct Connect, VPN, or SD-WAN depending on latency and compliance requirements. We also manage multi-cloud environments where workloads are split across AWS, GCP, and Azure by design.",
-    },
+      q: "Do you retain control over our cloud hosting credentials?",
+      a: "No. We configure all servers and databases directly within your own billing accounts on AWS, Vercel, or Google Cloud. You retain administrative master credentials, and we access the resources through restricted IAM team permissions that you can revoke at any time."
+    }
   ],
 };
 

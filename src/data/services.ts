@@ -1,4 +1,4 @@
-import { Code2, Smartphone, TrendingUp, Server, Zap, Users, Lightbulb, type LucideIcon } from "lucide-react";
+import { Code2, Smartphone, TrendingUp, Server, Zap, Users, Lightbulb, Cpu, type LucideIcon } from "lucide-react";
 
 export interface ServiceData {
   id: string;
@@ -15,15 +15,15 @@ export interface ServiceData {
 export const services: ServiceData[] = [
   {
     id: "web-development",
-    name: "Web & Software Development",
+    name: "Web Development",
     description:
-      "We design and engineer high-performance web applications and custom software built to handle real-world scale. From MVPs to enterprise platforms, we ship reliable software with clean architecture and long-term maintainability in mind.",
+      "We design and build websites, SaaS dashboards, customer portals, booking platforms, and CRM-connected web applications.",
     capabilities: [
-      "Full-stack web application development",
-      "Custom API design and third-party integration",
-      "SaaS product architecture and build",
-      "Legacy system modernisation",
-      "Performance audits and optimisation",
+      "Custom React & Next.js applications",
+      "Corporate & business websites",
+      "E-Commerce platform development",
+      "CMS development & integration",
+      "Performance & SEO optimization",
     ],
     href: "/services/web-development",
     icon: Code2,
@@ -32,10 +32,28 @@ export const services: ServiceData[] = [
     borderHover: "hover:border-electric-blue/40",
   },
   {
+    id: "software-development",
+    name: "Custom Software Development",
+    description:
+      "We write custom software to streamline operations, run business workflows, integrate databases, and build core business operations tools.",
+    capabilities: [
+      "Custom ERP & CRM systems",
+      "SaaS platform design & development",
+      "Workflow & business process automation",
+      "Operations software & internal tools",
+      "API design & database schemas",
+    ],
+    href: "/services/software-development",
+    icon: Cpu,
+    gradient: "from-indigo-500/15 to-blue-500/15",
+    iconColor: "text-indigo-600",
+    borderHover: "hover:border-indigo-400/40",
+  },
+  {
     id: "mobile-app-development",
     name: "Mobile App Development",
     description:
-      "We build native and cross-platform mobile applications that deliver smooth, intuitive experiences on iOS and Android. Whether you need a consumer app or an internal enterprise tool, we handle everything from UX design to App Store launch.",
+      "We build customer self-service apps, booking applications, technician field apps, staff applications, and inventory tracking tools.",
     capabilities: [
       "iOS and Android native app development",
       "Cross-platform apps with React Native or Flutter",
@@ -53,13 +71,13 @@ export const services: ServiceData[] = [
     id: "digital-marketing",
     name: "Digital Marketing",
     description:
-      "We craft data-driven digital marketing strategies that increase brand visibility, drive qualified traffic, and convert leads into revenue. Our campaigns are built on analytics and continuous testing, not guesswork.",
+      "We set up conversion tracking, audit search visibility, map keywords, and manage campaigns to help you reach customers using Search Console and GA4.",
     capabilities: [
-      "SEO strategy and technical optimisation",
-      "Paid search and social advertising (PPC)",
-      "Content marketing and editorial planning",
-      "Email marketing automation",
-      "Analytics setup, tracking, and reporting",
+      "SEO audits and keyword mapping",
+      "Paid search campaign structures",
+      "GA4 and conversion tracking setup",
+      "Search Console setup and analysis",
+      "Custom Looker Studio reporting dashboards",
     ],
     href: "/services/digital-marketing",
     icon: TrendingUp,
@@ -71,13 +89,13 @@ export const services: ServiceData[] = [
     id: "hosting-infrastructure",
     name: "Hosting & Infrastructure",
     description:
-      "We design and manage cloud infrastructure that is secure, scalable, and cost-efficient. Whether you are migrating to the cloud or optimising an existing environment, we build systems engineered to stay up.",
+      "We set up cloud hosting, establish development and production environments, configure automated backups, and build deployment pipelines.",
     capabilities: [
       "Cloud architecture on AWS, GCP, and Azure",
       "Containerisation with Docker and Kubernetes",
       "CI/CD pipeline setup and automation",
       "Infrastructure as Code (Terraform, Pulumi)",
-      "Security hardening and compliance configuration",
+      "Environment isolation and backups",
     ],
     href: "/services/hosting-infrastructure",
     icon: Server,
@@ -89,13 +107,13 @@ export const services: ServiceData[] = [
     id: "automation",
     name: "Automation",
     description:
-      "We identify repetitive, manual processes in your business and replace them with intelligent automation — freeing your team to focus on work that matters. From workflow automation to AI-driven pipelines, we eliminate operational drag.",
+      "We automate repetitive tasks like invoice routing, lead assignment, CRM synchronization, and weekly reporting through API integrations.",
     capabilities: [
-      "Business process automation (BPA)",
-      "Robotic process automation (RPA) implementation",
+      "Invoice routing and approval workflows",
+      "CRM and database synchronization",
       "API and system integration automation",
-      "AI-powered workflow orchestration",
-      "Custom automation scripts and tooling",
+      "Weekly and monthly reporting automations",
+      "Custom automation scripts and webhooks",
     ],
     href: "/services/automation",
     icon: Zap,
@@ -107,13 +125,13 @@ export const services: ServiceData[] = [
     id: "customer-exp-management",
     name: "Customer Experience Management",
     description:
-      "We help businesses design and deliver exceptional customer experiences across every touchpoint. By combining technology, data, and strategy, we turn customer interactions into lasting loyalty and measurable retention.",
+      "We configure CRM systems like HubSpot, Zoho, and Salesforce, optimize ticket routing, and set up communication channels like WhatsApp Business.",
     capabilities: [
-      "CX strategy and customer journey mapping",
-      "CRM implementation and optimisation",
-      "Customer feedback and analytics platforms",
-      "Omnichannel communication setup",
-      "Support tooling and helpdesk integration",
+      "CRM cleanup and database optimization",
+      "HubSpot, Zoho, and Salesforce setup",
+      "CSAT & feedback collection systems",
+      "WhatsApp Business & messaging setup",
+      "Helpdesk and ticket routing integration",
     ],
     href: "/services/customer-exp-management",
     icon: Users,
@@ -125,13 +143,13 @@ export const services: ServiceData[] = [
     id: "it-consulting-it-services",
     name: "IT Consulting & IT Services",
     description:
-      "We provide strategic technology advisory and hands-on managed IT services that align your technology investments with business outcomes. From architecture reviews to day-to-day support, we are your trusted technology partner.",
+      "We conduct technical architecture reviews, audit cloud hosting costs, perform security assessments, and deliver technology roadmaps.",
     capabilities: [
-      "Technology strategy and digital roadmapping",
-      "IT architecture and systems review",
-      "Vendor selection and procurement advisory",
-      "IT project management and delivery oversight",
-      "Ongoing managed IT support and helpdesk",
+      "Technology roadmaps & planning",
+      "Architecture and cloud cost reviews",
+      "Vendor selection and comparisons",
+      "Security and vulnerability reviews",
+      "Ongoing IT documentation and support",
     ],
     href: "/services/it-consulting-it-services",
     icon: Lightbulb,

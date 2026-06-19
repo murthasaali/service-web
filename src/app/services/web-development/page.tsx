@@ -2,121 +2,126 @@ import type { Metadata } from "next";
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Web & Software Development",
+  title: "Web Development",
   description:
-    "Custom web applications and enterprise software engineered for scale, performance, and long-term maintainability.",
+    "Build fast, scalable, responsive websites and web applications that help businesses grow online.",
   openGraph: {
-    title: "Web & Software Development | aibizmod",
+    title: "Web Development | aibizmode",
     description:
-      "Custom web applications and enterprise software engineered for scale, performance, and long-term maintainability.",
+      "Build fast, scalable, responsive websites and web applications that help businesses grow online.",
     url: "/services/web-development",
   },
 };
 
 const data: ServicePageData = {
-  name: "Web & Software Development",
+  name: "Web Development",
   tagline:
-    "From idea to enterprise-grade product — custom software engineered for scale, reliability, and the long haul.",
+    "We build custom corporate websites, e-commerce stores, SaaS dashboards, customer portals, and CRM-connected web applications.",
   slug: "web-development",
   iconColor: "text-electric-blue",
 
   overview: {
     paragraphs: [
-      "We design and engineer web applications and custom software that perform under real-world conditions. Whether you're building a SaaS product from scratch, modernising a legacy system, or integrating third-party services into an existing platform, our engineers bring precision, speed, and an uncompromising focus on code quality.",
-      "Our full-stack capability spans pixel-perfect frontend interfaces built with React and Next.js, robust backend APIs in Node.js or Python, and scalable data architectures using PostgreSQL, MongoDB, or Redis. We don't hand off work to subcontractors — every line of code is written by our in-house engineers.",
-      "We've delivered software for startups hitting product-market fit, enterprises scaling to millions of users, and everything in between. Our work doesn't end at launch — we provide post-delivery support, performance monitoring, and iterative improvement as part of every engagement.",
+      "We build custom web systems that run business operations and customer interactions. When you engage us for web development, you receive a version-controlled git repository, a fully configured staging environment, a live production environment, and a structured handover document outlining system access and credentials. There are no generic templates or automated setups; every page and dashboard is written specifically for your database and business model.",
+      "Our projects address specific commercial use cases. For instance, we build booking platforms for fleet management companies, private customer portals for client document sharing, SaaS dashboards for subscription billing, and e-commerce platforms connected to internal CRM databases. This ensures that web transactions flow directly into your sales and inventory records.",
+      "Previous projects include: a multi-site booking portal for a regional equipment hire firm that syncs with their physical inventory; a secure billing dashboard for a B2B logistics company that lets clients pay invoices via Stripe and download receipts; and a CMS-integrated corporate site for a financial advisory firm allowing their staff to publish compliance updates directly without developer assistance."
     ],
     benefits: [
-      "Clean, maintainable codebases with full technical documentation",
-      "Agile delivery with fortnightly demos and transparent progress reporting",
-      "End-to-end ownership from architecture design through to production deployment",
-      "Scalable, cloud-native architecture built in from day one",
-      "Security-first development with automated vulnerability scanning at every stage",
+      "Version-controlled codebase ownership",
+      "Staging environment for previewing updates",
+      "Custom database and API integrations",
+      "No proprietary platform licensing fees",
+      "Direct CRM and dashboard synchronization",
+      "Clean Google Search Console index configuration"
     ],
   },
 
   features: [
     {
       icon: "code2",
-      title: "Frontend Development",
-      desc: "Pixel-perfect, accessible interfaces built with React and Next.js — fast to load, optimised for SEO, and responsive across every device.",
+      title: "Repository Setup",
+      desc: "We set up a private GitHub or GitLab repository with distinct development, staging, and main production branches, establishing a clean history from day one."
+    },
+    {
+      icon: "globe",
+      title: "Staging Environment",
+      desc: "We provision a password-protected staging environment mirroring the production setup, allowing your team to verify features and content before they go live."
+    },
+    {
+      icon: "layers",
+      title: "QA Checklist",
+      desc: "We run every page through a pre-launch QA list covering responsive layout checks on mobile/desktop, form validation audits, and cross-browser testing."
     },
     {
       icon: "database",
-      title: "Backend Engineering",
-      desc: "Robust APIs and server-side logic engineered for scale, reliability, and clean separation of concerns — built in Node.js or Python.",
+      title: "Analytics Implementation",
+      desc: "We configure Google Analytics 4 (GA4) with custom event tracking for key user actions like form submissions, resource downloads, and outbound clicks."
     },
     {
-      icon: "server",
-      title: "Database Design",
-      desc: "Normalised schemas, query optimisation, and data architecture designed to grow with your product without becoming a performance bottleneck.",
+      icon: "shield",
+      title: "SEO Setup",
+      desc: "We build XML sitemaps, customize robots.txt files, set up redirect rules, and integrate JSON-LD structured data to ensure clean search engine crawls."
     },
     {
-      icon: "network",
-      title: "API Development & Integration",
-      desc: "RESTful and GraphQL APIs, webhook systems, and third-party service integrations that connect your entire software ecosystem reliably.",
-    },
-    {
-      icon: "cloud",
-      title: "DevOps & Deployment",
-      desc: "Automated CI/CD pipelines, containerised deployments, and cloud hosting that keep your application always available and simple to update.",
-    },
-    {
-      icon: "testTube",
-      title: "QA & Automated Testing",
-      desc: "Unit, integration, and end-to-end tests that catch regressions before they reach your users — with coverage reports on every build.",
-    },
+      icon: "rocket",
+      title: "CMS Integration",
+      desc: "We connect headless CMS editors (like Sanity, Strapi, or WordPress via API) so your team can edit page content directly without writing any code."
+    }
   ],
 
   process: [
     {
       icon: "search",
-      title: "Discovery & Scoping",
-      desc: "We map your requirements, user journeys, and technical constraints — producing a detailed spec before writing a single line of code.",
-    },
-    {
-      icon: "layers",
-      title: "Architecture & Design",
-      desc: "System architecture, stack selection, and database modelling — all validated with your team before development begins.",
+      title: "Discovery & Scope",
+      desc: "We list all page routes, database requirements, user authentication paths, and API integrations to build a functional specification document."
     },
     {
       icon: "code2",
-      title: "Development Sprints",
-      desc: "Two-week agile sprints with working software demonstrated at each milestone. Full test coverage at every stage of the build.",
+      title: "Local Build & Dev",
+      desc: "Our engineers build the site structure locally using React and Next.js, pushing code regularly to the private repository for progress tracking."
+    },
+    {
+      icon: "testTube",
+      title: "QA & Staging Review",
+      desc: "We push the builds to staging, run our pre-launch QA checks, and verify all CRM and payment integrations with test transactions."
     },
     {
       icon: "rocket",
-      title: "Launch & Support",
-      desc: "Staged rollout with monitoring, alerting, and a 30-day post-launch support window included in every engagement.",
-    },
+      title: "Production Launch",
+      desc: "We configure the production domain, point DNS records, launch the site, and verify active analytics tracking and search indexing."
+    }
   ],
 
   techStack: [
-    "React", "Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL",
-    "MongoDB", "Redis", "Docker", "AWS", "Tailwind CSS", "GraphQL", "Prisma", "GitHub Actions",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "Sanity CMS",
+    "Vercel",
+    "Stripe API",
+    "Google Analytics 4"
   ],
 
   faqs: [
     {
-      q: "How long does it take to build a web application?",
-      a: "A focused MVP typically takes 8–12 weeks from kick-off to launch. Larger enterprise systems with complex integrations or compliance requirements can take 3–9 months. We provide a detailed timeline estimate during the discovery phase before any contract is signed.",
+      q: "What do we actually receive at the end of the project?",
+      a: "You receive full admin ownership of the GitHub repository containing the complete source code, host platform configurations (Vercel/AWS), database credentials, Google Analytics properties, and a written handover document outlining how to build, run, and update the application."
     },
     {
-      q: "Do you build with custom code or no-code tools?",
-      a: "We write custom code for all client engagements. No-code and low-code tools have real limitations around scale, flexibility, and long-term maintainability that bespoke software avoids. That said, we'll always recommend the right tool for the job — sometimes that includes well-chosen third-party services.",
+      q: "How do you handle site updates and changes before going live?",
+      a: "We publish all work-in-progress code to a password-protected staging URL. You can inspect changes on your own devices. Once you approve a release, we run a deployment pipeline to move the staging branch changes into the live production environment."
     },
     {
-      q: "Who owns the code after the project?",
-      a: "You do. All code, documentation, and intellectual property is fully transferred to you upon final payment. We can set up repositories under your own GitHub or GitLab organisation from day one, so you have full visibility and control throughout the engagement.",
+      q: "Can the website connect to our internal CRM database?",
+      a: "Yes. We write custom API integrations using webhook handlers and secure endpoints to transfer website form inquiries and customer profile data directly into CRMs like HubSpot, Zoho, or Salesforce in real time."
     },
     {
-      q: "Can you take over an existing codebase?",
-      a: "Yes. We regularly perform codebase audits and take on legacy systems for modernisation, refactoring, or feature extension. We'll provide a detailed technical assessment of the current state before committing to any engagement scope.",
-    },
-    {
-      q: "Do you provide ongoing support after launch?",
-      a: "Yes. All projects include a 30-day post-launch support window at no additional cost. After that, we offer retainer arrangements for ongoing maintenance, security updates, and feature development — structured around your needs.",
-    },
+      q: "Do we have to pay monthly software licensing fees to you?",
+      a: "No. We build custom applications without proprietary software lock-in. You own the code and host it on your own cloud accounts (like Vercel, AWS, or Netlify). You only pay direct utility costs to the cloud hosting provider."
+    }
   ],
 };
 

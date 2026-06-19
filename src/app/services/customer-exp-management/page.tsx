@@ -16,107 +16,111 @@ export const metadata: Metadata = {
 const data: ServicePageData = {
   name: "Customer Experience Management",
   tagline:
-    "Every interaction is an opportunity — we help you design and deliver experiences that retain customers and grow revenue.",
+    "We clean CRM data databases, set up ticket routing logic, and configure HubSpot, Zoho, Salesforce, Intercom, and WhatsApp Business.",
   slug: "customer-exp-management",
   iconColor: "text-pink-600",
 
   overview: {
     paragraphs: [
-      "Customer experience is not a department — it is a strategic capability that touches every part of your business. Companies that invest in CX consistently outperform their peers on retention, Net Promoter Score, and customer lifetime value. The difference between average and exceptional CX is measurable in revenue.",
-      "We bring together CX strategy, technology implementation, and data analytics to design customer journeys that convert, retain, and delight. From selecting and implementing the right CRM to building omnichannel communication flows and closed-loop feedback systems, our team handles the full spectrum of CX transformation.",
-      "Our work is outcome-driven. We define success metrics before any tools are selected or configured — NPS, CSAT, churn rate, first response time, resolution rate — and hold every implementation accountable to those targets. Technology in service of outcomes, not technology for its own sake.",
+      "We configure support helpdesks, clean client databases, and customize communication workflows. When you work with us, you receive a mapped support routing diagram, cleaned CRM contact fields, and integrated ticketing channels across HubSpot, Zoho, Salesforce, Intercom, and WhatsApp Business. We do not write soft relationship slogans; we build the database syncs and communication queues so your agents see exact customer logs when answering queries.",
+      "Our projects target specific data visibility issues. For instance, we merge duplicate CRM profiles, configure automated ticket assignment rules based on agent load, set up automated post-resolution feedback surveys, and display billing records directly inside support chat screens.",
+      "Previous projects include: a HubSpot data cleanup for a manufacturing company that merged 10,000 duplicate contacts and structured standard fields; a multi-channel ticketing routing setup in Zendesk and Intercom for an e-commerce brand that lowered triage time; and a WhatsApp Business API integration that automatically notifies clients of shipping updates and routes queries to active support queues."
     ],
     benefits: [
-      "Holistic CX strategy tied to measurable retention and revenue outcomes",
-      "CRM implementation with full data migration and structured team onboarding",
-      "Omnichannel setup giving customers a consistent experience across all channels",
-      "Feedback systems that surface actionable insights, not just raw scores",
-      "Ongoing optimisation based on real customer behaviour and satisfaction data",
+      "Deduplicated and structured CRM contacts",
+      "Automated ticket routing rules",
+      "Unified customer support histories",
+      "Post-support CSAT survey logs",
+      "WhatsApp Business text configurations",
+      "Shared agent inboxes in Intercom"
     ],
   },
 
   features: [
     {
-      icon: "compass",
-      title: "CX Strategy & Journey Mapping",
-      desc: "End-to-end customer journey mapping that identifies friction points, drop-off moments, and high-impact improvement opportunities with prioritised recommendations.",
-    },
-    {
       icon: "database",
-      title: "CRM Implementation",
-      desc: "Full CRM selection, configuration, data migration, and team onboarding — Salesforce, HubSpot, or Pipedrive tailored precisely to your sales and support process.",
+      title: "CRM Data Cleanup",
+      desc: "We run deduplication scripts, map database columns, delete invalid entries, and organize contact history logs."
     },
     {
-      icon: "network",
-      title: "Omnichannel Communication",
-      desc: "Unified customer communication across email, live chat, SMS, and phone — with a single inbox, full context history, and a consistent brand voice at every touchpoint.",
+      icon: "workflow",
+      title: "Ticket Routing Logic",
+      desc: "We set up rules that automatically route customer queries to the right support queue based on text analysis or ticket tags."
+    },
+    {
+      icon: "eye",
+      title: "History Visibility Setup",
+      desc: "We pull customer invoice values and shipment events directly into your HubSpot or Zoho ticket views."
     },
     {
       icon: "messageSquare",
-      title: "Customer Feedback Systems",
-      desc: "NPS, CSAT, and in-app survey setup with closed-loop processes that ensure every piece of feedback leads to a visible action — not just a spreadsheet.",
+      title: "Feedback Collection",
+      desc: "We configure CSAT and NPS survey forms that trigger automatically after a ticket is marked resolved, recording scores to the customer profile."
     },
     {
-      icon: "lineChart",
-      title: "Analytics & Insight",
-      desc: "Customer data platforms, cohort analysis, churn prediction models, and dashboards that make every CX decision evidence-based rather than intuition-driven.",
+      icon: "bell",
+      title: "WhatsApp Business Setup",
+      desc: "We configure WhatsApp API access, set up message templates, and link the channel to HubSpot or Intercom inboxes."
     },
     {
-      icon: "headphones",
-      title: "Support Tooling",
-      desc: "Helpdesk setup and optimisation (Zendesk, Intercom, Freshdesk) with automated ticket routing, canned response libraries, and SLA performance tracking.",
-    },
+      icon: "settings",
+      title: "HubSpot & Salesforce Config",
+      desc: "We customize pipeline stages, build custom properties, and set up team permission profiles."
+    }
   ],
 
   process: [
     {
-      icon: "search",
-      title: "CX Audit",
-      desc: "We interview stakeholders, analyse customer data, and map your current journey end to end — documenting what works and where customers fall through the cracks.",
+      icon: "compass",
+      title: "Database Audit",
+      desc: "We review duplicate contacts, evaluate helpdesk layouts, and map communication channels to find bottlenecks."
     },
     {
       icon: "target",
-      title: "Strategy & Roadmap",
-      desc: "We identify the highest-impact CX improvements and build a prioritised roadmap with business case, estimated impact, and implementation timeline.",
+      title: "Integration Mapping",
+      desc: "We draft CRM properties, ticketing rules, and WhatsApp templates in a specification sheet before setup."
     },
     {
-      icon: "settings",
-      title: "Tool Selection & Setup",
-      desc: "We recommend and configure the right CRM, helpdesk, and analytics tools for your team size, budget, and customer journey complexity.",
+      icon: "code2",
+      title: "Systems Configuration",
+      desc: "We run data cleanup scripts, set up routing workflows, connect Intercom or WhatsApp, and build custom layouts."
     },
     {
-      icon: "lineChart",
-      title: "Implement, Measure & Optimise",
-      desc: "We implement, migrate data, train your team, and track CX KPIs — running quarterly reviews to iterate on strategy and tooling as your business scales.",
-    },
+      icon: "rocket",
+      title: "Handover & Go-Live",
+      desc: "We test routing rules with sample tickets, verify survey triggers, and deliver setup guides to your team."
+    }
   ],
 
   techStack: [
-    "Salesforce", "HubSpot CRM", "Zendesk", "Intercom", "Freshdesk",
-    "Segment", "Klaviyo", "Hotjar", "Google Analytics 4", "Typeform", "SurveyMonkey", "Pipedrive",
+    "HubSpot",
+    "Salesforce",
+    "Zoho CRM",
+    "Intercom",
+    "WhatsApp Business API",
+    "Zendesk",
+    "Typeform",
+    "PostgreSQL API",
+    "Make"
   ],
 
   faqs: [
     {
-      q: "We already have a CRM — can you improve our setup rather than replacing it?",
-      a: "Yes. The majority of our CX engagements involve optimising an existing CRM rather than replacing it — cleaning and deduplicating data, adding workflow automation, building integrations with other tools, and training the team to use it effectively. Replacement is only recommended when the current tool is genuinely blocking growth.",
+      q: "What systems do you configure for customer experience management?",
+      a: "We configure and clean database systems like HubSpot, Zoho, and Salesforce. We also set up communication inboxes and ticket routing tools in Intercom, Zendesk, and WhatsApp Business API."
     },
     {
-      q: "How long does a CRM implementation take?",
-      a: "A typical CRM implementation takes 4–8 weeks depending on the complexity of your sales process, volume of data to migrate, and number of integrations required. We use a phased approach to ensure your team always has a working system — no big-bang cutover dates where everything stops if something goes wrong.",
+      q: "Why is CRM data cleanup a part of customer experience?",
+      a: "If your customer profiles are duplicate or disorganized, support agents cannot see accurate invoice histories, purchase dates, or previous logs. Cleaning the database ensures agents have the correct context immediately."
     },
     {
-      q: "What is omnichannel, and why does it matter for my business?",
-      a: "Omnichannel means your customers get a consistent, seamless experience whether they contact you by email, live chat, phone, or social — and your team has full context on every previous interaction, regardless of channel. Research consistently shows omnichannel customers have 30%+ higher lifetime value and churn at lower rates than single-channel customers.",
+      q: "Do you write customer service response scripts?",
+      a: "No. We handle the technical setup—configuring ticket routing queues, API webhooks, databases, and survey triggers. We do not write customer service manuals or provide staffing."
     },
     {
-      q: "How do you measure the success of CX improvements?",
-      a: "We establish baseline metrics before starting — typically NPS, CSAT, average first response time, churn rate, and average resolution time. We measure against these benchmarks monthly and produce reports showing the direct business impact of each improvement. You'll always know what's moving and what isn't.",
-    },
-    {
-      q: "Do you provide training for our team?",
-      a: "Yes. Every implementation includes a structured team training programme covering the new tools, updated processes, and how to interpret the dashboards. We also produce internal documentation and, where appropriate, video walkthroughs for your team's ongoing reference as new people join.",
-    },
+      q: "How do automated surveys log customer scores?",
+      a: "We set up GTM triggers or helpdesk actions that send an email or chat link after a ticket closes. When the customer submits a score, the API writes the CSAT or NPS value directly to their CRM profile for reporting."
+    }
   ],
 };
 

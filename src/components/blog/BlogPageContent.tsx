@@ -3,7 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+<<<<<<< HEAD
 import { ArrowRight, Clock } from "lucide-react";
+=======
+import { ArrowRight, Clock, ChevronRight } from "lucide-react";
+>>>>>>> aa10a75 (Rewrite service pages and update content)
 import AnimatedSection from "@/components/common/AnimatedSection";
 import { blogPosts, categories } from "@/data/blog";
 import type { BlogPost } from "@/data/blog";
@@ -84,10 +88,6 @@ function BlogCard({ post, delay }: { post: BlogPost; delay: number }) {
 
 export default function BlogPageContent() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
-  const visiblePosts =
-    activeCategory === "All"
-      ? blogPosts
-      : blogPosts.filter((post) => post.category === activeCategory);
 
   return (
     <>

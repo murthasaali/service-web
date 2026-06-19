@@ -15,7 +15,8 @@ import ShaderBackground from '@/components/ui/shader-background';
 import { StarButton } from '@/components/ui/star-button';
 
 const serviceOptions = [
-	'Web & Software Development',
+	'Web Development',
+	'Custom Software Development',
 	'Mobile App Development',
 	'Digital Marketing',
 	'Hosting & Infrastructure',

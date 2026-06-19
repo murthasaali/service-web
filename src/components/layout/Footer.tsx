@@ -14,7 +14,8 @@ import {
 import { MdEmail } from "react-icons/md";
 
 const services = [
-  { label: "Web & Software Development",   href: "/services/web-development" },
+  { label: "Web Development",              href: "/services/web-development" },
+  { label: "Custom Software Development",   href: "/services/software-development" },
   { label: "Mobile App Development",       href: "/services/mobile-app-development" },
   { label: "Digital Marketing",            href: "/services/digital-marketing" },
   { label: "Hosting & Infrastructure",     href: "/services/hosting-infrastructure" },
