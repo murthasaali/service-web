@@ -39,8 +39,8 @@ export default function FAQSection() {
         <AnimatedSection className="flex flex-col md:flex-row items-start justify-center gap-16">
           {/* Left Column: Text */}
           <div className="w-full md:w-[38%] shrink-0 space-y-5 md:sticky md:top-32">
-            <p className="text-primary text-sm font-semibold uppercase tracking-[0.16em]">FAQ&apos;s</p>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-ink leading-tight">
+            <p className="text-ink text-sm font-semibold uppercase tracking-[0.16em]">FAQ&apos;s</p>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-primary leading-tight">
               Looking for answers?
             </h2>
             <p className="text-[15px] text-muted-foreground leading-relaxed">

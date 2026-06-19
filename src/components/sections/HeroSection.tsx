@@ -129,7 +129,7 @@ export default function HeroSection() {
           <div
             key={tech.label}
             title={tech.label}
-            className={`absolute ${tech.className} flex h-12 w-12 animate-[float-tech_6s_ease-in-out_infinite] items-center justify-center rounded-full border border-white/75 bg-white/45 text-stone-700 shadow-[0_20px_38px_rgba(28,25,23,0.16),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-md`}
+            className={`absolute ${tech.className} flex h-12 w-12 animate-[float-tech_6s_ease-in-out_infinite] will-change-transform items-center justify-center rounded-full border border-white/75 bg-white/85 text-stone-700 shadow-[0_20px_38px_rgba(28,25,23,0.16),inset_0_1px_0_rgba(255,255,255,0.9)]`}
             style={{ animationDelay: tech.delay }}
           >
             <tech.icon color={tech.color} size={22} aria-hidden="true" />
@@ -155,7 +155,7 @@ export default function HeroSection() {
           />
         </h1>
 
-        <div className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md">
+        <div className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/85 px-6 py-4 shadow-[0_18px_55px_rgba(59,130,246,0.12)]">
           <p className="text-sm leading-6 text-stone-600 md:text-base md:leading-7">
             Empowering businesses with modern technology solutions that connect
             teams, streamline workflows, and create seamless digital experiences.
@@ -186,7 +186,7 @@ export default function HeroSection() {
               title={label}
               onMouseMove={handleMagneticMove}
               onMouseLeave={handleMagneticLeave}
-              className="group inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-950/10 bg-white/55 shadow-[0_12px_28px_rgba(28,25,23,0.10)] backdrop-blur transition-[transform,box-shadow,border-color,background-color] duration-300 ease-out hover:border-stone-950/15 hover:bg-white hover:shadow-[0_18px_36px_rgba(28,25,23,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-600/40"
+              className="group inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-950/10 bg-white/85 shadow-[0_12px_28px_rgba(28,25,23,0.10)] transition-[transform,box-shadow,border-color,background-color] duration-300 ease-out hover:border-stone-950/15 hover:bg-white hover:shadow-[0_18px_36px_rgba(28,25,23,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-600/40"
             >
               <Icon color={color} size={18} aria-hidden="true" />
             </a>

@@ -72,11 +72,18 @@ export default function StickyFooterLayout({
        */}
       <div className="relative z-10 pointer-events-none">
         {/*
-         * Sections wrapped in the white card — rounded bottom edge.
-         * We restore `pointer-events-auto` here so that the homepage content is fully clickable.
+         * Black shell behind the content card — fills the rounded corner cutouts.
+         * pointer-events-auto is set here so the content card is clickable.
          */}
-        <div className="bg-canvas pointer-events-auto rounded-b-[40px] shadow-[0_8px_40px_rgba(0,0,0,0.12)] [&_main]:rounded-b-[40px] [&_section:last-of-type]:rounded-b-[40px] [&_>_*:last-child]:rounded-b-[40px]">
-          {children}
+        <div className="bg-black pointer-events-auto">
+          {/*
+           * Sections wrapped in the white card — rounded bottom edge.
+           * overflow-hidden clips content to the rounded shape.
+           * The black parent shows through the rounded corners.
+           */}
+          <div className="bg-canvas rounded-b-[40px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
+            {children}
+          </div>
         </div>
 
         {/*

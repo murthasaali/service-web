@@ -97,6 +97,8 @@ export default function Navbar() {
   const [hoveredIndex, setHoveredIndex]           = useState<number | null>(null);
   const pathname = usePathname();
 
+  const pillClass = "bg-cyan-500/8 border border-cyan-400/30";
+
   const closeTimer = useRef<ReturnType<typeof setTimeout>>();
 
   const openServices   = () => { clearTimeout(closeTimer.current); setServicesOpen(true);  };
@@ -145,10 +147,10 @@ export default function Navbar() {
       <motion.nav
         layout
         transition={springTransition}
-        className={`pointer-events-auto flex items-center justify-between ${
+        className={`pointer-events-auto flex items-center justify-between border transition-all duration-300 ${
           scrolled
-            ? "mt-4 w-[92%] md:w-fit bg-slate-950/75 border border-cyan-500/20 rounded-full shadow-[0_8px_32px_rgba(6,182,212,0.18)] backdrop-blur-md px-6 py-2 gap-6"
-            : "w-full max-w-7xl px-6 h-[68px] gap-8"
+            ? "mt-4 w-[92%] md:w-fit bg-slate-950/75 border-cyan-400/30 rounded-full shadow-[0_8px_32px_rgba(6,182,212,0.18)] backdrop-blur-md px-6 py-2 gap-6"
+            : "w-full max-w-7xl px-6 h-[68px] gap-8 border-transparent"
         }`}
         aria-label="Main navigation"
       >
@@ -166,20 +168,27 @@ export default function Navbar() {
               scrolled ? "text-white" : "text-ink"
             }`}
           >
-            {(hoveredIndex === 999 || pathname === "/") && (
+            {hoveredIndex === 999 && (
               <motion.span
                 layoutId="nav-hover-pill"
-                className={`absolute inset-0 rounded-full -z-10 ${
-                  scrolled
-                    ? "bg-white/5 border border-white/5"
-                    : "bg-cyan-500/10 border border-cyan-500/20"
-                }`}
+                className={`absolute inset-0 rounded-full -z-10 ${pillClass}`}
                 transition={{ type: "spring", stiffness: 350, damping: 30 }}
               />
             )}
 
             <span>aibiz</span>
             <span className="text-cyan-400">mode</span>
+
+            {/* Active dot under logo when scrolled home */}
+            {pathname === "/" && scrolled && (
+              <motion.span
+                layoutId="nav-active-dot"
+                className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[3px] w-[3px] rounded-full bg-cyan-400"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 28 }}
+              />
+            )}
           </Link>
         </motion.div>
 
@@ -227,11 +236,7 @@ export default function Navbar() {
                       {hoveredIndex === index && (
                         <motion.span
                           layoutId="nav-hover-pill"
-                          className={`absolute inset-0 rounded-full -z-10 ${
-                            scrolled
-                              ? "bg-white/5 border border-white/5"
-                              : "bg-cyan-500/5 border border-cyan-500/10"
-                          }`}
+                          className={`absolute inset-0 rounded-full -z-10 ${pillClass}`}
                           transition={{ type: "spring", stiffness: 350, damping: 30 }}
                         />
                       )}
@@ -337,6 +342,8 @@ export default function Navbar() {
               );
             }
 
+
+
             /* Home link transitions - remove when scrolled */
             if (item.href === "/") {
               return (
@@ -365,7 +372,7 @@ export default function Navbar() {
                           {hoveredIndex === index && (
                             <motion.span
                               layoutId="nav-hover-pill"
-                              className="absolute inset-0 rounded-full -z-10 bg-cyan-500/5 border border-cyan-500/10"
+                              className={`absolute inset-0 rounded-full -z-10 ${pillClass}`}
                               transition={{ type: "spring", stiffness: 350, damping: 30 }}
                             />
                           )}
@@ -374,7 +381,7 @@ export default function Navbar() {
                           {active && (
                             <motion.span
                               layoutId="nav-active-dot"
-                              className="mt-0.5 h-[3px] w-[3px] rounded-full bg-[#0891B2]"
+                              className="mt-0.5 h-[3px] w-[3px] rounded-full bg-cyan-400"
                               initial={{ opacity: 0, scale: 0 }}
                               animate={{ opacity: 1, scale: 1 }}
                               transition={{ type: "spring", stiffness: 400, damping: 28 }}
@@ -411,11 +418,7 @@ export default function Navbar() {
                   {hoveredIndex === index && (
                     <motion.span
                       layoutId="nav-hover-pill"
-                      className={`absolute inset-0 rounded-full -z-10 ${
-                        scrolled
-                          ? "bg-white/5 border border-white/5"
-                          : "bg-cyan-500/5 border border-cyan-500/10"
-                      }`}
+                      className={`absolute inset-0 rounded-full -z-10 ${pillClass}`}
                       transition={{ type: "spring", stiffness: 350, damping: 30 }}
                     />
                   )}
@@ -424,9 +427,7 @@ export default function Navbar() {
                   {active && (
                     <motion.span
                       layoutId="nav-active-dot"
-                      className={`mt-0.5 h-[3px] w-[3px] rounded-full ${
-                        scrolled ? "bg-cyan-400" : "bg-[#0891B2]"
-                      }`}
+                      className="mt-0.5 h-[3px] w-[3px] rounded-full bg-cyan-400"
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ type: "spring", stiffness: 400, damping: 28 }}

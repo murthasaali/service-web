@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import ShaderBackground from '@/components/ui/shader-background';
 import { StarButton } from '@/components/ui/star-button';
+import { TextReveal } from '@/components/ui/cascade-text';
 
 const serviceOptions = [
 	'Web Development',
@@ -164,7 +165,7 @@ export default function ContactPageContent() {
 	};
 
 	const inputBase =
-		'w-full rounded-2xl border bg-white/70 px-4 py-3 text-sm text-[#0F172A] placeholder:text-slate-400 shadow-[0_10px_28px_rgba(59,130,246,0.05)] outline-none backdrop-blur transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20';
+		'w-full rounded-2xl border bg-white/90 px-4 py-3 text-sm text-[#0F172A] placeholder:text-slate-400 shadow-[0_10px_28px_rgba(59,130,246,0.05)] outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20';
 	const inputNormal = `${inputBase} border-cyan-100`;
 	const inputError = `${inputBase} border-red-300 bg-red-50/60 focus:border-red-400 focus:ring-red-200`;
 	const cls = (field: keyof FormErrors) =>
@@ -183,7 +184,7 @@ export default function ContactPageContent() {
 
 			<div className='relative z-10 mx-auto max-w-6xl'>
 				<div className='mx-auto max-w-3xl text-center'>
-					<span className='inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-white/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700 shadow-[0_12px_35px_rgba(59,130,246,0.10)] backdrop-blur-md'>
+					<span className='inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-white/85 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700 shadow-[0_12px_35px_rgba(59,130,246,0.10)]'>
 						<MessageSquare size={14} aria-hidden='true' />
 						Contact
 					</span>
@@ -192,16 +193,24 @@ export default function ContactPageContent() {
 						style={{ fontSize: 'clamp(38px, 6vw, 72px)', lineHeight: 1.02 }}
 					>
 						Let&apos;s build something{' '}
-						<span className='gradient-text font-normal'>connected</span>
+						<TextReveal
+							text='connected'
+							as='span'
+							fontSize='inherit'
+							color='#0F172A'
+							hoverColor='#0891B2'
+							className='font-normal normal-case tracking-tight'
+							style={{ padding: 0 }}
+						/>
 					</h1>
-					<p className='mx-auto mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-base leading-8 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md md:text-lg'>
+					<p className='mx-auto mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/85 px-6 py-4 text-base leading-8 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] md:text-lg'>
 						Tell us what you are planning. We will help shape the right next
 						step for your website, app, automation, or cloud project.
 					</p>
 				</div>
 
 				<div className='mt-14 grid gap-6 lg:grid-cols-[1fr_0.62fr] lg:items-start'>
-					<div className='rounded-[28px] border border-cyan-100/80 bg-white/68 p-5 shadow-[0_22px_70px_rgba(8,145,178,0.12)] backdrop-blur-md md:p-8'>
+					<div className='rounded-[28px] border border-cyan-100/80 bg-white/88 p-5 shadow-[0_22px_70px_rgba(8,145,178,0.12)] md:p-8'>
 						{submitted ? (
 							<div className='flex min-h-[420px] flex-col items-center justify-center text-center'>
 								<div className='mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-cyan-200 bg-cyan-50 text-cyan-700'>
@@ -425,7 +434,7 @@ export default function ContactPageContent() {
 						)}
 					</div>
 
-					<aside className='rounded-[28px] border border-white/70 bg-white/45 p-6 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md'>
+					<aside className='rounded-[28px] border border-white/70 bg-white/85 p-6 shadow-[0_18px_55px_rgba(59,130,246,0.12)]'>
 						<h2 className='font-display text-2xl font-semibold text-[#0F172A]'>
 							Direct contact
 						</h2>

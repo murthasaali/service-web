@@ -43,10 +43,28 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     };
     document.addEventListener("click", handleAnchorClick);
 
+    // Toggle 'is-scrolling' class on body to enable global scroll performance optimizations
+    let scrollTimeoutId: any = null;
+    const handleScroll = () => {
+      document.body.classList.add("is-scrolling");
+
+      if (scrollTimeoutId) {
+        clearTimeout(scrollTimeoutId);
+      }
+
+      scrollTimeoutId = setTimeout(() => {
+        document.body.classList.remove("is-scrolling");
+      }, 150);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();
       document.removeEventListener("click", handleAnchorClick);
+      window.removeEventListener("scroll", handleScroll);
+      if (scrollTimeoutId) clearTimeout(scrollTimeoutId);
     };
   }, []);
 

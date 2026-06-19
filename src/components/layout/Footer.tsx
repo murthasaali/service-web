@@ -84,7 +84,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white/70 transition-colors duration-300 w-full rounded-t-[40px]">
+    <footer className="bg-black text-white/70 transition-colors duration-300 w-full">
       {/* Start Today Section */}
       <div className="max-w-7xl mx-auto px-6 border-b border-white/10 py-6 md:py-8">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
@@ -141,19 +141,33 @@ export default function Footer() {
             <p className="font-sans text-[13px] leading-[1.7] text-white/60 max-w-[280px]">
               aibizmod is a digital growth and intelligent technology firm — helping businesses navigate the AI-driven future, build stronger digital presence, and scale with confidence.
             </p>
-            <div className="pt-2">
-              <p className="font-sans text-[11px] text-white/40 uppercase tracking-widest mb-1.5">Inquiries</p>
-              <a
-                href="mailto:hello@aibizmod.com"
-                className="font-serif text-[20px] text-white hover:text-[#22D3EE] transition-colors font-semibold"
-              >
-                hello@aibizmod.com
-              </a>
+            <div className="pt-2 space-y-2.5">
+              <p className="font-sans text-[11px] text-white/40 uppercase tracking-widest mb-1">Inquiries</p>
+              
+              <div className="flex items-center gap-2.5 text-[14px] text-white/60">
+                <Phone size={13} className="text-[#22D3EE] shrink-0" />
+                <a
+                  href="tel:+442079460958"
+                  className="hover:text-white transition-colors"
+                >
+                  +44 (0) 20 7946 0958
+                </a>
+              </div>
+
+              <div className="flex items-center gap-2.5 text-[15px] text-white">
+                <MdEmail size={14} className="text-[#22D3EE] shrink-0" />
+                <a
+                  href="mailto:hello@aibizmod.com"
+                  className="hover:text-[#22D3EE] transition-colors font-semibold"
+                >
+                  hello@aibizmod.com
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Links Grid Column (6 out of 12) */}
-          <div className="md:col-span-6 grid grid-cols-2 sm:grid-cols-4 gap-8">
+          <div className="md:col-span-6 grid grid-cols-2 sm:grid-cols-3 gap-8">
             {/* Services */}
             <div>
               <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-4">Services</h5>
@@ -202,26 +216,6 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
-              </ul>
-            </div>
-
-            {/* Office / Contact */}
-            <div>
-              <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-5">Office</h5>
-              <ul className="space-y-4 text-[13px] text-white/60">
-                <li className="flex items-start gap-2.5">
-                  <Phone size={14} className="mt-0.5 shrink-0 text-[#22D3EE]" />
-                  <a href="tel:+442079460958" className="hover:text-white transition-colors">
-                    +44 (0) 20 7946 0958
-                  </a>
-                </li>
-                <li className="flex items-start gap-2.5 leading-relaxed">
-                  <MapPin size={14} className="mt-0.5 shrink-0 text-[#22D3EE]" />
-                  <span>
-                    12 Innovation Street,<br />
-                    London, EC2A 4NE
-                  </span>
-                </li>
               </ul>
             </div>
           </div>
@@ -292,10 +286,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 border-t border-white/10 py-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] text-white/40">
           <p>&copy; {new Date().getFullYear()} aibizmod Ltd. All rights reserved.</p>
-          <p>Registered in England &amp; Wales: 12948572. VAT: 948572839</p>
+          <p>Registered in England & Wales: 12948572. VAT: 948572839</p>
         </div>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[10px] text-white/25 border-t border-white/5 pt-3 mt-3">
-          <p>Designed &amp; Developed with care. Built with Next.js &amp; Tailwind CSS.</p>
+          <p>Designed & Developed with care. Built with Next.js & Tailwind CSS.</p>
         </div>
       </div>
     </footer>

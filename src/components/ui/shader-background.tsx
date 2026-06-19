@@ -40,7 +40,7 @@ const fsSource = `
   const float offsetSpeed = 1.33 * overallSpeed;
   const float minOffsetSpread = 0.6;
   const float maxOffsetSpread = 2.0;
-  const int linesPerGroup = 5;
+  const int linesPerGroup = 3;
 
   #define drawCircle(pos, radius, coord) smoothstep(radius + gridSmoothWidth, radius, length(coord - (pos)))
   #define drawSmoothLine(pos, halfWidth, t) smoothstep(halfWidth, 0.0, abs(pos - (t)))
@@ -58,7 +58,7 @@ const fsSource = `
   }
 
   float random(float t) {
-    return (cos(t) + cos(t * 1.3 + 1.3) + cos(t * 1.4 + 1.4)) / 3.0;
+    return (cos(t) + cos(t * 1.3 + 1.3)) / 2.0;
   }
 
   float getPlasmaY(float x, float horizontalFade, float offset) {
@@ -189,7 +189,7 @@ export default function ShaderBackground({ className }: ShaderBackgroundProps) {
     };
 
     const resizeCanvas = () => {
-      const pixelRatio = 1.0; // Cap pixel ratio to 1.0 to save performance
+      const pixelRatio = 0.5; // Downsample for massive performance gain
       const width = Math.max(1, Math.floor(canvas.clientWidth * pixelRatio));
       const height = Math.max(1, Math.floor(canvas.clientHeight * pixelRatio));
 
