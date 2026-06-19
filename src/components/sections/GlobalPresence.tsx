@@ -37,7 +37,7 @@ export default function GlobalPresence() {
               Interactive footprint across every major market.
             </h2>
             <p className="mt-5 text-muted-foreground max-w-xl" style={{ fontSize: 17, lineHeight: 1.8 }}>
-              Our global team is connected with clients and partners around the world. Explore our interactive globe to see how we link strategy, engineering, and support across continents.
+              <span className="font-semibold text-ink">aibiz</span><span className="font-semibold text-cyan-400">mode</span> is connected with clients and partners around the world. Explore our interactive globe to see how we link strategy, engineering, and support across continents.
             </p>
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-border bg-[#FBF8FF] p-6 text-center">

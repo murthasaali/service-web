@@ -1,6 +1,7 @@
 "use client";
 
 import AnimatedSection from "@/components/common/AnimatedSection";
+import ThreeDMarquee from "@/components/ui/3d-marquee";
 import { StackedCards } from "@/components/ui/glass-cards";
 
 export default function ServicesGrid() {
@@ -25,6 +26,7 @@ export default function ServicesGrid() {
             <span className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
               What We Do
             </span>
+            <ThreeDMarquee className="mt-6 max-w-full" />
             <h2
               className="mt-5 font-display font-bold text-primary text-balance"
               style={{

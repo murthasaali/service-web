@@ -12,11 +12,13 @@ import {
   Compass, Bot, Cpu, MessageSquare, Headphones,
   Package, Settings, Wrench, Zap, Users, Lightbulb,
   Globe, Award, Clock, Rocket, Pencil, BarChart, GitBranch,
-  type LucideIcon,
+  Sparkles, type LucideIcon,
 } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AnimatedSection from "@/components/common/AnimatedSection";
+import ShaderBackground from "@/components/ui/shader-background";
+import { StarButton } from "@/components/ui/star-button";
 
 // ─── Icon registry ────────────────────────────────────────────────────────────
 
@@ -42,6 +44,23 @@ const iconMap: Record<IconKey, LucideIcon> = {
   rocket: Rocket, pencil: Pencil, barChart: BarChart, gitBranch: GitBranch,
 };
 
+const serviceImages: Record<string, string> = {
+  "web-development":
+    "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1000&q=80",
+  "mobile-app-development":
+    "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80",
+  "digital-marketing":
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80",
+  "hosting-infrastructure":
+    "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80",
+  automation:
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+  "customer-exp-management":
+    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80",
+  "it-consulting-it-services":
+    "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80",
+};
+
 // ─── Data types ───────────────────────────────────────────────────────────────
 
 export interface FeatureCard { icon: IconKey; title: string; desc: string; }
@@ -65,7 +84,7 @@ export interface ServicePageData {
 function FAQItem({ faq }: { faq: FAQ }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-border last:border-0">
+    <div className="border-b border-cyan-100 last:border-0">
       <button
         type="button"
         onClick={() => setOpen((p) => !p)}
@@ -74,7 +93,7 @@ function FAQItem({ faq }: { faq: FAQ }) {
       >
         <span
           className={`font-semibold text-sm pr-4 leading-snug transition-colors ${
-            open ? "text-royal-deep" : "text-ink group-hover:text-royal-deep"
+            open ? "text-cyan-700" : "text-[#0F172A] group-hover:text-cyan-700"
           }`}
         >
           {faq.q}
@@ -83,13 +102,13 @@ function FAQItem({ faq }: { faq: FAQ }) {
           size={18}
           aria-hidden="true"
           className={`shrink-0 transition-transform duration-200 ${
-            open ? "rotate-180 text-royal" : "text-muted-foreground"
+            open ? "rotate-180 text-cyan-600" : "text-slate-400"
           }`}
         />
       </button>
       {open && (
         <div className="pb-5">
-          <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+          <p className="text-sm text-slate-600 leading-relaxed">{faq.a}</p>
         </div>
       )}
     </div>
@@ -100,35 +119,33 @@ function FAQItem({ faq }: { faq: FAQ }) {
 
 export default function ServicePageLayout({ data }: { data: ServicePageData }) {
   const prefersReduced = useReducedMotion();
+  const heroImage = serviceImages[data.slug] ?? serviceImages["web-development"];
 
   return (
     <>
       <Navbar />
-      <main>
+      <main className="bg-white text-ink">
 
         {/* ── 1. Hero ─────────────────────────────────────────────────────── */}
-        <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-canvas border-b border-border">
-          {/* Ambient blob */}
+        <section className="relative isolate overflow-hidden px-6 pb-20 pt-32 md:pb-28 md:pt-36">
+          <ShaderBackground className="absolute inset-0 z-0 h-full w-full opacity-80" />
           <div
-            className="absolute -top-20 -right-32 w-[600px] h-[600px] rounded-full pointer-events-none"
+            className="pointer-events-none absolute left-1/2 top-24 z-0 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-200/30 blur-3xl"
             aria-hidden="true"
-            style={{
-              background:
-                "radial-gradient(ellipse at top right, rgba(6,182,212,0.07) 0%, transparent 65%)",
-            }}
           />
 
-          <div className="max-w-7xl mx-auto relative">
+          <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <div>
             {/* Breadcrumb */}
             <nav
-              className="flex items-center gap-1.5 text-[13px] text-muted-foreground mb-8 flex-wrap"
+              className="mb-8 inline-flex flex-wrap items-center gap-1.5 rounded-full border border-cyan-100 bg-white/55 px-4 py-2 text-[13px] text-slate-500 shadow-[0_12px_35px_rgba(59,130,246,0.10)] backdrop-blur-md"
               aria-label="Breadcrumb"
             >
-              <Link href="/" className="hover:text-ink transition-colors">Home</Link>
-              <ChevronRight size={13} className="shrink-0 text-border" aria-hidden="true" />
-              <Link href="/services" className="hover:text-ink transition-colors">Services</Link>
-              <ChevronRight size={13} className="shrink-0 text-border" aria-hidden="true" />
-              <span className="text-ink font-medium" aria-current="page">{data.name}</span>
+              <Link href="/" className="transition-colors hover:text-[#0F172A]">Home</Link>
+              <ChevronRight size={13} className="shrink-0 text-cyan-300" aria-hidden="true" />
+              <Link href="/services" className="transition-colors hover:text-[#0F172A]">Services</Link>
+              <ChevronRight size={13} className="shrink-0 text-cyan-300" aria-hidden="true" />
+              <span className="font-medium text-[#0F172A]" aria-current="page">{data.name}</span>
             </nav>
 
             <motion.div
@@ -136,19 +153,17 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              {/* Gold rule + eyebrow */}
-              <span className="gold-rule" aria-hidden="true" />
-              <span className="eyebrow">
-                <span className="eyebrow-star" aria-hidden="true">✦</span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-white/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700 shadow-[0_12px_35px_rgba(59,130,246,0.10)] backdrop-blur-md">
+                <Sparkles size={14} aria-hidden="true" />
                 Our Services
               </span>
 
               {/* H1 */}
               <h1
-                className="mt-6 font-display font-bold text-ink text-balance leading-[1.05]"
+                className="mt-7 max-w-3xl font-display font-thin text-[#0F172A] text-balance"
                 style={{
-                  fontSize: "clamp(36px, 5vw, 58px)",
-                  letterSpacing: "-0.03em",
+                  fontSize: "clamp(40px, 6vw, 76px)",
+                  lineHeight: 1.02,
                 }}
               >
                 {data.name}
@@ -156,40 +171,80 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
 
               {/* Tagline */}
               <p
-                className="mt-5 text-muted-foreground max-w-2xl leading-relaxed"
-                style={{ fontSize: 19, lineHeight: 1.65 }}
+                className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-base leading-8 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md md:text-lg"
               >
                 {data.tagline}
               </p>
 
               {/* CTAs */}
-              <div className="mt-9 flex flex-wrap gap-3">
-                <Link href="/contact" className="btn-primary">
-                  Get a Free Consultation <ArrowRight size={15} aria-hidden="true" />
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link href="/contact" aria-label="Get a free consultation">
+                  <StarButton
+                    as="span"
+                    lightColor="#38bdf8"
+                    backgroundColor="#0f172a"
+                    className="h-12 font-semibold shadow-[0_0_12px_rgba(56,189,248,0.25)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(6,182,212,0.55),0_0_4px_rgba(56,189,248,0.7)]"
+                  >
+                    Get a Free Consultation
+                    <ArrowRight size={16} aria-hidden="true" />
+                  </StarButton>
                 </Link>
-                <Link href="/services" className="btn-ghost">
+                <Link
+                  href="/services"
+                  className="inline-flex h-12 items-center justify-center rounded-full border border-cyan-100 bg-white/55 px-6 text-sm font-semibold text-[#0F172A] shadow-[0_12px_32px_rgba(15,23,42,0.08)] backdrop-blur-md transition hover:border-cyan-200 hover:bg-white"
+                >
                   All Services
                 </Link>
+              </div>
+            </motion.div>
+            </div>
+
+            <motion.div
+              initial={prefersReduced ? false : { opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.55, ease: "easeOut", delay: 0.08 }}
+              className="relative"
+            >
+              <div
+                className="relative min-h-[420px] overflow-hidden rounded-[32px] border border-cyan-100 bg-cyan-50 shadow-[0_26px_80px_rgba(8,145,178,0.16)]"
+                style={{
+                  backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.08), rgba(15,23,42,0.34)), url(${heroImage})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+              >
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_12%,rgba(210,247,255,0.52),transparent_34%)]" />
+                <div className="absolute bottom-6 left-6 right-6 rounded-3xl border border-white/55 bg-white/55 p-5 shadow-[0_16px_45px_rgba(15,23,42,0.15)] backdrop-blur-md">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-700">
+                    aibizmode delivery
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-700">
+                    Strategy, implementation, launch, and support with one
+                    connected technical team.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* ── 2. Overview ─────────────────────────────────────────────────── */}
-        <section className="py-24 px-6 bg-surface">
-          <div className="max-w-7xl mx-auto">
+        <section className="relative overflow-hidden px-6 py-24 bg-white">
+          <div
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_8%,rgba(210,247,255,0.6),transparent_32%)]"
+            aria-hidden="true"
+          />
+          <div className="relative mx-auto max-w-7xl">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
 
               {/* Left: description */}
               <AnimatedSection direction="left" className="lg:col-span-3">
-                <span className="gold-rule" aria-hidden="true" />
-                <span className="eyebrow">
-                  <span className="eyebrow-star" aria-hidden="true">✦</span>
+                <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
                   Overview
                 </span>
                 <h2
-                  className="mt-6 font-display font-bold text-ink"
-                  style={{ fontSize: "clamp(24px, 3vw, 34px)", lineHeight: 1.15, letterSpacing: "-0.02em" }}
+                  className="mt-5 font-display font-thin text-[#0F172A]"
+                  style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.08 }}
                 >
                   What we deliver
                 </h2>
@@ -197,7 +252,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                   {data.overview.paragraphs.map((p, i) => (
                     <p
                       key={i}
-                      className="text-muted-foreground leading-relaxed"
+                      className="text-slate-600 leading-relaxed"
                       style={{ fontSize: 17, lineHeight: 1.65 }}
                     >
                       {p}
@@ -208,8 +263,8 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
 
               {/* Right: key benefits sticky card */}
               <AnimatedSection direction="right" delay={0.15} className="lg:col-span-2">
-                <div className="card-royal p-8 lg:sticky lg:top-24">
-                  <h3 className="font-display font-semibold text-ink mb-5" style={{ fontSize: 18 }}>
+                <div className="rounded-[28px] border border-cyan-100 bg-white/70 p-8 shadow-[0_18px_55px_rgba(59,130,246,0.10)] backdrop-blur-md lg:sticky lg:top-24">
+                  <h3 className="font-display font-semibold text-[#0F172A] mb-5" style={{ fontSize: 18 }}>
                     Key Benefits
                   </h3>
                   <ul className="space-y-4">
@@ -217,10 +272,10 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                       <li key={i} className="flex items-start gap-3 text-sm">
                         <CheckCircle
                           size={16}
-                          className="text-royal mt-0.5 shrink-0"
+                          className="text-cyan-600 mt-0.5 shrink-0"
                           aria-hidden="true"
                         />
-                        <span className="text-muted-foreground leading-relaxed">{b}</span>
+                        <span className="text-slate-600 leading-relaxed">{b}</span>
                       </li>
                     ))}
                   </ul>
@@ -231,20 +286,17 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         </section>
 
         {/* ── 3. What's Included ──────────────────────────────────────────── */}
-        <section className="py-24 px-6 bg-tint">
+        <section className="px-6 py-24 bg-[#F8FEFF]">
           <div className="max-w-7xl mx-auto">
             <AnimatedSection className="text-center mb-14">
-              <span className="gold-rule mx-auto" aria-hidden="true" />
-              <span className="eyebrow">
-                <span className="eyebrow-star" aria-hidden="true">✦</span>
+              <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
                 What&apos;s Included
               </span>
               <h2
-                className="mt-6 font-display font-bold text-ink text-balance"
+                className="mt-5 font-display font-thin text-[#0F172A] text-balance"
                 style={{
-                  fontSize: "clamp(26px, 3.5vw, 38px)",
-                  lineHeight: 1.1,
-                  letterSpacing: "-0.02em",
+                  fontSize: "clamp(30px, 4vw, 52px)",
+                  lineHeight: 1.08,
                 }}
               >
                 Everything you need, nothing you don&apos;t
@@ -256,17 +308,17 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                 const Icon = iconMap[f.icon];
                 return (
                   <AnimatedSection key={f.title} delay={i * 0.07}>
-                    <div className="card-royal h-full p-6 flex flex-col">
-                      <div className="icon-box mb-5">
+                    <div className="flex h-full flex-col rounded-[24px] border border-cyan-100/80 bg-white/75 p-6 shadow-[0_18px_55px_rgba(59,130,246,0.09)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-200 hover:shadow-[0_24px_70px_rgba(8,145,178,0.14)]">
+                      <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-full border border-cyan-100 bg-cyan-50 text-cyan-700 shadow-[0_12px_28px_rgba(8,145,178,0.10)]">
                         <Icon size={19} aria-hidden="true" />
                       </div>
                       <h3
-                        className="font-display font-semibold text-ink mb-2"
+                        className="font-display font-semibold text-[#0F172A] mb-2"
                         style={{ fontSize: 17, lineHeight: 1.3 }}
                       >
                         {f.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                      <p className="text-sm text-slate-600 leading-relaxed flex-1">
                         {f.desc}
                       </p>
                     </div>
@@ -278,18 +330,28 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         </section>
 
         {/* ── 4. Process ──────────────────────────────────────────────────── */}
-        <section className="py-24 px-6 bg-ink">
-          <div className="max-w-7xl mx-auto">
+        <section
+          className="relative overflow-hidden px-6 py-24 bg-white"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px)",
+            backgroundSize: "72px 72px",
+          }}
+        >
+          <div
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(210,247,255,0.56),transparent_34%)]"
+            aria-hidden="true"
+          />
+          <div className="relative max-w-7xl mx-auto">
             <AnimatedSection className="text-center mb-16">
-              <p className="text-[11px] font-semibold uppercase tracking-widest mb-3" style={{ color: "rgba(184,134,11,0.7)" }}>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700 mb-3">
                 How It Works
               </p>
               <h2
-                className="font-display font-bold text-white text-balance"
+                className="font-display font-thin text-[#0F172A] text-balance"
                 style={{
-                  fontSize: "clamp(26px, 3.5vw, 38px)",
-                  lineHeight: 1.1,
-                  letterSpacing: "-0.02em",
+                  fontSize: "clamp(30px, 4vw, 52px)",
+                  lineHeight: 1.08,
                 }}
               >
                 Our process
@@ -317,11 +379,12 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                           <div
                             className="relative w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5"
                             style={{
-                              background: "rgba(255,255,255,0.06)",
-                              border: "1px solid rgba(255,255,255,0.12)",
+                              background: "rgba(236, 254, 255, 0.86)",
+                              border: "1px solid rgba(103, 232, 249, 0.45)",
+                              boxShadow: "0 16px 40px rgba(8,145,178,0.14)",
                             }}
                           >
-                            <Icon size={22} className="text-white" aria-hidden="true" />
+                            <Icon size={22} className="text-cyan-700" aria-hidden="true" />
                             <span
                               className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full text-white text-[10px] font-bold flex items-center justify-center"
                               style={{ background: "linear-gradient(120deg, #06B6D4, #3B82F6)" }}
@@ -330,10 +393,10 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                               {i + 1}
                             </span>
                           </div>
-                          <h3 className="font-display font-semibold text-white text-sm mb-2">
+                          <h3 className="font-display font-semibold text-[#0F172A] text-sm mb-2">
                             {step.title}
                           </h3>
-                          <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
+                          <p className="text-xs leading-relaxed text-slate-600">
                             {step.desc}
                           </p>
                         </div>
@@ -355,11 +418,12 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                         <div
                           className="relative w-12 h-12 rounded-full flex items-center justify-center shrink-0"
                           style={{
-                            background: "rgba(255,255,255,0.06)",
-                            border: "1px solid rgba(255,255,255,0.12)",
+                            background: "rgba(236, 254, 255, 0.86)",
+                            border: "1px solid rgba(103, 232, 249, 0.45)",
+                            boxShadow: "0 16px 40px rgba(8,145,178,0.14)",
                           }}
                         >
-                          <Icon size={18} className="text-white" aria-hidden="true" />
+                          <Icon size={18} className="text-cyan-700" aria-hidden="true" />
                           <span
                             className="absolute -top-1 -right-1 w-5 h-5 rounded-full text-white text-[9px] font-bold flex items-center justify-center"
                             style={{ background: "linear-gradient(120deg, #06B6D4, #3B82F6)" }}
@@ -377,10 +441,10 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                         )}
                       </div>
                       <div className={`${i < data.process.length - 1 ? "pb-8" : ""}`}>
-                        <h3 className="font-display font-semibold text-white text-sm pt-3 mb-1.5">
+                        <h3 className="font-display font-semibold text-[#0F172A] text-sm pt-3 mb-1.5">
                           {step.title}
                         </h3>
-                        <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
+                        <p className="text-xs leading-relaxed text-slate-600">
                           {step.desc}
                         </p>
                       </div>
@@ -393,20 +457,17 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         </section>
 
         {/* ── 5. Tech Stack ───────────────────────────────────────────────── */}
-        <section className="py-20 px-6 bg-canvas border-b border-border">
+        <section className="py-20 px-6 bg-[#F8FEFF] border-y border-cyan-100">
           <div className="max-w-7xl mx-auto">
             <AnimatedSection className="text-center mb-10">
-              <span className="gold-rule mx-auto" aria-hidden="true" />
-              <span className="eyebrow">
-                <span className="eyebrow-star" aria-hidden="true">✦</span>
+              <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
                 Tech Stack &amp; Tools
               </span>
               <h2
-                className="mt-6 font-display font-bold text-ink"
+                className="mt-5 font-display font-thin text-[#0F172A]"
                 style={{
-                  fontSize: "clamp(22px, 3vw, 34px)",
-                  lineHeight: 1.15,
-                  letterSpacing: "-0.02em",
+                  fontSize: "clamp(28px, 4vw, 46px)",
+                  lineHeight: 1.08,
                 }}
               >
                 Technologies we work with
@@ -418,20 +479,20 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                 {data.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 rounded-pill text-sm font-medium text-ink cursor-default transition-colors"
+                    className="rounded-full px-4 py-2 text-sm font-medium text-[#0F172A] cursor-default shadow-[0_10px_24px_rgba(59,130,246,0.08)] transition-colors"
                     style={{
-                      background: "#ECFEFF",
-                      border: "1px solid rgba(184,134,11,0.18)",
+                      background: "rgba(255,255,255,0.72)",
+                      border: "1px solid rgba(103,232,249,0.42)",
                     }}
                     onMouseEnter={(e) => {
                       const el = e.currentTarget as HTMLElement;
-                      el.style.borderColor = "rgba(6,182,212,0.35)";
-                      el.style.background = "#E0F2FE";
+                      el.style.borderColor = "rgba(6,182,212,0.55)";
+                      el.style.background = "#ECFEFF";
                     }}
                     onMouseLeave={(e) => {
                       const el = e.currentTarget as HTMLElement;
-                      el.style.borderColor = "rgba(184,134,11,0.18)";
-                      el.style.background = "#ECFEFF";
+                      el.style.borderColor = "rgba(103,232,249,0.42)";
+                      el.style.background = "rgba(255,255,255,0.72)";
                     }}
                   >
                     {tech}
@@ -443,20 +504,17 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         </section>
 
         {/* ── 6. FAQ ──────────────────────────────────────────────────────── */}
-        <section className="py-24 px-6 bg-tint">
+        <section className="py-24 px-6 bg-white">
           <div className="max-w-3xl mx-auto">
             <AnimatedSection className="text-center mb-14">
-              <span className="gold-rule mx-auto" aria-hidden="true" />
-              <span className="eyebrow">
-                <span className="eyebrow-star" aria-hidden="true">✦</span>
+              <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
                 FAQ
               </span>
               <h2
-                className="mt-6 font-display font-bold text-ink"
+                className="mt-5 font-display font-thin text-[#0F172A]"
                 style={{
-                  fontSize: "clamp(26px, 3.5vw, 38px)",
-                  lineHeight: 1.1,
-                  letterSpacing: "-0.02em",
+                  fontSize: "clamp(30px, 4vw, 52px)",
+                  lineHeight: 1.08,
                 }}
               >
                 Common questions
@@ -464,7 +522,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
             </AnimatedSection>
 
             <AnimatedSection delay={0.1}>
-              <div className="card-royal px-8 py-2">
+              <div className="rounded-[28px] border border-cyan-100 bg-white/75 px-8 py-2 shadow-[0_18px_55px_rgba(59,130,246,0.10)] backdrop-blur-md">
                 {data.faqs.map((faq) => (
                   <FAQItem key={faq.q} faq={faq} />
                 ))}
@@ -474,61 +532,52 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         </section>
 
         {/* ── 7. CTA Banner ───────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-ink py-24 px-6">
-          {/* Ambient glows */}
+        <section className="relative overflow-hidden bg-white px-6 py-24">
           <div
-            className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
+            className="pointer-events-none absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-200/30 blur-3xl"
             aria-hidden="true"
-            style={{
-              background: "radial-gradient(circle, rgba(6,182,212,0.7) 0%, transparent 70%)",
-              animation: "glow-pulse 6s ease-in-out infinite",
-            }}
-          />
-          <div
-            className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none"
-            aria-hidden="true"
-            style={{
-              background: "radial-gradient(circle, rgba(14,165,233,0.6) 0%, transparent 70%)",
-              animation: "glow-pulse 6s ease-in-out infinite",
-              animationDelay: "3s",
-            }}
           />
 
-          <AnimatedSection className="relative z-10 max-w-2xl mx-auto text-center">
-            {/* Gold label */}
-            <span
-              className="inline-flex items-center gap-1.5 text-label font-semibold uppercase tracking-widest mb-6"
-              style={{ color: "#B8860B" }}
-            >
-              <span aria-hidden="true">✦</span> Let&apos;s Talk
+          <AnimatedSection className="relative z-10 mx-auto max-w-4xl rounded-[32px] border border-cyan-100 bg-[#ECFEFF]/70 p-8 text-center shadow-[0_22px_70px_rgba(8,145,178,0.12)] backdrop-blur-md md:p-12">
+            <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
+              Let&apos;s Talk
             </span>
 
             <h2
-              className="font-display font-bold text-white text-balance"
+              className="mt-5 font-display font-thin text-[#0F172A] text-balance"
               style={{
-                fontSize: "clamp(28px, 4vw, 48px)",
+                fontSize: "clamp(30px, 4vw, 48px)",
                 lineHeight: 1.08,
-                letterSpacing: "-0.02em",
               }}
             >
               Start your{" "}
-              <span className="gradient-text">{data.name}</span>{" "}
+              <span className="gradient-text font-normal">{data.name}</span>{" "}
               project today
             </h2>
 
             <p
-              className="mt-5 max-w-xl mx-auto"
-              style={{ fontSize: 17, lineHeight: 1.65, color: "rgba(255,255,255,0.55)" }}
+              className="mx-auto mt-5 max-w-xl text-base leading-8 text-slate-600"
             >
               Tell us what you&apos;re building and we&apos;ll put together a
-              tailored plan, timeline, and estimate — at no charge.
+              tailored plan, timeline, and estimate at no charge.
             </p>
 
             <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="btn-primary">
-                Get a Free Consultation <ArrowRight size={15} aria-hidden="true" />
+              <Link href="/contact" aria-label="Get a free consultation">
+                <StarButton
+                  as="span"
+                  lightColor="#38bdf8"
+                  backgroundColor="#0f172a"
+                  className="h-12 font-semibold shadow-[0_0_12px_rgba(56,189,248,0.25)]"
+                >
+                  Get a Free Consultation
+                  <ArrowRight size={16} aria-hidden="true" />
+                </StarButton>
               </Link>
-              <Link href="/services" className="btn-ghost-dark">
+              <Link
+                href="/services"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-cyan-100 bg-white/55 px-6 text-sm font-semibold text-[#0F172A] shadow-[0_12px_32px_rgba(15,23,42,0.08)] backdrop-blur-md transition hover:border-cyan-200 hover:bg-white"
+              >
                 View All Services
               </Link>
             </div>

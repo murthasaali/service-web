@@ -104,7 +104,7 @@ const fsSource = `
     fragColor.rgb = mix(
       fragColor.rgb,
       lineColor.rgb,
-      clamp(lineMask * 0.72, 0.0, 0.85)
+      clamp(lineMask * 1.08, 0.0, 0.95)
     );
 
     gl_FragColor = fragColor;
