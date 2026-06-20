@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState, type ElementType, type CSSProperties } from "react";
+import React, { useMemo, useState, useEffect, type ElementType, type CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
 export interface TextRevealProps {
@@ -18,6 +18,8 @@ export interface TextRevealProps {
   hoverColor?: string;
   direction?: "up" | "down";
   onClick?: (e: React.MouseEvent) => void;
+  autoAnimate?: boolean;
+  interval?: number;
 }
 
 const TextReveal = React.memo(function TextReveal({
@@ -35,8 +37,21 @@ const TextReveal = React.memo(function TextReveal({
   hoverColor = "#b2c73a",
   direction = "up",
   onClick,
+  autoAnimate = true,
+  interval = 3000,
 }: TextRevealProps) {
   const [hovered, setHovered] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    if (!autoAnimate) return;
+    const timer = setInterval(() => {
+      setIsActive((prev) => !prev);
+    }, interval);
+    return () => clearInterval(timer);
+  }, [autoAnimate, interval]);
+
+  const isAnimated = autoAnimate ? isActive : hovered;
 
   const chars = useMemo(() => {
     if (typeof Intl !== "undefined" && Intl.Segmenter) {
@@ -55,14 +70,14 @@ const TextReveal = React.memo(function TextReveal({
     ),
     style: {
       fontSize,
-      color: hovered ? hoverColor : color,
+      color: isAnimated ? hoverColor : color,
       transition: "color 0.35s ease",
       padding: "0.15em 0.4em",
       lineHeight: 1,
       ...style,
     },
-    onMouseEnter: () => setHovered(true),
-    onMouseLeave: () => setHovered(false),
+    onMouseEnter: () => { if (!autoAnimate) setHovered(true); },
+    onMouseLeave: () => { if (!autoAnimate) setHovered(false); },
     onClick,
     "aria-label": text,
   };
@@ -88,7 +103,7 @@ const TextReveal = React.memo(function TextReveal({
               textShadow: `0 ${sign}em currentColor`,
               transition: `transform ${duration}ms ${easing}`,
               transitionDelay: `${i * staggerDelay}ms`,
-              transform: hovered
+              transform: isAnimated
                 ? `translateY(${-sign}em)`
                 : "translateY(0)",
             }}

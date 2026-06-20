@@ -147,10 +147,10 @@ export default function Navbar() {
       <motion.nav
         layout
         transition={springTransition}
-        className={`pointer-events-auto flex items-center justify-between border transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${
+        className={`pointer-events-auto flex items-center justify-between border transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 rounded-full ${
           scrolled
-            ? "mt-4 w-[92%] md:w-fit bg-slate-950/75 border-cyan-400/30 rounded-full shadow-[0_8px_32px_rgba(6,182,212,0.18)] backdrop-blur-md px-6 py-2 gap-6"
-            : "w-full max-w-7xl px-6 h-[68px] gap-8 border-transparent"
+            ? "mt-4 w-[92%] md:w-fit bg-slate-950/75 border-cyan-400/30 shadow-[0_8px_32px_rgba(6,182,212,0.18)] backdrop-blur-md px-6 py-2 gap-6"
+            : "w-full max-w-7xl px-6 h-[68px] gap-8 border-transparent shadow-none"
         }`}
         aria-label="Main navigation"
       >
