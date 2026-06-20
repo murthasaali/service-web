@@ -84,7 +84,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white/70 transition-colors duration-300 w-full">
+    <footer className="bg-navy text-white/70 transition-colors duration-300 w-full">
       {/* Start Today Section */}
       <div className="max-w-7xl mx-auto px-6 border-b border-white/10 py-6 md:py-8">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
