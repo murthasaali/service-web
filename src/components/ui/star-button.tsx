@@ -11,6 +11,9 @@ interface StarButtonProps extends HTMLAttributes<HTMLElement> {
   backgroundColor?: string;
   borderWidth?: number;
   textColor?: string;
+  glow?: boolean;
+  sparkClassName?: string;
+  sparkGradient?: string;
 }
 
 export function StarButton({
@@ -22,6 +25,9 @@ export function StarButton({
   borderWidth = 1.5,
   textColor = "text-white",
   className,
+  glow = false,
+  sparkClassName,
+  sparkGradient = "conic-gradient(from 0deg, transparent 0deg, transparent 90deg, rgba(14, 165, 233, 0.3) 140deg, var(--light-color) 180deg, #ffffff 200deg, #67e8f9 220deg, rgba(6, 182, 212, 0.3) 260deg, transparent 300deg)",
   ...props
 }: StarButtonProps) {
   const Component = as as ElementType;
@@ -44,7 +50,15 @@ export function StarButton({
       {...props}
     >
       <div
-        className="animate-spark-border absolute -inset-3 rounded-[inherit] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_90deg,rgba(14,165,233,0.3)_140deg,var(--light-color)_180deg,#ffffff_200deg,#67e8f9_220deg,rgba(6,182,212,0.3)_260deg,transparent_300deg)]"
+        className={cn(
+          "animate-spark-border absolute -inset-3 rounded-[inherit]",
+          glow && "blur-[1px]",
+          sparkClassName
+        )}
+        style={{
+          background: sparkGradient,
+          ...(glow ? { filter: "drop-shadow(0 0 6px var(--light-color))" } : {})
+        }}
         aria-hidden="true"
       />
 

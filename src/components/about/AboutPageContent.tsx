@@ -174,8 +174,7 @@ export default function AboutPageContent() {
         </div>
       </section>
 
-      {/* ── Core Values ──────────────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-canvas border-t border-border">
+      <section className="pt-20 pb-4 px-6 bg-canvas border-t border-border">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-14">
             <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "black", border: "none" }}>What We Stand For</span>
@@ -191,7 +190,7 @@ export default function AboutPageContent() {
             </p>
           </AnimatedSection>
 
-          <ContainerScroll className="h-[150vh] min-h-[600px]">
+          <ContainerScroll className="h-[120vh] min-h-[500px]">
             <div className="sticky left-0 top-20 flex h-[calc(100vh-5rem)] w-full items-center justify-center py-12">
               <CardsContainer className="h-[360px] w-[min(88vw,420px)]">
                 {values.map(({ icon: Icon, name, desc }, i) => (

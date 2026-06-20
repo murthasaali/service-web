@@ -3,6 +3,9 @@
 import AnimatedSection from "@/components/common/AnimatedSection";
 import ThreeDMarquee from "@/components/ui/3d-marquee";
 import { StackedCards } from "@/components/ui/glass-cards";
+import Link from "next/link";
+import { StarButton } from "@/components/ui/star-button";
+import { ArrowRight } from "lucide-react";
 
 export default function ServicesGrid() {
   return (
@@ -42,6 +45,24 @@ export default function ServicesGrid() {
             >
               We plan and build websites, apps, automations, and digital systems that make everyday business work easier.
             </p>
+            <div className="mt-8">
+              <Link
+                href="/services"
+                className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded-3xl inline-flex"
+              >
+                <StarButton
+                  lightColor="#00f0ff"
+                  backgroundColor="#0f172a"
+                  borderWidth={2.2}
+                  glow={true}
+                  sparkGradient="conic-gradient(from 0deg, transparent 0deg, transparent 40deg, rgba(0, 240, 255, 0.7) 100deg, var(--light-color) 180deg, #ffffff 200deg, #00f0ff 220deg, rgba(0, 240, 255, 0.7) 280deg, transparent 330deg)"
+                  className="font-sans font-semibold text-[11px] uppercase tracking-[0.2em]"
+                >
+                  View Services
+                  <ArrowRight className="h-4 w-4 group-hover/star-button:translate-x-1 transition-transform duration-300" />
+                </StarButton>
+              </Link>
+            </div>
           </AnimatedSection>
         </div>
 

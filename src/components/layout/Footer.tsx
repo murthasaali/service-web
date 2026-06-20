@@ -93,10 +93,10 @@ export default function Footer() {
               Start Today
             </span>
             <h2 className="font-display text-[26px] sm:text-[36px] md:text-[42px] leading-[1.05] tracking-tight text-white font-medium">
-              Ready to Build Something <span className="text-[#22D3EE] font-semibold">Remarkable?</span>
+              Ready to Achieve <span className="text-[#22D3EE] font-semibold">More?</span>
             </h2>
             <p className="font-sans text-[14px] sm:text-[16px] leading-[1.6] text-white/50 max-w-2xl">
-              We partner with ambitious companies to turn ideas into impactful digital products — on time and built to last.
+              We partner with ambitious companies to solve complex challenges, improve operations and deliver real results using tailored digital solutions.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-4 shrink-0">
@@ -136,10 +136,10 @@ export default function Footer() {
                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 rounded"
               style={{ color: "#CFFAFE" }}
             >
-              aibiz<span style={{ color: "#22D3EE" }}>mod</span>
+              ai<span style={{ color: "#22D3EE" }}>biz</span>mod
             </Link>
             <p className="font-sans text-[13px] leading-[1.7] text-white/60 max-w-[280px]">
-              aibizmod is a digital growth and intelligent technology firm — helping businesses navigate the AI-driven future, build stronger digital presence, and scale with confidence.
+              aibizmod is a digital growth & intelligent technology firm helping businesses navigate the AI-driven future, build a stronger digital presence and scale with confidence.
             </p>
             <div className="pt-2 space-y-2.5">
               <p className="font-sans text-[11px] text-white/40 uppercase tracking-widest mb-1">Inquiries</p>
@@ -286,10 +286,6 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 border-t border-white/10 py-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] text-white/40">
           <p>&copy; {new Date().getFullYear()} aibizmod Ltd. All rights reserved.</p>
-          <p>Registered in England & Wales: 12948572. VAT: 948572839</p>
-        </div>
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[10px] text-white/25 border-t border-white/5 pt-3 mt-3">
-          <p>Designed & Developed with care. Built with Next.js & Tailwind CSS.</p>
         </div>
       </div>
     </footer>

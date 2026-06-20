@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 import {
   ChevronRight, ChevronDown, CheckCircle, ArrowRight,
   Code2, Database, Server, Network, Cloud, TestTube,
@@ -118,11 +119,44 @@ function FAQItem({ faq }: { faq: FAQ }) {
   );
 }
 
+const getProcessDeliverables = (index: number) => {
+  switch (index) {
+    case 0:
+      return [
+        "Requirement scoping & architecture sign-off",
+        "Milestone definition & project roadmap",
+        "Technology stack alignment"
+      ];
+    case 1:
+      return [
+        "Prototype construction & component buildout",
+        "API hooks & core database mapping",
+        "Staging pipeline configuration"
+      ];
+    case 2:
+      return [
+        "Comprehensive QA & system stress-testing",
+        "Staging deployment & user feedback cycle",
+        "Performance audit & SEO verification"
+      ];
+    case 3:
+      return [
+        "Production DNS sync & SSL setup",
+        "Live system telemetry & logs activation",
+        "Post-launch audit & team handoff"
+      ];
+    default:
+      return [];
+  }
+};
+
 // ─── Layout ───────────────────────────────────────────────────────────────────
 
 export default function ServicePageLayout({ data }: { data: ServicePageData }) {
   const prefersReduced = useReducedMotion();
   const heroImage = serviceImages[data.slug] ?? serviceImages["web-development"];
+  const [activeStep, setActiveStep] = useState(0);
+  const [mobileOpenStep, setMobileOpenStep] = useState(0);
 
   return (
     <>
@@ -362,98 +396,193 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
               </h2>
             </AnimatedSection>
 
-            {/* Desktop: horizontal timeline */}
-            <div className="hidden md:block">
-              <div className="relative">
-                {/* Connector */}
-                <div
-                  className="absolute top-8 left-[12.5%] right-[12.5%] h-px"
-                  aria-hidden="true"
-                  style={{
-                    background:
-                      "linear-gradient(90deg, rgba(6,182,212,0.5) 0%, rgba(14,165,233,0.2) 100%)",
-                  }}
-                />
-                <div className="relative grid grid-cols-4 gap-6">
-                  {data.process.map((step, i) => {
-                    const Icon = iconMap[step.icon];
-                    return (
-                      <AnimatedSection key={step.title} delay={i * 0.12}>
-                        <div className="flex flex-col items-center text-center">
-                          <div
-                            className="relative w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5"
-                            style={{
-                              background: "rgba(236, 254, 255, 0.86)",
-                              border: "1px solid rgba(103, 232, 249, 0.45)",
-                              boxShadow: "0 16px 40px rgba(8,145,178,0.14)",
-                            }}
+            {/* Desktop: Interactive Stepper */}
+            <div className="hidden md:grid md:grid-cols-[0.85fr_1.15fr] gap-12 items-start relative min-h-[460px]">
+              {/* Left Column: Vertical Step Navigation */}
+              <div className="space-y-4">
+                {data.process.map((step, i) => {
+                  const isActive = activeStep === i;
+                  return (
+                    <div key={step.title} className="relative">
+                      <button
+                        type="button"
+                        onClick={() => setActiveStep(i)}
+                        className={cn(
+                          "relative z-10 flex items-center gap-6 p-6 rounded-3xl text-left w-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500",
+                          isActive ? "shadow-[0_10px_30px_rgba(8,145,178,0.04)]" : "hover:bg-slate-50/40"
+                        )}
+                      >
+                        {/* Background slider pill using framer-motion */}
+                        {isActive && (
+                          <motion.div
+                            layoutId="activeProcessStep"
+                            className="absolute inset-0 bg-cyan-50/50 border border-cyan-100/50 rounded-3xl -z-10"
+                            transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                          />
+                        )}
+
+                        <span
+                          className={cn(
+                            "font-display font-light text-4xl tracking-tight transition-all duration-300",
+                            isActive ? "text-cyan-600 scale-105 font-medium" : "text-slate-300"
+                          )}
+                        >
+                          {`0${i + 1}`}
+                        </span>
+
+                        <div className="flex-1">
+                          <h3
+                            className={cn(
+                              "font-display font-semibold text-base transition-colors duration-300",
+                              isActive ? "text-[#0F172A]" : "text-slate-500"
+                            )}
                           >
-                            <Icon size={22} className="text-cyan-700" aria-hidden="true" />
-                            <span
-                              className="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full text-white text-[10px] font-bold flex items-center justify-center"
-                              style={{ background: "linear-gradient(120deg, #06B6D4, #3B82F6)" }}
-                              aria-hidden="true"
-                            >
-                              {i + 1}
-                            </span>
-                          </div>
-                          <h3 className="font-display font-semibold text-[#0F172A] text-sm mb-2">
                             {step.title}
                           </h3>
-                          <p className="text-xs leading-relaxed text-slate-600">
+                          <p className="text-xs text-slate-400 mt-1 line-clamp-1">
                             {step.desc}
                           </p>
                         </div>
-                      </AnimatedSection>
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Right Column: Active Card Details */}
+              <div className="relative h-full min-h-[380px]">
+                <AnimatePresence mode="wait">
+                  {(() => {
+                    const step = data.process[activeStep];
+                    const ActiveIcon = iconMap[step.icon];
+                    return (
+                      <motion.div
+                        key={activeStep}
+                        initial={prefersReduced ? {} : { opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={prefersReduced ? {} : { opacity: 0, y: -15 }}
+                        transition={{ duration: 0.22, ease: "easeInOut" }}
+                        className="relative bg-white/70 backdrop-blur-md border border-cyan-100/80 rounded-[32px] p-8 md:p-10 shadow-[0_22px_70px_rgba(8,145,178,0.06)]"
+                      >
+                        {/* Decorative background glow */}
+                        <div className="pointer-events-none absolute -inset-px rounded-[32px] bg-gradient-to-r from-cyan-200/10 to-blue-200/10 -z-10 opacity-60 blur-xl" />
+
+                        <div className="flex flex-col lg:flex-row gap-8">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-4 mb-6">
+                              <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-cyan-50 border border-cyan-200/60 text-cyan-600 shadow-[0_6px_16px_rgba(6,182,212,0.06)] transition-transform duration-500 hover:rotate-[360deg]">
+                                <ActiveIcon size={20} aria-hidden="true" />
+                              </div>
+                              <span className="px-3 py-1 text-[10px] tracking-[0.2em] font-semibold uppercase text-cyan-700 bg-cyan-50/50 border border-cyan-100 rounded-full">
+                                PHASE 0{activeStep + 1}
+                              </span>
+                            </div>
+
+                            <h3 className="font-display font-semibold text-[#0F172A] text-2xl mb-4 leading-tight">
+                              {step.title}
+                            </h3>
+                            <p className="text-sm leading-relaxed text-slate-600">
+                              {step.desc}
+                            </p>
+                          </div>
+
+                          <div className="lg:w-64 border-t lg:border-t-0 lg:border-l border-cyan-100/50 pt-6 lg:pt-0 lg:pl-8 flex flex-col justify-center">
+                            <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400 mb-4 block">
+                              Deliverables & Focus
+                            </span>
+                            <ul className="space-y-3">
+                              {getProcessDeliverables(activeStep).map((item, idx) => (
+                                <li key={idx} className="flex items-start gap-2.5">
+                                  <CheckCircle className="w-4 h-4 text-cyan-500 mt-0.5 shrink-0" />
+                                  <span className="text-xs text-slate-600 font-medium leading-normal">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </motion.div>
                     );
-                  })}
-                </div>
+                  })()}
+                </AnimatePresence>
               </div>
             </div>
 
-            {/* Mobile: vertical timeline */}
-            <div className="md:hidden">
+            {/* Mobile: Interactive Accordion */}
+            <div className="md:hidden space-y-4">
               {data.process.map((step, i) => {
                 const Icon = iconMap[step.icon];
+                const isOpen = mobileOpenStep === i;
                 return (
-                  <AnimatedSection key={step.title} delay={i * 0.1}>
-                    <div className="flex gap-4">
-                      <div className="flex flex-col items-center">
-                        <div
-                          className="relative w-12 h-12 rounded-full flex items-center justify-center shrink-0"
-                          style={{
-                            background: "rgba(236, 254, 255, 0.86)",
-                            border: "1px solid rgba(103, 232, 249, 0.45)",
-                            boxShadow: "0 16px 40px rgba(8,145,178,0.14)",
-                          }}
+                  <div
+                    key={step.title}
+                    className={cn(
+                      "border rounded-2xl transition-all duration-300 overflow-hidden",
+                      isOpen
+                        ? "border-cyan-200 bg-cyan-50/10 shadow-[0_12px_24px_rgba(8,145,178,0.04)]"
+                        : "border-slate-100 bg-white"
+                    )}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setMobileOpenStep(isOpen ? -1 : i)}
+                      aria-expanded={isOpen}
+                      className="flex items-center justify-between w-full p-5 text-left focus:outline-none"
+                    >
+                      <div className="flex items-center gap-4">
+                        <span
+                          className={cn(
+                            "font-display font-light text-2xl tracking-tight transition-colors duration-300",
+                            isOpen ? "text-cyan-500 font-semibold" : "text-slate-300"
+                          )}
                         >
-                          <Icon size={18} className="text-cyan-700" aria-hidden="true" />
-                          <span
-                            className="absolute -top-1 -right-1 w-5 h-5 rounded-full text-white text-[9px] font-bold flex items-center justify-center"
-                            style={{ background: "linear-gradient(120deg, #06B6D4, #3B82F6)" }}
-                            aria-hidden="true"
-                          >
-                            {i + 1}
-                          </span>
-                        </div>
-                        {i < data.process.length - 1 && (
-                          <div
-                            className="w-px flex-1 my-2"
-                            aria-hidden="true"
-                            style={{ background: "rgba(6,182,212,0.25)" }}
-                          />
-                        )}
-                      </div>
-                      <div className={`${i < data.process.length - 1 ? "pb-8" : ""}`}>
-                        <h3 className="font-display font-semibold text-[#0F172A] text-sm pt-3 mb-1.5">
+                          {`0${i + 1}`}
+                        </span>
+                        <h3
+                          className={cn(
+                            "font-display font-semibold text-sm transition-colors duration-300",
+                            isOpen ? "text-[#0F172A]" : "text-slate-600"
+                          )}
+                        >
                           {step.title}
                         </h3>
-                        <p className="text-xs leading-relaxed text-slate-600">
+                      </div>
+                      <ChevronDown
+                        size={18}
+                        className={cn(
+                          "text-slate-400 transition-transform duration-300",
+                          isOpen && "rotate-180 text-cyan-600"
+                        )}
+                      />
+                    </button>
+
+                    <motion.div
+                      initial={false}
+                      animate={{ height: isOpen ? "auto" : 0 }}
+                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-5 pb-5 pt-1 border-t border-slate-100/50">
+                        <p className="text-xs leading-relaxed text-slate-600 mb-4">
                           {step.desc}
                         </p>
+                        <div className="bg-white/50 border border-cyan-100/50 rounded-xl p-4">
+                          <span className="text-[9px] font-bold uppercase tracking-[0.16em] text-slate-400 mb-3 block">
+                            Deliverables
+                          </span>
+                          <ul className="space-y-2">
+                            {getProcessDeliverables(i).map((item, idx) => (
+                              <li key={idx} className="flex items-start gap-2">
+                                <CheckCircle className="w-3.5 h-3.5 text-cyan-500 mt-0.5 shrink-0" />
+                                <span className="text-[11px] text-slate-600 leading-normal">
+                                  {item}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                  </AnimatedSection>
+                    </motion.div>
+                  </div>
                 );
               })}
             </div>

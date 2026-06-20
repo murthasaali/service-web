@@ -5,6 +5,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FAQAccordion from "./FAQAccordion";
 import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
+import AnimatedText from "@/components/ui/animated-text";
+import { TextReveal } from "@/components/ui/cascade-text";
 
 const faqs = [
   {
@@ -13,7 +15,7 @@ const faqs = [
       "We help businesses with web platforms, mobile apps, cloud infrastructure, automation, digital marketing, customer experience systems, and IT consulting.",
   },
   {
-    question: "Can you build a complete product from idea to launch?",
+    question: "Can you take an idea and turn it into a complete product?",
     answer:
       "Yes. We can support discovery, planning, UI direction, development, deployment, testing, and post-launch improvements as one connected delivery process.",
   },
@@ -115,39 +117,49 @@ export default function FAQPage() {
             />
 
             <div className="relative mx-auto max-w-5xl text-center">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-200 bg-cyan-50/60 px-4 py-1.5 text-xs font-semibold text-cyan-800 backdrop-blur-sm">
-                <HelpCircle size={13} aria-hidden="true" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-white/85 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700 shadow-[0_12px_35px_rgba(59,130,246,0.10)]">
+                <HelpCircle size={14} aria-hidden="true" />
                 Frequently Asked Questions
               </span>
               <h1
-                className="mt-6 font-display text-4xl font-bold tracking-tight text-[#0F172A] md:text-5xl"
+                className="mt-7 font-display font-thin text-[#0F172A] text-balance"
                 style={{ fontSize: "clamp(38px, 6vw, 72px)", lineHeight: 1.02 }}
               >
                 Questions about building with{" "}
-                <span className="gradient-text font-normal">aibizmod</span>
+                <span className="inline-flex items-center font-normal tracking-tight">
+                  <AnimatedText
+                    text="ai"
+                    className="font-normal text-[#0F172A] inline-block text-[inherit] leading-[inherit]"
+                    staggerDelay={0.08}
+                    duration={0.6}
+                    delay={0}
+                  />
+                  <TextReveal
+                    text="biz"
+                    as="span"
+                    fontSize="inherit"
+                    color="#0F172A"
+                    hoverColor="#0891B2"
+                    className="font-normal normal-case tracking-tight text-[#0F172A]"
+                    style={{ padding: 0 }}
+                  />
+                  <AnimatedText
+                    text="mod"
+                    className="font-normal text-[#0F172A] inline-block text-[inherit] leading-[inherit]"
+                    staggerDelay={0.08}
+                    duration={0.6}
+                    delay={0.4}
+                  />
+                </span>
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
-                Clear answers about our process, services, support, and how we
-                help businesses turn ideas into dependable digital systems.
+                Simple answers to questions about our process, services, support and how we help businesses transform ideas into reliable digital systems.
               </p>
             </div>
 
             <FAQAccordion faqs={faqs} />
 
-            <div className="mx-auto mt-14 flex max-w-5xl flex-col items-center justify-between gap-5 rounded-3xl border border-cyan-100 bg-[#ECFEFF]/70 p-6 text-center shadow-[0_18px_55px_rgba(59,130,246,0.10)] backdrop-blur-md md:flex-row md:text-left">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-700">
-                  Still deciding?
-                </p>
-                <h2 className="mt-2 font-display text-2xl font-semibold text-[#0F172A]">
-                  Tell us what you want to build.
-                </h2>
-              </div>
-              <Link href="/contact" className="btn-primary rounded-full px-6 py-3">
-                Start a Project
-                <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-            </div>
+
           </section>
         </main>
       </StickyFooterLayout>

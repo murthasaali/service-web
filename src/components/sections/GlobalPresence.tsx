@@ -37,7 +37,7 @@ export default function GlobalPresence() {
               Support That Travels Across Time Zones.
             </h2>
             <p className="mt-5 text-muted-foreground max-w-xl" style={{ fontSize: 17, lineHeight: 1.8 }}>
-              <span className="font-semibold text-ink">aibiz</span><span className="font-semibold text-cyan-400">mod</span> is connected with clients and partners around the world. See how we bring strategy, engineering, and support together across regions.
+              <span className="font-semibold text-ink">ai</span><span className="font-semibold text-cyan-400">biz</span><span className="font-semibold text-ink">mod</span> is connected with clients and partners around the world. See how we bring strategy, engineering, and support together across regions.
             </p>
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-border bg-[#FBF8FF] p-6 text-center">
