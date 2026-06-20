@@ -7,7 +7,7 @@ import { CardStack } from "@/components/ui/card-stack";
 const testimonials = [
   {
     quote:
-      "aibizmod delivered our entire platform in under 3 months. The quality exceeded our expectations and the team was remarkably responsive throughout.",
+      "aibizmod built our platform in under three months. The quality was better than we expected, and the team stayed responsive throughout.",
     name: "Sarah M.",
     role: "CTO",
     company: "FinVault",
@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     quote:
-      "Their automation solution saved us 200+ hours per month. The ROI was visible within the first quarter — one of the best technology investments we've made.",
+      "Their automation work saved us over 200 hours a month. We saw the benefit in the first quarter, and it became one of our best technology investments.",
     name: "James K.",
     role: "Head of Operations",
     company: "LogiFlow",
@@ -23,7 +23,7 @@ const testimonials = [
   },
   {
     quote:
-      "We've worked with many agencies, but aibizmod's approach to tech consulting is unmatched. They truly understand business outcomes, not just technology.",
+      "We have worked with other agencies, but aibizmod asked better business questions. They understood what we needed, not just the technology.",
     name: "Priya R.",
     role: "CEO",
     company: "Nexora",
@@ -46,22 +46,22 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto">
         <AnimatedSection className="text-center mb-10">
           <span className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
-            Client Stories
+            Client Notes
           </span>
           <h2
-            className="mt-5 font-display font-bold text-primary text-balance"
+            className="mt-5 font-display font-thin text-primary text-balance"
             style={{
-              fontSize: "clamp(28px, 4vw, 38px)",
+              fontSize: "clamp(30px, 4vw, 44px)",
               lineHeight: 1.1,
             }}
           >
-            Trusted by Teams That Ship
+            What Clients Remember After Launch
           </h2>
           <p
             className="mt-4 text-muted-foreground max-w-xl mx-auto"
             style={{ fontSize: 17, lineHeight: 1.65 }}
           >
-            But don&apos;t take our word for it — listen to the businesses we&apos;ve helped grow.
+            Do not just take our word for it. Listen to what our clients say about working with us.
           </p>
         </AnimatedSection>
 

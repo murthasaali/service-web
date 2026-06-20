@@ -58,7 +58,11 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
             {subtitle}
           </span>
           <h2
-            className="mb-4 text-3xl font-bold tracking-tight text-primary md:text-4xl"
+            className="mb-4 font-display font-thin text-primary text-balance"
+            style={{
+              fontSize: "clamp(30px, 4vw, 44px)",
+              lineHeight: 1.1,
+            }}
             dangerouslySetInnerHTML={{ __html: title }}
           />
           <p className="mb-6 text-base text-muted-foreground">

@@ -142,10 +142,10 @@ export default function HeroSection() {
           className="max-w-4xl font-display font-thin text-[#0F172A] text-balance"
           style={{ fontSize: "clamp(34px, 5vw, 58px)", lineHeight: 1.04 }}
         >
-          Bridging Innovation And
+          Technology That Keeps
           <br />
           <TextReveal
-            text="Connectivity"
+            text="Business Connected"
             as="span"
             fontSize="inherit"
             color="#0F172A"
@@ -157,7 +157,7 @@ export default function HeroSection() {
 
         <div className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/85 px-6 py-4 shadow-[0_18px_55px_rgba(59,130,246,0.12)]">
           <p className="text-sm leading-6 text-stone-600 md:text-base md:leading-7">
-            Providing innovative technology solutions that bring teams together, streamline processes and create integrated digital experiences for businesses.
+            We build technology that brings teams together, makes daily work easier, and gives customers a smoother digital experience.
           </p>
         </div>
 

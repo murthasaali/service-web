@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { Phone, MapPin, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 import { StarButton } from "@/components/ui/star-button";
 import {
   FaFacebookF,
@@ -136,7 +136,7 @@ export default function Footer() {
                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 rounded"
               style={{ color: "#CFFAFE" }}
             >
-              aibiz<span style={{ color: "#22D3EE" }}>mode</span>
+              aibiz<span style={{ color: "#22D3EE" }}>mod</span>
             </Link>
             <p className="font-sans text-[13px] leading-[1.7] text-white/60 max-w-[280px]">
               aibizmod is a digital growth and intelligent technology firm — helping businesses navigate the AI-driven future, build stronger digital presence, and scale with confidence.

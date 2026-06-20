@@ -30,41 +30,41 @@ type WhatWeDoCard = {
 const whatWeDoCards: WhatWeDoCard[] = [
   {
     id: 1,
-    title: "Web Development",
+    title: "Websites & Web Apps",
     description:
-      "Build fast, scalable, responsive websites and web applications that help businesses grow online.",
+      "We build fast, responsive websites and web apps that are easy to use and ready for real customers.",
     href: "/services/web-development",
     icon: Code2,
   },
   {
     id: 2,
-    title: "Custom Software Development",
+    title: "Custom Business Software",
     description:
-      "Custom software solutions built to streamline operations, automate workflows, and support business growth.",
+      "We create software around the way your team works, from internal tools to customer portals and dashboards.",
     href: "/services/software-development",
     icon: Cpu,
   },
   {
     id: 3,
-    title: "Mobile App Development",
+    title: "Mobile Apps",
     description:
-      "Native and cross-platform mobile experiences that help customers and teams get things done from anywhere.",
+      "We design and build mobile apps that help customers, staff, and partners get things done from anywhere.",
     href: "/services/mobile-app-development",
     icon: Smartphone,
   },
   {
     id: 4,
-    title: "Digital Growth & SEO",
+    title: "Search & Digital Growth",
     description:
-      "Search, content, analytics, and conversion systems that make your digital presence easier to discover and act on.",
+      "We improve search, content, tracking, and conversion paths so the right people can find you and take action.",
     href: "/services/digital-marketing",
     icon: TrendingUp,
   },
   {
     id: 5,
-    title: "Cloud Infrastructure",
+    title: "Cloud & Hosting",
     description:
-      "Reliable hosting, deployment pipelines, monitoring, and cloud architecture built for secure everyday operations.",
+      "We set up hosting, deployments, monitoring, and cloud systems that stay secure and dependable day to day.",
     href: "/services/hosting-infrastructure",
     icon: Server,
   },
@@ -72,23 +72,23 @@ const whatWeDoCards: WhatWeDoCard[] = [
     id: 6,
     title: "Workflow Automation",
     description:
-      "Smart automations that connect tools, reduce manual effort, and keep important business processes moving.",
+      "We connect your tools and automate repeated work, so important tasks move without constant follow-up.",
     href: "/services/automation",
     icon: Zap,
   },
   {
     id: 7,
-    title: "Customer Experience",
+    title: "Customer Systems",
     description:
-      "Connected CRM, support, and communication systems that turn every customer touchpoint into a better experience.",
+      "We improve CRM, support, and communication systems so every customer interaction is easier to manage.",
     href: "/services/customer-exp-management",
     icon: Users,
   },
   {
     id: 8,
-    title: "Technology Consulting",
+    title: "Tech Planning",
     description:
-      "Practical technical guidance for architecture, vendor choices, delivery planning, and ongoing technology decisions.",
+      "We help you make clearer decisions about architecture, vendors, delivery plans, and long-term technology.",
     href: "/services/it-consulting-it-services",
     icon: Lightbulb,
   },
@@ -166,7 +166,7 @@ function Card({ card, index, totalCards }: {
           <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#D2F7FF] bg-[#D2F7FF]/45 text-[#487F89] shadow-[0_12px_36px_rgba(72,127,137,0.16)]">
             <Icon size={24} aria-hidden="true" />
           </div>
-          <h3 className="font-display text-2xl font-semibold leading-tight text-[#0F172A] md:text-3xl">
+          <h3 className="font-display text-2xl font-thin leading-tight text-[#0F172A] md:text-3xl">
             {card.title}
           </h3>
           <p className="mt-4 text-base leading-7 text-stone-600 md:text-lg">

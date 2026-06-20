@@ -177,7 +177,7 @@ export default function Navbar() {
             )}
 
             <span>aibiz</span>
-            <span className="text-cyan-400">mode</span>
+            <span className="text-cyan-400">mod</span>
 
             {/* Active dot under logo when scrolled home */}
             {pathname === "/" && scrolled && (

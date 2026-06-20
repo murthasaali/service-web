@@ -25,28 +25,28 @@ export default function GlobalPresence() {
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
           <AnimatedSection>
             <span className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
-              Global Presence
+              Where We Work
             </span>
             <h2
-              className="mt-5 font-display font-bold text-primary text-balance"
+              className="mt-5 font-display font-thin text-primary text-balance"
               style={{
-                fontSize: "clamp(30px, 4vw, 42px)",
-                lineHeight: 1.08,
+                fontSize: "clamp(30px, 4vw, 44px)",
+                lineHeight: 1.1,
               }}
             >
-              Interactive footprint across every major market.
+              Support That Travels Across Time Zones.
             </h2>
             <p className="mt-5 text-muted-foreground max-w-xl" style={{ fontSize: 17, lineHeight: 1.8 }}>
-              <span className="font-semibold text-ink">aibiz</span><span className="font-semibold text-cyan-400">mod</span> is connected with clients and partners around the globe. Discover how we connect strategy, engineering and support around the globe with our interactive globe.
+              <span className="font-semibold text-ink">aibiz</span><span className="font-semibold text-cyan-400">mod</span> is connected with clients and partners around the world. See how we bring strategy, engineering, and support together across regions.
             </p>
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-border bg-[#FBF8FF] p-6 text-center">
                 <p className="text-3xl font-display font-bold text-ink">5+</p>
-                <p className="mt-2 text-sm text-muted-foreground">Core markets supported</p>
+                <p className="mt-2 text-sm text-muted-foreground">Main markets supported</p>
               </div>
               <div className="rounded-2xl border border-border bg-[#FBF8FF] p-6 text-center">
                 <p className="text-3xl font-display font-bold text-ink">24/7</p>
-                <p className="mt-2 text-sm text-muted-foreground">Global coverage and support</p>
+                <p className="mt-2 text-sm text-muted-foreground">Support across time zones</p>
               </div>
             </div>
           </AnimatedSection>

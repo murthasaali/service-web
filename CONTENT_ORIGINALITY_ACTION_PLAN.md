@@ -2,7 +2,7 @@
 
 ## Goal
 
-Reduce AI-detection, plagiarism, and duplicate-content risk across the aibizmode website without changing the visual design first. This plan is based on:
+Reduce AI-detection, plagiarism, and duplicate-content risk across the aibizmod website without changing the visual design first. This plan is based on:
 
 - `Duplichecker-Plagiarism-Report.pdf` in the project root.
 - The Quillbot/AI-detector summary shared by the client, which flagged large homepage/service copy blocks as likely AI-generated.
@@ -74,7 +74,7 @@ Use a more human, specific company voice:
 - Replace generic claims with actual working details.
 - Avoid inflated words unless backed by proof: "world-class", "best", "unmatched", "enterprise-grade", "revolutionary".
 - Avoid repeated stock phrases: "streamline workflows", "drive growth", "end-to-end", "scalable solutions", "seamless digital experiences".
-- Use aibizmode's real process, real locations, real service constraints, and real examples.
+- Use aibizmod's real process, real locations, real service constraints, and real examples.
 - If a claim cannot be verified, soften it or remove it.
 
 ### Evidence Rules
@@ -224,7 +224,7 @@ File: `src/components/sections/FAQSection.tsx`
 
 Current risk: Critical.
 
-- The sentence "Ship beautiful frontends without the overhead..." appears unrelated to aibizmode and likely comes from a component demo.
+- The sentence "Ship beautiful frontends without the overhead..." appears unrelated to aibizmod and likely comes from a component demo.
 
 Action:
 
@@ -261,7 +261,7 @@ Acceptance criteria:
 Suggested structure per service:
 
 - One sentence: problem the service solves.
-- One sentence: what aibizmode builds or changes.
+- One sentence: what aibizmod builds or changes.
 - One phrase: likely output.
 
 ## Priority 3: Service Detail Pages Rewrite
@@ -559,7 +559,7 @@ Before publishing:
 Use this simple rewrite pattern:
 
 1. Name the real client situation.
-2. Name the work aibizmode performs.
+2. Name the work aibizmod performs.
 3. Name the output the client receives.
 4. Avoid grand claims unless backed by proof.
 

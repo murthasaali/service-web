@@ -24,23 +24,23 @@ export default function ServicesGrid() {
         <div className="lg:sticky lg:top-28">
           <AnimatedSection>
             <span className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
-              What We Do
+              How We Help
             </span>
             <ThreeDMarquee className="mt-6 max-w-full" />
             <h2
-              className="mt-5 font-display font-bold text-primary text-balance"
+              className="mt-5 font-display font-thin text-primary text-balance"
               style={{
-                fontSize: "clamp(34px, 5vw, 56px)",
+                fontSize: "clamp(30px, 4vw, 44px)",
                 lineHeight: 1.1,
               }}
             >
-              What Do We Bring to You?
+              Practical Tech Support for Everyday Business Work
             </h2>
             <p
               className="mt-5 text-stone-600"
               style={{ fontSize: 18, lineHeight: 1.7 }}
             >
-              Providing innovative technology solutions that bring teams together, streamline processes and create integrated digital experiences for businesses. 
+              We plan and build websites, apps, automations, and digital systems that make everyday business work easier.
             </p>
           </AnimatedSection>
         </div>

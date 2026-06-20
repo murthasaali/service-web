@@ -7,27 +7,27 @@ import {
 import AnimatedSection from "@/components/common/AnimatedSection";
 
 const stats: { value: string; label: string; icon: LucideIcon }[] = [
-  { value: "50+",  label: "Projects Delivered",  icon: CheckCircle },
-  { value: "10+",  label: "Industries Served",   icon: Globe       },
-  { value: "24/7", label: "Support Desk",        icon: Clock       },
-  { value: "ISO",  label: "Certified Process",   icon: Award       },
+  { value: "50+",  label: "Projects Completed",  icon: CheckCircle },
+  { value: "10+",  label: "Industries Worked With", icon: Globe       },
+  { value: "24/7", label: "Support When Needed", icon: Clock       },
+  { value: "ISO",  label: "Process-Led Delivery", icon: Award       },
 ];
 
 const values: { icon: LucideIcon; title: string; desc: string }[] = [
   {
     icon: Users,
-    title: "Expert Multidisciplinary Team",
-    desc: "Our engineers, designers and strategists operate as a single squad, bringing deep domain expertise to every layer of the product.",
+    title: "One Team, Not Hand-Offs",
+    desc: "Our engineers, designers, and strategists work together from the start, so ideas, design, and development stay connected.",
   },
   {
     icon: Layers,
-    title: "Battle-Tested Process",
-    desc: "We work with proven agile models that have clear milestones, transparent communication, and consistent delivery — no surprises.",
+    title: "Clear Steps From Start to Finish",
+    desc: "We use clear milestones, regular updates, and practical agile routines so you know what is happening and what comes next.",
   },
   {
     icon: Rocket,
-    title: "Future-Ready Technology",
-    desc: "We build on modern, scalable stacks that keep you ahead of the curve — not technical debt that holds you back.",
+    title: "Built to Be Maintained",
+    desc: "We choose tools that can grow with your business instead of quick fixes that become expensive to repair later.",
   },
 ];
 
@@ -45,20 +45,20 @@ export default function WhyChooseUs() {
           <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-8">
             <AnimatedSection>
               <span className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
-                Why Choose Us
+                Why Work With Us
               </span>
               <h2
-                className="mt-6 font-display font-extrabold text-primary leading-[1.1] tracking-tight text-balance"
+                className="mt-6 font-display font-thin text-primary leading-[1.1] text-balance"
                 style={{
                   fontSize: "clamp(30px, 4vw, 44px)",
                 }}
               >
-                Built on Trust, Driven by Results
+                Straight Answers, Careful Work, Better Outcomes
               </h2>
               <p
                 className="mt-4 text-muted-foreground text-[16px] leading-[1.7]"
               >
-                We are not just about delivering code. We own business outcomes, get rid of technical debt, and deliver at the highest standard.
+                We are not here just to write code. We care about the result, explain the trade-offs, and build with long-term use in mind.
               </p>
             </AnimatedSection>
 

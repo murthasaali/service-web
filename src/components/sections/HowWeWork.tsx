@@ -7,33 +7,33 @@ import { ProcessSection } from '@/components/ui/how-we-do-it-process-overview';
 const processItems = [
   {
     icon: BrainCircuit,
-    title: 'Brainstorming',
-    description: 'Ideas & Concepts',
+    title: 'Discovery',
+    description: 'Goals, Problems & Ideas',
   },
   {
     icon: Target,
-    title: 'Market Strategy',
-    description: 'Overall Planning',
+    title: 'Planning',
+    description: 'Scope, Timeline & Priorities',
   },
   {
     icon: PenTool,
-    title: 'Product Design',
-    description: 'UI/UX & Prototyping',
+    title: 'Design',
+    description: 'Screens, Flows & Prototypes',
   },
   {
     icon: Code,
-    title: 'Development',
-    description: 'Full-Stack Engineering',
+    title: 'Build',
+    description: 'Frontend, Backend & Integrations',
   },
   {
     icon: ShieldCheck,
-    title: 'Testing & QA',
-    description: 'Quality Assurance',
+    title: 'Review',
+    description: 'Testing, Fixes & Polish',
   },
   {
     icon: Megaphone,
-    title: 'Release & Marketing',
-    description: 'Launch Campaign',
+    title: 'Launch',
+    description: 'Go-Live & Handover',
   },
 ];
 
@@ -41,9 +41,9 @@ export default function HowWeWork() {
   return (
     <AnimatedSection>
       <ProcessSection
-        subtitle="How We Work"
-        title="A Process <br /> You Can Count On"
-        description="Our work is based on a typical matrix of time, effort and money and we use Agile methodologies to deliver exceptional results."
+        subtitle="How Projects Move"
+        title="From First Call <br /> to Launch"
+        description="We agree on the goal first, break the work into clear stages, and keep you updated until the project is live and handed over."
         buttonText="Get a Quote"
         items={processItems}
       />

@@ -12,24 +12,24 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "What services does aibizmode provide?",
-      answer: "We specialize in technology services, including web development, custom software development, mobile app engineering, digital marketing campaigns, cloud hosting & infrastructure, workflow automation, and strategic IT consulting.",
+      question: "What services does aibizmod provide?",
+      answer: "We provide technology services including website development, custom software, mobile apps, digital marketing, cloud hosting, workflow automation, and IT consulting.",
     },
     {
-      question: "How do you approach pricing and project timelines?",
-      answer: "We operate on a transparent, milestone-driven model. Timelines vary depending on project scope — typically ranging from 4 to 12 weeks. We provide clear, fixed-price or time-and-materials quotes with structured deliverables.",
+      question: "How do you charge for projects, and how long do they take?",
+      answer: "We keep pricing transparent and explain what you will get before work starts. Most projects take between 4 and 12 weeks, depending on scope. We can quote fixed pricing or time-and-materials.",
     },
     {
-      question: "Do you offer ongoing support and maintenance?",
-      answer: "Yes! We provide flexible service level agreements (SLAs) and ongoing maintenance retainers to ensure your applications remain secure, updated, and performance-optimized post-launch.",
+      question: "Do you offer support after launch?",
+      answer: "Yes. We offer support agreements and ongoing maintenance to keep your applications secure, updated, and working well after launch.",
     },
     {
-      question: "Can you integrate AI and automation into our workflow?",
-      answer: "Absolutely. We design and deploy custom AI models, conversational agents, and automated data pipelines that plug directly into your existing systems to eliminate manual overhead.",
+      question: "Can you add AI and automation to our workflow?",
+      answer: "Yes. We can add AI tools, workflow automation, and data pipelines that fit into your existing systems and help save your team time.",
     },
     {
-      question: "How do we get started with a project?",
-      answer: "Simply head over to our contact page or email hello@aibizmod.com. We schedule an initial discovery call within 24 hours to discuss your goals, outline technical recommendations, and prepare a tailored proposal.",
+      question: "How do we start a project with aibizmod?",
+      answer: "Go to our contact page or email hello@aibizmod.com. We will schedule a call within 24 hours, discuss your goals, and suggest a practical next step.",
     },
   ];
 
@@ -39,12 +39,18 @@ export default function FAQSection() {
         <AnimatedSection className="flex flex-col md:flex-row items-start justify-center gap-16">
           {/* Left Column: Text */}
           <div className="w-full md:w-[38%] shrink-0 space-y-5 md:sticky md:top-32">
-            <p className="text-ink text-sm font-semibold uppercase tracking-[0.16em]">FAQ&apos;s</p>
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-primary leading-tight">
-              Looking for answers?
+            <p className="text-ink text-sm font-semibold uppercase tracking-[0.16em]">Questions Before We Start</p>
+            <h2
+              className="font-display font-thin text-primary text-balance"
+              style={{
+                fontSize: "clamp(30px, 4vw, 44px)",
+                lineHeight: 1.1,
+              }}
+            >
+              A Few Things Clients Usually Ask
             </h2>
             <p className="text-[15px] text-muted-foreground leading-relaxed">
-              Find answers to common questions about our technical capabilities, pricing models, project delivery, and post-launch support services.
+              Find answers to questions about what aibizmod can do, how we charge, how long projects take, and what support we offer after launch.
             </p>
           </div>
 
@@ -100,12 +106,12 @@ export default function FAQSection() {
             </div>
 
             <p className="text-muted-foreground text-[14px] pt-2">
-              Can&apos;t find what you&apos;re looking for?{" "}
+              If you cannot find what you are looking for,{" "}
               <Link
                 href="/contact"
                 className="text-primary font-medium hover:underline focus-visible:outline-none"
               >
-                Contact our support team
+                contact our support team
               </Link>
             </p>
 
