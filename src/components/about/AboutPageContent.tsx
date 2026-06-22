@@ -190,7 +190,7 @@ export default function AboutPageContent() {
             </p>
           </AnimatedSection>
 
-          <ContainerScroll className="h-[120vh] min-h-[500px]">
+          <ContainerScroll className="h-[380vh] min-h-[500px]">
             <div className="sticky left-0 top-20 flex h-[calc(100vh-5rem)] w-full items-center justify-center py-12">
               <CardsContainer className="h-[360px] w-[min(88vw,420px)]">
                 {values.map(({ icon: Icon, name, desc }, i) => (
