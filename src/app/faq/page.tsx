@@ -5,7 +5,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FAQAccordion from "./FAQAccordion";
 import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
-import AnimatedText from "@/components/ui/animated-text";
 import { TextReveal } from "@/components/ui/cascade-text";
 
 const faqs = [
@@ -127,13 +126,7 @@ export default function FAQPage() {
               >
                 Questions about building with{" "}
                 <span className="inline-flex items-center font-normal tracking-tight">
-                  <AnimatedText
-                    text="ai"
-                    className="font-normal text-[#0F172A] inline-block text-[inherit] leading-[inherit]"
-                    staggerDelay={0.08}
-                    duration={0.6}
-                    delay={0}
-                  />
+                  <span className="font-normal text-stone-600">ai</span>
                   <TextReveal
                     text="biz"
                     as="span"
@@ -142,14 +135,10 @@ export default function FAQPage() {
                     hoverColor="#0891B2"
                     className="font-normal normal-case tracking-tight text-[#0F172A]"
                     style={{ padding: 0 }}
+                    autoAnimate={true}
+                    interval={2500}
                   />
-                  <AnimatedText
-                    text="mod"
-                    className="font-normal text-[#0F172A] inline-block text-[inherit] leading-[inherit]"
-                    staggerDelay={0.08}
-                    duration={0.6}
-                    delay={0.4}
-                  />
+                  <span className="font-normal text-stone-600">mod</span>
                 </span>
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">

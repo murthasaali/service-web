@@ -6,8 +6,10 @@ import {
   type HTMLMotionProps,
   type MotionValue,
   motion,
+  easeInOut,
   useMotionTemplate,
   useScroll,
+  useSpring,
   useTransform,
 } from "framer-motion";
 
@@ -136,14 +138,17 @@ export const CardTransformed = React.forwardRef<
     const range = React.useMemo(() => [start, end], [start, end]);
     const rotateRange = [range[0] - 1.5, range[1] / 1.5];
 
-    const y = useTransform(scrollYProgress, range, ["0%", "-180%"]);
-    const rotate = useTransform(scrollYProgress, rotateRange, [
+    const rawY = useTransform(scrollYProgress, range, ["0%", "-180%"], { ease: easeInOut });
+    const rawRotate = useTransform(scrollYProgress, rotateRange, [
       incrementRotation,
       0,
-    ]);
+    ], { ease: easeInOut });
+
+    const springConfig = { damping: 60, stiffness: 30, mass: 2 };
+    const rotate = useSpring(rawRotate, springConfig);
     const transform = useMotionTemplate`translateZ(${
       index * incrementZ
-    }px) translateY(${y}) rotate(${rotate}deg)`;
+    }px) translateY(${rawY}) rotate(${rotate}deg)`;
 
     const dx = 0;
     const dy = 0;
