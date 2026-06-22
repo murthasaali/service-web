@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import TechStackCarousel, {
+  DIGITAL_MARKETING_ROW1,
+  DIGITAL_MARKETING_ROW2,
+} from "@/components/ui/tech-stack-carousel";
 
 export const metadata: Metadata = {
   title: "Digital Marketing",
@@ -92,17 +96,7 @@ const data: ServicePageData = {
     }
   ],
 
-  techStack: [
-    "Google Analytics 4",
-    "Google Search Console",
-    "Google Tag Manager",
-    "Looker Studio",
-    "Google Ads",
-    "Meta Ads Manager",
-    "SEMrush",
-    "Screaming Frog",
-    "Ahrefs"
-  ],
+  techStack: [],
 
   faqs: [
     {
@@ -125,5 +119,12 @@ const data: ServicePageData = {
 };
 
 export default function DigitalMarketingPage() {
-  return <ServicePageLayout data={data} />;
+  return (
+    <ServicePageLayout
+      data={data}
+      techStackFooter={
+        <TechStackCarousel row1={DIGITAL_MARKETING_ROW1} row2={DIGITAL_MARKETING_ROW2} />
+      }
+    />
+  );
 }

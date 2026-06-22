@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import IntegrationHero, { CX_ROW1, CX_ROW2 } from "@/components/ui/integration-hero";
 
 export const metadata: Metadata = {
   title: "Customer Experience Management",
@@ -92,18 +93,6 @@ const data: ServicePageData = {
     }
   ],
 
-  techStack: [
-    "HubSpot",
-    "Salesforce",
-    "Zoho CRM",
-    "Intercom",
-    "WhatsApp Business API",
-    "Zendesk",
-    "Typeform",
-    "PostgreSQL API",
-    "Make"
-  ],
-
   faqs: [
     {
       q: "What systems do you configure for customer experience management?",
@@ -125,5 +114,10 @@ const data: ServicePageData = {
 };
 
 export default function CustomerExpManagementPage() {
-  return <ServicePageLayout data={data} />;
+  return (
+    <ServicePageLayout
+      data={data}
+      techStackFooter={<IntegrationHero iconsRow1={CX_ROW1} iconsRow2={CX_ROW2} />}
+    />
+  );
 }

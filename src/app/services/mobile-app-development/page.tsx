@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import TechStackCarousel, {
+  MOBILE_APP_ROW1,
+  MOBILE_APP_ROW2,
+} from "@/components/ui/tech-stack-carousel";
 
 export const metadata: Metadata = {
   title: "Mobile App Development",
@@ -92,18 +96,7 @@ const data: ServicePageData = {
     }
   ],
 
-  techStack: [
-    "React Native",
-    "Flutter",
-    "Swift",
-    "Kotlin",
-    "Xcode",
-    "Android Studio",
-    "Firebase",
-    "Sentry",
-    "Fastlane",
-    "Supabase API"
-  ],
+  techStack: [],
 
   faqs: [
     {
@@ -126,5 +119,10 @@ const data: ServicePageData = {
 };
 
 export default function MobileAppDevelopmentPage() {
-  return <ServicePageLayout data={data} />;
+  return (
+    <ServicePageLayout
+      data={data}
+      techStackFooter={<TechStackCarousel row1={MOBILE_APP_ROW1} row2={MOBILE_APP_ROW2} />}
+    />
+  );
 }

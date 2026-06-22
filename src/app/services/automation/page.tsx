@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import TechStackCarousel, { AUTOMATION_ROW1, AUTOMATION_ROW2 } from "@/components/ui/tech-stack-carousel";
 
 export const metadata: Metadata = {
   title: "Automation",
@@ -92,17 +93,7 @@ const data: ServicePageData = {
     }
   ],
 
-  techStack: [
-    "n8n",
-    "Make",
-    "Zapier",
-    "Python",
-    "Node.js",
-    "Webhooks",
-    "REST APIs",
-    "PostgreSQL",
-    "Slack API"
-  ],
+  techStack: [],
 
   faqs: [
     {
@@ -125,5 +116,10 @@ const data: ServicePageData = {
 };
 
 export default function AutomationPage() {
-  return <ServicePageLayout data={data} />;
+  return (
+    <ServicePageLayout
+      data={data}
+      techStackFooter={<TechStackCarousel row1={AUTOMATION_ROW1} row2={AUTOMATION_ROW2} />}
+    />
+  );
 }

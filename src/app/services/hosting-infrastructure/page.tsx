@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import IntegrationHero, { HOSTING_ROW1, HOSTING_ROW2 } from "@/components/ui/integration-hero";
 
 export const metadata: Metadata = {
   title: "Hosting & Infrastructure",
@@ -92,18 +93,6 @@ const data: ServicePageData = {
     }
   ],
 
-  techStack: [
-    "AWS",
-    "Google Cloud",
-    "Vercel",
-    "Terraform",
-    "Docker",
-    "GitHub Actions",
-    "Nginx",
-    "PostgreSQL Backups",
-    "Sentry Monitoring"
-  ],
-
   faqs: [
     {
       q: "How do you explain the difference between AWS, Google Cloud, and basic hosting?",
@@ -125,5 +114,10 @@ const data: ServicePageData = {
 };
 
 export default function HostingInfrastructurePage() {
-  return <ServicePageLayout data={data} />;
+  return (
+    <ServicePageLayout
+      data={data}
+      techStackFooter={<IntegrationHero iconsRow1={HOSTING_ROW1} iconsRow2={HOSTING_ROW2} />}
+    />
+  );
 }

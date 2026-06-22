@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import TechStackCarousel, { WEB_DEV_ROW1, WEB_DEV_ROW2 } from "@/components/ui/tech-stack-carousel";
 
 export const metadata: Metadata = {
   title: "Web Development",
@@ -92,18 +93,7 @@ const data: ServicePageData = {
     }
   ],
 
-  techStack: [
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Node.js",
-    "PostgreSQL",
-    "Tailwind CSS",
-    "Sanity CMS",
-    "Vercel",
-    "Stripe API",
-    "Google Analytics 4"
-  ],
+  techStack: [],
 
   faqs: [
     {
@@ -126,5 +116,10 @@ const data: ServicePageData = {
 };
 
 export default function WebDevelopmentPage() {
-  return <ServicePageLayout data={data} />;
+  return (
+    <ServicePageLayout
+      data={data}
+      techStackFooter={<TechStackCarousel row1={WEB_DEV_ROW1} row2={WEB_DEV_ROW2} />}
+    />
+  );
 }

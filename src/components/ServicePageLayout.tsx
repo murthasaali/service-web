@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -79,7 +79,7 @@ export interface ServicePageData {
   overview: { paragraphs: string[]; benefits: string[]; };
   features: FeatureCard[];   // exactly 6
   process: ProcessStep[];    // exactly 4
-  techStack: string[];
+  techStack?: string[];
   faqs: FAQ[];               // 4–5
 }
 
@@ -152,7 +152,13 @@ const getProcessDeliverables = (index: number) => {
 
 // ─── Layout ───────────────────────────────────────────────────────────────────
 
-export default function ServicePageLayout({ data }: { data: ServicePageData }) {
+export default function ServicePageLayout({
+  data,
+  techStackFooter,
+}: {
+  data: ServicePageData;
+  techStackFooter?: ReactNode;
+}) {
   const prefersReduced = useReducedMotion();
   const heroImage = serviceImages[data.slug] ?? serviceImages["web-development"];
   const [activeStep, setActiveStep] = useState(0);
@@ -607,32 +613,38 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
               </h2>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.1}>
-              <div className="flex flex-wrap justify-center gap-2.5">
-                {data.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full px-4 py-2 text-sm font-medium text-[#0F172A] cursor-default shadow-[0_10px_24px_rgba(59,130,246,0.08)] transition-colors"
-                    style={{
-                      background: "rgba(255,255,255,0.72)",
-                      border: "1px solid rgba(103,232,249,0.42)",
-                    }}
-                    onMouseEnter={(e) => {
-                      const el = e.currentTarget as HTMLElement;
-                      el.style.borderColor = "rgba(6,182,212,0.55)";
-                      el.style.background = "#ECFEFF";
-                    }}
-                    onMouseLeave={(e) => {
-                      const el = e.currentTarget as HTMLElement;
-                      el.style.borderColor = "rgba(103,232,249,0.42)";
-                      el.style.background = "rgba(255,255,255,0.72)";
-                    }}
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </AnimatedSection>
+            {data.techStack && data.techStack.length > 0 ? (
+              <AnimatedSection delay={0.1}>
+                <div className="flex flex-wrap justify-center gap-2.5">
+                  {data.techStack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full px-4 py-2 text-sm font-medium text-[#0F172A] cursor-default shadow-[0_10px_24px_rgba(59,130,246,0.08)] transition-colors"
+                      style={{
+                        background: "rgba(255,255,255,0.72)",
+                        border: "1px solid rgba(103,232,249,0.42)",
+                      }}
+                      onMouseEnter={(e) => {
+                        const el = e.currentTarget as HTMLElement;
+                        el.style.borderColor = "rgba(6,182,212,0.55)";
+                        el.style.background = "#ECFEFF";
+                      }}
+                      onMouseLeave={(e) => {
+                        const el = e.currentTarget as HTMLElement;
+                        el.style.borderColor = "rgba(103,232,249,0.42)";
+                        el.style.background = "rgba(255,255,255,0.72)";
+                      }}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </AnimatedSection>
+            ) : null}
+
+            {techStackFooter ? (
+              <AnimatedSection delay={0.15}>{techStackFooter}</AnimatedSection>
+            ) : null}
           </div>
         </section>
 
