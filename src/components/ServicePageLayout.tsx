@@ -510,7 +510,6 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
             {/* Mobile: Interactive Accordion */}
             <div className="md:hidden space-y-4">
               {data.process.map((step, i) => {
-                const Icon = iconMap[step.icon];
                 const isOpen = mobileOpenStep === i;
                 return (
                   <div

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight, LayoutGrid } from "lucide-react";
 import { StarButton } from "@/components/ui/star-button";
 import {
   FaFacebookF,
@@ -261,7 +261,7 @@ export default function Footer() {
             </div>
 
             {/* Social Links */}
-            <div className="pt-6 flex gap-4 flex-wrap md:justify-start">
+            <div className="pt-6 flex gap-4 flex-wrap md:justify-start items-center">
               {socials.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -277,6 +277,15 @@ export default function Footer() {
                   </a>
                 );
               })}
+              <span className="text-white/10 select-none">|</span>
+              <Link
+                href="/social-media-platforms"
+                aria-label="View all social media platforms"
+                title="View all platforms"
+                className="text-white/30 hover:text-[#22D3EE] transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <LayoutGrid size={18} />
+              </Link>
             </div>
           </div>
         </div>

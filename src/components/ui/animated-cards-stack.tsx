@@ -150,10 +150,6 @@ export const CardTransformed = React.forwardRef<
       index * incrementZ
     }px) translateY(${rawY}) rotate(${rotate}deg)`;
 
-    const dx = 0;
-    const dy = 0;
-    const blur = 0;
-    const alpha = 0;
     const filter = "none";
 
     const cardStyle = {

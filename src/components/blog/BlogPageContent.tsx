@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Clock, ChevronRight, Send } from 'lucide-react';
+import { ArrowRight, Clock } from 'lucide-react';
 import AnimatedSection from '@/components/common/AnimatedSection';
 import { blogPosts, categories } from '@/data/blog';
 import type { BlogPost } from '@/data/blog';
@@ -84,15 +84,7 @@ function BlogCard({ post, delay }: { post: BlogPost; delay: number }) {
 
 export default function BlogPageContent() {
 	const [activeCategory, setActiveCategory] = useState<string>('All');
-	const [email, setEmail] = useState('');
-	const [subscribed, setSubscribed] = useState(false);
-
 	const visiblePosts = activeCategory === 'All' ? blogPosts : blogPosts.filter(post => post.category === activeCategory);
-
-	const handleSubscribe = (e: React.FormEvent) => {
-		e.preventDefault();
-		if (email.trim()) setSubscribed(true);
-	};
 
 	return (
 		<>

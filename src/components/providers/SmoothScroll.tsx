@@ -44,7 +44,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     document.addEventListener("click", handleAnchorClick);
 
     // Toggle 'is-scrolling' class on body to enable global scroll performance optimizations
-    let scrollTimeoutId: any = null;
+    let scrollTimeoutId: ReturnType<typeof setTimeout> | null = null;
     const handleScroll = () => {
       document.body.classList.add("is-scrolling");
 
