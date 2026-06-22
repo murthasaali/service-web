@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import TechStackCarousel, {
+  IT_CONSULTING_ROW1,
+  IT_CONSULTING_ROW2,
+} from "@/components/ui/tech-stack-carousel";
 
 export const metadata: Metadata = {
   title: "IT Consulting & IT Services",
@@ -92,16 +96,7 @@ const data: ServicePageData = {
     }
   ],
 
-  techStack: [
-    "AWS Cost Explorer",
-    "Google Cloud Billing",
-    "Jira",
-    "Confluence",
-    "Screaming Frog",
-    "Terraform Logs",
-    "Docker Configs",
-    "GitHub Actions"
-  ],
+  techStack: [],
 
   faqs: [
     {
@@ -124,5 +119,12 @@ const data: ServicePageData = {
 };
 
 export default function ITConsultingPage() {
-  return <ServicePageLayout data={data} />;
+  return (
+    <ServicePageLayout
+      data={data}
+      techStackFooter={
+        <TechStackCarousel row1={IT_CONSULTING_ROW1} row2={IT_CONSULTING_ROW2} />
+      }
+    />
+  );
 }

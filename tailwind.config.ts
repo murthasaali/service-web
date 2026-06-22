@@ -106,6 +106,8 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         marquee: "marquee var(--duration, 40s) linear infinite",
         "marquee-reverse": "marquee-reverse var(--duration, 40s) linear infinite",
+        "scroll-left": "scroll-left 30s linear infinite",
+        "scroll-right": "scroll-right 30s linear infinite",
       },
       keyframes: {
         "accordion-down": {
@@ -122,6 +124,14 @@ const config: Config = {
         },
         "marquee-reverse": {
           from: { transform: "translateX(calc(-100% - var(--gap)))" },
+          to: { transform: "translateX(0)" },
+        },
+        "scroll-left": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+        "scroll-right": {
+          from: { transform: "translateX(-50%)" },
           to: { transform: "translateX(0)" },
         },
       },

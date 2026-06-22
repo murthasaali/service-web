@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import TechStackCarousel, {
+  SOFTWARE_DEV_ROW1,
+  SOFTWARE_DEV_ROW2,
+} from "@/components/ui/tech-stack-carousel";
 
 export const metadata: Metadata = {
   title: "Custom Software Development",
@@ -92,18 +96,7 @@ const data: ServicePageData = {
     }
   ],
 
-  techStack: [
-    "Python",
-    "Node.js",
-    "TypeScript",
-    "PostgreSQL",
-    "Docker",
-    "AWS",
-    "GitHub Actions",
-    "FastAPI",
-    "Express.js",
-    "Redis"
-  ],
+  techStack: [],
 
   faqs: [
     {
@@ -126,5 +119,12 @@ const data: ServicePageData = {
 };
 
 export default function SoftwareDevelopmentPage() {
-  return <ServicePageLayout data={data} />;
+  return (
+    <ServicePageLayout
+      data={data}
+      techStackFooter={
+        <TechStackCarousel row1={SOFTWARE_DEV_ROW1} row2={SOFTWARE_DEV_ROW2} />
+      }
+    />
+  );
 }
