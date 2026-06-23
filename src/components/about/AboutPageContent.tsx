@@ -1,35 +1,35 @@
 "use client";
 
 import {
-  Target, Lightbulb, Award, Eye, Layers,
-  Users, BarChart,
+  Target, Lightbulb, Users,
 } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import ShaderBackground from "@/components/ui/shader-background";
-import {
-  CardTransformed,
-  CardsContainer,
-  ContainerScroll,
-} from "@/components/ui/animated-cards-stack";
-import {
-  BrandScroller,
-  BrandScrollerReverse,
-} from "@/components/ui/brand-scoller";
-import ExpandOnHover from "./ExpandOnHover";
+// import {
+//   CardTransformed,
+//   CardsContainer,
+//   ContainerScroll,
+// } from "@/components/ui/animated-cards-stack";
+// import {
+//   BrandScroller,
+//   BrandScrollerReverse,
+// } from "@/components/ui/brand-scoller";
+// import ExpandOnHover from "./ExpandOnHover";
 
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
-interface Value { icon: LucideIcon; name: string; desc: string; }
+interface Value { image: string; name: string; desc: string; }
 
 const values: Value[] = [
-  { icon: Award,    name: "Client-First",         desc: "Every decision is made in the client's interest — not the technology, the trend, or the easier path for us." },
-  { icon: Eye,      name: "Radical Transparency", desc: "Honest estimates, honest timelines, honest assessments — even when the truth is uncomfortable to share." },
-  { icon: Layers,   name: "Build to Last",        desc: "We build systems and relationships that compound in value over time, not quick fixes that create tomorrow's debt." },
-  { icon: Lightbulb, name: "Continuous Learning", desc: "Technology moves fast. We stay at the edge so our clients always benefit from what is genuinely best today." },
-  { icon: Users,    name: "True Partnership",     desc: "We work with you, not for you. Your domain knowledge and our technical expertise together is the winning combination." },
-  { icon: BarChart, name: "Measurable Impact",    desc: "Every engagement has clear goals and metrics. We are accountable to outcomes and results, not hours billed." },
+  { image: "/about/values/client-first.jpg",      name: "Client First",      desc: "We ask what the client actually needs before we ask what we can build. The outcome matters more than the solution we already knew." },
+  { image: "/about/values/say-it-straight.jpg",   name: "Say It Straight",   desc: "We tell you what we actually think. Honest estimates, honest timelines, and honest feedback when something is not going to plan." },
+  { image: "/about/values/build-to-last.jpg",     name: "Build to Last",     desc: "We would rather spend an extra day getting it right than a month fixing it later. Good work holds up. Rushed work does not." },
+  { image: "/about/values/stay-curious.jpg",      name: "Stay Curious",      desc: "We have changed our minds about things and we will again. Staying curious is the only way to stay useful to the people we work with." },
+  { image: "/about/values/work-together.jpg",     name: "Work Together",     desc: "We are not here to nod and execute. We push back when something does not add up and bring our own thinking to every conversation." },
+  { image: "/about/values/results-not-hours.jpg", name: "Results Not Hours", desc: "We care whether it worked, not whether it kept us busy. Every project starts with a clear picture of what success looks like." },
 ];
 
 // ─── Main export ──────────────────────────────────────────────────────────────
@@ -58,15 +58,68 @@ export default function AboutPageContent() {
                 style={{ fontSize: "clamp(38px, 6vw, 72px)", lineHeight: 1.02 }}
               >
                 We are{" "}
-                <span className="gradient-text font-normal">aibizmod</span>
+                <span className="font-normal" style={{ color: "#0891B2" }}>aibizmod</span>
               </h1>
               <p
                 className="mx-auto mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-base leading-8 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md md:text-lg"
               >
-                A team of builders, thinkers, and technologists on a mission to
-                help businesses grow through technology.
+                We&apos;re a team of builders and technologists. We help businesses
+                get more from technology, without the complexity that usually comes with it.
               </p>
             </div>
+          </AnimatedSection>
+
+        </div>
+      </section>
+
+      {/* ── Who We Are ───────────────────────────────────────────────────── */}
+      <section
+        className="relative py-24 px-6 bg-white border-t border-border overflow-hidden"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(15,23,42,0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.055) 1px, transparent 1px)",
+          backgroundSize: "72px 72px",
+        }}
+      >
+        <div className="absolute top-1/4 -right-1/4 w-[400px] h-[400px] rounded-full bg-cyan-200/10 blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-1/4 -left-1/4 w-[400px] h-[400px] rounded-full bg-blue-200/10 blur-[120px] pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+          {/* Left — label + heading + brief */}
+          <AnimatedSection direction="left" className="lg:sticky lg:top-28">
+            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "black" }}>
+              Who We Are
+            </span>
+            <h2
+              className="mt-6 font-display font-thin text-primary text-balance"
+              style={{ fontSize: "clamp(28px, 3.8vw, 42px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "#0E7490" }}
+            >
+              A small team that takes the work seriously
+            </h2>
+            <p className="mt-5 text-muted-foreground leading-[1.8]" style={{ fontSize: 16 }}>
+              We are not a large agency with layers of account managers. We are a team
+              of engineers, designers, and strategists who work directly with the
+              people we are helping.
+            </p>
+          </AnimatedSection>
+
+          {/* Right — body paragraphs */}
+          <AnimatedSection direction="right" delay={0.1} className="space-y-6 text-muted-foreground leading-[1.8] text-base">
+            <p>
+              Most of what we do is unglamorous. We plan carefully, build things that
+              hold up, and stay involved long after launch. We think that is what good
+              technology work actually looks like.
+            </p>
+            <p>
+              We are honest about what we can do and what we cannot. If something is
+              not the right fit, we will say so. If a simpler approach works better,
+              we will recommend it.
+            </p>
+            <p>
+              The businesses we work with best are the ones who want a real working
+              relationship, not just a vendor to hand off a spec to.
+            </p>
           </AnimatedSection>
 
         </div>
@@ -95,18 +148,21 @@ export default function AboutPageContent() {
               </h2>
               <div className="mt-8 space-y-6 text-muted-foreground leading-[1.8]" style={{ fontSize: 15 }}>
                 <p>
-                  aibizmod was founded in 2019 by James and Sarah, former enterprise engineers
-                  who saw a need for a firm where technical excellence and business goals align.
-                  We focus on bringing clarity to what to build, when to build it, and how to scale it.
+                  aibizmod was started in 2019 by James and Sarah, two engineers who spent years
+                  in enterprise and wanted to build something different. They wanted a firm where
+                  good technical work and real business goals actually go together. We focus on being clear about
+                  what to build, when to build it, and how to scale it without adding unnecessary complexity.
                 </p>
                 <p>
-                  As we grew, we added specialists in digital marketing, cloud infrastructure, and
-                  automation. We skip bloated retainers and avoid unnecessary complexity, focusing instead
-                  on senior-led execution for a limited number of clients at a time.
+                  As the team grew, we added people who know digital marketing, cloud infrastructure,
+                  and automation well. We don&apos;t do bloated retainers or unnecessary complexity.
+                  We work with a limited number of clients at a time, with senior people doing the
+                  actual work.
                 </p>
                 <p>
-                  Today, we partner with companies ranging from pre-seed startups to established
-                  enterprises. Our commitment remains simple: honest work, built to last, in your interest.
+                  Today we work with companies at every stage, from early startups to established
+                  businesses. The commitment has stayed the same: honest work, built to last,
+                  in your interest.
                 </p>
               </div>
             </AnimatedSection>
@@ -144,9 +200,9 @@ export default function AboutPageContent() {
                   Our Mission
                 </h3>
                 <p className="leading-relaxed" style={{ fontSize: 17, lineHeight: 1.65, color: "rgba(255,255,255,0.60)" }}>
-                  To make world-class technology accessible to businesses of
-                  every size — delivering software, strategy, and execution that
-                  creates measurable, lasting impact.
+                  To make good technology accessible to businesses of every
+                  size. Not just the ones with large budgets or in-house
+                  engineering teams.
                 </p>
               </div>
             </AnimatedSection>
@@ -164,9 +220,9 @@ export default function AboutPageContent() {
                   Our Vision
                 </h3>
                 <p className="text-muted-foreground leading-relaxed" style={{ fontSize: 17, lineHeight: 1.65 }}>
-                  To be the technology partner that businesses grow with for
-                  decades — not a vendor they outgrow, but a team that evolves
-                  alongside them.
+                  To be the kind of technology partner a business stays with.
+                  Not because they&apos;re locked in, but because the work keeps
+                  getting better.
                 </p>
               </div>
             </AnimatedSection>
@@ -174,7 +230,7 @@ export default function AboutPageContent() {
         </div>
       </section>
 
-      <section className="pt-20 pb-4 px-6 bg-canvas border-t border-border">
+      <section className="py-20 px-6 bg-canvas border-t border-border">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-14">
             <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "black", border: "none" }}>What We Stand For</span>
@@ -190,45 +246,48 @@ export default function AboutPageContent() {
             </p>
           </AnimatedSection>
 
-          <ContainerScroll className="h-[380vh] min-h-[500px]">
-            <div className="sticky left-0 top-20 flex h-[calc(100vh-5rem)] w-full items-center justify-center py-12">
-              <CardsContainer className="h-[360px] w-[min(88vw,420px)]">
-                {values.map(({ icon: Icon, name, desc }, i) => (
-                  <CardTransformed
-                    key={name}
-                    arrayLength={values.length}
-                    index={i + 1}
-                    incrementY={8}
-                    incrementZ={12}
-                    variant="light"
-                    className="items-start justify-between rounded-card border-cyan-100 bg-white/85 p-7 text-left shadow-[0_18px_55px_rgba(8,145,178,0.12)]"
-                    role="article"
-                    aria-labelledby={`core-value-${i}-title`}
-                  >
-                    <div className="icon-box">
-                      <Icon size={20} aria-hidden="true" />
-                    </div>
-                    <div>
-                      <h3
-                        id={`core-value-${i}-title`}
-                        className="font-display font-semibold text-ink"
-                        style={{ fontSize: 24, lineHeight: 1.15 }}
-                      >
-                        {name}
-                      </h3>
-                      <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                        {desc}
-                      </p>
-                    </div>
-                  </CardTransformed>
-                ))}
-              </CardsContainer>
-            </div>
-          </ContainerScroll>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {values.map(({ image, name, desc }, i) => (
+              <AnimatedSection key={name} delay={i * 0.07}>
+                <motion.div
+                  className="group bg-white flex flex-col h-full overflow-hidden"
+                  style={{
+                    borderRadius: 16,
+                    boxShadow:
+                      "inset 0 -3em 3em rgba(8,145,178,0.04), 0 0 0 1px rgba(8,145,178,0.18), 0.3em 0.3em 1em rgba(15,23,42,0.08)",
+                  }}
+                  whileHover={{ borderRadius: 6 }}
+                  transition={{ duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275] }}
+                >
+                  <div className="relative w-full h-44 overflow-hidden shrink-0">
+                    <Image
+                      src={image}
+                      alt={name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent" />
+                  </div>
+                  <div className="px-6 py-5 flex flex-col gap-3">
+                    <h3
+                      className="font-display font-semibold text-[#0F172A]"
+                      style={{ fontSize: 18, lineHeight: 1.2 }}
+                    >
+                      {name}
+                    </h3>
+                    <p className="text-sm leading-[1.75] text-slate-500">
+                      {desc}
+                    </p>
+                  </div>
+                </motion.div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="pt-14 pb-6 px-6 bg-canvas border-t border-border">
+      {/* <section className="pt-14 pb-6 px-6 bg-canvas border-t border-border">
         <div className="mx-auto max-w-7xl">
           <h2
             className="text-center font-display font-bold"
@@ -246,7 +305,7 @@ export default function AboutPageContent() {
         </div>
       </section>
 
-      <ExpandOnHover />
+      <ExpandOnHover /> */}
 
     </>
   );

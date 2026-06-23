@@ -8,12 +8,13 @@ import {
   FaFacebookF, FaWhatsapp, FaYoutube,
   FaGithub, FaReddit, FaDiscord,
 } from "react-icons/fa";
-import { FaXTwitter, FaTelegram, FaTiktok } from "react-icons/fa6";
+import { FaXTwitter, FaTelegram } from "react-icons/fa6";
 import {
   SiBluesky, SiSubstack, SiMastodon,
   SiThreads, SiMedium, SiQuora,
 } from "react-icons/si";
 
+import { motion } from "framer-motion";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import ShaderBackground from "@/components/ui/shader-background";
 import { SocialGradientBlobCard } from "@/components/ui/gradient-bold-card";
@@ -26,7 +27,7 @@ const officialPlatforms = [
   {
     name: "LinkedIn",
     handle: "linkedin.com/company/aibizmod",
-    desc: "Company news, thought leadership, and industry insights on AI and business transformation.",
+    desc: "We share company updates, project reflections, and thoughts on the work we do.",
     href: "https://linkedin.com/company/aibizmod",
     gradient: "from-blue-700 via-blue-500 to-cyan-400",
     icon: <FaLinkedinIn />,
@@ -34,7 +35,7 @@ const officialPlatforms = [
   {
     name: "Instagram",
     handle: "@aibizmod",
-    desc: "Behind-the-scenes, product moments, and visual stories from our team and clients.",
+    desc: "A visual look at how we work, what we build, and the people behind it.",
     href: "https://instagram.com/aibizmod",
     gradient: "from-purple-600 via-pink-500 to-orange-400",
     icon: <FaInstagram />,
@@ -42,7 +43,7 @@ const officialPlatforms = [
   {
     name: "Facebook",
     handle: "facebook.com/aibizmod",
-    desc: "Community updates, event announcements, and client success stories.",
+    desc: "Updates on what we're working on and occasional announcements worth sharing.",
     href: "https://facebook.com/aibizmod",
     gradient: "from-blue-800 via-blue-600 to-blue-400",
     icon: <FaFacebookF />,
@@ -50,7 +51,7 @@ const officialPlatforms = [
   {
     name: "Pinterest",
     handle: "@aibizmod",
-    desc: "Curated boards on technology trends, UI inspiration, and digital innovation.",
+    desc: "Boards we've put together around design, technology ideas, and digital work.",
     href: "https://pinterest.com/aibizmod",
     gradient: "from-red-600 via-rose-500 to-pink-400",
     icon: <FaPinterestP />,
@@ -58,7 +59,7 @@ const officialPlatforms = [
   {
     name: "X (Twitter)",
     handle: "@aibizmod",
-    desc: "Quick updates on technology launches, industry news, and platform insights.",
+    desc: "Short posts and reactions to things happening in technology.",
     href: "https://x.com/aibizmod",
     gradient: "from-slate-700 via-slate-500 to-slate-300",
     icon: <FaXTwitter />,
@@ -66,7 +67,7 @@ const officialPlatforms = [
   {
     name: "YouTube",
     handle: "@aibizmod",
-    desc: "Product demos, walkthroughs, explainer videos, and webinar recordings.",
+    desc: "Walkthroughs, demos, and recordings from sessions we've hosted.",
     href: "https://youtube.com/@aibizmod",
     gradient: "from-red-700 via-red-500 to-orange-400",
     icon: <FaYoutube />,
@@ -74,7 +75,7 @@ const officialPlatforms = [
   {
     name: "WhatsApp",
     handle: "+44 20 7946 0958",
-    desc: "Direct messaging for quick queries, client support, and real-time communication.",
+    desc: "The fastest way to reach us directly with a quick question.",
     href: "https://wa.me/4420000000",
     gradient: "from-green-600 via-emerald-500 to-teal-400",
     icon: <FaWhatsapp />,
@@ -85,7 +86,7 @@ const registeredPlatforms = [
   {
     name: "Medium",
     handle: "@aibizmod",
-    desc: "Long-form articles on tech strategy and digital transformation.",
+    desc: "Longer pieces on technology decisions, things we've learned, and how we think about the work.",
     href: "https://medium.com/@aibizmod",
     gradient: "from-slate-800 via-slate-600 to-stone-400",
     icon: <SiMedium />,
@@ -93,7 +94,7 @@ const registeredPlatforms = [
   {
     name: "GitHub",
     handle: "@aibizmod",
-    desc: "Open-source tools, code samples, and technical resources.",
+    desc: "Where we share code and open-source work from projects we're able to make public.",
     href: "https://github.com/aibizmod",
     gradient: "from-gray-800 via-gray-600 to-gray-400",
     icon: <FaGithub />,
@@ -101,7 +102,7 @@ const registeredPlatforms = [
   {
     name: "Reddit",
     handle: "u/aibizmod",
-    desc: "Community discussions on AI, automation, and business technology.",
+    desc: "We join discussions on software and technology when we have something useful to add.",
     href: "https://reddit.com/u/aibizmod",
     gradient: "from-orange-600 via-orange-500 to-amber-400",
     icon: <FaReddit />,
@@ -109,7 +110,7 @@ const registeredPlatforms = [
   {
     name: "Discord",
     handle: "aibizmod",
-    desc: "Real-time community hub for clients, partners, and tech enthusiasts.",
+    desc: "A space for clients and partners to connect and follow what we're building.",
     href: "https://discord.gg/aibizmod",
     gradient: "from-indigo-600 via-violet-500 to-purple-400",
     icon: <FaDiscord />,
@@ -117,23 +118,15 @@ const registeredPlatforms = [
   {
     name: "Telegram",
     handle: "@aibizmod",
-    desc: "Broadcast channel for product announcements and instant updates.",
+    desc: "Announcements and quick updates when we have something worth sharing.",
     href: "https://t.me/aibizmod",
     gradient: "from-sky-600 via-sky-500 to-blue-400",
     icon: <FaTelegram />,
   },
   {
-    name: "TikTok",
-    handle: "@aibizmod",
-    desc: "Short-form video content on tech trends and team culture.",
-    href: "https://tiktok.com/@aibizmod",
-    gradient: "from-pink-600 via-rose-500 to-red-400",
-    icon: <FaTiktok />,
-  },
-  {
     name: "Bluesky",
     handle: "@aibizmod.bsky.social",
-    desc: "Decentralised social updates, tech commentary, and community posts.",
+    desc: "We're here for the open web conversations.",
     href: "https://bsky.app/profile/aibizmod.bsky.social",
     gradient: "from-sky-500 via-blue-400 to-cyan-300",
     icon: <SiBluesky />,
@@ -141,7 +134,7 @@ const registeredPlatforms = [
   {
     name: "Substack",
     handle: "aibizmod.substack.com",
-    desc: "Newsletter covering AI, digital strategy, and innovation insights.",
+    desc: "Our newsletter. When we have something worth reading, it goes here first.",
     href: "https://aibizmod.substack.com",
     gradient: "from-orange-500 via-amber-400 to-yellow-300",
     icon: <SiSubstack />,
@@ -149,7 +142,7 @@ const registeredPlatforms = [
   {
     name: "Quora",
     handle: "aibizmod",
-    desc: "Expert answers on software development, digital transformation, and AI.",
+    desc: "We answer questions about software and technology when we can add something useful.",
     href: "https://quora.com/profile/aibizmod",
     gradient: "from-red-700 via-red-500 to-rose-400",
     icon: <SiQuora />,
@@ -157,7 +150,7 @@ const registeredPlatforms = [
   {
     name: "Mastodon",
     handle: "@aibizmod@mastodon.social",
-    desc: "Open-source federated social updates and open-web discussions.",
+    desc: "Part of the open web. We're here if that's where you prefer to connect.",
     href: "https://mastodon.social/@aibizmod",
     gradient: "from-violet-600 via-purple-500 to-fuchsia-400",
     icon: <SiMastodon />,
@@ -165,7 +158,7 @@ const registeredPlatforms = [
   {
     name: "Threads",
     handle: "@aibizmod",
-    desc: "Casual updates, quick thoughts, and perspectives from our team.",
+    desc: "Lighter posts and quick thoughts from the team.",
     href: "https://threads.net/@aibizmod",
     gradient: "from-slate-800 via-gray-700 to-zinc-500",
     icon: <SiThreads />,
@@ -198,14 +191,26 @@ export default function SocialMediaPageContent() {
                 style={{ fontSize: "clamp(38px, 6vw, 72px)", lineHeight: 1.02 }}
               >
                 Find us{" "}
-                <span className="gradient-text font-normal">everywhere</span>
+                <motion.span
+                  className="font-normal inline-block"
+                  style={{ color: "#0891B2" }}
+                  animate={{
+                    filter: [
+                      "drop-shadow(0 0 0px rgba(8,145,178,0))",
+                      "drop-shadow(0 0 12px rgba(8,145,178,0.55))",
+                      "drop-shadow(0 0 0px rgba(8,145,178,0))",
+                    ],
+                  }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  Everywhere
+                </motion.span>
               </h1>
               <p
                 className="mx-auto mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-base leading-8 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md md:text-lg"
               >
-                A directory of all our official and registered social media
-                accounts — one place to find and follow aibizmod across every
-                platform.
+                One place to find every account we use. If you&apos;re looking
+                for us on social media, this is where to start.
               </p>
             </div>
           </AnimatedSection>
@@ -243,7 +248,7 @@ export default function SocialMediaPageContent() {
               Official Channels
             </h2>
             <p className="mt-3 text-muted-foreground max-w-md mx-auto leading-relaxed" style={{ fontSize: 15 }}>
-              Our primary, actively managed social media presence.
+              These are the accounts we actively post to and check regularly.
             </p>
           </AnimatedSection>
 
@@ -283,7 +288,7 @@ export default function SocialMediaPageContent() {
               Registered Profiles
             </h2>
             <p className="mt-3 text-muted-foreground max-w-md mx-auto leading-relaxed" style={{ fontSize: 15 }}>
-              We have claimed our name and presence on these platforms too.
+              We hold accounts on these platforms. We don&apos;t post regularly, but the names are ours.
             </p>
           </AnimatedSection>
 
@@ -318,7 +323,7 @@ export default function SocialMediaPageContent() {
             <div className="rounded-2xl border border-[#BAE6FD] bg-[#ECFEFF]/70 backdrop-blur-sm
                             px-10 py-14 text-center shadow-[0_4px_24px_rgba(8,145,178,0.08)]">
 
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#0891B2]">
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-black">
                 Get in Touch
               </span>
 
@@ -330,8 +335,8 @@ export default function SocialMediaPageContent() {
               </h2>
 
               <p className="mt-5 text-muted-foreground leading-relaxed max-w-md mx-auto" style={{ fontSize: 16 }}>
-                Reach out and we&apos;ll let you know if we&apos;re active there, or
-                contact us directly at hello@aibizmod.com
+                Just ask. We&apos;ll tell you if we use that platform, or you can
+                email us directly at hello@aibizmod.com
               </p>
 
               <div className="mt-8 flex justify-center">
