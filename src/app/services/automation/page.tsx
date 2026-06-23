@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Automation",
   description:
     "Business process and workflow automation — from RPA to AI-powered pipelines that eliminate manual work and accelerate operations.",
+  alternates: { canonical: 'https://aibizmod.com/services/automation' },
   openGraph: {
     title: "Automation | aibizmod",
     description:
@@ -17,7 +18,13 @@ export const metadata: Metadata = {
 const data: ServicePageData = {
   name: "Automation",
   tagline:
-    "We build custom automation pipelines for invoice routing, CRM synchronization, weekly reporting, and approval workflows.",
+    "For operations teams and growing businesses in the UK, USA, and internationally that lose hours to manual data entry, we build custom automation pipelines — invoice routing, CRM synchronization, weekly reporting, and approval workflows. You receive documented runbooks, error-handling logic, and working integrations, so repetitive tasks run automatically and your team focuses on higher-value work.",
+  heroBullets: [
+    "For operations teams that lose hours to manual data entry and repetitive processes",
+    "Custom automation pipelines — invoice routing, CRM sync, weekly reporting, and approval workflows",
+    "Documented runbooks and working integrations so repetitive tasks run automatically",
+    "Serving clients in the UK, USA, and internationally",
+  ],
   slug: "automation",
   iconColor: "text-yellow-600",
 

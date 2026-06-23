@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "A team of builders, thinkers, and technologists on a mission to help businesses grow through technology.",
+  alternates: { canonical: 'https://aibizmod.com/about' },
   openGraph: {
     title: "About Us | aibizmod",
     description:

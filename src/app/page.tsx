@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 	title: { absolute: 'aibizmod | Intelligent Tech Services' },
 	description:
 		'End-to-end technology services for businesses: web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
+	alternates: { canonical: 'https://aibizmod.com' },
 	openGraph: {
 		title: 'aibizmod | Intelligent Tech Services',
 		description:

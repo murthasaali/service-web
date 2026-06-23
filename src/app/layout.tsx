@@ -3,6 +3,56 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import SmoothScroll from '@/components/providers/SmoothScroll';
 
+const entityGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://aibizmod.com/#organization',
+      name: 'aibizmod Ltd.',
+      url: 'https://aibizmod.com',
+      logo: {
+        '@type': 'ImageObject',
+        '@id': 'https://aibizmod.com/#logo',
+        url: 'https://aibizmod.com/favicon.ico',
+        contentUrl: 'https://aibizmod.com/favicon.ico',
+      },
+      description:
+        'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
+      email: 'hello@aibizmod.com',
+      telephone: '+442079460958',
+      areaServed: [
+        { '@type': 'City', name: 'London' },
+        { '@type': 'City', name: 'New York' },
+        { '@type': 'City', name: 'Bengaluru' },
+        { '@type': 'City', name: 'Singapore' },
+        { '@type': 'City', name: 'Sydney' },
+      ],
+      foundingDate: '2019',
+      knowsAbout: [
+        'Web Development',
+        'Custom Software Development',
+        'Mobile App Development',
+        'Digital Marketing',
+        'Cloud Hosting and Infrastructure',
+        'Business Process Automation',
+        'Customer Experience Management',
+        'IT Consulting',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://aibizmod.com/#website',
+      url: 'https://aibizmod.com',
+      name: 'aibizmod',
+      description:
+        'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
+      publisher: { '@id': 'https://aibizmod.com/#organization' },
+      inLanguage: 'en-GB',
+    },
+  ],
+};
+
 const inter = Inter({
 	subsets: ['latin'],
 	variable: '--font-inter',
@@ -43,6 +93,10 @@ export default function RootLayout({
 	return (
 		<html lang='en' className={inter.variable}>
 			<head>
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(entityGraph) }}
+				/>
 				{/* General Sans — served via CDN. Swap to next/font/local + woff2 for production. */}
 				<link rel='preconnect' href='https://api.fontshare.com' />
 				<link

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Customer Experience Management",
   description:
     "CX strategy, CRM implementation, and omnichannel communication setup — turning every customer interaction into lasting loyalty.",
+  alternates: { canonical: 'https://aibizmod.com/services/customer-exp-management' },
   openGraph: {
     title: "Customer Experience Management | aibizmod",
     description:
@@ -17,7 +18,13 @@ export const metadata: Metadata = {
 const data: ServicePageData = {
   name: "Customer Experience Management",
   tagline:
-    "We clean CRM data databases, set up ticket routing logic, and configure HubSpot, Zoho, Salesforce, Intercom, and WhatsApp Business.",
+    "For customer-facing teams and service businesses across the UK, USA, and international markets that need better visibility into client history, we clean CRM databases, configure ticket routing, and connect HubSpot, Zoho, Salesforce, Intercom, and WhatsApp Business. The result is faster agent response, accurate customer records, and measurable improvements in support consistency.",
+  heroBullets: [
+    "For customer-facing teams that need better visibility into client history and faster support response",
+    "CRM database cleanup, ticket routing, and setup of HubSpot, Zoho, Salesforce, Intercom, and WhatsApp Business",
+    "Accurate customer records, faster agent response, and consistent support operations",
+    "Serving clients in the UK, USA, and internationally",
+  ],
   slug: "customer-exp-management",
   iconColor: "text-pink-600",
 

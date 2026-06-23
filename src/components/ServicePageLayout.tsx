@@ -74,6 +74,7 @@ export interface FAQ           { q: string; a: string; }
 export interface ServicePageData {
   name: string;
   tagline: string;
+  heroBullets: [string, string, string, string];
   slug: string;
   iconColor: string; // kept for backwards compat; layout uses text-royal throughout
   overview: { paragraphs: string[]; benefits: string[]; };
@@ -83,39 +84,68 @@ export interface ServicePageData {
   faqs: FAQ[];               // 4–5
 }
 
+// ─── Structured data ─────────────────────────────────────────────────────────
+
+function buildServiceSchema(data: ServicePageData) {
+  const pageUrl = `https://aibizmod.com/services/${data.slug}`;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': `${pageUrl}/#service`,
+        name: data.name,
+        description: data.tagline,
+        url: pageUrl,
+        provider: { '@id': 'https://aibizmod.com/#organization' },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}/#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://aibizmod.com',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Services',
+            item: 'https://aibizmod.com/services',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: data.name,
+            item: pageUrl,
+          },
+        ],
+      },
+    ],
+  };
+}
+
 // ─── FAQ accordion ────────────────────────────────────────────────────────────
 
 function FAQItem({ faq }: { faq: FAQ }) {
-  const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-cyan-100 last:border-0">
-      <button
-        type="button"
-        onClick={() => setOpen((p) => !p)}
-        aria-expanded={open}
-        className="flex items-center justify-between w-full py-5 text-left group"
-      >
-        <span
-          className={`font-semibold text-sm pr-4 leading-snug transition-colors ${
-            open ? "text-cyan-700" : "text-[#0F172A] group-hover:text-cyan-700"
-          }`}
-        >
+    <details className="group border-b border-cyan-100 last:border-0">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 [&::-webkit-details-marker]:hidden">
+        <span className="font-semibold text-sm pr-4 leading-snug text-[#0F172A] transition-colors group-hover:text-cyan-700 group-open:text-cyan-700">
           {faq.q}
         </span>
         <ChevronDown
           size={18}
           aria-hidden="true"
-          className={`shrink-0 transition-transform duration-200 ${
-            open ? "rotate-180 text-cyan-600" : "text-slate-400"
-          }`}
+          className="shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-180 group-open:text-cyan-600"
         />
-      </button>
-      {open && (
-        <div className="pb-5">
-          <p className="text-sm text-slate-600 leading-relaxed">{faq.a}</p>
-        </div>
-      )}
-    </div>
+      </summary>
+      <div className="pb-5">
+        <p className="text-sm text-slate-600 leading-relaxed">{faq.a}</p>
+      </div>
+    </details>
   );
 }
 
@@ -169,6 +199,10 @@ export default function ServicePageLayout({
       <Navbar />
       <StickyFooterLayout footer={<Footer />}>
         <main className="bg-white text-ink">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(buildServiceSchema(data)) }}
+          />
 
         {/* ── 1. Hero ─────────────────────────────────────────────────────── */}
         <section className="relative isolate overflow-hidden px-6 pb-20 pt-32 md:pb-28 md:pt-36">
@@ -204,21 +238,26 @@ export default function ServicePageLayout({
 
               {/* H1 */}
               <h1
-                className="mt-7 max-w-3xl font-display font-thin text-[#0F172A] text-balance"
+                className="mt-7 max-w-full font-display font-thin text-[#0F172A] whitespace-nowrap"
                 style={{
-                  fontSize: "clamp(40px, 6vw, 76px)",
-                  lineHeight: 1.02,
+                  fontSize: "clamp(24px, 3.1vw, 40px)",
+                  lineHeight: 1.08,
                 }}
               >
                 {data.name}
               </h1>
 
-              {/* Tagline */}
-              <p
-                className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-base leading-8 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md md:text-lg"
+              {/* Hero bullets */}
+              <ul
+                className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md space-y-2"
               >
-                {data.tagline}
-              </p>
+                {data.heroBullets.map((bullet) => (
+                  <li key={bullet} className="flex items-start gap-3 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true" />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
 
               {/* CTAs */}
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">

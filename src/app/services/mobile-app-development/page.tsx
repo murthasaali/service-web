@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Mobile App Development",
   description:
     "Native and cross-platform mobile applications for iOS and Android — from UX design to App Store launch.",
+  alternates: { canonical: 'https://aibizmod.com/services/mobile-app-development' },
   openGraph: {
     title: "Mobile App Development | aibizmod",
     description:
@@ -20,7 +21,13 @@ export const metadata: Metadata = {
 const data: ServicePageData = {
   name: "Mobile App Development",
   tagline:
-    "We build custom iOS and Android applications for customer booking, self-service, technician dispatch, and inventory tracking.",
+    "For businesses across the UK, USA, and internationally that need a mobile product built to production standard, we design and develop custom iOS and Android applications — booking tools, self-service portals, technician dispatch apps, and inventory trackers. You receive a tested, store-ready app with crash reporting, push notifications, and full source code ownership.",
+  heroBullets: [
+    "For businesses that need a mobile product built to production standard",
+    "Custom iOS and Android apps — booking tools, self-service portals, technician dispatch, and inventory trackers",
+    "Tested, store-ready app with crash reporting, push notifications, and full source code ownership",
+    "Serving clients in the UK, USA, and internationally",
+  ],
   slug: "mobile-app-development",
   iconColor: "text-cyan-600",
 

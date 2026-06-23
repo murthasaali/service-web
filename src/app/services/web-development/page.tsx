@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Web Development",
   description:
     "Build fast, scalable, responsive websites and web applications that help businesses grow online.",
+  alternates: { canonical: 'https://aibizmod.com/services/web-development' },
   openGraph: {
     title: "Web Development | aibizmode",
     description:
@@ -17,7 +18,13 @@ export const metadata: Metadata = {
 const data: ServicePageData = {
   name: "Web Development",
   tagline:
-    "We build custom corporate websites, e-commerce stores, SaaS dashboards, customer portals, and CRM-connected web applications.",
+    "For businesses across the UK, USA, and internationally that need a web product built without templates or lock-in, we design and develop corporate websites, e-commerce stores, SaaS dashboards, customer portals, and CRM-connected web applications. You receive a version-controlled codebase, a staging environment, and a structured handover — ready to own and maintain.",
+  heroBullets: [
+    "For businesses that need a custom web product built without templates or platform lock-in",
+    "Corporate websites, e-commerce stores, SaaS dashboards, customer portals, and CRM-connected web apps",
+    "Version-controlled codebase, staging environment, and structured handover — ready to own and maintain",
+    "Serving clients in the UK, USA, and internationally",
+  ],
   slug: "web-development",
   iconColor: "text-electric-blue",
 

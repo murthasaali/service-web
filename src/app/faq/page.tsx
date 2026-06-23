@@ -89,6 +89,7 @@ export const metadata: Metadata = {
   title: "FAQ",
   description:
     "Answers to common questions about aibizmod technology services, delivery process, support, automation, and product development.",
+  alternates: { canonical: 'https://aibizmod.com/faq' },
   openGraph: {
     title: "FAQ | aibizmod",
     description:
@@ -97,12 +98,29 @@ export const metadata: Metadata = {
   },
 };
 
+const faqPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function FAQPage() {
   return (
     <>
       <Navbar />
       <StickyFooterLayout footer={<Footer />}>
         <main>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+          />
           <section className="relative overflow-hidden bg-white px-6 py-24 md:py-32">
             {/* Grid background */}
             <div

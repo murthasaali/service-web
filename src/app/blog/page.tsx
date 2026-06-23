@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Blog — aibizmod Journal",
   description:
     "Original aibizmod notes on domain launch, SEO service building, generative optimisation, and practical website strategy.",
+  alternates: { canonical: 'https://aibizmod.com/blog' },
   openGraph: {
     title: "Blog — aibizmod Journal",
     description:

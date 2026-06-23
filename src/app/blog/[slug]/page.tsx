@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, BookOpen, Lightbulb, ExternalLink } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
@@ -31,6 +31,7 @@ export function generateMetadata({ params }: BlogDetailPageProps): Metadata {
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `https://aibizmod.com/blog/${post.slug}` },
     openGraph: {
       title: `${post.title} | aibizmod`,
       description: post.excerpt,
@@ -113,20 +114,29 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
               >
                 {post.title}
               </h1>
-              <p className="mt-6 max-w-3xl text-base leading-8 text-stone-600 md:text-lg">
-                {post.excerpt}
+
+              {/* Answer summary — direct answer to the article’s main question */}
+              <p className="mt-6 max-w-3xl text-base leading-8 text-stone-700 md:text-lg font-medium">
+                {post.answerSummary}
               </p>
+
               <div className="mt-7 flex flex-wrap items-center gap-4 text-sm text-stone-500">
                 <span className="font-semibold text-stone-950">
                   {post.author.name}
                 </span>
                 <span aria-hidden="true">·</span>
-                <span>{post.date}</span>
+                <span>Last updated: {post.date}</span>
                 <span aria-hidden="true">·</span>
                 <span className="inline-flex items-center gap-1">
                   <Clock size={14} aria-hidden="true" />
                   {post.readTime}
                 </span>
+                {post.reviewer && (
+                  <>
+                    <span aria-hidden="true">·</span>
+                    <span>Reviewed by: {post.reviewer}</span>
+                  </>
+                )}
               </div>
             </AnimatedSection>
           </div>
@@ -148,6 +158,46 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
             </AnimatedSection>
 
             <article className="mx-auto mt-14 max-w-3xl">
+
+              {/* Key Takeaways */}
+              <AnimatedSection className="mb-14 rounded-2xl border border-cyan-200 bg-cyan-50/60 px-6 py-8 shadow-[0_14px_36px_rgba(15,23,42,0.05)] md:px-9">
+                <div className="flex items-center gap-3 mb-5">
+                  <BookOpen size={18} className="text-cyan-700 shrink-0" aria-hidden="true" />
+                  <h2 className="font-display font-semibold text-[#0F172A]" style={{ fontSize: "clamp(18px, 2.5vw, 22px)", lineHeight: 1.2 }}>
+                    Key Takeaways
+                  </h2>
+                </div>
+                <ul className="space-y-3">
+                  {post.keyTakeaways.map((point) => (
+                    <li key={point} className="flex gap-3 text-sm leading-7 text-stone-700">
+                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-600" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </AnimatedSection>
+
+              {/* Definitions (rendered only when present) */}
+              {post.definitions && post.definitions.length > 0 && (
+                <AnimatedSection className="mb-14 rounded-2xl border border-stone-200 bg-white px-6 py-8 shadow-[0_14px_36px_rgba(15,23,42,0.05)] md:px-9">
+                  <div className="flex items-center gap-3 mb-5">
+                    <Lightbulb size={18} className="text-stone-500 shrink-0" aria-hidden="true" />
+                    <h2 className="font-display font-semibold text-[#0F172A]" style={{ fontSize: "clamp(18px, 2.5vw, 22px)", lineHeight: 1.2 }}>
+                      Key Definitions
+                    </h2>
+                  </div>
+                  <dl className="space-y-5">
+                    {post.definitions.map((def) => (
+                      <div key={def.term}>
+                        <dt className="text-sm font-semibold text-[#0F172A]">{def.term}</dt>
+                        <dd className="mt-1 text-sm leading-7 text-stone-600">{def.definition}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </AnimatedSection>
+              )}
+
+              {/* Article sections */}
               {post.sections.map((section) => (
                 <AnimatedSection
                   key={section.heading}
@@ -182,8 +232,59 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                       ))}
                     </ul>
                   )}
+                  {section.citations && section.citations.length > 0 && (
+                    <div className="mt-6 border-t border-stone-100 pt-4">
+                      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-stone-400">Sources</p>
+                      <ul className="space-y-1">
+                        {section.citations.map((cite) => (
+                          <li key={cite.url}>
+                            <a
+                              href={cite.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-xs text-cyan-700 hover:text-cyan-900 transition-colors"
+                            >
+                              <ExternalLink size={11} aria-hidden="true" />
+                              {cite.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </AnimatedSection>
               ))}
+
+              {/* Related Services (rendered only when present) */}
+              {post.relatedServices && post.relatedServices.length > 0 && (
+                <AnimatedSection className="mb-14 rounded-2xl border border-stone-200 bg-white px-6 py-8 shadow-[0_14px_36px_rgba(15,23,42,0.05)] md:px-9">
+                  <h2 className="font-display font-semibold text-[#0F172A] mb-5" style={{ fontSize: "clamp(18px, 2.5vw, 22px)", lineHeight: 1.2 }}>
+                    Related Services
+                  </h2>
+                  <ul className="space-y-3">
+                    {post.relatedServices.map((service) => (
+                      <li key={service.href}>
+                        <Link
+                          href={service.href}
+                          className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-700 hover:text-cyan-900 transition-colors"
+                        >
+                          <ArrowRight size={14} aria-hidden="true" />
+                          {service.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </AnimatedSection>
+              )}
+
+              {/* Reviewer (rendered only when present) */}
+              {post.reviewer && (
+                <AnimatedSection className="mb-14 rounded-2xl border border-stone-200 bg-stone-50 px-6 py-6 shadow-[0_14px_36px_rgba(15,23,42,0.05)] md:px-9">
+                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-400 mb-1">Reviewed by</p>
+                  <p className="text-sm font-semibold text-stone-700">{post.reviewer}</p>
+                </AnimatedSection>
+              )}
+
             </article>
 
             <AnimatedSection className="mx-auto mt-14 max-w-3xl border-t border-stone-200 pt-8">

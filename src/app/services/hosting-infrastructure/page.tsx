@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Hosting & Infrastructure",
   description:
     "Scalable, secure cloud infrastructure on AWS, GCP, and Azure — designed, built, and managed by our infrastructure team.",
+  alternates: { canonical: 'https://aibizmod.com/services/hosting-infrastructure' },
   openGraph: {
     title: "Hosting & Infrastructure | aibizmod",
     description:
@@ -17,7 +18,13 @@ export const metadata: Metadata = {
 const data: ServicePageData = {
   name: "Hosting & Infrastructure",
   tagline:
-    "We set up cloud hosting, configure staging and production environments, establish backups, and build deployment pipelines.",
+    "For development teams and businesses across the UK, USA, and internationally that need reliable, scalable infrastructure, we set up cloud hosting on AWS, GCP, or Azure, configure isolated staging and production environments, establish automated backups, and build deployment pipelines with rollback capability. The result is stable releases and systems your team can maintain and trust.",
+  heroBullets: [
+    "For development teams that need reliable, scalable infrastructure on major cloud platforms",
+    "Cloud hosting on AWS, GCP, or Azure — isolated environments, automated backups, and deployment pipelines",
+    "Stable releases, rollback capability, and infrastructure your team can maintain and trust",
+    "Serving clients in the UK, USA, and internationally",
+  ],
   slug: "hosting-infrastructure",
   iconColor: "text-orange-500",
 

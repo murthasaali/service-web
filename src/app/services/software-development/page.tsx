@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Custom Software Development",
   description:
     "Custom software solutions built to streamline operations, automate workflows, and support business growth.",
+  alternates: { canonical: 'https://aibizmod.com/services/software-development' },
   openGraph: {
     title: "Custom Software Development | aibizmode",
     description:
@@ -20,7 +21,13 @@ export const metadata: Metadata = {
 const data: ServicePageData = {
   name: "Custom Software Development",
   tagline:
-    "We build custom ERP systems, CRM platforms, internal workflows, SaaS dashboards, and operations software.",
+    "For businesses across the UK, USA, and internationally whose operations outgrow spreadsheets and off-the-shelf tools, we design and build custom ERP systems, CRM platforms, internal workflows, SaaS dashboards, and operations software. You receive a documented codebase with role-based access, API integrations, and a handover package your internal team can maintain.",
+  heroBullets: [
+    "For businesses whose operations have outgrown spreadsheets and off-the-shelf tools",
+    "Custom ERP systems, CRM platforms, internal workflows, SaaS dashboards, and operations software",
+    "Documented codebase with role-based access, API integrations, and a maintainable handover package",
+    "Serving clients in the UK, USA, and internationally",
+  ],
   slug: "software-development",
   iconColor: "text-indigo-600",
 

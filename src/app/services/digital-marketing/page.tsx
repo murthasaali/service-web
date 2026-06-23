@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Digital Marketing",
   description:
     "Data-driven digital marketing strategies — SEO, paid advertising, content, and email automation that drive qualified traffic and revenue.",
+  alternates: { canonical: 'https://aibizmod.com/services/digital-marketing' },
   openGraph: {
     title: "Digital Marketing | aibizmod",
     description:
@@ -20,7 +21,13 @@ export const metadata: Metadata = {
 const data: ServicePageData = {
   name: "Digital Marketing",
   tagline:
-    "We set up tracking plans, perform search audits, build Looker Studio dashboards, and map keywords for marketing campaigns.",
+    "For businesses in the UK, USA, and internationally that need accurate measurement before spending on campaigns, we set up tracking plans, perform technical search audits, build Looker Studio dashboards, and map keywords for paid and organic campaigns. You receive clear attribution data so every marketing decision is based on what is actually working.",
+  heroBullets: [
+    "For businesses that need accurate measurement before spending on campaigns",
+    "Tracking plans, technical search audits, Looker Studio dashboards, and keyword maps for paid and organic campaigns",
+    "Clear attribution data so every marketing decision is based on what is actually working",
+    "Serving clients in the UK, USA, and internationally",
+  ],
   slug: "digital-marketing",
   iconColor: "text-emerald-600",
 

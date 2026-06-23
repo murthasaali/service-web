@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "IT Consulting & IT Services",
   description:
     "Strategic technology advisory and managed IT services — fractional CTO support, architecture reviews, and IT project management.",
+  alternates: { canonical: 'https://aibizmod.com/services/it-consulting-it-services' },
   openGraph: {
     title: "IT Consulting & IT Services | aibizmod",
     description:
@@ -20,7 +21,13 @@ export const metadata: Metadata = {
 const data: ServicePageData = {
   name: "IT Consulting & IT Services",
   tagline:
-    "We conduct systems architecture reviews, vendor comparisons, cloud cost audits, security assessments, and technology roadmaps.",
+    "For technology leaders, founders, and operations managers across the UK, USA, and internationally who need an objective view of their systems, we conduct architecture reviews, vendor comparisons, cloud cost audits, and security assessments. You receive practical documentation and a prioritised roadmap — not a slide deck — so the right decisions get made before money is spent.",
+  heroBullets: [
+    "For technology leaders, founders, and operations managers who need an objective view of their systems",
+    "Architecture reviews, vendor comparisons, cloud cost audits, and security assessments",
+    "Practical documentation and a prioritised roadmap — not a slide deck",
+    "Serving clients in the UK, USA, and internationally",
+  ],
   slug: "it-consulting-it-services",
   iconColor: "text-cyan-600",
 
