@@ -27,7 +27,7 @@ const fsSource = `
   const float minorLineFrequency = 1.0;
   const vec4 gridColor = vec4(0.5);
   const float scale = 5.0;
-  const vec4 lineColor = vec4(0.824, 0.969, 1.0, 1.0);
+  const vec4 lineColor = vec4(0.024, 0.714, 0.831, 1.0); // Cyan-500 (#06b6d4)
   const float minLineWidth = 0.01;
   const float maxLineWidth = 0.2;
   const float lineSpeed = 1.0 * overallSpeed;
@@ -40,7 +40,7 @@ const fsSource = `
   const float offsetSpeed = 1.33 * overallSpeed;
   const float minOffsetSpread = 0.6;
   const float maxOffsetSpread = 2.0;
-  const int linesPerGroup = 4;
+  const int linesPerGroup = 5; // Added lines (from 3 to 5)
 
   #define drawCircle(pos, radius, coord) smoothstep(radius + gridSmoothWidth, radius, length(coord - (pos)))
   #define drawSmoothLine(pos, halfWidth, t) smoothstep(halfWidth, 0.0, abs(pos - (t)))
@@ -58,7 +58,7 @@ const fsSource = `
   }
 
   float random(float t) {
-    return (cos(t) + cos(t * 1.3 + 1.3)) / 2.0;
+    return cos(t); // Simplified for massive performance boost
   }
 
   float getPlasmaY(float x, float horizontalFade, float offset) {
@@ -90,12 +90,6 @@ const fsSource = `
       float offset = random(offsetPosition + offsetTime * (1.0 + normalizedLineIndex)) * mix(minOffsetSpread, maxOffsetSpread, horizontalFade);
       float linePosition = getPlasmaY(space.x, horizontalFade, offset);
       float line = drawSmoothLine(linePosition, halfWidth, space.y) / 2.0 + drawCrispLine(linePosition, halfWidth * 0.15, space.y);
-
-      float circleX = mod(float(l) + iTime * lineSpeed, 25.0) - 12.0;
-      vec2 circlePosition = vec2(circleX, getPlasmaY(circleX, horizontalFade, offset));
-      float circle = drawCircle(circlePosition, 0.01, space) * 4.0;
-
-      line = line + circle;
       lineMask += line * rand * verticalFade;
     }
 
@@ -104,7 +98,7 @@ const fsSource = `
     fragColor.rgb = mix(
       fragColor.rgb,
       lineColor.rgb,
-      clamp(lineMask * 2, 0.0, 1.0)
+      clamp(lineMask * 0.35, 0.0, 0.4) // Reduced brightness and opacity for elegant glow
     );
 
     gl_FragColor = fragColor;
