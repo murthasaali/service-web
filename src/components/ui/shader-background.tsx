@@ -40,7 +40,7 @@ const fsSource = `
   const float offsetSpeed = 1.33 * overallSpeed;
   const float minOffsetSpread = 0.6;
   const float maxOffsetSpread = 2.0;
-  const int linesPerGroup = 3;
+  const int linesPerGroup = 4;
 
   #define drawCircle(pos, radius, coord) smoothstep(radius + gridSmoothWidth, radius, length(coord - (pos)))
   #define drawSmoothLine(pos, halfWidth, t) smoothstep(halfWidth, 0.0, abs(pos - (t)))
@@ -104,7 +104,7 @@ const fsSource = `
     fragColor.rgb = mix(
       fragColor.rgb,
       lineColor.rgb,
-      clamp(lineMask * 1.24, 0.0, 1.0)
+      clamp(lineMask * 2, 0.0, 1.0)
     );
 
     gl_FragColor = fragColor;

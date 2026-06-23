@@ -82,7 +82,7 @@ export default function ServicesPageContent() {
               aria-hidden="true"
             />
 
-            <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <AnimatedSection>
                 <span className="inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-white/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700 shadow-[0_12px_35px_rgba(59,130,246,0.10)] backdrop-blur-md">
                   <Sparkles size={14} aria-hidden="true" />
@@ -90,7 +90,7 @@ export default function ServicesPageContent() {
                 </span>
                 <h1
                   className="mt-7 max-w-3xl font-display font-thin text-[#0F172A] text-balance"
-                  style={{ fontSize: "clamp(40px, 6vw, 76px)", lineHeight: 1.02 }}
+                  style={{ fontSize: "clamp(32px, 5vw, 64px)", lineHeight: 1.02 }}
                 >
                   Services built for{" "}
                   <span className="gradient-text font-normal">connected</span>{" "}
@@ -191,7 +191,6 @@ export default function ServicesPageContent() {
                             <FlowButton
                               as="span"
                               text="Explore"
-                              className="px-6 py-2 text-xs"
                             />
                           </div>
                         </ArticleCard>

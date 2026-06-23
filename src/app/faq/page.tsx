@@ -130,9 +130,9 @@ export default function FAQPage() {
                     text="biz"
                     as="span"
                     fontSize="inherit"
-                    color="#0F172A"
-                    hoverColor="#0891B2"
-                    className="font-normal normal-case tracking-tight text-[#0F172A]"
+                    color="#0891B2"
+                    hoverColor="#0F172A"
+                    className="font-normal normal-case tracking-tight text-[#0891B2]"
                     style={{ padding: 0 }}
                     autoAnimate={true}
                     interval={2500}
