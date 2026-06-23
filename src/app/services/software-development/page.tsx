@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import ServicePageLayout, { type ServicePageData, type ServiceCard } from "@/components/ServicePageLayout";
 import TechStackCarousel, {
   SOFTWARE_DEV_ROW1,
   SOFTWARE_DEV_ROW2,
@@ -125,6 +125,39 @@ const data: ServicePageData = {
   ],
 };
 
+const serviceCards: ServiceCard[] = [
+  {
+    iconKey: "package",
+    title: "Enterprise Software",
+    bullets: ["ERP", "CRM", "HRMS", "Inventory Management"],
+  },
+  {
+    iconKey: "workflow",
+    title: "Business Applications",
+    bullets: ["Workflow Automation", "Internal Tools", "Billing Systems", "Project Management Systems"],
+  },
+  {
+    iconKey: "layers",
+    title: "Industry-Specific Software",
+    bullets: ["Healthcare Solutions", "Construction Solutions", "Logistics Solutions", "Education Solutions", "Manufacturing Solutions"],
+  },
+  {
+    iconKey: "refreshCw",
+    title: "Software Modernization",
+    bullets: ["Legacy Migration", "Re-engineering", "System Upgrades"],
+  },
+  {
+    iconKey: "rocket",
+    title: "Product Development",
+    bullets: ["MVPs", "SaaS Products", "Maintenance & Support"],
+  },
+  {
+    iconKey: "compass",
+    title: "IT Consulting & Services",
+    bullets: ["Digital Transformation Consulting", "Technology Roadmaps", "IT Planning", "Solution Architecture"],
+  },
+];
+
 export default function SoftwareDevelopmentPage() {
   return (
     <ServicePageLayout
@@ -132,6 +165,7 @@ export default function SoftwareDevelopmentPage() {
       techStackFooter={
         <TechStackCarousel row1={SOFTWARE_DEV_ROW1} row2={SOFTWARE_DEV_ROW2} />
       }
+      serviceCards={serviceCards}
     />
   );
 }

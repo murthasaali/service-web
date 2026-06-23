@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import ServicePageLayout, { type ServicePageData, type ServiceCard } from "@/components/ServicePageLayout";
 import TechStackCarousel, { AUTOMATION_ROW1, AUTOMATION_ROW2 } from "@/components/ui/tech-stack-carousel";
 
 export const metadata: Metadata = {
@@ -122,11 +122,45 @@ const data: ServicePageData = {
   ],
 };
 
+const serviceCards: ServiceCard[] = [
+  {
+    iconKey: "workflow",
+    title: "Process Automation",
+    bullets: ["Workflow & Process Automation"],
+  },
+  {
+    iconKey: "bot",
+    title: "Conversational AI",
+    bullets: ["AI Chatbots", "Voice Agents", "Knowledge Assistants"],
+  },
+  {
+    iconKey: "cpu",
+    title: "AI Intelligence",
+    bullets: ["Predictive Analytics", "Recommendation Systems"],
+  },
+  {
+    iconKey: "lightbulb",
+    title: "Generative AI",
+    bullets: ["Custom GPT Development", "RAG Systems", "LLM Integration", "Enterprise AI Deployment"],
+  },
+  {
+    iconKey: "eye",
+    title: "AI Vision",
+    bullets: ["Computer Vision", "OCR Solutions"],
+  },
+  {
+    iconKey: "settings",
+    title: "AI-Powered Apps",
+    bullets: ["Custom AI Solutions", "Model Fine-tuning", "AI Integration", "Deployment & Monitoring"],
+  },
+];
+
 export default function AutomationPage() {
   return (
     <ServicePageLayout
       data={data}
       techStackFooter={<TechStackCarousel row1={AUTOMATION_ROW1} row2={AUTOMATION_ROW2} />}
+      serviceCards={serviceCards}
     />
   );
 }

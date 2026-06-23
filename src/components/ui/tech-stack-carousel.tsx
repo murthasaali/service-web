@@ -17,6 +17,8 @@ import {
   GitBranch,
   Server,
   Clock,
+  TrendingUp,
+  ScanLine,
   type LucideIcon,
 } from "lucide-react";
 
@@ -48,7 +50,7 @@ export const WEB_DEV_ROW2: CarouselIconItem[] = [
   img("https://cdn.simpleicons.org/prisma/2D3748", "Prisma"),
   img("https://cdn.simpleicons.org/python/3776AB", "Python"),
   img("https://cdn.simpleicons.org/docker/2496ED", "Docker"),
-  img("https://cdn.simpleicons.org/amazonaws/FF9900", "AWS"),
+  img("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonaws.svg", "AWS"),
   img("https://cdn.simpleicons.org/tailwindcss/06B6D4", "Tailwind"),
   img("https://cdn.simpleicons.org/github/181717", "GitHub"),
 ];
@@ -61,11 +63,11 @@ export const DIGITAL_MARKETING_ROW1: CarouselIconItem[] = [
   img("https://cdn.simpleicons.org/googleads/4285F4", "Google Ads"),
   img("https://cdn.simpleicons.org/meta/0081FB", "Meta Ads"),
   img("https://cdn.simpleicons.org/semrush/FF642D", "SEMrush"),
-  img("https://cdn.simpleicons.org/ahrefs/F4793B", "Ahrefs"),
+  luc(TrendingUp, "Ahrefs"),
 ];
 
 export const DIGITAL_MARKETING_ROW2: CarouselIconItem[] = [
-  img("https://cdn.simpleicons.org/screamingfrog/00A591", "Screaming Frog"),
+  luc(ScanLine, "Screaming Frog"),
   luc(Globe, "SEO"),
   luc(MapPin, "GEO"),
   luc(Search, "Technical SEO"),
@@ -77,12 +79,12 @@ export const DIGITAL_MARKETING_ROW2: CarouselIconItem[] = [
 
 export const IT_CONSULTING_ROW1: CarouselIconItem[] = [
   img("https://cdn.simpleicons.org/googlecloud/4285F4", "Google Cloud"),
-  img("https://cdn.simpleicons.org/amazonaws/FF9900", "AWS"),
+  img("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonaws.svg", "AWS"),
   img("https://cdn.simpleicons.org/docker/2496ED", "Docker"),
   img("https://cdn.simpleicons.org/kubernetes/326CE5", "Kubernetes"),
   img("https://cdn.simpleicons.org/terraform/844FBA", "Terraform"),
   img("https://cdn.simpleicons.org/ansible/EE0000", "Ansible"),
-  img("https://cdn.simpleicons.org/azuredevops/0078D7", "Azure DevOps"),
+  img("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/azuredevops.svg", "Azure DevOps"),
   img("https://cdn.simpleicons.org/jira/0052CC", "Jira"),
 ];
 
@@ -107,7 +109,7 @@ export const SOFTWARE_DEV_ROW1: CarouselIconItem[] = [
 ];
 
 export const SOFTWARE_DEV_ROW2: CarouselIconItem[] = [
-  img("https://cdn.simpleicons.org/amazonaws/FF9900", "AWS"),
+  img("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonaws.svg", "AWS"),
   img("https://cdn.simpleicons.org/githubactions/2088FF", "GitHub Actions"),
   img("https://cdn.simpleicons.org/express/000000", "Express"),
   img("https://cdn.simpleicons.org/redis/FF4438", "Redis"),
@@ -139,7 +141,7 @@ export const AUTOMATION_ROW1: CarouselIconItem[] = [
   img("https://cdn.simpleicons.org/zapier/FF4A00", "Zapier"),
   img("https://cdn.simpleicons.org/nodedotjs/339933", "Node.js"),
   img("https://cdn.simpleicons.org/postgresql/4169E1", "PostgreSQL"),
-  img("https://cdn.simpleicons.org/slack/4A154B", "Slack"),
+  img("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/slack.svg", "Slack"),
 ];
 
 export const AUTOMATION_ROW2: CarouselIconItem[] = [

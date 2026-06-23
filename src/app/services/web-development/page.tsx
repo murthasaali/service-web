@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import ServicePageLayout, { type ServicePageData, type ServiceCard } from "@/components/ServicePageLayout";
 import TechStackCarousel, { WEB_DEV_ROW1, WEB_DEV_ROW2 } from "@/components/ui/tech-stack-carousel";
 
 export const metadata: Metadata = {
@@ -122,11 +122,45 @@ const data: ServicePageData = {
   ],
 };
 
+const serviceCards: ServiceCard[] = [
+  {
+    iconKey: "monitor",
+    title: "Frontend Development",
+    bullets: ["Responsive Websites", "Landing Pages", "PWAs", "UI Development", "SPAs"],
+  },
+  {
+    iconKey: "server",
+    title: "Backend Development",
+    bullets: ["API Development", "Database Development", "Authentication Systems", "Payment Gateway Integration", "Server-side Development"],
+  },
+  {
+    iconKey: "layers",
+    title: "Full Stack Development",
+    bullets: ["End-to-End Web Applications", "SaaS Products", "Enterprise Applications"],
+  },
+  {
+    iconKey: "package",
+    title: "E-Commerce Development",
+    bullets: ["Online Stores", "Marketplaces", "Shopping Cart Integration", "Subscription Platforms", "Payment Integration"],
+  },
+  {
+    iconKey: "fileText",
+    title: "CMS Development",
+    bullets: ["WordPress", "Headless CMS", "Custom CMS", "Website Maintenance"],
+  },
+  {
+    iconKey: "zap",
+    title: "Web Optimization",
+    bullets: ["Speed Optimization", "SEO-Friendly Development", "Security Hardening", "Accessibility Compliance"],
+  },
+];
+
 export default function WebDevelopmentPage() {
   return (
     <ServicePageLayout
       data={data}
       techStackFooter={<TechStackCarousel row1={WEB_DEV_ROW1} row2={WEB_DEV_ROW2} />}
+      serviceCards={serviceCards}
     />
   );
 }

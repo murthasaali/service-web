@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import ServicePageLayout, { type ServicePageData, type ServiceCard } from "@/components/ServicePageLayout";
 import IntegrationHero, { CX_ROW1, CX_ROW2 } from "@/components/ui/integration-hero";
 
 export const metadata: Metadata = {
@@ -120,11 +120,45 @@ const data: ServicePageData = {
   ],
 };
 
+const serviceCards: ServiceCard[] = [
+  {
+    iconKey: "users",
+    title: "CRM Services",
+    bullets: ["CRM Implementation", "Customization", "Integration"],
+  },
+  {
+    iconKey: "headphones",
+    title: "Customer Support Systems",
+    bullets: ["Helpdesk Systems", "Ticketing Systems", "Live Chat", "Knowledge Bases"],
+  },
+  {
+    iconKey: "messageSquare",
+    title: "Customer Engagement",
+    bullets: ["Loyalty Programs", "Omnichannel Support", "WhatsApp Integration"],
+  },
+  {
+    iconKey: "lineChart",
+    title: "Customer Intelligence",
+    bullets: ["Customer Analytics", "Retention Tracking"],
+  },
+  {
+    iconKey: "workflow",
+    title: "Automation",
+    bullets: ["Workflow Automation", "AI Chatbots", "Voice Agents"],
+  },
+  {
+    iconKey: "compass",
+    title: "IT Consulting",
+    bullets: ["Digital Transformation", "Technology Roadmaps", "IT Planning"],
+  },
+];
+
 export default function CustomerExpManagementPage() {
   return (
     <ServicePageLayout
       data={data}
       techStackFooter={<IntegrationHero iconsRow1={CX_ROW1} iconsRow2={CX_ROW2} />}
+      serviceCards={serviceCards}
     />
   );
 }

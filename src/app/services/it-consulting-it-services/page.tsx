@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import ServicePageLayout, { type ServicePageData, type ServiceCard } from "@/components/ServicePageLayout";
 import TechStackCarousel, {
   IT_CONSULTING_ROW1,
   IT_CONSULTING_ROW2,
@@ -125,6 +125,39 @@ const data: ServicePageData = {
   ],
 };
 
+const serviceCards: ServiceCard[] = [
+  {
+    iconKey: "compass",
+    title: "Strategy & Transformation",
+    bullets: ["Digital Transformation Consulting", "Technology Roadmaps", "IT Planning"],
+  },
+  {
+    iconKey: "network",
+    title: "Architecture & Design",
+    bullets: ["Solution Architecture", "System Design", "Technology Evaluation"],
+  },
+  {
+    iconKey: "shield",
+    title: "Security & Compliance",
+    bullets: ["Cybersecurity Assessments", "Security Reviews", "Compliance Support"],
+  },
+  {
+    iconKey: "settings",
+    title: "Managed IT Operations",
+    bullets: ["Helpdesk Support", "Infrastructure Planning", "Cost Optimization", "Ongoing IT Management"],
+  },
+  {
+    iconKey: "container",
+    title: "DevOps & Automation",
+    bullets: ["CI/CD", "Infrastructure Automation", "Containerization"],
+  },
+  {
+    iconKey: "cloud",
+    title: "Cloud & Infrastructure",
+    bullets: ["Cloud Services", "Cloud Migration", "Cloud Architecture"],
+  },
+];
+
 export default function ITConsultingPage() {
   return (
     <ServicePageLayout
@@ -132,6 +165,7 @@ export default function ITConsultingPage() {
       techStackFooter={
         <TechStackCarousel row1={IT_CONSULTING_ROW1} row2={IT_CONSULTING_ROW2} />
       }
+      serviceCards={serviceCards}
     />
   );
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import ServicePageLayout, { type ServicePageData, type ServiceCard } from "@/components/ServicePageLayout";
 import TechStackCarousel, {
   DIGITAL_MARKETING_ROW1,
   DIGITAL_MARKETING_ROW2,
@@ -125,6 +125,39 @@ const data: ServicePageData = {
   ],
 };
 
+const serviceCards: ServiceCard[] = [
+  {
+    iconKey: "search",
+    title: "Search Marketing",
+    bullets: ["SEO", "GEO", "Local SEO", "Technical SEO"],
+  },
+  {
+    iconKey: "target",
+    title: "Paid Advertising",
+    bullets: ["Google Ads", "Meta Ads", "LinkedIn Ads", "PPC Management"],
+  },
+  {
+    iconKey: "megaphone",
+    title: "Social Media Marketing",
+    bullets: ["Social Media Management", "Content Creation", "Influencer Marketing"],
+  },
+  {
+    iconKey: "pencil",
+    title: "Brand Content",
+    bullets: ["Content Marketing", "Blog Writing", "Copywriting", "Case Studies"],
+  },
+  {
+    iconKey: "mail",
+    title: "Email & Lifecycle Marketing",
+    bullets: ["Email Campaigns", "Marketing Automation", "Lead Nurturing", "Customer Retention"],
+  },
+  {
+    iconKey: "barChart",
+    title: "Performance Insights",
+    bullets: ["Analytics", "Conversion Optimization", "Funnel Analysis"],
+  },
+];
+
 export default function DigitalMarketingPage() {
   return (
     <ServicePageLayout
@@ -132,6 +165,7 @@ export default function DigitalMarketingPage() {
       techStackFooter={
         <TechStackCarousel row1={DIGITAL_MARKETING_ROW1} row2={DIGITAL_MARKETING_ROW2} />
       }
+      serviceCards={serviceCards}
     />
   );
 }

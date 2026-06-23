@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import ServicePageLayout, { type ServicePageData, type ServiceCard } from "@/components/ServicePageLayout";
 import IntegrationHero, { HOSTING_ROW1, HOSTING_ROW2 } from "@/components/ui/integration-hero";
 
 export const metadata: Metadata = {
@@ -120,11 +120,45 @@ const data: ServicePageData = {
   ],
 };
 
+const serviceCards: ServiceCard[] = [
+  {
+    iconKey: "cloud",
+    title: "Cloud Solutions",
+    bullets: ["Cloud Services", "Cloud Migration", "Cloud Architecture"],
+  },
+  {
+    iconKey: "container",
+    title: "DevOps",
+    bullets: ["CI/CD", "Infrastructure Automation", "Containerization", "Kubernetes"],
+  },
+  {
+    iconKey: "activity",
+    title: "Infrastructure Operations",
+    bullets: ["Infrastructure Management", "Monitoring", "Performance Tuning"],
+  },
+  {
+    iconKey: "server",
+    title: "Hosting",
+    bullets: ["Shared Hosting", "VPS Hosting", "Dedicated Hosting", "Managed Hosting"],
+  },
+  {
+    iconKey: "shield",
+    title: "Security",
+    bullets: ["SSL", "Backup Solutions", "Disaster Recovery", "Security Audits"],
+  },
+  {
+    iconKey: "database",
+    title: "Database Services",
+    bullets: ["Database Hosting", "Database Optimization", "Database Administration"],
+  },
+];
+
 export default function HostingInfrastructurePage() {
   return (
     <ServicePageLayout
       data={data}
       techStackFooter={<IntegrationHero iconsRow1={HOSTING_ROW1} iconsRow2={HOSTING_ROW2} />}
+      serviceCards={serviceCards}
     />
   );
 }

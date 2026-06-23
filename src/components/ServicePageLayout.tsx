@@ -21,6 +21,7 @@ import AnimatedSection from "@/components/common/AnimatedSection";
 import ShaderBackground from "@/components/ui/shader-background";
 import { StarButton } from "@/components/ui/star-button";
 import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
+import ServiceCardsSection, { type ServiceCard } from "@/components/ServiceCardsSection";
 
 // ─── Icon registry ────────────────────────────────────────────────────────────
 
@@ -33,7 +34,7 @@ export type IconKey =
   | "package" | "settings" | "wrench" | "zap" | "users" | "lightbulb"
   | "globe" | "award" | "clock" | "rocket" | "pencil" | "barChart" | "gitBranch";
 
-const iconMap: Record<IconKey, LucideIcon> = {
+export const iconMap: Record<IconKey, LucideIcon> = {
   code2: Code2, database: Database, server: Server, network: Network,
   cloud: Cloud, testTube: TestTube, smartphone: Smartphone, monitor: Monitor,
   layers: Layers, eye: Eye, bell: Bell, search: Search, target: Target,
@@ -83,6 +84,8 @@ export interface ServicePageData {
   techStack?: string[];
   faqs: FAQ[];               // 4–5
 }
+
+export type { ServiceCard };
 
 // ─── Structured data ─────────────────────────────────────────────────────────
 
@@ -185,9 +188,11 @@ const getProcessDeliverables = (index: number) => {
 export default function ServicePageLayout({
   data,
   techStackFooter,
+  serviceCards,
 }: {
   data: ServicePageData;
   techStackFooter?: ReactNode;
+  serviceCards?: ServiceCard[];
 }) {
   const prefersReduced = useReducedMotion();
   const heroImage = serviceImages[data.slug] ?? serviceImages["web-development"];
@@ -411,6 +416,11 @@ export default function ServicePageLayout({
             </div>
           </div>
         </section>
+
+        {/* ── 3b. Animated Service Cards ──────────────────────────────────── */}
+        {serviceCards && serviceCards.length > 0 && (
+          <ServiceCardsSection cards={serviceCards} />
+        )}
 
         {/* ── 4. Process ──────────────────────────────────────────────────── */}
         <section

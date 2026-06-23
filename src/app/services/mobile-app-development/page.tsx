@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ServicePageLayout, { type ServicePageData } from "@/components/ServicePageLayout";
+import ServicePageLayout, { type ServicePageData, type ServiceCard } from "@/components/ServicePageLayout";
 import TechStackCarousel, {
   MOBILE_APP_ROW1,
   MOBILE_APP_ROW2,
@@ -125,11 +125,45 @@ const data: ServicePageData = {
   ],
 };
 
+const serviceCards: ServiceCard[] = [
+  {
+    iconKey: "smartphone",
+    title: "Native Apps",
+    bullets: ["Android", "iOS"],
+  },
+  {
+    iconKey: "layers",
+    title: "Cross-Platform Apps",
+    bullets: ["Flutter", "React Native"],
+  },
+  {
+    iconKey: "settings",
+    title: "Enterprise Apps",
+    bullets: ["Employee Management", "Field Service", "Internal Business Apps"],
+  },
+  {
+    iconKey: "users",
+    title: "Consumer Apps",
+    bullets: ["E-commerce", "Social Networking", "Booking", "On-Demand Services"],
+  },
+  {
+    iconKey: "server",
+    title: "Backend Services",
+    bullets: ["APIs", "Push Notifications", "Authentication", "Payments"],
+  },
+  {
+    iconKey: "wrench",
+    title: "Maintenance & Optimization",
+    bullets: ["App Performance Optimization", "Bug Fixes & Troubleshooting"],
+  },
+];
+
 export default function MobileAppDevelopmentPage() {
   return (
     <ServicePageLayout
       data={data}
       techStackFooter={<TechStackCarousel row1={MOBILE_APP_ROW1} row2={MOBILE_APP_ROW2} />}
+      serviceCards={serviceCards}
     />
   );
 }

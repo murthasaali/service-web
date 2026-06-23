@@ -12,6 +12,9 @@ import {
   Cpu,
   Settings,
   Zap,
+  TrendingUp,
+  ScanLine,
+  Headphones,
   type LucideIcon,
 } from "lucide-react";
 
@@ -23,7 +26,7 @@ const img = (src: string, alt: string): IntegrationIconItem => ({ kind: "image",
 const luc = (icon: LucideIcon, alt: string): IntegrationIconItem => ({ kind: "lucide", icon, alt });
 
 export const HOSTING_ROW1: IntegrationIconItem[] = [
-  img("https://cdn.simpleicons.org/amazonaws/FF9900", "AWS"),
+  img("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonaws.svg", "AWS"),
   img("https://cdn.simpleicons.org/digitalocean/0080FF", "DigitalOcean"),
   img("https://cdn.simpleicons.org/vercel/000000", "Vercel"),
   img("https://cdn.simpleicons.org/netlify/00C7B7", "Netlify"),
@@ -40,7 +43,7 @@ export const HOSTING_ROW2: IntegrationIconItem[] = [
 
 export const CX_ROW1: IntegrationIconItem[] = [
   img("https://cdn.simpleicons.org/hubspot/FF7A59", "HubSpot"),
-  img("https://cdn.simpleicons.org/salesforce/00A1E0", "Salesforce"),
+  img("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/salesforce.svg", "Salesforce"),
   img("https://cdn.simpleicons.org/zoho/E42527", "Zoho CRM"),
   img("https://cdn.simpleicons.org/intercom/6AFDEF", "Intercom"),
   img("https://cdn.simpleicons.org/whatsapp/25D366", "WhatsApp"),
@@ -48,7 +51,7 @@ export const CX_ROW1: IntegrationIconItem[] = [
 
 export const CX_ROW2: IntegrationIconItem[] = [
   img("https://cdn.simpleicons.org/zendesk/03363D", "Zendesk"),
-  img("https://cdn.simpleicons.org/freshdesk/25C16F", "Freshdesk"),
+  luc(Headphones, "Freshdesk"),
   img("https://cdn.simpleicons.org/typeform/262627", "Typeform"),
   img("https://cdn.simpleicons.org/postgresql/4169E1", "PostgreSQL"),
   img("https://cdn.simpleicons.org/make/6D00CC", "Make"),
@@ -78,7 +81,7 @@ export const WEB_DEV_ROWS: IntegrationIconItem[][] = [
   [
     img("https://cdn.simpleicons.org/python/3776AB", "Python"),
     img("https://cdn.simpleicons.org/cplusplus/00599C", "C++"),
-    img("https://cdn.simpleicons.org/amazonaws/FF9900", "AWS"),
+    img("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonaws.svg", "AWS"),
     img("https://cdn.simpleicons.org/docker/2496ED", "Docker"),
     img("https://cdn.simpleicons.org/linux/FCC624", "Linux"),
     img("https://cdn.simpleicons.org/git/F05032", "Git"),
@@ -116,8 +119,8 @@ export const DIGITAL_MARKETING_ROWS: IntegrationIconItem[][] = [
     img("https://cdn.simpleicons.org/semrush/FF642D", "SEMrush"),
   ],
   [
-    img("https://cdn.simpleicons.org/ahrefs/F4793B", "Ahrefs"),
-    img("https://cdn.simpleicons.org/screamingfrog/00A591", "Screaming Frog"),
+    luc(TrendingUp, "Ahrefs"),
+    luc(ScanLine, "Screaming Frog"),
     luc(Link, "Link Building"),
     luc(Globe, "SEO Audits"),
     luc(Globe, "Programmatic SEO"),
@@ -137,7 +140,7 @@ export const IT_CONSULTING_ROWS: IntegrationIconItem[][] = [
     luc(Settings, "Business Process Auto"),
     img("https://cdn.simpleicons.org/python/3776AB", "Custom Software Dev"),
     luc(Link, "API Integration"),
-    img("https://cdn.simpleicons.org/azuredevops/0078D7", "DevOps Services"),
+    img("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/azuredevops.svg", "DevOps Services"),
     luc(Settings, "Managed IT Services"),
   ],
 ];
@@ -151,7 +154,7 @@ export const SOFTWARE_DEV_ROWS: IntegrationIconItem[][] = [
     img("https://cdn.simpleicons.org/docker/2496ED", "Docker"),
   ],
   [
-    img("https://cdn.simpleicons.org/amazonaws/FF9900", "AWS"),
+    img("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonaws.svg", "AWS"),
     img("https://cdn.simpleicons.org/githubactions/2088FF", "GitHub Actions"),
     img("https://cdn.simpleicons.org/fastapi/009688", "FastAPI"),
     img("https://cdn.simpleicons.org/express/000000", "Express.js"),
@@ -187,7 +190,7 @@ export const AUTOMATION_ROWS: IntegrationIconItem[][] = [
     luc(Link, "Webhooks"),
     luc(Link, "REST APIs"),
     img("https://cdn.simpleicons.org/postgresql/4169E1", "PostgreSQL"),
-    img("https://cdn.simpleicons.org/slack/4A154B", "Slack API"),
+    img("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/slack.svg", "Slack API"),
   ],
 ];
 
