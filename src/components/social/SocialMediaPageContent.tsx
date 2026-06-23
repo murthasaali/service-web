@@ -214,7 +214,7 @@ export default function SocialMediaPageContent() {
 
       {/* ── Official Channels ──────────────────────────────────────────────── */}
       <section
-        className="relative py-20 px-6 border-t border-border bg-white"
+        className="relative py-12 px-6 border-t border-border bg-white md:py-14"
         style={{
           backgroundImage:
             "linear-gradient(rgba(15,23,42,0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.055) 1px, transparent 1px)",
@@ -226,7 +226,7 @@ export default function SocialMediaPageContent() {
           aria-hidden="true"
         />
         <div className="relative z-10 max-w-7xl mx-auto">
-          <AnimatedSection className="text-center mb-14">
+          <AnimatedSection className="text-center mb-8">
             <span
               style={{
                 display: "inline-flex", alignItems: "center", gap: 6,
@@ -237,24 +237,24 @@ export default function SocialMediaPageContent() {
               Verified Accounts
             </span>
             <h2
-              className="mt-6 font-display font-bold"
+              className="mt-4 font-display font-bold"
               style={{ fontSize: "clamp(26px, 3.5vw, 38px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "#0E7490" }}
             >
               Official Channels
             </h2>
-            <p className="mt-4 text-muted-foreground max-w-md mx-auto leading-relaxed" style={{ fontSize: 16 }}>
+            <p className="mt-3 text-muted-foreground max-w-md mx-auto leading-relaxed" style={{ fontSize: 15 }}>
               Our primary, actively managed social media presence.
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {officialPlatforms.map(({ name, handle, desc, href, icon }, i) => (
               <AnimatedSection key={name} delay={i * 0.06}>
                 <a href={href} target="_blank" rel="noopener noreferrer" className="block h-full">
                   <HighlightCard
                     title={name}
                     description={[handle, desc]}
-                    icon={<span className="text-2xl text-[#0891B2]">{icon}</span>}
+                    icon={<span className="text-xl text-[#0891B2]">{icon}</span>}
                   />
                 </a>
               </AnimatedSection>
@@ -264,9 +264,9 @@ export default function SocialMediaPageContent() {
       </section>
 
       {/* ── Registered Platforms ───────────────────────────────────────────── */}
-      <section className="py-20 px-6 border-t border-border bg-canvas">
+      <section className="py-12 px-6 border-t border-border bg-canvas md:py-14">
         <div className="max-w-7xl mx-auto">
-          <AnimatedSection className="text-center mb-14">
+          <AnimatedSection className="text-center mb-8">
             <span
               style={{
                 display: "inline-flex", alignItems: "center", gap: 6,
@@ -277,17 +277,17 @@ export default function SocialMediaPageContent() {
               Also On
             </span>
             <h2
-              className="mt-6 font-display font-bold"
+              className="mt-4 font-display font-bold"
               style={{ fontSize: "clamp(26px, 3.5vw, 38px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "#0E7490" }}
             >
               Registered Profiles
             </h2>
-            <p className="mt-4 text-muted-foreground max-w-md mx-auto leading-relaxed" style={{ fontSize: 16 }}>
+            <p className="mt-3 text-muted-foreground max-w-md mx-auto leading-relaxed" style={{ fontSize: 15 }}>
               We have claimed our name and presence on these platforms too.
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5" style={{ perspective: "1000px" }}>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" style={{ perspective: "1000px" }}>
             {registeredPlatforms.map(({ name, handle, desc, href, gradient, icon }, i) => (
               <AnimatedSection key={name} delay={i * 0.05}>
                 <InteractiveCard className="h-full">

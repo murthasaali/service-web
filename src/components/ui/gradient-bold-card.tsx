@@ -160,14 +160,14 @@ export const SocialGradientBlobCard: React.FC<SocialGradientBlobCardProps> = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`relative w-full h-full min-h-[300px] rounded-[14px] flex flex-col overflow-hidden
+      className={`relative w-full h-full min-h-[220px] rounded-[14px] flex flex-col overflow-hidden
                   shadow-[10px_10px_30px_rgba(15,23,42,0.06),-10px_-10px_30px_#ffffff]
                   border border-border/20 hover:border-cyan-200 hover:shadow-[0_16px_36px_rgba(8,145,178,0.12)]
                   transition-all duration-300 cursor-pointer ${className}`}
     >
       {/* Animated gradient blob — platform brand colours */}
       <div
-        className={`absolute top-1/2 left-1/2 w-[180px] h-[180px] rounded-full opacity-50
+        className={`absolute top-1/2 left-1/2 w-[140px] h-[140px] rounded-full opacity-50
                     filter blur-[20px] z-0 animate-social-blob
                     bg-gradient-to-r ${gradient}`}
       />
@@ -187,18 +187,18 @@ export const SocialGradientBlobCard: React.FC<SocialGradientBlobCardProps> = ({
       <div
         className="absolute inset-[4px] bg-white/95 backdrop-blur-[24px]
                    rounded-[10px] outline outline-2 outline-white z-10
-                   p-6 flex flex-col gap-4"
+                   p-4 flex flex-col gap-3"
       >
         {/* Top row: icon + badge */}
         <div className="flex items-start justify-between">
           <div
-            className={`w-11 h-11 rounded-xl flex items-center justify-center text-white text-xl
+            className={`w-9 h-9 rounded-xl flex items-center justify-center text-white text-lg
                         bg-gradient-to-br ${gradient} shadow-md`}
           >
             {socialIcon}
           </div>
           <span
-            className={`text-[10px] font-bold uppercase tracking-[0.14em] px-2.5 py-1 rounded-full
+            className={`text-[9px] font-bold uppercase tracking-[0.12em] px-2 py-0.5 rounded-full
                         ${category === "official"
                           ? "bg-cyan-50 text-cyan-700 border border-cyan-200"
                           : "bg-slate-100 text-slate-500 border border-slate-200"}`}
@@ -216,7 +216,7 @@ export const SocialGradientBlobCard: React.FC<SocialGradientBlobCardProps> = ({
         </div>
 
         {/* Description */}
-        <p className="text-sm leading-relaxed text-muted-foreground flex-1">{desc}</p>
+        <p className="text-xs leading-relaxed text-muted-foreground flex-1">{desc}</p>
 
         {/* CTA */}
         <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-700">

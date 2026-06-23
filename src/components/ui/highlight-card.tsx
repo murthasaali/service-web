@@ -26,13 +26,13 @@ const HighlightCard: FC<HighlightCardProps> = ({ title, description, icon }) => 
         </div>
 
         {/* Content */}
-        <div className="p-8 relative z-10 flex flex-col items-center text-center">
+        <div className="p-5 relative z-10 flex flex-col items-center text-center">
 
           {/* Icon */}
-          <div className="relative mb-6">
+          <div className="relative mb-4">
             <div className="absolute inset-0 rounded-full border-2 border-cyan-300/40 animate-ping" />
             <div className="absolute inset-0 rounded-full border border-cyan-200/30 animate-pulse" />
-            <div className="p-6 rounded-full backdrop-blur-lg border border-cyan-100
+            <div className="p-4 rounded-full backdrop-blur-lg border border-cyan-100
                             bg-gradient-to-br from-white/90 to-cyan-50/80
                             shadow-[0_8px_24px_rgba(8,145,178,0.12)]
                             transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-500">
@@ -43,7 +43,7 @@ const HighlightCard: FC<HighlightCardProps> = ({ title, description, icon }) => 
           </div>
 
           {/* Title */}
-          <h3 className="mb-4 text-2xl font-bold bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800
+          <h3 className="mb-2 text-xl font-bold bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800
                          bg-clip-text text-transparent transform group-hover:scale-105 transition-transform duration-300">
             {title}
           </h3>
@@ -53,7 +53,7 @@ const HighlightCard: FC<HighlightCardProps> = ({ title, description, icon }) => 
             {description.map((line, idx) => (
               <p
                 key={idx}
-                className={`text-sm leading-relaxed transition-colors duration-300
+                className={`text-xs leading-relaxed transition-colors duration-300
                   ${idx === 0
                     ? "font-mono text-[#0891B2] group-hover:text-[#0E7490]"
                     : "text-slate-500 group-hover:text-slate-700"
@@ -65,7 +65,7 @@ const HighlightCard: FC<HighlightCardProps> = ({ title, description, icon }) => 
           </div>
 
           {/* Divider */}
-          <div className="mt-6 w-1/3 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent
+          <div className="mt-4 w-1/3 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent
                           rounded-full transform group-hover:w-1/2 group-hover:h-[2px] transition-all duration-500" />
         </div>
 
