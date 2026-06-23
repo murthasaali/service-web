@@ -1,11 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Clock, ChevronRight, Send } from 'lucide-react';
+import { ArrowRight, Clock, BookOpen, Search } from 'lucide-react';
 import AnimatedSection from '@/components/common/AnimatedSection';
 import { blogPosts, categories } from '@/data/blog';
+import ShaderBackground from '@/components/ui/shader-background';
+import NeuralBackground from '@/components/ui/flow-field-background';
 import type { BlogPost } from '@/data/blog';
 
 function CategoryBadge({ category }: { category: string }) {
@@ -35,14 +37,26 @@ function AuthorLine({ post }: { post: BlogPost }) {
 	);
 }
 
-function BlogCard({ post, delay }: { post: BlogPost; delay: number }) {
+function BlogCard({
+	post,
+	delay,
+	onMouseEnter,
+	onMouseLeave,
+}: {
+	post: BlogPost;
+	delay: number;
+	onMouseEnter: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+	onMouseLeave: () => void;
+}) {
 	return (
-		<AnimatedSection delay={delay} className='h-full'>
+		<AnimatedSection delay={delay} className='w-full flex justify-center'>
 			<Link
 				href={`/blog/${post.slug}`}
-				className='group flex h-full flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-stone-300 hover:shadow-[0_22px_55px_rgba(15,23,42,0.09)]'
+				onMouseEnter={onMouseEnter}
+				onMouseLeave={onMouseLeave}
+				className='group flex w-full max-w-sm h-full flex-col overflow-hidden rounded-3xl border border-cyan-100/80 bg-white p-3 shadow-lg transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-2 hover:scale-[1.01]'
 			>
-				<div className='relative aspect-[16/10] overflow-hidden bg-stone-100'>
+				<div className='relative aspect-[16/10] overflow-hidden rounded-2xl bg-stone-100'>
 					<Image
 						src={post.image}
 						alt={post.imageAlt}
@@ -56,11 +70,11 @@ function BlogCard({ post, delay }: { post: BlogPost; delay: number }) {
 					</div>
 				</div>
 
-				<div className='flex flex-1 flex-col p-6'>
-					<h2 className='font-display text-2xl font-normal leading-tight text-stone-950 text-balance transition group-hover:text-[#0F172A]'>
+				<div className='flex flex-1 flex-col p-3 pt-2'>
+					<h2 className='font-display text-2xl font-normal leading-tight text-[#0F172A] text-balance transition group-hover:text-cyan-700'>
 						{post.title}
 					</h2>
-					<p className='mt-4 line-clamp-3 text-sm leading-7 text-stone-600'>
+					<p className='mt-4 line-clamp-3 text-sm leading-6 text-stone-600'>
 						{post.excerpt}
 					</p>
 
@@ -72,7 +86,7 @@ function BlogCard({ post, delay }: { post: BlogPost; delay: number }) {
 						</div>
 					</div>
 
-					<span className='mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#0F172A] transition group-hover:gap-3'>
+					<span className='mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#0F172A] transition group-hover:gap-3 group-hover:text-cyan-700'>
 						Read Article
 						<ArrowRight size={15} aria-hidden='true' />
 					</span>
@@ -82,53 +96,155 @@ function BlogCard({ post, delay }: { post: BlogPost; delay: number }) {
 	);
 }
 
+function BlogCardSkeleton() {
+	return (
+		<div className='w-full max-w-sm rounded-3xl border border-cyan-100/60 bg-white p-3 shadow-md animate-pulse'>
+			{/* Image Placeholder */}
+			<div className='relative aspect-[16/10] overflow-hidden rounded-2xl bg-stone-200/80'>
+				<div className='absolute left-4 top-4 h-6 w-16 rounded-full bg-stone-300/60' />
+			</div>
+
+			{/* Content Placeholder */}
+			<div className='p-3 pt-4 flex flex-col'>
+				{/* Title Lines */}
+				<div className='h-6 w-5/6 rounded-md bg-stone-200/90 mb-3' />
+				<div className='h-6 w-2/3 rounded-md bg-stone-200/90 mb-5' />
+
+				{/* Excerpt Lines */}
+				<div className='h-3.5 w-full rounded bg-stone-100/90 mb-2' />
+				<div className='h-3.5 w-11/12 rounded bg-stone-100/90 mb-2' />
+				<div className='h-3.5 w-4/5 rounded bg-stone-100/90 mb-6' />
+
+				{/* Divider */}
+				<div className='border-t border-stone-150 pt-5 mt-auto flex items-center gap-3'>
+					{/* Author Avatar */}
+					<div className='h-8 w-8 rounded-full bg-stone-200/90 shrink-0' />
+					{/* Author details */}
+					<div className='flex-1 min-w-0'>
+						<div className='h-3.5 w-16 rounded bg-stone-200/90 mb-1.5' />
+						<div className='h-3 w-12 rounded bg-stone-100/90' />
+					</div>
+					{/* Read time */}
+					<div className='h-3 w-16 rounded bg-stone-100/90 shrink-0 ml-auto' />
+				</div>
+			</div>
+		</div>
+	);
+}
+
 export default function BlogPageContent() {
 	const [activeCategory, setActiveCategory] = useState<string>('All');
-	const [email, setEmail] = useState('');
-	const [subscribed, setSubscribed] = useState(false);
+	const [searchQuery, setSearchQuery] = useState<string>('');
+	const [isSearching, setIsSearching] = useState<boolean>(false);
+	const [hoveredCardRect, setHoveredCardRect] = useState<{ x: number; y: number; width: number; height: number } | null>(null);
 
-	const visiblePosts = activeCategory === 'All' ? blogPosts : blogPosts.filter(post => post.category === activeCategory);
+	useEffect(() => {
+		setIsSearching(true);
+		const timer = setTimeout(() => {
+			setIsSearching(false);
+		}, 350);
 
-	const handleSubscribe = (e: React.FormEvent) => {
-		e.preventDefault();
-		if (email.trim()) setSubscribed(true);
+		return () => clearTimeout(timer);
+	}, [searchQuery, activeCategory]);
+
+	const handleCardMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		const cardEl = e.currentTarget;
+		const canvasContainerEl = document.getElementById('blog-list');
+		if (!cardEl || !canvasContainerEl) return;
+
+		const cardRect = cardEl.getBoundingClientRect();
+		const containerRect = canvasContainerEl.getBoundingClientRect();
+
+		setHoveredCardRect({
+			x: cardRect.left - containerRect.left,
+			y: cardRect.top - containerRect.top,
+			width: cardRect.width,
+			height: cardRect.height,
+		});
 	};
+
+	const handleCardMouseLeave = () => {
+		setHoveredCardRect(null);
+	};
+
+	const visiblePosts = blogPosts.filter((post) => {
+		const matchesCategory = activeCategory === 'All' || post.category === activeCategory;
+		const matchesSearch =
+			searchQuery.trim() === '' ||
+			post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+			post.author.name.toLowerCase().includes(searchQuery.toLowerCase());
+		return matchesCategory && matchesSearch;
+	});
 
 	return (
 		<>
-			<section className='relative overflow-hidden bg-white px-6 pb-16 pt-44 md:pb-20 md:pt-48'>
+			<section
+				id='blog-list'
+				className='relative isolate overflow-hidden bg-white px-6 pb-16 pt-44 md:pb-20 md:pt-48'
+			>
+				{/* Interactive Flow Field Background */}
+				<NeuralBackground
+					className='absolute inset-0 -z-10'
+					color='#22d3ee' // Cyan-400
+					trailOpacity={0.16} // Subtle trails
+					particleCount={950} // Elegant and clean density
+					speed={1.6} // Rhythmic, smooth movement speed
+					theme='light'
+					hoveredCardRect={hoveredCardRect}
+				/>
+
+				{/* Grid & Radial Gradient overlay on top of canvas */}
 				<div
-					className='pointer-events-none absolute inset-x-0 top-24 h-48 opacity-55'
+					className='pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_30%_0%,rgba(210,247,255,0.58),transparent_34%)]'
 					style={{
-						background:
-							'radial-gradient(circle at 50% 15%, rgba(210,247,255,0.55), transparent 36%), linear-gradient(90deg, transparent, rgba(72,127,137,0.12), transparent)',
+						backgroundImage:
+							'linear-gradient(rgba(15, 23, 42, 0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, 0.055) 1px, transparent 1px)',
+						backgroundSize: '72px 72px',
 					}}
 					aria-hidden='true'
 				/>
-				<div className='relative mx-auto max-w-4xl text-center'>
-					<AnimatedSection>
-						<span className='inline-flex items-center rounded-full border border-stone-200 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-stone-500 shadow-sm backdrop-blur'>
-							aibizmod Journal
-						</span>
-						<h1
-							className='mx-auto mt-7 max-w-3xl font-display font-normal text-[#0F172A] text-balance'
-							style={{ fontSize: 'clamp(34px, 5vw, 58px)', lineHeight: 1.04 }}
-						>
-							Practical notes from building a service brand
-						</h1>
-						<p className='mx-auto mt-6 max-w-2xl text-base leading-8 text-stone-600 md:text-lg'>
-							Field notes on the aibizmod domain, our SEO service journey,
-							generative search, and the trust work that happens before traffic
-							starts to matter.
-						</p>
-					</AnimatedSection>
-				</div>
-			</section>
 
-			<section className='border-t border-stone-200 bg-stone-50 px-6 py-16 md:py-20'>
-				<div className='mx-auto max-w-7xl'>
-					<div className='mb-10 overflow-x-auto'>
-						<div className='flex min-w-max items-center gap-2 pb-1 md:min-w-0 md:flex-wrap'>
+				<div className='relative z-10 mx-auto max-w-7xl'>
+					{/* Header Content */}
+					<div className='mx-auto max-w-4xl text-center mb-16 md:mb-20'>
+						<AnimatedSection>
+							<span className='inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-white/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700 shadow-[0_12px_35px_rgba(59,130,246,0.10)] backdrop-blur-md'>
+								<BookOpen size={14} aria-hidden='true' />
+								aibizmod Journal
+							</span>
+							<h1
+								className='mx-auto mt-7 max-w-3xl font-display font-thin text-[#0F172A] text-balance'
+								style={{ fontSize: 'clamp(34px, 5vw, 58px)', lineHeight: 1.04 }}
+							>
+								Practical notes from building a{' '}
+								<span className='gradient-text font-normal'>service brand</span>
+							</h1>
+							<p className='mx-auto mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-base leading-8 text-stone-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md md:text-lg'>
+								Field notes on the aibizmod domain, our SEO service journey,
+								generative search, and the trust work that happens before traffic
+								starts to matter.
+							</p>
+						</AnimatedSection>
+					</div>
+
+					{/* Filters & Search Row */}
+					<div className='mb-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between'>
+						{/* Search Bar */}
+						<div className='relative w-full max-w-md shrink-0'>
+							<input
+								type='text'
+								placeholder='Search articles by title or author...'
+								value={searchQuery}
+								onChange={(e) => setSearchQuery(e.target.value)}
+								className='w-full rounded-full border border-stone-300 bg-white px-5 py-2.5 pl-11 text-sm font-medium text-stone-900 placeholder-stone-400 shadow-sm transition hover:border-stone-400 focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20'
+							/>
+							<div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-stone-500'>
+								<Search size={16} aria-hidden='true' />
+							</div>
+						</div>
+
+						{/* Category Filters */}
+						<div className='flex items-center gap-2 overflow-x-auto pb-1 md:pb-0'>
 							{categories.map((category) => (
 								<button
 									key={category}
@@ -145,11 +261,36 @@ export default function BlogPageContent() {
 						</div>
 					</div>
 
-					<div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3'>
-						{visiblePosts.map((post, index) => (
-							<BlogCard key={post.slug} post={post} delay={index * 0.06} />
-						))}
-					</div>
+					{/* Blog Cards Grid / Empty State */}
+					{isSearching ? (
+						<div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 justify-items-center w-full'>
+							{Array.from({ length: 3 }).map((_, i) => (
+								<BlogCardSkeleton key={i} />
+							))}
+						</div>
+					) : visiblePosts.length > 0 ? (
+						<div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 justify-items-center'>
+							{visiblePosts.map((post, index) => (
+								<BlogCard
+									key={post.slug}
+									post={post}
+									delay={index * 0.06}
+									onMouseEnter={handleCardMouseEnter}
+									onMouseLeave={handleCardMouseLeave}
+								/>
+							))}
+						</div>
+					) : (
+						<AnimatedSection className='flex flex-col items-center justify-center py-16 text-center w-full'>
+							<div className='flex h-16 w-16 items-center justify-center rounded-full bg-stone-100 text-stone-400 mb-4'>
+								<Search size={28} aria-hidden='true' />
+							</div>
+							<h3 className='font-display text-xl font-semibold text-[#0F172A]'>No articles found</h3>
+							<p className='mt-2 text-stone-500 max-w-md text-sm leading-6'>
+								We couldn't find any articles matching "{searchQuery}" in the "{activeCategory}" category. Try typing something else or selecting a different category.
+							</p>
+						</AnimatedSection>
+					)}
 				</div>
 			</section>
 		</>
