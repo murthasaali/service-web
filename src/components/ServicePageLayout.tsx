@@ -374,7 +374,7 @@ export default function ServicePageLayout({
         </section>
 
         {/* ── 3. What's Included ──────────────────────────────────────────── */}
-        <section className="px-6 py-24 bg-[#F8FEFF]">
+        {/* <section className="px-6 py-24 bg-[#F8FEFF]">
           <div className="max-w-7xl mx-auto">
             <AnimatedSection className="text-center mb-14">
               <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
@@ -415,7 +415,7 @@ export default function ServicePageLayout({
               })}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ── 3b. Animated Service Cards ──────────────────────────────────── */}
         {serviceCards && serviceCards.length > 0 && (
