@@ -33,9 +33,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We provide technical execution for digital marketing setups, search auditing, and analytics tracking. When you engage us, you receive a detailed tracking plan specifying custom event triggers, a comprehensive technical SEO audit report, custom-built Looker Studio reporting dashboards, and structured search campaign maps. We do not write vague marketing copy or buy list directories; we configure direct attribution and measurement systems so you can review actual campaign returns.",
-      "Our services are designed to verify and map customer acquisition routes. For instance, we set up Google Analytics 4 (GA4) with custom conversion logs, audit Google Search Console to fix crawling and schema markup errors, analyze landing page interface friction, and build keyword mapping frameworks for paid search campaigns.",
-      "Previous projects include: a GA4 and GTM conversion audit for an e-commerce company that resolved broken checkout event logs; a Search Console crawl optimization project for a software provider that corrected sitemap errors and indexed missing product pages; and a keyword research and ad campaign setup for a logistics provider targeting commercial business-to-business shipping search terms."
+      "We provide technical execution for digital marketing setups, search auditing, and analytics tracking. When you engage us, you receive a detailed tracking plan specifying custom event triggers, a comprehensive technical SEO audit report, custom-built Looker Studio reporting dashboards, and structured search campaign maps. We do not write vague marketing copy or buy list directories; we configure direct attribution and measurement systems using tools such as Google Analytics 4, Google Search Console, and Google Tag Manager — so you can verify conversion events, fix crawling errors, reduce landing page friction, and build keyword mapping frameworks that connect campaigns to measurable business outcomes.",
     ],
     benefits: [
       "Accurate Google Analytics attribution",

@@ -724,59 +724,6 @@ export default function ServicePageLayout({
           </div>
         </section>
 
-        {/* ── 7. CTA Banner ───────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-white px-6 py-24">
-          <div
-            className="pointer-events-none absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-200/30 blur-3xl"
-            aria-hidden="true"
-          />
-
-          <AnimatedSection className="relative z-10 mx-auto max-w-4xl rounded-[32px] border border-cyan-100 bg-[#ECFEFF]/70 p-8 text-center shadow-[0_22px_70px_rgba(8,145,178,0.12)] backdrop-blur-md md:p-12">
-            <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-              Let&apos;s Talk
-            </span>
-
-            <h2
-              className="mt-5 font-display font-thin text-[#0F172A] text-balance"
-              style={{
-                fontSize: "clamp(30px, 4vw, 48px)",
-                lineHeight: 1.08,
-              }}
-            >
-              Start your{" "}
-              <span className="gradient-text font-normal">{data.name}</span>{" "}
-              project today
-            </h2>
-
-            <p
-              className="mx-auto mt-5 max-w-xl text-base leading-8 text-slate-600"
-            >
-              Tell us what you&apos;re building and we&apos;ll put together a
-              tailored plan, timeline, and estimate at no charge.
-            </p>
-
-            <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" aria-label="Get a free consultation">
-                <StarButton
-                  as="span"
-                  lightColor="#38bdf8"
-                  backgroundColor="#0f172a"
-                  className="h-12 font-semibold shadow-[0_0_12px_rgba(56,189,248,0.25)]"
-                >
-                  Get a Free Consultation
-                  <ArrowRight size={16} aria-hidden="true" />
-                </StarButton>
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-cyan-100 bg-white/55 px-6 text-sm font-semibold text-[#0F172A] shadow-[0_12px_32px_rgba(15,23,42,0.08)] backdrop-blur-md transition hover:border-cyan-200 hover:bg-white"
-              >
-                View All Services
-              </Link>
-            </div>
-          </AnimatedSection>
-        </section>
-
       </main>
       </StickyFooterLayout>
     </>

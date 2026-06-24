@@ -33,9 +33,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We provide technical audits and write technology roadmaps. When you engage us for IT consulting, you receive specific documents: a systems architecture diagram with identified performance bottleneck nodes, a comparative spreadsheet evaluating candidate software vendors with weighted scores, a cost ledger specifying cloud billing waste, and a security compliance checklist. We do not deliver vague strategy slide decks; we provide practical technical reviews with actionable implementation guides.",
-      "Our consulting engagements deliver clear specifications before you purchase software or servers. We review your database structures, audit cloud usage logs on AWS or Azure to reduce billing, perform vulnerability reviews on access controls, and draw up 12-month technical roadmap releases to align software development milestones.",
-      "Previous projects include: a cloud cost review for a B2B SaaS platform that reduced AWS spending by 28% through resizing server instances; an architecture audit for an insurance broker that mapped API data paths and resolved data sync delays; and a vendor comparison study for a retail supplier evaluating warehouse inventory systems."
+      "We provide technical audits and write technology roadmaps that deliver clear specifications before you purchase software or servers. When you engage us for IT consulting, you receive specific documents: a systems architecture diagram with identified performance bottleneck nodes, a comparative spreadsheet evaluating candidate software vendors with weighted scores, a cost ledger specifying cloud billing waste, and a security compliance checklist. We do not deliver vague strategy slide decks; we review your database structures, audit cloud usage logs on AWS or Azure to reduce billing, perform vulnerability reviews on access controls, and produce 12-month technical roadmaps that align software development milestones with actionable implementation guides.",
     ],
     benefits: [
       "Cloud cost reduction recommendations",

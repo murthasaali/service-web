@@ -33,9 +33,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We design and build custom software systems to run business operations and replace manual workflows. When you work with us, you receive a detailed system architecture diagram, an entity-relationship database design, role-based access management, API integrations connecting your internal tools, and a complete documentation package. We do not sell pre-configured packages; everything is custom-written to fit your operational constraints.",
-      "Our custom software development addresses specific internal workflows and data processing. For instance, we configure operations software to track products through a warehouse, build ERP systems to reconcile supplier invoices with purchase orders, and build secure internal CRM views that display complete client transaction histories in one screen.",
-      "Previous projects include: a custom ERP and inventory system for a regional manufacturing company that tracks raw material stock and automates ordering; a patient intake and referral booking platform for a dental group that integrates with their clinical calendar; and a B2B SaaS scheduling application for a logistics company that coordinates cleaning and maintenance crew shifts across multiple locations."
+      "We design and build custom software systems to run business operations and replace manual workflows. When you work with us, you receive a detailed system architecture diagram, an entity-relationship database design, role-based access management, API integrations connecting your internal tools, and a complete documentation package. We do not sell pre-configured packages; everything is custom-written to fit your operational constraints, whether that means configuring operations software to track products through a warehouse, building ERP systems to reconcile supplier invoices with purchase orders, or building secure internal CRM views that display complete client transaction histories in one screen.",
     ],
     benefits: [
       "Direct database schema access",

@@ -30,9 +30,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We deploy cloud hosting platforms and automate release pipelines. When you engage us, you receive a visual infrastructure diagram, active server and database monitoring systems, a documented backup policy, an automated deployment workflow with rollbacks, a security access checklist, and separated staging and production environments. We write plain-language specifications explaining server costs and resource options so your management team can make clear budget decisions.",
-      "Our infrastructure builds ensure your systems remain stable during releases and traffic fluctuations. We split applications into separate staging and production zones so updates can be tested prior to release, configure daily automated database backups, set up uptime alerts, and build deploy/rollback scripts to restore previous code versions instantly in case of issues.",
-      "Previous projects include: a multi-environment AWS setup for a SaaS company that isolates development, staging, and live production databases; a daily snapshot and automated database recovery system configured on Google Cloud for a billing application; and a git-triggered CI/CD release pipeline using GitHub Actions that deploys code to Vercel and AWS Lambda."
+      "We deploy cloud hosting platforms and automate release pipelines to keep your systems stable during releases and traffic fluctuations. When you engage us, you receive a visual infrastructure diagram, active server and database monitoring systems, a documented backup policy, an automated deployment workflow with rollbacks, a security access checklist, and separated staging and production environments. We write plain-language specifications explaining server costs and resource options so your management team can make clear budget decisions. Updates are tested in an isolated staging zone before reaching production, daily database backups run automatically, and deploy/rollback scripts restore previous code versions instantly if a release causes issues.",
     ],
     benefits: [
       "Separated staging and production systems",

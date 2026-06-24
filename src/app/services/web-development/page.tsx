@@ -30,9 +30,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We build custom web systems that run business operations and customer interactions. When you engage us for web development, you receive a version-controlled git repository, a fully configured staging environment, a live production environment, and a structured handover document outlining system access and credentials. There are no generic templates or automated setups; every page and dashboard is written specifically for your database and business model.",
-      "Our projects address specific commercial use cases. For instance, we build booking platforms for fleet management companies, private customer portals for client document sharing, SaaS dashboards for subscription billing, and e-commerce platforms connected to internal CRM databases. This ensures that web transactions flow directly into your sales and inventory records.",
-      "Previous projects include: a multi-site booking portal for a regional equipment hire firm that syncs with their physical inventory; a secure billing dashboard for a B2B logistics company that lets clients pay invoices via Stripe and download receipts; and a CMS-integrated corporate site for a financial advisory firm allowing their staff to publish compliance updates directly without developer assistance."
+      "We build custom web systems that run business operations and customer interactions. When you engage us, you receive a version-controlled git repository, a fully configured staging environment, a live production environment, and a structured handover document outlining system access and credentials. There are no generic templates or automated setups; every page and dashboard is written specifically for your database and business model. This approach allows us to build booking platforms for fleet management companies, private customer portals for client document sharing, SaaS dashboards for subscription billing, and e-commerce platforms connected to internal CRM databases — ensuring web transactions flow directly into your sales and inventory records.",
     ],
     benefits: [
       "Version-controlled codebase ownership",

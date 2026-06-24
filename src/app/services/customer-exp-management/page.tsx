@@ -30,9 +30,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We configure support helpdesks, clean client databases, and customize communication workflows. When you work with us, you receive a mapped support routing diagram, cleaned CRM contact fields, and integrated ticketing channels across HubSpot, Zoho, Salesforce, Intercom, and WhatsApp Business. We do not write soft relationship slogans; we build the database syncs and communication queues so your agents see exact customer logs when answering queries.",
-      "Our projects target specific data visibility issues. For instance, we merge duplicate CRM profiles, configure automated ticket assignment rules based on agent load, set up automated post-resolution feedback surveys, and display billing records directly inside support chat screens.",
-      "Previous projects include: a HubSpot data cleanup for a manufacturing company that merged 10,000 duplicate contacts and structured standard fields; a multi-channel ticketing routing setup in Zendesk and Intercom for an e-commerce brand that lowered triage time; and a WhatsApp Business API integration that automatically notifies clients of shipping updates and routes queries to active support queues."
+      "We configure support helpdesks, clean client databases, and customize communication workflows to give your agents accurate customer context when answering queries. When you work with us, you receive a mapped support routing diagram, cleaned CRM contact fields, and integrated ticketing channels across HubSpot, Zoho, Salesforce, Intercom, and WhatsApp Business. We do not write soft relationship slogans; we build the database syncs and communication queues — merging duplicate CRM profiles, configuring automated ticket assignment rules based on agent load, setting up post-resolution feedback surveys, and displaying billing records directly inside support chat screens — so every agent interaction is backed by complete and accurate data.",
     ],
     benefits: [
       "Deduplicated and structured CRM contacts",

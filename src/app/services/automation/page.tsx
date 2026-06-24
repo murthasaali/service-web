@@ -30,9 +30,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We design and build custom data pipelines and workflow integrations. When you work with us, you receive fully documented runbooks, visual workflow diagrams, error notification alerts, and database synchronizations. We do not sell pre-built plug-ins or third-party licenses; we configure custom codebases and API connections using platforms like n8n, Make, or Python scripts to link your existing tools directly.",
-      "Our projects replace manual data-entry tasks with programmatic logic. We build pipelines that capture email invoices and route them to accounting, assign inbound leads to sales staff based on round-robin routing rules, and compile weekly reports into summaries sent to managers automatically. Before-and-after scenarios are mapped clearly. For example, rather than a clerk downloading CSVs and copy-pasting customer details to a CRM manually (taking 4 hours a week), the system synchronizes records instantly via secure APIs.",
-      "Previous projects include: a billing pipeline that extracts PDF invoice details using OCR text recognition and routes them to Xero; a lead assignment system that parses Webhook data from Typeform and assigns tasks in Salesforce; and a weekly PDF reporting script that queries database tables and emails summary metrics to company directors every Friday morning."
+      "We design and build custom data pipelines and workflow integrations that replace manual data-entry tasks with programmatic logic. When you work with us, you receive fully documented runbooks, visual workflow diagrams, error notification alerts, and database synchronizations. We do not sell pre-built plug-ins or third-party licenses; we configure custom codebases and API connections using platforms like n8n, Make, or Python scripts. These pipelines capture email invoices and route them to accounting, assign inbound leads to sales staff based on round-robin routing rules, and compile weekly reports into summaries sent to managers automatically — so repetitive tasks run without manual intervention.",
     ],
     benefits: [
       "No more manual copy-pasting",
