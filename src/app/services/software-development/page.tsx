@@ -33,7 +33,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We design and build custom software systems to run business operations and replace manual workflows. When you work with us, you receive a detailed system architecture diagram, an entity-relationship database design, role-based access management, API integrations connecting your internal tools, and a complete documentation package. We do not sell pre-configured packages; everything is custom-written to fit your operational constraints, whether that means configuring operations software to track products through a warehouse, building ERP systems to reconcile supplier invoices with purchase orders, or building secure internal CRM views that display complete client transaction histories in one screen.",
+      "Off-the-shelf software works until the business outgrows it. At that point you're either paying for features you don't use or working around the ones you need. Custom software is slower to start but built around how the business actually runs: the approval steps that matter, the reports that get pulled every Monday, the way stock moves through a warehouse, the fields your team actually fills in. The database is designed for your data, the access controls reflect your team structure, and the documentation covers how to run it without needing to call anyone.",
     ],
     benefits: [
       "Direct database schema access",

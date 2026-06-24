@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { iconMap, type IconKey } from "./ServicePageLayout";
 
 export interface ServiceCard {
@@ -10,6 +11,7 @@ export interface ServiceCard {
   title: string;
   bullets: string[];
   image?: string;
+  href?: string;
 }
 
 function Card({
@@ -24,18 +26,27 @@ function Card({
   const hasImage = Boolean(card.image);
   const Icon = card.iconKey ? iconMap[card.iconKey] : null;
 
+  function handleMouseEnter() {
+    if (!prefersReduced) setHovered(true);
+  }
+  function handleMouseLeave() {
+    if (!prefersReduced) setHovered(false);
+  }
+
   return (
     <div
       role="listitem"
-      onMouseEnter={() => !prefersReduced && setHovered(true)}
-      onMouseLeave={() => !prefersReduced && setHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       style={{
         position: "relative",
         overflow: "hidden",
         borderRadius: "24px",
         background: "rgba(255,255,255,0.75)",
         backdropFilter: "blur(12px)",
-        border: `1px solid ${active ? "rgba(165,243,252,0.9)" : "rgba(103,232,249,0.8)"}`,
+        border: active
+          ? "1px solid rgba(165,243,252,0.9)"
+          : "1px solid rgba(103,232,249,0.8)",
         boxShadow: active
           ? "0 24px 70px rgba(8,145,178,0.14)"
           : "0 18px 55px rgba(59,130,246,0.09)",
@@ -45,7 +56,21 @@ function Card({
         height: "100%",
       }}
     >
-      {/* Radial fill layer — only when using icon mode */}
+      {/* Clickable overlay when href is provided */}
+      {card.href && (
+        <Link
+          href={card.href}
+          aria-label={card.title}
+          style={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 5,
+            cursor: "pointer",
+          }}
+        />
+      )}
+
+      {/* Radial fill layer — only in icon mode */}
       {!hasImage && (
         <div
           aria-hidden="true"
@@ -75,19 +100,24 @@ function Card({
             alt={card.title}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            style={{ objectFit: "cover", transition: "transform 0.4s ease", transform: active ? "scale(1.04)" : "scale(1)" }}
+            style={{
+              objectFit: "cover",
+              transition: "transform 0.4s ease",
+              transform: active ? "scale(1.04)" : "scale(1)",
+            }}
           />
           <div
             aria-hidden="true"
             style={{
-              position: "absolute", inset: 0,
+              position: "absolute",
+              inset: 0,
               background: "linear-gradient(to bottom, transparent 55%, rgba(255,255,255,0.55) 100%)",
             }}
           />
         </div>
       )}
 
-      {/* Card content — always above fill */}
+      {/* Card content */}
       <div
         style={{
           position: "relative",
@@ -98,7 +128,7 @@ function Card({
           flex: 1,
         }}
       >
-        {/* Icon box — only when no image */}
+        {/* Icon — only in icon mode */}
         {!hasImage && Icon && (
           <div
             className="flex items-center justify-center rounded-full border border-cyan-100 text-cyan-700 shadow-[0_12px_28px_rgba(8,145,178,0.10)]"
@@ -115,37 +145,24 @@ function Card({
           </div>
         )}
 
-        {/* Title */}
         <h3
           className="font-display font-semibold text-[#0F172A]"
-          style={{
-            fontSize: "16px",
-            fontWeight: 650,
-            lineHeight: 1.3,
-            marginBottom: "0",
-          }}
+          style={{ fontSize: "16px", fontWeight: 650, lineHeight: 1.3, marginBottom: "0" }}
         >
           {card.title}
         </h3>
 
-        {/* Divider */}
         <div
           aria-hidden="true"
           style={{
             height: "1px",
-            background: active
-              ? "rgba(8,145,178,0.30)"
-              : "rgba(0,0,0,0.08)",
+            background: active ? "rgba(8,145,178,0.30)" : "rgba(0,0,0,0.08)",
             margin: "12px 0",
             transition: "background 0.3s",
           }}
         />
 
-        {/* Bullet list */}
-        <ul
-          style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }}
-          role="list"
-        >
+        <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }} role="list">
           {card.bullets.map((bullet) => (
             <li
               key={bullet}
@@ -168,9 +185,7 @@ function Card({
                   transition: "background 0.3s",
                 }}
               />
-              <span
-                style={{ fontSize: "14px", color: "#475569", lineHeight: 1.5 }}
-              >
+              <span style={{ fontSize: "14px", color: "#475569", lineHeight: 1.5 }}>
                 {bullet}
               </span>
             </li>
@@ -181,11 +196,7 @@ function Card({
   );
 }
 
-export default function ServiceCardsSection({
-  cards,
-}: {
-  cards: ServiceCard[];
-}) {
+export default function ServiceCardsSection({ cards }: { cards: ServiceCard[] }) {
   const prefersReduced = useReducedMotion();
 
   return (
@@ -198,33 +209,21 @@ export default function ServiceCardsSection({
       }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        {/* Section header — matches existing "What's Included" eyebrow style exactly */}
         <div className="text-center mb-14">
           <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
             What We Offer
           </span>
           <h2
             className="mt-5 font-display font-thin text-[#0F172A] text-balance"
-            style={{
-              fontSize: "clamp(30px, 4vw, 52px)",
-              lineHeight: 1.08,
-            }}
+            style={{ fontSize: "clamp(30px, 4vw, 52px)", lineHeight: 1.08 }}
           >
             End-to-end digital services for modern businesses
           </h2>
         </div>
 
-        {/* Responsive cards grid */}
-        <div
-          role="list"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
-        >
+        <div role="list" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {cards.map((card) => (
-            <Card
-              key={card.title}
-              card={card}
-              prefersReduced={prefersReduced}
-            />
+            <Card key={card.title} card={card} prefersReduced={prefersReduced} />
           ))}
         </div>
       </div>

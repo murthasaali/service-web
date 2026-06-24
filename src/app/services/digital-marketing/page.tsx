@@ -33,7 +33,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We provide technical execution for digital marketing setups, search auditing, and analytics tracking. When you engage us, you receive a detailed tracking plan specifying custom event triggers, a comprehensive technical SEO audit report, custom-built Looker Studio reporting dashboards, and structured search campaign maps. We do not write vague marketing copy or buy list directories; we configure direct attribution and measurement systems using tools such as Google Analytics 4, Google Search Console, and Google Tag Manager — so you can verify conversion events, fix crawling errors, reduce landing page friction, and build keyword mapping frameworks that connect campaigns to measurable business outcomes.",
+      "A lot of digital marketing spend goes in before anyone has checked whether the tracking actually works. Tags fire on the wrong pages, form submissions don't register as conversions, and the reporting dashboard shows sessions instead of the leads that matter. Before campaigns scale, those foundations need to be solid. The work here covers auditing what's already set up, configuring GA4 and Google Tag Manager correctly, fixing Search Console errors that stop pages from being indexed, and building Looker Studio dashboards that show what's actually happening rather than what looks good in a weekly report.",
     ],
     benefits: [
       "Accurate Google Analytics attribution",

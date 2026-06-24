@@ -33,7 +33,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We develop custom mobile applications for business workflows and customer-facing interactions. When you engage us, you receive a version-controlled git repository, a configured mobile app distribution pipeline via TestFlight and Firebase, direct integration with Sentry or Firebase Crashlytics, and completed App Store and Google Play privacy label declarations. Every application is built natively or using React Native or Flutter based on concrete technical requirements, not generic boilerplate templates. This allows us to deliver booking applications with integrated payment processing, technician field apps that sync coordinates and job status, customer self-service billing portals, and inventory tracking apps that interface with mobile barcode scanners — each built to the operational spec of the business it serves.",
+      "Building a mobile app is straightforward when the spec is clear. The hard part is usually getting to a clear spec. What does the app need to do offline? How does it handle a bad network connection in the field? What happens when a user submits a form twice? These questions matter more than the choice of framework. The app gets designed around actual use: the technician who needs job details without a signal, the customer who wants to track a delivery, the warehouse team scanning items into a system. It ships with crash reporting connected, the App Store submission handled, and the source code yours to keep.",
     ],
     benefits: [
       "Direct database API integration",

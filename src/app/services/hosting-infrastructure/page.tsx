@@ -30,7 +30,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We deploy cloud hosting platforms and automate release pipelines to keep your systems stable during releases and traffic fluctuations. When you engage us, you receive a visual infrastructure diagram, active server and database monitoring systems, a documented backup policy, an automated deployment workflow with rollbacks, a security access checklist, and separated staging and production environments. We write plain-language specifications explaining server costs and resource options so your management team can make clear budget decisions. Updates are tested in an isolated staging zone before reaching production, daily database backups run automatically, and deploy/rollback scripts restore previous code versions instantly if a release causes issues.",
+      "Bad deployments are almost always a process problem, not a code problem. Someone pushed directly to production, there was no staging environment to catch the issue first, and now the rollback is manual and stressful. Getting the infrastructure right means putting those safeguards in before they're needed: separate environments for testing and live, automated backups that actually get tested, deployment pipelines that can roll back in under a minute, and monitoring that alerts the right people before users notice something is wrong. The setup is documented in plain language so your team understands what's running and what it costs.",
     ],
     benefits: [
       "Separated staging and production systems",

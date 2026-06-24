@@ -30,7 +30,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We configure support helpdesks, clean client databases, and customize communication workflows to give your agents accurate customer context when answering queries. When you work with us, you receive a mapped support routing diagram, cleaned CRM contact fields, and integrated ticketing channels across HubSpot, Zoho, Salesforce, Intercom, and WhatsApp Business. We do not write soft relationship slogans; we build the database syncs and communication queues — merging duplicate CRM profiles, configuring automated ticket assignment rules based on agent load, setting up post-resolution feedback surveys, and displaying billing records directly inside support chat screens — so every agent interaction is backed by complete and accurate data.",
+      "When a support agent can't see a customer's order history, previous tickets, or billing status in one place, the conversation starts badly. Usually the data exists somewhere. It's just split across tools that don't talk to each other, or sitting in a CRM that hasn't been cleaned since it was set up. The work here is practical: deduplicating contact records, configuring ticket routing so queries reach the right team, connecting WhatsApp or email channels into a shared inbox, and making sure the information agents actually need shows up in the right place at the right time.",
     ],
     benefits: [
       "Deduplicated and structured CRM contacts",

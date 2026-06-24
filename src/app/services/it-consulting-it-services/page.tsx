@@ -33,7 +33,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We provide technical audits and write technology roadmaps that deliver clear specifications before you purchase software or servers. When you engage us for IT consulting, you receive specific documents: a systems architecture diagram with identified performance bottleneck nodes, a comparative spreadsheet evaluating candidate software vendors with weighted scores, a cost ledger specifying cloud billing waste, and a security compliance checklist. We do not deliver vague strategy slide decks; we review your database structures, audit cloud usage logs on AWS or Azure to reduce billing, perform vulnerability reviews on access controls, and produce 12-month technical roadmaps that align software development milestones with actionable implementation guides.",
+      "Most technology decisions get made without a clear picture of what's already there. A company pays for three tools that overlap, runs servers twice the size they need, and has no documented process for what happens if a key system goes down. An IT audit starts by mapping what exists: the architecture, the access controls, the billing, and the vendor contracts. From there it identifies where the real risks and inefficiencies are. The output is a set of specific, prioritised recommendations. Not a deck full of frameworks, but a document your technical team can act on.",
     ],
     benefits: [
       "Cloud cost reduction recommendations",

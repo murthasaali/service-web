@@ -30,7 +30,7 @@ const data: ServicePageData = {
 
   overview: {
     paragraphs: [
-      "We build custom web systems that run business operations and customer interactions. When you engage us, you receive a version-controlled git repository, a fully configured staging environment, a live production environment, and a structured handover document outlining system access and credentials. There are no generic templates or automated setups; every page and dashboard is written specifically for your database and business model. This approach allows us to build booking platforms for fleet management companies, private customer portals for client document sharing, SaaS dashboards for subscription billing, and e-commerce platforms connected to internal CRM databases — ensuring web transactions flow directly into your sales and inventory records.",
+      "A website that just looks good but can't connect to your CRM, take a booking, or show a client their account history isn't doing much for the business. The work starts with understanding what the site actually needs to do, not just how it should look. From there, everything is built to spec: the database structure, the user flows, the admin tools, the handover docs. You end up with a codebase you own, a staging environment to review changes before they go live, and a clear record of how everything is set up so any developer can pick it up later.",
     ],
     benefits: [
       "Version-controlled codebase ownership",
