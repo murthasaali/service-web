@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import { useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { iconMap, type IconKey } from "./ServicePageLayout";
 
 export interface ServiceCard {
-  iconKey: IconKey;
+  iconKey?: IconKey;
   title: string;
   bullets: string[];
+  image?: string;
 }
 
 function Card({
@@ -19,7 +21,8 @@ function Card({
 }) {
   const [hovered, setHovered] = useState(false);
   const active = hovered && !prefersReduced;
-  const Icon = iconMap[card.iconKey];
+  const hasImage = Boolean(card.image);
+  const Icon = card.iconKey ? iconMap[card.iconKey] : null;
 
   return (
     <div
@@ -42,25 +45,47 @@ function Card({
         height: "100%",
       }}
     >
-      {/* Radial fill layer — grows from icon center outward */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          top: "47px",
-          left: "43px",
-          width: active ? "600px" : "0",
-          height: active ? "600px" : "0",
-          borderRadius: "50%",
-          background: "#ecfeff",
-          transform: "translate(-50%, -50%)",
-          zIndex: 0,
-          pointerEvents: "none",
-          transition: active
-            ? "width 0.45s cubic-bezier(0.4,0,0.2,1), height 0.45s cubic-bezier(0.4,0,0.2,1)"
-            : "width 0s, height 0s",
-        }}
-      />
+      {/* Radial fill layer — only when using icon mode */}
+      {!hasImage && (
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            top: "47px",
+            left: "43px",
+            width: active ? "600px" : "0",
+            height: active ? "600px" : "0",
+            borderRadius: "50%",
+            background: "#ecfeff",
+            transform: "translate(-50%, -50%)",
+            zIndex: 0,
+            pointerEvents: "none",
+            transition: active
+              ? "width 0.45s cubic-bezier(0.4,0,0.2,1), height 0.45s cubic-bezier(0.4,0,0.2,1)"
+              : "width 0s, height 0s",
+          }}
+        />
+      )}
+
+      {/* Top image */}
+      {hasImage && (
+        <div style={{ position: "relative", height: "168px", flexShrink: 0, overflow: "hidden" }}>
+          <Image
+            src={card.image!}
+            alt={card.title}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            style={{ objectFit: "cover", transition: "transform 0.4s ease", transform: active ? "scale(1.04)" : "scale(1)" }}
+          />
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute", inset: 0,
+              background: "linear-gradient(to bottom, transparent 55%, rgba(255,255,255,0.55) 100%)",
+            }}
+          />
+        </div>
+      )}
 
       {/* Card content — always above fill */}
       <div
@@ -73,20 +98,22 @@ function Card({
           flex: 1,
         }}
       >
-        {/* Icon box — matches "Everything you need" card icon style */}
-        <div
-          className="flex items-center justify-center rounded-full border border-cyan-100 text-cyan-700 shadow-[0_12px_28px_rgba(8,145,178,0.10)]"
-          style={{
-            width: "44px",
-            height: "44px",
-            flexShrink: 0,
-            marginBottom: "20px",
-            background: active ? "#cffafe" : "#ecfeff",
-            transition: "background 0.3s",
-          }}
-        >
-          <Icon size={19} aria-hidden="true" />
-        </div>
+        {/* Icon box — only when no image */}
+        {!hasImage && Icon && (
+          <div
+            className="flex items-center justify-center rounded-full border border-cyan-100 text-cyan-700 shadow-[0_12px_28px_rgba(8,145,178,0.10)]"
+            style={{
+              width: "44px",
+              height: "44px",
+              flexShrink: 0,
+              marginBottom: "20px",
+              background: active ? "#cffafe" : "#ecfeff",
+              transition: "background 0.3s",
+            }}
+          >
+            <Icon size={19} aria-hidden="true" />
+          </div>
+        )}
 
         {/* Title */}
         <h3

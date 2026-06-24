@@ -122,33 +122,33 @@ const data: ServicePageData = {
 
 const serviceCards: ServiceCard[] = [
   {
-    iconKey: "monitor",
     title: "Frontend Development",
+    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80&auto=format&fit=crop",
     bullets: ["Responsive Websites", "Landing Pages", "PWAs", "UI Development", "SPAs"],
   },
   {
-    iconKey: "server",
     title: "Backend Development",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop",
     bullets: ["API Development", "Database Development", "Authentication Systems", "Payment Gateway Integration", "Server-side Development"],
   },
   {
-    iconKey: "layers",
     title: "Full Stack Development",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80&auto=format&fit=crop",
     bullets: ["End-to-End Web Applications", "SaaS Products", "Enterprise Applications"],
   },
   {
-    iconKey: "package",
     title: "E-Commerce Development",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop",
     bullets: ["Online Stores", "Marketplaces", "Shopping Cart Integration", "Subscription Platforms", "Payment Integration"],
   },
   {
-    iconKey: "fileText",
     title: "CMS Development",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80&auto=format&fit=crop",
     bullets: ["WordPress", "Headless CMS", "Custom CMS", "Website Maintenance"],
   },
   {
-    iconKey: "zap",
     title: "Web Optimization",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop",
     bullets: ["Speed Optimization", "SEO-Friendly Development", "Security Hardening", "Accessibility Compliance"],
   },
 ];

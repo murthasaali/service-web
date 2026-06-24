@@ -125,33 +125,33 @@ const data: ServicePageData = {
 
 const serviceCards: ServiceCard[] = [
   {
-    iconKey: "compass",
     title: "Strategy & Transformation",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80&auto=format&fit=crop",
     bullets: ["Digital Transformation Consulting", "Technology Roadmaps", "IT Planning"],
   },
   {
-    iconKey: "network",
     title: "Architecture & Design",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80&auto=format&fit=crop",
     bullets: ["Solution Architecture", "System Design", "Technology Evaluation"],
   },
   {
-    iconKey: "shield",
     title: "Security & Compliance",
+    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80&auto=format&fit=crop",
     bullets: ["Cybersecurity Assessments", "Security Reviews", "Compliance Support"],
   },
   {
-    iconKey: "settings",
     title: "Managed IT Operations",
+    image: "https://images.unsplash.com/photo-1588508065123-287b28e013da?w=800&q=80&auto=format&fit=crop",
     bullets: ["Helpdesk Support", "Infrastructure Planning", "Cost Optimization", "Ongoing IT Management"],
   },
   {
-    iconKey: "container",
     title: "DevOps & Automation",
+    image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80&auto=format&fit=crop",
     bullets: ["CI/CD", "Infrastructure Automation", "Containerization"],
   },
   {
-    iconKey: "cloud",
     title: "Cloud & Infrastructure",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop",
     bullets: ["Cloud Services", "Cloud Migration", "Cloud Architecture"],
   },
 ];

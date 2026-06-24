@@ -122,33 +122,33 @@ const data: ServicePageData = {
 
 const serviceCards: ServiceCard[] = [
   {
-    iconKey: "workflow",
     title: "Process Automation",
+    image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80&auto=format&fit=crop",
     bullets: ["Workflow & Process Automation"],
   },
   {
-    iconKey: "bot",
     title: "Conversational AI",
+    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80&auto=format&fit=crop",
     bullets: ["AI Chatbots", "Voice Agents", "Knowledge Assistants"],
   },
   {
-    iconKey: "cpu",
     title: "AI Intelligence",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80&auto=format&fit=crop",
     bullets: ["Predictive Analytics", "Recommendation Systems"],
   },
   {
-    iconKey: "lightbulb",
     title: "Generative AI",
+    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop",
     bullets: ["Custom GPT Development", "RAG Systems", "LLM Integration", "Enterprise AI Deployment"],
   },
   {
-    iconKey: "eye",
     title: "AI Vision",
+    image: "https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=800&q=80&auto=format&fit=crop",
     bullets: ["Computer Vision", "OCR Solutions"],
   },
   {
-    iconKey: "settings",
     title: "AI-Powered Apps",
+    image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800&q=80&auto=format&fit=crop",
     bullets: ["Custom AI Solutions", "Model Fine-tuning", "AI Integration", "Deployment & Monitoring"],
   },
 ];

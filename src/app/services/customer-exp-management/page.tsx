@@ -120,33 +120,33 @@ const data: ServicePageData = {
 
 const serviceCards: ServiceCard[] = [
   {
-    iconKey: "users",
     title: "CRM Services",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format&fit=crop",
     bullets: ["CRM Implementation", "Customization", "Integration"],
   },
   {
-    iconKey: "headphones",
     title: "Customer Support Systems",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80&auto=format&fit=crop",
     bullets: ["Helpdesk Systems", "Ticketing Systems", "Live Chat", "Knowledge Bases"],
   },
   {
-    iconKey: "messageSquare",
     title: "Customer Engagement",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80&auto=format&fit=crop",
     bullets: ["Loyalty Programs", "Omnichannel Support", "WhatsApp Integration"],
   },
   {
-    iconKey: "lineChart",
     title: "Customer Intelligence",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop",
     bullets: ["Customer Analytics", "Retention Tracking"],
   },
   {
-    iconKey: "workflow",
     title: "Automation",
+    image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80&auto=format&fit=crop",
     bullets: ["Workflow Automation", "AI Chatbots", "Voice Agents"],
   },
   {
-    iconKey: "compass",
     title: "IT Consulting",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80&auto=format&fit=crop",
     bullets: ["Digital Transformation", "Technology Roadmaps", "IT Planning"],
   },
 ];

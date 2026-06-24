@@ -125,33 +125,33 @@ const data: ServicePageData = {
 
 const serviceCards: ServiceCard[] = [
   {
-    iconKey: "package",
     title: "Enterprise Software",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop",
     bullets: ["ERP", "CRM", "HRMS", "Inventory Management"],
   },
   {
-    iconKey: "workflow",
     title: "Business Applications",
+    image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&q=80&auto=format&fit=crop",
     bullets: ["Workflow Automation", "Internal Tools", "Billing Systems", "Project Management Systems"],
   },
   {
-    iconKey: "layers",
     title: "Industry-Specific Software",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80&auto=format&fit=crop",
     bullets: ["Healthcare Solutions", "Construction Solutions", "Logistics Solutions", "Education Solutions", "Manufacturing Solutions"],
   },
   {
-    iconKey: "refreshCw",
     title: "Software Modernization",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&auto=format&fit=crop",
     bullets: ["Legacy Migration", "Re-engineering", "System Upgrades"],
   },
   {
-    iconKey: "rocket",
     title: "Product Development",
+    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80&auto=format&fit=crop",
     bullets: ["MVPs", "SaaS Products", "Maintenance & Support"],
   },
   {
-    iconKey: "compass",
     title: "IT Consulting & Services",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80&auto=format&fit=crop",
     bullets: ["Digital Transformation Consulting", "Technology Roadmaps", "IT Planning", "Solution Architecture"],
   },
 ];

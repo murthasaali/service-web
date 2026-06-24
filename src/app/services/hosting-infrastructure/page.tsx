@@ -120,33 +120,33 @@ const data: ServicePageData = {
 
 const serviceCards: ServiceCard[] = [
   {
-    iconKey: "cloud",
     title: "Cloud Solutions",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop",
     bullets: ["Cloud Services", "Cloud Migration", "Cloud Architecture"],
   },
   {
-    iconKey: "container",
     title: "DevOps",
+    image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80&auto=format&fit=crop",
     bullets: ["CI/CD", "Infrastructure Automation", "Containerization", "Kubernetes"],
   },
   {
-    iconKey: "activity",
     title: "Infrastructure Operations",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop",
     bullets: ["Infrastructure Management", "Monitoring", "Performance Tuning"],
   },
   {
-    iconKey: "server",
     title: "Hosting",
+    image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&q=80&auto=format&fit=crop",
     bullets: ["Shared Hosting", "VPS Hosting", "Dedicated Hosting", "Managed Hosting"],
   },
   {
-    iconKey: "shield",
     title: "Security",
+    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80&auto=format&fit=crop",
     bullets: ["SSL", "Backup Solutions", "Disaster Recovery", "Security Audits"],
   },
   {
-    iconKey: "database",
     title: "Database Services",
+    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&q=80&auto=format&fit=crop",
     bullets: ["Database Hosting", "Database Optimization", "Database Administration"],
   },
 ];
