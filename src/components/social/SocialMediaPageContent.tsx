@@ -7,11 +7,13 @@ import {
   FaLinkedinIn, FaInstagram, FaPinterestP,
   FaFacebookF, FaWhatsapp, FaYoutube,
   FaGithub, FaReddit, FaDiscord,
+  FaHackerNews, FaGitlab, FaStackOverflow,
 } from "react-icons/fa";
 import { FaXTwitter, FaTelegram } from "react-icons/fa6";
 import {
   SiBluesky, SiSubstack, SiMastodon,
   SiThreads, SiMedium, SiQuora,
+  SiHashnode, SiLinktree, SiDribbble, SiBehance,
 } from "react-icons/si";
 
 import { motion } from "framer-motion";
@@ -111,7 +113,7 @@ const registeredPlatforms = [
     name: "Discord",
     handle: "aibizmod",
     desc: "A space for clients and partners to connect and follow what we're building.",
-    href: "https://discord.gg/aibizmod",
+    href: "https://discord.gg/bS3zQjGa5",
     gradient: "from-indigo-600 via-violet-500 to-purple-400",
     icon: <FaDiscord />,
   },
@@ -162,6 +164,62 @@ const registeredPlatforms = [
     href: "https://threads.net/@aibizmod",
     gradient: "from-slate-800 via-gray-700 to-zinc-500",
     icon: <SiThreads />,
+  },
+  {
+    name: "Dribbble",
+    handle: "@aibizmod",
+    desc: "Design work and visual concepts we've shared publicly.",
+    href: "https://dribbble.com/aibizmod",
+    gradient: "from-pink-600 via-rose-500 to-pink-400",
+    icon: <SiDribbble />,
+  },
+  {
+    name: "Behance",
+    handle: "@aibizmod",
+    desc: "Our portfolio of creative and design work.",
+    href: "https://www.behance.net/aibizmod",
+    gradient: "from-blue-700 via-blue-500 to-blue-400",
+    icon: <SiBehance />,
+  },
+  {
+    name: "Hashnode",
+    handle: "@aibizmod",
+    desc: "Technical articles and development write-ups for the developer community.",
+    href: "https://hashnode.com/@aibizmod",
+    gradient: "from-blue-600 via-cyan-500 to-teal-400",
+    icon: <SiHashnode />,
+  },
+  {
+    name: "GitLab",
+    handle: "aibizmod-group",
+    desc: "Source repositories and project work we've made available on GitLab.",
+    href: "https://gitlab.com/aibizmod-group",
+    gradient: "from-orange-600 via-orange-500 to-amber-400",
+    icon: <FaGitlab />,
+  },
+  {
+    name: "Stack Overflow",
+    handle: "aibizmod",
+    desc: "We contribute answers on software and development questions when we have something useful to share.",
+    href: "https://stackoverflow.com/users/32858253/aibizmod",
+    gradient: "from-orange-500 via-amber-500 to-yellow-400",
+    icon: <FaStackOverflow />,
+  },
+  {
+    name: "Hacker News",
+    handle: "aibizmod",
+    desc: "We follow and occasionally participate in technology discussions on HN.",
+    href: "https://news.ycombinator.com/user?id=aibizmod",
+    gradient: "from-orange-700 via-orange-600 to-orange-400",
+    icon: <FaHackerNews />,
+  },
+  {
+    name: "Allmylinks",
+    handle: "@aibizmod",
+    desc: "A single page linking to all of our active profiles across the web.",
+    href: "https://allmylinks.com/aibizmod",
+    gradient: "from-purple-600 via-pink-500 to-fuchsia-400",
+    icon: <SiLinktree />,
   },
 ];
 
