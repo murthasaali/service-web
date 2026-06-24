@@ -123,31 +123,37 @@ const serviceCards: ServiceCard[] = [
     title: "CRM Services",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format&fit=crop",
     bullets: ["CRM Implementation", "Customization", "Integration"],
+    href: "/services/customer-exp-management/crm-services",
   },
   {
     title: "Customer Support Systems",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80&auto=format&fit=crop",
     bullets: ["Helpdesk Systems", "Ticketing Systems", "Live Chat", "Knowledge Bases"],
+    href: "/services/customer-exp-management/customer-support-systems",
   },
   {
     title: "Customer Engagement",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80&auto=format&fit=crop",
     bullets: ["Loyalty Programs", "Omnichannel Support", "WhatsApp Integration"],
+    href: "/services/customer-exp-management/customer-engagement",
   },
   {
     title: "Customer Intelligence",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&auto=format&fit=crop",
     bullets: ["Customer Analytics", "Retention Tracking"],
+    href: "/services/customer-exp-management/customer-intelligence",
   },
   {
     title: "Automation",
     image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80&auto=format&fit=crop",
     bullets: ["Workflow Automation", "AI Chatbots", "Voice Agents"],
+    href: "/services/customer-exp-management/cx-automation",
   },
   {
     title: "IT Consulting",
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80&auto=format&fit=crop",
     bullets: ["Digital Transformation", "Technology Roadmaps", "IT Planning"],
+    href: "/services/customer-exp-management/cx-it-consulting",
   },
 ];
 

@@ -4,11 +4,11 @@ import SubservicePageLayout, { type SubservicePageData } from "@/components/Subs
 export const metadata: Metadata = {
   title: "E-Commerce Development | Web Development | aibizmod",
   description: "Custom online stores, marketplaces, and subscription platforms built around your product catalogue and fulfilment process — not a theme.",
-  alternates: { canonical: "https://aibizmod.com/services/web-development/ecommerce-development" },
+  alternates: { canonical: "https://aibizmod.com/services/web-development/e-commerce-development" },
   openGraph: {
     title: "E-Commerce Development | aibizmod",
     description: "Custom online stores, marketplaces, and subscription platforms built around your product catalogue and fulfilment process — not a theme.",
-    url: "/services/web-development/ecommerce-development",
+    url: "/services/web-development/e-commerce-development",
   },
 };
 
@@ -16,7 +16,7 @@ const data: SubservicePageData = {
   name: "E-Commerce Development",
   parentName: "Web Development",
   parentSlug: "web-development",
-  slug: "ecommerce-development",
+  slug: "e-commerce-development",
   tagline: "Online stores, marketplaces, and subscription platforms built around your actual product catalogue, pricing rules, and fulfilment process. Cart, checkout, and payment integration without the constraints of a theme.",
   heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1000&q=80&auto=format&fit=crop",
 

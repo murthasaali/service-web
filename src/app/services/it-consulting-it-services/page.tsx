@@ -128,31 +128,37 @@ const serviceCards: ServiceCard[] = [
     title: "Strategy & Transformation",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80&auto=format&fit=crop",
     bullets: ["Digital Transformation Consulting", "Technology Roadmaps", "IT Planning"],
+    href: "/services/it-consulting-it-services/strategy-transformation",
   },
   {
     title: "Architecture & Design",
     image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80&auto=format&fit=crop",
     bullets: ["Solution Architecture", "System Design", "Technology Evaluation"],
+    href: "/services/it-consulting-it-services/architecture-design",
   },
   {
     title: "Security & Compliance",
     image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80&auto=format&fit=crop",
     bullets: ["Cybersecurity Assessments", "Security Reviews", "Compliance Support"],
+    href: "/services/it-consulting-it-services/security-compliance",
   },
   {
     title: "Managed IT Operations",
     image: "https://images.unsplash.com/photo-1588508065123-287b28e013da?w=800&q=80&auto=format&fit=crop",
     bullets: ["Helpdesk Support", "Infrastructure Planning", "Cost Optimization", "Ongoing IT Management"],
+    href: "/services/it-consulting-it-services/managed-it-operations",
   },
   {
     title: "DevOps & Automation",
     image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80&auto=format&fit=crop",
     bullets: ["CI/CD", "Infrastructure Automation", "Containerization"],
+    href: "/services/it-consulting-it-services/devops-automation",
   },
   {
     title: "Cloud & Infrastructure",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop",
     bullets: ["Cloud Services", "Cloud Migration", "Cloud Architecture"],
+    href: "/services/it-consulting-it-services/cloud-infrastructure",
   },
 ];
 

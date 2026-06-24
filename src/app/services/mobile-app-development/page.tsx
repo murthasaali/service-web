@@ -128,31 +128,37 @@ const serviceCards: ServiceCard[] = [
     title: "Native Apps",
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80&auto=format&fit=crop",
     bullets: ["Android", "iOS"],
+    href: "/services/mobile-app-development/native-apps",
   },
   {
     title: "Cross-Platform Apps",
     image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80&auto=format&fit=crop",
     bullets: ["Flutter", "React Native"],
+    href: "/services/mobile-app-development/cross-platform-apps",
   },
   {
     title: "Enterprise Apps",
     image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80&auto=format&fit=crop",
     bullets: ["Employee Management", "Field Service", "Internal Business Apps"],
+    href: "/services/mobile-app-development/enterprise-apps",
   },
   {
     title: "Consumer Apps",
     image: "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=800&q=80&auto=format&fit=crop",
     bullets: ["E-commerce", "Social Networking", "Booking", "On-Demand Services"],
+    href: "/services/mobile-app-development/consumer-apps",
   },
   {
     title: "Backend Services",
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80&auto=format&fit=crop",
     bullets: ["APIs", "Push Notifications", "Authentication", "Payments"],
+    href: "/services/mobile-app-development/backend-services",
   },
   {
     title: "Maintenance & Optimization",
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80&auto=format&fit=crop",
     bullets: ["App Performance Optimization", "Bug Fixes & Troubleshooting"],
+    href: "/services/mobile-app-development/maintenance-optimization",
   },
 ];
 

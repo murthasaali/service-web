@@ -128,31 +128,37 @@ const serviceCards: ServiceCard[] = [
     title: "Search Marketing",
     image: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800&q=80&auto=format&fit=crop",
     bullets: ["SEO", "GEO", "Local SEO", "Technical SEO"],
+    href: "/services/digital-marketing/search-marketing",
   },
   {
     title: "Paid Advertising",
     image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80&auto=format&fit=crop",
     bullets: ["Google Ads", "Meta Ads", "LinkedIn Ads", "PPC Management"],
+    href: "/services/digital-marketing/paid-advertising",
   },
   {
     title: "Social Media Marketing",
     image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&q=80&auto=format&fit=crop",
     bullets: ["Social Media Management", "Content Creation", "Influencer Marketing"],
+    href: "/services/digital-marketing/social-media-marketing",
   },
   {
     title: "Brand Content",
     image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80&auto=format&fit=crop",
     bullets: ["Content Marketing", "Blog Writing", "Copywriting", "Case Studies"],
+    href: "/services/digital-marketing/brand-content",
   },
   {
     title: "Email & Lifecycle Marketing",
     image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&q=80&auto=format&fit=crop",
     bullets: ["Email Campaigns", "Marketing Automation", "Lead Nurturing", "Customer Retention"],
+    href: "/services/digital-marketing/email-lifecycle-marketing",
   },
   {
     title: "Performance Insights",
     image: "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?w=800&q=80&auto=format&fit=crop",
     bullets: ["Analytics", "Conversion Optimization", "Funnel Analysis"],
+    href: "/services/digital-marketing/performance-insights",
   },
 ];
 
