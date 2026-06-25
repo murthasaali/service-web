@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { iconMap, type IconKey } from "./ServicePageLayout";
 import SectionHeading from "@/components/common/SectionHeading";
+import TargetCursor from "@/components/ui/TargetCursor";
 
 export interface ServiceCard {
   iconKey?: IconKey;
@@ -22,197 +23,111 @@ function Card({
   card: ServiceCard;
   prefersReduced: boolean | null;
 }) {
-  const [hovered, setHovered] = useState(false);
-  const active = hovered && !prefersReduced;
-  const hasImage = Boolean(card.image);
   const Icon = card.iconKey ? iconMap[card.iconKey] : null;
 
-  function handleMouseEnter() {
-    if (!prefersReduced) setHovered(true);
-  }
-  function handleMouseLeave() {
-    if (!prefersReduced) setHovered(false);
-  }
-
-  return (
+  const cardContent = (
     <div
-      role="listitem"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        position: "relative",
-        overflow: "hidden",
-        borderRadius: "24px",
-        background: "#ffffff",
-        border: active
-          ? "1px solid rgba(165,243,252,0.9)"
-          : "1px solid rgba(103,232,249,0.8)",
-        boxShadow: active
-          ? "0 24px 70px rgba(8,145,178,0.14)"
-          : "0 18px 55px rgba(59,130,246,0.09)",
-        transition: "border-color 0.3s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1)",
-        willChange: "border-color, box-shadow",
-        display: "flex",
-        flexDirection: "column",
-        height: "100%",
-      }}
+      className="
+        relative w-full h-full overflow-hidden rounded-[24px]
+        border border-slate-200/40 bg-white p-3.5
+        shadow-[0_12px_36px_-6px_rgba(10,22,40,0.06),0_4px_16px_-4px_rgba(8,145,178,0.03)]
+        transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+        flex flex-col items-stretch
+        group-hover:border-cyan-300/60
+        group-hover:shadow-[0_0_28px_6px_rgba(6,182,212,0.18),0_32px_64px_-10px_rgba(10,22,40,0.14)]
+      "
     >
-      {/* Clickable overlay when href is provided */}
-      {card.href && (
-        <Link
-          href={card.href}
-          aria-label={card.title}
-          style={{
-            position: "absolute",
-            inset: 0,
-            zIndex: 5,
-            cursor: "pointer",
-          }}
-        />
-      )}
-
-      {/* Radial fill layer — only in icon mode */}
-      {!hasImage && (
-        <div
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            top: "47px",
-            left: "43px",
-            width: "600px",
-            height: "600px",
-            borderRadius: "50%",
-            background: "#ecfeff",
-            transform: active ? "translate(-50%, -50%) scale(1)" : "translate(-50%, -50%) scale(0.07)",
-            opacity: active ? 1 : 0,
-            zIndex: 0,
-            pointerEvents: "none",
-            transition: active
-              ? "transform 0.45s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.45s ease-out"
-              : "transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s ease-out",
-            willChange: "transform, opacity",
-          }}
-        />
-      )}
-
-      {/* Top image */}
-      {hasImage && (
-        <div style={{ position: "relative", height: "168px", flexShrink: 0, overflow: "hidden" }}>
+      {/* Top Image or Icon container - 60% Height */}
+      {card.image ? (
+        <div className="relative w-full h-[60%] overflow-hidden rounded-[18px] flex-shrink-0 z-10">
           <Image
-            src={card.image!}
+            src={card.image}
             alt={card.title}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            style={{
-              objectFit: "cover",
-              transition: "transform 0.4s cubic-bezier(0.23, 1, 0.32, 1)",
-              transform: active ? "scale(1.04)" : "scale(1)",
-              willChange: "transform",
-            }}
-          />
-          <div
-            aria-hidden="true"
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: "linear-gradient(to bottom, transparent 55%, rgba(255,255,255,0.55) 100%)",
-            }}
+            className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.14]"
           />
         </div>
+      ) : (
+        Icon && (
+          <div className="flex items-center justify-center w-full h-[60%] rounded-[18px] bg-cyan-50 border border-cyan-100 text-cyan-700 shadow-[0_12px_28px_rgba(8,145,178,0.10)] flex-shrink-0 z-10">
+            <Icon size={28} aria-hidden="true" />
+          </div>
+        )
       )}
 
-      {/* Card content */}
-      <div
-        style={{
-          position: "relative",
-          zIndex: 2,
-          padding: "24px",
-          display: "flex",
-          flexDirection: "column",
-          flex: 1,
-        }}
-      >
-        {/* Icon — only in icon mode */}
-        {!hasImage && Icon && (
-          <div
-            className="flex items-center justify-center rounded-full border border-cyan-100 text-cyan-700 shadow-[0_12px_28px_rgba(8,145,178,0.10)]"
-            style={{
-              width: "44px",
-              height: "44px",
-              flexShrink: 0,
-              marginBottom: "20px",
-              background: active ? "#cffafe" : "#ecfeff",
-              transition: "background 0.3s",
-            }}
-          >
-            <Icon size={19} aria-hidden="true" />
-          </div>
-        )}
-
-        <h3
-          className="font-display font-semibold text-[#0F172A]"
-          style={{ fontSize: "16px", fontWeight: 650, lineHeight: 1.3, marginBottom: "0" }}
-        >
+      {/* Content block below - 40% Height */}
+      <div className="flex flex-col p-3 pt-4 h-[40%] justify-start overflow-hidden">
+        <h3 className="mb-2 font-display text-[16px] font-bold leading-tight text-[#0F172A] tracking-tight transition-colors duration-500 group-hover:text-cyan-700 truncate">
           {card.title}
         </h3>
 
-        <div
-          aria-hidden="true"
-          style={{
-            height: "1px",
-            background: active ? "rgba(8,145,178,0.30)" : "rgba(0,0,0,0.08)",
-            margin: "12px 0",
-            transition: "background 0.3s",
-          }}
-        />
-
-        <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }} role="list">
+        <ul className="grid grid-cols-2 gap-x-4 gap-y-1.5 overflow-hidden" role="list">
           {card.bullets.map((bullet) => (
-            <li
-              key={bullet}
-              style={{
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "10px",
-                marginBottom: "6px",
-              }}
-            >
+            <li key={bullet} className="relative pl-3.5 text-[13px] text-slate-600 leading-normal transition-colors duration-500 group-hover:text-slate-800">
               <span
+                className="absolute left-0 top-[7.5px] h-1.5 w-1.5 rounded-full bg-slate-300 transition-colors duration-500 group-hover:bg-[#0891b2]"
                 aria-hidden="true"
-                style={{
-                  width: "5px",
-                  height: "5px",
-                  borderRadius: "50%",
-                  background: active ? "#0891b2" : "#cbd5e1",
-                  flexShrink: 0,
-                  marginTop: "8px",
-                  transition: "background 0.3s",
-                }}
               />
-              <span style={{ fontSize: "14px", color: "#475569", lineHeight: 1.5 }}>
-                {bullet}
-              </span>
+              {bullet}
             </li>
           ))}
         </ul>
       </div>
     </div>
   );
+
+  if (card.href) {
+    return (
+      <Link
+        href={card.href}
+        className="cursor-target group flex w-full max-w-sm h-[390px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5 hover:scale-[1.01]"
+        style={{ perspective: "1000px" }}
+      >
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return (
+    <div className="cursor-target group flex w-full max-w-sm h-[390px]">
+      {cardContent}
+    </div>
+  );
 }
 
 export default function ServiceCardsSection({ cards }: { cards: ServiceCard[] }) {
   const prefersReduced = useReducedMotion();
+  const [inSection, setInSection] = React.useState(false);
 
   return (
     <section
+      onMouseEnter={() => setInSection(true)}
+      onMouseLeave={() => setInSection(false)}
       style={{
-        background: "#f8fafc",
+        position: "relative",
+        overflow: "hidden",
+        background: "#F8FEFF",
         borderTop: "1px solid rgba(0,0,0,0.06)",
         borderBottom: "1px solid rgba(0,0,0,0.06)",
         padding: "80px 24px",
       }}
     >
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+      {/* Custom cursor — snaps around cards on hover, only active inside this section */}
+      <TargetCursor
+        targetSelector=".cursor-target"
+        spinDuration={3}
+        hideDefaultCursor={false}
+        parallaxOn={true}
+        cursorColor="#06b6d4"
+        visible={inSection}
+      />
+
+      {/* Soft ambient mesh glows */}
+      <div className="absolute -top-12 -left-12 w-[350px] h-[350px] rounded-full bg-cyan-200/26 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-16 -right-16 w-[400px] h-[400px] rounded-full bg-blue-200/22 blur-3xl pointer-events-none" />
+
+      <div style={{ position: "relative", zIndex: 10, maxWidth: "1200px", margin: "0 auto" }}>
         <SectionHeading
           eyebrow="What We Offer"
           heading="End-to-end digital services for modern businesses"
@@ -220,7 +135,7 @@ export default function ServiceCardsSection({ cards }: { cards: ServiceCard[] })
           className="mb-14"
         />
 
-        <div role="list" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((card) => (
             <Card key={card.title} card={card} prefersReduced={prefersReduced} />
           ))}
