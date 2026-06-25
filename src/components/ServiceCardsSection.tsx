@@ -43,15 +43,15 @@ function Card({
         position: "relative",
         overflow: "hidden",
         borderRadius: "24px",
-        background: "rgba(255,255,255,0.75)",
-        backdropFilter: "blur(12px)",
+        background: "#ffffff",
         border: active
           ? "1px solid rgba(165,243,252,0.9)"
           : "1px solid rgba(103,232,249,0.8)",
         boxShadow: active
           ? "0 24px 70px rgba(8,145,178,0.14)"
           : "0 18px 55px rgba(59,130,246,0.09)",
-        transition: "border-color 0.3s, box-shadow 0.3s",
+        transition: "border-color 0.3s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1)",
+        willChange: "border-color, box-shadow",
         display: "flex",
         flexDirection: "column",
         height: "100%",
@@ -79,16 +79,18 @@ function Card({
             position: "absolute",
             top: "47px",
             left: "43px",
-            width: active ? "600px" : "0",
-            height: active ? "600px" : "0",
+            width: "600px",
+            height: "600px",
             borderRadius: "50%",
             background: "#ecfeff",
-            transform: "translate(-50%, -50%)",
+            transform: active ? "translate(-50%, -50%) scale(1)" : "translate(-50%, -50%) scale(0.07)",
+            opacity: active ? 1 : 0,
             zIndex: 0,
             pointerEvents: "none",
             transition: active
-              ? "width 0.45s cubic-bezier(0.4,0,0.2,1), height 0.45s cubic-bezier(0.4,0,0.2,1)"
-              : "width 0s, height 0s",
+              ? "transform 0.45s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.45s ease-out"
+              : "transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s ease-out",
+            willChange: "transform, opacity",
           }}
         />
       )}
@@ -103,8 +105,9 @@ function Card({
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             style={{
               objectFit: "cover",
-              transition: "transform 0.4s ease",
+              transition: "transform 0.4s cubic-bezier(0.23, 1, 0.32, 1)",
               transform: active ? "scale(1.04)" : "scale(1)",
+              willChange: "transform",
             }}
           />
           <div

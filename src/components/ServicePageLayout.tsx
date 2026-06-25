@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
-import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
+import { type ReactNode } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import {
   ChevronRight, ChevronDown, CheckCircle, ArrowRight,
   Code2, Database, Server, Network, Cloud, TestTube,
@@ -23,6 +22,7 @@ import ShaderBackground from "@/components/ui/shader-background";
 import { StarButton } from "@/components/ui/star-button";
 import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
 import ServiceCardsSection, { type ServiceCard } from "@/components/ServiceCardsSection";
+import FeatureCarousel, { type CarouselFeature } from "@/components/ui/feature-carousel";
 
 // ─── Icon registry ────────────────────────────────────────────────────────────
 
@@ -197,8 +197,25 @@ export default function ServicePageLayout({
 }) {
   const prefersReduced = useReducedMotion();
   const heroImage = serviceImages[data.slug] ?? serviceImages["web-development"];
-  const [activeStep, setActiveStep] = useState(0);
-  const [mobileOpenStep, setMobileOpenStep] = useState(0);
+
+  const processFeatures: CarouselFeature[] = data.process.map((step, i) => {
+    const images = [
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200",
+      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1200",
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200",
+    ];
+
+    return {
+      id: `step-${i}`,
+      label: step.title,
+      icon: iconMap[step.icon],
+      image: images[i] ?? images[0],
+      description: step.desc,
+      isLucide: true,
+      deliverables: getProcessDeliverables(i),
+    };
+  });
 
   return (
     <>
@@ -416,212 +433,43 @@ export default function ServicePageLayout({
         )}
 
         {/* ── 4. Process ──────────────────────────────────────────────────── */}
-        <section
-          className="relative overflow-hidden px-6 py-24 bg-white"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px)",
-            backgroundSize: "72px 72px",
-          }}
-        >
-          <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(210,247,255,0.56),transparent_34%)]"
-            aria-hidden="true"
+        <section className="relative overflow-hidden px-6 py-16 md:py-20 bg-[#F4F9FA] border-y border-cyan-100/50">
+          {/* Subtle diagonal lines background texture */}
+          <div 
+            className="absolute inset-0 pointer-events-none z-0"
+            style={{
+              backgroundImage: `repeating-linear-gradient(
+                -45deg,
+                rgba(8, 145, 178, 0.06) 0px,
+                rgba(8, 145, 178, 0.06) 1px,
+                transparent 1px,
+                transparent 12px
+              )`,
+            }}
           />
-          <div className="relative max-w-7xl mx-auto">
-            <AnimatedSection className="text-center mb-16">
-              <SectionHeading eyebrow="How It Works" heading="Our process" centered />
+          {/* Radial gradient glow for depth */}
+          <div 
+            className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_30%,#F4F9FA_90%)] z-0"
+          />
+
+          <div className="relative max-w-7xl mx-auto z-10">
+            <AnimatedSection className="text-center mb-8 flex flex-col items-center">
+              <span className="text-[11px] font-bold tracking-[0.14em] uppercase text-[#0F172A]">
+                How It Works
+              </span>
+              <h2 
+                className="mt-4 font-display font-bold text-balance text-[#0E7490]"
+                style={{
+                  fontSize: "clamp(26px, 3.5vw, 38px)",
+                  lineHeight: 1.1,
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                Our process
+              </h2>
             </AnimatedSection>
 
-            {/* Desktop: Interactive Stepper */}
-            <div className="hidden md:grid md:grid-cols-[0.85fr_1.15fr] gap-12 items-start relative min-h-[460px]">
-              {/* Left Column: Vertical Step Navigation */}
-              <div className="space-y-4">
-                {data.process.map((step, i) => {
-                  const isActive = activeStep === i;
-                  return (
-                    <div key={step.title} className="relative">
-                      <button
-                        type="button"
-                        onClick={() => setActiveStep(i)}
-                        className={cn(
-                          "relative z-10 flex items-center gap-6 p-6 rounded-3xl text-left w-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500",
-                          isActive ? "shadow-[0_10px_30px_rgba(8,145,178,0.04)]" : "hover:bg-slate-50/40"
-                        )}
-                      >
-                        {/* Background slider pill using framer-motion */}
-                        {isActive && (
-                          <motion.div
-                            layoutId="activeProcessStep"
-                            className="absolute inset-0 bg-cyan-50/50 border border-cyan-100/50 rounded-3xl -z-10"
-                            transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                          />
-                        )}
-
-                        <span
-                          className={cn(
-                            "font-display font-light text-4xl tracking-tight transition-all duration-300",
-                            isActive ? "text-cyan-600 scale-105 font-medium" : "text-slate-300"
-                          )}
-                        >
-                          {`0${i + 1}`}
-                        </span>
-
-                        <div className="flex-1">
-                          <h3
-                            className={cn(
-                              "font-display font-semibold text-base transition-colors duration-300",
-                              isActive ? "text-[#0F172A]" : "text-slate-500"
-                            )}
-                          >
-                            {step.title}
-                          </h3>
-                          <p className="text-xs text-slate-400 mt-1 line-clamp-1">
-                            {step.desc}
-                          </p>
-                        </div>
-                      </button>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Right Column: Active Card Details */}
-              <div className="relative h-full min-h-[380px]">
-                <AnimatePresence mode="wait">
-                  {(() => {
-                    const step = data.process[activeStep];
-                    const ActiveIcon = iconMap[step.icon];
-                    return (
-                      <motion.div
-                        key={activeStep}
-                        initial={prefersReduced ? {} : { opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={prefersReduced ? {} : { opacity: 0, y: -15 }}
-                        transition={{ duration: 0.22, ease: "easeInOut" }}
-                        className="relative bg-white/70 backdrop-blur-md border border-cyan-100/80 rounded-[32px] p-8 md:p-10 shadow-[0_22px_70px_rgba(8,145,178,0.06)]"
-                      >
-                        {/* Decorative background glow */}
-                        <div className="pointer-events-none absolute -inset-px rounded-[32px] bg-gradient-to-r from-cyan-200/10 to-blue-200/10 -z-10 opacity-60 blur-xl" />
-
-                        <div className="flex flex-col lg:flex-row gap-8">
-                          <div className="flex-1">
-                            <div className="flex items-center gap-4 mb-6">
-                              <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-cyan-50 border border-cyan-200/60 text-cyan-600 shadow-[0_6px_16px_rgba(6,182,212,0.06)] transition-transform duration-500 hover:rotate-[360deg]">
-                                <ActiveIcon size={20} aria-hidden="true" />
-                              </div>
-                              <span className="px-3 py-1 text-[10px] tracking-[0.2em] font-semibold uppercase text-cyan-700 bg-cyan-50/50 border border-cyan-100 rounded-full">
-                                PHASE 0{activeStep + 1}
-                              </span>
-                            </div>
-
-                            <h3 className="font-display font-semibold text-[#0F172A] text-2xl mb-4 leading-tight">
-                              {step.title}
-                            </h3>
-                            <p className="text-sm leading-relaxed text-slate-600">
-                              {step.desc}
-                            </p>
-                          </div>
-
-                          <div className="lg:w-64 border-t lg:border-t-0 lg:border-l border-cyan-100/50 pt-6 lg:pt-0 lg:pl-8 flex flex-col justify-center">
-                            <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400 mb-4 block">
-                              Deliverables & Focus
-                            </span>
-                            <ul className="space-y-3">
-                              {getProcessDeliverables(activeStep).map((item, idx) => (
-                                <li key={idx} className="flex items-start gap-2.5">
-                                  <CheckCircle className="w-4 h-4 text-cyan-500 mt-0.5 shrink-0" />
-                                  <span className="text-xs text-slate-600 font-medium leading-normal">{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </motion.div>
-                    );
-                  })()}
-                </AnimatePresence>
-              </div>
-            </div>
-
-            {/* Mobile: Interactive Accordion */}
-            <div className="md:hidden space-y-4">
-              {data.process.map((step, i) => {
-                const isOpen = mobileOpenStep === i;
-                return (
-                  <div
-                    key={step.title}
-                    className={cn(
-                      "border rounded-2xl transition-all duration-300 overflow-hidden",
-                      isOpen
-                        ? "border-cyan-200 bg-cyan-50/10 shadow-[0_12px_24px_rgba(8,145,178,0.04)]"
-                        : "border-slate-100 bg-white"
-                    )}
-                  >
-                    <button
-                      type="button"
-                      onClick={() => setMobileOpenStep(isOpen ? -1 : i)}
-                      aria-expanded={isOpen}
-                      className="flex items-center justify-between w-full p-5 text-left focus:outline-none"
-                    >
-                      <div className="flex items-center gap-4">
-                        <span
-                          className={cn(
-                            "font-display font-light text-2xl tracking-tight transition-colors duration-300",
-                            isOpen ? "text-cyan-500 font-semibold" : "text-slate-300"
-                          )}
-                        >
-                          {`0${i + 1}`}
-                        </span>
-                        <h3
-                          className={cn(
-                            "font-display font-semibold text-sm transition-colors duration-300",
-                            isOpen ? "text-[#0F172A]" : "text-slate-600"
-                          )}
-                        >
-                          {step.title}
-                        </h3>
-                      </div>
-                      <ChevronDown
-                        size={18}
-                        className={cn(
-                          "text-slate-400 transition-transform duration-300",
-                          isOpen && "rotate-180 text-cyan-600"
-                        )}
-                      />
-                    </button>
-
-                    <motion.div
-                      initial={false}
-                      animate={{ height: isOpen ? "auto" : 0 }}
-                      transition={{ duration: 0.25, ease: "easeInOut" }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-5 pb-5 pt-1 border-t border-slate-100/50">
-                        <p className="text-xs leading-relaxed text-slate-600 mb-4">
-                          {step.desc}
-                        </p>
-                        <div className="bg-white/50 border border-cyan-100/50 rounded-xl p-4">
-                          <span className="text-[9px] font-bold uppercase tracking-[0.16em] text-slate-400 mb-3 block">
-                            Deliverables
-                          </span>
-                          <ul className="space-y-2">
-                            {getProcessDeliverables(i).map((item, idx) => (
-                              <li key={idx} className="flex items-start gap-2">
-                                <CheckCircle className="w-3.5 h-3.5 text-cyan-500 mt-0.5 shrink-0" />
-                                <span className="text-[11px] text-slate-600 leading-normal">
-                                  {item}
-                                </span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </div>
-                );
-              })}
-            </div>
+            <FeatureCarousel features={processFeatures} />
           </div>
         </section>
 

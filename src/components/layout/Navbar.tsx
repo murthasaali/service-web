@@ -7,9 +7,74 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu, X, ChevronDown, ArrowRight,
   Code2, Smartphone, TrendingUp, Server,
-  Zap, Users, Lightbulb, Cpu,
+  Zap, Users, Lightbulb, Cpu, Phone,
   type LucideIcon,
 } from "lucide-react";
+
+// ─── Contact countries SVG flags ──────────────────────────────────────────────
+
+const USAFlag = () => (
+  <svg width="20" height="14" viewBox="0 0 20 14" className="rounded-sm shadow-sm shrink-0" xmlns="http://www.w3.org/2000/svg">
+    <rect width="20" height="14" fill="#B22234" />
+    <path d="M0 1.08h20M0 3.23h20M0 5.38h20M0 7.54h20M0 9.69h20M0 11.85h20" stroke="#FFF" strokeWidth="1.08" />
+    <rect width="10" height="7.54" fill="#3C3B6E" />
+    <circle cx="2" cy="1.8" r="0.45" fill="#FFF" />
+    <circle cx="5" cy="1.8" r="0.45" fill="#FFF" />
+    <circle cx="8" cy="1.8" r="0.45" fill="#FFF" />
+    <circle cx="3.5" cy="3.8" r="0.45" fill="#FFF" />
+    <circle cx="6.5" cy="3.8" r="0.45" fill="#FFF" />
+    <circle cx="2" cy="5.8" r="0.45" fill="#FFF" />
+    <circle cx="5" cy="5.8" r="0.45" fill="#FFF" />
+    <circle cx="8" cy="5.8" r="0.45" fill="#FFF" />
+  </svg>
+);
+
+const UAEFlag = () => (
+  <svg width="20" height="14" viewBox="0 0 20 14" className="rounded-sm shadow-sm shrink-0" xmlns="http://www.w3.org/2000/svg">
+    <rect width="20" height="14" fill="#FFF" />
+    <rect y="0" width="20" height="4.67" fill="#00732F" />
+    <rect y="9.33" width="20" height="4.67" fill="#000" />
+    <rect x="0" y="0" width="5.33" height="14" fill="#FF0000" />
+  </svg>
+);
+
+const SGPFlag = () => (
+  <svg width="20" height="14" viewBox="0 0 20 14" className="rounded-sm shadow-sm shrink-0" xmlns="http://www.w3.org/2000/svg">
+    <rect width="20" height="7" fill="#ED2939" />
+    <rect y="7" width="20" height="7" fill="#FFF" />
+    <path d="M 2.5 1.8 A 1.8 1.8 0 0 0 5 4 A 1.8 1.8 0 0 1 2.5 1.8 Z" fill="#FFF" />
+    <circle cx="4.2" cy="2" r="0.35" fill="#FFF" />
+    <circle cx="4.8" cy="2.8" r="0.35" fill="#FFF" />
+    <circle cx="3.8" cy="3.3" r="0.35" fill="#FFF" />
+    <circle cx="3" cy="2.6" r="0.35" fill="#FFF" />
+  </svg>
+);
+
+// ─── Contact countries dropdown data ──────────────────────────────────────────
+
+const countries = [
+  {
+    code: "USA",
+    flag: <USAFlag />,
+    phone: "+1 646 421 5740",
+    email: "usa@aibizmod.com",
+    address: "2500 MARCONI AVE, STE 101, SACRAMENTO, CA 95821 USA",
+  },
+  {
+    code: "UAE",
+    flag: <UAEFlag />,
+    phone: "+971 56 256 7509",
+    email: "uae@aibizmod.com",
+    address: "Middle East Regional Office, Dubai, UAE",
+  },
+  {
+    code: "SGP",
+    flag: <SGPFlag />,
+    phone: "+65 86 111 900",
+    email: "sg@aibizmod.com",
+    address: "7 Soon Lee St, #04-39 ISPACE BUILDING, Singapore 627608",
+  },
+];
 
 // ─── Service items (mirrors ServicesGrid data) ────────────────────────────────
 
@@ -95,14 +160,32 @@ export default function Navbar() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled]                   = useState(false);
   const [hoveredIndex, setHoveredIndex]           = useState<number | null>(null);
+  const [contactOpen, setContactOpen]             = useState(false);
+  const [selectedCountry, setSelectedCountry]     = useState(countries[0]);
+  const contactRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+
+  // Click outside to close contact dropdown
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (contactRef.current && !contactRef.current.contains(e.target as Node)) {
+        setContactOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
 
   const pillClass = "bg-cyan-500/8 border border-cyan-400/30";
 
   const closeTimer = useRef<ReturnType<typeof setTimeout>>();
+  const contactTimer = useRef<ReturnType<typeof setTimeout>>();
 
   const openServices   = () => { clearTimeout(closeTimer.current); setServicesOpen(true);  };
   const scheduleClose  = () => { closeTimer.current = setTimeout(() => setServicesOpen(false), 120); };
+
+  const openContact   = () => { clearTimeout(contactTimer.current); setContactOpen(true);  };
+  const scheduleContactClose  = () => { contactTimer.current = setTimeout(() => setContactOpen(false), 120); };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -135,7 +218,10 @@ export default function Navbar() {
   }, []);
 
   // Clean up timer on unmount
-  useEffect(() => () => clearTimeout(closeTimer.current), []);
+  useEffect(() => () => {
+    clearTimeout(closeTimer.current);
+    clearTimeout(contactTimer.current);
+  }, []);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -444,7 +530,7 @@ export default function Navbar() {
           })}
         </ul>
 
-        {/* ── Desktop CTA - remove when scrolled ──────────────────────────── */}
+        {/* ── Desktop CTA & Contact Selector - remove when scrolled ── */}
         <AnimatePresence>
           {!scrolled && (
             <motion.div
@@ -453,11 +539,83 @@ export default function Navbar() {
               animate={{ opacity: 1, width: "auto" }}
               exit={{ opacity: 0, width: 0, transition: { duration: 0.2 } }}
               transition={springTransition}
-              className="hidden md:block overflow-hidden whitespace-nowrap shrink-0"
+              className="hidden md:flex items-center gap-3 shrink-0 relative"
             >
               <Link href="/contact" className="btn-primary py-[8px] px-5 text-[13px] rounded-full">
                 Get a Quote
               </Link>
+
+              {/* Country Selector Dropdown */}
+              <div 
+                className="relative" 
+                ref={contactRef}
+                onMouseEnter={openContact}
+                onMouseLeave={scheduleContactClose}
+              >
+                <button
+                  type="button"
+                  onClick={() => setContactOpen((p) => !p)}
+                  className="flex items-center gap-2 px-4 py-[8.5px] text-[13px] font-semibold text-white bg-slate-950 hover:bg-slate-900 border border-slate-800 rounded-full transition-all focus-visible:outline-none select-none cursor-pointer"
+                >
+                  <span className="text-[15px] leading-none select-none">{selectedCountry.flag}</span>
+                  <span className="tracking-tight text-white/95">{selectedCountry.code}</span>
+                  <span className="text-white/60 font-mono text-[12px]">{selectedCountry.phone}</span>
+                  <ChevronDown
+                    size={13}
+                    className={`transition-transform duration-200 text-white/60 ${
+                      contactOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <AnimatePresence>
+                  {contactOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.95 }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
+                      className="absolute right-0 top-[calc(100%+8px)] z-50 w-[335px] rounded-2xl bg-[#f8f9ff] border border-slate-200/80 shadow-2xl p-4 space-y-4 text-left"
+                    >
+                      {countries.map((country) => (
+                        <div
+                          key={country.code}
+                          onClick={() => {
+                            setSelectedCountry(country);
+                            setContactOpen(false);
+                          }}
+                          className="flex items-start gap-3.5 p-3 rounded-xl transition-all cursor-pointer border bg-transparent border-transparent hover:bg-white hover:border-slate-200 hover:shadow-sm"
+                        >
+                          <span className="text-[20px] select-none mt-0.5 leading-none">{country.flag}</span>
+                          <div className="flex-1 min-w-0 space-y-1">
+                            <div className="flex items-center justify-between">
+                              <a
+                                href={`tel:${country.phone.replace(/\s+/g, "")}`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="font-bold text-[13.5px] text-slate-800 hover:text-cyan-500 transition-colors tracking-tight"
+                              >
+                                {country.phone}
+                              </a>
+                              <a
+                                href={`tel:${country.phone.replace(/\s+/g, "")}`}
+                                onClick={(e) => e.stopPropagation()}
+                                className="text-cyan-500 hover:text-cyan-600 p-1.5 hover:bg-slate-100 rounded-full transition-colors flex items-center justify-center border border-slate-100"
+                                aria-label={`Call ${country.code} office`}
+                              >
+                                <Phone size={13} strokeWidth={2.5} />
+                              </a>
+                            </div>
+
+                            <p className="text-[11px] text-slate-400 leading-normal font-sans pt-0.5">
+                              {country.address}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -614,14 +772,82 @@ export default function Navbar() {
                 );
               })}
 
-              <li className="pt-3 px-3">
+              <li className="pt-3 px-3 flex flex-col gap-2.5">
                 <Link
                   href="/contact"
-                  className="btn-primary w-full rounded-full"
+                  className="btn-primary w-full rounded-full text-center"
                   onClick={() => setMenuOpen(false)}
                 >
                   Get a Quote
                 </Link>
+
+                {/* Mobile Country Selector */}
+                <div className="w-full">
+                  <button
+                    type="button"
+                    onClick={() => setContactOpen((p) => !p)}
+                    className="w-full flex items-center justify-between px-4 py-2.5 text-[13px] font-semibold text-white bg-slate-900 border border-slate-800 rounded-full transition-all focus-visible:outline-none select-none cursor-pointer"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="text-[15px] leading-none">{selectedCountry.flag}</span>
+                      <span>{selectedCountry.code}</span>
+                      <span className="text-white/60 font-mono">{selectedCountry.phone}</span>
+                    </div>
+                    <ChevronDown
+                      size={14}
+                      className={`transition-transform duration-200 text-white/60 ${
+                        contactOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  <AnimatePresence>
+                    {contactOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="mt-2 w-full rounded-xl bg-white border border-slate-200/80 p-3 space-y-3 overflow-hidden text-left"
+                      >
+                        {countries.map((country) => (
+                          <div
+                            key={country.code}
+                            onClick={() => {
+                              setSelectedCountry(country);
+                              setContactOpen(false);
+                            }}
+                            className="flex items-start gap-3 p-2 rounded-lg transition-all cursor-pointer border bg-transparent border-transparent hover:bg-slate-50 hover:border-slate-100"
+                          >
+                            <span className="text-[18px] select-none mt-0.5 leading-none">{country.flag}</span>
+                            <div className="flex-1 min-w-0 space-y-1">
+                              <div className="flex items-center justify-between">
+                                <a
+                                  href={`tel:${country.phone.replace(/\s+/g, "")}`}
+                                  onClick={(e) => e.stopPropagation()}
+                                  className="font-bold text-[13px] text-slate-800 hover:text-cyan-500 transition-colors"
+                                >
+                                  {country.phone}
+                                </a>
+                                <a
+                                  href={`tel:${country.phone.replace(/\s+/g, "")}`}
+                                  onClick={(e) => e.stopPropagation()}
+                                  className="text-cyan-500 hover:text-cyan-600 p-1 hover:bg-slate-200/50 rounded-full transition-colors"
+                                  aria-label={`Call ${country.code} office`}
+                                >
+                                  <Phone size={12} strokeWidth={2.5} />
+                                </a>
+                              </div>
+
+                              <p className="text-[10px] text-slate-400 leading-normal font-sans pt-0.5">
+                                {country.address}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </li>
             </ul>
           </motion.div>

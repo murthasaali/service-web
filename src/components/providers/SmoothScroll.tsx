@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     // Initialize Lenis with smooth, inert kinetic options mimicking high-end websites
@@ -67,6 +69,14 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       if (scrollTimeoutId) clearTimeout(scrollTimeoutId);
     };
   }, []);
+
+  // Reset scroll and recalculate layout dimensions on route/pathname changes
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+      lenisRef.current.resize();
+    }
+  }, [pathname]);
 
   return <>{children}</>;
 }

@@ -147,18 +147,18 @@ export default function ProblemSolutionCard({
                 </span>
               </div>
 
-              <h3 className="font-display font-semibold text-[#0F172A] text-xl mb-4 leading-tight">
+              <h3 className="font-display font-semibold text-[#0F172A] dark:text-slate-100 text-xl mb-4 leading-tight">
                 Identifying the hurdles
               </h3>
               
-              <p className="text-slate-600 leading-relaxed text-sm mb-8 line-clamp-2" title={challenge}>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm mb-8 line-clamp-2" title={challenge}>
                 {challenge}
               </p>
             </div>
 
             <ul className="space-y-3.5 mt-auto">
               {challengePoints.map((point, index) => (
-                <li key={index} className="flex items-start gap-3 text-sm text-slate-600">
+                <li key={index} className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300">
                   <span
                     className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-red-500"
                     aria-hidden="true"
@@ -173,14 +173,14 @@ export default function ProblemSolutionCard({
           <div className="flex flex-col items-center justify-center self-stretch py-4 lg:py-0 pointer-events-none">
             {/* Desktop vertical divider */}
             <div className="hidden lg:block w-px h-full bg-gradient-to-b from-cyan-100/10 via-cyan-200/80 to-cyan-100/10 relative">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-cyan-100/80 flex items-center justify-center shadow-[0_8px_24px_rgba(8,145,178,0.08)]">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-cyan-100/80 dark:border-slate-800 flex items-center justify-center shadow-[0_8px_24px_rgba(8,145,178,0.08)]">
                 <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 animate-pulse" />
               </div>
             </div>
             
             {/* Mobile horizontal divider */}
             <div className="lg:hidden w-full h-px bg-gradient-to-r from-cyan-100/10 via-cyan-200/80 to-cyan-100/10 my-4 relative">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-cyan-100/80 flex items-center justify-center shadow-[0_8px_24px_rgba(8,145,178,0.08)]">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-cyan-100/80 dark:border-slate-800 flex items-center justify-center shadow-[0_8px_24px_rgba(8,145,178,0.08)]">
                 <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 animate-pulse" />
               </div>
             </div>
@@ -198,18 +198,18 @@ export default function ProblemSolutionCard({
                 </span>
               </div>
 
-              <h3 className="font-display font-semibold text-[#0F172A] text-xl mb-4 leading-tight">
+              <h3 className="font-display font-semibold text-[#0F172A] dark:text-slate-100 text-xl mb-4 leading-tight">
                 Our approach & solution
               </h3>
               
-              <p className="text-slate-600 leading-relaxed text-sm mb-8 line-clamp-2" title={solution}>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm mb-8 line-clamp-2" title={solution}>
                 {solution}
               </p>
             </div>
 
             <ul className="space-y-3.5 mt-auto">
               {solutionPoints.map((point, index) => (
-                <li key={index} className="flex items-start gap-3 text-sm text-slate-600">
+                <li key={index} className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300">
                   <span
                     className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#0891b2]"
                     aria-hidden="true"
