@@ -63,7 +63,7 @@ export function StarButton({
       />
 
       <span className={cn("relative z-10 inline-flex h-full w-full items-center justify-center gap-2 rounded-[calc(1.5rem-var(--border-width))] bg-[var(--button-bg)] px-6 py-2.5", textColor)}>
-        <span className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[linear-gradient(110deg,transparent_20%,rgba(255,255,255,0.22)_45%,transparent_68%)] opacity-0 transition-opacity duration-300 group-hover/star-button:animate-shine-sweep group-hover/star-button:opacity-100" />
+        <span className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[linear-gradient(110deg,transparent_20%,rgba(255,255,255,0.22)_45%,transparent_68%)] opacity-100 animate-shine-sweep" />
         <span className="relative z-10 inline-flex items-center gap-2">
           {children}
         </span>

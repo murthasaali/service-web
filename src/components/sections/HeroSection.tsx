@@ -55,7 +55,7 @@ const socials = [
   },
   {
     label: "Email",
-    href: "mailto:hello@aibizmod.com",
+    href: "mailto:aibizmod@outlook.com",
     icon: MdEmail,
     color: "#EA4335",
   },

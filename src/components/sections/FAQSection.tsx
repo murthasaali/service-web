@@ -29,7 +29,7 @@ export default function FAQSection() {
     },
     {
       question: "How do we start a project with aibizmod?",
-      answer: "Go to our contact page or email hello@aibizmod.com. We will schedule a call within 24 hours, discuss your goals, and suggest a practical next step.",
+      answer: "Go to our contact page or email aibizmod@outlook.com. We will schedule a call within 24 hours, discuss your goals, and suggest a practical next step.",
     },
   ];
 

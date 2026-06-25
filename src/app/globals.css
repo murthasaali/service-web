@@ -245,7 +245,7 @@
   }
 
   .animate-shine-sweep {
-    animation: shine-sweep 1s ease-out;
+    animation: shine-sweep 2.4s ease-in-out infinite;
   }
 
   /* Cyan gradient text — hero accent word(s) ONLY */

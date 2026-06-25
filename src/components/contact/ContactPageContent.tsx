@@ -1,6 +1,7 @@
 'use client';
 
 import { useId, useState } from 'react';
+import { gql } from '@apollo/client';
 import Link from 'next/link';
 import {
 	AlertCircle,
@@ -14,6 +15,25 @@ import {
 import ShaderBackground from '@/components/ui/shader-background';
 import { StarButton } from '@/components/ui/star-button';
 import { TextReveal } from '@/components/ui/cascade-text';
+import { client } from '@/lib/apollo-client';
+
+const CREATE_DEMO_REQUEST = gql`
+	mutation CreateDemoRequest($input: CreateDemoRequestInput!) {
+		createDemoRequest(input: $input) {
+			_id
+			firstName
+			lastName
+			email
+			company
+			phoneNumber
+			companySize
+			projectDetails
+			formType
+		}
+	}
+`;
+
+const companySizeOptions = ['1-10', '11-50', '51-200', '201-1000', '1000+'];
 
 const serviceOptions = [
 	'Web Development',
@@ -26,21 +46,12 @@ const serviceOptions = [
 	'IT Consulting & IT Services',
 ];
 
-const budgetOptions = [
-	'Under 5,000',
-	'5,000 - 15,000',
-	'15,000 - 50,000',
-	'50,000 - 100,000',
-	'100,000+',
-	'Not sure yet',
-];
-
 const contactDetails = [
 	{
 		icon: Mail,
 		label: 'Email',
-		value: 'hello@aibizmod.com',
-		href: 'mailto:hello@aibizmod.com',
+		value: 'aibizmod@outlook.com',
+		href: 'mailto:aibizmod@outlook.com',
 	},
 	{
 		icon: Phone,
@@ -57,38 +68,45 @@ const contactDetails = [
 ] as const;
 
 interface FormData {
-	fullName: string;
+	firstName: string;
+	lastName: string;
 	email: string;
+	phoneNumber: string;
 	company: string;
-	service: string;
-	budget: string;
-	message: string;
+	companySize: string;
+	projectDetails: string;
+	formType: string;
 }
 
 interface FormErrors {
-	fullName?: string;
+	firstName?: string;
+	lastName?: string;
 	email?: string;
-	service?: string;
-	budget?: string;
-	message?: string;
+	phoneNumber?: string;
+	company?: string;
 }
 
 function validate(data: FormData): FormErrors {
 	const errors: FormErrors = {};
 
-	if (!data.fullName.trim() || data.fullName.trim().length < 2) {
-		errors.fullName = 'Please enter your full name.';
+	if (!data.firstName.trim()) {
+		errors.firstName = 'First name is required.';
+	}
+
+	if (!data.lastName.trim()) {
+		errors.lastName = 'Last name is required.';
 	}
 
 	if (!data.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
 		errors.email = 'Please enter a valid email address.';
 	}
 
-	if (!data.service) errors.service = 'Please select a service.';
-	if (!data.budget) errors.budget = 'Please select a budget range.';
+	if (!data.phoneNumber.trim()) {
+		errors.phoneNumber = 'Phone number is required.';
+	}
 
-	if (!data.message.trim() || data.message.trim().length < 20) {
-		errors.message = 'Please add a short project description.';
+	if (!data.company.trim()) {
+		errors.company = 'Company name is required.';
 	}
 
 	return errors;
@@ -107,19 +125,43 @@ function FieldError({ id, message }: { id: string; message: string }) {
 	);
 }
 
+function NextStepCard() {
+	return (
+		<div className='mt-6 rounded-2xl border border-cyan-100 bg-[#ECFEFF]/70 p-5'>
+			<p className='text-sm font-semibold text-[#0F172A]'>
+				What happens next?
+			</p>
+			<p className='mt-2 text-sm leading-7 text-slate-600'>
+				We review your note, clarify goals, and suggest the simplest next step
+				before any build work begins.
+			</p>
+			<Link
+				href='/services'
+				className='mt-4 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700 hover:text-cyan-900'
+			>
+				View services
+				<ArrowRight size={14} aria-hidden='true' />
+			</Link>
+		</div>
+	);
+}
+
 export default function ContactPageContent() {
 	const uid = useId();
 	const [formData, setFormData] = useState<FormData>({
-		fullName: '',
+		firstName: '',
+		lastName: '',
 		email: '',
+		phoneNumber: '',
 		company: '',
-		service: '',
-		budget: '',
-		message: '',
+		companySize: '',
+		projectDetails: '',
+		formType: 'aibizmod',
 	});
 	const [errors, setErrors] = useState<FormErrors>({});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
+	const [submitError, setSubmitError] = useState('');
 
 	const handleChange = (
 		event: React.ChangeEvent<
@@ -131,6 +173,7 @@ export default function ContactPageContent() {
 		if (errors[name as keyof FormErrors]) {
 			setErrors((prev) => ({ ...prev, [name]: undefined }));
 		}
+		if (submitError) setSubmitError('');
 	};
 
 	const handleSubmit = async (event: React.FormEvent) => {
@@ -146,21 +189,34 @@ export default function ContactPageContent() {
 		}
 
 		setIsSubmitting(true);
-		await new Promise<void>((resolve) => setTimeout(resolve, 700));
-		setIsSubmitting(false);
-		setSubmitted(true);
+		setSubmitError('');
+		try {
+			await client.mutate({
+				mutation: CREATE_DEMO_REQUEST,
+				variables: { input: formData },
+			});
+			setSubmitted(true);
+		} catch (error) {
+			console.error('Form submission error:', error);
+			setSubmitError('Something went wrong. Please try again or email us directly.');
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	const handleReset = () => {
 		setSubmitted(false);
 		setErrors({});
+		setSubmitError('');
 		setFormData({
-			fullName: '',
+			firstName: '',
+			lastName: '',
 			email: '',
+			phoneNumber: '',
 			company: '',
-			service: '',
-			budget: '',
-			message: '',
+			companySize: '',
+			projectDetails: '',
+			formType: 'aibizmod',
 		});
 	};
 
@@ -171,7 +227,7 @@ export default function ContactPageContent() {
 	const cls = (field: keyof FormErrors) =>
 		errors[field] ? inputError : inputNormal;
 
-	const firstName = formData.fullName.trim().split(' ')[0];
+	const firstName = formData.firstName.trim();
 
 	return (
 		<section className='relative isolate min-h-screen overflow-hidden bg-white px-6 pb-20 pt-32 md:pt-36'>
@@ -240,33 +296,64 @@ export default function ContactPageContent() {
 								<div className='grid gap-5 sm:grid-cols-2'>
 									<div>
 										<label
-											htmlFor={`${uid}-fullName`}
+											htmlFor={`${uid}-firstName`}
 											className='mb-1.5 block text-sm font-semibold text-[#0F172A]'
 										>
-											Full name
+											First name
 										</label>
 										<input
-											id={`${uid}-fullName`}
-											name='fullName'
+											id={`${uid}-firstName`}
+											name='firstName'
 											type='text'
-											autoComplete='name'
-											placeholder='Jane Smith'
-											value={formData.fullName}
+											autoComplete='given-name'
+											placeholder='Jane'
+											value={formData.firstName}
 											onChange={handleChange}
-											aria-invalid={!!errors.fullName}
+											aria-invalid={!!errors.firstName}
 											aria-describedby={
-												errors.fullName ? `${uid}-fullName-error` : undefined
+												errors.firstName ? `${uid}-firstName-error` : undefined
 											}
-											className={cls('fullName')}
+											className={cls('firstName')}
 										/>
-										{errors.fullName && (
+										{errors.firstName && (
 											<FieldError
-												id={`${uid}-fullName-error`}
-												message={errors.fullName}
+												id={`${uid}-firstName-error`}
+												message={errors.firstName}
 											/>
 										)}
 									</div>
 
+									<div>
+										<label
+											htmlFor={`${uid}-lastName`}
+											className='mb-1.5 block text-sm font-semibold text-[#0F172A]'
+										>
+											Last name
+										</label>
+										<input
+											id={`${uid}-lastName`}
+											name='lastName'
+											type='text'
+											autoComplete='family-name'
+											placeholder='Smith'
+											value={formData.lastName}
+											onChange={handleChange}
+											aria-invalid={!!errors.lastName}
+											aria-describedby={
+												errors.lastName ? `${uid}-lastName-error` : undefined
+											}
+											className={cls('lastName')}
+										/>
+										{errors.lastName && (
+											<FieldError
+												id={`${uid}-lastName-error`}
+												message={errors.lastName}
+											/>
+										)}
+									</div>
+								</div>
+
+								<div className='grid gap-5 sm:grid-cols-2'>
 									<div>
 										<label
 											htmlFor={`${uid}-email`}
@@ -289,7 +376,39 @@ export default function ContactPageContent() {
 											className={cls('email')}
 										/>
 										{errors.email && (
-											<FieldError id={`${uid}-email-error`} message={errors.email} />
+											<FieldError
+												id={`${uid}-email-error`}
+												message={errors.email}
+											/>
+										)}
+									</div>
+
+									<div>
+										<label
+											htmlFor={`${uid}-phoneNumber`}
+											className='mb-1.5 block text-sm font-semibold text-[#0F172A]'
+										>
+											Phone number
+										</label>
+										<input
+											id={`${uid}-phoneNumber`}
+											name='phoneNumber'
+											type='tel'
+											autoComplete='tel'
+											placeholder='+1 234 567 8900'
+											value={formData.phoneNumber}
+											onChange={handleChange}
+											aria-invalid={!!errors.phoneNumber}
+											aria-describedby={
+												errors.phoneNumber ? `${uid}-phoneNumber-error` : undefined
+											}
+											className={cls('phoneNumber')}
+										/>
+										{errors.phoneNumber && (
+											<FieldError
+												id={`${uid}-phoneNumber-error`}
+												message={errors.phoneNumber}
+											/>
 										)}
 									</div>
 								</div>
@@ -297,118 +416,90 @@ export default function ContactPageContent() {
 								<div className='grid gap-5 sm:grid-cols-2'>
 									<div>
 										<label
-											htmlFor={`${uid}-service`}
+											htmlFor={`${uid}-company`}
 											className='mb-1.5 block text-sm font-semibold text-[#0F172A]'
 										>
-											Service
+											Company
 										</label>
-										<select
-											id={`${uid}-service`}
-											name='service'
-											value={formData.service}
+										<input
+											id={`${uid}-company`}
+											name='company'
+											type='text'
+											autoComplete='organization'
+											placeholder='Company name'
+											value={formData.company}
 											onChange={handleChange}
-											aria-invalid={!!errors.service}
+											aria-invalid={!!errors.company}
 											aria-describedby={
-												errors.service ? `${uid}-service-error` : undefined
+												errors.company ? `${uid}-company-error` : undefined
 											}
-											className={cls('service')}
-										>
-											<option value=''>Select a service</option>
-											{serviceOptions.map((service) => (
-												<option key={service} value={service}>
-													{service}
-												</option>
-											))}
-										</select>
-										{errors.service && (
+											className={cls('company')}
+										/>
+										{errors.company && (
 											<FieldError
-												id={`${uid}-service-error`}
-												message={errors.service}
+												id={`${uid}-company-error`}
+												message={errors.company}
 											/>
 										)}
 									</div>
 
 									<div>
 										<label
-											htmlFor={`${uid}-budget`}
+											htmlFor={`${uid}-companySize`}
 											className='mb-1.5 block text-sm font-semibold text-[#0F172A]'
 										>
-											Budget
+											Company size{' '}
+											<span className='font-normal text-slate-400'>(optional)</span>
 										</label>
 										<select
-											id={`${uid}-budget`}
-											name='budget'
-											value={formData.budget}
+											id={`${uid}-companySize`}
+											name='companySize'
+											value={formData.companySize}
 											onChange={handleChange}
-											aria-invalid={!!errors.budget}
-											aria-describedby={
-												errors.budget ? `${uid}-budget-error` : undefined
-											}
-											className={cls('budget')}
+											className={inputNormal}
 										>
-											<option value=''>Select a range</option>
-											{budgetOptions.map((budget) => (
-												<option key={budget} value={budget}>
-													{budget}
+											<option value=''>Select company size</option>
+											{companySizeOptions.map((size) => (
+												<option key={size} value={size}>
+													{size} employees
 												</option>
 											))}
 										</select>
-										{errors.budget && (
-											<FieldError
-												id={`${uid}-budget-error`}
-												message={errors.budget}
-											/>
-										)}
 									</div>
 								</div>
 
 								<div>
 									<label
-										htmlFor={`${uid}-company`}
+										htmlFor={`${uid}-projectDetails`}
 										className='mb-1.5 block text-sm font-semibold text-[#0F172A]'
 									>
-										Company{' '}
+										Which service are you looking for?{' '}
 										<span className='font-normal text-slate-400'>(optional)</span>
 									</label>
-									<input
-										id={`${uid}-company`}
-										name='company'
-										type='text'
-										autoComplete='organization'
-										placeholder='Company name'
-										value={formData.company}
+									<select
+										id={`${uid}-projectDetails`}
+										name='projectDetails'
+										value={formData.projectDetails}
 										onChange={handleChange}
 										className={inputNormal}
-									/>
+									>
+										<option value=''>Select a service</option>
+										{serviceOptions.map((service) => (
+											<option key={service} value={service}>
+												{service}
+											</option>
+										))}
+									</select>
 								</div>
 
-								<div>
-									<label
-										htmlFor={`${uid}-message`}
-										className='mb-1.5 block text-sm font-semibold text-[#0F172A]'
+								{submitError && (
+									<p
+										role='alert'
+										className='rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700'
 									>
-										Project details
-									</label>
-									<textarea
-										id={`${uid}-message`}
-										name='message'
-										rows={5}
-										placeholder='What are you building, improving, or automating?'
-										value={formData.message}
-										onChange={handleChange}
-										aria-invalid={!!errors.message}
-										aria-describedby={
-											errors.message ? `${uid}-message-error` : undefined
-										}
-										className={`${cls('message')} min-h-[140px] resize-y`}
-									/>
-									{errors.message && (
-										<FieldError
-											id={`${uid}-message-error`}
-											message={errors.message}
-										/>
-									)}
-								</div>
+										{submitError}
+									</p>
+								)}
 
 								<div className='flex flex-col gap-3 pt-2 sm:flex-row sm:items-center'>
 									<button
@@ -469,25 +560,10 @@ export default function ContactPageContent() {
 								</li>
 							))}
 						</ul>
-
-						<div className='mt-6 rounded-2xl border border-cyan-100 bg-[#ECFEFF]/70 p-5'>
-							<p className='text-sm font-semibold text-[#0F172A]'>
-								What happens next?
-							</p>
-							<p className='mt-2 text-sm leading-7 text-slate-600'>
-								We review your note, clarify goals, and suggest the simplest
-								next step before any build work begins.
-							</p>
-							<Link
-								href='/services'
-								className='mt-4 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700 hover:text-cyan-900'
-							>
-								View services
-								<ArrowRight size={14} aria-hidden='true' />
-							</Link>
-						</div>
 					</aside>
 				</div>
+
+				<NextStepCard />
 			</div>
 		</section>
 	);

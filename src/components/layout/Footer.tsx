@@ -64,7 +64,7 @@ const socials = [
   },
   {
     label: "Email",
-    href: "mailto:hello@aibizmod.com",
+    href: "mailto:aibizmod@outlook.com",
     icon: MdEmail,
   },
 ];
@@ -157,10 +157,10 @@ export default function Footer() {
               <div className="flex items-center gap-2.5 text-[15px] text-white">
                 <MdEmail size={14} className="text-[#22D3EE] shrink-0" />
                 <a
-                  href="mailto:hello@aibizmod.com"
+                  href="mailto:aibizmod@outlook.com"
                   className="hover:text-[#22D3EE] transition-colors font-semibold"
                 >
-                  hello@aibizmod.com
+                  aibizmod@outlook.com
                 </a>
               </div>
             </div>
