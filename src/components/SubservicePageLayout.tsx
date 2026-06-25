@@ -17,8 +17,10 @@ import SectionHeading from "@/components/common/SectionHeading";
 import ShaderBackground from "@/components/ui/shader-background";
 import { StarButton } from "@/components/ui/star-button";
 import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
-import { iconMap, type IconKey } from "@/components/ServicePageLayout";
+import { type IconKey } from "@/components/ServicePageLayout";
 import ProblemSolutionCard from "@/components/ui/ProblemSolutionCard";
+import CapabilitiesRollingSection from "@/components/ui/capabilities-rolling-section";
+import { IconHover3D } from "@/components/ui/icon-3d-hover";
 
 // ─── Data types ───────────────────────────────────────────────────────────────
 
@@ -264,38 +266,11 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
             </div>
           </section>
 
-          {/* ── 3. Key Capabilities ─────────────────────────────────────────── */}
-          <section className="px-6 py-24 bg-white">
-            <div className="max-w-7xl mx-auto">
-              <AnimatedSection className="text-center mb-14">
-                <SectionHeading eyebrow="Key Capabilities" heading="What this service includes" centered />
-              </AnimatedSection>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {data.capabilities.map((cap, i) => {
-                  const Icon = iconMap[cap.icon];
-                  return (
-                    <AnimatedSection key={cap.title} delay={i * 0.06}>
-                      <div className="flex h-full flex-col rounded-[24px] border border-cyan-100/80 bg-white/75 p-6 shadow-[0_18px_55px_rgba(59,130,246,0.09)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-200 hover:shadow-[0_24px_70px_rgba(8,145,178,0.14)]">
-                        <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-full border border-cyan-100 bg-cyan-50 text-cyan-700 shadow-[0_12px_28px_rgba(8,145,178,0.10)]">
-                          <Icon size={19} aria-hidden="true" />
-                        </div>
-                        <h3
-                          className="font-display font-semibold text-[#0F172A] mb-2"
-                          style={{ fontSize: 17, lineHeight: 1.3 }}
-                        >
-                          {cap.title}
-                        </h3>
-                        <p className="text-sm text-slate-600 leading-relaxed flex-1">
-                          {cap.description}
-                        </p>
-                      </div>
-                    </AnimatedSection>
-                  );
-                })}
-              </div>
-            </div>
-          </section>
+          {/* ── 3. Key Capabilities (Rolling List) ──────────────────────────── */}
+          <CapabilitiesRollingSection
+            capabilities={data.capabilities}
+            serviceSlug={data.parentSlug}
+          />
 
           {/* ── 4. Common Use Cases ─────────────────────────────────────────── */}
           <section
@@ -314,20 +289,12 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {data.useCases.map((uc, i) => (
                   <AnimatedSection key={uc.title} delay={i * 0.07}>
-                    <div className="flex h-full flex-col rounded-[24px] border border-cyan-100/80 bg-white p-6 shadow-[0_12px_40px_rgba(8,145,178,0.08)]">
-                      <span className="inline-flex self-start items-center rounded-full bg-cyan-50 border border-cyan-100 px-3 py-1 text-xs font-semibold text-cyan-700 mb-4">
-                        {uc.industry}
-                      </span>
-                      <h3
-                        className="font-display font-semibold text-[#0F172A] mb-2"
-                        style={{ fontSize: 16, lineHeight: 1.3 }}
-                      >
-                        {uc.title}
-                      </h3>
-                      <p className="text-sm text-slate-600 leading-relaxed flex-1">
-                        {uc.description}
-                      </p>
-                    </div>
+                    <IconHover3D
+                      heading={uc.title}
+                      text={uc.description}
+                      badge={uc.industry}
+                      className="h-full"
+                    />
                   </AnimatedSection>
                 ))}
               </div>

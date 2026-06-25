@@ -454,7 +454,7 @@ export default function ServicePageLayout({
 
           <div className="relative max-w-7xl mx-auto z-10">
             <AnimatedSection className="text-center mb-8 flex flex-col items-center">
-              <span className="text-[11px] font-bold tracking-[0.14em] uppercase text-[#0F172A]">
+              <span className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground">
                 How It Works
               </span>
               <h2 

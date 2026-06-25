@@ -20,13 +20,7 @@ export default function SectionHeading({
   return (
     <div className={cn("flex flex-col", centered ? "items-center text-center" : "items-start text-left", className)}>
       <span
-        style={{
-          fontSize: 11,
-          fontWeight: 700,
-          letterSpacing: "0.14em",
-          textTransform: "uppercase",
-          color: "black",
-        }}
+        className="text-sm font-semibold uppercase tracking-[0.16em] text-foreground"
       >
         {eyebrow}
       </span>
