@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Software development investments frequently underperform because the planning before build was insufficient. Requirements were unclear, the architecture was not designed before the first sprint, or the decision to build custom rather than buy an existing product was not properly evaluated. Organisations often reach us after an expensive failed project or partway through a build that has lost direction. Good consulting before development prevents most of these outcomes.",
+    challenge:
+      "Software development investments frequently underperform because the planning before build was insufficient. Requirements were unclear, the architecture was not designed before the first sprint, or the decision to build custom rather than buy an existing product was not properly evaluated. Organisations often reach us after an expensive failed project or partway through a build that has lost direction. Good consulting before development prevents most of these outcomes.",
     challengePoints: [
       "Development project started without clear requirements, producing rework when the scope is clarified mid-build",
       "Build versus buy decision made without analysis, committing to custom development where a product would have been faster and cheaper",
       "Architecture undocumented, so each developer makes local decisions that accumulate into structural problems",
-      "Technology investment made without a strategic rationale, producing tools that do not connect to business outcomes",
+      "Technology investment made without a strategic rationale, producing tools that do not connect to business outcomes"
     ],
-    solution: "We provide the consulting layer before and during software development that most projects skip — requirements definition, build versus buy analysis, architecture design, and technology roadmapping. These are the decisions that determine whether a development investment succeeds or fails, and they are best made before the first line of code is written.",
+    solution:
+      "We provide the consulting layer before and during software development that most projects skip — requirements definition, build versus buy analysis, architecture design, and technology roadmapping. These are the decisions that determine whether a development investment succeeds or fails, and they are best made before the first line of code is written.",
     solutionPoints: [
       "Requirements definition producing a specification that development can build against without ambiguity",
       "Build versus buy analysis with vendor evaluation before committing to custom development",
       "Solution architecture design producing a documented architecture before build begins",
-      "Technology roadmap connecting software investment to business objectives over a planning horizon",
+      "Technology roadmap connecting software investment to business objectives over a planning horizon"
     ],
   },
 

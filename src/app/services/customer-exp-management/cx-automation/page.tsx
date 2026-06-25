@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Support and customer operations teams spend a large portion of their time on queries that follow predictable patterns — order status, FAQs, appointment rescheduling, account updates. These interactions are repetitive, low-complexity, and do not require a person to resolve. But without the right automation in place, every one of them lands in a human queue, delaying responses for customers who have more complex issues.",
+    challenge:
+      "Support and customer operations teams spend a large portion of their time on queries that follow predictable patterns — order status, FAQs, appointment rescheduling, account updates. These interactions are repetitive, low-complexity, and do not require a person to resolve. But without the right automation in place, every one of them lands in a human queue, delaying responses for customers who have more complex issues.",
     challengePoints: [
       "Support queues overwhelmed by high volumes of simple, repetitive queries",
       "Customer-facing workflows like appointment booking requiring back-and-forth that could be self-service",
       "No first-line triage to classify and route inbound contacts before they reach an agent",
-      "Agent time consumed by status lookup and data entry that automation could handle",
+      "Agent time consumed by status lookup and data entry that automation could handle"
     ],
-    solution: "We identify which customer interactions in your operation follow consistent enough patterns to automate reliably, then build the chatbots, voice agents, or workflow automations that handle them — with clean handoff to a human agent when the interaction goes outside the automated scope.",
+    solution:
+      "We identify which customer interactions in your operation follow consistent enough patterns to automate reliably, then build the chatbots, voice agents, or workflow automations that handle them — with clean handoff to a human agent when the interaction goes outside the automated scope.",
     solutionPoints: [
       "AI chatbot deployment handling FAQ, status enquiries, and self-service actions",
       "Voice agent setup for inbound call triage, routing, and automated status responses",
       "Workflow automation connecting form submissions, tickets, and CRM updates without manual steps",
-      "Escalation handling so automated flows route seamlessly to a human agent with full context",
+      "Escalation handling so automated flows route ly to a human agent with full context"
     ],
   },
 

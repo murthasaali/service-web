@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Businesses accumulate manual processes around the edges of their software stack. A billing system that generates invoices but requires a spreadsheet to track what has been billed. A project management tool that tracks tasks but not the specific metrics the business cares about. An internal process that has outgrown the email thread it was managed in. These are processes that custom business applications can automate, but they are specific enough that no off-the-shelf product covers them precisely.",
+    challenge:
+      "Businesses accumulate manual processes around the edges of their software stack. A billing system that generates invoices but requires a spreadsheet to track what has been billed. A project management tool that tracks tasks but not the specific metrics the business cares about. An internal process that has outgrown the email thread it was managed in. These are processes that custom business applications can automate, but they are specific enough that no off-the-shelf product covers them precisely.",
     challengePoints: [
       "Manual workflows that have outgrown the spreadsheet or email thread managing them",
       "Billing or financial processes requiring a system that matches specific calculation and reporting logic",
       "Internal tooling needed by operations teams that does not exist as a product and cannot be approximated well enough by available tools",
-      "Multiple systems that need to be connected in ways their native integrations cannot support",
+      "Multiple systems that need to be connected in ways their native integrations cannot support"
     ],
-    solution: "We build focused business applications for specific operational processes — workflow tools, billing engines, internal dashboards, project tracking systems — designed exactly for the process that needs automating, not adapted from something designed for a different use case.",
+    solution:
+      "We build focused business applications for specific operational processes — workflow tools, billing engines, internal dashboards, project tracking systems — designed exactly for the process that needs automating, not adapted from something designed for a different use case.",
     solutionPoints: [
       "Scoped application design focused on the specific process to automate without adding scope creep",
       "Integration with the systems the process connects to — CRM, accounting, ERP, external APIs",
       "User interface appropriate for the role using the tool, including internal tools optimised for power users",
-      "Deployment on your existing infrastructure or cloud account so you own and control the system",
+      "Deployment on your existing infrastructure or cloud account so you own and control the system"
     ],
   },
 

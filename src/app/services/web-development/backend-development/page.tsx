@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Frontend work gets the attention, but backend problems are what actually break products. An API that doesn't handle errors gracefully, a database schema designed around one use case that can't accommodate the next one, authentication that wasn't built with roles in mind from the start — these are the issues that cause rewrites six months after launch.",
+    challenge:
+      "Frontend work gets the attention, but backend problems are what actually break products. An API that doesn't handle errors gracefully, a database schema designed around one use case that can't accommodate the next one, authentication that wasn't built with roles in mind from the start — these are the issues that cause rewrites six months after launch.",
     challengePoints: [
       "API endpoints with no error handling or inconsistent response formats",
       "Database schema that doesn't scale as the product grows",
       "Authentication that doesn't support multiple roles or organisations",
-      "No documentation for how the backend works or how to extend it",
+      "No documentation for how the backend works or how to extend it"
     ],
-    solution: "We design the database schema and API structure before writing a line of code, discuss trade-offs upfront, and build with extension in mind. Every endpoint is documented, every integration is tested with real credentials, and the codebase is handed over with enough context for any developer to pick it up.",
+    solution:
+      "We design the database schema and API structure before writing a line of code, discuss trade-offs upfront, and build with extension in mind. Every endpoint is documented, every integration is tested with real credentials, and the codebase is handed over with enough context for any developer to pick it up.",
     solutionPoints: [
       "Database design reviewed before implementation begins",
       "REST or GraphQL APIs with consistent error handling and versioning",
       "Role-based authentication with JWT or session management",
-      "Full API documentation in Postman or OpenAPI format",
+      "Full API documentation in Postman or OpenAPI format"
     ],
   },
 

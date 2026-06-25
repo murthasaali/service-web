@@ -33,7 +33,7 @@ const data: SubservicePageData = {
       "Quality inspectors spending time on repetitive visual checks that could be automated",
       "Documents arriving in image format that must be manually read and re-entered into systems",
       "ID and document verification adding friction and staff time to onboarding processes",
-      "Photo content that is untagged and unsearchable because classification was never automated",
+      "Photo content that is untagged and unsearchable because classification was never automated"
     ],
     solution:
       "We build computer vision pipelines that handle the specific visual task in your process, whether that is reading a document, classifying an image, detecting a defect, or verifying an ID. The system scales with volume and produces structured data output that feeds directly into your downstream workflows.",
@@ -41,7 +41,7 @@ const data: SubservicePageData = {
       "OCR pipelines that extract structured data from documents, forms, and invoices",
       "Object detection models trained on your specific defect types or categories",
       "Document verification workflows that flag anomalies for human review",
-      "Vision APIs embedded into your existing application or workflow",
+      "Vision APIs embedded into your existing application or workflow"
     ],
   },
 

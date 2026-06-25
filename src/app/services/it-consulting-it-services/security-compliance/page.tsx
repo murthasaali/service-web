@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Security and compliance requirements are growing across every industry, but most organisations do not have a clear picture of where they currently stand. Policies exist on paper but have not been tested against actual systems. Compliance assessments are approached reactively when a contract or audit forces the issue. The gap between documented policies and operational practice is the most common source of compliance findings and security incidents.",
+    challenge:
+      "Security and compliance requirements are growing across every industry, but most organisations do not have a clear picture of where they currently stand. Policies exist on paper but have not been tested against actual systems. Compliance assessments are approached reactively when a contract or audit forces the issue. The gap between documented policies and operational practice is the most common source of compliance findings and security incidents.",
     challengePoints: [
       "No current picture of security posture — systems have not been assessed against the threats they face",
       "Compliance obligations understood at a high level but not mapped to specific technical controls",
       "Security policies documented but not verified against how systems actually operate",
-      "Approaching an audit or due diligence with gaps that need to be found and closed in advance",
+      "Approaching an audit or due diligence with gaps that need to be found and closed in advance"
     ],
-    solution: "We conduct structured security assessments against your current environment and the compliance frameworks relevant to your industry, produce a findings report prioritised by risk, and support remediation of the identified gaps. Work is scoped against what you actually need to address for your regulatory context, not a generic list.",
+    solution:
+      "We conduct structured security assessments against your current environment and the compliance frameworks relevant to your industry, produce a findings report prioritised by risk, and support remediation of the identified gaps. Work is scoped against what you actually need to address for your regulatory context, not a generic list.",
     solutionPoints: [
       "Security assessment covering your specific risk profile and regulatory environment",
       "Compliance gap analysis against relevant frameworks such as ISO 27001, Cyber Essentials, or GDPR",
       "Prioritised findings report with remediation guidance and effort estimates",
-      "Remediation support to close identified gaps before they are found in an audit",
+      "Remediation support to close identified gaps before they are found in an audit"
     ],
   },
 

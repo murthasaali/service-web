@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Development and operations teams working without common processes spend more time coordinating deployments than building features. Developers wait for operations to provision environments. Operations wait for developers to document their setup. Releases are infrequent, high-stakes events rather than routine processes. And when something goes wrong, there is no shared tooling or language to diagnose and resolve it efficiently.",
+    challenge:
+      "Development and operations teams working without common processes spend more time coordinating deployments than building features. Developers wait for operations to provision environments. Operations wait for developers to document their setup. Releases are infrequent, high-stakes events rather than routine processes. And when something goes wrong, there is no shared tooling or language to diagnose and resolve it efficiently.",
     challengePoints: [
       "Manual deployment processes that are slow, error-prone, and require specialist coordination",
       "Development and staging environments that differ from production, causing environment-specific bugs",
       "No automated testing in the release pipeline, so quality control depends entirely on human review",
-      "Operations team managing infrastructure manually without version control or reproducibility",
+      "Operations team managing infrastructure manually without version control or reproducibility"
     ],
-    solution: "We design and implement the processes, tooling, and infrastructure that enable development and operations teams to work from a shared foundation — automated pipelines, containerised environments, infrastructure-as-code, and monitoring that gives both teams visibility into the same production reality.",
+    solution:
+      "We design and implement the processes, tooling, and infrastructure that enable development and operations teams to work from a shared foundation — automated pipelines, containerised environments, infrastructure-as-code, and monitoring that gives both teams visibility into the same production reality.",
     solutionPoints: [
       "CI/CD pipeline design and implementation suited to your team's workflow and deployment targets",
       "Container and orchestration strategy matched to your application architecture and scale",
       "Infrastructure-as-code implementation covering all environment configuration",
-      "DevOps practice adoption including on-call processes, post-mortem culture, and SLO definition",
+      "DevOps practice adoption including on-call processes, post-mortem culture, and SLO definition"
     ],
   },
 

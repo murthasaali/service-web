@@ -28,20 +28,20 @@ const data: SubservicePageData = {
 
   solves: {
     challenge:
-      "Most operations teams spend hours each week on tasks a computer could handle. Data moves between tools manually, approvals sit in inboxes waiting for someone to check them, and reports get pulled by hand every Monday morning. Each manual step introduces delay and the chance of errors that compound over time.",
+      "Operations teams often waste hours each week on tasks a computer could handle. Data gets copied between tabs by hand, approvals wait in inboxes waiting for someone to check them, and reports get pulled by hand every Monday morning. Every handoff introduces delays and easy mistakes that compound over time.",
     challengePoints: [
-      "Staff copying data between systems multiple times per day",
-      "Approval processes delayed because requests are not routed automatically",
-      "Reports built manually from spreadsheets rather than generated automatically",
-      "No audit trail when manual processes fail or data goes missing",
+      "Copying data between systems multiple times a day",
+      "Delayed approvals because requests sit in inboxes",
+      "Building reports by hand from spreadsheets",
+      "No logs to trace when manual steps fail"
     ],
     solution:
-      "We map out your exact manual steps, identify where the friction and errors are, then build automations that connect your existing tools directly. Workflows are documented with runbooks and built with error handling so your team can monitor them and know exactly what to do if something stops.",
+      "We map out your steps, identify where the friction and errors are, then build automations that connect your tools directly. Workflows are documented with runbooks and built with error handling so your team can monitor them and know exactly what to do if something stops.",
     solutionPoints: [
-      "Multi-step workflow pipelines connecting CRMs, databases, and SaaS platforms",
-      "Automated approval routing via Slack buttons or email forms",
-      "Scheduled report generation delivered directly to inboxes",
-      "Error fallback and retry logic with Slack or email notification alerts",
+      "Workflows that connect CRMs, databases, and SaaS platforms",
+      "Routing approvals via Slack buttons or email forms",
+      "Sending reports straight directly to inboxes",
+      "Built-in error alerts with Slack or email notification alerts"
     ],
   },
 

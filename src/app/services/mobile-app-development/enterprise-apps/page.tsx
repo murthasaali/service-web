@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Enterprise mobile applications fail when they are built as generic consumer-style apps applied to internal business workflows. Field technicians using an app that does not match how their work actually flows abandon it within weeks. Employee-facing apps that require connectivity lose utility the moment a field worker goes out of range. Internal apps with poor MDM integration cannot be deployed or updated centrally, creating version fragmentation across device fleets.",
+    challenge:
+      "Enterprise mobile applications fail when they are built as generic consumer-style apps applied to internal business workflows. Field technicians using an app that does not match how their work actually flows abandon it within weeks. Employee-facing apps that require connectivity lose utility the moment a field worker goes out of range. Internal apps with poor MDM integration cannot be deployed or updated centrally, creating version fragmentation across device fleets.",
     challengePoints: [
       "Field workforce using paper forms or spreadsheets because the existing app does not match their workflow",
       "Internal apps without offline capability that are unusable in locations without reliable connectivity",
       "No MDM integration, so apps cannot be deployed, updated, or remotely managed centrally",
-      "Enterprise systems integration absent, so field workers re-enter data already in another system",
+      "Enterprise systems integration absent, so field workers re-enter data already in another system"
     ],
-    solution: "We build enterprise mobile applications around the specific workflows they need to support, with offline capability, enterprise system integrations, and MDM-compatible deployment. The application is designed from field research into how the work actually happens, not from assumptions about what the workflow should be.",
+    solution:
+      "We build enterprise mobile applications around the specific workflows they need to support, with offline capability, enterprise system integrations, and MDM-compatible deployment. The application is designed from field research into how the work actually happens, not from assumptions about what the workflow should be.",
     solutionPoints: [
       "Workflow design based on how the role actually operates, not an assumed idealised process",
       "Offline-first architecture that queues actions and syncs when connectivity is restored",
       "Integration with ERP, CRM, HRMS, or other enterprise systems through API or direct connector",
-      "MDM-compatible packaging for central deployment and update management",
+      "MDM-compatible packaging for central deployment and update management"
     ],
   },
 

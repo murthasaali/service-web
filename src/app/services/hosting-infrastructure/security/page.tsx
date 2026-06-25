@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Infrastructure security is typically treated as a setup-once concern rather than an ongoing discipline. Default configurations are left in place, security headers are missing, backups exist but have never been tested, and disaster recovery plans are theoretical documents that have never been exercised. Businesses often discover these gaps only when a breach, ransomware incident, or catastrophic data loss event forces them into a recovery scenario they were not prepared for.",
+    challenge:
+      "Security often gets set up once and then forgotten about rather than an ongoing discipline. Default configurations are left in place, security headers are left empty, and backups are never actually tested, and disaster recovery plans only exist on paper and are never dry-run. Most teams only notice these gaps after a breach or ransomware attack, or catastrophic data loss event forces them into a recovery scenario they were not prepared for.",
     challengePoints: [
-      "Default server configurations with open ports, default credentials, and unnecessary services running",
-      "Backup systems that run automatically but whose restores have never been tested",
-      "No documented disaster recovery plan, so a recovery scenario would be improvised under pressure",
-      "Missing security headers and outdated dependencies creating known vulnerability exposure",
+      "Open default server settings, default logins, and unnecessary services running",
+      "Auto-backups running without regular restore tests",
+      "No written playbook, leaving the team to guess what to do in a crisis under pressure",
+      "Outdated packages and missing security headers exposing server files exposure"
     ],
-    solution: "We conduct infrastructure security audits to identify current vulnerabilities, implement the fixes required to close them, and set up the backup and disaster recovery infrastructure that gives your business a realistic path to recovery from a serious incident.",
+    solution:
+      "We conduct infrastructure security audits to identify current vulnerabilities, implement the fixes required to close them, and set up the backup and disaster recovery infrastructure that gives your business a realistic path to recovery from a serious incident.",
     solutionPoints: [
-      "Infrastructure security audit covering server hardening, dependency vulnerabilities, and access controls",
-      "Automated backup setup with offsite storage, encryption, and tested restore procedures",
-      "Disaster recovery planning with defined recovery time objectives and tested failover procedures",
-      "SSL configuration and security header implementation with ongoing monitoring",
+      "Audits checking server hardening and packages, dependency vulnerabilities, and access controls",
+      "Encrypted offsite auto-backups with tested restore procedures procedures",
+      "Disaster recovery plans with clear step-by-step restoration and tested failover procedures",
+      "SSL settings and security headers with uptime monitoring"
     ],
   },
 

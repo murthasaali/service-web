@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Businesses building or overhauling their CX technology stack face a complex set of decisions. Dozens of platforms claim to solve the same problem. Integrations between tools require planning before purchase, not after. Legacy systems create constraints that narrow the options. Without independent technical guidance, organisations end up with over-engineered stacks, poorly integrated tools, and implementation projects that cost significantly more than anticipated.",
+    challenge:
+      "Businesses building or overhauling their CX technology stack face a complex set of decisions. Dozens of platforms claim to solve the same problem. Integrations between tools require planning before purchase, not after. Legacy systems create constraints that narrow the options. Without independent technical guidance, organisations end up with over-engineered stacks, poorly integrated tools, and implementation projects that cost significantly more than anticipated.",
     challengePoints: [
       "Vendor selection driven by marketing claims rather than technical and operational fit",
       "Purchased platforms that cannot integrate with existing systems as promised",
       "CX technology projects that expand in scope and cost without clear governance",
-      "No documented technology roadmap, so CX investments are reactive rather than planned",
+      "No documented technology roadmap, so CX investments are reactive rather than planned"
     ],
-    solution: "We provide independent advisory on CX platform selection, integration architecture, and implementation planning. We are not tied to any vendor, so recommendations are based on your actual requirements, existing systems, team capabilities, and budget — not on partnership incentives.",
+    solution:
+      "We provide independent advisory on CX platform selection, integration architecture, and implementation planning. We are not tied to any vendor, so recommendations are based on your actual requirements, existing systems, team capabilities, and budget — not on partnership incentives.",
     solutionPoints: [
       "Vendor-neutral platform assessment with scored evaluation against your specific requirements",
       "Integration architecture design before any platform purchase to identify compatibility issues",
       "Implementation roadmap with phased delivery, resource estimates, and dependency mapping",
-      "Oversight during vendor implementation to protect against scope creep and missed requirements",
+      "Oversight during vendor implementation to protect against scope creep and missed requirements"
     ],
   },
 

@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Building and maintaining separate iOS and Android codebases doubles the development and ongoing maintenance cost for most standard mobile applications. Features are built twice. Bugs need to be fixed in two places. Releases need to be coordinated across both platforms. For apps whose requirements fall within what cross-platform frameworks handle well, this cost is not justified by the marginal benefits of fully separate native codebases.",
+    challenge:
+      "Building and maintaining separate iOS and Android codebases doubles the development and ongoing maintenance cost for most standard mobile applications. Features are built twice. Bugs need to be fixed in two places. Releases need to be coordinated across both platforms. For apps whose requirements fall within what cross-platform frameworks handle well, this cost is not justified by the marginal benefits of fully separate native codebases.",
     challengePoints: [
       "Budget or timeline constraints making two separate native codebases impractical",
       "Feature parity problems between iOS and Android versions when teams build them separately",
       "Maintenance burden of two codebases compounding with every feature added",
-      "Cross-platform framework previously attempted with poor results due to incorrect framework choice or poor implementation",
+      "Cross-platform framework previously attempted with poor results due to incorrect framework choice or poor implementation"
     ],
-    solution: "We build cross-platform mobile apps using Flutter or React Native, chosen based on your specific requirements and team context. Both frameworks can access native device APIs, produce genuinely smooth 60fps animations, and deliver apps that feel appropriate on each platform — without the cost of maintaining entirely separate codebases.",
+    solution:
+      "We build cross-platform mobile apps using Flutter or React Native, chosen based on your specific requirements and team context. Both frameworks can access native device APIs, produce genuinely smooth 60fps animations, and deliver apps that feel appropriate on each platform — without the cost of maintaining entirely separate codebases.",
     solutionPoints: [
       "Framework recommendation based on your specific feature requirements, existing codebase, and team",
       "Shared codebase with platform-specific adaptations where the user experience requires them",
       "Access to native APIs via plugins or platform channels for device features your app needs",
-      "Single release pipeline managing both App Store and Google Play from the same codebase",
+      "Single release pipeline managing both App Store and Google Play from the same codebase"
     ],
   },
 

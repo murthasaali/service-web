@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Most businesses have customer data spread across a CRM, a spreadsheet, an email inbox, and a helpdesk. Sales teams build personal contact lists outside the system. Marketing runs campaigns without knowing which contacts are already active customers. Support cannot see recent sales activity. The result is duplicate outreach, missed follow-ups, and deals lost because no one had the full picture.",
+    challenge:
+      "Most businesses have customer data spread across a CRM, a spreadsheet, an email inbox, and a helpdesk. Sales teams build personal contact lists outside the system. Marketing runs campaigns without knowing which contacts are already active customers. Support cannot see recent sales activity. The result is duplicate outreach, missed follow-ups, and deals lost because no one had the full picture.",
     challengePoints: [
       "Customer records fragmented across multiple tools with no single source of truth",
       "Sales pipeline data out of date because reps find the CRM too slow to maintain",
       "No visibility into customer history at the point of a support or sales interaction",
-      "CRM workflows that do not match how the team actually works, so they get bypassed",
+      "CRM workflows that do not match how the team actually works, so they get bypassed"
     ],
-    solution: "We implement and configure CRM platforms around your actual sales process, not a default template. That means custom fields, pipeline stages, and automation rules that match your workflow — integrated with the other tools your team uses so data stays current without manual entry.",
+    solution:
+      "We implement and configure CRM platforms around your actual sales process, not a default template. That means custom fields, pipeline stages, and automation rules that match your workflow — integrated with the other tools your team uses so data stays current without manual entry.",
     solutionPoints: [
       "CRM configured to match your pipeline stages, deal types, and contact structure",
       "Integrations with email, calendar, support tools, and marketing platforms for a unified record",
       "Automation rules that update records and trigger tasks without requiring manual intervention",
-      "Onboarding and training so adoption is high from week one rather than months in",
+      "Onboarding and training so adoption is high from week one rather than months in"
     ],
   },
 

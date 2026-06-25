@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Most businesses have analytics installed but do not have analytics that work. Tracking is misconfigured, conversions are not set up, and the data in dashboards does not match the numbers from other systems. Decision-making defaults back to gut instinct because no one trusts the data. Meanwhile, conversion leaks in the funnel go unidentified because no one has a clear picture of where users are dropping off.",
+    challenge:
+      "Most businesses have analytics installed but do not have analytics that work. Tracking is misconfigured, conversions are not set up, and the data in dashboards does not match the numbers from other systems. Decision-making defaults back to gut instinct because no one trusts the data. Meanwhile, conversion leaks in the funnel go unidentified because no one has a clear picture of where users are dropping off.",
     challengePoints: [
       "Analytics data not matching CRM or sales data because tracking is misconfigured",
       "Conversion events not set up, so there is no reliable data on what marketing activity is driving results",
       "No funnel analysis, so drop-off points between traffic and conversion are unknown",
-      "Marketing decisions based on activity metrics like clicks and sessions rather than outcome metrics",
+      "Marketing decisions based on activity metrics like clicks and sessions rather than outcome metrics"
     ],
-    solution: "We audit your analytics implementation, fix tracking gaps, and build the reporting layer that connects marketing activity to business outcomes. Then we use that data to run conversion optimisation — identifying the points in your funnel where improvement has the most impact and testing changes systematically.",
+    solution:
+      "We audit your analytics implementation, fix tracking gaps, and build the reporting layer that connects marketing activity to business outcomes. Then we use that data to run conversion optimisation — identifying the points in your funnel where improvement has the most impact and testing changes systematically.",
     solutionPoints: [
       "Analytics audit covering GA4 setup, event tracking, and conversion configuration",
       "Google Tag Manager implementation for consistent, maintainable tracking across the funnel",
       "Funnel analysis identifying the highest-impact drop-off points by stage and audience segment",
-      "Conversion rate optimisation using heatmap data, session recordings, and A/B testing",
+      "Conversion rate optimisation using heatmap data, session recordings, and A/B testing"
     ],
   },
 

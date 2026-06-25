@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Splitting a web application across separate frontend and backend teams sounds organised until both teams are waiting on each other, the API contract keeps changing, and the deployment process is owned by neither. The coordination overhead often costs more time than having a single team own the whole stack.",
+    challenge:
+      "Splitting a web application across separate frontend and backend teams sounds organised until both teams are waiting on each other, the API contract keeps changing, and the deployment process is owned by neither. The coordination overhead often costs more time than having a single team own the whole stack.",
     challengePoints: [
       "Frontend and backend built by separate teams with mismatched API contracts",
       "Deployment process nobody fully owns or understands end-to-end",
       "Inconsistent patterns between layers that make the codebase harder to maintain",
-      "No single source of truth for how all the pieces fit together",
+      "No single source of truth for how all the pieces fit together"
     ],
-    solution: "We build across the full stack with consistent patterns from the database up to the UI, so there's no translation layer between teams and no ambiguity about how data flows through the application. The deployment setup, the documentation, and the handover all cover everything in one package.",
+    solution:
+      "We build across the full stack with consistent patterns from the database up to the UI, so there's no translation layer between teams and no ambiguity about how data flows through the application. The deployment setup, the documentation, and the handover all cover everything in one package.",
     solutionPoints: [
       "Shared TypeScript types used across frontend and backend",
       "API contract defined before UI development begins",
       "Staging and production deployment configured as part of the build",
-      "Single repository or clear monorepo structure with documented conventions",
+      "Single repository or clear monorepo structure with documented conventions"
     ],
   },
 

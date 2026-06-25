@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Industry-specific software requirements are not well served by generic business applications. Healthcare systems need to handle regulated data with audit trails. Construction software needs to track costs, variations, and retention across projects. Logistics platforms need to handle complex routing, carrier integration, and proof of delivery workflows. These requirements are specific enough that general-purpose software creates more manual workaround work than it eliminates.",
+    challenge:
+      "Industry-specific software requirements are not well served by generic business applications. Healthcare systems need to handle regulated data with audit trails. Construction software needs to track costs, variations, and retention across projects. Logistics platforms need to handle complex routing, carrier integration, and proof of delivery workflows. These requirements are specific enough that general-purpose software creates more manual workaround work than it eliminates.",
     challengePoints: [
       "Generic software that does not handle industry-specific compliance or data requirements",
       "Industry vertical SaaS platforms that cover 80 percent of the requirement but not the specific 20 percent critical to operations",
       "Manual workarounds that have accumulated around the edges of systems that do not fit the workflow",
-      "Integration requirements with industry-specific external systems that generic platforms do not support",
+      "Integration requirements with industry-specific external systems that generic platforms do not support"
     ],
-    solution: "We build software for specific industries with the domain knowledge required to get the data model, workflow logic, and compliance considerations right — rather than applying a generic development approach to a sector whose requirements we have not understood.",
+    solution:
+      "We build software for specific industries with the domain knowledge required to get the data model, workflow logic, and compliance considerations right — rather than applying a generic development approach to a sector whose requirements we have not understood.",
     solutionPoints: [
       "Domain-specific requirements gathering that goes beyond surface workflow to understand regulatory constraints",
       "Data model and process design reviewed against sector-specific compliance requirements",
       "Integration with industry-standard external systems and data formats",
-      "User interface design tested with the actual roles that will use the system",
+      "User interface design tested with the actual roles that will use the system"
     ],
   },
 

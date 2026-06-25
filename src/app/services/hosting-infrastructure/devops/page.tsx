@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Development teams without a proper CI/CD pipeline deploy manually, infrequently, and with high anxiety. Releases are risky, rollbacks are painful, and the time between a feature being ready and it being live is measured in weeks rather than hours. Infrastructure is configured manually on individual servers, creating snowflake environments that cannot be reproduced and are difficult to debug when something goes wrong in production.",
+    challenge:
+      "Development teams without a proper CI/CD pipeline deploy manually, infrequently, and with high anxiety. Releases are risky, rollbacks are painful, and the time between a feature being ready and it being live is measured in weeks rather than hours. Infrastructure is configured manually on individual servers, creating snowflake environments that cannot be reproduced and are difficult to debug when something goes wrong in production.",
     challengePoints: [
       "Manual deployments that are error-prone and require developer availability for every release",
       "No automated testing in the deployment pipeline, so bugs reach production that could have been caught",
       "Infrastructure configured manually with no version control or reproducibility",
-      "Long release cycles because deployment risk discourages frequent shipping",
+      "Long release cycles because deployment risk discourages frequent shipping"
     ],
-    solution: "We implement CI/CD pipelines that automate build, test, and deployment stages, configure infrastructure-as-code so environments are reproducible, and containerise applications to eliminate environment-specific inconsistencies. The result is a deployment process that is faster, safer, and requires less manual coordination.",
+    solution:
+      "We implement CI/CD pipelines that automate build, test, and deployment stages, configure infrastructure-as-code so environments are reproducible, and containerise applications to eliminate environment-specific inconsistencies. The result is a deployment process that is faster, safer, and requires less manual coordination.",
     solutionPoints: [
       "CI/CD pipeline with automated build, test, lint, and deployment stages",
       "Container configuration using Docker and Kubernetes for environment consistency",
       "Infrastructure-as-code for all environment configuration, versioned and peer-reviewed",
-      "Rollback mechanisms and deployment controls so releases can be safely reverted",
+      "Rollback mechanisms and deployment controls so releases can be safely reverted"
     ],
   },
 

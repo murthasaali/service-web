@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1588508065123-287b28e013da?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Businesses that have grown past the point where one person can manage all their IT informally but are not large enough to justify a full IT department face a specific challenge. Technology problems are handled reactively by whoever is least busy. There is no IT strategy, no asset management, and no cost oversight. Infrastructure and software renewals are missed until they cause a problem, and there is no single owner of the IT environment.",
+    challenge:
+      "Businesses that have grown past the point where one person can manage all their IT informally but are not large enough to justify a full IT department face a specific challenge. Technology problems are handled reactively by whoever is least busy. There is no IT strategy, no asset management, and no cost oversight. Infrastructure and software renewals are missed until they cause a problem, and there is no single owner of the IT environment.",
     challengePoints: [
       "Technology support handled reactively with no clear ownership or response time standard",
       "No inventory of IT assets or software licences, so renewals are missed and spend is uncontrolled",
       "Infrastructure decisions made without technical input, creating problems that compound over time",
-      "Staff productivity lost to IT issues that take days to resolve because there is no dedicated support function",
+      "Staff productivity lost to IT issues that take days to resolve because there is no dedicated support function"
     ],
-    solution: "We provide managed IT operations as an extension of your team — handling support, managing your IT environment, tracking assets and renewals, and providing the technical input your leadership needs for infrastructure and software decisions.",
+    solution:
+      "We provide managed IT operations as an extension of your team — handling support, managing your IT environment, tracking assets and renewals, and providing the technical input your leadership needs for infrastructure and software decisions.",
     solutionPoints: [
       "Helpdesk support for staff IT issues with defined response time standards",
       "IT asset and software licence inventory with renewal tracking and cost visibility",
       "Regular infrastructure review to identify maintenance requirements before they cause problems",
-      "Technical advisory input for IT purchasing, contract renewals, and infrastructure decisions",
+      "Technical advisory input for IT purchasing, contract renewals, and infrastructure decisions"
     ],
   },
 

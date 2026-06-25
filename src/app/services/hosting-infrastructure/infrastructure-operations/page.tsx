@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Businesses running production infrastructure without proper monitoring only discover problems when customers report them. There is no visibility into whether response times are degrading, disk space is running low, or error rates are rising. Performance issues are investigated after the fact rather than addressed proactively. Infrastructure that worked at low traffic fails unpredictably at higher loads because capacity thresholds were never defined.",
+    challenge:
+      "Businesses running production infrastructure without proper monitoring only discover problems when customers report them. There is no visibility into whether response times are degrading, disk space is running low, or error rates are rising. Performance issues are investigated after the fact rather than addressed proactively. Infrastructure that worked at low traffic fails unpredictably at higher loads because capacity thresholds were never defined.",
     challengePoints: [
       "Application problems discovered via customer complaints rather than monitoring alerts",
       "No dashboards showing infrastructure health, so the state of production is unknown at any given moment",
       "Performance issues investigated reactively without baseline data to compare against",
-      "Infrastructure sized by guesswork rather than load testing or measured capacity thresholds",
+      "Infrastructure sized by guesswork rather than load testing or measured capacity thresholds"
     ],
-    solution: "We implement observability infrastructure — metrics, logs, traces, and alerting — so your team has visibility into the state of production at all times. We also conduct performance audits to identify bottlenecks and implement tuning changes that improve throughput and reliability under load.",
+    solution:
+      "We implement observability infrastructure — metrics, logs, traces, and alerting — so your team has visibility into the state of production at all times. We also conduct performance audits to identify bottlenecks and implement tuning changes that improve throughput and reliability under load.",
     solutionPoints: [
       "Monitoring stack with metrics, logs, and alert configuration covering the full infrastructure layer",
       "Application performance monitoring covering response time, error rate, and throughput",
       "Capacity planning based on measured baseline and projected growth rather than estimates",
-      "On-call runbooks documenting response procedures for defined incident types",
+      "On-call runbooks documenting response procedures for defined incident types"
     ],
   },
 

@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Most businesses collect email subscribers and leads but do not have a structured system for what happens next. New leads receive one follow-up and then go silent. Existing customers receive only broadcast promotional emails regardless of where they are in their lifecycle. The email list grows but the revenue from it does not grow proportionally because there is no automation connecting the list to a defined customer journey.",
+    challenge:
+      "Most businesses collect email subscribers and leads but do not have a structured system for what happens next. New leads receive one follow-up and then go silent. Existing customers receive only broadcast promotional emails regardless of where they are in their lifecycle. The email list grows but the revenue from it does not grow proportionally because there is no automation connecting the list to a defined customer journey.",
     challengePoints: [
       "New leads receiving no structured follow-up sequence after initial contact",
       "Broadcast email campaigns sent to the entire list regardless of customer status or history",
       "No post-purchase sequence to support retention and repeat purchases",
-      "Email platform underutilised with automations not configured despite the platform supporting them",
+      "Email platform underutilised with automations not configured despite the platform supporting them"
     ],
-    solution: "We map your customer lifecycle, identify the trigger points where automated communication adds value, and build the sequences that move people through each stage. Every automation has a clear objective, a defined audience segment, and tracked performance metrics.",
+    solution:
+      "We map your customer lifecycle, identify the trigger points where automated communication adds value, and build the sequences that move people through each stage. Every automation has a clear objective, a defined audience segment, and tracked performance metrics.",
     solutionPoints: [
       "Lifecycle stage mapping from first-touch to long-term customer with automation triggers at each transition",
       "Lead nurturing sequences for new subscribers and enquiries at different stages of consideration",
       "Post-purchase flows covering onboarding, engagement, retention, and reactivation",
-      "Segmented campaign strategy so every send is relevant to the recipient's current stage",
+      "Segmented campaign strategy so every send is relevant to the recipient's current stage"
     ],
   },
 

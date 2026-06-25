@@ -33,7 +33,7 @@ const data: SubservicePageData = {
       "Reactive decisions made after problems appear rather than before",
       "Customer churn identified only after accounts have already left",
       "Inventory orders based on last year's demand rather than predicted demand",
-      "No signal for which leads are most likely to convert",
+      "No signal for which leads are most likely to convert"
     ],
     solution:
       "We identify the specific prediction or recommendation problem your business has, collect and clean the relevant data, then build and deploy a model that delivers actionable output, whether that is a forecast, a risk score, a customer cluster, or a ranked recommendation list.",
@@ -41,7 +41,7 @@ const data: SubservicePageData = {
       "Custom predictive models trained on your historical data",
       "Output delivered as API endpoints or dashboard integrations",
       "Anomaly detection to flag unusual patterns before they become problems",
-      "Recommendation engines that personalise actions per customer or user",
+      "Recommendation engines that personalise actions per customer or user"
     ],
   },
 

@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Support teams managing customer queries through shared email inboxes have no visibility into who owns a query, what the status is, or how long it has been open. Requests get missed, duplicated, or answered inconsistently. There is no record of what was agreed, no way to report on response times, and no mechanism to flag recurring issues back to the product or operations team.",
+    challenge:
+      "Support teams managing customer queries through shared email inboxes have no visibility into who owns a query, what the status is, or how long it has been open. Requests get missed, duplicated, or answered inconsistently. There is no record of what was agreed, no way to report on response times, and no mechanism to flag recurring issues back to the product or operations team.",
     challengePoints: [
       "Support queries handled through shared email inboxes with no ownership or status tracking",
       "No first-response time data, so SLA performance is unknown and unmanageable",
       "Agents answering the same questions from scratch without access to a knowledge base",
-      "Escalations handled informally with no audit trail of what was communicated and when",
+      "Escalations handled informally with no audit trail of what was communicated and when"
     ],
-    solution: "We implement helpdesk and ticketing platforms configured for your support team structure, including triage rules, SLA settings, escalation paths, and a knowledge base so agents handle queries faster and customers get consistent answers.",
+    solution:
+      "We implement helpdesk and ticketing platforms configured for your support team structure, including triage rules, SLA settings, escalation paths, and a knowledge base so agents handle queries faster and customers get consistent answers.",
     solutionPoints: [
       "Ticketing system configured with triage rules, queues, and ownership assignment",
       "SLA policies and priority rules so high-urgency requests are always surfaced",
       "Knowledge base setup with articles mapped to common query types",
-      "Reporting dashboards covering response time, resolution rate, and CSAT",
+      "Reporting dashboards covering response time, resolution rate, and CSAT"
     ],
   },
 

@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Databases are the bottleneck in most application performance problems. Slow queries, missing indexes, and poorly configured connection pooling degrade application response times at scale. Database backups are configured once and then not validated. Schema migrations are run in production without testing, causing downtime. These are all preventable problems with the right setup and ongoing administration.",
+    challenge:
+      "Databases are the bottleneck in most application performance problems. Slow queries, missing indexes, and poorly configured connection pooling degrade application response times at scale. Database backups are configured once and then not validated. Schema migrations are run in production without testing, causing downtime. These are all preventable problems with the right setup and ongoing administration.",
     challengePoints: [
       "Application performance degrading as data volume grows due to missing indexes and inefficient queries",
       "Database backups configured but never tested, providing false confidence in recovery capability",
       "No connection pooling, causing connection exhaustion under load",
-      "Schema migrations run directly in production without staging validation",
+      "Schema migrations run directly in production without staging validation"
     ],
-    solution: "We assess your current database setup, identify performance bottlenecks and configuration gaps, and implement the changes needed to make your database layer reliable and performant. We also configure monitoring, backup validation, and the migration processes that keep schema changes safe.",
+    solution:
+      "We assess your current database setup, identify performance bottlenecks and configuration gaps, and implement the changes needed to make your database layer reliable and performant. We also configure monitoring, backup validation, and the migration processes that keep schema changes safe.",
     solutionPoints: [
       "Query analysis and indexing strategy to address the most significant performance bottlenecks",
       "Connection pooling configuration appropriate to your application's concurrency pattern",
       "Backup validation with documented restore procedures tested against a real recovery",
-      "Staging environment and migration process to test schema changes before they reach production",
+      "Staging environment and migration process to test schema changes before they reach production"
     ],
   },
 

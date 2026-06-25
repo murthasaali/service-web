@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { ArrowRight, Clock, BookOpen, Search } from 'lucide-react';
 import AnimatedSection from '@/components/common/AnimatedSection';
 import { blogPosts, categories } from '@/data/blog';
-import ShaderBackground from '@/components/ui/shader-background';
 import NeuralBackground from '@/components/ui/flow-field-background';
 import type { BlogPost } from '@/data/blog';
 
@@ -287,7 +286,7 @@ export default function BlogPageContent() {
 							</div>
 							<h3 className='font-display text-xl font-semibold text-[#0F172A]'>No articles found</h3>
 							<p className='mt-2 text-stone-500 max-w-md text-sm leading-6'>
-								We couldn't find any articles matching "{searchQuery}" in the "{activeCategory}" category. Try typing something else or selecting a different category.
+								We couldn&apos;t find any articles matching &quot;{searchQuery}&quot; in the &quot;{activeCategory}&quot; category. Try typing something else or selecting a different category.
 							</p>
 						</AnimatedSection>
 					)}

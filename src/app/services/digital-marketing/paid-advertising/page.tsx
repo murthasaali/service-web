@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Many businesses run paid advertising campaigns that produce clicks but not customers. Ad spend goes to broad audiences, landing pages are not matched to the ad message, and conversion tracking is not set up correctly so there is no reliable data on what is actually working. Budget is either wasted on traffic that does not convert or scaled up before the conversion funnel is validated.",
+    challenge:
+      "Many businesses run paid advertising campaigns that produce clicks but not customers. Ad spend goes to broad audiences, landing pages are not matched to the ad message, and conversion tracking is not set up correctly so there is no reliable data on what is actually working. Budget is either wasted on traffic that does not convert or scaled up before the conversion funnel is validated.",
     challengePoints: [
       "High click volume with low conversion rates because landing pages are not matched to the ad",
       "Conversion tracking not properly configured, so reported ROAS figures are unreliable",
       "Campaigns targeting audiences that are too broad to convert at acceptable cost",
-      "Budget scaled before the funnel is validated, amplifying a leaky system rather than a working one",
+      "Budget scaled before the funnel is validated, amplifying a leaky system rather than a working one"
     ],
-    solution: "We build and manage paid campaigns structured around your conversion goals, with tracking configured correctly before launch, audiences built from your customer data, and landing pages aligned to each ad set. Budgets are scaled only after the funnel is validated with a smaller test spend.",
+    solution:
+      "We build and manage paid campaigns structured around your conversion goals, with tracking configured correctly before launch, audiences built from your customer data, and landing pages aligned to each ad set. Budgets are scaled only after the funnel is validated with a smaller test spend.",
     solutionPoints: [
       "Conversion tracking configuration verified in Google Tag Manager before any campaign goes live",
       "Audience strategy built on customer data, intent signals, and competitor targeting",
       "Landing page brief or implementation to ensure each ad set leads to a matched, conversion-optimised page",
-      "Test-and-scale approach: validate cost per acquisition at low budget before scaling",
+      "Test-and-scale approach: validate cost per acquisition at low budget before scaling"
     ],
   },
 

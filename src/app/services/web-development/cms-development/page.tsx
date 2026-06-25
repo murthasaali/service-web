@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Teams that manage websites through developers are slowed down by every small content change. Blog posts need a ticket. Landing page copy takes a sprint to update. The content backlog grows while the development team is pulled away from higher-priority build work. Meanwhile, off-the-shelf CMS platforms often force rigid workflows and slow down the frontend because of the overhead they introduce.",
+    challenge:
+      "Teams that manage websites through developers are slowed down by every small content change. Blog posts need a ticket. Landing page copy takes a sprint to update. The content backlog grows while the development team is pulled away from higher-priority build work. Meanwhile, off-the-shelf CMS platforms often force rigid workflows and slow down the frontend because of the overhead they introduce.",
     challengePoints: [
       "Content updates require developer involvement for changes that should be self-service",
       "Page load speeds affected by heavy plugin stacks and unoptimised CMS rendering",
       "No multi-author or approval workflows, so content goes live without review",
-      "Legacy WordPress installs with outdated plugins that are a maintenance and security liability",
+      "Legacy WordPress installs with outdated plugins that are a maintenance and security liability"
     ],
-    solution: "We design the CMS setup around your team's actual workflow — who publishes, who approves, what types of content you manage, and how often it changes. Whether that means a structured headless CMS feeding a Next.js frontend or a tightly configured WordPress build, the result is a platform your team can use without developer help for day-to-day publishing.",
+    solution:
+      "We design the CMS setup around your team's actual workflow — who publishes, who approves, what types of content you manage, and how often it changes. Whether that means a structured headless CMS feeding a Next.js frontend or a tightly configured WordPress build, the result is a platform your team can use without developer help for day-to-day publishing.",
     solutionPoints: [
       "Role-based access so editors, authors, and admins each see only what they need",
       "Structured content models that match your content types rather than forcing generic pages",
       "Frontend performance maintained whether using headless API delivery or server-side rendering",
-      "Full documentation and walkthrough so your team is confident managing it from day one",
+      "Full documentation and walkthrough so your team is confident managing it from day one"
     ],
   },
 

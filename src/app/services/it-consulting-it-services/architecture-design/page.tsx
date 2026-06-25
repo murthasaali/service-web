@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Build decisions made without proper architecture produce systems that work in the short term but become progressively harder to maintain, extend, and integrate. APIs built without a contract, databases designed without a schema review, microservices introduced before the team is ready to operate them. The debt from these decisions accumulates silently until it stops a future initiative in its tracks or requires expensive rearchitecture.",
+    challenge:
+      "Build decisions made without proper architecture produce systems that work in the short term but become progressively harder to maintain, extend, and integrate. APIs built without a contract, databases designed without a schema review, microservices introduced before the team is ready to operate them. The debt from these decisions accumulates silently until it stops a future initiative in its tracks or requires expensive rearchitecture.",
     challengePoints: [
       "Systems built without upfront architecture that become increasingly expensive to extend",
       "Integration problems discovered after both systems were built rather than designed for from the start",
       "Technology choices made without evaluation criteria, leading to regret when the limitations emerge",
-      "No architecture documentation, so knowledge of why decisions were made lives only with the person who made them",
+      "No architecture documentation, so knowledge of why decisions were made lives only with the person who made them"
     ],
-    solution: "We provide architecture review and design services at the point in a project where decisions can still be made at low cost — before build begins or at the start of a significant new capability. We produce architecture designs and decision records that development teams can implement against and future architects can understand.",
+    solution:
+      "We provide architecture review and design services at the point in a project where decisions can still be made at low cost — before build begins or at the start of a significant new capability. We produce architecture designs and decision records that development teams can implement against and future architects can understand.",
     solutionPoints: [
       "Solution architecture documents covering system components, data flows, and integration patterns",
       "Technology evaluation with documented decision rationale against defined selection criteria",
       "API contract design and data model review before implementation",
-      "Architecture decision records that document the reasoning behind significant technical choices",
+      "Architecture decision records that document the reasoning behind significant technical choices"
     ],
   },
 

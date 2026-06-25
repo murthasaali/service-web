@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Product ideas fail in development for predictable reasons: building too much before getting user feedback, building for the ideal end-state rather than the minimum needed to validate the hypothesis, and underestimating the infrastructure work required to make a product production-ready rather than prototype-ready. Founders and product teams need a development partner who can set realistic scope, build quickly, and scale the product as it grows without requiring a full rebuild.",
+    challenge:
+      "Product ideas fail in development for predictable reasons: building too much before getting user feedback, building for the ideal end-state rather than the minimum needed to validate the hypothesis, and underestimating the infrastructure work required to make a product production-ready rather than prototype-ready. Founders and product teams need a development partner who can set realistic scope, build quickly, and scale the product as it grows without requiring a full rebuild.",
     challengePoints: [
       "MVP scope defined too broadly, delaying launch until more can be built rather than validating the core value",
       "Prototype-quality code that works but cannot handle production traffic or scale",
       "No authentication, billing, or operational infrastructure because the prototype assumed those would be added later",
-      "Development partner who builds to spec without product input, producing technically correct but commercially wrong solutions",
+      "Development partner who builds to spec without product input, producing technically correct but commercially wrong solutions"
     ],
-    solution: "We build MVPs and SaaS products that are genuinely production-ready at launch — with authentication, billing, monitoring, and the deployment infrastructure a live product needs. Scope is discussed and challenged during discovery so the first version tests the right hypothesis without unnecessary delay.",
+    solution:
+      "We build MVPs and SaaS products that are genuinely production-ready at launch — with authentication, billing, monitoring, and the deployment infrastructure a live product needs. Scope is discussed and challenged during discovery so the first version tests the right hypothesis without unnecessary delay.",
     solutionPoints: [
       "Scoped MVP with clear hypothesis definition so the first version validates what matters most",
       "Production-ready from launch with authentication, billing, monitoring, and deployment pipeline",
       "Architecture designed for the product's likely growth path, avoiding the most common rebuild triggers",
-      "Ongoing development relationship for iteration after launch based on user data",
+      "Ongoing development relationship for iteration after launch based on user data"
     ],
   },
 

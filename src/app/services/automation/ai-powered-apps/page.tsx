@@ -33,7 +33,7 @@ const data: SubservicePageData = {
       "AI added as a feature after the product was designed without it in the architecture",
       "Slow, unreliable inference because the AI layer is not properly integrated into the stack",
       "No mechanism to collect user feedback and improve model performance over time",
-      "Difficulty knowing whether the AI is actually working correctly in production",
+      "Difficulty knowing whether the AI is actually working correctly in production"
     ],
     solution:
       "We design applications with AI at the functional core, where the model drives the experience rather than supplementing it. The architecture accounts for inference latency, output variability, model versioning, and feedback loops from the start rather than as afterthoughts.",
@@ -41,7 +41,7 @@ const data: SubservicePageData = {
       "AI-first application architecture designed around inference as the primary operation",
       "Feedback collection built in at every AI interaction for continuous improvement",
       "Monitoring and alerting configured from day one for production AI behaviour",
-      "Clear separation between model serving and application logic for maintainability",
+      "Clear separation between model serving and application logic for maintainability"
     ],
   },
 

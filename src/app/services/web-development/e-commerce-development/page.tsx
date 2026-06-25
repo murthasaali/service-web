@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Platform-based stores are fast to launch but hit their limits quickly. Custom pricing rules that don't fit the standard discount system, fulfilment workflows that require integration with an internal warehouse tool, or a checkout experience that needs to match the brand — all of these become workarounds that accumulate technical debt over time.",
+    challenge:
+      "Platform-based stores are fast to launch but hit their limits quickly. Custom pricing rules that don't fit the standard discount system, fulfilment workflows that require integration with an internal warehouse tool, or a checkout experience that needs to match the brand — all of these become workarounds that accumulate technical debt over time.",
     challengePoints: [
       "Pricing and discount logic that doesn't fit the platform's built-in options",
       "Checkout flow that doesn't match the brand or user journey",
       "No direct connection between orders and internal inventory or fulfilment systems",
-      "Platform fees and transaction costs that grow with revenue",
+      "Platform fees and transaction costs that grow with revenue"
     ],
-    solution: "We build the store against your actual requirements: the product structure, the pricing logic, the fulfilment process, and the customer journey. Payment processing goes through Stripe so you own the relationship, and the order data connects directly to whatever system manages fulfilment.",
+    solution:
+      "We build the store against your actual requirements: the product structure, the pricing logic, the fulfilment process, and the customer journey. Payment processing goes through Stripe so you own the relationship, and the order data connects directly to whatever system manages fulfilment.",
     solutionPoints: [
       "Custom product schema matching your catalogue structure",
       "Checkout flow designed around your customer journey",
       "Stripe integration for payments with webhook handling for order events",
-      "Order data connected to internal inventory or CRM systems",
+      "Order data connected to internal inventory or CRM systems"
     ],
   },
 

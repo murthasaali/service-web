@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Organic search traffic should be one of the most cost-effective acquisition channels, but most businesses are not extracting the available value. Pages that could rank are buried by technical issues — slow load times, missing structured data, crawl errors, or thin content. Keyword strategies are based on volume data rather than commercial intent. Local SEO is neglected despite driving the majority of high-intent searches for service businesses.",
+    challenge:
+      "Organic search traffic should be one of the most cost-effective acquisition channels, but most businesses are not extracting the available value. Pages that could rank are buried by technical issues — slow load times, missing structured data, crawl errors, or thin content. Keyword strategies are based on volume data rather than commercial intent. Local SEO is neglected despite driving the majority of high-intent searches for service businesses.",
     challengePoints: [
       "Core pages not ranking despite being directly relevant to high-intent search queries",
       "Technical crawl issues blocking indexation of important content",
       "No content strategy tied to keyword research, so published content does not target rankable opportunities",
-      "Local SEO neglected, with Google Business Profile incomplete and citations inconsistent",
+      "Local SEO neglected, with Google Business Profile incomplete and citations inconsistent"
     ],
-    solution: "We audit your current search visibility, identify the technical and content gaps causing ranking underperformance, and execute a structured programme covering technical fixes, content strategy, and local SEO. Every change is tracked against baseline rankings and traffic so progress is measurable.",
+    solution:
+      "We audit your current search visibility, identify the technical and content gaps causing ranking underperformance, and execute a structured programme covering technical fixes, content strategy, and local SEO. Every change is tracked against baseline rankings and traffic so progress is measurable.",
     solutionPoints: [
       "Full technical SEO audit with prioritised fix list covering crawl, indexation, and Core Web Vitals",
       "Keyword research tied to commercial intent, mapped to pages or content gaps",
       "Content brief and delivery for target queries with the best ranking potential",
-      "Google Business Profile optimisation and local citation consistency for location-based visibility",
+      "Google Business Profile optimisation and local citation consistency for location-based visibility"
     ],
   },
 

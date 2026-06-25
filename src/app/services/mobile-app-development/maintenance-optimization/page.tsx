@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Mobile apps do not maintain themselves after launch. New iOS and Android releases change APIs, introduce new permissions models, and deprecate existing approaches. App Store policy updates require modifications to comply or face removal. Performance that was acceptable at launch degrades as data volumes grow and the user base diversifies across device types. Without ongoing maintenance, a launched app gradually becomes unreliable and eventually unsubmittable.",
+    challenge:
+      "Mobile apps do not maintain themselves after launch. New iOS and Android releases change APIs, introduce new permissions models, and deprecate existing approaches. App Store policy updates require modifications to comply or face removal. Performance that was acceptable at launch degrades as data volumes grow and the user base diversifies across device types. Without ongoing maintenance, a launched app gradually becomes unreliable and eventually unsubmittable.",
     challengePoints: [
       "App crashing on a new iOS or Android version after an operating system update",
       "App Store or Google Play compliance notices requiring changes to avoid removal",
       "Performance degrading over time as data grows and new device types are not tested against",
-      "Bug reports accumulating without a maintenance process to triage and address them",
+      "Bug reports accumulating without a maintenance process to triage and address them"
     ],
-    solution: "We provide structured maintenance programmes that keep your app current with operating system releases, address bugs systematically, optimise performance against real usage data, and ensure compliance with evolving platform policies.",
+    solution:
+      "We provide structured maintenance programmes that keep your app current with operating system releases, address bugs systematically, optimise performance against real usage data, and ensure compliance with evolving platform policies.",
     solutionPoints: [
       "Annual OS compatibility review and update cycle ahead of iOS and Android major releases",
       "Bug triage process with priority classification and defined fix timelines",
       "Performance profiling against real device and usage data with prioritised optimisations",
-      "App Store and Google Play policy monitoring with compliance updates before deadlines",
+      "App Store and Google Play policy monitoring with compliance updates before deadlines"
     ],
   },
 

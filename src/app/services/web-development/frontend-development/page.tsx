@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "A lot of frontend work ends up looking polished in screenshots but failing in practice. Buttons that don't work on mobile, pages that load slowly because images weren't optimised, layouts that break when real content is longer than the placeholder. The gap between a design mockup and a production-ready frontend is where most of the real work happens.",
+    challenge:
+      "A lot of frontend work ends up looking polished in screenshots but failing in practice. Buttons that don't work on mobile, pages that load slowly because images weren't optimised, layouts that break when real content is longer than the placeholder. The gap between a design mockup and a production-ready frontend is where most of the real work happens.",
     challengePoints: [
       "Layouts that break with real content or on smaller devices",
       "Slow page load caused by unoptimised assets and blocking scripts",
       "Forms that submit without validation or fail silently on errors",
-      "No staging environment to review changes before they go live",
+      "No staging environment to review changes before they go live"
     ],
-    solution: "We build frontend code from the ground up using React and Next.js, testing on real devices and real content throughout. Every page goes through a QA checklist before launch, and you get a versioned repository so changes are tracked and reversible.",
+    solution:
+      "We build frontend code from the ground up using React and Next.js, testing on real devices and real content throughout. Every page goes through a QA checklist before launch, and you get a versioned repository so changes are tracked and reversible.",
     solutionPoints: [
       "Responsive layouts tested on mobile, tablet, and desktop",
       "Optimised images, fonts, and scripts for fast page load",
       "Accessible markup with keyboard navigation and screen reader support",
-      "Staging environment so you can review every change before it goes live",
+      "Staging environment so you can review every change before it goes live"
     ],
   },
 

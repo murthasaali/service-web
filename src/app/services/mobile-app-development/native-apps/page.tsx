@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Some mobile applications require capabilities or performance levels that cross-platform frameworks cannot consistently deliver. Real-time AR overlays, deep health kit integration, complex camera processing, or high-frame-rate animations are areas where native development remains the stronger choice. Choosing a cross-platform approach for these use cases produces an application that is technically functional but feels and performs below the standard users expect on each platform.",
+    challenge:
+      "Some mobile applications require capabilities or performance levels that cross-platform frameworks cannot consistently deliver. Real-time AR overlays, deep health kit integration, complex camera processing, or high-frame-rate animations are areas where native development remains the stronger choice. Choosing a cross-platform approach for these use cases produces an application that is technically functional but feels and performs below the standard users expect on each platform.",
     challengePoints: [
       "Application requiring access to platform-specific APIs not fully supported by cross-platform frameworks",
       "Performance-sensitive use cases where the abstraction layer of a cross-platform framework creates latency",
       "UI that needs to match the interaction conventions of each platform rather than a shared design",
-      "Integration with hardware features — NFC, ARKit, biometric authentication — requiring native APIs",
+      "Integration with hardware features — NFC, ARKit, biometric authentication — requiring native APIs"
     ],
-    solution: "We build native iOS apps using Swift and SwiftUI and native Android apps using Kotlin and Jetpack Compose, integrating the platform APIs your product requires. Both platforms can be developed from a shared design system and connected to the same backend, delivering full platform capability without the cross-platform compromise.",
+    solution:
+      "We build native iOS apps using Swift and SwiftUI and native Android apps using Kotlin and Jetpack Compose, integrating the platform APIs your product requires. Both platforms can be developed from a shared design system and connected to the same backend, delivering full platform capability without the cross-platform compromise.",
     solutionPoints: [
       "iOS development using Swift and SwiftUI with full access to Apple platform APIs",
       "Android development using Kotlin and Jetpack Compose with full access to Android APIs",
       "Shared backend API architecture serving both platforms from the same data layer",
-      "App Store and Google Play submission, review management, and release process handled",
+      "App Store and Google Play submission, review management, and release process handled"
     ],
   },
 

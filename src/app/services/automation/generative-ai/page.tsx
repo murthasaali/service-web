@@ -33,7 +33,7 @@ const data: SubservicePageData = {
       "Manual content production that takes hours per piece across multiple staff members",
       "Inconsistent output quality when different team members handle similar tasks",
       "Documents that need reading, extracting, and classifying before the real work can begin",
-      "No way to make internal knowledge searchable or accessible to teams at query time",
+      "No way to make internal knowledge searchable or accessible to teams at query time"
     ],
     solution:
       "We identify which language tasks in your business are repetitive and rule-bound, then build generative AI pipelines that handle them reliably, with appropriate guardrails, source attribution, and human review checkpoints where the stakes require it.",
@@ -41,7 +41,7 @@ const data: SubservicePageData = {
       "RAG systems that answer questions from your actual internal documents",
       "LLM pipelines for document classification, summarisation, and extraction",
       "Custom GPT assistants configured for your specific use case",
-      "API integration into your existing applications and workflows",
+      "API integration into your existing applications and workflows"
     ],
   },
 

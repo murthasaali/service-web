@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Customers interact with businesses across email, SMS, WhatsApp, social media, and in-app notifications. Most organisations handle each channel separately, with different tools, different teams, and no shared customer context. The result is customers receiving duplicate messages, irrelevant offers, and communications that do not acknowledge previous interactions. Loyalty programmes are launched without the data infrastructure to make them work.",
+    challenge:
+      "Customers interact with businesses across email, SMS, WhatsApp, social media, and in-app notifications. Most organisations handle each channel separately, with different tools, different teams, and no shared customer context. The result is customers receiving duplicate messages, irrelevant offers, and communications that do not acknowledge previous interactions. Loyalty programmes are launched without the data infrastructure to make them work.",
     challengePoints: [
       "Engagement channels operating in silos with no unified customer view across touchpoints",
       "Loyalty programmes with high registration rates and low actual engagement",
       "Promotional communications sent to the full list regardless of customer status or history",
-      "No mechanism to identify and act on customers who are becoming disengaged",
+      "No mechanism to identify and act on customers who are becoming disengaged"
     ],
-    solution: "We design engagement systems around the customer lifecycle — mapping the stages from acquisition through to advocacy, then building the communication flows, loyalty mechanics, and channel integrations that move customers through each stage with relevant, timely interactions.",
+    solution:
+      "We design engagement systems around the customer lifecycle — mapping the stages from acquisition through to advocacy, then building the communication flows, loyalty mechanics, and channel integrations that move customers through each stage with relevant, timely interactions.",
     solutionPoints: [
       "Customer lifecycle mapping so each engagement trigger is tied to a specific stage and goal",
       "Omnichannel communication flows that maintain context across email, SMS, and messaging apps",
       "WhatsApp Business API integration for transactional and promotional messaging",
-      "Loyalty programme design with earn/redeem mechanics and retention campaign integration",
+      "Loyalty programme design with earn/redeem mechanics and retention campaign integration"
     ],
   },
 

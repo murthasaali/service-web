@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Most business content either exists to fill a blog archive or is written for broad keywords that will never rank. Content that serves the buying journey — helping prospects understand their problem, compare options, and build confidence in a specific provider — requires a different approach. Generic blog posts and templated website copy do not do that work. Content also gets produced without considering how it will be used by search engines or how it will be found by the audience it is meant for.",
+    challenge:
+      "Most business content either exists to fill a blog archive or is written for broad keywords that will never rank. Content that serves the buying journey — helping prospects understand their problem, compare options, and build confidence in a specific provider — requires a different approach. Generic blog posts and templated website copy do not do that work. Content also gets produced without considering how it will be used by search engines or how it will be found by the audience it is meant for.",
     challengePoints: [
       "Content published without keyword strategy, so it generates no organic search traffic",
       "Website copy that describes the business rather than addressing buyer concerns and motivations",
       "No case studies or proof content despite a strong client track record",
-      "Inconsistent brand voice across marketing and sales materials because there is no documented standard",
+      "Inconsistent brand voice across marketing and sales materials because there is no documented standard"
     ],
-    solution: "We produce content that serves specific stages of the buying journey — from informational articles that attract search traffic to case studies that close deals. Every piece is briefed against a keyword target or conversion objective, written in a consistent brand voice, and structured for both human readers and search engine understanding.",
+    solution:
+      "We produce content that serves specific stages of the buying journey — from informational articles that attract search traffic to case studies that close deals. Every piece is briefed against a keyword target or conversion objective, written in a consistent brand voice, and structured for both human readers and search engine understanding.",
     solutionPoints: [
       "Content strategy mapped to buying journey stages with keyword and intent analysis",
       "Blog articles and long-form content targeting rankable informational and commercial queries",
       "Website copywriting structured around buyer motivations and conversion goals",
-      "Case studies and proof content that document client outcomes in a credible, detailed format",
+      "Case studies and proof content that document client outcomes in a credible, detailed format"
     ],
   },
 

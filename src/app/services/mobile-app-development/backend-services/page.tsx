@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Mobile apps are only as reliable and capable as their backend infrastructure. APIs without proper authentication expose data to anyone who can inspect network traffic. Push notification delivery rates below 50 percent undermine retention strategies. Payment integrations built on deprecated SDKs break in the middle of checkout flows. Backend systems designed for a hundred users fail under a thousand. These problems are preventable with correct architecture at the build stage.",
+    challenge:
+      "Mobile apps are only as reliable and capable as their backend infrastructure. APIs without proper authentication expose data to anyone who can inspect network traffic. Push notification delivery rates below 50 percent undermine retention strategies. Payment integrations built on deprecated SDKs break in the middle of checkout flows. Backend systems designed for a hundred users fail under a thousand. These problems are preventable with correct architecture at the build stage.",
     challengePoints: [
       "API security gaps exposing user data to anyone who can intercept or inspect network requests",
       "Push notification infrastructure with low delivery rates undermining re-engagement efforts",
       "Payment integration using outdated SDKs that break with operating system updates",
-      "Backend architecture that cannot scale beyond initial user volumes without significant rework",
+      "Backend architecture that cannot scale beyond initial user volumes without significant rework"
     ],
-    solution: "We build the backend infrastructure mobile apps need — REST or GraphQL APIs, authentication systems, push notification services, and payment processing — designed for the security, reliability, and scale requirements of production mobile applications.",
+    solution:
+      "We build the backend infrastructure mobile apps need — REST or GraphQL APIs, authentication systems, push notification services, and payment processing — designed for the security, reliability, and scale requirements of production mobile applications.",
     solutionPoints: [
       "Secure REST or GraphQL API with authentication, rate limiting, and versioning",
       "Push notification infrastructure covering APNs and FCM delivery with tracking",
       "Authentication system using industry-standard protocols (JWT, OAuth 2.0, or passwordless)",
-      "Payment processing integration with Stripe or in-app purchase for App Store and Play Store billing",
+      "Payment processing integration with Stripe or in-app purchase for App Store and Play Store billing"
     ],
   },
 

@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "A slow website loses visitors before they convert. Pages that fail Core Web Vitals assessments are penalised in Google search rankings. Security gaps leave the site exposed to compromise. Accessibility failures exclude users and create legal exposure. These are all measurable, fixable problems — but they tend to accumulate quietly until they start affecting revenue or search visibility.",
+    challenge:
+      "A slow website loses visitors before they convert. Pages that fail Core Web Vitals assessments are penalised in Google search rankings. Security gaps leave the site exposed to compromise. Accessibility failures exclude users and create legal exposure. These are all measurable, fixable problems — but they tend to accumulate quietly until they start affecting revenue or search visibility.",
     challengePoints: [
       "Page load times above three seconds driving measurable bounce rate increases",
       "Core Web Vitals failures reducing organic search rankings across key landing pages",
       "Outdated dependencies and missing security headers leaving the site vulnerable",
-      "Accessibility failures that exclude users and risk compliance issues under WCAG guidelines",
+      "Accessibility failures that exclude users and risk compliance issues under WCAG guidelines"
     ],
-    solution: "We run a systematic audit of your site's performance, security posture, and accessibility compliance, produce a prioritised list of issues, and fix them. Every change is benchmarked before and after so you can see exactly what improved. Work is done in your development environment and released through your existing deployment process, not around it.",
+    solution:
+      "We run a systematic audit of your site's performance, security posture, and accessibility compliance, produce a prioritised list of issues, and fix them. Every change is benchmarked before and after so you can see exactly what improved. Work is done in your development environment and released through your existing deployment process, not around it.",
     solutionPoints: [
       "Lighthouse and Core Web Vitals audit with scored baseline before any work begins",
       "Image compression, lazy loading, and script deferral to reduce page weight",
       "Security header configuration, SSL setup, and dependency vulnerability review",
-      "WCAG 2.1 accessibility audit with fixes to markup, colour contrast, and keyboard navigation",
+      "WCAG 2.1 accessibility audit with fixes to markup, colour contrast, and keyboard navigation"
     ],
   },
 

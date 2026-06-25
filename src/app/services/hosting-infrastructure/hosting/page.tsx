@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Hosting decisions are often made based on cost alone, without considering the reliability, performance, or support requirements of the applications being hosted. Cheap shared hosting creates performance and security problems as traffic grows. Unmanaged VPS or dedicated servers are provisioned but never properly configured, secured, or monitored. Businesses end up with hosting that technically works until it fails, at which point there is no clear owner of the problem.",
+    challenge:
+      "Hosting decisions are often made based on cost alone, without considering the reliability, performance, or support requirements of the applications being hosted. Cheap shared hosting creates performance and security problems as traffic grows. Unmanaged VPS or dedicated servers are provisioned but never properly configured, secured, or monitored. Businesses end up with hosting that technically works until it fails, at which point there is no clear owner of the problem.",
     challengePoints: [
       "Shared hosting causing slow page loads and unpredictable availability as the site grows",
       "Unmanaged VPS or dedicated servers with no monitoring, no security hardening, and no backup",
       "No clear support path when a hosting problem occurs outside business hours",
-      "Hosting environment not matched to the application stack, causing configuration friction",
+      "Hosting environment not matched to the application stack, causing configuration friction"
     ],
-    solution: "We assess your application's requirements and recommend the hosting tier and provider that fits — then handle the setup, security configuration, monitoring, and backup so the environment runs reliably without requiring your team to become hosting specialists.",
+    solution:
+      "We assess your application's requirements and recommend the hosting tier and provider that fits — then handle the setup, security configuration, monitoring, and backup so the environment runs reliably without requiring your team to become hosting specialists.",
     solutionPoints: [
       "Hosting tier recommendation based on traffic patterns, technical requirements, and budget",
       "Server setup and configuration including web server, SSL, and stack-appropriate optimisation",
       "Automated backup configuration with tested restore procedures",
-      "Uptime monitoring with alerting so hosting issues are caught before they affect users",
+      "Uptime monitoring with alerting so hosting issues are caught before they affect users"
     ],
   },
 

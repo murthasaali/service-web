@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Cloud adoption without a coherent strategy produces fragmented environments, uncontrolled costs, and a security posture that is harder to manage than the on-premise infrastructure it replaced. Organisations migrate to cloud reactively — moving workloads without redesigning them — or adopt cloud services inconsistently across teams, creating a multi-account sprawl that no one can audit or govern effectively.",
+    challenge:
+      "Cloud adoption without a coherent strategy produces fragmented environments, uncontrolled costs, and a security posture that is harder to manage than the on-premise infrastructure it replaced. Organisations migrate to cloud reactively — moving workloads without redesigning them — or adopt cloud services inconsistently across teams, creating a multi-account sprawl that no one can audit or govern effectively.",
     challengePoints: [
       "Cloud costs growing without a corresponding understanding of what is driving them",
       "Multiple cloud accounts or providers adopted by different teams with no central governance",
       "Applications migrated to cloud without redesign, carrying the same performance and reliability limitations",
-      "Security configuration inconsistent across cloud environments with no unified policy",
+      "Security configuration inconsistent across cloud environments with no unified policy"
     ],
-    solution: "We provide cloud architecture and migration consulting that starts from your business requirements and designs the cloud environment to serve them. This includes cloud strategy, migration planning, architecture design, governance frameworks, and cost optimisation — independent of vendor incentives.",
+    solution:
+      "We provide cloud architecture and migration consulting that starts from your business requirements and designs the cloud environment to serve them. This includes cloud strategy, migration planning, architecture design, governance frameworks, and cost optimisation — independent of vendor incentives.",
     solutionPoints: [
       "Cloud strategy aligned to your workload requirements, compliance constraints, and cost targets",
       "Migration plan that sequences workloads by dependency and risk rather than technical convenience",
       "Architecture design covering multi-account structure, network topology, and security baseline",
-      "Governance framework covering tagging policies, cost attribution, and access control standards",
+      "Governance framework covering tagging policies, cost attribution, and access control standards"
     ],
   },
 

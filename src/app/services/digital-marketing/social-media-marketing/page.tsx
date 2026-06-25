@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Most business social media accounts are inconsistent — posting activity drops when the team is busy, content is reactive rather than strategic, and the connection between social activity and business outcomes is unclear. Engagement metrics are tracked but there is no line from social content to qualified pipeline or revenue. The channel absorbs time without producing a measurable return.",
+    challenge:
+      "Most business social media accounts are inconsistent — posting activity drops when the team is busy, content is reactive rather than strategic, and the connection between social activity and business outcomes is unclear. Engagement metrics are tracked but there is no line from social content to qualified pipeline or revenue. The channel absorbs time without producing a measurable return.",
     challengePoints: [
       "Inconsistent posting frequency eroding audience trust and algorithmic reach",
       "Content strategy absent, so posts are reactive rather than tied to a campaign or objective",
       "No measurement framework connecting social activity to actual business outcomes",
-      "Brand voice inconsistent across platforms and between team members posting content",
+      "Brand voice inconsistent across platforms and between team members posting content"
     ],
-    solution: "We build a content calendar tied to your marketing objectives, produce the creative assets needed to execute it, and manage the publishing and community response across your active platforms. Performance is reported against metrics that connect social activity to traffic, leads, or revenue rather than vanity metrics.",
+    solution:
+      "We build a content calendar tied to your marketing objectives, produce the creative assets needed to execute it, and manage the publishing and community response across your active platforms. Performance is reported against metrics that connect social activity to traffic, leads, or revenue rather than vanity metrics.",
     solutionPoints: [
       "Content calendar built around your marketing calendar, product launches, and seasonal moments",
       "Creative production including copywriting, graphics, and short-form video",
       "Community management covering comment responses and inbound messages",
-      "Monthly reporting on reach, engagement, referral traffic, and lead attribution",
+      "Monthly reporting on reach, engagement, referral traffic, and lead attribution"
     ],
   },
 

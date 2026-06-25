@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Legacy systems accumulate technical debt until they become a significant operational constraint. They cannot be extended without risk. The developers who understand them have left. They run on unsupported infrastructure. Integration with modern tools is difficult or impossible. The business knows the system needs replacing but fears the disruption of migration — often because a previous attempt failed or because the system holds years of data the new system needs to accommodate.",
+    challenge:
+      "Legacy systems accumulate technical debt until they become a significant operational constraint. They cannot be extended without risk. The developers who understand them have left. They run on unsupported infrastructure. Integration with modern tools is difficult or impossible. The business knows the system needs replacing but fears the disruption of migration — often because a previous attempt failed or because the system holds years of data the new system needs to accommodate.",
     challengePoints: [
       "Legacy system on unsupported infrastructure or technology with no available expertise to extend",
       "System too fragile to change without risk of breaking adjacent functionality",
       "Previous modernisation attempt failed due to scope underestimation or big-bang approach",
-      "Critical data locked in the legacy system with no clean export path",
+      "Critical data locked in the legacy system with no clean export path"
     ],
-    solution: "We approach legacy modernisation as a managed transition rather than a replacement project. We assess what the legacy system does, model the target system, migrate data with validated integrity, and run old and new systems in parallel through a transition period — cutting over only when the new system is fully validated.",
+    solution:
+      "We approach legacy modernisation as a managed transition rather than a replacement project. We assess what the legacy system does, model the target system, migrate data with validated integrity, and run old and new systems in parallel through a transition period — cutting over only when the new system is fully validated.",
     solutionPoints: [
       "Legacy system audit documenting actual functionality before any replacement design begins",
       "Target architecture design that preserves what the legacy system does correctly while addressing its constraints",
       "Incremental migration approach with parallel running and validated data migration",
-      "Cut-over plan with defined rollback conditions and validated before the migration date",
+      "Cut-over plan with defined rollback conditions and validated before the migration date"
     ],
   },
 

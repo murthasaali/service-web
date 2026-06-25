@@ -28,20 +28,20 @@ const data: SubservicePageData = {
 
   solves: {
     challenge:
-      "Support teams handle the same questions repeatedly. Customers ask about order status, pricing, return policies, and appointment availability at all hours, and each query takes staff attention even when the answer is straightforward. Scaling that volume with headcount is expensive and slow.",
+      "Support reps waste hours replying to the same basic questions. Customers ask about shipping updates, pricing, and returns at all hours, and appointment availability at all hours, and every simple ticket eats up time that could go to complex cases. Hiring more staff to keep up with tickets gets expensive fast.",
     challengePoints: [
-      "Support staff spending time on repetitive, low-complexity questions",
-      "No coverage outside business hours for common customer inquiries",
-      "Knowledge scattered across documents, wikis, and team memory with no central access",
-      "Generic chatbot scripts that fail when users phrase questions off the predetermined path",
+      "Staff copy-pasting answers to simple, repetitive questions",
+      "Customers waiting until Monday morning for basic answers",
+      "Info buried in docs, wikis, or individual team heads with no central access",
+      "Basic chatbots breaking when questions go off-script the predetermined path"
     ],
     solution:
-      "We build AI assistants that are trained specifically on your documentation, product information, and processes. They answer questions accurately, connect to live systems for real-time data, and route to a human agent when the query is outside their scope with full conversation context passed along.",
+      "We build AI bots trained on your actual documentation, guides, and products, product information, and processes. They answer questions accurately and check live database records, and hand off complex requests to your team with full context with full conversation context passed along.",
     solutionPoints: [
-      "AI trained on your documentation, FAQs, and product knowledge base",
-      "Live data connections for order status, bookings, and account lookups",
-      "Multi-channel deployment across web chat, WhatsApp, Slack, and Teams",
-      "Structured escalation to human agents with full conversation context at handoff",
+      "AI bots trained on your actual docs and product guides",
+      "Integrations to look up order status, accounts, and bookings",
+      "Support where customers are, from web chat to WhatsApp, and Teams",
+      "Smooth handoffs to human agents so customers don't repeat themselves at handoff"
     ],
   },
 

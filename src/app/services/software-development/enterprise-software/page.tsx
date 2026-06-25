@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Off-the-shelf enterprise platforms cover broad use cases but rarely fit any single organisation's processes precisely. The gaps are filled with workarounds, Excel spreadsheets running in parallel, and custom scripts that break with every platform update. The result is an enterprise system that is technically in use but practically bypassed for anything the software does not handle well. Custom enterprise software avoids this by modelling the actual process from the start.",
+    challenge:
+      "Off-the-shelf enterprise platforms cover broad use cases but rarely fit any single organisation's processes precisely. The gaps are filled with workarounds, Excel spreadsheets running in parallel, and custom scripts that break with every platform update. The result is an enterprise system that is technically in use but practically bypassed for anything the software does not handle well. Custom enterprise software avoids this by modelling the actual process from the start.",
     challengePoints: [
       "Off-the-shelf ERP or CRM requiring significant process changes to accommodate platform constraints",
       "Multiple disconnected systems covering different operational areas with no integration",
       "Enterprise platform heavily customised to the point where upgrades are blocked by the customisations",
-      "Key operational process managed in spreadsheets alongside an enterprise system that cannot support it",
+      "Key operational process managed in spreadsheets alongside an enterprise system that cannot support it"
     ],
-    solution: "We develop custom enterprise software that models your actual operational processes — ERP, CRM, HRMS, or inventory systems — built on modern web architecture with the integrations, reporting, and access control your organisation requires.",
+    solution:
+      "We develop custom enterprise software that models your actual operational processes — ERP, CRM, HRMS, or inventory systems — built on modern web architecture with the integrations, reporting, and access control your organisation requires.",
     solutionPoints: [
       "Requirements definition that models your actual process rather than adapting to a platform's data model",
       "Custom ERP, CRM, or HRMS built to your workflow, terminology, and reporting requirements",
       "Integration with existing systems through API or database connectors",
-      "Role-based access control and approval workflows appropriate to your organisational structure",
+      "Role-based access control and approval workflows appropriate to your organisational structure"
     ],
   },
 

@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Consumer apps compete in environments where users have high expectations and low patience. A slow launch screen, a confusing onboarding flow, or inconsistent performance causes immediate uninstalls. App Store ranking algorithms favour engagement metrics — retention, session length, reviews — over download volume. Businesses building consumer apps often underestimate the product design work required to achieve sustainable user engagement and the ongoing effort needed to maintain app store position after launch.",
+    challenge:
+      "Consumer apps compete in environments where users have high expectations and low patience. A slow launch screen, a confusing onboarding flow, or inconsistent performance causes immediate uninstalls. App Store ranking algorithms favour engagement metrics — retention, session length, reviews — over download volume. Businesses building consumer apps often underestimate the product design work required to achieve sustainable user engagement and the ongoing effort needed to maintain app store position after launch.",
     challengePoints: [
       "App designed without a clear retention strategy, resulting in downloads that do not translate to active users",
       "Launch timing without an ASO strategy, so the app is invisible in App Store and Play Store search",
       "Poor onboarding flow losing users before they understand the app's core value",
-      "No analytics instrumentation, so post-launch decisions about what to improve are based on guesswork",
+      "No analytics instrumentation, so post-launch decisions about what to improve are based on guesswork"
     ],
-    solution: "We build consumer apps designed around the user journey from discovery through habitual use — with onboarding flows tested for conversion, push notification strategy for re-engagement, analytics instrumented from day one, and a plan for maintaining app store position after launch.",
+    solution:
+      "We build consumer apps designed around the user journey from discovery through habitual use — with onboarding flows tested for conversion, push notification strategy for re-engagement, analytics instrumented from day one, and a plan for maintaining app store position after launch.",
     solutionPoints: [
       "User journey design covering onboarding, core flow, and re-engagement touchpoints",
       "App Store Optimisation strategy covering keywords, screenshots, and store listing copy",
       "Push notification and in-app messaging strategy for user re-engagement",
-      "Analytics instrumented from launch to track retention, session quality, and conversion funnels",
+      "Analytics instrumented from launch to track retention, session quality, and conversion funnels"
     ],
   },
 

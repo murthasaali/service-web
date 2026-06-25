@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Many businesses know they need to modernise their technology but cannot get past the question of where to start. Technology decisions are made reactively in response to immediate problems rather than as part of a coordinated plan. Different departments pursue their own systems without considering how they connect. Investment is approved without clear success criteria, and two years later the business is not materially different despite significant spend.",
+    challenge:
+      "Many businesses know they need to modernise their technology but cannot get past the question of where to start. Technology decisions are made reactively in response to immediate problems rather than as part of a coordinated plan. Different departments pursue their own systems without considering how they connect. Investment is approved without clear success criteria, and two years later the business is not materially different despite significant spend.",
     challengePoints: [
       "Technology investments approved without a unifying strategy or prioritisation framework",
       "Department-level decisions creating a fragmented stack with no integration plan",
       "Digital transformation programmes that start with energy but lose direction and momentum",
-      "No mechanism to evaluate whether previous technology investments have delivered their intended outcomes",
+      "No mechanism to evaluate whether previous technology investments have delivered their intended outcomes"
     ],
-    solution: "We work with leadership teams to define the technology strategy that serves their business objectives, produce a sequenced roadmap of investments, and create the governance structures that keep transformation on track. Recommendations are grounded in what is achievable given your budget, team, and existing systems — not what would be ideal in an unconstrained scenario.",
+    solution:
+      "We work with leadership teams to define the technology strategy that serves their business objectives, produce a sequenced roadmap of investments, and create the governance structures that keep transformation on track. Recommendations are grounded in what is achievable given your budget, team, and existing systems — not what would be ideal in an unconstrained scenario.",
     solutionPoints: [
       "Current state assessment covering technology, processes, and organisational capability",
       "Defined technology strategy aligned to business objectives with prioritised investment areas",
       "Sequenced roadmap with phased delivery, dependency mapping, and resource estimates",
-      "Governance structures and success metrics so progress can be measured and course-corrected",
+      "Governance structures and success metrics so progress can be measured and course-corrected"
     ],
   },
 

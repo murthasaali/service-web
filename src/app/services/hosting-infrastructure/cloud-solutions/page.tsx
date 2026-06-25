@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "On-premise infrastructure or legacy hosting arrangements create fixed costs regardless of actual usage, require specialist maintenance, and cannot scale quickly when demand changes. Businesses running critical workloads on ageing infrastructure face increasing reliability risk and are locked out of the services that modern cloud platforms provide — managed databases, serverless functions, container orchestration, and global content delivery.",
+    challenge:
+      "On-premise infrastructure or legacy hosting arrangements create fixed costs regardless of actual usage, require specialist maintenance, and cannot scale quickly when demand changes. Businesses running critical workloads on ageing infrastructure face increasing reliability risk and are locked out of the services that modern cloud platforms provide — managed databases, serverless functions, container orchestration, and global content delivery.",
     challengePoints: [
       "Fixed infrastructure costs with no ability to scale capacity up or down with demand",
       "On-premise hardware approaching end of life with increasing maintenance burden",
       "Manual deployment and configuration processes that slow down development cycles",
-      "Disaster recovery plans that exist on paper but are not regularly tested or automated",
+      "Disaster recovery plans that exist on paper but are not regularly tested or automated"
     ],
-    solution: "We design and implement cloud architectures on AWS, Azure, or GCP that match your workload requirements, migrate existing applications without disruption, and configure the infrastructure-as-code and monitoring that makes ongoing management efficient rather than manual.",
+    solution:
+      "We design and implement cloud architectures on AWS, Azure, or GCP that match your workload requirements, migrate existing applications without disruption, and configure the infrastructure-as-code and monitoring that makes ongoing management efficient rather than manual.",
     solutionPoints: [
       "Cloud architecture design matched to your workload patterns, reliability requirements, and budget",
       "Migration planning and execution with minimal disruption to running services",
       "Infrastructure-as-code configuration using Terraform or AWS CloudFormation for reproducible environments",
-      "Cost optimisation review covering right-sizing, reserved capacity, and unused resource cleanup",
+      "Cost optimisation review covering right-sizing, reserved capacity, and unused resource cleanup"
     ],
   },
 

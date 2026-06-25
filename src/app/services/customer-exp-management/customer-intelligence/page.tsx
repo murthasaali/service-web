@@ -21,19 +21,21 @@ const data: SubservicePageData = {
   heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
-    challenge: "Most businesses collect customer data but cannot easily analyse it. Transactional data is in one system, support data is in another, and behavioural data from the website or app is in a third. There is no combined view. Leadership makes decisions about customer strategy based on incomplete reports and intuition rather than a clear picture of what the data actually shows.",
+    challenge:
+      "Most businesses collect customer data but cannot easily analyse it. Transactional data is in one system, support data is in another, and behavioural data from the website or app is in a third. There is no combined view. Leadership makes decisions about customer strategy based on incomplete reports and intuition rather than a clear picture of what the data actually shows.",
     challengePoints: [
       "Customer data fragmented across CRM, support, billing, and analytics tools with no unified view",
       "No way to identify which customers are at risk of churning until they have already left",
       "Retention and loyalty decisions made without data on what is actually driving or reducing them",
-      "Marketing and CX teams using different definitions of customer segments, leading to conflicting decisions",
+      "Marketing and CX teams using different definitions of customer segments, leading to conflicting decisions"
     ],
-    solution: "We consolidate your customer data sources, build the segmentation models that matter for your business, and deliver the dashboards and alerts that make the insight actionable. The output is a clear, shared understanding of who your customers are, how they are behaving, and what requires action.",
+    solution:
+      "We consolidate your customer data sources, build the segmentation models that matter for your business, and deliver the dashboards and alerts that make the insight actionable. The output is a clear, shared understanding of who your customers are, how they are behaving, and what requires action.",
     solutionPoints: [
       "Unified customer data model pulling from CRM, support, and behavioural sources",
       "Cohort analysis and RFM segmentation to identify high-value and at-risk customers",
       "Churn risk scoring based on your actual engagement and purchase patterns",
-      "Dashboards configured for marketing, CX, and leadership with the metrics each team needs",
+      "Dashboards configured for marketing, CX, and leadership with the metrics each team needs"
     ],
   },
 

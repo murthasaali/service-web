@@ -5,12 +5,10 @@
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import {
-  CheckCircle,
   ChevronDown,
   ChevronRight,
   ArrowRight,
   Sparkles,
-  AlertCircle,
 } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -20,6 +18,7 @@ import ShaderBackground from "@/components/ui/shader-background";
 import { StarButton } from "@/components/ui/star-button";
 import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
 import { iconMap, type IconKey } from "@/components/ServicePageLayout";
+import ProblemSolutionCard from "@/components/ui/ProblemSolutionCard";
 
 // ─── Data types ───────────────────────────────────────────────────────────────
 
@@ -254,72 +253,14 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
                 <SectionHeading eyebrow="The Problem" heading="What this service solves" centered />
               </AnimatedSection>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Challenge column */}
-                <AnimatedSection direction="left">
-                  <div className="flex h-full flex-col rounded-[28px] border border-red-100/70 bg-white/70 p-8 shadow-[0_18px_55px_rgba(239,68,68,0.05)] backdrop-blur-md">
-                    <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-red-50 border border-red-100">
-                      <AlertCircle size={18} className="text-red-400" aria-hidden="true" />
-                    </div>
-                    <h3
-                      className="font-display font-semibold text-[#0F172A] mb-4"
-                      style={{ fontSize: 19 }}
-                    >
-                      The challenge
-                    </h3>
-                    <p
-                      className="text-slate-600 leading-relaxed mb-6"
-                      style={{ fontSize: 15, lineHeight: 1.65 }}
-                    >
-                      {data.solves.challenge}
-                    </p>
-                    <ul className="mt-auto space-y-3">
-                      {data.solves.challengePoints.map((point) => (
-                        <li key={point} className="flex items-start gap-3 text-sm text-slate-600">
-                          <span
-                            className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-red-300"
-                            aria-hidden="true"
-                          />
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </AnimatedSection>
-
-                {/* Solution column */}
-                <AnimatedSection direction="right" delay={0.1}>
-                  <div className="flex h-full flex-col rounded-[28px] border border-cyan-100 bg-white/70 p-8 shadow-[0_18px_55px_rgba(8,145,178,0.08)] backdrop-blur-md">
-                    <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-cyan-50 border border-cyan-100">
-                      <CheckCircle size={18} className="text-cyan-600" aria-hidden="true" />
-                    </div>
-                    <h3
-                      className="font-display font-semibold text-[#0F172A] mb-4"
-                      style={{ fontSize: 19 }}
-                    >
-                      How we solve it
-                    </h3>
-                    <p
-                      className="text-slate-600 leading-relaxed mb-6"
-                      style={{ fontSize: 15, lineHeight: 1.65 }}
-                    >
-                      {data.solves.solution}
-                    </p>
-                    <ul className="mt-auto space-y-3">
-                      {data.solves.solutionPoints.map((point) => (
-                        <li key={point} className="flex items-start gap-3 text-sm text-slate-600">
-                          <CheckCircle
-                            size={14}
-                            className="text-cyan-500 mt-0.5 shrink-0"
-                            aria-hidden="true"
-                          />
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </AnimatedSection>
-              </div>
+              <ProblemSolutionCard
+                slug={data.slug}
+                parentSlug={data.parentSlug}
+                challenge={data.solves.challenge}
+                challengePoints={data.solves.challengePoints}
+                solution={data.solves.solution}
+                solutionPoints={data.solves.solutionPoints}
+              />
             </div>
           </section>
 
