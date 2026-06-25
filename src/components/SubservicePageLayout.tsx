@@ -15,6 +15,7 @@ import {
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AnimatedSection from "@/components/common/AnimatedSection";
+import SectionHeading from "@/components/common/SectionHeading";
 import ShaderBackground from "@/components/ui/shader-background";
 import { StarButton } from "@/components/ui/star-button";
 import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
@@ -177,15 +178,14 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
                   </span>
 
                   <h1
-                    className="mt-7 font-display font-thin text-[#0F172A]"
-                    style={{ fontSize: "clamp(28px, 3.6vw, 48px)", lineHeight: 1.08 }}
+                    className="mt-7 font-display font-thin text-[#0F172A] text-balance"
+                    style={{ fontSize: "clamp(34px, 5.2vw, 56px)", lineHeight: 1.02 }}
                   >
                     {data.name}
                   </h1>
 
                   <p
-                    className="mt-5 max-w-xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md"
-                    style={{ fontSize: 16, lineHeight: 1.65 }}
+                    className="mt-6 max-w-xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md text-base leading-8 md:text-lg"
                   >
                     {data.tagline}
                   </p>
@@ -251,15 +251,7 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
             />
             <div className="relative mx-auto max-w-7xl">
               <AnimatedSection className="text-center mb-14">
-                <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-                  The Problem
-                </span>
-                <h2
-                  className="mt-5 font-display font-thin text-[#0F172A] text-balance"
-                  style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.08 }}
-                >
-                  What this service solves
-                </h2>
+                <SectionHeading eyebrow="The Problem" heading="What this service solves" centered />
               </AnimatedSection>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -335,15 +327,7 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
           <section className="px-6 py-24 bg-white">
             <div className="max-w-7xl mx-auto">
               <AnimatedSection className="text-center mb-14">
-                <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-                  Key Capabilities
-                </span>
-                <h2
-                  className="mt-5 font-display font-thin text-[#0F172A] text-balance"
-                  style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.08 }}
-                >
-                  What this service includes
-                </h2>
+                <SectionHeading eyebrow="Key Capabilities" heading="What this service includes" centered />
               </AnimatedSection>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -383,15 +367,7 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
             />
             <div className="relative max-w-7xl mx-auto">
               <AnimatedSection className="text-center mb-14">
-                <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-                  Use Cases
-                </span>
-                <h2
-                  className="mt-5 font-display font-thin text-[#0F172A] text-balance"
-                  style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.08 }}
-                >
-                  How businesses use this
-                </h2>
+                <SectionHeading eyebrow="Use Cases" heading="How businesses use this" centered />
               </AnimatedSection>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -417,51 +393,7 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
             </div>
           </section>
 
-          {/* ── 5. Technologies ─────────────────────────────────────────────── */}
-          <section className="px-6 py-20 bg-white">
-            <div className="max-w-7xl mx-auto">
-              <AnimatedSection className="text-center mb-10">
-                <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-                  Tech Stack
-                </span>
-                <h2
-                  className="mt-5 font-display font-thin text-[#0F172A]"
-                  style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.08 }}
-                >
-                  Technologies we use
-                </h2>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.1}>
-                <div className="flex flex-wrap justify-center gap-2.5">
-                  {data.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-full px-4 py-2 text-sm font-medium text-[#0F172A] cursor-default shadow-[0_10px_24px_rgba(59,130,246,0.08)] transition-colors"
-                      style={{
-                        background: "rgba(255,255,255,0.72)",
-                        border: "1px solid rgba(103,232,249,0.42)",
-                      }}
-                      onMouseEnter={(e) => {
-                        const el = e.currentTarget as HTMLElement;
-                        el.style.borderColor = "rgba(6,182,212,0.55)";
-                        el.style.background = "#ECFEFF";
-                      }}
-                      onMouseLeave={(e) => {
-                        const el = e.currentTarget as HTMLElement;
-                        el.style.borderColor = "rgba(103,232,249,0.42)";
-                        el.style.background = "rgba(255,255,255,0.72)";
-                      }}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </AnimatedSection>
-            </div>
-          </section>
-
-          {/* ── 6. Benefits ─────────────────────────────────────────────────── */}
+          {/* ── 5. Benefits ─────────────────────────────────────────────────── */}
           <section
             className="relative overflow-hidden px-6 py-24 bg-[#F8FEFF]"
             style={{
@@ -477,15 +409,7 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
             />
             <div className="relative max-w-7xl mx-auto">
               <AnimatedSection className="text-center mb-14">
-                <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-                  Why It Matters
-                </span>
-                <h2
-                  className="mt-5 font-display font-thin text-[#0F172A] text-balance"
-                  style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.08 }}
-                >
-                  Business outcomes you can expect
-                </h2>
+                <SectionHeading eyebrow="Why It Matters" heading="Business outcomes you can expect" centered />
               </AnimatedSection>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -521,15 +445,7 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
           <section className="py-24 px-6 bg-white">
             <div className="max-w-3xl mx-auto">
               <AnimatedSection className="text-center mb-14">
-                <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-                  FAQ
-                </span>
-                <h2
-                  className="mt-5 font-display font-thin text-[#0F172A]"
-                  style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.08 }}
-                >
-                  Common questions
-                </h2>
+                <SectionHeading eyebrow="FAQ" heading="Common questions" centered />
               </AnimatedSection>
 
               <AnimatedSection delay={0.1}>

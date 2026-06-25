@@ -5,6 +5,7 @@ import { useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { iconMap, type IconKey } from "./ServicePageLayout";
+import SectionHeading from "@/components/common/SectionHeading";
 
 export interface ServiceCard {
   iconKey?: IconKey;
@@ -209,17 +210,12 @@ export default function ServiceCardsSection({ cards }: { cards: ServiceCard[] })
       }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div className="text-center mb-14">
-          <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-            What We Offer
-          </span>
-          <h2
-            className="mt-5 font-display font-thin text-[#0F172A] text-balance"
-            style={{ fontSize: "clamp(30px, 4vw, 52px)", lineHeight: 1.08 }}
-          >
-            End-to-end digital services for modern businesses
-          </h2>
-        </div>
+        <SectionHeading
+          eyebrow="What We Offer"
+          heading="End-to-end digital services for modern businesses"
+          centered
+          className="mb-14"
+        />
 
         <div role="list" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {cards.map((card) => (

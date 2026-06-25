@@ -18,6 +18,7 @@ import {
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AnimatedSection from "@/components/common/AnimatedSection";
+import SectionHeading from "@/components/common/SectionHeading";
 import ShaderBackground from "@/components/ui/shader-background";
 import { StarButton } from "@/components/ui/star-button";
 import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
@@ -243,10 +244,10 @@ export default function ServicePageLayout({
 
               {/* H1 */}
               <h1
-                className="mt-7 max-w-full font-display font-thin text-[#0F172A] whitespace-nowrap"
+                className="mt-7 font-display font-thin text-[#0F172A] text-balance"
                 style={{
-                  fontSize: "clamp(24px, 3.1vw, 40px)",
-                  lineHeight: 1.08,
+                  fontSize: "clamp(34px, 5.2vw, 56px)",
+                  lineHeight: 1.02,
                 }}
               >
                 {data.name}
@@ -257,8 +258,8 @@ export default function ServicePageLayout({
                 className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md space-y-2"
               >
                 {data.heroBullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-3 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true" />
+                  <li key={bullet} className="flex items-start gap-3 text-base leading-8 text-slate-600 md:text-lg">
+                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true" />
                     {bullet}
                   </li>
                 ))}
@@ -327,15 +328,7 @@ export default function ServicePageLayout({
 
               {/* Left: description */}
               <AnimatedSection direction="left" className="lg:col-span-3">
-                <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-                  Overview
-                </span>
-                <h2
-                  className="mt-5 font-display font-thin text-[#0F172A]"
-                  style={{ fontSize: "clamp(28px, 4vw, 46px)", lineHeight: 1.08 }}
-                >
-                  What we deliver
-                </h2>
+                <SectionHeading eyebrow="Overview" heading="What we deliver" className="mb-6" />
                 <div className="mt-6 space-y-4">
                   {data.overview.paragraphs.map((p, i) => (
                     <p
@@ -437,18 +430,7 @@ export default function ServicePageLayout({
           />
           <div className="relative max-w-7xl mx-auto">
             <AnimatedSection className="text-center mb-16">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700 mb-3">
-                How It Works
-              </p>
-              <h2
-                className="font-display font-thin text-[#0F172A] text-balance"
-                style={{
-                  fontSize: "clamp(30px, 4vw, 52px)",
-                  lineHeight: 1.08,
-                }}
-              >
-                Our process
-              </h2>
+              <SectionHeading eyebrow="How It Works" heading="Our process" centered />
             </AnimatedSection>
 
             {/* Desktop: Interactive Stepper */}
@@ -647,18 +629,7 @@ export default function ServicePageLayout({
         <section className="py-20 px-6 bg-[#F8FEFF] border-y border-cyan-100">
           <div className="max-w-7xl mx-auto">
             <AnimatedSection className="text-center mb-10">
-              <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-                Tech Stack &amp; Tools
-              </span>
-              <h2
-                className="mt-5 font-display font-thin text-[#0F172A]"
-                style={{
-                  fontSize: "clamp(28px, 4vw, 46px)",
-                  lineHeight: 1.08,
-                }}
-              >
-                Technologies we work with
-              </h2>
+              <SectionHeading eyebrow="Tech Stack & Tools" heading="Technologies we work with" centered />
             </AnimatedSection>
 
             {data.techStack && data.techStack.length > 0 ? (
@@ -700,18 +671,7 @@ export default function ServicePageLayout({
         <section className="py-24 px-6 bg-white">
           <div className="max-w-3xl mx-auto">
             <AnimatedSection className="text-center mb-14">
-              <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
-                FAQ
-              </span>
-              <h2
-                className="mt-5 font-display font-thin text-[#0F172A]"
-                style={{
-                  fontSize: "clamp(30px, 4vw, 52px)",
-                  lineHeight: 1.08,
-                }}
-              >
-                Common questions
-              </h2>
+              <SectionHeading eyebrow="FAQ" heading="Common questions" centered />
             </AnimatedSection>
 
             <AnimatedSection delay={0.1}>
