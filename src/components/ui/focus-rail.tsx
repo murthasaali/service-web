@@ -69,14 +69,16 @@ export function FocusRail({
     if (e.key === "ArrowRight") handleNext();
   };
 
-  const swipePower = (offset: number, velocity: number) => Math.abs(offset) * velocity;
   const onDragEnd = (_e: MouseEvent | TouchEvent | PointerEvent, { offset, velocity }: PanInfo) => {
-    const swipe = swipePower(offset.x, velocity.x);
-    if (swipe < -10000) handleNext();
-    else if (swipe > 10000) handlePrev();
+    const swipe = Math.abs(offset.x) * velocity.x;
+    if (offset.x < -50 || swipe < -2000) {
+      handleNext();
+    } else if (offset.x > 50 || swipe > 2000) {
+      handlePrev();
+    }
   };
 
-  const visibleOffsets = [-2, -1, 0, 1, 2];
+  const visibleOffsets = [-1, 0, 1]; // Render only left, center, right to prevent rendering offscreen cards
 
   return (
     <div
