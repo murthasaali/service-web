@@ -2,7 +2,8 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { motion, useReducedMotion } from "framer-motion";
+import { useState } from "react";
+import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
   ChevronDown,
@@ -276,22 +277,45 @@ function buildSchema(data: SubservicePageData) {
 // ─── FAQ item ─────────────────────────────────────────────────────────────────
 
 function FAQItem({ faq }: { faq: SubserviceFAQ }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <details className="group border-b border-cyan-100 last:border-0">
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 [&::-webkit-details-marker]:hidden">
-        <span className="font-semibold text-sm pr-4 leading-snug text-[#0F172A] transition-colors group-hover:text-cyan-700 group-open:text-cyan-700">
+    <div className="border-b border-cyan-100 last:border-0">
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex cursor-pointer items-center justify-between gap-4 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 select-none group"
+        aria-expanded={isOpen}
+      >
+        <span className={`font-semibold text-sm pr-4 leading-snug transition-colors duration-200 ${
+          isOpen ? "text-cyan-700" : "text-[#0F172A] group-hover:text-cyan-700"
+        }`}>
           {faq.q}
         </span>
         <ChevronDown
           size={18}
           aria-hidden="true"
-          className="shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-180 group-open:text-cyan-600"
+          className={`shrink-0 text-slate-400 transition-transform duration-300 ${
+            isOpen ? "rotate-180 text-cyan-600" : ""
+          }`}
         />
-      </summary>
-      <div className="pb-5">
-        <p className="text-sm text-slate-600 leading-relaxed">{faq.a}</p>
-      </div>
-    </details>
+      </button>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="overflow-hidden"
+          >
+            <div className="pb-5">
+              <p className="text-sm text-slate-600 leading-relaxed">{faq.a}</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
 
@@ -451,20 +475,20 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
             <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
 
               {/* Aurora sweep — diagonal colour wash */}
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(186,230,252,0.55)_0%,rgba(248,254,255,0.2)_45%,rgba(224,242,254,0.6)_100%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(186,230,252,0.55)_0%,rgba(248,254,255,0.2)_45%,rgba(224,242,254,0.6)_100%)] will-change-transform transform-gpu" />
 
               {/* Soft blob — top left */}
-              <div className="absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-cyan-100/50 blur-[96px]" />
+              <div className="absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-cyan-100/50 blur-[96px] will-change-transform transform-gpu" />
               {/* Soft blob — bottom right */}
-              <div className="absolute -bottom-24 -right-20 h-[400px] w-[400px] rounded-full bg-sky-100/60 blur-[80px]" />
+              <div className="absolute -bottom-24 -right-20 h-[400px] w-[400px] rounded-full bg-sky-100/60 blur-[80px] will-change-transform transform-gpu" />
               {/* Soft blob — centre */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[320px] w-[600px] rounded-full bg-cyan-50/70 blur-[72px]" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[320px] w-[600px] rounded-full bg-cyan-50/70 blur-[72px] will-change-transform transform-gpu" />
 
               {/* Concentric ripple rings */}
               {[180, 300, 420, 540, 660, 780].map((r, i) => (
                 <div
                   key={r}
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full will-change-transform transform-gpu"
                   style={{
                     width: r * 2,
                     height: r * 2,

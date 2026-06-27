@@ -115,10 +115,10 @@ function RollingTextItem({ item }: { item: ListItem }) {
         <motion.div
           layout
           className={cn(
-            "relative shrink-0 rounded-3xl border border-cyan-100/80 bg-white p-3 shadow-lg overflow-hidden flex flex-col justify-center",
+            "relative shrink-0 rounded-2xl border border-cyan-100/80 bg-white shadow-md overflow-hidden flex flex-col transition-all duration-300",
             isActive
-              ? "w-full md:w-[280px] lg:w-[390px] h-auto gap-4"
-              : "w-52 md:w-80 h-20 md:h-24 gap-0"
+              ? "w-full md:w-[280px] lg:w-[390px] h-auto gap-4 p-4"
+              : "w-52 md:w-80 h-[38px] md:h-[44px] px-4 py-1 justify-center"
           )}
         >
           {/* Image Container */}
@@ -153,7 +153,7 @@ function RollingTextItem({ item }: { item: ListItem }) {
             <p
               className={cn(
                 "text-sm leading-relaxed transition-colors duration-500",
-                isActive ? "text-neutral-600 font-normal" : "text-neutral-500 line-clamp-3"
+                isActive ? "text-neutral-600 font-normal" : "text-neutral-500 line-clamp-1"
               )}
             >
               {item.description}
