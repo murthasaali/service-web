@@ -7,17 +7,6 @@ interface CapabilityItem {
   description: string;
 }
 
-const serviceColorMap: Record<string, ThemeColor> = {
-  "web-development": "blue",
-  "software-development": "indigo",
-  "mobile-app-development": "cyan",
-  "digital-marketing": "emerald",
-  "hosting-infrastructure": "orange",
-  automation: "yellow",
-  "customer-exp-management": "pink",
-  "it-consulting-it-services": "cyan",
-};
-
 const capabilityImages: string[] = [
   "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&auto=format&fit=crop&q=60",
   "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&auto=format&fit=crop&q=60",
@@ -35,14 +24,12 @@ const capabilityImages: string[] = [
 
 export default function CapabilitiesRollingSection({
   capabilities,
-  serviceSlug,
   heading = "What this service includes",
 }: {
   capabilities: CapabilityItem[];
-  serviceSlug: string;
   heading?: string;
 }) {
-  const color = serviceColorMap[serviceSlug] ?? "blue";
+  const color: ThemeColor = "cyan";
 
   const items = capabilities.map((cap, i) => ({
     id: i + 1,

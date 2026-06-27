@@ -269,7 +269,6 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
           {/* ── 3. Key Capabilities (Rolling List) ──────────────────────────── */}
           <CapabilitiesRollingSection
             capabilities={data.capabilities}
-            serviceSlug={data.parentSlug}
           />
 
           {/* ── 4. Common Use Cases ─────────────────────────────────────────── */}

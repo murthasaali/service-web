@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { iconMap, type IconKey } from "./ServicePageLayout";
@@ -18,10 +17,8 @@ export interface ServiceCard {
 
 function Card({
   card,
-  prefersReduced,
 }: {
   card: ServiceCard;
-  prefersReduced: boolean | null;
 }) {
   const Icon = card.iconKey ? iconMap[card.iconKey] : null;
 
@@ -97,7 +94,6 @@ function Card({
 }
 
 export default function ServiceCardsSection({ cards }: { cards: ServiceCard[] }) {
-  const prefersReduced = useReducedMotion();
   const [inSection, setInSection] = React.useState(false);
 
   return (
@@ -137,7 +133,7 @@ export default function ServiceCardsSection({ cards }: { cards: ServiceCard[] })
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((card) => (
-            <Card key={card.title} card={card} prefersReduced={prefersReduced} />
+            <Card key={card.title} card={card} />
           ))}
         </div>
       </div>
