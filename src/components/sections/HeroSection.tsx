@@ -25,25 +25,25 @@ import { TextReveal } from "@/components/ui/cascade-text";
 const socials = [
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://linkedin.com/company/aibizmod",
     icon: FaLinkedinIn,
     color: "#0A66C2",
   },
   {
     label: "Instagram",
-    href: "https://instagram.com",
+    href: "https://instagram.com/aibizmod",
     icon: FaInstagram,
     color: "#E4405F",
   },
   {
     label: "Pinterest",
-    href: "https://pinterest.com",
+    href: "https://pinterest.com/aibizmod",
     icon: FaPinterestP,
     color: "#E60023",
   },
   {
     label: "Facebook",
-    href: "https://facebook.com",
+    href: "https://facebook.com/aibizmod",
     icon: FaFacebookF,
     color: "#1877F2",
   },
@@ -55,7 +55,7 @@ const socials = [
   },
   {
     label: "Email",
-    href: "mailto:aibizmod@outlook.com",
+    href: "mailto:hello@aibizmod.com",
     icon: MdEmail,
     color: "#EA4335",
   },

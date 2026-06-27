@@ -1,7 +1,17 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import SmoothScroll from '@/components/providers/SmoothScroll';
+
+const generalSans = localFont({
+  src: [
+    { path: './fonts/GeneralSans-Semibold.woff2', weight: '600' },
+    { path: './fonts/GeneralSans-Bold.woff2', weight: '700' },
+  ],
+  variable: '--font-general-sans',
+  display: 'swap',
+});
 
 const entityGraph = {
   '@context': 'https://schema.org',
@@ -91,17 +101,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en' className={inter.variable}>
+		<html lang='en' className={`${inter.variable} ${generalSans.variable}`}>
 			<head>
 				<script
 					type='application/ld+json'
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(entityGraph) }}
-				/>
-				{/* General Sans — served via CDN. Swap to next/font/local + woff2 for production. */}
-				<link rel='preconnect' href='https://api.fontshare.com' />
-				<link
-					href='https://api.fontshare.com/v2/css?f[]=general-sans@600,700&display=swap'
-					rel='stylesheet'
 				/>
 			</head>
 			<body className='font-sans antialiased bg-canvas text-ink'>

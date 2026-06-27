@@ -2,6 +2,10 @@
 
 # dependencies
 /node_modules
+
+# documents
+*.docx
+*.csv
 /.pnp
 .pnp.js
 .yarn/install-state.gz

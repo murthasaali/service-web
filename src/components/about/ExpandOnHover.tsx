@@ -90,7 +90,7 @@ export default function ExpandOnHover() {
                   <p className="text-xs font-semibold mt-1" style={{ color: "#06B6D4" }}>{member.role}</p>
                   <p className="text-xs text-muted-foreground mt-3 leading-relaxed">{member.specialty}</p>
                   <a
-                    href="https://linkedin.com"
+                    href="https://linkedin.com/company/aibizmod"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${member.name} on LinkedIn`}

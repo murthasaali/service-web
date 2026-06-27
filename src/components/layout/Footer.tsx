@@ -1,7 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import { Phone, ArrowRight, LayoutGrid } from "lucide-react";
 import { StarButton } from "@/components/ui/star-button";
 import {
@@ -39,22 +37,22 @@ const legal = [
 const socials = [
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://linkedin.com/company/aibizmod",
     icon: FaLinkedinIn,
   },
   {
     label: "Instagram",
-    href: "https://instagram.com",
+    href: "https://instagram.com/aibizmod",
     icon: FaInstagram,
   },
   {
     label: "Pinterest",
-    href: "https://pinterest.com",
+    href: "https://pinterest.com/aibizmod",
     icon: FaPinterestP,
   },
   {
     label: "Facebook",
-    href: "https://facebook.com",
+    href: "https://facebook.com/aibizmod",
     icon: FaFacebookF,
   },
   {
@@ -64,25 +62,12 @@ const socials = [
   },
   {
     label: "Email",
-    href: "mailto:aibizmod@outlook.com",
+    href: "mailto:hello@aibizmod.com",
     icon: MdEmail,
   },
 ];
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setStatus("loading");
-    setTimeout(() => {
-      setStatus("success");
-      setEmail("");
-    }, 1000);
-  };
-
   return (
     <footer className="bg-navy text-white/70 transition-colors duration-300 w-full">
       {/* Start Today Section */}
@@ -157,10 +142,10 @@ export default function Footer() {
               <div className="flex items-center gap-2.5 text-[15px] text-white">
                 <MdEmail size={14} className="text-[#22D3EE] shrink-0" />
                 <a
-                  href="mailto:aibizmod@outlook.com"
+                  href="mailto:hello@aibizmod.com"
                   className="hover:text-[#22D3EE] transition-colors font-semibold"
                 >
-                  aibizmod@outlook.com
+                  hello@aibizmod.com
                 </a>
               </div>
             </div>
@@ -224,39 +209,8 @@ export default function Footer() {
           <div className="md:col-span-3 flex flex-col justify-between h-full space-y-6">
             <div>
               <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-4">Newsletter</h5>
-              <p className="font-sans text-[12px] text-white/50 mb-5 leading-relaxed">
-                Insights on digital growth and intelligent automation.
-              </p>
-              <form onSubmit={handleSubscribe} className="relative group">
-                <input
-                  type="email"
-                  required
-                  placeholder="Email Address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  disabled={status === "loading"}
-                  className="w-full bg-transparent border-b border-white/10 py-2.5 pr-8 text-[13px] text-white focus:outline-none focus:border-[#22D3EE] transition-all duration-300 placeholder:text-white/20 disabled:opacity-50"
-                />
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="absolute right-0 bottom-3 text-white/40 hover:text-[#22D3EE] transition-all duration-300 disabled:opacity-50 cursor-pointer"
-                  aria-label="Subscribe"
-                >
-                  <ArrowRight size={16} />
-                </button>
-              </form>
-              {status === "success" && (
-                <p className="text-[11px] text-emerald-400 mt-2">
-                  Thank you for subscribing!
-                </p>
-              )}
-              <p className="text-[10px] text-white/30 font-sans mt-3">
-                By subscribing, you agree to our{" "}
-                <Link href="/privacy" className="underline hover:text-[#22D3EE] transition-colors">
-                  Privacy Policy
-                </Link>
-                .
+              <p className="font-sans text-[12px] text-white/50 leading-relaxed">
+                Insights on digital growth and intelligent automation — coming soon.
               </p>
             </div>
 

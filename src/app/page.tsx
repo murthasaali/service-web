@@ -10,6 +10,7 @@ import HowWeWork from '@/components/sections/HowWeWork';
 import Testimonials from '@/components/sections/Testimonials';
 import FAQSection from '@/components/sections/FAQSection';
 import ClientsSection from '@/components/sections/ClientsSection';
+import LatestBlogsSection from '@/components/sections/LatestBlogsSection';
 
 export const metadata: Metadata = {
 	title: { absolute: 'aibizmod | Intelligent Tech Services' },
@@ -34,8 +35,9 @@ export default function Home() {
 					<ServicesGrid />
 					<WhyChooseUs />
 					<GlobalPresence />
-					<HowWeWork />
-					<Testimonials />
+				<HowWeWork />
+				<LatestBlogsSection />
+				<Testimonials />
 					<FAQSection />
 					<ClientsSection />
 				</main>

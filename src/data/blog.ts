@@ -49,9 +49,362 @@ export const categories = [
   "SEO",
   "GEO",
   "Website Strategy",
+  "AI & Automation",
 ] as const;
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "what-is-generative-engine-optimization-geo",
+    title: "What Is Generative Engine Optimization (GEO)?",
+    excerpt:
+      "AI-powered search is changing how businesses get discovered online. GEO is the practice of making your content citable by answer engines like ChatGPT, Perplexity, and Google AI Overviews.",
+    answerSummary:
+      "Generative Engine Optimization (GEO) is the practice of structuring web content so AI-powered answer engines can accurately understand, extract, and cite it. Unlike traditional SEO which optimises for ranked links, GEO focuses on factual specificity, structured data, verifiable claims, and clear answers that an AI system can reference directly in a generated response.",
+    keyTakeaways: [
+      "GEO prepares your content for AI answer engines — ChatGPT, Google AI Overviews, Perplexity, and Bing Copilot — that generate direct answers rather than link lists.",
+      "Vague marketing language ('scalable solutions', 'industry-leading') gives AI nothing citable. Specific facts, process descriptions, and named deliverables are far more extractable.",
+      "Adding Organisation, Service, and FAQPage structured data helps AI systems identify your business as a trusted entity.",
+      "GEO does not replace SEO. It raises the bar for content clarity — the same specificity that makes a page citable also makes it more useful to human readers.",
+    ],
+    definitions: [
+      {
+        term: "Generative Engine Optimisation (GEO)",
+        definition:
+          "The practice of structuring web content so AI-powered answer engines — such as ChatGPT, Google AI Overviews, Bing Copilot, and Perplexity — can accurately understand, summarise, and cite the page as a source in a generated response.",
+      },
+      {
+        term: "Answer engine",
+        definition:
+          "A search or information retrieval system that generates a direct natural-language answer to a query rather than returning a list of links. Examples include Google AI Overviews, Bing Copilot, Perplexity, and ChatGPT search mode.",
+      },
+    ],
+    category: "GEO",
+    image: "/blog/geo-explained.svg",
+    imageAlt: "A gradient background with the title 'What Is Generative Engine Optimization (GEO)?' overlaid.",
+    date: "June 27, 2026",
+    readTime: "7 min read",
+    author: blogAuthor,
+    relatedServices: [
+      { name: "Digital Marketing", href: "/services/digital-marketing" },
+    ],
+    sections: [
+      {
+        heading: "How AI answer engines are changing the way people find service providers",
+        paragraphs: [
+          "Traditional search engines return a list of blue links. AI answer engines — such as ChatGPT, Google AI Overviews, Perplexity, and Bing Copilot — generate a direct written response that synthesises information from multiple sources. For a service business, this changes the discovery process: a potential client may receive a paragraph about service providers without clicking through to any single website.",
+          "Generative Engine Optimisation, or GEO, is the work of making a business's expertise easy for these AI systems to understand, summarise, and cite. If a service page is well structured, fact-specific, and clearly attributed, an AI system is more likely to reference it as a source. If the page contains only generic marketing language, the AI system will draw from competitors who provide more extractable content.",
+        ],
+      },
+      {
+        heading: "What makes a page citable by an AI system",
+        paragraphs: [
+          "AI answer engines evaluate web content differently from traditional search engines. They prioritise pages that state specific facts directly, describe processes clearly, name tools and methodologies, and provide verifiable evidence. Pages that rely on aspirational language — 'we deliver world-class solutions' — rarely get cited because the AI cannot corroborate or meaningfully extract those claims.",
+          "A citable service page typically includes: a clear description of who the service is for, what the engagement process includes, which tools and platforms are used, what specific deliverables a client receives, and what outcomes a client can realistically expect. These details give an AI system concrete material to reference.",
+        ],
+        bullets: [
+          "State your audience and service clearly in the first paragraph.",
+          "Describe your process in specific, sequential steps.",
+          "Name the tools, platforms, and frameworks you use.",
+          "Include measurable outcomes or realistic timelines where available.",
+          "Avoid superlatives and unverifiable claims.",
+        ],
+      },
+      {
+        heading: "Structured data: helping AI systems identify your business as a trusted source",
+        paragraphs: [
+          "Structured data markup — using Schema.org vocabulary in JSON-LD format — helps AI systems identify your business entity, the services you offer, and the questions you answer. The most important schemas for GEO are Organisation, Service, and FAQPage. When these are present and accurate, an AI system can confidently attribute information to your business rather than treating it as anonymous web content.",
+          "Adding structured data does not guarantee citation, but its absence makes it harder for AI systems to distinguish your content from the thousands of similar service pages on the web.",
+        ],
+        citations: [
+          {
+            label: "Schema.org: Organisation",
+            url: "https://schema.org/Organization",
+          },
+          {
+            label: "Schema.org: Service",
+            url: "https://schema.org/Service",
+          },
+        ],
+      },
+      {
+        heading: "How to start a practical GEO improvement plan today",
+        paragraphs: [
+          "A GEO improvement plan starts with content hygiene: removing duplicate sections across similar pages, giving each service page a single clear purpose, and ensuring that important facts — pricing context, deliverables, process steps, geographic coverage — are easy to extract without reading the entire page.",
+          "The pages that benefit most from GEO work are those that answer the questions a buyer asks before contacting a supplier. If your website already contains those answers but buries them in lengthy paragraphs, the practical work is restructuring, not rewriting.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ai-agents-vs-traditional-automation",
+    title: "AI Agents vs Traditional Automation: Which Is Right for Your Business?",
+    excerpt:
+      "Both AI agents and traditional automation can save time and reduce costs — but they solve different problems. Understanding the difference helps you invest in the right approach.",
+    answerSummary:
+      "Traditional automation follows predefined rules — if X happens, do Y. AI agents use large language models to make decisions, adapt to new situations, and handle unstructured inputs like emails or conversations. Traditional automation is best for repetitive, predictable tasks with clear inputs and outputs. AI agents excel at tasks that require judgment, context understanding, and flexibility — such as responding to customer enquiries, sorting complex documents, or triaging support tickets.",
+    keyTakeaways: [
+      "Traditional automation (RPA, workflow tools, Zapier) executes fixed rules reliably — best for predictable, repetitive tasks with structured data.",
+      "AI agents use language models to interpret unstructured inputs, make decisions, and adapt — best for tasks requiring judgment and context.",
+      "The most effective approach combines both: traditional automation for the routine steps and AI agents for decisions that need human-like understanding.",
+      "Starting with a process audit — listing every repetitive task and classifying it as rules-driven or judgment-driven — prevents investing in the wrong solution.",
+    ],
+    definitions: [
+      {
+        term: "Traditional automation (RPA)",
+        definition:
+          "Rule-based software automation that follows predefined instructions to perform repetitive tasks. Robotic Process Automation (RPA) tools like UiPath, Automation Anywhere, and Microsoft Power Automate execute structured workflows such as data entry, invoice processing, and report generation without deviation.",
+      },
+      {
+        term: "AI agent",
+        definition:
+          "An AI-powered system that uses large language models (LLMs) to interpret unstructured inputs, make contextual decisions, and take action. Unlike rule-based automation, AI agents can handle variations in language, ambiguous requests, and tasks that require understanding rather than pattern matching.",
+      },
+    ],
+    category: "AI & Automation",
+    image: "/blog/ai-agents-vs-automation.svg",
+    imageAlt: "A gradient background with the title 'AI Agents vs Traditional Automation' overlaid.",
+    date: "June 27, 2026",
+    readTime: "8 min read",
+    author: blogAuthor,
+    relatedServices: [
+      { name: "AI Automation", href: "/services/automation" },
+      { name: "Software Development", href: "/services/software-development" },
+    ],
+    sections: [
+      {
+        heading: "The fundamental difference: rules versus judgment",
+        paragraphs: [
+          "Traditional automation tools — Robotic Process Automation (RPA), workflow engines like n8n and Make, and integration platforms like Zapier — operate on fixed rules. When an invoice arrives as a CSV file, the system extracts column A, maps it to field B, and enters it into the accounting software. The process never varies because the inputs are predictable.",
+          "AI agents work differently. They use large language models to interpret what a piece of content means, not just what it says. An AI agent can read a customer email that says 'I need to update my billing address and also I think I was overcharged last month' — and decide that this requires two actions: an account update and a billing review. A traditional automation tool cannot make that judgment call.",
+        ],
+      },
+      {
+        heading: "When to use traditional automation",
+        paragraphs: [
+          "Traditional automation is the right choice when a task meets three criteria: the inputs are structured or predictable, the rules can be defined in advance, and the output is the same every time. Common examples include data entry between systems, invoice matching against purchase orders, scheduled report generation, and form-triggered email responses.",
+          "The advantage of traditional automation is reliability. A well-configured workflow will run the same way thousands of times without error. The disadvantage is brittleness: if the input format changes, the automation breaks until a human updates the rules.",
+        ],
+        bullets: [
+          "Invoice processing from structured formats (CSV, XML, EDI).",
+          "Data synchronisation between CRM, ERP, and accounting platforms.",
+          "Scheduled report generation and distribution.",
+          "Employee onboarding workflows (account creation, permissions, document collection).",
+        ],
+      },
+      {
+        heading: "When to use AI agents",
+        paragraphs: [
+          "AI agents are valuable when tasks involve unstructured inputs, require understanding context, or need adaptation to new situations. Common applications include processing customer enquiries from email and chat, classifying and routing support tickets, extracting information from scanned documents and PDFs, and generating personalised responses at scale.",
+          "The advantage of AI agents is flexibility. They handle variations in language, incomplete information, and edge cases without manual reprogramming. The disadvantage is that they can produce unexpected outputs — AI agents need guardrails, human review for high-stakes decisions, and continuous monitoring.",
+        ],
+        bullets: [
+          "Sorting and responding to customer emails and messages.",
+          "Extracting data from unstructured documents (contracts, invoices, PDFs).",
+          "Triaging and routing support tickets by urgency and topic.",
+          "Generating personalised sales follow-ups based on conversation history.",
+        ],
+      },
+      {
+        heading: "How to decide which approach fits your business",
+        paragraphs: [
+          "The decision between traditional automation and AI agents depends on the nature of the task, not the popularity of the technology. A practical approach is to audit your team's repetitive work and classify each task: is it rule-driven or judgment-driven?",
+          "Rule-driven tasks — where the decision path can be drawn as a flowchart — are candidates for traditional automation. Judgment-driven tasks — where a human currently reads, interprets, and decides — are candidates for AI agents. Many real-world processes combine both: an AI agent reads and classifies an incoming enquiry, then a traditional workflow routes it to the correct team and triggers a response.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-ai-automation-saves-businesses-time-and-money",
+    title: "How AI Automation Saves Businesses Time and Money",
+    excerpt:
+      "Real numbers and practical strategies for reducing operational costs with AI-powered automation — without replacing your entire team.",
+    answerSummary:
+      "AI automation reduces operational costs by handling repetitive tasks that consume team hours — email processing, data entry, document extraction, customer triage, and report generation. Businesses typically recover the cost of implementation within three to six months and free 15–30 hours per week per automated workflow. The most effective approach targets specific high-volume, low-judgment tasks rather than attempting wholesale process replacement.",
+    keyTakeaways: [
+      "Businesses typically save 15–30 hours per week per automated workflow — with cost recovery within 3–6 months of implementation.",
+      "The highest-impact targets are high-volume, low-judgment tasks: invoice processing, email triage, data entry, and report generation.",
+      "AI automation handles unstructured inputs (emails, PDFs, conversations) that traditional RPA cannot process without manual prep.",
+      "Starting with a process audit prevents the most common mistake: automating a process that should be redesigned or eliminated instead.",
+    ],
+    definitions: [
+      {
+        term: "AI automation",
+        definition:
+          "The use of artificial intelligence — particularly large language models and machine learning — to automate tasks that require understanding, judgment, or adaptation. Unlike traditional rule-based automation, AI automation can handle unstructured inputs such as emails, documents, and conversations.",
+      },
+      {
+        term: "Process audit",
+        definition:
+          "A systematic review of business operations to identify repetitive tasks, measure the time they consume, classify them as rule-driven or judgment-driven, and prioritise automation candidates by impact and feasibility.",
+      },
+    ],
+    category: "AI & Automation",
+    image: "/blog/ai-automation-saves-time.svg",
+    imageAlt: "A gradient background with the title 'How AI Automation Saves Businesses Time and Money' overlaid.",
+    date: "June 27, 2026",
+    readTime: "7 min read",
+    author: blogAuthor,
+    relatedServices: [
+      { name: "AI Automation", href: "/services/automation" },
+    ],
+    sections: [
+      {
+        heading: "Where AI automation delivers the fastest return",
+        paragraphs: [
+          "The fastest returns from AI automation come from replacing manual processing of unstructured information. When a business receives hundreds of emails, invoices, or support tickets per week, a significant portion of team time is spent reading, classifying, and entering information into systems. AI automation can handle the classification and entry steps, leaving the team to focus on responses that require human judgment.",
+          "A typical implementation for a mid-sized business might process 200–500 invoices per week, extracting line items, matching against purchase orders, and entering data into the accounting system. Before automation, this consumes 15–25 hours of finance team time. After automation, the team reviews exceptions only, reducing the time to 2–4 hours.",
+        ],
+      },
+      {
+        heading: "Cost savings: what the numbers look like",
+        paragraphs: [
+          "The cost of implementing AI automation varies by scope, but a focused workflow automation project typically costs between a few thousand and twenty thousand pounds, depending on complexity. The return calculation is straightforward: if a process consumes 20 hours per week of a team member's time at an effective hourly cost of 25 per hour including overhead, the annual cost is approximately 26,000. Automation that reduces this by 80 per cent saves roughly 20,000 per year per workflow.",
+          "Most businesses recover their automation investment within three to six months. The ongoing cost is maintenance and monitoring — typically a fraction of the initial implementation — plus the cost of AI API usage, which ranges from a few pence to a few pounds per thousand transactions depending on the provider and model.",
+        ],
+        citations: [
+          {
+            label: "McKinsey: The state of AI in 2023",
+            url: "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+          },
+        ],
+      },
+      {
+        heading: "Five high-impact processes to automate first",
+        paragraphs: [
+          "The most successful automation projects target specific bottlenecks rather than attempting to redesign entire departments. These five processes consistently deliver strong returns across service businesses:",
+        ],
+        bullets: [
+          "Invoice and receipt processing — extract, match, and enter data from supplier invoices and expense receipts.",
+          "Customer enquiry triage — read incoming emails and messages, classify by topic and urgency, and route or draft a response.",
+          "Data entry and synchronisation — transfer information between CRM, ERP, marketing platforms, and spreadsheets.",
+          "Report generation — pull data from multiple sources, format into standard reports, and distribute on schedule.",
+          "Employee onboarding — create accounts, assign permissions, distribute documentation, and notify relevant teams.",
+        ],
+      },
+      {
+        heading: "How to start without overinvesting",
+        paragraphs: [
+          "The recommended approach is to run a process audit before purchasing any automation platform. List every task that consumes more than two hours of team time per week, measure the current time cost, classify each as rule-driven or judgment-driven, and estimate the complexity of automation.",
+          "Start with one high-impact, low-complexity process. Implement it, measure the time saved, and use that result to build the business case for the next process. This incremental approach avoids the common failure mode of attempting a large-scale automation programme that stalls before delivering measurable value.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "website-redesign-checklist-2026",
+    title: "Website Redesign Checklist for 2026",
+    excerpt:
+      "A practical 15-point checklist covering content, SEO, performance, mobile, accessibility, and analytics — everything to review before launching a redesigned site.",
+    answerSummary:
+      "A website redesign in 2026 should verify content clarity, technical SEO fundamentals, page speed (LCP under 2.5 seconds), mobile navigation, accessibility compliance (WCAG 2.1 AA), analytics tracking, structured data, and redirect mapping for all changed URLs. The highest-impact pre-launch checks are: testing the primary conversion path on mobile, verifying all old URLs redirect correctly, and confirming analytics events fire on every key action.",
+    keyTakeaways: [
+      "Test the primary conversion path on mobile before anything else — if a visitor cannot contact you from a phone, the redesign has failed.",
+      "Map every old URL to its new equivalent using 301 redirects — broken backlinks and lost indexed pages can undo months of SEO progress.",
+      "Verify Core Web Vitals pass — LCP under 2.5 seconds, FID under 100ms, CLS under 0.1 — before launch, not after.",
+      "Confirm analytics events fire correctly on all key actions: form submissions, button clicks, phone number taps, and external link clicks.",
+    ],
+    definitions: [
+      {
+        term: "301 redirect",
+        definition:
+          "A permanent HTTP redirect that tells search engines a page has moved to a new URL. Proper redirect mapping preserves search rankings and ensures users and bots reach the correct page after a site migration.",
+      },
+      {
+        term: "Core Web Vitals",
+        definition:
+          "A set of real-world performance metrics that Google uses as ranking signals: Largest Contentful Paint (LCP — loading speed), First Input Delay (FID — interactivity), and Cumulative Layout Shift (CLS — visual stability). Passing Core Web Vitals is a requirement for good search performance.",
+      },
+    ],
+    category: "Website Strategy",
+    image: "/blog/website-redesign-checklist.svg",
+    imageAlt: "A gradient background with the title 'Website Redesign Checklist for 2026' overlaid.",
+    date: "June 27, 2026",
+    readTime: "8 min read",
+    author: blogAuthor,
+    relatedServices: [
+      { name: "Web Development", href: "/services/web-development" },
+      { name: "Digital Marketing", href: "/services/digital-marketing" },
+    ],
+    sections: [
+      {
+        heading: "Why most redesigns lose traffic — and how to prevent it",
+        paragraphs: [
+          "A website redesign is one of the riskiest projects a business can undertake from an SEO perspective. When a site changes structure, URLs, content, and design simultaneously, search engines effectively see a new website that needs to rebuild trust from scratch. The most common outcome is a traffic drop that takes three to six months to recover.",
+          "The way to prevent this is to treat the redesign as a migration. Every old URL needs a 301 redirect to its new equivalent. Every page that previously ranked needs its content preserved or improved. Every analytics event needs re-verification. The checklist below covers the critical checks that prevent post-launch traffic loss.",
+        ],
+      },
+      {
+        heading: "1. Content and conversion path",
+        paragraphs: [
+          "Before launch, verify that every page answers a clear question for a specific audience. Remove vague placeholder text, ensure calls-to-action are visible without scrolling on mobile, and test the complete contact or enquiry flow on a real phone.",
+        ],
+        bullets: [
+          "Each page has a clear, specific purpose — no generic filler content.",
+          "The primary call-to-action is visible above the fold on mobile and desktop.",
+          "Contact forms submit correctly and trigger the expected email or CRM notification.",
+          "Phone numbers are tappable on mobile devices.",
+          "Proof points — testimonials, case studies, client logos — are present and verifiable.",
+        ],
+      },
+      {
+        heading: "2. Technical SEO and redirects",
+        paragraphs: [
+          "Technical errors during a redesign can undo years of accumulated search equity. The most critical technical check is the redirect map — every old URL must either redirect to its new equivalent or return a proper 410 (gone) if the page genuinely no longer exists.",
+        ],
+        bullets: [
+          "Every old URL is mapped to a 301 redirect — no broken backlinks or lost indexed pages.",
+          "Canonical tags are self-referencing and consistent across all pages.",
+          "XML sitemap is generated and submitted to Google Search Console.",
+          "Robots.txt allows crawling of all public pages and blocks staging or duplicate environments.",
+          "Noindex tags are removed from production pages (common staging-to-production mistake).",
+        ],
+      },
+      {
+        heading: "3. Performance and Core Web Vitals",
+        paragraphs: [
+          "Page speed is a ranking factor and a conversion factor. Run Lighthouse tests on every template type — homepage, service page, blog post, contact page — and verify that all three Core Web Vitals pass before launch.",
+        ],
+        bullets: [
+          "LCP (Largest Contentful Paint) under 2.5 seconds.",
+          "FID (First Input Delay) under 100 milliseconds.",
+          "CLS (Cumulative Layout Shift) under 0.1.",
+          "Images are properly sized and use next-gen formats (WebP, AVIF).",
+          "Fonts are self-hosted — no render-blocking third-party font requests.",
+        ],
+        citations: [
+          {
+            label: "web.dev: Core Web Vitals",
+            url: "https://web.dev/vitals/",
+          },
+        ],
+      },
+      {
+        heading: "4. Mobile and accessibility",
+        paragraphs: [
+          "More than half of B2B enquiries now start on a mobile device. If the mobile experience is incomplete — overlapping elements, hard-to-tap buttons, missing content — the redesign will underperform regardless of how good the desktop version looks.",
+        ],
+        bullets: [
+          "All interactive elements are tappable with a finger — no targets smaller than 48x48px.",
+          "Text is readable without zooming — minimum 16px font size on body copy.",
+          "Forms are usable on a phone screen — fields are not cut off, dropdowns work, submit buttons are reachable.",
+          "Colour contrast meets WCAG 2.1 AA standards (4.5:1 for normal text).",
+          "Keyboard navigation works for all interactive elements.",
+        ],
+      },
+      {
+        heading: "5. Analytics and tracking",
+        paragraphs: [
+          "Launching a redesigned site without confirmed analytics is like flying without instruments. Verify that all tracking fires correctly before making the site live.",
+        ],
+        bullets: [
+          "Google Analytics 4 (GA4) is installed and receiving data.",
+          "Conversion events are configured and test-fired: form submissions, button clicks, phone calls, email clicks.",
+          "E-commerce or goal tracking is mapped to the new page structure.",
+          "Google Tag Manager (if used) has been republished for the new site.",
+        ],
+      },
+    ],
+  },
   {
     slug: "buying-aibizmod-domain-first-week",
     title: "What Buying the aibizmod Domain Taught Us About Starting Properly",
