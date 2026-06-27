@@ -235,7 +235,7 @@ export default function Navbar() {
         transition={springTransition}
         className={`pointer-events-auto flex items-center justify-between border transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 rounded-full ${
           scrolled
-            ? "mt-4 w-[92%] md:w-fit bg-slate-950/75 border-cyan-400/30 shadow-[0_8px_32px_rgba(6,182,212,0.18)] backdrop-blur-md px-6 py-2 gap-6"
+            ? "mt-4 w-[92%] md:w-fit h-[52px] bg-slate-950/75 border-cyan-400/30 shadow-[0_8px_32px_rgba(6,182,212,0.18)] backdrop-blur-md px-6 gap-6"
             : "w-full max-w-7xl px-6 h-[68px] gap-8 border-transparent shadow-none"
         }`}
         aria-label="Main navigation"
@@ -539,7 +539,8 @@ export default function Navbar() {
               animate={{ opacity: 1, width: "auto" }}
               exit={{ opacity: 0, width: 0, transition: { duration: 0.2 } }}
               transition={springTransition}
-              className="hidden md:flex items-center gap-3 shrink-0 relative"
+              className="hidden md:flex items-center gap-3 shrink-0 relative flex-nowrap whitespace-nowrap"
+              style={{ overflow: scrolled ? "hidden" : "visible" }}
             >
               <Link href="/contact" className="btn-primary py-[8px] px-5 text-[13px] rounded-full">
                 Let&rsquo;s Connect

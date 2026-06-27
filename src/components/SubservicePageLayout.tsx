@@ -20,7 +20,178 @@ import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
 import { type IconKey } from "@/components/ServicePageLayout";
 import ProblemSolutionCard from "@/components/ui/ProblemSolutionCard";
 import CapabilitiesRollingSection from "@/components/ui/capabilities-rolling-section";
-import { IconHover3D } from "@/components/ui/icon-3d-hover";
+// import { UseCaseCard3D } from "@/components/ui/use-case-card-3d"; // ← card-grid style (kept for reference)
+import { FocusRail, type FocusRailItem } from "@/components/ui/focus-rail";
+import { MorphingCardStack } from "@/components/ui/morphing-card-stack";
+import { BarChart3, ShieldCheck, Zap, Heart, Globe } from "lucide-react";
+
+const BENEFIT_ICONS = [
+  <Sparkles key="1" className="h-5 w-5" />,
+  <BarChart3 key="2" className="h-5 w-5" />,
+  <Zap key="3" className="h-5 w-5" />,
+  <ShieldCheck key="4" className="h-5 w-5" />,
+  <Heart key="5" className="h-5 w-5" />,
+  <Globe key="6" className="h-5 w-5" />,
+];
+
+// ─── Industry → Unsplash image mapping ───────────────────────────────────────
+// Supports strings or arrays of strings to allow alternatives when keys repeat.
+// All photos: landscape, w=900×h=560 (≈16:10) to match the FocusRail card ratio.
+const U = (id: string) =>
+  `https://images.unsplash.com/photo-${id}?w=900&h=560&q=85&fit=crop&auto=format`;
+
+const INDUSTRY_IMAGE_MAP: Record<string, string | string[]> = {
+  // Retail — boutique interiors & product shelves
+  retail: [
+    U('1441986300917-64674bd600d8'), // Elegant boutique interior
+    U('1555529669-e69e7aa0ba9a'), // Product shelves
+  ],
+  // Finance — stock charts & financial analytics desks
+  finance: [
+    U('1611974789855-9c2a0a7236a3'), // Stock trading screens
+    U('1590283603385-17ffb3a7f29f'), // Financial data papers
+    U('1559526324-4b87b5e36e44'), // Financial planning charts
+  ],
+  // Financial Services — consulting & analytical reviews
+  'financial services': [
+    U('1554224155-6726b3ff858f'), // Financial docs review
+    U('1454165804606-c3d57bc86b40'), // Strategic analysis
+  ],
+  // Sales — team presentations and analytics reviews
+  sales: [
+    U('1519389950473-47ba0277781c'), // Team meeting presentation
+    U('1554224155-6726b3ff858f'), // Sales review
+  ],
+  // Healthcare — clinical settings & medical teams
+  healthcare: [
+    U('1579684385127-1ef15d508118'), // Surgical team
+    U('1576091160550-2173dba999ef'), // Doctor with tablet
+  ],
+  // Healthcare Tech — digital medicine & diagnostics
+  'healthcare tech': [
+    U('1576091160550-2173dba999ef'), // Doctor using digital tablet
+    U('1579684385127-1ef15d508118'), // Surgical team
+  ],
+  // Fitness — gym spaces
+  fitness: [
+    U('1571019614242-c5c5dee9f50b'), // Barbell lift
+    U('1517838277536-f5f99be501cd'), // Fitness group training
+  ],
+  // E-commerce — packages, checkouts, and shipping boxes
+  'e commerce': [
+    U('1563013544-824ae1b704d3'), // Parcel unboxing
+    U('1556742049-0cfed4f6a45d'), // Mobile payments card terminal
+  ],
+  // Manufacturing — assembly & fabrication lines
+  manufacturing: [
+    U('1581091226825-a6a2a5aee158'), // Industrial robot arm
+    U('1581092160607-ee22621dd758'), // Factory floor engineers
+  ],
+  // Logistics — container ships & freight warehouses
+  logistics: [
+    U('1578575437130-527eed3abbec'), // Cargo vessel
+    U('1586528116311-ad8dd3c8310d'), // Inventory warehouse
+  ],
+  // SaaS — user portals & analytical platforms
+  saas: [
+    U('1551288049-bebda4e38f71'), // Analytics software screen
+    U('1507238691740-187a5b1d37b8'), // Web developer desk
+  ],
+  // Professional Services — business strategy & management
+  'professional services': [
+    U('1460925895917-afdab827c52f'), // Consultant showing dashboard
+    U('1454165804606-c3d57bc86b40'), // Business analytics charts
+  ],
+  // Subscription — media streams & digital hubs
+  subscription: [
+    U('1522869635100-9f4c5e86aa37'), // Streaming on TV screen
+    U('1507238691740-187a5b1d37b8'), // Web developer desk
+  ],
+  // Content — podcasts & creative design desks
+  content: [
+    U('1478737270239-2f02b77fc618'), // Podcast desk microphones
+    U('1499750310107-5fef28a66643'), // Workspace notebook
+  ],
+  // Customer Support — smiling support workers
+  'customer support': [
+    U('1516321318423-f06f85e504b3'), // Headset service desk
+    U('1522071820081-009f0129c71c'), // Team collaborating
+  ],
+  // Legal — scales & courtroom designs
+  legal: [
+    U('1589829545856-d10d557cf95f'), // Scales of justice desk
+    U('1505664194779-8beaceb93744'), // Courtroom chambers
+  ],
+  // Legal Tech — digitised document signings
+  'legal tech': [
+    U('1450101499163-c8848c66ca85'), // Tablet stylus contract signing
+    U('1522071820081-009f0129c71c'), // Team collaborating
+  ],
+  // HR — interviews & document gathering
+  hr: [
+    U('1573497019940-1c28c88b4f3e'), // Sunlit job interview room
+    U('1522071820081-009f0129c71c'), // Team onboarding desk
+  ],
+  // Internal Operations — project workflows
+  'internal operations': [
+    U('1504307651254-35680f356dfd'), // Whiteboard timeline
+    U('1517245386807-bb43f82c33c4'), // Active team meeting
+  ],
+  // Operations — operations desks
+  operations: [
+    U('1542744173-8e7e53415bb0'), // Busy operations floor
+    U('1517245386807-bb43f82c33c4'), // Active team meeting
+  ],
+  // Hospitality — pool scenes & lobbies
+  hospitality: [
+    U('1566073771259-6a8506099945'), // Hotel infinity pool
+    U('1520250497591-112f2f40a3f4'), // Boutique hotel suite
+  ],
+  // Food & Beverage — fine dining & counters
+  'food and beverage': [
+    U('1414235077428-338989a2e8c0'), // Restaurant dining tables
+    U('1517248135467-4c7edcad34c4'), // Café/bistro counter
+  ],
+  // EdTech — learning spaces & online portals
+  edtech: [
+    U('1524178232363-1fb2b075b655'), // Laptops in study room
+    U('1516321318423-f06f85e504b3'), // E-learning dashboard
+  ],
+  // Property — architecture & deals
+  property: [
+    U('1486406146926-c627a92ad1ab'), // Glass home golden hour
+    U('1560518883-ce09059eeffa'), // Commercial building exterior
+  ],
+};
+
+const FALLBACK_IMAGES = [
+  U('1522202176988-66273c2fd55f'), // People collaborating
+  U('1498050108023-c5249f4df085'), // Code workspace
+  U('1531403009284-440f080d1e12'), // Active product design board
+];
+
+function normalizeKey(str: string): string {
+  return str.toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
+function useCaseToRailItem(uc: SubserviceUseCase, i: number): FocusRailItem {
+  const key = normalizeKey(uc.industry ?? '');
+  const mapVal = INDUSTRY_IMAGE_MAP[key] ?? FALLBACK_IMAGES;
+  
+  let imageSrc = '';
+  if (Array.isArray(mapVal)) {
+    // Select image based on index to prevent repetition if the same industry appears multiple times
+    imageSrc = mapVal[i % mapVal.length];
+  } else {
+    imageSrc = mapVal;
+  }
+
+  return { id: i, title: uc.title, description: uc.description, imageSrc, meta: uc.industry };
+}
 
 // ─── Data types ───────────────────────────────────────────────────────────────
 
@@ -273,30 +444,80 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
 
           {/* ── 4. Common Use Cases ─────────────────────────────────────────── */}
           <section
-            className="relative overflow-hidden px-6 py-24 bg-[#F8FEFF]"
-            style={{ borderTop: "1px solid rgba(0,0,0,0.06)", borderBottom: "1px solid rgba(0,0,0,0.06)" }}
+            className="relative overflow-hidden bg-[#F3FBFF]"
+            style={{ borderTop: "1px solid rgba(8,145,178,0.10)", borderBottom: "1px solid rgba(8,145,178,0.10)" }}
           >
-            <div
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_85%,rgba(210,247,255,0.5),transparent_32%)]"
-              aria-hidden="true"
-            />
-            <div className="relative max-w-7xl mx-auto">
-              <AnimatedSection className="text-center mb-14">
-                <SectionHeading eyebrow="Use Cases" heading="How businesses use this" centered />
-              </AnimatedSection>
+            {/* ── Unique background: concentric ripple rings + diamond accents ── */}
+            <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {data.useCases.map((uc, i) => (
-                  <AnimatedSection key={uc.title} delay={i * 0.07} className="h-full flex flex-col">
-                    <IconHover3D
-                      heading={uc.title}
-                      text={uc.description}
-                      badge={uc.industry}
-                      className="h-full"
-                    />
-                  </AnimatedSection>
-                ))}
+              {/* Aurora sweep — diagonal colour wash */}
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(186,230,252,0.55)_0%,rgba(248,254,255,0.2)_45%,rgba(224,242,254,0.6)_100%)]" />
+
+              {/* Soft blob — top left */}
+              <div className="absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-cyan-100/50 blur-[96px]" />
+              {/* Soft blob — bottom right */}
+              <div className="absolute -bottom-24 -right-20 h-[400px] w-[400px] rounded-full bg-sky-100/60 blur-[80px]" />
+              {/* Soft blob — centre */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[320px] w-[600px] rounded-full bg-cyan-50/70 blur-[72px]" />
+
+              {/* Concentric ripple rings */}
+              {[180, 300, 420, 540, 660, 780].map((r, i) => (
+                <div
+                  key={r}
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+                  style={{
+                    width: r * 2,
+                    height: r * 2,
+                    border: `1px solid rgba(8,145,178,${0.14 - i * 0.018})`,
+                    opacity: 1 - i * 0.1,
+                  }}
+                />
+              ))}
+
+              {/* Scattered diamond accents */}
+              {[
+                { top: "8%",  left: "6%",  size: 10, opacity: 0.18 },
+                { top: "18%", left: "88%", size: 8,  opacity: 0.14 },
+                { top: "72%", left: "4%",  size: 12, opacity: 0.12 },
+                { top: "80%", left: "82%", size: 9,  opacity: 0.16 },
+                { top: "42%", left: "2%",  size: 7,  opacity: 0.10 },
+                { top: "55%", left: "94%", size: 11, opacity: 0.13 },
+                { top: "28%", left: "48%", size: 6,  opacity: 0.08 },
+                { top: "64%", left: "56%", size: 8,  opacity: 0.09 },
+              ].map(({ top, left, size, opacity }, i) => (
+                <div
+                  key={i}
+                  className="absolute bg-cyan-400 rotate-45"
+                  style={{ top, left, width: size, height: size, opacity, borderRadius: 2 }}
+                />
+              ))}
+
+              {/* Thin diagonal rule lines */}
+              <div
+                className="absolute inset-0 opacity-[0.04]"
+                style={{
+                  backgroundImage: "repeating-linear-gradient(135deg, rgba(8,145,178,1) 0px, rgba(8,145,178,1) 1px, transparent 1px, transparent 60px)",
+                }}
+              />
+            </div>
+
+            {/* Section content */}
+            <div className="relative z-10 pt-20 pb-4">
+              <div className="px-6">
+                <AnimatedSection className="text-center mb-10">
+                  <SectionHeading eyebrow="Use Cases" heading="How businesses use this" centered />
+                  <p className="mt-4 text-[15px] leading-relaxed text-slate-500 max-w-xl mx-auto">
+                    Real-world applications across industries — drag or click the cards to explore.
+                  </p>
+                </AnimatedSection>
               </div>
+
+              <FocusRail
+                items={data.useCases.map(useCaseToRailItem)}
+                loop={true}
+                autoPlay={false}
+                noBg={true}
+              />
             </div>
           </section>
 
@@ -319,31 +540,16 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
                 <SectionHeading eyebrow="Why It Matters" heading="Business outcomes you can expect" centered />
               </AnimatedSection>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {data.benefits.map((benefit, i) => (
-                  <AnimatedSection key={benefit.title} delay={i * 0.06}>
-                    <div className="flex h-full flex-col rounded-[24px] border border-cyan-100/80 bg-white/80 p-6 shadow-[0_18px_55px_rgba(59,130,246,0.09)] backdrop-blur-md">
-                      <div className="flex items-center gap-3 mb-3">
-                        <span
-                          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold text-cyan-700"
-                          style={{ background: "#ecfeff", border: "1px solid rgba(103,232,249,0.6)" }}
-                          aria-hidden="true"
-                        >
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        <h3
-                          className="font-display font-semibold text-[#0F172A]"
-                          style={{ fontSize: 16 }}
-                        >
-                          {benefit.title}
-                        </h3>
-                      </div>
-                      <p className="text-sm text-slate-600 leading-relaxed">
-                        {benefit.description}
-                      </p>
-                    </div>
-                  </AnimatedSection>
-                ))}
+              <div className="mt-12 w-full">
+                <MorphingCardStack
+                  cards={data.benefits.map((benefit, i) => ({
+                    id: String(i),
+                    title: benefit.title,
+                    description: benefit.description,
+                    icon: BENEFIT_ICONS[i % BENEFIT_ICONS.length],
+                  }))}
+                  defaultLayout="stack"
+                />
               </div>
             </div>
           </section>
