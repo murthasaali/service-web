@@ -41,7 +41,6 @@ export function MorphingCardStack({
   const [expandedCard, setExpandedCard] = useState<string | null>(null)
   const [activeIndex, setActiveIndex] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
-  const [dragOffset, setDragOffset] = useState<number>(0)
   const [swipeSource, setSwipeSource] = useState<"drag" | "click">("click")
   
   // Track concurrent swiped cards by ID to allow multiple cards to animate simultaneously
@@ -78,17 +77,13 @@ export function MorphingCardStack({
     const swipe = Math.abs(offset.x) * velocity.x
 
     if (offset.x < -SWIPE_THRESHOLD || swipe < -1000) {
-      setDragOffset(offset.x)
       recordSwipe(activeIndex, "left", "drag")
       setExpandedCard(null) // Collapse active card on swipe
       setActiveIndex((prev) => (prev + 1) % cards.length)
     } else if (offset.x > SWIPE_THRESHOLD || swipe > 1000) {
-      setDragOffset(offset.x)
       recordSwipe(activeIndex, "right", "drag")
       setExpandedCard(null) // Collapse active card on swipe
       setActiveIndex((prev) => (prev - 1 + cards.length) % cards.length)
-    } else {
-      setDragOffset(0)
     }
     setIsDragging(false)
   }
@@ -267,7 +262,6 @@ export function MorphingCardStack({
                     if (isDragging) return
                     if (layout === "stack" && !isTopCard) {
                       // Click cards behind to cycle forward
-                      setDragOffset(0)
                       recordSwipe(activeIndex, "left", "click")
                       setExpandedCard(null) // Collapse active card on cycle
                       setActiveIndex((prev) => (prev + 1) % cards.length)
@@ -335,7 +329,6 @@ export function MorphingCardStack({
             <button
               key={index}
               onClick={() => {
-                setDragOffset(0)
                 setExpandedCard(null) // Collapse active card on dot jump
                 // Record swipe cascade for all skipped cards to allow beautiful waterfalls
                 if (index > activeIndex) {
