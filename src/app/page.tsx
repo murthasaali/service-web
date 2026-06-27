@@ -9,6 +9,7 @@ import GlobalPresence from '@/components/sections/GlobalPresence';
 import HowWeWork from '@/components/sections/HowWeWork';
 import Testimonials from '@/components/sections/Testimonials';
 import FAQSection from '@/components/sections/FAQSection';
+import ClientsSection from '@/components/sections/ClientsSection';
 
 export const metadata: Metadata = {
 	title: { absolute: 'aibizmod | Intelligent Tech Services' },
@@ -36,6 +37,7 @@ export default function Home() {
 					<HowWeWork />
 					<Testimonials />
 					<FAQSection />
+					<ClientsSection />
 				</main>
 			</StickyFooterLayout>
 		</>

@@ -49,7 +49,7 @@ const socials = [
   },
   {
     label: "WhatsApp",
-    href: "https://wa.me/",
+    href: "https://wa.me/442079460958",
     icon: FaWhatsapp,
     color: "#25D366",
   },

@@ -1,43 +1,38 @@
 "use client";
 
-import { Star } from "lucide-react";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import { CardStack } from "@/components/ui/card-stack";
 
 const testimonials = [
   {
     quote:
-      "aibizmod built our platform in under three months. The quality was better than we expected, and the team stayed responsive throughout.",
-    name: "Sarah M.",
-    role: "CTO",
-    company: "FinVault",
-    initials: "SM",
+      "The team at aibizmod understood our vision from day one. They built a platform that streamlined our entire project management workflow, saving us countless hours and improving team collaboration across the board.",
+    title: "CEO",
+    company: "PMSpace",
+    logo: "/clients/pmspace.png",
   },
   {
     quote:
-      "Their automation work saved us over 200 hours a month. We saw the benefit in the first quarter, and it became one of our best technology investments.",
-    name: "James K.",
-    role: "Head of Operations",
-    company: "LogiFlow",
-    initials: "JK",
+      "aibizmod delivered beyond our expectations. Their lean approach to development meant we got a high-quality product in record time, and the ongoing support has been exceptional.",
+    title: "CEO",
+    company: "SpaceLean",
+    logo: "/clients/spacelean.png",
   },
   {
     quote:
-      "We have worked with other agencies, but aibizmod asked better business questions. They understood what we needed, not just the technology.",
-    name: "Priya R.",
-    role: "CEO",
-    company: "Nexora",
-    initials: "PR",
+      "aibizmod brought a level of professionalism and technical depth we had not seen before. Their team integrated seamlessly with ours and delivered a solution that actually scales.",
+    title: "CEO",
+    company: "Texas Tech Services",
+    logo: "/clients/texastech.svg",
   },
 ];
 
 const cardStackItems = testimonials.map((t, index) => ({
   id: index,
-  title: t.name,
+  title: t.title,
   quote: t.quote,
-  role: t.role,
   company: t.company,
-  initials: t.initials,
+  logo: t.logo,
 }));
 
 export default function Testimonials() {
@@ -76,61 +71,61 @@ export default function Testimonials() {
               pauseOnHover={true}
               showDots={true}
               cardWidth={560}
-              cardHeight={340}
+              cardHeight={380}
               renderCard={(item, { active }) => (
                 <div
-                  className={`card-royal h-full w-full p-6 md:p-8 flex flex-col justify-between transition-all duration-300 relative border ${
-                    active ? "border-cyan-500/40 bg-surface/90 shadow-[0_8px_30px_rgba(6,182,212,0.06)]" : "border-border/30 bg-surface/50 opacity-60"
+                  className={`card-royal h-full w-full p-6 md:p-8 flex flex-col justify-between transition-all duration-300 relative ${
+                    active
+                      ? "border-cyan-400/50 shadow-[0_0_25px_rgba(6,182,212,0.15),0_8px_30px_rgba(6,182,212,0.06)]"
+                      : "border-border/30 opacity-60"
                   }`}
                 >
                   <div>
-                    {/* 5-star rating */}
-                    <div className="flex gap-0.5 mb-4" aria-label="5 out of 5 stars">
-                      {Array.from({ length: 5 }).map((_, j) => (
-                        <Star
-                          key={j}
-                          size={13}
-                          className="text-yellow-400 fill-yellow-400"
-                          aria-hidden="true"
+                    {/* Highlighted decorative quote icon */}
+                    <div className="mb-3">
+                      <svg
+                        width="36"
+                        height="36"
+                        viewBox="0 0 36 36"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M14.25 16.5H8.25C8.25 12.75 10.5 10.5 14.25 9.75V12.75C12 13.5 11.25 15 11.25 16.5H14.25ZM14.25 24.75H8.25V21H14.25V24.75ZM24.75 16.5H18.75C18.75 12.75 21 10.5 24.75 9.75V12.75C22.5 13.5 21.75 15 21.75 16.5H24.75ZM24.75 24.75H18.75V21H24.75V24.75Z"
+                          fill="url(#quote-gradient)"
                         />
-                      ))}
+                        <defs>
+                          <linearGradient id="quote-gradient" x1="8.25" y1="9.75" x2="27.75" y2="24.75" gradientUnits="userSpaceOnUse">
+                            <stop stopColor="#06B6D4" />
+                            <stop offset="1" stopColor="#3B82F6" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
                     </div>
 
-                    {/* Decorative opening quote */}
-                    <p
-                      className="font-display leading-none text-royal/10 select-none -mt-1 mb-1"
-                      style={{ fontSize: 72 }}
-                      aria-hidden="true"
-                    >
-                      &ldquo;
-                    </p>
-
                     {/* Quote body */}
-                    <p className="text-muted-foreground leading-relaxed -mt-4 text-[14px] md:text-[15px]">
-                      {item.quote}
+                    <p className="text-muted-foreground leading-relaxed text-[14px] md:text-[15px]">
+                      &ldquo;{item.quote}&rdquo;
                     </p>
                   </div>
 
                   <div>
-                    {/* Divider */}
-                    <div className="border-t border-border my-5" />
+                    {/* Divider with cyan tint */}
+                    <div className="my-5 h-px bg-gradient-to-r from-cyan-400/40 via-cyan-400/10 to-transparent" />
 
                     {/* Author */}
                     <div className="flex items-center gap-3">
-                      <div
-                        className="w-10 h-10 rounded-full text-white text-sm font-bold flex items-center justify-center shrink-0"
-                        style={{
-                          background: "linear-gradient(120deg, #06B6D4, #3B82F6)",
-                        }}
-                        aria-hidden="true"
-                      >
-                        {item.initials}
+                      <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 border-2 border-cyan-400/30 bg-white flex items-center justify-center p-1">
+                        <img
+                          src={item.logo}
+                          alt={item.company}
+                          className="h-full w-full object-contain"
+                        />
                       </div>
                       <div>
-                        <p className="font-semibold text-ink text-sm">{item.title}</p>
-                        <p className="text-[12px] text-muted-foreground">
-                          {item.role} · {item.company}
-                        </p>
+                        <p className="font-semibold text-ink text-sm">{item.title}, {item.company}</p>
+                        <p className="text-[12px] text-cyan-600 font-medium">Client</p>
                       </div>
                     </div>
                   </div>

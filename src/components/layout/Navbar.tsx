@@ -542,7 +542,7 @@ export default function Navbar() {
               className="hidden md:flex items-center gap-3 shrink-0 relative"
             >
               <Link href="/contact" className="btn-primary py-[8px] px-5 text-[13px] rounded-full">
-                Get a Quote
+                Let&rsquo;s Connect
               </Link>
 
               {/* Country Selector Dropdown */}
@@ -778,7 +778,7 @@ export default function Navbar() {
                   className="btn-primary w-full rounded-full text-center"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Get a Quote
+                  Let&rsquo;s Connect
                 </Link>
 
                 {/* Mobile Country Selector */}

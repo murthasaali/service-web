@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Build fast, scalable, responsive websites and web applications that help businesses grow online.",
   alternates: { canonical: 'https://aibizmod.com/services/web-development' },
   openGraph: {
-    title: "Web Development | aibizmode",
+    title: "Web Development | aibizmod",
     description:
       "Build fast, scalable, responsive websites and web applications that help businesses grow online.",
     url: "/services/web-development",

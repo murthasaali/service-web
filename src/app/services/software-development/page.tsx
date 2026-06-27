@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Custom software solutions built to streamline operations, automate workflows, and support business growth.",
   alternates: { canonical: 'https://aibizmod.com/services/software-development' },
   openGraph: {
-    title: "Custom Software Development | aibizmode",
+    title: "Custom Software Development | aibizmod",
     description:
       "Custom software solutions built to streamline operations, automate workflows, and support business growth.",
     url: "/services/software-development",

@@ -12,11 +12,7 @@ import ShaderBackground from "@/components/ui/shader-background";
 //   CardsContainer,
 //   ContainerScroll,
 // } from "@/components/ui/animated-cards-stack";
-// import {
-//   BrandScroller,
-//   BrandScrollerReverse,
-// } from "@/components/ui/brand-scoller";
-// import ExpandOnHover from "./ExpandOnHover";
+import { LogoCloud } from "@/components/ui/logo-cloud-3";
 
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -30,6 +26,15 @@ const values: Value[] = [
   { image: "/about/values/stay-curious.jpg",      name: "Stay Curious",      desc: "We have changed our minds about things and we will again. Staying curious is the only way to stay useful to the people we work with." },
   { image: "/about/values/work-together.jpg",     name: "Work Together",     desc: "We are not here to nod and execute. We push back when something does not add up and bring our own thinking to every conversation." },
   { image: "/about/values/results-not-hours.jpg", name: "Results Not Hours", desc: "We care whether it worked, not whether it kept us busy. Every project starts with a clear picture of what success looks like." },
+];
+
+const logos = [
+  { src: "/clients/spacelean.png", alt: "SpaceLean Logo" },
+  { src: "/clients/pmspace.png", alt: "PMSpace Logo" },
+  { src: "/clients/spaceapp.png", alt: "SpaceApp Logo" },
+  { src: "/clients/spacesign.png", alt: "SpaceSign Logo" },
+  { src: "/clients/spacehr.png", alt: "SpaceHR Logo" },
+  { src: "/clients/texastech.svg", alt: "Texas Tech Services Logo" },
 ];
 
 // ─── Main export ──────────────────────────────────────────────────────────────
@@ -122,6 +127,31 @@ export default function AboutPageContent() {
             </p>
           </AnimatedSection>
 
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-canvas border-t border-border">
+        <div className="mx-auto max-w-5xl">
+          <AnimatedSection className="text-center mb-12">
+            <span
+              className="inline-flex items-center gap-2 rounded-full border border-cyan-100 bg-white/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700 shadow-[0_12px_35px_rgba(59,130,246,0.10)] backdrop-blur-md"
+            >
+              Our Clients
+            </span>
+            <h2
+              className="mt-7 font-display font-bold"
+              style={{ fontSize: "clamp(24px, 3vw, 34px)", lineHeight: 1.15, color: "#0E7490" }}
+            >
+              Trusted by teams that build the future
+            </h2>
+            <p className="mt-4 text-muted-foreground max-w-lg mx-auto leading-relaxed" style={{ fontSize: 16 }}>
+              We are proud to work with innovative companies that push the boundaries of technology.
+            </p>
+          </AnimatedSection>
+
+          <div className="rounded-2xl border border-border/60 bg-white/60 p-8 shadow-sm backdrop-blur-sm">
+            <LogoCloud logos={logos} />
+          </div>
         </div>
       </section>
 
@@ -286,27 +316,6 @@ export default function AboutPageContent() {
           </div>
         </div>
       </section>
-
-      {/* <section className="pt-14 pb-6 px-6 bg-canvas border-t border-border">
-        <div className="mx-auto max-w-7xl">
-          <h2
-            className="text-center font-display font-bold"
-            style={{ fontSize: "clamp(24px, 3vw, 34px)", lineHeight: 1.15, color: "#0E7490" }}
-          >
-            Trusted By Companies Like
-          </h2>
-        </div>
-      </section>
-
-      <section className="pb-14 bg-canvas">
-        <div className="flex flex-col gap-6 mt-10">
-          <BrandScroller />
-          <BrandScrollerReverse />
-        </div>
-      </section>
-
-      <ExpandOnHover /> */}
-
     </>
   );
 }
