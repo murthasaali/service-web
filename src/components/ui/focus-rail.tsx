@@ -69,14 +69,16 @@ export function FocusRail({
     if (e.key === "ArrowRight") handleNext();
   };
 
-  const swipePower = (offset: number, velocity: number) => Math.abs(offset) * velocity;
   const onDragEnd = (_e: MouseEvent | TouchEvent | PointerEvent, { offset, velocity }: PanInfo) => {
-    const swipe = swipePower(offset.x, velocity.x);
-    if (swipe < -10000) handleNext();
-    else if (swipe > 10000) handlePrev();
+    const swipe = Math.abs(offset.x) * velocity.x;
+    if (offset.x < -50 || swipe < -2000) {
+      handleNext();
+    } else if (offset.x > 50 || swipe > 2000) {
+      handlePrev();
+    }
   };
 
-  const visibleOffsets = [-2, -1, 0, 1, 2];
+  const visibleOffsets = [-1, 0, 1]; // Render only left, center, right to prevent rendering offscreen cards
 
   return (
     <div
@@ -116,7 +118,6 @@ export function FocusRail({
             const scale      = isCenter ? 1 : 0.82;
             const rotateY    = offset * -14;
             const opacity    = isCenter ? 1 : Math.max(0.08, 1 - dist * 0.48);
-            const blur       = isCenter ? 0 : dist * 3.5;
             const brightness = isCenter ? 1 : 0.6;
 
             return (
@@ -125,7 +126,7 @@ export function FocusRail({
                 className={cn(
                   // landscape ratio — 16:10 gives a cinematic card shape
                   "absolute aspect-[16/10] w-[300px] md:w-[380px] overflow-hidden rounded-[20px]",
-                  "border border-cyan-100/80 bg-white/80 backdrop-blur-md",
+                  "border border-cyan-100 bg-white shadow-md",
                   isCenter
                     ? "z-20 shadow-[0_24px_70px_rgba(8,145,178,0.20),0_4px_20px_rgba(0,0,0,0.07)]"
                     : "z-10 cursor-pointer shadow-[0_10px_36px_rgba(59,130,246,0.08)]"
@@ -133,7 +134,7 @@ export function FocusRail({
                 initial={false}
                 animate={{
                   x: xOffset, z: zOffset, scale, rotateY, opacity,
-                  filter: `blur(${blur}px) brightness(${brightness})`,
+                  filter: `brightness(${brightness})`, // Keep only brightness transform (avoid expensive blur recalculations)
                 }}
                 transition={{
                   x: BASE_SPRING, z: BASE_SPRING, rotateY: BASE_SPRING,

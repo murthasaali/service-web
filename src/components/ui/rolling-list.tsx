@@ -57,9 +57,16 @@ function RollingTextItem({ item }: { item: ListItem }) {
     }
   };
 
+  const springTransition = {
+    type: "spring" as const,
+    stiffness: 220,
+    damping: 24,
+  };
+
   return (
     <motion.div
       layout
+      transition={springTransition}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
@@ -67,6 +74,7 @@ function RollingTextItem({ item }: { item: ListItem }) {
     >
       <motion.div
         layout
+        transition={springTransition}
         className={cn(
           "flex justify-between gap-4 md:gap-6",
           isActive ? "flex-col md:flex-row items-start pt-2" : "flex-row items-center"
@@ -114,21 +122,25 @@ function RollingTextItem({ item }: { item: ListItem }) {
         {/* ── Right slot: description and image container ────────────────── */}
         <motion.div
           layout
+          transition={springTransition}
           className={cn(
-            "relative shrink-0 rounded-3xl border border-cyan-100/80 bg-white p-3 shadow-lg overflow-hidden flex flex-col justify-center",
+            "relative shrink-0 rounded-2xl border border-cyan-100/80 bg-white shadow-md overflow-hidden flex flex-col",
             isActive
-              ? "w-full md:w-[280px] lg:w-[390px] h-auto gap-4"
-              : "w-52 md:w-80 h-20 md:h-24 gap-0"
+              ? "w-full md:w-[280px] lg:w-[390px] h-auto gap-4 p-4"
+              : "w-52 md:w-80 h-[38px] md:h-[44px] px-4 py-1 justify-center"
           )}
         >
           {/* Image Container */}
           <motion.div
             layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isActive ? 1 : 0 }}
+            transition={springTransition}
             className={cn(
-              "overflow-hidden rounded-xl transition-opacity duration-500",
+              "overflow-hidden rounded-xl",
               isActive
-                ? "relative w-full h-32 md:h-[185px] opacity-100 mb-0"
-                : "relative w-full h-0 opacity-0 pointer-events-none mb-0"
+                ? "relative w-full h-32 md:h-[185px] mb-0"
+                : "relative w-full h-0 pointer-events-none mb-0"
             )}
           >
             <Image
@@ -148,12 +160,13 @@ function RollingTextItem({ item }: { item: ListItem }) {
           {/* Description Container */}
           <motion.div
             layout
+            transition={springTransition}
             className="relative w-full flex items-center"
           >
             <p
               className={cn(
                 "text-sm leading-relaxed transition-colors duration-500",
-                isActive ? "text-neutral-600 font-normal" : "text-neutral-500 line-clamp-3"
+                isActive ? "text-neutral-600 font-normal" : "text-neutral-500 line-clamp-1"
               )}
             >
               {item.description}
