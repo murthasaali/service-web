@@ -109,8 +109,8 @@ export default function ProblemSolutionCard({
     >
       <HighlightGroup className="group w-full">
         <HighlighterItem glowColor="before:bg-blue-500" className="rounded-3xl p-px w-full">
-          {/* Premium Glass Card Body */}
-          <div className="relative overflow-hidden rounded-[23px] bg-white/70 dark:bg-black/90 backdrop-blur-xl p-8 md:p-12 lg:p-14 border border-slate-200/50 dark:border-slate-800/50">
+          {/* Premium Card Body */}
+          <div className="relative overflow-hidden rounded-[23px] bg-white dark:bg-slate-950 p-8 md:p-12 lg:p-14 border border-slate-200 dark:border-slate-800/80 shadow-md">
             {/* Particles background */}
             <Particles
               className="absolute inset-0 -z-10 opacity-10 transition-opacity duration-1000 ease-in-out group-hover:opacity-100"

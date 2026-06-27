@@ -484,20 +484,6 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
               {/* Soft blob — centre */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[320px] w-[600px] rounded-full bg-cyan-50/70 blur-[72px] will-change-transform transform-gpu" />
 
-              {/* Concentric ripple rings */}
-              {[180, 300, 420, 540, 660, 780].map((r, i) => (
-                <div
-                  key={r}
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full will-change-transform transform-gpu"
-                  style={{
-                    width: r * 2,
-                    height: r * 2,
-                    border: `1px solid rgba(8,145,178,${0.14 - i * 0.018})`,
-                    opacity: 1 - i * 0.1,
-                  }}
-                />
-              ))}
-
               {/* Scattered diamond accents */}
               {[
                 { top: "8%",  left: "6%",  size: 10, opacity: 0.18 },
