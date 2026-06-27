@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { cn } from "@/lib/utils";
 
@@ -25,11 +26,13 @@ export function LogoCloud({ className, logos, ...props }: LogoCloudProps) {
             key={`logo-${logo.alt}`}
             className="flex items-center justify-center h-14 w-14 md:h-20 md:w-20"
           >
-            <img
+            <Image
               alt={logo.alt}
-              className="pointer-events-none h-full w-full select-none object-contain"
+              className="pointer-events-none select-none object-contain"
               loading="lazy"
               src={logo.src}
+              width={80}
+              height={80}
             />
           </div>
         ))}

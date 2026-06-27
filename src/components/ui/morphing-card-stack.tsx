@@ -78,11 +78,11 @@ export function MorphingCardStack({
 
     if (offset.x < -SWIPE_THRESHOLD || swipe < -1000) {
       recordSwipe(activeIndex, "left", "drag")
-      setExpandedCard(null) // Collapse active card on swipe
+      setExpandedCard(null)
       setActiveIndex((prev) => (prev + 1) % cards.length)
     } else if (offset.x > SWIPE_THRESHOLD || swipe > 1000) {
       recordSwipe(activeIndex, "right", "drag")
-      setExpandedCard(null) // Collapse active card on swipe
+      setExpandedCard(null)
       setActiveIndex((prev) => (prev - 1 + cards.length) % cards.length)
     }
     setIsDragging(false)
@@ -263,7 +263,7 @@ export function MorphingCardStack({
                     if (layout === "stack" && !isTopCard) {
                       // Click cards behind to cycle forward
                       recordSwipe(activeIndex, "left", "click")
-                      setExpandedCard(null) // Collapse active card on cycle
+                      setExpandedCard(null)
                       setActiveIndex((prev) => (prev + 1) % cards.length)
                       return
                     }

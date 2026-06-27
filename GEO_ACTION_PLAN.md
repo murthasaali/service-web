@@ -28,7 +28,7 @@ The highest-impact work is to make every important page discoverable in initial 
 
 ## Priority roadmap
 
-### Phase 1: Technical and trust foundation (days 1-14)
+### Phase 1: Technical  and trust foundation (days 1-14)
 
 | Priority | Action | Owner | Acceptance criteria |
 |---|---|---|---|

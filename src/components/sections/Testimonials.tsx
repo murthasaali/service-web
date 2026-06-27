@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import { CardStack } from "@/components/ui/card-stack";
 
@@ -116,11 +117,13 @@ export default function Testimonials() {
 
                     {/* Author */}
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 border-2 border-cyan-400/30 bg-white flex items-center justify-center p-1">
-                        <img
+                      <div className="w-10 h-10 rounded-full shrink-0 border-2 border-cyan-400/30 bg-white flex items-center justify-center p-1">
+                        <Image
                           src={item.logo}
                           alt={item.company}
-                          className="h-full w-full object-contain"
+                          width={40}
+                          height={40}
+                          className="rounded-full object-contain"
                         />
                       </div>
                       <div>
