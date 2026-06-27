@@ -277,8 +277,8 @@ export function MorphingCardStack({
                     onCardClick?.(card)
                   }}
                   className={cn(
-                    "cursor-pointer rounded-3xl border p-6 transition-all duration-300",
-                    "bg-white/90 backdrop-blur-md shadow-[0_12px_40px_rgba(59,130,246,0.08)]",
+                    "cursor-pointer rounded-3xl border p-6",
+                    "bg-white shadow-[0_12px_40px_rgba(59,130,246,0.08)]",
                     isExpanded
                       ? "border-[#0891B2] ring-2 ring-[#0891B2]/30 shadow-[0_20px_50px_rgba(8,145,178,0.15)]"
                       : "border-cyan-100 hover:border-[#0891B2]/50 hover:shadow-[0_16px_45px_rgba(8,145,178,0.1)]",

@@ -125,7 +125,7 @@ export function FocusRail({
                 className={cn(
                   // landscape ratio — 16:10 gives a cinematic card shape
                   "absolute aspect-[16/10] w-[300px] md:w-[380px] overflow-hidden rounded-[20px]",
-                  "border border-cyan-100/80 bg-white/80 backdrop-blur-md",
+                  "border border-cyan-100 bg-white shadow-md",
                   isCenter
                     ? "z-20 shadow-[0_24px_70px_rgba(8,145,178,0.20),0_4px_20px_rgba(0,0,0,0.07)]"
                     : "z-10 cursor-pointer shadow-[0_10px_36px_rgba(59,130,246,0.08)]"
@@ -133,7 +133,7 @@ export function FocusRail({
                 initial={false}
                 animate={{
                   x: xOffset, z: zOffset, scale, rotateY, opacity,
-                  filter: `blur(${blur}px) brightness(${brightness})`,
+                  filter: `brightness(${brightness})`, // Keep only brightness transform (avoid expensive blur recalculations)
                 }}
                 transition={{
                   x: BASE_SPRING, z: BASE_SPRING, rotateY: BASE_SPRING,
