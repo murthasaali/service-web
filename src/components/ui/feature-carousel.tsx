@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -294,11 +295,12 @@ export function FeatureCarousel({
                   }}
                   className="absolute inset-0 rounded-[2rem] md:rounded-[2.8rem] overflow-hidden border-4 md:border-8 border-white bg-white shadow-[0_20px_50px_rgba(8,145,178,0.15)] origin-center"
                 >
-                  <img
+                  <Image
                     src={feature.image}
                     alt={feature.label}
+                    fill
                     className={cn(
-                      "w-full h-full object-cover",
+                      "object-cover",
                       isActive ? "scale-105" : "scale-100"
                     )}
                     style={{
