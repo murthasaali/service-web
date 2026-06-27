@@ -1,6 +1,6 @@
 "use client";
 
-import { Share2, ArrowRight } from "lucide-react";
+import { Share2, ArrowRight, Award, Camera, BookOpen, Tv } from "lucide-react";
 import Link from "next/link";
 import { StarButton } from "@/components/ui/star-button";
 import {
@@ -8,6 +8,7 @@ import {
   FaFacebookF, FaWhatsapp, FaYoutube,
   FaGithub, FaReddit, FaDiscord,
   FaHackerNews, FaGitlab, FaStackOverflow,
+  FaProductHunt,
 } from "react-icons/fa";
 import { FaXTwitter, FaTelegram } from "react-icons/fa6";
 import {
@@ -220,6 +221,70 @@ const registeredPlatforms = [
     href: "https://allmylinks.com/aibizmod",
     gradient: "from-purple-600 via-pink-500 to-fuchsia-400",
     icon: <SiLinktree />,
+  },
+  {
+    name: "Product Hunt",
+    handle: "@aibizmod",
+    desc: "We track and support product launches in the software community.",
+    href: "https://www.producthunt.com/@aibizmod",
+    gradient: "from-orange-600 via-red-500 to-amber-500",
+    icon: <FaProductHunt />,
+  },
+  {
+    name: "Picturepush",
+    handle: "aibizmod",
+    desc: "Image hosting and photo sharing for our public graphics.",
+    href: "https://aibizmod.picturepush.com/",
+    gradient: "from-sky-500 via-blue-500 to-indigo-500",
+    icon: <Camera size={16} />,
+  },
+  {
+    name: "Bio.site",
+    handle: "aibizmod",
+    desc: "Our curated quick link tree directory profile.",
+    href: "https://bio.site/aibizmod",
+    gradient: "from-fuchsia-600 via-purple-500 to-pink-500",
+    icon: <SiLinktree />,
+  },
+  {
+    name: "Beacons",
+    handle: "aibizmod",
+    desc: "Our beacons link directory page for quick access to all portals.",
+    href: "https://beacons.ai/aibizmod",
+    gradient: "from-purple-600 via-indigo-500 to-cyan-500",
+    icon: <SiLinktree />,
+  },
+  {
+    name: "MyNickname",
+    handle: "id1845023",
+    desc: "Our registered nickname certificate confirming our brand identifier ownership.",
+    href: "https://mynickname.com/id1845023",
+    gradient: "from-amber-600 via-orange-500 to-yellow-500",
+    icon: <Award size={16} />,
+  },
+  {
+    name: "Gram.social",
+    handle: "aibizmod",
+    desc: "A microblogging profile where we claim our namespace identifier.",
+    href: "https://gram.social/aibizmod",
+    gradient: "from-pink-500 via-rose-500 to-red-400",
+    icon: <FaInstagram />,
+  },
+  {
+    name: "Wattpad",
+    handle: "aibizmod",
+    desc: "Claimed brand handle on the publishing and reading platform.",
+    href: "https://www.wattpad.com/user/aibizmod",
+    gradient: "from-orange-500 via-amber-600 to-yellow-600",
+    icon: <BookOpen size={16} />,
+  },
+  {
+    name: "Gloria.tv",
+    handle: "qweDJZPhrgKR2VojJGiJooc4R",
+    desc: "Video portal handle reserved for our brand representation.",
+    href: "https://gloria.tv/user/qweDJZPhrgKR2VojJGiJooc4R",
+    gradient: "from-blue-600 via-slate-600 to-zinc-700",
+    icon: <Tv size={16} />,
   },
 ];
 
