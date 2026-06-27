@@ -287,7 +287,7 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {data.useCases.map((uc, i) => (
-                  <AnimatedSection key={uc.title} delay={i * 0.07}>
+                  <AnimatedSection key={uc.title} delay={i * 0.07} className="h-full flex flex-col">
                     <IconHover3D
                       heading={uc.title}
                       text={uc.description}

@@ -105,13 +105,13 @@ export const IconHover3D: React.FC<Props> = ({
   const containerHeight = typeof height === 'number' ? `${height}px` : height;
 
   return (
-    <div style={{ width: containerWidth, height: containerHeight }} className="w-full">
+    <div style={{ width: containerWidth, height: containerHeight === "auto" ? "100%" : containerHeight }} className={`w-full flex flex-col ${className}`}>
       <LayoutGroup id={defaultLayoutId}>
         <Variants animate={variants} initial={false}>
           <Transition value={transition1}>
             <motion.div
               {...restProps}
-              className={`icon-hover-3d flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 p-6 rounded-[24px] w-full border border-cyan-100/80 bg-white shadow-[0_12px_40px_rgba(8,145,178,0.08)] transition-all duration-300 ${className}`}
+              className={`icon-hover-3d flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 p-6 rounded-[24px] w-full h-full border border-cyan-100/80 bg-white shadow-[0_12px_40px_rgba(8,145,178,0.08)] transition-all duration-300`}
               data-framer-name="Default"
               data-highlight={true}
               ref={refBinding}
@@ -886,7 +886,7 @@ export const IconHover3D: React.FC<Props> = ({
                         left: 0,
                         width: "100%",
                         height: "100%",
-                        backgroundColor: "var(--foreground)",
+                        backgroundColor: "var(--royal)",
                         transformOrigin: "left center",
                         scaleX: 0,
                         zIndex: 1
