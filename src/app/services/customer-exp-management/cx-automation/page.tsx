@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "CX Automation | Customer Experience Management | aibizmod",
-  description: "Workflow automation, AI chatbots, and voice agents that handle repetitive customer interactions at scale — freeing your team for the conversations that actually require a person.",
+  title: "CX Automation | AI Chatbots, Workflow Automation | aibizmod",
+  description: "Customer experience automation services. Workflow automation, AI chatbots, and voice agents that handle repetitive interactions at scale.",
+  keywords: [
+    'CX automation',
+    'customer automation',
+    'AI chatbots',
+    'chatbot development',
+    'workflow automation',
+    'voice agents',
+    'customer workflows',
+    'automated support',
+    'conversational AI',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/customer-exp-management/cx-automation" },
   openGraph: {
-    title: "CX Automation | aibizmod",
-    description: "Workflow automation, AI chatbots, and voice agents that handle repetitive customer interactions at scale — freeing your team for the conversations that actually require a person.",
+    title: "CX Automation | AI Chatbots | aibizmod",
+    description: "Workflow automation and AI chatbots that handle customer interactions at scale.",
     url: "/services/customer-exp-management/cx-automation",
   },
 };

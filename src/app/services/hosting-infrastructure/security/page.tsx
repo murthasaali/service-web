@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Security | Hosting & Infrastructure | aibizmod",
-  description: "SSL setup, backup solutions, disaster recovery planning, and security audits that protect your infrastructure and ensure your business can recover from unexpected incidents.",
+  title: "Cloud Security & Infrastructure Security Services | aibizmod",
+  description: "Cloud and infrastructure security services. Data protection, network security, compliance, and security hardening.",
+  keywords: [
+    'infrastructure security',
+    'cloud security',
+    'network security',
+    'data security',
+    'security hardening',
+    'security compliance',
+    'encryption services',
+    'access control',
+    'security assessment',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/hosting-infrastructure/security" },
   openGraph: {
-    title: "Security | aibizmod",
-    description: "SSL setup, backup solutions, disaster recovery planning, and security audits that protect your infrastructure and ensure your business can recover from unexpected incidents.",
+    title: "Cloud Security | Infrastructure Security | aibizmod",
+    description: "Cloud and infrastructure security services including data protection and security hardening.",
     url: "/services/hosting-infrastructure/security",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Security",

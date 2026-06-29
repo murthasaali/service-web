@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Database Services | Hosting & Infrastructure | aibizmod",
-  description: "Database hosting, optimisation, and administration services that keep your data fast, reliable, and correctly maintained — from setup and migration to ongoing performance management.",
+  title: "Database Services & Management | SQL, NoSQL | aibizmod",
+  description: "Professional database design, deployment, and management services. SQL databases, NoSQL solutions, and data optimization.",
+  keywords: [
+    'database services',
+    'database management',
+    'database design',
+    'PostgreSQL',
+    'MySQL services',
+    'MongoDB',
+    'database optimization',
+    'data migration',
+    'database administration',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/hosting-infrastructure/database-services" },
   openGraph: {
-    title: "Database Services | aibizmod",
-    description: "Database hosting, optimisation, and administration services that keep your data fast, reliable, and correctly maintained — from setup and migration to ongoing performance management.",
+    title: "Database Services | SQL & NoSQL | aibizmod",
+    description: "Professional database design, deployment, and management for SQL and NoSQL databases.",
     url: "/services/hosting-infrastructure/database-services",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Database Services",

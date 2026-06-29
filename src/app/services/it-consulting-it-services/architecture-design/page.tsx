@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Architecture & Design | IT Consulting & IT Services | aibizmod",
-  description: "Solution architecture, system design, and technology evaluation services that define how systems should be built before build begins — reducing rework, integration risk, and technical debt.",
+  title: "IT Architecture & System Design Consulting | Technology Architecture | aibizmod",
+  description: "Solution architecture and system design consulting services. Define how systems should be built before development begins — reducing rework, integration risk, and technical debt.",
+  keywords: [
+    'IT architecture',
+    'system design',
+    'enterprise architecture',
+    'solution architecture',
+    'technical architecture',
+    'architecture consulting',
+    'system architecture design',
+    'infrastructure architecture',
+    'technology planning',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/it-consulting-it-services/architecture-design" },
   openGraph: {
-    title: "Architecture & Design | aibizmod",
-    description: "Solution architecture, system design, and technology evaluation services that define how systems should be built before build begins — reducing rework, integration risk, and technical debt.",
+    title: "IT Architecture & Design | System Design | aibizmod",
+    description: "Solution architecture and system design services that define how systems should be built before build begins.",
     url: "/services/it-consulting-it-services/architecture-design",
   },
 };

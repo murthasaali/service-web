@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Performance Insights | Digital Marketing | aibizmod",
-  description: "Analytics, conversion optimisation, and funnel analysis services that turn your marketing data into clear decisions — identifying where you are losing revenue and what to fix first.",
+  title: "Analytics & Performance Insights Services | GA4 Setup | aibizmod",
+  description: "Analytics and performance measurement services. GA4 setup, tracking implementation, dashboard creation, and data-driven insights.",
+  keywords: [
+    'analytics services',
+    'GA4 setup',
+    'Google Analytics',
+    'tracking implementation',
+    'dashboard creation',
+    'Looker Studio',
+    'performance analytics',
+    'conversion tracking',
+    'data analytics',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/digital-marketing/performance-insights" },
   openGraph: {
-    title: "Performance Insights | aibizmod",
-    description: "Analytics, conversion optimisation, and funnel analysis services that turn your marketing data into clear decisions — identifying where you are losing revenue and what to fix first.",
+    title: "Analytics & Performance | GA4 & Dashboards | aibizmod",
+    description: "Analytics and performance measurement services with GA4 setup and Looker Studio dashboards.",
     url: "/services/digital-marketing/performance-insights",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Performance Insights",

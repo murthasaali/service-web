@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Security & Compliance | IT Consulting & IT Services | aibizmod",
-  description: "Cybersecurity assessments, security reviews, and compliance support services that identify risks, close gaps, and help organisations meet their regulatory and contractual security obligations.",
+  title: "IT Security & Compliance Consulting | Cybersecurity Assessment | aibizmod",
+  description: "Cybersecurity assessments and compliance support services. Identify risks, close security gaps, and meet regulatory obligations.",
+  keywords: [
+    'IT security',
+    'cybersecurity',
+    'security assessment',
+    'compliance consulting',
+    'security consulting',
+    'data security',
+    'security audit',
+    'compliance services',
+    'risk management',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/it-consulting-it-services/security-compliance" },
   openGraph: {
-    title: "Security & Compliance | aibizmod",
-    description: "Cybersecurity assessments, security reviews, and compliance support services that identify risks, close gaps, and help organisations meet their regulatory and contractual security obligations.",
+    title: "IT Security & Compliance | Security Assessment | aibizmod",
+    description: "Cybersecurity assessments and compliance support services to identify risks and close security gaps.",
     url: "/services/it-consulting-it-services/security-compliance",
   },
 };

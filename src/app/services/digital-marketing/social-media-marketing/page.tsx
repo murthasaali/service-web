@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Social Media Marketing | Digital Marketing | aibizmod",
-  description: "Social media management, content creation, and influencer marketing strategies that build a credible, consistent presence on the platforms your audience actually uses.",
+  title: "Social Media Marketing Services | Social Strategy & Management | aibizmod",
+  description: "Social media marketing and management services. Strategy, content creation, community management, and influencer marketing on all major platforms.",
+  keywords: [
+    'social media marketing',
+    'social media management',
+    'social strategy',
+    'social media services',
+    'Instagram marketing',
+    'LinkedIn marketing',
+    'Facebook marketing',
+    'influencer marketing',
+    'community management',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/digital-marketing/social-media-marketing" },
   openGraph: {
-    title: "Social Media Marketing | aibizmod",
-    description: "Social media management, content creation, and influencer marketing strategies that build a credible, consistent presence on the platforms your audience actually uses.",
+    title: "Social Media Marketing | Strategy & Management | aibizmod",
+    description: "Social media management, content creation, and strategies that build a credible presence on platforms your audience uses.",
     url: "/services/digital-marketing/social-media-marketing",
   },
 };

@@ -13,14 +13,14 @@ import ClientsSection from '@/components/sections/ClientsSection';
 import LatestBlogsSection from '@/components/sections/LatestBlogsSection';
 
 export const metadata: Metadata = {
-	title: { absolute: 'aibizmod | Intelligent Tech Services' },
+	title: { absolute: 'Custom Software & Web Development Services | aibizmod' },
 	description:
-		'End-to-end technology services for businesses: web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
+		'aibizmod delivers custom software development, web applications, mobile apps, digital marketing, and IT consulting services for businesses in the UK and India. End-to-end technology solutions.',
 	alternates: { canonical: 'https://aibizmod.com' },
 	openGraph: {
-		title: 'aibizmod | Intelligent Tech Services',
+		title: 'Custom Software & Web Development Services | aibizmod',
 		description:
-			'End-to-end technology services for businesses: web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
+			'aibizmod delivers custom software development, web applications, mobile apps, digital marketing, and IT consulting services for businesses in the UK and India.',
 		url: '/',
 	},
 };
@@ -35,9 +35,9 @@ export default function Home() {
 					<ServicesGrid />
 					<WhyChooseUs />
 					<GlobalPresence />
-				<HowWeWork />
-				<LatestBlogsSection />
-				<Testimonials />
+					<HowWeWork />
+					<LatestBlogsSection />
+					<Testimonials />
 					<FAQSection />
 					<ClientsSection />
 				</main>
@@ -45,4 +45,3 @@ export default function Home() {
 		</>
 	);
 }
-

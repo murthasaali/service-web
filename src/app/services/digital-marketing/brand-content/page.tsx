@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Brand Content | Digital Marketing | aibizmod",
-  description: "Content marketing, blog writing, copywriting, and case studies that build authority, support organic search performance, and give your sales team material that actually works.",
+  title: "Brand & Content Marketing Services | Content Strategy | aibizmod",
+  description: "Strategic brand and content marketing services. Content planning, creation, and distribution that builds authority and drives engagement.",
+  keywords: [
+    'content marketing',
+    'content strategy',
+    'brand marketing',
+    'content creation',
+    'copywriting services',
+    'content management',
+    'brand strategy',
+    'marketing content',
+    'thought leadership',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/digital-marketing/brand-content" },
   openGraph: {
-    title: "Brand Content | aibizmod",
-    description: "Content marketing, blog writing, copywriting, and case studies that build authority, support organic search performance, and give your sales team material that actually works.",
+    title: "Brand & Content Marketing | Content Strategy | aibizmod",
+    description: "Strategic brand and content marketing services that build authority and drive engagement.",
     url: "/services/digital-marketing/brand-content",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Brand Content",

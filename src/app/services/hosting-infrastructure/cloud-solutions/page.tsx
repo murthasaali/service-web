@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Cloud Solutions | Hosting & Infrastructure | aibizmod",
-  description: "Cloud services, cloud migration, and cloud architecture designed to reduce infrastructure cost, improve reliability, and give your team the scalability they need without managing physical hardware.",
+  title: "Cloud Solutions & Migration Services | Multi-Cloud | aibizmod",
+  description: "Enterprise cloud solutions and cloud migration services. AWS, GCP, and Azure solutions designed for scalability and reliability.",
+  keywords: [
+    'cloud solutions',
+    'cloud migration',
+    'AWS solutions',
+    'Azure solutions',
+    'cloud architecture',
+    'enterprise cloud',
+    'multi-cloud strategy',
+    'cloud infrastructure',
+    'cloud migration services',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/hosting-infrastructure/cloud-solutions" },
   openGraph: {
-    title: "Cloud Solutions | aibizmod",
-    description: "Cloud services, cloud migration, and cloud architecture designed to reduce infrastructure cost, improve reliability, and give your team the scalability they need without managing physical hardware.",
+    title: "Cloud Solutions | Cloud Migration | aibizmod",
+    description: "Enterprise cloud solutions and migration services on AWS, Azure, and GCP.",
     url: "/services/hosting-infrastructure/cloud-solutions",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Cloud Solutions",

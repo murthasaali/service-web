@@ -4,17 +4,28 @@ import SubservicePageLayout, {
 } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "AI-Powered Apps | AI Automation | aibizmod",
-  description:
-    "Build applications where AI models handle the core logic, from content generation and data analysis to recommendations and user interactions, rather than being an add-on feature.",
+  title: "AI-Powered Application Development | Machine Learning Apps | aibizmod",
+  description: "AI-powered application development that integrates machine learning and AI features. Smart systems that learn and improve over time.",
+  keywords: [
+    'AI applications',
+    'machine learning',
+    'AI-powered apps',
+    'intelligent applications',
+    'AI development',
+    'ML applications',
+    'smart systems',
+    'neural networks',
+    'deep learning applications',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/automation/ai-powered-apps" },
   openGraph: {
-    title: "AI-Powered Apps | aibizmod",
-    description:
-      "Build applications where AI models handle the core logic, from content generation and data analysis to recommendations and user interactions, rather than being an add-on feature.",
+    title: "AI-Powered Applications | Machine Learning Development | aibizmod",
+    description: "AI-powered application development that integrates machine learning and intelligent features.",
     url: "/services/automation/ai-powered-apps",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "AI-Powered Apps",

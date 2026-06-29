@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Infrastructure Operations | Hosting & Infrastructure | aibizmod",
-  description: "Infrastructure management, monitoring, and performance tuning services that keep your applications reliable, observable, and operating within defined performance targets.",
+  title: "Infrastructure Operations & Monitoring Services | aibizmod",
+  description: "Infrastructure operations and monitoring services. System health monitoring, incident response, and infrastructure optimization.",
+  keywords: [
+    'infrastructure operations',
+    'monitoring services',
+    'infrastructure monitoring',
+    'system monitoring',
+    'performance monitoring',
+    'incident management',
+    'infrastructure management',
+    'uptime monitoring',
+    'managed services',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/hosting-infrastructure/infrastructure-operations" },
   openGraph: {
-    title: "Infrastructure Operations | aibizmod",
-    description: "Infrastructure management, monitoring, and performance tuning services that keep your applications reliable, observable, and operating within defined performance targets.",
+    title: "Infrastructure Operations | Monitoring & Management | aibizmod",
+    description: "Infrastructure operations and monitoring services with system health tracking and incident response.",
     url: "/services/hosting-infrastructure/infrastructure-operations",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Infrastructure Operations",

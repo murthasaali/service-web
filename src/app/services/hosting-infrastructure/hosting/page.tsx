@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Hosting | Hosting & Infrastructure | aibizmod",
-  description: "Shared, VPS, dedicated, and managed hosting services with the configuration, monitoring, and support that keep your websites and applications reliably available.",
+  title: "Cloud Hosting Services | Managed Web Hosting | aibizmod",
+  description: "Scalable cloud hosting services on AWS, GCP, and Azure. Managed hosting with automated backups, monitoring, and deployment pipelines.",
+  keywords: [
+    'cloud hosting',
+    'web hosting',
+    'managed hosting',
+    'cloud services',
+    'AWS hosting',
+    'scalable hosting',
+    'application hosting',
+    'VPS hosting',
+    'dedicated hosting',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/hosting-infrastructure/hosting" },
   openGraph: {
-    title: "Hosting | aibizmod",
-    description: "Shared, VPS, dedicated, and managed hosting services with the configuration, monitoring, and support that keep your websites and applications reliably available.",
+    title: "Cloud Hosting | Managed Web Hosting | aibizmod",
+    description: "Scalable cloud hosting on AWS, GCP, and Azure with automated backups and deployment pipelines.",
     url: "/services/hosting-infrastructure/hosting",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Hosting",

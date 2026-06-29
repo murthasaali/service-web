@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "DevOps & Automation | IT Consulting & IT Services | aibizmod",
-  description: "CI/CD, infrastructure automation, and containerisation consulting services that modernise how software is built, tested, and deployed — reducing release risk and developer friction.",
+  title: "DevOps & CI/CD Automation | Infrastructure Automation | aibizmod",
+  description: "DevOps and infrastructure automation consulting. CI/CD pipelines, containerisation, and automated deployment services that modernise software delivery.",
+  keywords: [
+    'DevOps',
+    'CI/CD pipeline',
+    'continuous integration',
+    'continuous deployment',
+    'infrastructure automation',
+    'DevOps consulting',
+    'DevOps services',
+    'automation services',
+    'deployment automation',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/it-consulting-it-services/devops-automation" },
   openGraph: {
-    title: "DevOps & Automation | aibizmod",
-    description: "CI/CD, infrastructure automation, and containerisation consulting services that modernise how software is built, tested, and deployed — reducing release risk and developer friction.",
+    title: "DevOps & Automation | CI/CD Pipelines | aibizmod",
+    description: "CI/CD and infrastructure automation consulting that modernise how software is built, tested, and deployed.",
     url: "/services/it-consulting-it-services/devops-automation",
   },
 };

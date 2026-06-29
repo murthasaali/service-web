@@ -5,62 +5,68 @@ import './globals.css';
 import SmoothScroll from '@/components/providers/SmoothScroll';
 
 const generalSans = localFont({
-  src: [
-    { path: './fonts/GeneralSans-Semibold.woff2', weight: '600' },
-    { path: './fonts/GeneralSans-Bold.woff2', weight: '700' },
-  ],
-  variable: '--font-general-sans',
-  display: 'swap',
+	src: [
+		{ path: './fonts/GeneralSans-Semibold.woff2', weight: '600' },
+		{ path: './fonts/GeneralSans-Bold.woff2', weight: '700' },
+	],
+	variable: '--font-general-sans',
+	display: 'swap',
 });
 
 const entityGraph = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://aibizmod.com/#organization',
-      name: 'aibizmod Ltd.',
-      url: 'https://aibizmod.com',
-      logo: {
-        '@type': 'ImageObject',
-        '@id': 'https://aibizmod.com/#logo',
-        url: 'https://aibizmod.com/favicon.ico',
-        contentUrl: 'https://aibizmod.com/favicon.ico',
-      },
-      description:
-        'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
-      email: 'hello@aibizmod.com',
-      telephone: '+442079460958',
-      areaServed: [
-        { '@type': 'City', name: 'London' },
-        { '@type': 'City', name: 'New York' },
-        { '@type': 'City', name: 'Bengaluru' },
-        { '@type': 'City', name: 'Singapore' },
-        { '@type': 'City', name: 'Sydney' },
-      ],
-      foundingDate: '2019',
-      knowsAbout: [
-        'Web Development',
-        'Custom Software Development',
-        'Mobile App Development',
-        'Digital Marketing',
-        'Cloud Hosting and Infrastructure',
-        'Business Process Automation',
-        'Customer Experience Management',
-        'IT Consulting',
-      ],
-    },
-    {
-      '@type': 'WebSite',
-      '@id': 'https://aibizmod.com/#website',
-      url: 'https://aibizmod.com',
-      name: 'aibizmod',
-      description:
-        'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
-      publisher: { '@id': 'https://aibizmod.com/#organization' },
-      inLanguage: 'en-GB',
-    },
-  ],
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'Organization',
+			'@id': 'https://aibizmod.com/#organization',
+			name: 'aibizmod Ltd.',
+			url: 'https://aibizmod.com',
+			logo: {
+				'@type': 'ImageObject',
+				'@id': 'https://aibizmod.com/#logo',
+				url: 'https://aibizmod.com/favicon.ico',
+				contentUrl: 'https://aibizmod.com/favicon.ico',
+			},
+			description:
+				'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
+			email: 'hello@aibizmod.com',
+			telephone: '+442079460958',
+			areaServed: [
+				{ '@type': 'City', name: 'London' },
+				{ '@type': 'City', name: 'New York' },
+				{ '@type': 'City', name: 'Bengaluru' },
+				{ '@type': 'City', name: 'Singapore' },
+				{ '@type': 'City', name: 'Sydney' },
+			],
+			foundingDate: '2019',
+			sameAs: [
+				'https://linkedin.com/company/aibizmod',
+				'https://instagram.com/aibizmod',
+				'https://pinterest.com/aibizmod',
+				'https://facebook.com/aibizmod',
+			],
+			knowsAbout: [
+				'Web Development',
+				'Custom Software Development',
+				'Mobile App Development',
+				'Digital Marketing',
+				'Cloud Hosting and Infrastructure',
+				'Business Process Automation',
+				'Customer Experience Management',
+				'IT Consulting',
+			],
+		},
+		{
+			'@type': 'WebSite',
+			'@id': 'https://aibizmod.com/#website',
+			url: 'https://aibizmod.com',
+			name: 'aibizmod',
+			description:
+				'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
+			publisher: { '@id': 'https://aibizmod.com/#organization' },
+			inLanguage: 'en-GB',
+		},
+	],
 };
 
 const inter = Inter({
@@ -77,7 +83,22 @@ export const metadata: Metadata = {
 	},
 	description:
 		'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
-	keywords: ['tech services', 'web development', 'mobile apps', 'cloud', 'automation', 'digital marketing'],
+	keywords: [
+		'custom software development',
+		'web development company',
+		'mobile app development',
+		'IT consulting services',
+		'digital marketing agency',
+		'cloud hosting services',
+		'business process automation',
+		'software development',
+		'web development services',
+		'IT services',
+		'technology consulting',
+		'custom web development',
+		'app development',
+		'technology solutions',
+	],
 	metadataBase: new URL('https://aibizmod.com'),
 	openGraph: {
 		type: 'website',
@@ -109,9 +130,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body className='font-sans antialiased bg-canvas text-ink'>
-				<SmoothScroll>
-					{children}
-				</SmoothScroll>
+				<SmoothScroll>{children}</SmoothScroll>
 			</body>
 		</html>
 	);

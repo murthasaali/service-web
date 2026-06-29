@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Search Marketing | Digital Marketing | aibizmod",
-  description: "SEO, GEO, local SEO, and technical SEO services that improve search visibility, drive qualified organic traffic, and build sustainable rankings that hold over time.",
+  title: "Search Marketing & SEO Services | SEO, PPC | aibizmod",
+  description: "Organic SEO and search marketing services. Keyword research, technical SEO, content optimization, and PPC campaigns that drive qualified traffic.",
+  keywords: [
+    'search marketing',
+    'SEO services',
+    'search engine optimization',
+    'PPC advertising',
+    'keyword research',
+    'SEO optimization',
+    'search ads',
+    'Google Ads',
+    'search traffic',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/digital-marketing/search-marketing" },
   openGraph: {
-    title: "Search Marketing | aibizmod",
-    description: "SEO, GEO, local SEO, and technical SEO services that improve search visibility, drive qualified organic traffic, and build sustainable rankings that hold over time.",
+    title: "Search Marketing & SEO | Organic & Paid | aibizmod",
+    description: "SEO and search marketing services that drive qualified traffic through organic search and paid search campaigns.",
     url: "/services/digital-marketing/search-marketing",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Search Marketing",

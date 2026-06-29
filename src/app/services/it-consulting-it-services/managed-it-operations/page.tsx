@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Managed IT Operations | IT Consulting & IT Services | aibizmod",
-  description: "Helpdesk support, infrastructure planning, cost optimisation, and ongoing IT management services that keep business technology running reliably without requiring an in-house IT team.",
+  title: "Managed IT Operations & Support Services | IT Management | aibizmod",
+  description: "Managed IT operations and helpdesk support services. Keep business technology running reliably without requiring an in-house IT team.",
+  keywords: [
+    'managed IT services',
+    'IT operations',
+    'IT support services',
+    'helpdesk support',
+    'IT management',
+    'managed services',
+    'infrastructure management',
+    'IT operations management',
+    'technical support',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/it-consulting-it-services/managed-it-operations" },
   openGraph: {
-    title: "Managed IT Operations | aibizmod",
-    description: "Helpdesk support, infrastructure planning, cost optimisation, and ongoing IT management services that keep business technology running reliably without requiring an in-house IT team.",
+    title: "Managed IT Operations | IT Support & Management | aibizmod",
+    description: "Managed IT operations and helpdesk support services to keep business technology running reliably.",
     url: "/services/it-consulting-it-services/managed-it-operations",
   },
 };

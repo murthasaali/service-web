@@ -4,17 +4,28 @@ import SubservicePageLayout, {
 } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Process Automation | AI Automation | aibizmod",
-  description:
-    "Replace manual data entry, approval chains, and repetitive workflows with automated pipelines that connect your existing tools and run without staff intervention.",
+  title: "Business Process Automation Services | Workflow Automation | aibizmod",
+  description: "Custom process automation and workflow automation services. Eliminate manual work with automation pipelines for invoice routing, CRM sync, reporting, and approval workflows.",
+  keywords: [
+    'process automation',
+    'workflow automation',
+    'business automation',
+    'RPA automation',
+    'workflow management',
+    'invoice automation',
+    'CRM automation',
+    'report automation',
+    'workflow optimization',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/automation/process-automation" },
   openGraph: {
-    title: "Process Automation | aibizmod",
-    description:
-      "Replace manual data entry, approval chains, and repetitive workflows with automated pipelines that connect your existing tools and run without staff intervention.",
+    title: "Business Process Automation | Workflow Automation | aibizmod",
+    description: "Custom process automation that eliminates manual work and accelerates operations.",
     url: "/services/automation/process-automation",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Process Automation",

@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Customer Engagement | Customer Experience Management | aibizmod",
-  description: "Loyalty programmes, omnichannel communication flows, and WhatsApp integration strategies that build lasting customer relationships across every touchpoint.",
+  title: "Customer Engagement & Loyalty Programs | Omnichannel | aibizmod",
+  description: "Customer engagement and loyalty program services. Omnichannel communication flows, WhatsApp integration, and strategies that build lasting customer relationships.",
+  keywords: [
+    'customer engagement',
+    'loyalty programs',
+    'customer retention',
+    'omnichannel communication',
+    'WhatsApp integration',
+    'customer loyalty',
+    'engagement strategies',
+    'customer relationships',
+    'retention programs',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/customer-exp-management/customer-engagement" },
   openGraph: {
-    title: "Customer Engagement | aibizmod",
-    description: "Loyalty programmes, omnichannel communication flows, and WhatsApp integration strategies that build lasting customer relationships across every touchpoint.",
+    title: "Customer Engagement | Loyalty Programs | aibizmod",
+    description: "Loyalty programmes and omnichannel communication strategies that build lasting customer relationships.",
     url: "/services/customer-exp-management/customer-engagement",
   },
 };

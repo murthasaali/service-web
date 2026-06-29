@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Customer Support Systems | Customer Experience Management | aibizmod",
-  description: "Helpdesk, ticketing, and live chat platform implementations that give support teams the tools to respond faster, resolve more on first contact, and track performance accurately.",
+  title: "Customer Support Systems | Helpdesk, Ticketing, Live Chat | aibizmod",
+  description: "Helpdesk, ticketing, and live chat platform implementation. Give support teams the tools to respond faster, resolve on first contact, and track performance.",
+  keywords: [
+    'customer support systems',
+    'helpdesk software',
+    'ticketing system',
+    'live chat',
+    'support platform',
+    'service desk',
+    'support management',
+    'customer service software',
+    'support tools',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/customer-exp-management/customer-support-systems" },
   openGraph: {
-    title: "Customer Support Systems | aibizmod",
-    description: "Helpdesk, ticketing, and live chat platform implementations that give support teams the tools to respond faster, resolve more on first contact, and track performance accurately.",
+    title: "Customer Support Systems | Helpdesk & Ticketing | aibizmod",
+    description: "Helpdesk and ticketing platform implementations that improve support team efficiency and performance.",
     url: "/services/customer-exp-management/customer-support-systems",
   },
 };

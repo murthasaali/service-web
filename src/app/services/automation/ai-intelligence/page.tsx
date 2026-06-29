@@ -4,17 +4,28 @@ import SubservicePageLayout, {
 } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "AI Intelligence | AI Automation | aibizmod",
-  description:
-    "Extract meaningful insight from your operational data using predictive models and recommendation systems that surface patterns your dashboards cannot.",
+  title: "AI Intelligence & Predictive Analytics Services | aibizmod",
+  description: "Extract meaningful insights from operational data using predictive models and recommendation systems. AI that surfaces patterns dashboards cannot show.",
+  keywords: [
+    'AI intelligence',
+    'predictive analytics',
+    'machine learning',
+    'data analytics',
+    'AI recommendations',
+    'predictive models',
+    'business intelligence',
+    'data science',
+    'AI solutions',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/automation/ai-intelligence" },
   openGraph: {
-    title: "AI Intelligence | aibizmod",
-    description:
-      "Extract meaningful insight from your operational data using predictive models and recommendation systems that surface patterns your dashboards cannot.",
+    title: "AI Intelligence & Analytics | Predictive Models | aibizmod",
+    description: "AI intelligence and predictive analytics that extract meaningful insights from operational data.",
     url: "/services/automation/ai-intelligence",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "AI Intelligence",

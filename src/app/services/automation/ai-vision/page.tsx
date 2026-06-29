@@ -4,17 +4,28 @@ import SubservicePageLayout, {
 } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "AI Vision | AI Automation | aibizmod",
-  description:
-    "Automate visual inspection, document digitisation, and image-based data capture using computer vision models that replace manual review with scalable, accurate pipelines.",
+  title: "AI Vision & Computer Vision Services | Image Recognition | aibizmod",
+  description: "Computer vision and AI vision services. Image recognition, visual analysis, and machine vision systems for automated visual understanding.",
+  keywords: [
+    'computer vision',
+    'AI vision',
+    'image recognition',
+    'object detection',
+    'visual analysis',
+    'machine vision',
+    'image processing',
+    'video analysis',
+    'visual intelligence',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/automation/ai-vision" },
   openGraph: {
-    title: "AI Vision | aibizmod",
-    description:
-      "Automate visual inspection, document digitisation, and image-based data capture using computer vision models that replace manual review with scalable, accurate pipelines.",
+    title: "AI Vision & Image Recognition | Computer Vision | aibizmod",
+    description: "Computer vision and AI vision systems that automatically understand and analyze images and video.",
     url: "/services/automation/ai-vision",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "AI Vision",

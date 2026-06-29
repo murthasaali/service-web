@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "CX IT Consulting | Customer Experience Management | aibizmod",
-  description: "Technology advisory and implementation guidance for businesses planning or improving their customer experience infrastructure — from platform selection to digital transformation roadmaps.",
+  title: "CX IT Consulting | Customer Experience Technology Strategy | aibizmod",
+  description: "Customer experience IT consulting and technology advisory. Platform selection, implementation guidance, and digital transformation roadmaps.",
+  keywords: [
+    'CX consulting',
+    'customer experience',
+    'technology advisory',
+    'platform selection',
+    'digital transformation',
+    'customer technology',
+    'CX technology',
+    'customer platforms',
+    'strategic consulting',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/customer-exp-management/cx-it-consulting" },
   openGraph: {
-    title: "CX IT Consulting | aibizmod",
-    description: "Technology advisory and implementation guidance for businesses planning or improving their customer experience infrastructure — from platform selection to digital transformation roadmaps.",
+    title: "CX IT Consulting | Customer Technology Strategy | aibizmod",
+    description: "Technology advisory and implementation guidance for customer experience infrastructure and digital transformation.",
     url: "/services/customer-exp-management/cx-it-consulting",
   },
 };

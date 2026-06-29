@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Customer Intelligence | Customer Experience Management | aibizmod",
-  description: "Customer analytics and retention tracking systems that surface actionable insight from your data — who is at risk of leaving, who is most valuable, and what is driving satisfaction or dissatisfaction.",
+  title: "Customer Intelligence & Analytics Services | Data Insights | aibizmod",
+  description: "Customer analytics and retention tracking systems. Surface actionable insights about customer behavior, risk, value, and satisfaction drivers.",
+  keywords: [
+    'customer intelligence',
+    'customer analytics',
+    'customer insights',
+    'data analytics',
+    'retention analytics',
+    'behavioral analytics',
+    'customer segmentation',
+    'churn prediction',
+    'customer lifetime value',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/customer-exp-management/customer-intelligence" },
   openGraph: {
-    title: "Customer Intelligence | aibizmod",
-    description: "Customer analytics and retention tracking systems that surface actionable insight from your data — who is at risk of leaving, who is most valuable, and what is driving satisfaction or dissatisfaction.",
+    title: "Customer Intelligence | Analytics & Insights | aibizmod",
+    description: "Customer analytics that surface actionable insights about satisfaction, churn, and customer value.",
     url: "/services/customer-exp-management/customer-intelligence",
   },
 };

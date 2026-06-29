@@ -92,42 +92,59 @@ export type { ServiceCard };
 
 function buildServiceSchema(data: ServicePageData) {
   const pageUrl = `https://aibizmod.com/services/${data.slug}`;
+  const graph: Record<string, unknown>[] = [
+    {
+      '@type': 'Service',
+      '@id': `${pageUrl}/#service`,
+      name: data.name,
+      description: data.tagline,
+      url: pageUrl,
+      provider: { '@id': 'https://aibizmod.com/#organization' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}/#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://aibizmod.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Services',
+          item: 'https://aibizmod.com/services',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: data.name,
+          item: pageUrl,
+        },
+      ],
+    },
+  ];
+
+  if (data.faqs && data.faqs.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}/#faq`,
+      mainEntity: data.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.a,
+        },
+      })),
+    });
+  }
+
   return {
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Service',
-        '@id': `${pageUrl}/#service`,
-        name: data.name,
-        description: data.tagline,
-        url: pageUrl,
-        provider: { '@id': 'https://aibizmod.com/#organization' },
-      },
-      {
-        '@type': 'BreadcrumbList',
-        '@id': `${pageUrl}/#breadcrumb`,
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: 'https://aibizmod.com',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Services',
-            item: 'https://aibizmod.com/services',
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: data.name,
-            item: pageUrl,
-          },
-        ],
-      },
-    ],
+    '@graph': graph,
   };
 }
 

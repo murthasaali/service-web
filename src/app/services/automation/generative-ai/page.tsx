@@ -4,17 +4,28 @@ import SubservicePageLayout, {
 } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Generative AI | AI Automation | aibizmod",
-  description:
-    "Integrate large language models into your product or internal operations to automate content generation, document processing, and decision support at scale.",
+  title: "Generative AI Solutions & Integration Services | aibizmod",
+  description: "Generative AI integration and custom solutions. LLM APIs, prompt engineering, and AI-powered systems built into your products.",
+  keywords: [
+    'generative AI',
+    'LLM integration',
+    'OpenAI API',
+    'ChatGPT integration',
+    'prompt engineering',
+    'AI content generation',
+    'large language models',
+    'AI systems',
+    'generative models',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/automation/generative-ai" },
   openGraph: {
-    title: "Generative AI | aibizmod",
-    description:
-      "Integrate large language models into your product or internal operations to automate content generation, document processing, and decision support at scale.",
+    title: "Generative AI Solutions | LLM Integration | aibizmod",
+    description: "Generative AI integration and custom solutions powered by large language models and prompt engineering.",
     url: "/services/automation/generative-ai",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Generative AI",

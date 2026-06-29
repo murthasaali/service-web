@@ -4,17 +4,28 @@ import SubservicePageLayout, {
 } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Conversational AI | AI Automation | aibizmod",
-  description:
-    "Deploy AI assistants that handle customer inquiries, support tickets, and internal queries by drawing from your actual knowledge base and live system data.",
+  title: "Conversational AI & Chatbot Development | aibizmod",
+  description: "Conversational AI and chatbot development. Voice and text interfaces that understand natural language and provide intelligent responses.",
+  keywords: [
+    'conversational AI',
+    'chatbot development',
+    'AI chatbots',
+    'conversational interfaces',
+    'NLP',
+    'natural language processing',
+    'voice assistants',
+    'intelligent chatbots',
+    'dialogue systems',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/automation/conversational-ai" },
   openGraph: {
-    title: "Conversational AI | aibizmod",
-    description:
-      "Deploy AI assistants that handle customer inquiries, support tickets, and internal queries by drawing from your actual knowledge base and live system data.",
+    title: "Conversational AI & Chatbots | NLP | aibizmod",
+    description: "Conversational AI and chatbot development that understand natural language and provide intelligent responses.",
     url: "/services/automation/conversational-ai",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Conversational AI",

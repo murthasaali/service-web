@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Strategy & Transformation | IT Consulting & IT Services | aibizmod",
-  description: "Digital transformation consulting and technology roadmapping services that connect technology investment to business strategy — giving leaders a clear, sequenced plan for modernising how the organisation operates.",
+  title: "IT Strategy & Digital Transformation Consulting | Tech Roadmap | aibizmod",
+  description: "Digital transformation consulting and technology roadmapping. Connect technology investment to business strategy with a clear plan for modernising operations.",
+  keywords: [
+    'digital transformation',
+    'IT strategy',
+    'technology roadmap',
+    'digital strategy',
+    'transformation consulting',
+    'technology planning',
+    'business transformation',
+    'strategic consulting',
+    'organizational transformation',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/it-consulting-it-services/strategy-transformation" },
   openGraph: {
-    title: "Strategy & Transformation | aibizmod",
-    description: "Digital transformation consulting and technology roadmapping services that connect technology investment to business strategy — giving leaders a clear, sequenced plan for modernising how the organisation operates.",
+    title: "IT Strategy & Transformation | Digital Transformation | aibizmod",
+    description: "Digital transformation consulting and technology roadmapping that connect technology to business strategy.",
     url: "/services/it-consulting-it-services/strategy-transformation",
   },
 };

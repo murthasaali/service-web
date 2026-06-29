@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "CRM Services | Customer Experience Management | aibizmod",
-  description: "CRM implementation, customisation, and integration services that align your sales, support, and marketing teams around a single view of the customer.",
+  title: "CRM Implementation & Services | Salesforce, HubSpot, Zoho | aibizmod",
+  description: "Professional CRM implementation and integration services. Align sales, support, and marketing teams around a single view of the customer with Salesforce, HubSpot, or Zoho.",
+  keywords: [
+    'CRM implementation',
+    'CRM services',
+    'Salesforce implementation',
+    'HubSpot setup',
+    'Zoho CRM',
+    'CRM customization',
+    'customer relationship management',
+    'CRM integration',
+    'sales automation',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/customer-exp-management/crm-services" },
   openGraph: {
-    title: "CRM Services | aibizmod",
-    description: "CRM implementation, customisation, and integration services that align your sales, support, and marketing teams around a single view of the customer.",
+    title: "CRM Implementation | Salesforce, HubSpot | aibizmod",
+    description: "CRM implementation and integration services that align your sales, support, and marketing teams.",
     url: "/services/customer-exp-management/crm-services",
   },
 };

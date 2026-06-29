@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Backend Services | Mobile App Development | aibizmod",
-  description: "API development, push notification infrastructure, authentication systems, and payment integration for mobile applications — the backend layer that makes mobile apps reliable, secure, and scalable.",
+  title: "Mobile App Backend Services | APIs & Cloud Infrastructure | aibizmod",
+  description: "Backend infrastructure and API development for mobile applications. Scalable cloud services, databases, and authentication systems for iOS and Android apps.",
+  keywords: [
+    'mobile app backend',
+    'mobile API development',
+    'app backend services',
+    'mobile cloud services',
+    'app server development',
+    'mobile database',
+    'app authentication',
+    'mobile infrastructure',
+    'scalable app backend',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/mobile-app-development/backend-services" },
   openGraph: {
-    title: "Backend Services | aibizmod",
-    description: "API development, push notification infrastructure, authentication systems, and payment integration for mobile applications — the backend layer that makes mobile apps reliable, secure, and scalable.",
+    title: "Mobile Backend Services | APIs & Infrastructure | aibizmod",
+    description: "Backend infrastructure and API development for mobile applications including cloud services, databases, and authentication systems.",
     url: "/services/mobile-app-development/backend-services",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Backend Services",

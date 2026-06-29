@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Paid Advertising | Digital Marketing | aibizmod",
-  description: "Google Ads, Meta Ads, and LinkedIn campaign management focused on qualified lead generation and measurable return on ad spend — not just impressions and clicks.",
+  title: "Paid Advertising Services | Google Ads, Social Media Ads | aibizmod",
+  description: "Paid advertising campaign management. Google Ads, social media advertising, and multi-channel campaigns that drive conversions.",
+  keywords: [
+    'paid advertising',
+    'Google Ads',
+    'PPC advertising',
+    'paid search',
+    'social media advertising',
+    'Facebook ads',
+    'LinkedIn advertising',
+    'display advertising',
+    'retargeting campaigns',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/digital-marketing/paid-advertising" },
   openGraph: {
-    title: "Paid Advertising | aibizmod",
-    description: "Google Ads, Meta Ads, and LinkedIn campaign management focused on qualified lead generation and measurable return on ad spend — not just impressions and clicks.",
+    title: "Paid Advertising | Google & Social Ads | aibizmod",
+    description: "Paid advertising campaign management for Google Ads and social media platforms that drive qualified conversions.",
     url: "/services/digital-marketing/paid-advertising",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Paid Advertising",

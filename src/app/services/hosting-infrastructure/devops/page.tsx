@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "DevOps | Hosting & Infrastructure | aibizmod",
-  description: "CI/CD pipeline setup, infrastructure automation, and containerisation services that reduce deployment risk, shorten release cycles, and give development teams a reliable path from code to production.",
+  title: "DevOps Services | CI/CD, Infrastructure Automation | aibizmod",
+  description: "DevOps services including CI/CD pipeline setup, infrastructure automation, containerization, and deployment optimization.",
+  keywords: [
+    'DevOps services',
+    'CI/CD',
+    'continuous integration',
+    'continuous deployment',
+    'Docker',
+    'Kubernetes',
+    'deployment automation',
+    'infrastructure automation',
+    'pipeline management',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/hosting-infrastructure/devops" },
   openGraph: {
-    title: "DevOps | aibizmod",
-    description: "CI/CD pipeline setup, infrastructure automation, and containerisation services that reduce deployment risk, shorten release cycles, and give development teams a reliable path from code to production.",
+    title: "DevOps Services | CI/CD Pipelines | aibizmod",
+    description: "DevOps services for CI/CD pipeline setup and infrastructure automation.",
     url: "/services/hosting-infrastructure/devops",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "DevOps",

@@ -1,8 +1,10 @@
 import type { MetadataRoute } from 'next';
 import { blogPosts } from '@/data/blog';
+import { services } from '@/data/services';
 
 const BASE = 'https://aibizmod.com';
 
+// Core static routes plus each individual service page
 const staticRoutes = [
   '',
   '/about',
@@ -10,14 +12,8 @@ const staticRoutes = [
   '/contact',
   '/faq',
   '/services',
-  '/services/automation',
-  '/services/customer-exp-management',
-  '/services/digital-marketing',
-  '/services/hosting-infrastructure',
-  '/services/it-consulting-it-services',
-  '/services/mobile-app-development',
-  '/services/software-development',
-  '/services/web-development',
+  // Dynamically include every service sub‑page
+  ...services.map((s) => `/services/${s.id}`),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

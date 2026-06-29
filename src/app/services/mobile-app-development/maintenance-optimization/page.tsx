@@ -2,15 +2,28 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Maintenance & Optimization | Mobile App Development | aibizmod",
-  description: "App performance optimisation, bug fixes, OS compatibility updates, and ongoing maintenance services that keep your mobile app stable, fast, and compliant with App Store requirements after launch.",
+  title: "App Maintenance & Optimization Services | App Support | aibizmod",
+  description: "Post-launch mobile app maintenance, updates, bug fixes, performance optimization, and feature development for iOS and Android applications.",
+  keywords: [
+    'app maintenance',
+    'app support services',
+    'app optimization',
+    'mobile app updates',
+    'bug fix services',
+    'app performance optimization',
+    'app management services',
+    'app lifecycle support',
+    'mobile app support',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/mobile-app-development/maintenance-optimization" },
   openGraph: {
-    title: "Maintenance & Optimization | aibizmod",
-    description: "App performance optimisation, bug fixes, OS compatibility updates, and ongoing maintenance services that keep your mobile app stable, fast, and compliant with App Store requirements after launch.",
+    title: "App Maintenance & Optimization | App Support | aibizmod",
+    description: "Post-launch mobile app maintenance, updates, and optimization services to keep your iOS and Android apps running smoothly.",
     url: "/services/mobile-app-development/maintenance-optimization",
   },
 };
+
+
 
 const data: SubservicePageData = {
   name: "Maintenance & Optimization",

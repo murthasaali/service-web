@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Cloud & Infrastructure | IT Consulting & IT Services | aibizmod",
-  description: "Cloud services advisory, migration planning, and architecture consulting that helps organisations design, adopt, and optimise cloud infrastructure aligned to their technical and business requirements.",
+  title: "Cloud Infrastructure Consulting | AWS, Azure, GCP Migration | aibizmod",
+  description: "Cloud services advisory and migration planning. Help organisations design, adopt, and optimise cloud infrastructure on AWS, Azure, and GCP aligned to business requirements.",
+  keywords: [
+    'cloud infrastructure',
+    'cloud consulting',
+    'AWS consulting',
+    'Azure consulting',
+    'cloud migration',
+    'cloud strategy',
+    'infrastructure consulting',
+    'cloud architecture',
+    'multi-cloud strategy',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/it-consulting-it-services/cloud-infrastructure" },
   openGraph: {
-    title: "Cloud & Infrastructure | aibizmod",
-    description: "Cloud services advisory, migration planning, and architecture consulting that helps organisations design, adopt, and optimise cloud infrastructure aligned to their technical and business requirements.",
+    title: "Cloud Infrastructure | Cloud Migration & Strategy | aibizmod",
+    description: "Cloud services advisory and migration planning to help organisations design and optimise cloud infrastructure.",
     url: "/services/it-consulting-it-services/cloud-infrastructure",
   },
 };

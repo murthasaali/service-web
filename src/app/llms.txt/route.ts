@@ -2,12 +2,17 @@
 // When routes are added or removed from the sitemap, update this file too.
 
 import { blogPosts } from '@/data/blog';
+import { services } from '@/data/services';
 
 const BASE = 'https://aibizmod.com';
 
 function buildContent(): string {
   const blogUrls = blogPosts
     .map((post) => `${BASE}/blog/${post.slug}`)
+    .join('\n');
+
+  const subServiceUrls = services
+    .map((s) => `${BASE}${s.href}`)
     .join('\n');
 
   return `# aibizmod
@@ -33,6 +38,10 @@ ${BASE}/services/hosting-infrastructure
 ${BASE}/services/automation
 ${BASE}/services/customer-exp-management
 ${BASE}/services/it-consulting-it-services
+
+## Sub‑service pages
+
+${subServiceUrls}
 
 ## Blog posts
 

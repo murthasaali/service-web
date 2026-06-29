@@ -2,12 +2,23 @@ import type { Metadata } from "next";
 import SubservicePageLayout, { type SubservicePageData } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Email & Lifecycle Marketing | Digital Marketing | aibizmod",
-  description: "Email campaigns, marketing automation, lead nurturing, and customer retention flows that move prospects through the buying process and keep customers coming back.",
+  title: "Email Marketing & Lifecycle Campaigns | Marketing Automation | aibizmod",
+  description: "Email marketing and lifecycle campaign services. Marketing automation, lead nurturing, and customer retention flows that move prospects through the buying process.",
+  keywords: [
+    'email marketing',
+    'marketing automation',
+    'email campaigns',
+    'lifecycle marketing',
+    'lead nurturing',
+    'customer retention',
+    'email automation',
+    'email segmentation',
+    'nurture sequences',
+  ],
   alternates: { canonical: "https://aibizmod.com/services/digital-marketing/email-lifecycle-marketing" },
   openGraph: {
-    title: "Email & Lifecycle Marketing | aibizmod",
-    description: "Email campaigns, marketing automation, lead nurturing, and customer retention flows that move prospects through the buying process and keep customers coming back.",
+    title: "Email & Lifecycle Marketing | Marketing Automation | aibizmod",
+    description: "Email campaigns and marketing automation that move prospects through the buying process and keep customers coming back.",
     url: "/services/digital-marketing/email-lifecycle-marketing",
   },
 };
