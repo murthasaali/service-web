@@ -4,7 +4,7 @@ import SubservicePageLayout, {
 } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "AI-Powered Apps | AI Automation | aibizmod",
+  title: "AI-Powered Apps | AI & Automation | aibizmod",
   description:
     "Build applications where AI models handle the core logic, from content generation and data analysis to recommendations and user interactions, rather than being an add-on feature.",
   alternates: { canonical: "https://aibizmod.com/services/automation/ai-powered-apps" },
@@ -18,30 +18,30 @@ export const metadata: Metadata = {
 
 const data: SubservicePageData = {
   name: "AI-Powered Apps",
-  parentName: "AI Automation",
+  parentName: "AI & Automation",
   parentSlug: "automation",
   slug: "ai-powered-apps",
   tagline:
-    "Build applications where AI models handle the core logic, from content generation and data analysis to recommendations and user interactions, rather than being bolted on as a feature.",
+    "• Custom web and mobile applications, specialized model fine-tuning and secure deployment pipelines built around AI-first architectures\nEach application is intended to:\n• Drive user experiences and backend workflows directly using AI logic\n• Train and improve predictions continuously by capturing live user feedback\n• Host models within your secure cloud infrastructure to ensure full data ownership",
   heroImage:
     "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
     challenge:
-      "Many businesses want to add AI to their product but treat it as a feature layer on top of existing architecture. This leads to fragile integrations, inconsistent user experience, and AI capabilities that do not actually change how the product works. The result is an AI button rather than an AI product.",
+      "Adding AI to an existing app often results in a generic 'AI chatbot button' that feels disconnected and performs slowly. Treating AI as a superficial feature rather than a core architectural component leads to high API costs, latency lag, and fragile integrations.",
     challengePoints: [
-      "AI added as a feature after the product was designed without it in the architecture",
-      "Slow, unreliable inference because the AI layer is not properly integrated into the stack",
-      "No mechanism to collect user feedback and improve model performance over time",
-      "Difficulty knowing whether the AI is actually working correctly in production"
+      "AI features built on top of database schemas that weren't designed to support them.",
+      "Slow user interfaces caused by poorly routed model API requests.",
+      "No way to capture user feedback to improve model outputs after launch.",
+      "Lack of monitoring to detect when model quality degrades in production.",
     ],
     solution:
-      "We design applications with AI at the functional core, where the model drives the experience rather than supplementing it. The architecture accounts for inference latency, output variability, model versioning, and feedback loops from the start rather than as afterthoughts.",
+      "We design applications around the model's data requirements from day one. Our systems handle latency with background queuing, manage model updates cleanly, and capture user actions automatically to train and improve outputs.",
     solutionPoints: [
-      "AI-first application architecture designed around inference as the primary operation",
-      "Feedback collection built in at every AI interaction for continuous improvement",
-      "Monitoring and alerting configured from day one for production AI behaviour",
-      "Clear separation between model serving and application logic for maintainability"
+      "Inference-first layouts designed to handle model outputs natively.",
+      "Feedback loops that capture how users interact with AI outputs.",
+      "Operational dashboards to trace response latency and error rates.",
+      "Decoupled backend logic that separates model hostings from standard database queries.",
     ],
   },
 
@@ -50,37 +50,37 @@ const data: SubservicePageData = {
       icon: "code2",
       title: "AI-First App Development",
       description:
-        "Design and build web or mobile applications where AI inference is a first-class operation in the architecture, not an afterthought added to an existing codebase.",
+        "We architect web and mobile apps where data loops and AI model responses are integrated directly into the core codebase.",
     },
     {
       icon: "cpu",
       title: "Model Fine-tuning",
       description:
-        "Adapt foundation models to your domain, vocabulary, and use case using supervised fine-tuning on your proprietary dataset for specialised, domain-relevant performance.",
+        "We fine-tune open-source models on your proprietary datasets, teaching them your technical terminology and formatting rules.",
     },
     {
       icon: "settings",
       title: "AI Integration into Existing Products",
       description:
-        "Add well-architected AI capabilities to your current application, including API integration, caching, fallback handling, and user-facing output design.",
+        "We add model capabilities into your current software, configuring query caching and backup rules to protect the user experience.",
     },
     {
       icon: "server",
       title: "Custom Model Deployment",
       description:
-        "Host and serve models on your own cloud infrastructure with proper autoscaling, version management, health checks, and endpoint monitoring.",
+        "We deploy models within your cloud network, setting up automatic scaling rules and health monitors.",
     },
     {
       icon: "refreshCw",
       title: "Feedback Loop Architecture",
       description:
-        "Build the feedback capture, labelling workflows, and retraining pipelines that allow your AI system to improve based on real-world usage data.",
+        "We write data capture rules to log user ratings and corrections, building automatic pipelines to retrain models.",
     },
     {
       icon: "activity",
       title: "Production Monitoring",
       description:
-        "Instrument AI endpoints with latency tracking, output quality metrics, error rate alerts, and drift detection to maintain reliability in production.",
+        "We track API latency, token consumption, and response drift to keep your AI features running reliably post-launch.",
     },
   ],
 
@@ -89,37 +89,37 @@ const data: SubservicePageData = {
       industry: "EdTech",
       title: "Adaptive Learning Platform",
       description:
-        "A learning application uses AI to assess a student's performance in real time and adjusts the difficulty and content of the next exercise to match their current level.",
+        "An educational app tracks student answers in real time, dynamically serving the next lesson based on their actual pace.",
     },
     {
       industry: "Legal Tech",
       title: "Contract Analysis Tool",
       description:
-        "A SaaS product for legal teams integrates an LLM that reads uploaded contracts, identifies non-standard clauses, and produces a structured risk summary for review.",
+        "A legal SaaS platform processes uploaded PDFs to flag non-standard clauses and compile risk summaries.",
     },
     {
       industry: "Healthcare Tech",
       title: "Clinical Decision Support Tool",
       description:
-        "A clinical application integrates an AI model trained on clinical guidelines that surfaces relevant protocols and flagged interactions based on patient data entered by clinicians.",
+        "A clinic portal reads patient diagnostic inputs, cross-referencing medical guidelines to highlight potential prescription risks.",
     },
     {
       industry: "Retail",
       title: "Visual Search Application",
       description:
-        "A retail app allows customers to upload a photo of an item they like. A vision model identifies the style and attributes and returns matching products from the catalogue.",
+        "A retail app lets users upload clothing photos, running a vision model to return matching items from the warehouse.",
     },
     {
       industry: "Content",
       title: "Personalised Content Recommendation App",
       description:
-        "A media platform uses a recommendation model trained on engagement data to serve each user a personalised feed rather than a chronological or editorially curated list.",
+        "A media platform uses a recommendation model to serve custom feeds based on individual user clicks.",
     },
     {
       industry: "Finance",
       title: "Automated Portfolio Report Generation",
       description:
-        "An investment platform generates personalised monthly reports for each client using their holdings data and an LLM that produces narrative commentary on portfolio performance.",
+        "An asset manager tool compiles monthly client updates, writing commentary based on historical portfolio performances.",
     },
   ],
 
@@ -142,51 +142,51 @@ const data: SubservicePageData = {
     {
       title: "AI as a Core Function",
       description:
-        "When AI is designed into the application architecture from the start, it becomes reliable and central rather than fragile and peripheral.",
+        "Ensure your AI features run fast and reliably by designing them into your database schema and routing rules from day one.",
     },
     {
       title: "Domain-Specific Performance",
       description:
-        "Fine-tuned models significantly outperform general-purpose models on domain-specific tasks, producing more accurate and relevant outputs for your users.",
+        "Get highly accurate outputs tailored to your industry by training models on your specific documentation.",
     },
     {
       title: "Improving Over Time",
       description:
-        "Feedback loops and retraining pipelines mean the AI component of your product improves with real-world usage rather than remaining static after launch.",
+        "Build self-improving software that captures user corrections and retrains its models to get smarter over time.",
     },
     {
       title: "Production-Ready from Launch",
       description:
-        "Monitoring, fallbacks, and error handling are built in from the start, so the application is production-ready rather than requiring reactive fixes after go-live.",
+        "Deploy software equipped with automatic backup endpoints and error tracking, preventing outages on day one.",
     },
     {
       title: "Lower Long-Term Costs",
       description:
-        "Custom-deployed models have predictable infrastructure costs at scale compared to per-token API pricing that grows linearly with usage volume.",
+        "Host models on your own servers to pay stable infrastructure costs rather than paying per-token API fees that scale with traffic.",
     },
     {
       title: "Full Data Ownership",
       description:
-        "Applications using self-hosted or custom-deployed models keep all user data and interaction logs within your own infrastructure.",
+        "Keep all user inputs and query logs inside your own databases, complying with internal security and compliance policies.",
     },
   ],
 
   faqs: [
     {
       q: "Can AI capabilities be added to our existing application?",
-      a: "Yes. We assess your current application architecture and design an integration approach that adds AI capabilities cleanly without requiring a full rebuild. This typically involves adding an API layer, designing the inference call pattern, handling latency and error states in the UI, and implementing feedback collection.",
+      a: "Yes. We review your database setup and backend endpoints to insert AI features without a full rebuild. We focus on caching model responses, handling query latency in the UI, and configuring backup rules.",
     },
     {
       q: "Do you build custom models or use existing foundation models like GPT or Claude?",
-      a: "Both, depending on what the use case requires. Most business applications are best served by prompting or fine-tuning a foundation model rather than training from scratch, which would require far more data and compute. We use foundation models as the base and apply fine-tuning, RAG, or structured prompting depending on the accuracy and performance needs.",
+      a: "We do both. For most projects, we use pre-trained base models (like Claude or Llama) and customize them using RAG or fine-tuning. This is much faster and cheaper than training a model from scratch.",
     },
     {
       q: "How do you handle AI errors or incorrect outputs in production?",
-      a: "We build explicit error handling into the application for AI outputs, including confidence thresholds, fallback responses when inference fails, and UI patterns that communicate uncertainty to users rather than presenting AI output as definitive. High-stakes outputs include a review step before they reach end users.",
+      a: "We configure validation checks on model outputs. If a response fails checks or if the API drops, the app falls back to standard templates or cues a retry. We also design review screens for high-priority outputs.",
     },
     {
       q: "What does monitoring look like after the app is deployed?",
-      a: "We instrument AI endpoints with latency metrics, error rates, output quality samples, and usage volumes. Alerts fire when latency degrades or error rates rise above baseline. We also configure drift detection to flag when model outputs are deviating from expected patterns, which typically indicates the data the model was trained on no longer reflects real-world inputs.",
+      a: "We set up tracking for latency, API errors, and token costs. We also monitor for 'data drift'—meaning we check if incoming user queries have changed compared to the data used during training.",
     },
   ],
 };

@@ -151,7 +151,7 @@ export default function ProblemSolutionCard({
                 Identifying the hurdles
               </h3>
               
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm mb-8 line-clamp-2" title={challenge}>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm mb-8" title={challenge}>
                 {challenge}
               </p>
             </div>
@@ -202,7 +202,7 @@ export default function ProblemSolutionCard({
                 Our approach & solution
               </h3>
               
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm mb-8 line-clamp-2" title={solution}>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm mb-8" title={solution}>
                 {solution}
               </p>
             </div>

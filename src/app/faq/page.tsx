@@ -43,9 +43,9 @@ const faqs = [
       "Yes. We can set up hosting, CI/CD, monitoring, infrastructure configuration, database deployment, backups, and ongoing operational support.",
   },
   {
-    question: "Do you offer automation and AI-assisted workflows?",
+    question: "Do you offer AI & automation services?",
     answer:
-      "Yes. We design automations that reduce manual work, connect tools, route data, generate reports, and improve team productivity with practical AI-assisted workflows.",
+      "Yes. We build AI agents, machine learning models, generative AI pipelines, and workflow automations that reduce manual work, connect tools, route data, and improve team productivity with practical AI-powered systems.",
   },
   {
     question: "How long does a typical project take?",
@@ -87,12 +87,12 @@ const faqs = [
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Answers to common questions about aibizmod technology services, delivery process, support, automation, and product development.",
+    "Answers to common questions about aibizmod technology services, delivery process, support, AI automation, and product development.",
   alternates: { canonical: 'https://aibizmod.com/faq' },
   openGraph: {
     title: "FAQ | aibizmod",
     description:
-      "Answers to common questions about aibizmod technology services, delivery process, support, automation, and product development.",
+      "Answers to common questions about aibizmod technology services, delivery process, support, AI automation, and product development.",
     url: "/faq",
   },
 };

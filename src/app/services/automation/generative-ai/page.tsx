@@ -4,7 +4,7 @@ import SubservicePageLayout, {
 } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Generative AI | AI Automation | aibizmod",
+  title: "Generative AI | AI & Automation | aibizmod",
   description:
     "Integrate large language models into your product or internal operations to automate content generation, document processing, and decision support at scale.",
   alternates: { canonical: "https://aibizmod.com/services/automation/generative-ai" },
@@ -18,30 +18,30 @@ export const metadata: Metadata = {
 
 const data: SubservicePageData = {
   name: "Generative AI",
-  parentName: "AI Automation",
+  parentName: "AI & Automation",
   parentSlug: "automation",
   slug: "generative-ai",
   tagline:
-    "Integrate large language models into your product or internal operations to handle content generation, document processing, and decision support at the scale your team cannot match manually.",
+    "• Custom LLM assistants, Retrieval-Augmented Generation (RAG) search tools and automated text processors built to handle language-heavy workflows\nEach tool is intended to:\n• Retrieve accurate answers from your private documents with precise page citations\n• Read, classify and summarize complex multi-page contracts and specifications in seconds\n• Draft project records, change orders and technical updates based on your actual data",
   heroImage:
-    "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1000&q=80&auto=format&fit=crop",
+    "/services/automation/generative-ai.jpg",
 
   solves: {
     challenge:
-      "Businesses produce large volumes of documents, queries, and communications that require language understanding but do not need human creativity. Support tickets need summarising, reports need drafting, product descriptions need generating from data sheets, and customer emails need appropriate replies. Doing this at scale requires either significant headcount or a different approach.",
+      "Most organizations spend hours daily reading, sorting, and summarizing text files. Managing contracts, compiling weekly reports, answering repetitive RFIs, and routing support tickets takes up valuable team hours that could be spent on actual client delivery.",
     challengePoints: [
-      "Manual content production that takes hours per piece across multiple staff members",
-      "Inconsistent output quality when different team members handle similar tasks",
-      "Documents that need reading, extracting, and classifying before the real work can begin",
-      "No way to make internal knowledge searchable or accessible to teams at query time"
+      "Hours lost drafting standard project updates and email summaries manually.",
+      "Inconsistent document formats and varying quality when handled by different teams.",
+      "Contracts and RFIs sitting in queues waiting for manual review.",
+      "Team members unable to search across old project reports or SOP archives.",
     ],
     solution:
-      "We identify which language tasks in your business are repetitive and rule-bound, then build generative AI pipelines that handle them reliably, with appropriate guardrails, source attribution, and human review checkpoints where the stakes require it.",
+      "We build generative AI pipelines that connect directly to your databases. Our systems parse documents, extract key details, and draft responses based on your actual data, while enforcing strict review checkpoints for safety.",
     solutionPoints: [
-      "RAG systems that answer questions from your actual internal documents",
-      "LLM pipelines for document classification, summarisation, and extraction",
-      "Custom GPT assistants configured for your specific use case",
-      "API integration into your existing applications and workflows"
+      "RAG engines that search and answer queries using only your private files.",
+      "Automated pipelines that read PDFs, summarize contracts, and log parameters.",
+      "Custom AI assistants prompted to match your tone and operational constraints.",
+      "Direct API connections that link models into your current CRM and databases.",
     ],
   },
 
@@ -50,37 +50,49 @@ const data: SubservicePageData = {
       icon: "bot",
       title: "Custom GPT Development",
       description:
-        "Design and build custom GPT assistants or Claude-based agents configured specifically for your use case, with system prompts, context, and behavioural guardrails.",
+        "We configure customized LLM assistants with specific system prompts, operational guardrails, and context boundaries.",
     },
     {
       icon: "database",
       title: "RAG System Development",
       description:
-        "Build Retrieval-Augmented Generation systems that search your indexed documents and return answers grounded in your actual content rather than general training data.",
+        "We build RAG architectures that connect model queries directly to your indexed document database to prevent hallucinated answers.",
     },
     {
       icon: "code2",
       title: "LLM Application Integration",
       description:
-        "Embed LLM capabilities into your existing web applications, internal tools, or workflows via API, with proper authentication and rate limit handling.",
+        "We connect language models straight into your internal dashboards, CRM portals, or custom apps via secure API credentials.",
     },
     {
       icon: "pencil",
       title: "Prompt Engineering",
       description:
-        "Design robust, reliable prompt systems that produce consistent outputs across different input variations, reducing hallucination and improving answer quality.",
+        "We structure robust prompt templates and evaluation sets to ensure outputs remain consistent and formatted correctly.",
     },
     {
       icon: "shield",
       title: "Enterprise AI Deployment",
       description:
-        "Deploy AI solutions within your existing cloud infrastructure with access controls, audit logging, and data handling that meets your compliance requirements.",
+        "We host models within your cloud tenant, enforcing strict user access parameters, encryption keys, and auditable runtime logs.",
     },
     {
       icon: "workflow",
       title: "AI Output Pipelines",
       description:
-        "Chain AI-generated outputs into downstream processes automatically, from draft content into review queues to classified documents into correct filing destinations.",
+        "We build pipelines that route LLM outputs directly into review dashboards, database tables, or messaging threads.",
+    },
+    {
+      icon: "cpu",
+      title: "Domain-Specific Fine-Tuning",
+      description:
+        "We fine-tune open-source models to understand your sector's acronyms, jargon, and specific operational rules.",
+    },
+    {
+      icon: "fileText",
+      title: "Automated Document Ingestion & Summarisation",
+      description:
+        "We set up automated ingestion models that scan multi-page contracts to pull values and flag liability terms in seconds.",
     },
   ],
 
@@ -89,37 +101,61 @@ const data: SubservicePageData = {
       industry: "Legal",
       title: "Contract Summarisation and Clause Extraction",
       description:
-        "LLM pipelines process incoming contracts, extract key clause types, flag non-standard terms, and produce structured summaries for review by the legal team.",
+        "An AI pipeline parses incoming contracts, pulls critical clauses, and compiles a structured summary for legal review.",
     },
     {
       industry: "Healthcare",
       title: "Clinical Note Structuring",
       description:
-        "Unstructured clinical notes are processed by an AI pipeline that identifies diagnoses, medications, and follow-up actions, converting free text into structured records.",
+        "A text processing model extracts clinical details from unstructured doctor notes and logs them directly to patient records.",
     },
     {
       industry: "E-commerce",
       title: "Product Description Generation from Data Sheets",
       description:
-        "Product specifications from suppliers are fed into an LLM pipeline that generates SEO-optimised product descriptions at scale, removing manual copywriting.",
+        "Supplier spec sheets are parsed by a model that generates formatted, SEO-friendly product descriptions at scale.",
     },
     {
       industry: "Finance",
       title: "Earnings Report Analysis",
       description:
-        "Quarterly earnings documents are indexed and queried by an internal AI assistant that answers analyst questions by citing specific passages from the source material.",
+        "Earnings PDFs are indexed in a secure database so analysts can retrieve answers with exact page citations.",
     },
     {
       industry: "Property",
       title: "Tenancy Document Processing",
       description:
-        "Incoming tenancy applications are processed by an AI that extracts key applicant data, checks completeness, and populates the property management system.",
+        "An agent reads incoming applications, extracts employment and income details, and updates the management system.",
     },
     {
       industry: "Customer Support",
       title: "Support Ticket Triage and Response Drafting",
       description:
-        "Incoming support tickets are classified by topic and urgency. The AI drafts a response based on similar resolved tickets and knowledge base articles for agent review.",
+        "An AI triages incoming support tickets and drafts responses based on knowledge base articles for helpdesk review.",
+    },
+    {
+      industry: "Construction",
+      title: "Instant Contract Risk Auditing",
+      description:
+        "Multi-page technical contracts are scanned by a model to instantly flag liability clauses or missing compliance terms.",
+    },
+    {
+      industry: "Infrastructure",
+      title: "Intelligent Knowledge Retrieval",
+      description:
+        "Engineering teams query past project files and manual guides using simple queries to find past solutions in seconds.",
+    },
+    {
+      industry: "Construction",
+      title: "Automated Technical Draft Engineering",
+      description:
+        "Models write drafts of technical project reports, change orders, and daily logs based on past site data.",
+    },
+    {
+      industry: "Infrastructure",
+      title: "Smart RFI Processing",
+      description:
+        "Client RFIs are automatically matched to historical project logs, drafting technical answers for engineer review.",
     },
   ],
 
@@ -141,51 +177,63 @@ const data: SubservicePageData = {
     {
       title: "Content at Volume",
       description:
-        "Language tasks that previously required hours of staff time run as automated pipelines, producing consistent output at any scale without additional headcount.",
+        "Handle heavy volumes of text reviews and data extraction without adding to your team's administrative load.",
     },
     {
       title: "Knowledge Made Searchable",
       description:
-        "RAG systems turn static document archives into queryable knowledge bases, so staff get precise answers in seconds rather than searching manually.",
+        "Index PDF archives and project logs so team members can retrieve specific answers instantly with simple search queries.",
     },
     {
       title: "Consistent Quality Standards",
       description:
-        "Prompted LLMs apply the same logic and output format every time, reducing the quality variation that comes from different staff handling similar tasks.",
+        "Ensure consistent formatting and parameters across drafts, avoiding variation when different staff handle tasks.",
     },
     {
       title: "Source-Grounded Answers",
       description:
-        "RAG architecture grounds responses in your actual documents rather than general training data, reducing hallucinations and supporting answer citations.",
+        "Ground your answers in actual company documents, preventing fabricated outputs and providing exact citations for verification.",
     },
     {
       title: "Faster Document Throughput",
       description:
-        "Document processing pipelines handle intake, classification, extraction, and routing without manual handling, clearing backlogs and reducing turnaround time.",
+        "Process inbound contracts, applications, and logs immediately, avoiding backlogs and speeding up client delivery.",
     },
     {
       title: "Embedded in Existing Tools",
       description:
-        "AI capabilities are integrated into your current applications rather than replacing them, so staff work in familiar environments with AI handling the language layer.",
+        "Deliver model answers directly to your current project boards, CRM, or Slack channels, keeping your existing tools in place.",
     },
   ],
 
   faqs: [
     {
       q: "What is the difference between a fine-tuned model and a RAG system?",
-      a: "Fine-tuning adjusts the model's weights using your data, changing how it responds at a foundational level. This is expensive and mostly useful for style adaptation or specialised domain language. RAG retrieves relevant documents from an index at query time and provides them as context, without changing the base model. RAG is better for most business use cases where the data changes frequently or needs to stay up to date.",
+      a: "Fine-tuning updates the model's inner weights with your data, which changes how it behaves. This is costly and best for adapting style or jargon. RAG keeps the model the same, but pulls relevant document snippets from a secure index at search time. RAG is much better for business processes where data updates regularly.",
     },
     {
       q: "How do you prevent the AI from giving wrong or fabricated answers?",
-      a: "For RAG systems, we use strict source-grounding: the model only answers based on retrieved documents and indicates when no relevant content was found. We configure appropriate confidence thresholds, add human review checkpoints for high-stakes outputs, and test systematically with adversarial inputs to identify failure modes before deployment.",
+      a: "We configure RAG systems with strict grounding: the model is forced to search only your supplied files, must cite the exact page or section, and will report 'answer not found' if the data is missing instead of generating a guess. We also add approval screens for high-stakes actions.",
     },
     {
       q: "Is our company data kept private when we use these models?",
-      a: "This depends on the deployment model we use. API calls to OpenAI or Anthropic do not use your data to train future models under their business agreements. For highest sensitivity requirements, we can deploy open-source models like Llama within your own cloud infrastructure, ensuring your data never leaves your environment.",
+      a: "Yes. Enterprise API contracts with OpenAI and Anthropic state they do not use your queries to train future models. For highly sensitive operations, we deploy open-source models like Llama within your private cloud environment so data never leaves your network.",
     },
     {
       q: "Can the AI output feed directly into our existing software?",
-      a: "Yes. We build structured output pipelines where the LLM produces JSON or formatted data rather than free text, which then feeds directly into your application logic, CRM, document management system, or workflow automation.",
+      a: "Yes. We program the models to output structured data formats (like JSON) rather than plain text. This allows your existing software to read and parse the details directly into your database.",
+    },
+    {
+      q: "Is there a risk that our private contracts or corporate secrets will leak into public AI models?",
+      a: "No. We connect models within a secure enterprise environment. RAG storage is kept separate from public model training cycles, and all data is encrypted. Your documents are never used to train public LLM models.",
+    },
+    {
+      q: "How do you guarantee the AI won't hallucinate or invent technical clauses when analysing a contract?",
+      a: "We enforce strict grounding rules: the model is forced to search only your supplied files, must cite the exact page or section, and will report 'answer not found' if the data is missing instead of generating a guess.",
+    },
+    {
+      q: "Can the LLM understand highly specific engineering acronyms, regional regulations, and legal terminology?",
+      a: "Yes. Standard AI models struggle with complex jargon. We configure your RAG index with custom glossaries and engineering documentation, matching the context to your industry's specific vocabulary and rules.",
     },
   ],
 };

@@ -116,10 +116,11 @@ const serviceItems: {
   },
   {
     icon: Zap,
-    name: "Automation",
-    desc: "Automate routing & CRM sync",
+    name: "AI & Automation",
+    desc: "AI agents, workflows & automation",
     href: "/services/automation",
   },
+
   {
     icon: Users,
     name: "Customer Experience",

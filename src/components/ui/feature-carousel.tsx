@@ -355,12 +355,12 @@ export function FeatureCarousel({
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
-                        className="absolute inset-x-0 bottom-0 p-6 lg:p-8 pt-24 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end pointer-events-none"
+                        className="absolute inset-x-0 bottom-0 p-6 lg:p-8 pt-28 bg-gradient-to-t from-black/95 via-black/65 to-transparent flex flex-col justify-end pointer-events-none"
                       >
                         <div className="bg-white/95 text-slate-800 px-3.5 py-1.5 rounded-full text-[10px] font-semibold uppercase tracking-[0.15em] w-fit shadow-sm mb-3 border border-slate-100/80">
                           {index + 1} • {feature.label}
                         </div>
-                        <p className="text-white font-normal text-xl md:text-2xl leading-tight drop-shadow-md tracking-tight">
+                        <p className="text-white font-semibold text-lg md:text-xl leading-snug tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
                           {feature.description}
                         </p>
                         {feature.deliverables && feature.deliverables.length > 0 && (
@@ -379,7 +379,7 @@ export function FeatureCarousel({
                                   hidden: { opacity: 0, x: -10 },
                                   visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 300, damping: 25 } }
                                 }}
-                                className="flex items-start gap-2 text-xs text-white/90 leading-tight"
+                                className="flex items-start gap-2 text-xs font-medium text-slate-100 leading-tight drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]"
                               >
                                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0 mt-1.5" />
                                 <span>{item}</span>

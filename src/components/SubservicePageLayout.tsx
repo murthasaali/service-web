@@ -322,6 +322,76 @@ function FAQItem({ faq }: { faq: SubserviceFAQ }) {
 
 // ─── Layout ───────────────────────────────────────────────────────────────────
 
+// Helper to render tagline with styled cyan bullets if it's formatted as a bullet list
+function renderTagline(tagline: string) {
+  let lines: string[] = [];
+  if (tagline.includes("•")) {
+    lines = tagline.split("\n");
+  } else {
+    // Split on periods followed by spaces, ignoring trailing period
+    const rawLines = tagline.split(/\. (?=[A-Z0-9])/);
+    lines = rawLines.map((line, idx) => {
+      let trimmed = line.trim();
+      if (idx === rawLines.length - 1 && trimmed.endsWith(".")) {
+        trimmed = trimmed.slice(0, -1);
+      }
+      return "• " + trimmed;
+    });
+  }
+
+  return (
+    <div className="space-y-3">
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes breathe-glow {
+          0%, 100% {
+            filter: drop-shadow(0 0 1px rgba(6, 182, 212, 0.4));
+            opacity: 0.65;
+          }
+          50% {
+            filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.95));
+            opacity: 1;
+          }
+        }
+        .animate-breathe-glow {
+          animation: breathe-glow 2.2s ease-in-out infinite;
+        }
+      `}} />
+      {lines.map((line, idx) => {
+        const isBullet = line.trim().startsWith("•");
+        const content = isBullet ? line.replace(/^[•\s]+/, "").trim() : line;
+        
+        if (isBullet) {
+          return (
+            <div key={idx} className="flex items-start gap-3.5">
+              <svg
+                className="h-3.5 w-3.5 text-cyan-500 mt-1.5 shrink-0 select-none animate-breathe-glow"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={3.5}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
+              <span className="text-slate-600 leading-7">{content}</span>
+            </div>
+          );
+        } else {
+          return (
+            <p key={idx} className="mt-5 first:mt-0 font-semibold text-slate-800 tracking-wide text-xs uppercase tracking-[0.1em] text-cyan-700/90 pl-[2px]">
+              {content}
+            </p>
+          );
+        }
+      })}
+    </div>
+  );
+}
+
 export default function SubservicePageLayout({ data }: { data: SubservicePageData }) {
   const prefersReduced = useReducedMotion();
 
@@ -381,24 +451,11 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
                     {data.name}
                   </h1>
 
-                  {data.heroBullets && data.heroBullets.length > 0 ? (
-                    <ul
-                      className="mt-6 max-w-xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md space-y-2 text-slate-600"
-                    >
-                      {data.heroBullets.map((bullet) => (
-                        <li key={bullet} className="flex items-start gap-3 text-base leading-8 md:text-lg">
-                          <span className="mt-3.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true" />
-                          {bullet}
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p
-                      className="mt-6 max-w-xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md text-base leading-8 md:text-lg"
-                    >
-                      {data.tagline}
-                    </p>
-                  )}
+                  <div
+                    className="mt-6 max-w-xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md text-base leading-8 md:text-lg whitespace-pre-line"
+                  >
+                    {renderTagline(data.tagline)}
+                  </div>
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <Link href="/contact" aria-label="Get a free consultation">

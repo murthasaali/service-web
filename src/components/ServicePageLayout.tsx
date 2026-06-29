@@ -76,7 +76,7 @@ export interface FAQ           { q: string; a: string; }
 export interface ServicePageData {
   name: string;
   tagline: string;
-  heroBullets: [string, string, string, string];
+  heroBullets: string[];
   slug: string;
   iconColor: string; // kept for backwards compat; layout uses text-royal throughout
   overview: { paragraphs: string[]; benefits: string[]; };
@@ -271,16 +271,44 @@ export default function ServicePageLayout({
               </h1>
 
               {/* Hero bullets */}
-              <ul
-                className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md space-y-2"
+              <div
+                className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md space-y-3"
               >
-                {data.heroBullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-3 text-base leading-8 text-slate-600 md:text-lg">
-                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true" />
-                    {bullet}
-                  </li>
+                <style dangerouslySetInnerHTML={{ __html: `
+                  @keyframes breathe-glow {
+                    0%, 100% {
+                      filter: drop-shadow(0 0 1px rgba(6, 182, 212, 0.4));
+                      opacity: 0.65;
+                    }
+                    50% {
+                      filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.95));
+                      opacity: 1;
+                    }
+                  }
+                  .animate-breathe-glow {
+                    animation: breathe-glow 2.2s ease-in-out infinite;
+                  }
+                `}} />
+                {data.heroBullets.map((bullet, idx) => (
+                  <div key={idx} className="flex items-start gap-3.5">
+                    <svg
+                      className="h-3.5 w-3.5 text-cyan-500 mt-1.5 shrink-0 select-none animate-breathe-glow"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3.5}
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                    <span className="text-slate-600 leading-7 text-base md:text-lg">{bullet}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
 
               {/* CTAs */}
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
