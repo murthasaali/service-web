@@ -1,10 +1,11 @@
 "use client";
 
-import { type ReactNode } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { type ReactNode, useState } from "react";
+import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 import {
-  ChevronRight, ChevronDown, CheckCircle, ArrowRight,
+  ChevronRight, CheckCircle, ArrowRight,
   Code2, Database, Server, Network, Cloud, TestTube,
   Smartphone, Monitor, Layers, Eye, Bell, Search,
   Target, FileText, Mail, Megaphone, LineChart,
@@ -134,22 +135,58 @@ function buildServiceSchema(data: ServicePageData) {
 // ─── FAQ accordion ────────────────────────────────────────────────────────────
 
 function FAQItem({ faq }: { faq: FAQ }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <details className="group border-b border-cyan-100 last:border-0">
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 [&::-webkit-details-marker]:hidden">
-        <span className="font-semibold text-sm pr-4 leading-snug text-[#0F172A] transition-colors group-hover:text-cyan-700 group-open:text-cyan-700">
+    <div
+      className={cn(
+        "rounded-xl border cursor-pointer transition-all duration-300 overflow-hidden",
+        isOpen
+          ? "border-[#BAE6FD] bg-[#ECFEFF]/80 shadow-[0_2px_16px_rgba(8,145,178,0.06)]"
+          : "border-[#E0F2FE] bg-white hover:border-[#BAE6FD] hover:bg-[#F0FDFF]"
+      )}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      {/* Question row */}
+      <div className="flex items-center justify-between px-5 py-4 gap-4 select-none">
+        <h3 className={cn(
+          "text-[15.5px] font-medium leading-snug transition-colors duration-200 flex-1",
+          isOpen ? "text-[#0891B2] font-semibold" : "text-[#0F172A]"
+        )}>
           {faq.q}
-        </span>
-        <ChevronDown
-          size={18}
-          aria-hidden="true"
-          className="shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-180 group-open:text-cyan-600"
-        />
-      </summary>
-      <div className="pb-5">
-        <p className="text-sm text-slate-600 leading-relaxed">{faq.a}</p>
+        </h3>
+        {/* Chevron */}
+        <svg
+          width="18" height="18" viewBox="0 0 18 18" fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={cn(
+            "transition-all duration-400 ease-in-out shrink-0",
+            isOpen ? "rotate-180 text-[#0891B2]" : "text-[#94A3B8]"
+          )}
+        >
+          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </div>
-    </details>
+
+      {/* Answer */}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="overflow-hidden"
+          >
+            <div className="px-5 pb-5">
+              <p className="text-[14px] leading-relaxed text-slate-500 font-normal">
+                {faq.a}
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
 
@@ -544,16 +581,30 @@ export default function ServicePageLayout({
         </section>
 
         {/* ── 6. FAQ ──────────────────────────────────────────────────────── */}
-        <section className="py-24 px-6 bg-white">
-          <div className="max-w-3xl mx-auto">
-            <AnimatedSection className="text-center mb-14">
-              <SectionHeading eyebrow="FAQ" heading="Common questions" centered />
-            </AnimatedSection>
+        <section id="faq" className="py-24 px-6 bg-[#F8FEFF] border-t border-[#E0F2FE]">
+          <div className="max-w-6xl mx-auto">
+            <AnimatedSection className="flex flex-col md:flex-row items-start justify-center gap-16">
+              {/* Left Column: Text */}
+              <div className="w-full md:w-[38%] shrink-0 space-y-5 md:sticky md:top-32">
+                <p className="text-cyan-700 text-sm font-semibold uppercase tracking-[0.16em]">Questions Before We Start</p>
+                <h2
+                  className="font-display font-thin text-[#0F172A] text-balance"
+                  style={{
+                    fontSize: "clamp(30px, 4vw, 44px)",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  A Few Things Clients Usually Ask
+                </h2>
+                <p className="text-[15px] text-slate-500 leading-relaxed">
+                  Find answers to common questions about {data.name} solutions, setup procedures, scoping timelines, and deliverables.
+                </p>
+              </div>
 
-            <AnimatedSection delay={0.1}>
-              <div className="rounded-[28px] border border-cyan-100 bg-white/75 px-8 py-2 shadow-[0_18px_55px_rgba(59,130,246,0.10)] backdrop-blur-md">
-                {data.faqs.map((faq) => (
-                  <FAQItem key={faq.q} faq={faq} />
+              {/* Right Column: FAQ Accordion */}
+              <div className="flex-1 w-full space-y-3">
+                {data.faqs.map((faq, index) => (
+                  <FAQItem key={index} faq={faq} />
                 ))}
               </div>
             </AnimatedSection>
