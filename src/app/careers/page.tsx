@@ -8,12 +8,12 @@ import StickyFooterLayout from "@/components/layout/StickyFooterLayout";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Join aibizmod — explore career opportunities in technology consulting, software development, AI automation, and digital growth.",
+    "Join aibizmod — explore career opportunities in technology consulting, software development, AI & automation, and digital growth.",
   alternates: { canonical: "https://aibizmod.com/careers" },
   openGraph: {
     title: "Careers | aibizmod",
     description:
-      "Join aibizmod — explore career opportunities in technology consulting, software development, AI automation, and digital growth.",
+      "Join aibizmod — explore career opportunities in technology consulting, software development, AI & automation, and digital growth.",
     url: "/careers",
   },
 };

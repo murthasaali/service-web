@@ -116,10 +116,11 @@ const serviceItems: {
   },
   {
     icon: Zap,
-    name: "Automation",
-    desc: "Automate routing & CRM sync",
+    name: "AI & Automation",
+    desc: "AI agents, workflows & automation",
     href: "/services/automation",
   },
+
   {
     icon: Users,
     name: "Customer Experience",
@@ -576,7 +577,8 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.95 }}
                       transition={{ duration: 0.2, ease: "easeOut" }}
-                      className="absolute right-0 top-[calc(100%+8px)] z-50 w-[335px] rounded-2xl bg-[#f8f9ff] border border-slate-200/80 shadow-2xl p-4 space-y-4 text-left"
+                      className="absolute right-0 top-[calc(100%+8px)] z-50 w-[335px] rounded-2xl bg-[#f8f9ff] border border-slate-200/80 shadow-2xl p-4 space-y-4 text-left whitespace-normal"
+                      style={{ whiteSpace: "normal" }}
                     >
                       {countries.map((country) => (
                         <div
@@ -607,7 +609,10 @@ export default function Navbar() {
                               </a>
                             </div>
 
-                            <p className="text-[11px] text-slate-400 leading-normal font-sans pt-0.5">
+                            <p 
+                              className="text-[11px] text-slate-400 leading-normal font-sans pt-0.5"
+                              style={{ whiteSpace: "normal", wordBreak: "break-word" }}
+                            >
                               {country.address}
                             </p>
                           </div>
@@ -808,44 +813,48 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="mt-2 w-full rounded-xl bg-white border border-slate-200/80 p-3 space-y-3 overflow-hidden text-left"
+                        className="mt-2 w-full rounded-xl bg-white border border-slate-200/80 p-3 space-y-3 overflow-hidden text-left whitespace-normal"
+                        style={{ whiteSpace: "normal" }}
                       >
                         {countries.map((country) => (
-                          <div
-                            key={country.code}
-                            onClick={() => {
-                              setSelectedCountry(country);
-                              setContactOpen(false);
-                            }}
-                            className="flex items-start gap-3 p-2 rounded-lg transition-all cursor-pointer border bg-transparent border-transparent hover:bg-slate-50 hover:border-slate-100"
-                          >
-                            <span className="text-[18px] select-none mt-0.5 leading-none">{country.flag}</span>
-                            <div className="flex-1 min-w-0 space-y-1">
-                              <div className="flex items-center justify-between">
-                                <a
-                                  href={`tel:${country.phone.replace(/\s+/g, "")}`}
-                                  onClick={(e) => e.stopPropagation()}
-                                  className="font-bold text-[13px] text-slate-800 hover:text-cyan-500 transition-colors"
-                                >
-                                  {country.phone}
-                                </a>
-                                <a
-                                  href={`tel:${country.phone.replace(/\s+/g, "")}`}
-                                  onClick={(e) => e.stopPropagation()}
-                                  className="text-cyan-500 hover:text-cyan-600 p-1 hover:bg-slate-200/50 rounded-full transition-colors"
-                                  aria-label={`Call ${country.code} office`}
-                                >
-                                  <Phone size={12} strokeWidth={2.5} />
-                                </a>
-                              </div>
+                           <div
+                             key={country.code}
+                             onClick={() => {
+                               setSelectedCountry(country);
+                               setContactOpen(false);
+                             }}
+                             className="flex items-start gap-3 p-2 rounded-lg transition-all cursor-pointer border bg-transparent border-transparent hover:bg-slate-50 hover:border-slate-100"
+                           >
+                             <span className="text-[18px] select-none mt-0.5 leading-none">{country.flag}</span>
+                             <div className="flex-1 min-w-0 space-y-1">
+                               <div className="flex items-center justify-between">
+                                 <a
+                                   href={`tel:${country.phone.replace(/\s+/g, "")}`}
+                                   onClick={(e) => e.stopPropagation()}
+                                   className="font-bold text-[13px] text-slate-800 hover:text-cyan-500 transition-colors"
+                                 >
+                                   {country.phone}
+                                 </a>
+                                 <a
+                                   href={`tel:${country.phone.replace(/\s+/g, "")}`}
+                                   onClick={(e) => e.stopPropagation()}
+                                   className="text-cyan-500 hover:text-cyan-600 p-1 hover:bg-slate-200/50 rounded-full transition-colors"
+                                   aria-label={`Call ${country.code} office`}
+                                 >
+                                   <Phone size={12} strokeWidth={2.5} />
+                                 </a>
+                               </div>
 
-                              <p className="text-[10px] text-slate-400 leading-normal font-sans pt-0.5">
-                                {country.address}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </motion.div>
+                               <p 
+                                 className="text-[10px] text-slate-400 leading-normal font-sans pt-0.5"
+                                 style={{ whiteSpace: "normal", wordBreak: "break-word" }}
+                               >
+                                 {country.address}
+                               </p>
+                             </div>
+                           </div>
+                         ))}
+                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>

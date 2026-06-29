@@ -4,12 +4,12 @@ import AnimatedSection from "@/components/common/AnimatedSection";
 import { LogoCloud } from "@/components/ui/logo-cloud-3";
 
 const logos = [
-  { src: "/clients/spacelean.png", alt: "SpaceLean Logo" },
-  { src: "/clients/pmspace.png", alt: "PMSpace Logo" },
-  { src: "/clients/spaceapp.png", alt: "SpaceApp Logo" },
-  { src: "/clients/spacesign.png", alt: "SpaceSign Logo" },
-  { src: "/clients/spacehr.png", alt: "SpaceHR Logo" },
-  { src: "/clients/texastech.svg", alt: "Texas Tech Services Logo" },
+  { src: "/clients/spacelean.png", alt: "SpaceLean company branding logo representing strategic partnership" },
+  { src: "/clients/pmspace.png", alt: "PMSpace brand logo representing corporate collaboration" },
+  { src: "/clients/spaceapp.png", alt: "SpaceApp tech company logo showing client integration" },
+  { src: "/clients/spacesign.png", alt: "SpaceSign enterprise client logo showing platform integration" },
+  { src: "/clients/spacehr.png", alt: "SpaceHR organization logo showing human resource management client" },
+  { src: "/clients/texastech.svg", alt: "Texas Tech Services enterprise logo representing technology sector partner" },
 ];
 
 export default function ClientsSection() {

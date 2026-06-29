@@ -5,8 +5,8 @@
 import { useState } from "react";
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 import {
-  ChevronDown,
   ChevronRight,
   ArrowRight,
   Sparkles,
@@ -179,6 +179,52 @@ function normalizeKey(str: string): string {
     .replace(/\s+/g, ' ');
 }
 
+const FOCUS_RAIL_ALT_MAP: Record<string, string> = {
+  '1441986300917-64674bd600d8': "Modern retail boutique shop interior displaying clothing products and customer service area.",
+  '1555529669-e69e7aa0ba9a': "Organized product display shelves inside a retail store highlighting merchandise.",
+  '1611974789855-9c2a0a7236a3': "Stock market trading computer screens showing financial charts and stock value trends.",
+  '1590283603385-17ffb3a7f29f': "Financial analyst desk showing papers with business growth charts and analytics data.",
+  '1559526324-4b87b5e36e44': "Business planning documents with graphs detailing investment returns and financial metrics.",
+  '1554224155-6726b3ff858f': "Auditor reviewing corporate financial accounting documents on a tablet.",
+  '1454165804606-c3d57bc86b40': "Financial services advisor analyzing business metrics and key growth indicators.",
+  '1519389950473-47ba0277781c': "Collaborative sales team presenting revenue growth data on a laptop screen.",
+  '1579684385127-1ef15d508118': "Professional surgical medical team performing a procedure in a hospital operating room.",
+  '1576091160550-2173dba999ef': "Healthcare practitioner viewing patient medical records on a digital tablet in a clinic.",
+  '1571019614242-c5c5dee9f50b': "Athlete lifting a barbell close-up demonstrating physical fitness training.",
+  '1517838277536-f5f99be501cd': "Group of people training in a fitness studio with instructor guidance.",
+  '1563013544-824ae1b704d3': "Customer opening a delivered cardboard shipping box containing retail ecommerce purchases.",
+  '1556742049-0cfed4f6a45d': "Point of sale transaction using a mobile phone to tap a credit card terminal.",
+  '1581091226825-a6a2a5aee158': "Automated industrial robotic arm assembling precision parts on a factory production line.",
+  '1581092160607-ee22621dd758': "Industrial engineers monitoring automated machinery performance on a factory floor.",
+  '1578575437130-527eed3abbec': "Large container cargo ship transporting global freight on ocean shipping routes.",
+  '1586528116311-ad8dd3c8310d': "Logistics warehouse interior storing palletized goods for supply chain distribution.",
+  '1551288049-bebda4e38f71': "SaaS dashboard display showing user growth charts and cloud application metrics.",
+  '1507238691740-187a5b1d37b8': "Web software developer workspace with a computer screen showing code editor.",
+  '1460925895917-afdab827c52f': "Business consultant demonstrating digital marketing dashboards and performance analytics.",
+  '1522869635100-9f4c5e86aa37': "Modern television display streaming high-definition digital media content.",
+  '1478737270239-2f02b77fc618': "Professional audio podcast recording setup with dynamic microphones in a studio.",
+  '1499750310107-5fef28a66643': "Creative workspace desk with notebook and laptop for content strategy planning.",
+  '1516321318423-f06f85e504b3': "Customer support representative with headset answering enquiries in a contact center.",
+  '1522071820081-009f0129c71c': "Client support team collaborating at a table to resolve customer tickets.",
+  '1589829545856-d10d557cf95f': "Golden scales of justice on a law office desk next to legal books.",
+  '1505664194779-8beaceb93744': "Classic wooden courtroom bench and judge chambers representing legal proceedings.",
+  '1450101499163-c8848c66ca85': "Signee using a stylus to sign a digital legal contract on a tablet.",
+  '1573497019940-1c28c88b4f3e': "Sunny office conference room setup for human resources recruitment interviews.",
+  '1504307651254-35680f356dfd': "Whiteboard displaying project timeline milestones and operational sprint plans.",
+  '1517245386807-bb43f82c33c4': "Agile team collaborating on operations management in a modern workspace.",
+  '1542744173-8e7e53415bb0': "Operations center with analysts monitoring workflow platforms and metrics.",
+  '1566073771259-6a8506099945': "Luxury resort infinity swimming pool overlooking a tropical landscape.",
+  '1520250497591-112f2f40a3f4': "Elegantly styled bedroom suite in a modern boutique hotel.",
+  '1414235077428-338989a2e8c0': "Restaurant dining tables with set tables and ambient lighting.",
+  '1517248135467-4c7edcad34c4': "Busy coffee shop counter with espresso machines and barista workspace.",
+  '1524178232363-1fb2b075b655': "Students using laptops and reference books in a collaborative university library.",
+  '1486406146926-c627a92ad1ab': "Modern architectural home with floor-to-ceiling glass windows at sunset.",
+  '1560518883-ce09059eeffa': "Exterior view of a contemporary glass and steel commercial office building.",
+  '1522202176988-66273c2fd55f': "Creative business team collaborating on project specifications in an office.",
+  '1498050108023-c5249f4df085': "Software programmer desk showing code lines on a laptop screen.",
+  '1531403009284-440f080d1e12': "Designer workspace showing interface layout designs and digital wireframes.",
+};
+
 function useCaseToRailItem(uc: SubserviceUseCase, i: number): FocusRailItem {
   const key = normalizeKey(uc.industry ?? '');
   const mapVal = INDUSTRY_IMAGE_MAP[key] ?? FALLBACK_IMAGES;
@@ -191,7 +237,10 @@ function useCaseToRailItem(uc: SubserviceUseCase, i: number): FocusRailItem {
     imageSrc = mapVal;
   }
 
-  return { id: i, title: uc.title, description: uc.description, imageSrc, meta: uc.industry };
+  const imgId = imageSrc.split('photo-')[1]?.split('?')[0] || '';
+  const imageAlt = FOCUS_RAIL_ALT_MAP[imgId] || uc.title;
+
+  return { id: i, title: uc.title, description: uc.description, imageSrc, imageAlt, meta: uc.industry };
 }
 
 // ─── Data types ───────────────────────────────────────────────────────────────
@@ -224,6 +273,7 @@ export interface SubservicePageData {
   parentSlug: string;
   slug: string;
   tagline: string;
+  heroBullets?: string[];
   heroImage: string;
 
   solves: {
@@ -297,26 +347,37 @@ function FAQItem({ faq }: { faq: SubserviceFAQ }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-cyan-100 last:border-0">
-      <button
-        type="button"
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex cursor-pointer items-center justify-between gap-4 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/40 select-none group"
-        aria-expanded={isOpen}
-      >
-        <span className={`font-semibold text-sm pr-4 leading-snug transition-colors duration-200 ${
-          isOpen ? "text-cyan-700" : "text-[#0F172A] group-hover:text-cyan-700"
-        }`}>
+    <div
+      className={cn(
+        "rounded-xl border cursor-pointer transition-all duration-300 overflow-hidden",
+        isOpen
+          ? "border-[#BAE6FD] bg-[#ECFEFF]/80 shadow-[0_2px_16px_rgba(8,145,178,0.06)]"
+          : "border-[#E0F2FE] bg-white hover:border-[#BAE6FD] hover:bg-[#F0FDFF]"
+      )}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      {/* Question row */}
+      <div className="flex items-center justify-between px-5 py-4 gap-4 select-none">
+        <h3 className={cn(
+          "text-[15.5px] font-medium leading-snug transition-colors duration-200 flex-1",
+          isOpen ? "text-[#0891B2] font-semibold" : "text-[#0F172A]"
+        )}>
           {faq.q}
-        </span>
-        <ChevronDown
-          size={18}
-          aria-hidden="true"
-          className={`shrink-0 text-slate-400 transition-transform duration-300 ${
-            isOpen ? "rotate-180 text-cyan-600" : ""
-          }`}
-        />
-      </button>
+        </h3>
+        {/* Chevron */}
+        <svg
+          width="18" height="18" viewBox="0 0 18 18" fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={cn(
+            "transition-all duration-400 ease-in-out shrink-0",
+            isOpen ? "rotate-180 text-[#0891B2]" : "text-[#94A3B8]"
+          )}
+        >
+          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </div>
+
+      {/* Answer */}
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
@@ -326,8 +387,10 @@ function FAQItem({ faq }: { faq: SubserviceFAQ }) {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <div className="pb-5">
-              <p className="text-sm text-slate-600 leading-relaxed">{faq.a}</p>
+            <div className="px-5 pb-5">
+              <p className="text-[14px] leading-relaxed text-slate-500 font-normal">
+                {faq.a}
+              </p>
             </div>
           </motion.div>
         )}
@@ -337,6 +400,76 @@ function FAQItem({ faq }: { faq: SubserviceFAQ }) {
 }
 
 // ─── Layout ───────────────────────────────────────────────────────────────────
+
+// Helper to render tagline with styled cyan bullets if it's formatted as a bullet list
+function renderTagline(tagline: string) {
+  let lines: string[] = [];
+  if (tagline.includes("•")) {
+    lines = tagline.split("\n");
+  } else {
+    // Split on periods followed by spaces, ignoring trailing period
+    const rawLines = tagline.split(/\. (?=[A-Z0-9])/);
+    lines = rawLines.map((line, idx) => {
+      let trimmed = line.trim();
+      if (idx === rawLines.length - 1 && trimmed.endsWith(".")) {
+        trimmed = trimmed.slice(0, -1);
+      }
+      return "• " + trimmed;
+    });
+  }
+
+  return (
+    <div className="space-y-3">
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes breathe-glow {
+          0%, 100% {
+            filter: drop-shadow(0 0 1px rgba(6, 182, 212, 0.4));
+            opacity: 0.65;
+          }
+          50% {
+            filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.95));
+            opacity: 1;
+          }
+        }
+        .animate-breathe-glow {
+          animation: breathe-glow 2.2s ease-in-out infinite;
+        }
+      `}} />
+      {lines.map((line, idx) => {
+        const isBullet = line.trim().startsWith("•");
+        const content = isBullet ? line.replace(/^[•\s]+/, "").trim() : line;
+        
+        if (isBullet) {
+          return (
+            <div key={idx} className="flex items-start gap-3.5">
+              <svg
+                className="h-3.5 w-3.5 text-cyan-500 mt-1.5 shrink-0 select-none animate-breathe-glow"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={3.5}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
+              <span className="text-slate-600 leading-7">{content}</span>
+            </div>
+          );
+        } else {
+          return (
+            <p key={idx} className="mt-5 first:mt-0 font-semibold text-slate-800 tracking-wide text-xs uppercase tracking-[0.1em] text-cyan-700/90 pl-[2px]">
+              {content}
+            </p>
+          );
+        }
+      })}
+    </div>
+  );
+}
 
 export default function SubservicePageLayout({ data }: { data: SubservicePageData }) {
   const prefersReduced = useReducedMotion();
@@ -397,11 +530,11 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
                     {data.name}
                   </h1>
 
-                  <p
-                    className="mt-6 max-w-xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md text-base leading-8 md:text-lg"
+                  <div
+                    className="mt-6 max-w-xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md text-base leading-8 md:text-lg whitespace-pre-line"
                   >
-                    {data.tagline}
-                  </p>
+                    {renderTagline(data.tagline)}
+                  </div>
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <Link href="/contact" aria-label="Get a free consultation">
@@ -582,16 +715,30 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
           </section>
 
           {/* ── 7. FAQ ──────────────────────────────────────────────────────── */}
-          <section className="py-24 px-6 bg-white">
-            <div className="max-w-3xl mx-auto">
-              <AnimatedSection className="text-center mb-14">
-                <SectionHeading eyebrow="FAQ" heading="Common questions" centered />
-              </AnimatedSection>
+          <section id="faq" className="py-24 px-6 bg-[#F8FEFF] border-t border-[#E0F2FE]">
+            <div className="max-w-6xl mx-auto">
+              <AnimatedSection className="flex flex-col md:flex-row items-start justify-center gap-16">
+                {/* Left Column: Text */}
+                <div className="w-full md:w-[38%] shrink-0 space-y-5 md:sticky md:top-32">
+                  <p className="text-cyan-700 text-sm font-semibold uppercase tracking-[0.16em]">Questions Before We Start</p>
+                  <h2
+                    className="font-display font-thin text-[#0F172A] text-balance"
+                    style={{
+                      fontSize: "clamp(30px, 4vw, 44px)",
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    A Few Things Clients Usually Ask
+                  </h2>
+                  <p className="text-[15px] text-slate-500 leading-relaxed">
+                    Find answers to common questions about {data.name} solutions, setup procedures, scoping timelines, and deliverables.
+                  </p>
+                </div>
 
-              <AnimatedSection delay={0.1}>
-                <div className="rounded-[28px] border border-cyan-100 bg-white/75 px-8 py-2 shadow-[0_18px_55px_rgba(59,130,246,0.10)] backdrop-blur-md">
-                  {data.faqs.map((faq) => (
-                    <FAQItem key={faq.q} faq={faq} />
+                {/* Right Column: FAQ Accordion */}
+                <div className="flex-1 w-full space-y-3">
+                  {data.faqs.map((faq, index) => (
+                    <FAQItem key={index} faq={faq} />
                   ))}
                 </div>
               </AnimatedSection>

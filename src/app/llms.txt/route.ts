@@ -17,7 +17,7 @@ function buildContent(): string {
 
   return `# aibizmod
 
-aibizmod Ltd. is a technology services firm that designs and builds web platforms, mobile applications, custom software, cloud infrastructure, business process automation, digital marketing systems, and customer experience tools for businesses of every size. The company is based in London and serves clients across the UK, USA, India, Singapore, and Australia. Contact: hello@aibizmod.com
+aibizmod Ltd. is a technology services firm that designs and builds web platforms, mobile applications, custom software, cloud infrastructure, AI automation systems, machine learning pipelines, digital marketing systems, and customer experience tools for businesses of every size. The company is based in London and serves clients across the UK, USA, India, Singapore, and Australia. Contact: hello@aibizmod.com
 
 ## Core pages
 

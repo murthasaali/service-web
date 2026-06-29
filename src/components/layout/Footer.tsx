@@ -17,7 +17,7 @@ const services = [
   { label: "Mobile App Development",       href: "/services/mobile-app-development" },
   { label: "Digital Marketing",            href: "/services/digital-marketing" },
   { label: "Hosting & Infrastructure",     href: "/services/hosting-infrastructure" },
-  { label: "Automation",                   href: "/services/automation" },
+  { label: "AI & Automation",              href: "/services/automation" },
   { label: "Customer Experience",          href: "/services/customer-exp-management" },
   { label: "IT Consulting & IT Services",  href: "/services/it-consulting-it-services" },
 ];

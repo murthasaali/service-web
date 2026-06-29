@@ -105,15 +105,15 @@ export const services: ServiceData[] = [
   },
   {
     id: "automation",
-    name: "Automation",
+    name: "AI & Automation",
     description:
-      "We automate repetitive tasks like invoice routing, lead assignment, CRM synchronization, and weekly reporting through API integrations.",
+      "We build AI agents, predictive ML models, generative AI pipelines, computer vision systems, and workflow automations that eliminate manual work and unlock intelligent operations.",
     capabilities: [
-      "Invoice routing and approval workflows",
-      "CRM and database synchronization",
-      "API and system integration automation",
-      "Weekly and monthly reporting automations",
-      "Custom automation scripts and webhooks",
+      "AI agents & agentic workflows",
+      "Predictive analytics & ML models",
+      "Generative AI & LLM integration",
+      "Computer vision & AI vision pipelines",
+      "Process & workflow automation",
     ],
     href: "/services/automation",
     icon: Zap,

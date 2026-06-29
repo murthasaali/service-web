@@ -186,6 +186,30 @@ function resolveConfig(industry: string | undefined, index: number): IndustryCon
   return FALLBACK_ACCENTS[index % FALLBACK_ACCENTS.length];
 }
 
+const USE_CASE_ALT_MAP: Record<string, string> = {
+  retail: "Boutique retail shop interior with products displayed representing business operations solutions.",
+  finance: "Financial services chart depicting investment growth and accounting analysis.",
+  'financial services': "Financial services chart depicting investment growth and accounting analysis.",
+  healthcare: "Healthcare medical professional using a digital tablet for patient care systems.",
+  'healthcare tech': "Healthcare medical professional using a digital tablet for patient care systems.",
+  'e-commerce': "Hand carrying a packaged product representing retail ecommerce shipping services.",
+  manufacturing: "Automated industrial manufacturing robot arm on a factory production line.",
+  logistics: "Cargo shipping vessel at a port representing supply chain logistics operations.",
+  saas: "Web dashboard showing business intelligence metrics for software application solutions.",
+  legal: "Law office scales of justice representing legal tech consulting services.",
+  'legal tech': "Law office scales of justice representing legal tech consulting services.",
+  hr: "Human resources manager conducting an interview for company recruitment and onboarding.",
+  hospitality: "Luxury hotel resort infinity swimming pool representing customer experience management.",
+  edtech: "Laptops and study materials in a classroom setting representing education technology systems.",
+};
+
+function getUseCaseAlt(badge: string | undefined, heading: string): string {
+  if (!badge) return heading;
+  const key = badge.toLowerCase().trim();
+  if (USE_CASE_ALT_MAP[key]) return USE_CASE_ALT_MAP[key];
+  return heading;
+}
+
 // ─── Props ────────────────────────────────────────────────────────────────────
 
 interface UseCaseCard3DProps {
@@ -259,7 +283,7 @@ export const UseCaseCard3D: React.FC<UseCaseCard3DProps> = ({
           <div className="relative w-full h-full">
             <Image
               src={cfg.src}
-              alt={badge ? `${badge} use case` : heading}
+              alt={getUseCaseAlt(badge, heading)}
               fill
               style={{ objectFit: 'cover', objectPosition: 'center' }}
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

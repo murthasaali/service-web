@@ -22,6 +22,37 @@ const capabilityImages: string[] = [
   "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=400&auto=format&fit=crop&q=60",
 ];
 
+function getCapabilityAltText(index: number, title: string): string {
+  switch (index) {
+    case 0:
+      return `Collaborative team of developers working on ${title} implementation projects in a modern tech workspace.`;
+    case 1:
+      return `Project managers reviewing business analytics and strategy details for ${title} services.`;
+    case 2:
+      return `Close-up view of microchips and circuitry representing technical execution of ${title}.`;
+    case 3:
+      return `Team brainstorming session at a whiteboard planning ${title} user experience and architecture.`;
+    case 4:
+      return `Desktop monitor displaying search engine optimization analytics and marketing metrics for ${title}.`;
+    case 5:
+      return `Secure cloud hosting server racks and database systems powering ${title} services.`;
+    case 6:
+      return `Business specialists collaborating around a table to optimize ${title} workflows.`;
+    case 7:
+      return `Software developers writing clean code on multiple monitors to support ${title}.`;
+    case 8:
+      return `Web developer testing mobile interfaces and programming code for ${title}.`;
+    case 9:
+      return `Professional planner analyzing business metrics and calendars to scale ${title} deliverables.`;
+    case 10:
+      return `Engineering workspace with computers showing tech tools and analytics for ${title}.`;
+    case 11:
+      return `Computer displaying real-time analytics graphs and performance metrics for ${title}.`;
+    default:
+      return title;
+  }
+}
+
 export default function CapabilitiesRollingSection({
   capabilities,
   heading = "What this service includes",
@@ -36,7 +67,7 @@ export default function CapabilitiesRollingSection({
     title: cap.title,
     description: cap.description,
     src: capabilityImages[i % capabilityImages.length],
-    alt: cap.title,
+    alt: getCapabilityAltText(i % capabilityImages.length, cap.title),
     color,
   }));
 

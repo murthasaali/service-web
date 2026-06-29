@@ -15,6 +15,7 @@ export interface ArticleCardProps {
   headline: string;
   excerpt: string;
   cover?: string;
+  coverAlt?: string;
   tag?: string;
   readingTime?: number; // in seconds
   writer?: string;
@@ -44,6 +45,7 @@ export function formatPostDate(date: Date | string): string {
 
 export const ArticleCard: React.FC<ArticleCardProps> = ({
   cover,
+  coverAlt,
   tag,
   readingTime,
   headline,
@@ -64,7 +66,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
           <div className="relative h-56 w-full">
             <Image
               src={cover}
-              alt={headline}
+              alt={coverAlt || headline}
               fill
               className="rounded-2xl object-cover"
             />

@@ -174,7 +174,7 @@ function IconCircleContent({ item }: { item: CarouselIconItem }) {
     return (
       <img
         src={item.src}
-        alt={item.alt}
+        alt={`${item.alt} technology integration logo`}
         width={32}
         height={32}
         className="h-8 w-8 object-contain"
