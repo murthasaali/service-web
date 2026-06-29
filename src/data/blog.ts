@@ -167,7 +167,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     author: blogAuthor,
     relatedServices: [
-      { name: "AI Automation", href: "/services/automation" },
+      { name: "AI & Automation", href: "/services/automation" },
       { name: "Software Development", href: "/services/software-development" },
     ],
     sections: [
@@ -245,7 +245,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     author: blogAuthor,
     relatedServices: [
-      { name: "AI Automation", href: "/services/automation" },
+      { name: "AI & Automation", href: "/services/automation" },
     ],
     sections: [
       {

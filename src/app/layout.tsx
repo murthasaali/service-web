@@ -28,7 +28,7 @@ const entityGraph = {
         contentUrl: 'https://aibizmod.com/favicon.ico',
       },
       description:
-        'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
+        'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, AI & automation, and intelligent operations.',
       email: 'hello@aibizmod.com',
       telephone: '+442079460958',
       areaServed: [
@@ -45,7 +45,7 @@ const entityGraph = {
         'Mobile App Development',
         'Digital Marketing',
         'Cloud Hosting and Infrastructure',
-        'Business Process Automation',
+        'AI & Automation',
         'Customer Experience Management',
         'IT Consulting',
       ],
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
 	},
 	description:
 		'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
-	keywords: ['tech services', 'web development', 'mobile apps', 'cloud', 'automation', 'digital marketing'],
+	keywords: ['tech services', 'web development', 'mobile apps', 'cloud', 'AI automation', 'automation', 'digital marketing', 'AI agents', 'machine learning'],
 	metadataBase: new URL('https://aibizmod.com'),
 	openGraph: {
 		type: 'website',

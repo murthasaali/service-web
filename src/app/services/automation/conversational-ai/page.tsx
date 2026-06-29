@@ -4,7 +4,7 @@ import SubservicePageLayout, {
 } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Conversational AI | AI Automation | aibizmod",
+  title: "Conversational AI | AI & Automation | aibizmod",
   description:
     "Deploy AI assistants that handle customer inquiries, support tickets, and internal queries by drawing from your actual knowledge base and live system data.",
   alternates: { canonical: "https://aibizmod.com/services/automation/conversational-ai" },
@@ -18,30 +18,30 @@ export const metadata: Metadata = {
 
 const data: SubservicePageData = {
   name: "Conversational AI",
-  parentName: "AI Automation",
+  parentName: "AI & Automation",
   parentSlug: "automation",
   slug: "conversational-ai",
   tagline:
-    "Deploy AI assistants that handle customer inquiries, answer support tickets, and respond to internal queries by drawing from your actual knowledge base and live system data.",
+    "• AI customer support assistants, voice booking systems and internal IT helpdesk bots built to handle conversations in natural language\nEach bot is intended to:\n• Resolve common inquiries regarding orders, returns and calendars 24/7\n• Look up live database records to provide real-time, user-specific answers\n• Transfer complex tickets seamlessly to human support staff with full chat context",
   heroImage:
     "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
     challenge:
-      "Support reps waste hours replying to the same basic questions. Customers ask about shipping updates, pricing, and returns at all hours, and appointment availability at all hours, and every simple ticket eats up time that could go to complex cases. Hiring more staff to keep up with tickets gets expensive fast.",
+      "Customer support teams spend hours copying and pasting answers to identical questions daily. Tickets about shipping times, booking slots, and return policies fill up support queues, delaying responses to complex cases and frustrating customers who wait for answers.",
     challengePoints: [
-      "Staff copy-pasting answers to simple, repetitive questions",
-      "Customers waiting until Monday morning for basic answers",
-      "Info buried in docs, wikis, or individual team heads with no central access",
-      "Basic chatbots breaking when questions go off-script the predetermined path"
+      "Reps wasting time copying templates for common customer queries.",
+      "Customers waiting overnight or through weekends for basic help.",
+      "Product information locked in scattered manuals and internal wikis.",
+      "Traditional chat widgets breaking when users ask follow-up questions.",
     ],
     solution:
-      "We build AI bots trained on your actual documentation, guides, and products, product information, and processes. They answer questions accurately and check live database records, and hand off complex requests to your team with full context with full conversation context passed along.",
+      "We deploy AI chat engines trained on your actual manuals, product catalogs, and policies. They answer support queries accurately, check live order databases, and route complex cases to your staff with the full chat transcript attached.",
     solutionPoints: [
-      "AI bots trained on your actual docs and product guides",
-      "Integrations to look up order status, accounts, and bookings",
-      "Support where customers are, from web chat to WhatsApp, and Teams",
-      "Smooth handoffs to human agents so customers don't repeat themselves at handoff"
+      "Chatbots grounded in your company's actual PDF manuals and policies.",
+      "Secure connections to check live order status and appointment listings.",
+      "Multi-channel deployment across web chat, WhatsApp, and Slack.",
+      "Seamless transfer to human support reps when cases require escalation.",
     ],
   },
 
@@ -50,37 +50,37 @@ const data: SubservicePageData = {
       icon: "messageSquare",
       title: "AI Chatbot Development",
       description:
-        "Purpose-built AI chatbots for websites and apps that answer real questions using your content rather than generic scripted decision trees.",
+        "We design custom chat tools for your website that resolve user inquiries using natural language instead of rigid buttons.",
     },
     {
       icon: "headphones",
       title: "Voice Agent Integration",
       description:
-        "Phone-based AI agents with speech-to-text input that handle inbound calls, qualify inquiries, and route to the right team member.",
+        "We build voice integrations to answer simple inbound calls, qualify leads, and route calls to the correct desk.",
     },
     {
       icon: "lightbulb",
       title: "Knowledge Base Assistants",
       description:
-        "AI assistants that index your internal documentation, wikis, and uploaded files to answer staff questions instantly and accurately.",
+        "We index your company's SOPs and wikis so team members can find policy details via chat.",
     },
     {
       icon: "globe",
       title: "Multi-channel Deployment",
       description:
-        "Deploy the same underlying AI assistant across web chat, WhatsApp Business, Slack, Microsoft Teams, and email simultaneously.",
+        "We deploy a single conversational engine across WhatsApp, Slack, Teams, and web chat simultaneously.",
     },
     {
       icon: "users",
       title: "Human Handoff Routing",
       description:
-        "Define rules for when the AI should escalate to a human agent, with full conversation history passed along so nothing needs to be repeated.",
+        "We write escalation rules that route users to your human support team with the full chat history intact.",
     },
     {
       icon: "shield",
       title: "Guardrails and Content Controls",
       description:
-        "Configure the AI to stay within defined topics, decline off-topic requests, and respond consistently in your brand voice.",
+        "We program strict topic limits to keep the agent focused on your business, preventing off-topic responses.",
     },
   ],
 
@@ -89,13 +89,13 @@ const data: SubservicePageData = {
       industry: "E-commerce",
       title: "Order Tracking and Returns Handling",
       description:
-        "Customers ask about shipment status, return eligibility, and refund timelines. The AI connects to your order management system to answer in real time without staff involvement.",
+        "Customers check shipment status and return limits. The AI queries your ERP to answer instantly without support queue delays.",
     },
     {
       industry: "Professional Services",
-      title: "Initial Client Inquiry Qualification",
+      title: "Initial Client Qualification",
       description:
-        "Incoming leads chat with an AI that asks structured qualifying questions, identifies service fit, and books a discovery call directly into the team calendar.",
+        "A web assistant asks incoming leads qualification questions and schedules discovery calls directly on your sales calendar.",
     },
     {
       industry: "Internal Operations",
@@ -107,19 +107,19 @@ const data: SubservicePageData = {
       industry: "Property",
       title: "Lettings FAQ and Viewing Bookings",
       description:
-        "Website visitors ask about property availability, rental terms, and maintenance processes. The AI answers from a knowledge base and books viewing slots in the agency calendar.",
+        "Prospects ask about apartment terms and rent schedules, booking viewing appointments directly on the agent's calendar.",
     },
     {
       industry: "Healthcare",
       title: "Appointment Booking and Pre-visit Information",
       description:
-        "Patients book appointments, receive pre-appointment instructions, and ask general service questions via an AI assistant integrated with the scheduling system.",
+        "Patients schedule clinic visits, check opening hours, and receive prep instructions via a secure clinic portal chat.",
     },
     {
       industry: "Legal",
       title: "Initial Matter Intake",
       description:
-        "Prospective clients describe their situation via chat. The AI collects structured information, identifies the relevant practice area, and routes to the appropriate solicitor.",
+        "New clients submit case details via web chat. The AI extracts the legal matter type and assigns the file to the correct team.",
     },
   ],
 
@@ -141,51 +141,51 @@ const data: SubservicePageData = {
     {
       title: "Coverage Outside Business Hours",
       description:
-        "AI assistants respond to customer inquiries at any hour, reducing the queue that accumulates overnight and on weekends.",
+        "Answer basic queries 24/7, preventing backlog queues from building up over weekends and holidays.",
     },
     {
       title: "Consistent Answers Across Every Channel",
       description:
-        "The same knowledge base powers responses across web, WhatsApp, Slack, and email so customers get accurate answers regardless of where they contact you.",
+        "Connect your help docs to web, email, and chat apps so customers get identical answers on any channel.",
     },
     {
       title: "Reduced Ticket Volume for Human Agents",
       description:
-        "Automating responses to common, repetitive questions frees support staff to focus on complex cases that require judgment and relationships.",
+        "Resolve common tickets automatically so your helpdesk can focus on resolving complex customer issues.",
     },
     {
       title: "Accurate, Source-Grounded Responses",
       description:
-        "Answers are drawn from your actual documentation rather than general training data, which reduces hallucinations and keeps responses relevant to your business.",
+        "Keep bot responses grounded in your uploaded guides, preventing fabricated claims or off-brand suggestions.",
     },
     {
       title: "Structured Escalation",
       description:
-        "When a query exceeds the AI scope, the conversation context is passed to a human agent so nothing is repeated and the handoff is seamless.",
+        "Transfer complex chats to human reps along with the context, saving customers from repeating their problem.",
     },
     {
       title: "Measurable Performance",
       description:
-        "Every conversation is logged with resolution status, escalation rate, and confidence scores so you can identify where the AI needs improvement over time.",
+        "Log chat transcripts and success metrics to track where help resources need updating.",
     },
   ],
 
   faqs: [
     {
       q: "How is this different from a basic chatbot or FAQ widget?",
-      a: "A basic chatbot follows a rigid decision tree and fails as soon as a user phrases something outside the script. AI assistants understand natural language, draw from a living knowledge base, and handle variations in how a question is asked. They also connect to live data sources for dynamic answers rather than returning static content.",
+      a: "Standard chatbots follow static, button-driven paths and crash when a user types a unique sentence. Our AI assistants use language reasoning to understand natural text, process spelling errors, and pull actual records from your database.",
     },
     {
       q: "Can the AI access our live system data such as order status or appointment availability?",
-      a: "Yes. We build API connectors between the AI assistant and your order management, CRM, or booking systems. The AI calls these APIs at query time to return real-time data specific to the customer asking.",
+      a: "Yes. We set up API integrations so the AI can verify details (like checking shipping status or calendar availability) in real time while chat conversations are active.",
     },
     {
       q: "How do you handle questions the AI cannot answer?",
-      a: "We configure structured escalation rules. When the AI confidence falls below a threshold, or when a user explicitly requests a human, the conversation is routed to your support team with full context so the agent can pick up without the customer needing to repeat themselves.",
+      a: "We set up clear routing rules. If the bot doesn't recognize a question or if a user requests a human, the session transfers to your support inbox with the full transcript attached.",
     },
     {
       q: "Will the AI understand our industry-specific terminology?",
-      a: "Yes. We configure the prompt system and knowledge base with your specific terminology, product names, and internal language. For highly specialized domains, we also use retrieval-augmented generation from your technical documentation so answers reflect your actual processes.",
+      a: "Yes. We prime the AI assistant with your technical guides, glossary terms, and product catalogs. This keeps responses aligned with your company's actual terminology and rules.",
     },
   ],
 };

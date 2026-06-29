@@ -4,7 +4,7 @@ import SubservicePageLayout, {
 } from "@/components/SubservicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Process Automation | AI Automation | aibizmod",
+  title: "Process Automation | AI & Automation | aibizmod",
   description:
     "Replace manual data entry, approval chains, and repetitive workflows with automated pipelines that connect your existing tools and run without staff intervention.",
   alternates: { canonical: "https://aibizmod.com/services/automation/process-automation" },
@@ -18,30 +18,30 @@ export const metadata: Metadata = {
 
 const data: SubservicePageData = {
   name: "Process Automation",
-  parentName: "AI Automation",
+  parentName: "AI & Automation",
   parentSlug: "automation",
   slug: "process-automation",
   tagline:
-    "Replace manual data entry, spreadsheet copying, and approval chains with automated workflows that connect your existing tools and run in the background without staff intervention.",
+    "• Multi-step integration pipelines, automated approval systems and scheduled reporting routines built to connect your software applications\nEach workflow is intended to:\n• Sync customer data, orders and inventory across CRM and ERP platforms automatically\n• Route operational sign-offs via single-click buttons directly in Slack or Teams\n• Email compiled, formatted database reports automatically on scheduled cadences",
   heroImage:
     "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
     challenge:
-      "Operations teams often waste hours each week on tasks a computer could handle. Data gets copied between tabs by hand, approvals wait in inboxes waiting for someone to check them, and reports get pulled by hand every Monday morning. Every handoff introduces delays and easy mistakes that compound over time.",
+      "Operations teams lose hours every week transferring data between software systems. Typing invoice details by hand, waiting days for email sign-offs, and compiling spreadsheets manually introduces errors and slows down team progress.",
     challengePoints: [
-      "Copying data between systems multiple times a day",
-      "Delayed approvals because requests sit in inboxes",
-      "Building reports by hand from spreadsheets",
-      "No logs to trace when manual steps fail"
+      "Manually copy-pasting customer records between CRM and accounting apps.",
+      "Project delays caused by approval forms sitting in managers' unread emails.",
+      "Compiling weekly reports by merging CSV exports by hand.",
+      "No tracking logs to identify where a manual data transfer failed.",
     ],
     solution:
-      "We map out your steps, identify where the friction and errors are, then build automations that connect your tools directly. Workflows are documented with runbooks and built with error handling so your team can monitor them and know exactly what to do if something stops.",
+      "We map your manual operations, identify the friction points, and build automated integrations that pass data between your software systems. Every workflow features error-handling scripts and comes with clear setup manuals.",
     solutionPoints: [
-      "Workflows that connect CRMs, databases, and SaaS platforms",
-      "Routing approvals via Slack buttons or email forms",
-      "Sending reports straight directly to inboxes",
-      "Built-in error alerts with Slack or email notification alerts"
+      "Direct connections between your CRMs, SQL databases, and SaaS portals.",
+      "One-click approval buttons routed straight to Slack or Teams.",
+      "Automated reports delivered directly to your team's email inboxes.",
+      "Automated alerts that notify your team on Slack if a tool API fails.",
     ],
   },
 
@@ -50,37 +50,37 @@ const data: SubservicePageData = {
       icon: "workflow",
       title: "Workflow Automation",
       description:
-        "Design and build multi-step automated pipelines triggered by events across your tools, from form submissions and database writes to scheduled time intervals.",
+        "We build multi-step workflows that run automatically when triggered by form submissions, database changes, or timers.",
     },
     {
       icon: "network",
       title: "API and Webhook Integration",
       description:
-        "Connect SaaS tools, internal databases, and external services using REST APIs and webhooks, removing the need for manual exports and imports between systems.",
+        "We write scripts to connect your SaaS tools and local databases via APIs, replacing CSV export and import routines.",
     },
     {
       icon: "fileText",
       title: "Document and Invoice Processing",
       description:
-        "Parse incoming emails and attachments to extract fields, route documents, and write records into your accounting or ERP system without manual handling.",
+        "We set up pipelines to extract fields from incoming emails and invoices, logging the data directly into your ERP.",
     },
     {
       icon: "barChart",
       title: "Scheduled Reporting",
       description:
-        "Query databases on a schedule, format results, and deliver reports by email or Slack to the right people automatically on whatever cadence the business needs.",
+        "We automate database queries to compile, format, and deliver operational updates to Slack channels on a schedule.",
     },
     {
       icon: "users",
       title: "Approval Workflow Routing",
       description:
-        "Route approval requests to the right person based on configurable rules, with Slack button or email form responses that update records directly without manual data entry.",
+        "We set up automated approval loops that allow managers to approve requests via Slack buttons, updating database states instantly.",
     },
     {
       icon: "refreshCw",
       title: "Error Handling and Retry Logic",
       description:
-        "Every automation includes fallback handling, retry attempts, and notification alerts so your team knows immediately when something needs attention.",
+        "We configure retry rules and failure alerts on every pipeline, notifying your developers if a tool goes offline.",
     },
   ],
 
@@ -89,37 +89,37 @@ const data: SubservicePageData = {
       industry: "Finance",
       title: "Invoice Routing from Email to Accounting",
       description:
-        "Parse incoming supplier invoices, extract vendor details and amounts, and write the data into Xero or QuickBooks before routing for approval via the relevant manager.",
+        "Supplier invoices are parsed from email attachments, logged in your accounting platform, and routed to the department manager for approval.",
     },
     {
       industry: "Sales",
       title: "CRM Lead Assignment from Forms",
       description:
-        "New form submissions trigger an automatic lookup of the assigned sales rep, create a contact record in HubSpot, and fire a Slack notification to the relevant team.",
+        "Web form submissions instantly log a new lead record in your CRM and alert the correct sales rep on Slack.",
     },
     {
       industry: "Operations",
       title: "Inventory Sync Across Platforms",
       description:
-        "Keep stock levels synchronized between Shopify, your warehouse management system, and internal spreadsheets without anyone manually exporting and importing files.",
+        "Keep stock levels matching across your web store and warehouse databases without manual CSV updates.",
     },
     {
       industry: "HR",
       title: "Employee Onboarding Document Collection",
       description:
-        "Trigger a sequence of document request emails on a hire start date, collect returned forms, and update HR records once all required items are received.",
+        "New hire emails trigger onboarding requests, collecting completed forms and updating HR directories automatically.",
     },
     {
       industry: "Logistics",
       title: "Shipment Status Notifications",
       description:
-        "Poll carrier APIs on a schedule, detect status changes, and fire email or SMS alerts to customers whenever their shipment moves between stages.",
+        "The system queries shipping APIs on a schedule to email tracking updates to customers whenever packages change hands.",
     },
     {
       industry: "Finance",
       title: "Monthly Reconciliation Reports",
       description:
-        "Pull transaction records from your payment processor and bank feed, compare against internal records, and deliver a reconciliation summary on the first of each month.",
+        "Automated queries pull payment logs and bank statements, delivering a compiled reconciliation sheet to your inbox monthly.",
     },
   ],
 
@@ -142,51 +142,51 @@ const data: SubservicePageData = {
     {
       title: "Fewer Manual Errors",
       description:
-        "Removing human data entry from repetitive tasks eliminates transcription mistakes and duplicate records that accumulate over time and require correction.",
+        "Eliminate typos and duplicate entries by transferring data between databases programmatically.",
     },
     {
       title: "Staff Time Redirected",
       description:
-        "Hours spent on copy-paste tasks get redirected to higher-value work once the underlying processes run without staff attention.",
+        "Free up your team's schedule from tedious copy-paste tasks, letting them focus on client-facing delivery.",
     },
     {
       title: "Consistent Process Execution",
       description:
-        "Automated workflows apply the same logic every time, regardless of who is working, what day it is, or how busy the team is.",
+        "Run operational workflows under identical rules every time, regardless of who is online or how busy the desk gets.",
     },
     {
       title: "24/7 Operation",
       description:
-        "Automations run outside business hours, so time-sensitive processes like order confirmations and alert routing happen immediately without waiting for someone to log in.",
+        "Keep processes running overnight and through weekends, avoiding delays for client confirmations and alerts.",
     },
     {
       title: "Full Audit Trail",
       description:
-        "Every workflow execution is logged, so you can trace exactly what happened, when, and with what input data if something goes wrong.",
+        "Log every pipeline execution detail, providing a searchable audit trail if you need to trace past inputs.",
     },
     {
       title: "Documented and Maintainable",
       description:
-        "Every automation comes with a runbook so your internal team can understand, update, and extend the logic without needing to call us back.",
+        "Receive detailed runbooks so your team knows how to update connections and edit logic without relying on us.",
     },
   ],
 
   faqs: [
     {
       q: "How long does it take to automate a typical business workflow?",
-      a: "Simple automations connecting two or three tools typically take one to two weeks from scoping to handover. Multi-step workflows involving data transformation, conditional routing, and error handling usually take three to five weeks depending on the number of integration points and API complexity.",
+      a: "Simple integrations between two or three tools take one to two weeks. Complex workflows with nested routing, loops, and data cleaning typically take three to five weeks depending on API access.",
     },
     {
       q: "What happens when one of our connected tools updates their API?",
-      a: "We build automations with version-pinned API connections where possible and document all integration dependencies. If a connected tool changes and breaks the automation, your runbook will include the steps to identify and update the affected connector. We also offer a support retainer to handle breaking changes on your behalf.",
+      a: "We pin integrations to specific API versions to prevent sudden updates from breaking workflows. If a third-party app makes a breaking update, our provided runbook explains how to swap the endpoint, or we can handle it via a support retainer.",
     },
     {
       q: "Do we need technical staff to maintain the automations after handover?",
-      a: "No. We deliver documented runbooks written for non-technical staff that explain what each automation does, what triggers it, and how to restart it if it stops. Platforms like n8n have visual interfaces your operations team can navigate without writing code.",
+      a: "No. We use visual integration tools like n8n and Make that feature easy-to-read flowcharts. We also provide straightforward guides explaining how to monitor executions and resolve common account errors.",
     },
     {
       q: "Can you automate processes that involve legacy software without an API?",
-      a: "Yes. For legacy software that has no API, we build browser automation scripts using tools like Playwright or Puppeteer that navigate the UI, fill in fields, and submit forms exactly as a human operator would.",
+      a: "Yes. If your legacy software has no API, we write browser automation scripts using Playwright. These scripts log in, navigate links, and enter data exactly like a human operator.",
     },
   ],
 };

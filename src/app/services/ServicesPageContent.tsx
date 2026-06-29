@@ -97,7 +97,7 @@ export default function ServicesPageContent() {
                   growth
                 </h1>
                 <p className="mt-6 max-w-2xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-base leading-8 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md md:text-lg">
-                  Strategy, engineering, infrastructure, automation, and growth
+                  Strategy, engineering, infrastructure, AI & automation, and growth
                   systems shaped around practical business outcomes.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
