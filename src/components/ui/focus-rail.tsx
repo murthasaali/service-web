@@ -10,6 +10,7 @@ export type FocusRailItem = {
   title: string;
   description?: string;
   imageSrc: string;
+  imageAlt?: string;
   meta?: string;
 };
 
@@ -149,7 +150,7 @@ export function FocusRail({
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={item.imageSrc}
-                  alt={item.title}
+                  alt={item.imageAlt || item.title}
                   className="h-full w-full object-cover pointer-events-none"
                 />
                 {/* Subtle bottom vignette */}

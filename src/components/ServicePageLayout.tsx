@@ -243,11 +243,19 @@ export default function ServicePageLayout({
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200",
     ];
 
+    const processAlts = [
+      `Strategic planning session with consultants aligning requirements for ${step.title}.`,
+      `Web developer writing programming code to build core platform features for ${step.title}.`,
+      `Quality assurance analyst conducting comprehensive system testing and optimization audits for ${step.title}.`,
+      `Client handoff presenting live software deployment performance dashboards for ${step.title}.`
+    ];
+
     return {
       id: `step-${i}`,
       label: step.title,
       icon: iconMap[step.icon],
       image: images[i] ?? images[0],
+      imageAlt: processAlts[i] ?? step.title,
       description: step.desc,
       isLucide: true,
       deliverables: getProcessDeliverables(i),

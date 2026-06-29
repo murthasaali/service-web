@@ -34,6 +34,17 @@ const serviceImages: Record<string, string> = {
     "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80",
 };
 
+const serviceCoverAlts: Record<string, string> = {
+  "web-development": "Web development team building responsive web applications using Next.js framework.",
+  "software-development": "Software development engineers coding backend database architectures and custom APIs.",
+  "mobile-app-development": "Mobile app developer testing cross-platform user interfaces on a smartphone.",
+  "digital-marketing": "Search engine optimization specialist analyzing website search marketing traffic data.",
+  "hosting-infrastructure": "Data center server racks representing secure cloud hosting infrastructure services.",
+  "automation": "Microchip hardware components representing business process workflow automation setup.",
+  "customer-exp-management": "Team collaborating around client communications to improve customer experience management.",
+  "it-consulting-it-services": "IT consulting specialist whiteboard mapping technology solutions and IT systems strategy.",
+};
+
 const marqueeImages = services
   .map((service) => serviceImages[service.id])
   .filter(Boolean)
@@ -182,6 +193,7 @@ export default function ServicesPageContent() {
                       >
                         <ArticleCard
                           cover={image}
+                          coverAlt={serviceCoverAlts[service.id]}
                           headline={service.name}
                           excerpt={service.description}
                           clampLines={4}

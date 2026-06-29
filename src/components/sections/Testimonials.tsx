@@ -120,7 +120,7 @@ export default function Testimonials() {
                       <div className="w-10 h-10 rounded-full shrink-0 border-2 border-cyan-400/30 bg-white flex items-center justify-center p-1">
                         <Image
                           src={item.logo}
-                          alt={item.company}
+                          alt={`${item.company} client brand logo representing partner testimonial`}
                           width={40}
                           height={40}
                           className="rounded-full object-contain"

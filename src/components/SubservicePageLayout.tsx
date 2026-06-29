@@ -179,6 +179,52 @@ function normalizeKey(str: string): string {
     .replace(/\s+/g, ' ');
 }
 
+const FOCUS_RAIL_ALT_MAP: Record<string, string> = {
+  '1441986300917-64674bd600d8': "Modern retail boutique shop interior displaying clothing products and customer service area.",
+  '1555529669-e69e7aa0ba9a': "Organized product display shelves inside a retail store highlighting merchandise.",
+  '1611974789855-9c2a0a7236a3': "Stock market trading computer screens showing financial charts and stock value trends.",
+  '1590283603385-17ffb3a7f29f': "Financial analyst desk showing papers with business growth charts and analytics data.",
+  '1559526324-4b87b5e36e44': "Business planning documents with graphs detailing investment returns and financial metrics.",
+  '1554224155-6726b3ff858f': "Auditor reviewing corporate financial accounting documents on a tablet.",
+  '1454165804606-c3d57bc86b40': "Financial services advisor analyzing business metrics and key growth indicators.",
+  '1519389950473-47ba0277781c': "Collaborative sales team presenting revenue growth data on a laptop screen.",
+  '1579684385127-1ef15d508118': "Professional surgical medical team performing a procedure in a hospital operating room.",
+  '1576091160550-2173dba999ef': "Healthcare practitioner viewing patient medical records on a digital tablet in a clinic.",
+  '1571019614242-c5c5dee9f50b': "Athlete lifting a barbell close-up demonstrating physical fitness training.",
+  '1517838277536-f5f99be501cd': "Group of people training in a fitness studio with instructor guidance.",
+  '1563013544-824ae1b704d3': "Customer opening a delivered cardboard shipping box containing retail ecommerce purchases.",
+  '1556742049-0cfed4f6a45d': "Point of sale transaction using a mobile phone to tap a credit card terminal.",
+  '1581091226825-a6a2a5aee158': "Automated industrial robotic arm assembling precision parts on a factory production line.",
+  '1581092160607-ee22621dd758': "Industrial engineers monitoring automated machinery performance on a factory floor.",
+  '1578575437130-527eed3abbec': "Large container cargo ship transporting global freight on ocean shipping routes.",
+  '1586528116311-ad8dd3c8310d': "Logistics warehouse interior storing palletized goods for supply chain distribution.",
+  '1551288049-bebda4e38f71': "SaaS dashboard display showing user growth charts and cloud application metrics.",
+  '1507238691740-187a5b1d37b8': "Web software developer workspace with a computer screen showing code editor.",
+  '1460925895917-afdab827c52f': "Business consultant demonstrating digital marketing dashboards and performance analytics.",
+  '1522869635100-9f4c5e86aa37': "Modern television display streaming high-definition digital media content.",
+  '1478737270239-2f02b77fc618': "Professional audio podcast recording setup with dynamic microphones in a studio.",
+  '1499750310107-5fef28a66643': "Creative workspace desk with notebook and laptop for content strategy planning.",
+  '1516321318423-f06f85e504b3': "Customer support representative with headset answering enquiries in a contact center.",
+  '1522071820081-009f0129c71c': "Client support team collaborating at a table to resolve customer tickets.",
+  '1589829545856-d10d557cf95f': "Golden scales of justice on a law office desk next to legal books.",
+  '1505664194779-8beaceb93744': "Classic wooden courtroom bench and judge chambers representing legal proceedings.",
+  '1450101499163-c8848c66ca85': "Signee using a stylus to sign a digital legal contract on a tablet.",
+  '1573497019940-1c28c88b4f3e': "Sunny office conference room setup for human resources recruitment interviews.",
+  '1504307651254-35680f356dfd': "Whiteboard displaying project timeline milestones and operational sprint plans.",
+  '1517245386807-bb43f82c33c4': "Agile team collaborating on operations management in a modern workspace.",
+  '1542744173-8e7e53415bb0': "Operations center with analysts monitoring workflow platforms and metrics.",
+  '1566073771259-6a8506099945': "Luxury resort infinity swimming pool overlooking a tropical landscape.",
+  '1520250497591-112f2f40a3f4': "Elegantly styled bedroom suite in a modern boutique hotel.",
+  '1414235077428-338989a2e8c0': "Restaurant dining tables with set tables and ambient lighting.",
+  '1517248135467-4c7edcad34c4': "Busy coffee shop counter with espresso machines and barista workspace.",
+  '1524178232363-1fb2b075b655': "Students using laptops and reference books in a collaborative university library.",
+  '1486406146926-c627a92ad1ab': "Modern architectural home with floor-to-ceiling glass windows at sunset.",
+  '1560518883-ce09059eeffa': "Exterior view of a contemporary glass and steel commercial office building.",
+  '1522202176988-66273c2fd55f': "Creative business team collaborating on project specifications in an office.",
+  '1498050108023-c5249f4df085': "Software programmer desk showing code lines on a laptop screen.",
+  '1531403009284-440f080d1e12': "Designer workspace showing interface layout designs and digital wireframes.",
+};
+
 function useCaseToRailItem(uc: SubserviceUseCase, i: number): FocusRailItem {
   const key = normalizeKey(uc.industry ?? '');
   const mapVal = INDUSTRY_IMAGE_MAP[key] ?? FALLBACK_IMAGES;
@@ -191,7 +237,10 @@ function useCaseToRailItem(uc: SubserviceUseCase, i: number): FocusRailItem {
     imageSrc = mapVal;
   }
 
-  return { id: i, title: uc.title, description: uc.description, imageSrc, meta: uc.industry };
+  const imgId = imageSrc.split('photo-')[1]?.split('?')[0] || '';
+  const imageAlt = FOCUS_RAIL_ALT_MAP[imgId] || uc.title;
+
+  return { id: i, title: uc.title, description: uc.description, imageSrc, imageAlt, meta: uc.industry };
 }
 
 // ─── Data types ───────────────────────────────────────────────────────────────

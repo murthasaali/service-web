@@ -14,6 +14,7 @@ export type CardStackItem = {
   title: string;
   description?: string;
   imageSrc?: string;
+  imageAlt?: string;
   href?: string;
   ctaLabel?: string;
   tag?: string;
@@ -398,7 +399,7 @@ function DefaultFanCard({ item }: { item: CardStackItem; active: boolean }) {
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={item.imageSrc}
-            alt={item.title}
+            alt={item.imageAlt || item.title}
             className="h-full w-full object-cover"
             draggable={false}
             loading="eager"

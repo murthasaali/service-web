@@ -23,6 +23,7 @@ export interface CarouselFeature {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon: any; // Can be a Hugeicons icon definition or a LucideIcon component
   image: string;
+  imageAlt?: string;
   description: string;
   isLucide?: boolean;
   deliverables?: string[];
@@ -36,6 +37,7 @@ const DEFAULT_FEATURES: CarouselFeature[] = [
     icon: Pizza04Icon,
     image:
       "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200",
+    imageAlt: "Locally grown organic produce from sustainable farms representing ethical sourcing.",
     description: "Ethically sourced ingredients from local farmers.",
   },
   {
@@ -44,6 +46,7 @@ const DEFAULT_FEATURES: CarouselFeature[] = [
     icon: CommandFreeIcons,
     image:
       "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200",
+    imageAlt: "Team of professionals collaborating in an office representing community focused business strategy.",
     description: "Building stronger bonds through shared experiences.",
   },
   {
@@ -52,6 +55,7 @@ const DEFAULT_FEATURES: CarouselFeature[] = [
     icon: GlobalSearchIcon,
     image:
       "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1200",
+    imageAlt: "Business team connecting globally through international digital communication tools.",
     description: "Connecting visionaries across all continents.",
   },
   {
@@ -60,6 +64,7 @@ const DEFAULT_FEATURES: CarouselFeature[] = [
     icon: CheckmarkCircle01Icon,
     image:
       "https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?q=80&w=1200",
+    imageAlt: "Professionals celebrating a business milestone or award recognition for design excellence.",
     description: "Recognized excellence in design and innovation.",
   },
   {
@@ -68,6 +73,7 @@ const DEFAULT_FEATURES: CarouselFeature[] = [
     icon: AiCloudIcon,
     image:
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200",
+    imageAlt: "Planet earth from space with glowing digital network lines representing cloud readiness.",
     description: "Scale your infrastructure with seamless ease.",
   },
   {
@@ -76,6 +82,7 @@ const DEFAULT_FEATURES: CarouselFeature[] = [
     icon: SmartPhone01Icon,
     image:
       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200",
+    imageAlt: "Close-up of a mobile smartphone showing user experience interface design.",
     description: "A world-class experience on every single device.",
   },
   {
@@ -84,6 +91,7 @@ const DEFAULT_FEATURES: CarouselFeature[] = [
     icon: DashboardSquare01Icon,
     image:
       "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?q=80&w=1200",
+    imageAlt: "Financial dashboard on a screen displaying real-time analytics graphs.",
     description: "Insights at your fingertips, updated in real-time.",
   },
   {
@@ -92,6 +100,7 @@ const DEFAULT_FEATURES: CarouselFeature[] = [
     icon: CheckmarkCircle01Icon,
     image:
       "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200",
+    imageAlt: "Cyber security screen showing secure cloud servers and data protection protocols.",
     description: "Bank-grade security protocols for your data.",
   },
   {
@@ -100,6 +109,7 @@ const DEFAULT_FEATURES: CarouselFeature[] = [
     icon: MagicWandIcon,
     image:
       "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200",
+    imageAlt: "Robotic arm interacting with digital screen representing process automation and AI workflow integration.",
     description: "Let AI handle the repetitive tasks for you.",
   },
   {
@@ -108,6 +118,7 @@ const DEFAULT_FEATURES: CarouselFeature[] = [
     icon: CheckmarkCircle01Icon,
     image:
       "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200",
+    imageAlt: "Business team working together in a locally owned office workspace.",
     description: "Supporting local businesses and creators.",
   },
 ];
@@ -297,7 +308,7 @@ export function FeatureCarousel({
                 >
                   <Image
                     src={feature.image}
-                    alt={feature.label}
+                    alt={feature.imageAlt || feature.label}
                     fill
                     className={cn(
                       "object-cover",
