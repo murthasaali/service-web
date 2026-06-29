@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "customer-exp-management",
   slug: "cx-it-consulting",
   tagline: "Technology advisory and implementation guidance for businesses planning or improving their customer experience infrastructure — from platform selection and integration architecture to digital transformation roadmaps.",
+  heroBullets: [
+    "Platform assessments and vendor evaluations",
+    "Customer data flows and integration blueprints",
+    "Digital transformation roadmaps for support orgs",
+    "Customer platform cost optimization strategies"
+  ],
   heroImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

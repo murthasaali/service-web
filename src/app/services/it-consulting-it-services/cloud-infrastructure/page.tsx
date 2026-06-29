@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "it-consulting-it-services",
   slug: "cloud-infrastructure",
   tagline: "Cloud services advisory, migration planning, and architecture consulting that helps organisations design, adopt, and optimise cloud infrastructure aligned to their technical requirements, operational model, and cost targets.",
+  heroBullets: [
+    "Cloud readiness assessments and migration specifications",
+    "Cost analysis and budget governance configuration",
+    "Secure tenant management (AWS, Azure, GCP)",
+    "Backup strategies and hybrid network models"
+  ],
   heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

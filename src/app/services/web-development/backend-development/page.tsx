@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "web-development",
   slug: "backend-development",
   tagline: "APIs, databases, authentication systems, and payment integrations built to support web and mobile products. Every endpoint is documented, every integration is tested, and the codebase is yours to run and extend.",
+  heroBullets: [
+    "APIs, databases, authentication systems, and payment integrations",
+    "Built to support scalable web and mobile products",
+    "Fully documented and tested endpoints",
+    "Clean codebase ownership, ready to run and extend"
+  ],
   heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

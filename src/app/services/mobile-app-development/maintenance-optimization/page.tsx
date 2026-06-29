@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "mobile-app-development",
   slug: "maintenance-optimization",
   tagline: "App performance optimisation, bug fixes, OS compatibility updates, and ongoing maintenance services that keep your mobile app stable, fast, and compliant with evolving App Store and Google Play requirements after launch.",
+  heroBullets: [
+    "App performance tuning and bug remediation services",
+    "Updates for iOS/Android OS version compatibility",
+    "Proactive App Store and Google Play compliance maintenance",
+    "Continuous stability monitoring and crash reduction"
+  ],
   heroImage: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "hosting-infrastructure",
   slug: "database-services",
   tagline: "Database hosting, optimisation, and administration services that keep your data fast, reliable, and correctly maintained — from initial setup and migration to ongoing query performance management.",
+  heroBullets: [
+    "Database hosting, setup, and secure migrations",
+    "Query performance optimization and index tuning",
+    "Automated backup schedules and replication rules",
+    "High availability databases for critical records"
+  ],
   heroImage: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

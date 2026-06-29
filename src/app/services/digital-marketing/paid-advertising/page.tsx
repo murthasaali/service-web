@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "digital-marketing",
   slug: "paid-advertising",
   tagline: "Google Ads, Meta Ads, and LinkedIn campaign management focused on qualified lead generation and measurable return on ad spend — structured for accountability, not just activity.",
+  heroBullets: [
+    "Campaign management on Google Ads, Meta Ads, and LinkedIn",
+    "Focus on qualified lead generation and direct conversion metrics",
+    "Structured ad groups, custom keyword matching, and budget controls",
+    "Performance dashboards for real-time campaign accountability"
+  ],
   heroImage: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

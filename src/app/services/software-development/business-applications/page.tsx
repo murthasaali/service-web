@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "software-development",
   slug: "business-applications",
   tagline: "Workflow automation tools, internal tooling, billing systems, and project management software built for specific business processes that generic off-the-shelf products do not cover well enough to eliminate the manual work alongside them.",
+  heroBullets: [
+    "Workflow automation, internal tools, and billing systems",
+    "Targeted software built to replace spreadsheet sprawl",
+    "Tailored to specific operational needs",
+    "Eliminated manual steps and admin overhead"
+  ],
   heroImage: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

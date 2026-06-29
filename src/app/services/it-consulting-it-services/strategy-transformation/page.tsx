@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "it-consulting-it-services",
   slug: "strategy-transformation",
   tagline: "Digital transformation consulting and technology roadmapping services that connect technology investment to business strategy — giving leaders a clear, sequenced plan for modernising how the organisation operates.",
+  heroBullets: [
+    "Technology roadmapping and strategic planning",
+    "Business alignment and IT maturity reviews",
+    "Budgeting, cost forecasting, and vendor assessments",
+    "Multi-year transformation sequence blueprints"
+  ],
   heroImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

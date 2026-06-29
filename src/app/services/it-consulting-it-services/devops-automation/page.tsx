@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "it-consulting-it-services",
   slug: "devops-automation",
   tagline: "CI/CD, infrastructure automation, and containerisation consulting services that modernise how software is built, tested, and deployed — reducing release risk, deployment anxiety, and the manual coordination cost between development and operations.",
+  heroBullets: [
+    "Software delivery pipeline planning and execution",
+    "Infrastructure automation and container systems",
+    "Standardization of development environments",
+    "Automated test runner configurations"
+  ],
   heroImage: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

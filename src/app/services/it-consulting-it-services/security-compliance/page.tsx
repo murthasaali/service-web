@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "it-consulting-it-services",
   slug: "security-compliance",
   tagline: "Cybersecurity assessments, security reviews, and compliance support services that identify risks, close gaps, and help organisations meet their regulatory and contractual security obligations.",
+  heroBullets: [
+    "Risk assessment and cybersecurity vulnerability reviews",
+    "Compliance preparations (GDPR, SOC2, ISO27001)",
+    "Security awareness recommendations and guidelines",
+    "Incident response planning and policy drafts"
+  ],
   heroImage: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "hosting-infrastructure",
   slug: "hosting",
   tagline: "Shared, VPS, dedicated, and managed hosting services with the configuration, monitoring, and support that keep your websites and applications reliably available — without leaving setup and maintenance to chance.",
+  heroBullets: [
+    "Managed hosting configurations (Shared, VPS, Dedicated)",
+    "Continuous server monitoring and tech support",
+    "Fast page loading times through optimized caching",
+    "Infrastructure setup tailored to app requirements"
+  ],
   heroImage: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

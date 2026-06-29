@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "software-development",
   slug: "industry-specific-software",
   tagline: "Custom software for healthcare, construction, logistics, education, and manufacturing — built for the regulatory requirements, operational workflows, and data structures that define how each sector actually operates.",
+  heroBullets: [
+    "Custom software for healthcare, construction, logistics, and manufacturing",
+    "Aligned with regulatory guidelines and field workflows",
+    "Purpose-built data structures",
+    "Integrated with specialized hardware or APIs"
+  ],
   heroImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

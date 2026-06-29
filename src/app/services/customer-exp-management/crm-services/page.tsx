@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "customer-exp-management",
   slug: "crm-services",
   tagline: "CRM implementation, customisation, and integration services that give your sales, support, and marketing teams a shared, accurate view of every customer relationship — without the sprawl of disconnected systems.",
+  heroBullets: [
+    "CRM platform setup, customization, and implementation",
+    "Unified customer profiles across sales, support, and marketing",
+    "Custom fields, contact tags, and sales funnel automations",
+    "Bidirectional sync with transactional databases"
+  ],
   heroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

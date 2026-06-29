@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "web-development",
   slug: "frontend-development",
   tagline: "Responsive websites, landing pages, SPAs, and progressive web apps built to a spec — not a template. Every component is written for your data model and tested across devices before it ships.",
+  heroBullets: [
+    "Responsive websites, landing pages, SPAs, and progressive web apps",
+    "Custom built to your specification — never using generic templates",
+    "Every component written for your exact data model",
+    "Tested across mobile and desktop devices before shipping"
+  ],
   heroImage: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

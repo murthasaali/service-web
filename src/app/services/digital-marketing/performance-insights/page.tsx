@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "digital-marketing",
   slug: "performance-insights",
   tagline: "Analytics, conversion optimisation, and funnel analysis services that turn your marketing data into clear decisions — identifying exactly where you are losing revenue and what to fix first.",
+  heroBullets: [
+    "Google Analytics 4 configuration and conversion tracking audits",
+    "Custom Looker Studio reporting dashboards",
+    "Detailed funnel analysis and conversion rate optimization (CRO)",
+    "Clear insights to identify and fix leakage points"
+  ],
   heroImage: "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

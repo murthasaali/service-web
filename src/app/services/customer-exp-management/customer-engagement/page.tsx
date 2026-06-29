@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "customer-exp-management",
   slug: "customer-engagement",
   tagline: "Loyalty programmes, omnichannel communication flows, and WhatsApp integration strategies that build lasting customer relationships across every touchpoint — without fragmenting the experience across disconnected channels.",
+  heroBullets: [
+    "Loyalty systems and personalized email/SMS sequences",
+    "Omnichannel message flows (WhatsApp, Push, Email)",
+    "Coherent brand experience across multiple communication touchpoints",
+    "Customer segmentation based on action triggers"
+  ],
   heroImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

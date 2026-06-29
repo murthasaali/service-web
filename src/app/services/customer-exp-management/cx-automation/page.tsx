@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "customer-exp-management",
   slug: "cx-automation",
   tagline: "Workflow automation, AI chatbots, and voice agents that handle repetitive customer interactions at scale — freeing your team for the conversations that actually require a person.",
+  heroBullets: [
+    "Repetitive interaction handling using AI self-service tools",
+    "Intelligent triage and tagging of incoming customer queries",
+    "Automated response templates and SLA tracking",
+    "Customer workflow optimizations"
+  ],
   heroImage: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

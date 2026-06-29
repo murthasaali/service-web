@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "hosting-infrastructure",
   slug: "infrastructure-operations",
   tagline: "Infrastructure management, monitoring, and performance tuning services that keep your applications reliable, observable, and operating within defined performance targets.",
+  heroBullets: [
+    "System monitoring, alerts, and performance optimization",
+    "Operational observability and logging setup",
+    "SLA management and system uptime assurance",
+    "Proactive resolution of resource bottlenecks"
+  ],
   heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

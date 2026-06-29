@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "software-development",
   slug: "it-consulting-services",
   tagline: "Digital transformation consulting, technology roadmapping, IT planning, and solution architecture services that connect software investment to business outcomes — giving your organisation a clear plan before committing development budget.",
+  heroBullets: [
+    "Digital transformation roadmaps and solution architecture",
+    "IT planning aligned with operational business goals",
+    "Technology assessments and feasibility studies",
+    "Strategic decisions resolved before code is written"
+  ],
   heroImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

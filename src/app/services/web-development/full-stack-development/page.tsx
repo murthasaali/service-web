@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "web-development",
   slug: "full-stack-development",
   tagline: "Web applications built across the full stack — React frontend, Node or Next.js backend, PostgreSQL database, and deployment on your infrastructure. One coherent codebase with consistent patterns across every layer.",
+  heroBullets: [
+    "Web applications built across the full stack",
+    "React frontend, Node or Next.js backend, and PostgreSQL database",
+    "Coherent codebase with consistent development patterns",
+    "Full deployment on your own infrastructure"
+  ],
   heroImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "mobile-app-development",
   slug: "consumer-apps",
   tagline: "E-commerce, social, booking, and on-demand service mobile apps built for App Store and Google Play — designed for user retention, app store discoverability, and the performance expectations of a consumer audience.",
+  heroBullets: [
+    "E-commerce, booking, social, and on-demand mobile apps",
+    "Optimized for user engagement and app store discoverability",
+    "Designed for seamless mobile checkout and user retention",
+    "High performance built for consumer expectations"
+  ],
   heroImage: "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

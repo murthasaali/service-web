@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "it-consulting-it-services",
   slug: "architecture-design",
   tagline: "Solution architecture, system design, and technology evaluation services that define how systems should be built before build begins — reducing rework, integration risk, and technical debt accumulated from rushed or undocumented decisions.",
+  heroBullets: [
+    "Technical design, system models, and database schemas",
+    "Selection of technology stacks, frameworks, and patterns",
+    "Reduced integration friction and technical debt prevention",
+    "Standardized development specifications for teams"
+  ],
   heroImage: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

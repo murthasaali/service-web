@@ -224,6 +224,7 @@ export interface SubservicePageData {
   parentSlug: string;
   slug: string;
   tagline: string;
+  heroBullets?: string[];
   heroImage: string;
 
   solves: {
@@ -380,11 +381,24 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
                     {data.name}
                   </h1>
 
-                  <p
-                    className="mt-6 max-w-xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md text-base leading-8 md:text-lg"
-                  >
-                    {data.tagline}
-                  </p>
+                  {data.heroBullets && data.heroBullets.length > 0 ? (
+                    <ul
+                      className="mt-6 max-w-xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md space-y-2 text-slate-600"
+                    >
+                      {data.heroBullets.map((bullet) => (
+                        <li key={bullet} className="flex items-start gap-3 text-base leading-8 md:text-lg">
+                          <span className="mt-3.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" aria-hidden="true" />
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p
+                      className="mt-6 max-w-xl rounded-2xl border border-white/70 bg-white/45 px-6 py-4 text-slate-600 shadow-[0_18px_55px_rgba(59,130,246,0.12)] backdrop-blur-md text-base leading-8 md:text-lg"
+                    >
+                      {data.tagline}
+                    </p>
+                  )}
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <Link href="/contact" aria-label="Get a free consultation">

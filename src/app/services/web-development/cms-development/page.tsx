@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "web-development",
   slug: "cms-development",
   tagline: "Content management platforms built around how your team actually works — from WordPress and headless CMS to fully custom builds that put editorial control back in the hands of your team without a developer in the loop.",
+  heroBullets: [
+    "Content management platforms built around editing workflows",
+    "Integration with WordPress, headless CMS, or custom builds",
+    "Dynamic page editors that put control back in editorial hands",
+    "No developer needed for everyday content updates"
+  ],
   heroImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

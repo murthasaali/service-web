@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "it-consulting-it-services",
   slug: "managed-it-operations",
   tagline: "Helpdesk support, infrastructure planning, cost optimisation, and ongoing IT management services that keep business technology running reliably — without requiring a full in-house IT function.",
+  heroBullets: [
+    "Operations planning, cost tracking, and monitoring",
+    "Asset inventories, device fleet policies, and onboarding checklists",
+    "Helpdesk setup templates and service operations design",
+    "Outsource readiness plans and provider evaluations"
+  ],
   heroImage: "https://images.unsplash.com/photo-1588508065123-287b28e013da?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

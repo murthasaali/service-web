@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "mobile-app-development",
   slug: "cross-platform-apps",
   tagline: "Flutter and React Native app development that delivers a native-quality experience on iOS and Android from a single shared codebase — reducing build time and maintenance cost without sacrificing the quality users expect.",
+  heroBullets: [
+    "Cross-platform development using Flutter and React Native",
+    "Shared codebase for iOS and Android",
+    "Reduced development timelines and maintenance overhead",
+    "Consistent layout experience across all screen sizes"
+  ],
   heroImage: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

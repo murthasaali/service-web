@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "customer-exp-management",
   slug: "customer-intelligence",
   tagline: "Customer analytics and retention tracking systems that surface actionable insight from your data — who is at risk of leaving, who is your most valuable segment, and what is actually driving satisfaction or dissatisfaction.",
+  heroBullets: [
+    "Customer analytics, satisfaction surveys, and retention tracking",
+    "Early warning indicators for customer churn risk",
+    "Sentiment analysis and Net Promoter Score (NPS) systems",
+    "Insights tied directly to product improvements"
+  ],
   heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

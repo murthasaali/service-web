@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "software-development",
   slug: "product-development",
   tagline: "MVP development, SaaS product builds, and ongoing product maintenance for founders and businesses bringing a software product to market — from validated concept to production-ready application built to scale.",
+  heroBullets: [
+    "MVP development and custom SaaS product builds",
+    "Ongoing product maintenance for founders and businesses",
+    "Validated concepts turned into production-ready software",
+    "Modern tech stack scaled for commercial growth"
+  ],
   heroImage: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

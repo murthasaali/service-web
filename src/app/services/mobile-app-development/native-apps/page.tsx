@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "mobile-app-development",
   slug: "native-apps",
   tagline: "Native iOS and Android app development using Swift, Kotlin, and platform-specific APIs — for applications where performance, device capability access, and platform-native user experience are requirements, not preferences.",
+  heroBullets: [
+    "Native iOS and Android development using Swift and Kotlin",
+    "High performance with direct access to device-specific capabilities",
+    "Premium, platform-native look and feel",
+    "Fully compliant with App Store and Google Play guidelines"
+  ],
   heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

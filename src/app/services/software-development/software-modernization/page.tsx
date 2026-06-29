@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "software-development",
   slug: "software-modernization",
   tagline: "Legacy system migration, re-engineering, and system upgrades that replace ageing software without disrupting the operations that depend on it — delivered incrementally to manage risk and give the business early visibility of the new system.",
+  heroBullets: [
+    "Legacy system migrations, re-engineering, and upgrades",
+    "Gradual replacement of ageing software without downtime",
+    "Incremental delivery to manage risk and demonstrate value early",
+    "High-performance, maintainable software architecture"
+  ],
   heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

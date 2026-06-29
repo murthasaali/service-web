@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "digital-marketing",
   slug: "search-marketing",
   tagline: "SEO, GEO, local SEO, and technical SEO services that improve search visibility, drive qualified organic traffic, and build sustainable rankings across traditional search engines and AI-powered discovery platforms.",
+  heroBullets: [
+    "SEO, GEO, local SEO, and technical SEO services",
+    "Optimized for traditional search engine rankings and AI discovery engines",
+    "Elimination of crawl blocks, indexation errors, and page speed issues",
+    "Keyword mapping focused entirely on commercial search intent"
+  ],
   heroImage: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

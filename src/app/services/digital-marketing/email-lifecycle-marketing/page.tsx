@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "digital-marketing",
   slug: "email-lifecycle-marketing",
   tagline: "Email campaigns, marketing automation, lead nurturing, and customer retention flows that move prospects through the buying process and keep customers coming back — built around your actual customer lifecycle, not a generic template.",
+  heroBullets: [
+    "Custom email campaigns and marketing automation",
+    "Lead nurturing sequences and customer retention flows",
+    "Structured around your actual customer lifecycle stages",
+    "Higher engagement rates with no generic templates used"
+  ],
   heroImage: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "web-development",
   slug: "web-optimization",
   tagline: "Systematic performance audits, Core Web Vitals improvements, security hardening, and accessibility fixes that make your website faster, safer, and more findable — with measurable results at each stage.",
+  heroBullets: [
+    "Systematic performance audits and Core Web Vitals improvements",
+    "Security hardening and accessibility (a11y) compliance",
+    "Websites optimized for page load speed and search engine crawlability",
+    "Measurable improvements delivered at each optimization stage"
+  ],
   heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

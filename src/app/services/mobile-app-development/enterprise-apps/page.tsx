@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "mobile-app-development",
   slug: "enterprise-apps",
   tagline: "Employee management, field service, and internal business apps built for the specific workflows of your organisation — integrated with existing enterprise systems and deployed to managed device fleets.",
+  heroBullets: [
+    "Field service, asset tracking, and employee management apps",
+    "Built around corporate workflows and custom internal data",
+    "Integrated with enterprise systems (ERP, custom databases)",
+    "Secure deployment for corporate mobile device fleets"
+  ],
   heroImage: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

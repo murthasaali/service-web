@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "hosting-infrastructure",
   slug: "cloud-solutions",
   tagline: "Cloud services, cloud migration, and cloud architecture designed to reduce infrastructure cost, improve reliability, and give your team the scalability they need without the overhead of managing physical hardware.",
+  heroBullets: [
+    "Cloud migration planning and infrastructure architecture",
+    "Multi-cloud and hybrid deployments (AWS, Azure, Vercel)",
+    "Cloud cost optimization and usage audits",
+    "Highly available, fault-tolerant cloud design"
+  ],
   heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

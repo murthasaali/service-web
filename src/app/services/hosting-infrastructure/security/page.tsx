@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "hosting-infrastructure",
   slug: "security",
   tagline: "SSL setup, backup solutions, disaster recovery planning, and infrastructure security audits that protect your systems against common attack vectors and ensure your business can recover from unexpected incidents.",
+  heroBullets: [
+    "SSL certificate configurations and security audits",
+    "Automated backups and disaster recovery planning",
+    "Hardened server configurations and access policies",
+    "Incident response guidelines and threat mitigation"
+  ],
   heroImage: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

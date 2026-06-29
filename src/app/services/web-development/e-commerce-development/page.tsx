@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "web-development",
   slug: "e-commerce-development",
   tagline: "Online stores, marketplaces, and subscription platforms built around your actual product catalogue, pricing rules, and fulfilment process. Cart, checkout, and payment integration without the constraints of a theme.",
+  heroBullets: [
+    "Online stores, marketplaces, and subscription platforms",
+    "Built around your product catalogue, pricing, and fulfilment rules",
+    "Cart, checkout, and payment integration without template limits",
+    "Fully owned database and transactions flow"
+  ],
   heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

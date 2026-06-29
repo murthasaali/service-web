@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "digital-marketing",
   slug: "brand-content",
   tagline: "Content marketing, blog writing, copywriting, and case studies that build authority, support organic search performance, and give your sales team the material they actually need in sales conversations.",
+  heroBullets: [
+    "Content marketing, blog writing, copywriting, and case studies",
+    "Built to establish industry authority and support organic search",
+    "High-impact material for sales team use in active deals",
+    "Professional copywriting and editorial design"
+  ],
   heroImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "hosting-infrastructure",
   slug: "devops",
   tagline: "CI/CD pipeline setup, infrastructure automation, and containerisation services that reduce deployment risk, shorten release cycles, and give development teams a reliable, repeatable path from code to production.",
+  heroBullets: [
+    "Automated CI/CD pipelines and deployment orchestration",
+    "Infrastructure as Code (IaC) and containerization",
+    "Shorter release cycles and reduced deployment risk",
+    "Development environments mirroring production behavior"
+  ],
   heroImage: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

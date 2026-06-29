@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "customer-exp-management",
   slug: "customer-support-systems",
   tagline: "Helpdesk, ticketing, and live chat platform implementations that give support teams the tools to respond faster, resolve more on first contact, and track performance accurately.",
+  heroBullets: [
+    "Helpdesk ticketing systems and live chat integrations",
+    "Customer portal setups for self-service lookups",
+    "Team queues, routing rules, and speed-to-reply targets",
+    "Team training and support operations reporting"
+  ],
   heroImage: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

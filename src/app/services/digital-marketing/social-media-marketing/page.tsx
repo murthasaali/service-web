@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "digital-marketing",
   slug: "social-media-marketing",
   tagline: "Social media management, content creation, and influencer marketing strategies that build a credible, consistent presence on the platforms your audience actually uses — tied to business objectives rather than follower count.",
+  heroBullets: [
+    "Credible, consistent presence on target platforms",
+    "High-impact content creation and influencer strategies",
+    "Focus on business objectives and revenue over follower count",
+    "Social media channel management and reporting"
+  ],
   heroImage: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

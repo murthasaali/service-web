@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "mobile-app-development",
   slug: "backend-services",
   tagline: "API development, push notification infrastructure, authentication systems, and payment integration for mobile applications — the backend layer that makes apps reliable, secure, and capable of scaling without architectural rebuilds.",
+  heroBullets: [
+    "Mobile APIs, push notification infrastructure, and security",
+    "Authentication systems and payment gateway integrations",
+    "Scalable backend layer ready for high concurrent user loads",
+    "Protected database connections and endpoint testing"
+  ],
   heroImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1000&q=80&auto=format&fit=crop",
 
   solves: {

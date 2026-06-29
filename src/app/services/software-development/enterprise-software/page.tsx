@@ -18,6 +18,12 @@ const data: SubservicePageData = {
   parentSlug: "software-development",
   slug: "enterprise-software",
   tagline: "ERP, CRM, HRMS, and inventory management software developed for organisations that need systems built around their actual processes — not the other way around.",
+  heroBullets: [
+    "ERP, CRM, HRMS, and inventory management systems",
+    "Built around your business processes instead of standard software limits",
+    "Custom data structures and integration with existing tools",
+    "High-security permissions and workflow logic"
+  ],
   heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=80&auto=format&fit=crop",
 
   solves: {
