@@ -4,10 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title:
-		'Email Marketing & Lifecycle Campaigns | Marketing Automation | aibizmod',
+	title: 'Email Marketing & Marketing Automation Services | aibizmod',
 	description:
-		'Email marketing and lifecycle campaign services. Marketing automation, lead nurturing, and customer retention flows that move prospects through the buying process.',
+		'Email campaigns, marketing automation, lead nurturing, and customer retention flows built in Klaviyo, HubSpot, and ActiveCampaign — that move prospects to purchase.',
 	keywords: [
 		'email marketing',
 		'marketing automation',

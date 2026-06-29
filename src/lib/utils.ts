@@ -54,14 +54,14 @@ export const cardData: CardData[] = [
     title: "Automation",
     description: "Intelligent automation pipelines that eliminate manual work and accelerate business operations.",
     color: "rgba(147, 51, 234, 0.8)",
-    href: "/services/automation",
+    href: "/services/ai-automation",
   },
   {
     id: 7,
     title: "Customer Experience Management",
     description: "CX strategies and tooling that turn every interaction into lasting customer loyalty.",
     color: "rgba(192, 132, 252, 0.8)",
-    href: "/services/customer-exp-management",
+    href: "/services/customer-experience-management",
   },
   {
     id: 8,

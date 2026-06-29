@@ -4,10 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title:
-		'Industry-Specific Software Development | Vertical Solutions | aibizmod',
+	title: 'Industry-Specific Software Development | Engineering & Healthcare | aibizmod',
 	description:
-		'Custom software solutions built for specific industries including healthcare, manufacturing, logistics, finance, and more. Domain expertise built into every system.',
+		'Custom software for engineering, healthcare, logistics, construction, education, and manufacturing — built for the workflows, regulations, and data of your sector.',
 	keywords: [
 		'industry-specific software',
 		'vertical software',
@@ -197,6 +196,10 @@ const data: SubservicePageData = {
 		{
 			q: 'Do you understand the compliance requirements for the industry, or do we need to provide them?',
 			a: 'We bring working knowledge of common compliance requirements in the sectors we have experience in — healthcare data governance, construction contract law, financial regulatory reporting. We do not rely on our knowledge alone for compliance-critical requirements — we review documented guidance with you and involve your compliance team or legal counsel where the requirement has significant regulatory consequence.',
+		},
+		{
+			q: 'Do you build engineering project management software?',
+			a: 'Yes. Engineering project management software is a recurring requirement we build for engineering consultancies, EPC contractors, and engineering-led manufacturers. We model the project structures, document control, deliverable tracking, and approval workflows that engineering project lifecycles require — rather than adapting a generic project tool that does not understand engineering phases, revisions, or compliance documentation.',
 		},
 		{
 			q: 'How long does an industry-specific software project typically take?',

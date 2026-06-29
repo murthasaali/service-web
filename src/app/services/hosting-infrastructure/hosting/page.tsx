@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Cloud Hosting Services | Managed Web Hosting | aibizmod',
+	title: 'Managed Web Hosting & Server Management | aibizmod',
 	description:
-		'Scalable cloud hosting services on AWS, GCP, and Azure. Managed hosting with automated backups, monitoring, and deployment pipelines.',
+		'Shared, VPS, dedicated, and managed hosting with configuration, uptime monitoring, and support — keeping your websites and applications reliably available.',
 	keywords: [
 		'cloud hosting',
 		'web hosting',

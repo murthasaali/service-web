@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Brand & Content Marketing Services | Content Strategy | aibizmod',
+	title: 'Content Marketing & Brand Content Services | aibizmod',
 	description:
-		'Strategic brand and content marketing services. Content planning, creation, and distribution that builds authority and drives engagement.',
+		'Blog writing, copywriting, case studies, and content marketing strategy that builds authority, supports SEO rankings, and gives sales teams material that converts.',
 	keywords: [
 		'content marketing',
 		'content strategy',

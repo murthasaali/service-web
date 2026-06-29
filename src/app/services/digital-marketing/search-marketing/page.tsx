@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Search Marketing & SEO Services | SEO, PPC | aibizmod',
+	title: 'SEO & GEO Services | Search Marketing | aibizmod',
 	description:
-		'Organic SEO and search marketing services. Keyword research, technical SEO, content optimization, and PPC campaigns that drive qualified traffic.',
+		'SEO, GEO (Generative Engine Optimisation), local SEO, and technical SEO services that improve rankings in both traditional and AI-powered search engines.',
 	keywords: [
 		'search marketing',
 		'SEO services',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 };
 
 const data: SubservicePageData = {
-	name: 'Search Marketing',
+	name: 'SEO & GEO Services',
 	parentName: 'Digital Marketing',
 	parentSlug: 'digital-marketing',
 	slug: 'search-marketing',

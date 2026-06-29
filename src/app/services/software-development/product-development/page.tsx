@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Product Development Services | SaaS, Startup Development | aibizmod',
+	title: 'SaaS Product Development & MVP Build | aibizmod',
 	description:
-		'End-to-end product development from concept through launch. SaaS platforms, startup MVPs, and scalable products built for growth.',
+		'MVP development and SaaS product builds for founders bringing a software product to market — from validated concept to production-ready, scalable application.',
 	keywords: [
 		'product development',
 		'SaaS development',

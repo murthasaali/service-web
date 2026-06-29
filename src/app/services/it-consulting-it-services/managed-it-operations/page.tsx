@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Managed IT Operations & Support Services | IT Management | aibizmod',
+	title: 'Managed IT Services & Helpdesk Support | aibizmod',
 	description:
-		'Managed IT operations and helpdesk support services. Keep business technology running reliably without requiring an in-house IT team.',
+		'Managed IT services, helpdesk support, infrastructure planning, and cost optimisation that keeps your technology running without an in-house IT team.',
 	keywords: [
 		'managed IT services',
 		'IT operations',
@@ -200,6 +200,10 @@ const data: SubservicePageData = {
 		{
 			q: 'What size of business do managed IT operations make sense for?',
 			a: 'Typically businesses between 20 and 200 staff who have outgrown informal IT management but are not yet at the scale to justify building a full internal IT team. The economics work when the cost of managed IT is less than a full-time senior IT employee, which is the case for most organisations in this range.',
+		},
+		{
+			q: 'Do you manage IT project management software as part of the service?',
+			a: 'Yes. As part of managed IT operations we deploy, configure, and administer IT project management software on behalf of your team — handling user provisioning, licence management, access control, and integration with your other business systems. This sits alongside our broader service of recommending, evaluating, and implementing the right IT project management tool for the way your team actually delivers work.',
 		},
 	],
 };

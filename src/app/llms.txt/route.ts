@@ -35,8 +35,8 @@ ${BASE}/services/software-development
 ${BASE}/services/mobile-app-development
 ${BASE}/services/digital-marketing
 ${BASE}/services/hosting-infrastructure
-${BASE}/services/automation
-${BASE}/services/customer-exp-management
+${BASE}/services/ai-automation
+${BASE}/services/customer-experience-management
 ${BASE}/services/it-consulting-it-services
 
 ## Sub‑service pages

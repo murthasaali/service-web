@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Web Optimization & Performance Services | Core Web Vitals | aibizmod',
+	title: 'Website Performance Optimisation | Core Web Vitals | aibizmod',
 	description:
-		'Web performance optimization, Core Web Vitals improvements, security hardening, and accessibility fixes. Make your website faster, safer, and more SEO-friendly.',
+		'Core Web Vitals improvements, page speed optimisation, security hardening, and accessibility fixes that raise PageSpeed scores and reduce bounce rates.',
 	keywords: [
 		'web optimization',
 		'website optimization',

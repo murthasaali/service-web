@@ -12,6 +12,26 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/services/automation/:path*",
+        destination: "/services/ai-automation/:path*",
+      },
+      {
+        source: "/services/customer-exp-management/:path*",
+        destination: "/services/customer-experience-management/:path*",
+      },
+      {
+        source: "/services/software-development/it-consulting-services",
+        destination: "/services/software-development/tech-advisory-services",
+      },
+      {
+        source: "/services/software-development/it-consulting-services/:path*",
+        destination: "/services/software-development/tech-advisory-services/:path*",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

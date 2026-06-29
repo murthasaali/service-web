@@ -73,7 +73,7 @@ const whatWeDoCards: WhatWeDoCard[] = [
     title: "Workflow Automation",
     description:
       "We connect your tools and automate repeated work, so important tasks move without constant follow-up.",
-    href: "/services/automation",
+    href: "/services/ai-automation",
     icon: Zap,
   },
   {
@@ -81,7 +81,7 @@ const whatWeDoCards: WhatWeDoCard[] = [
     title: "Customer Systems",
     description:
       "We improve CRM, support, and communication systems so every customer interaction is easier to manage.",
-    href: "/services/customer-exp-management",
+    href: "/services/customer-experience-management",
     icon: Users,
   },
   {

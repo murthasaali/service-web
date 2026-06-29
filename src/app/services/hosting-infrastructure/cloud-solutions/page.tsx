@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Cloud Solutions & Migration Services | Multi-Cloud | aibizmod',
+	title: 'Cloud Solutions & Cloud Migration Services | aibizmod',
 	description:
-		'Enterprise cloud solutions and cloud migration services. AWS, GCP, and Azure solutions designed for scalability and reliability.',
+		'Cloud migration, cloud architecture, and multi-cloud management on AWS, Azure, and GCP — designed to reduce infrastructure cost and improve reliability.',
 	keywords: [
 		'cloud solutions',
 		'cloud migration',
@@ -199,6 +199,10 @@ const data: SubservicePageData = {
 		{
 			q: 'What security standards do you configure by default?',
 			a: 'By default we configure IAM with least-privilege policies, multi-factor authentication for console access, encryption at rest and in transit for all storage and database services, VPC with private subnets for application workloads, CloudTrail or equivalent audit logging, and automated security scanning for common misconfigurations. Additional controls are added based on compliance requirements.',
+		},
+		{
+			q: 'Do you host cloud project management software?',
+			a: 'Yes. We host and operate cloud project management software on AWS, Azure, and GCP for SaaS product teams and internal IT departments. The hosting layer covers the application runtime, database, file storage, identity provider, observability, backup, and disaster recovery — designed to keep the application reliably available as users grow. This hosting is delivered alongside our custom software development work for clients who want a single team to build and run the platform.',
 		},
 	],
 };

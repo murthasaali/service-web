@@ -4,10 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title:
-		'Social Media Marketing Services | Social Strategy & Management | aibizmod',
+	title: 'Social Media Marketing & Management Services | aibizmod',
 	description:
-		'Social media marketing and management services. Strategy, content creation, community management, and influencer marketing on all major platforms.',
+		'Social media management, content creation, and influencer marketing across LinkedIn, Instagram, Facebook, and X — strategy and execution handled end to end.',
 	keywords: [
 		'social media marketing',
 		'social media management',

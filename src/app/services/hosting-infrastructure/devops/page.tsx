@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'DevOps Services | CI/CD, Infrastructure Automation | aibizmod',
+	title: 'DevOps & CI/CD Pipeline Services | aibizmod',
 	description:
-		'DevOps services including CI/CD pipeline setup, infrastructure automation, containerization, and deployment optimization.',
+		'CI/CD pipeline setup, Docker, Kubernetes, and infrastructure automation that gives your team a reliable, repeatable path from code commit to production.',
 	keywords: [
 		'DevOps services',
 		'CI/CD',

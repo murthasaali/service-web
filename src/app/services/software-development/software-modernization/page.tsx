@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Software Modernization & Legacy System Upgrades | aibizmod',
+	title: 'Legacy Software Modernisation & System Migration | aibizmod',
 	description:
-		'Modernize legacy systems with contemporary architecture. Migrate to cloud, update outdated codebases, and improve performance without rebuilding from scratch.',
+		'Legacy system migration, code re-engineering, and system upgrades that replace ageing software without disrupting the operations that depend on it.',
 	keywords: [
 		'software modernization',
 		'legacy system modernization',

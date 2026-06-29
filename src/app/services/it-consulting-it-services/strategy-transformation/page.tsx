@@ -4,10 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title:
-		'IT Strategy & Digital Transformation Consulting | Tech Roadmap | aibizmod',
+	title: 'Digital Transformation Consulting & IT Strategy | aibizmod',
 	description:
-		'Digital transformation consulting and technology roadmapping. Connect technology investment to business strategy with a clear plan for modernising operations.',
+		'Digital transformation consulting and technology roadmapping services that connect IT investment to business strategy — practical documentation, not slide decks.',
 	keywords: [
 		'digital transformation',
 		'IT strategy',
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
 };
 
 const data: SubservicePageData = {
-	name: 'Strategy & Transformation',
+	name: 'Digital Transformation Consulting',
 	parentName: 'IT Consulting & IT Services',
 	parentSlug: 'it-consulting-it-services',
 	slug: 'strategy-transformation',

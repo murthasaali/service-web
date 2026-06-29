@@ -9,12 +9,16 @@ import TechStackCarousel, {
 } from '@/components/ui/tech-stack-carousel';
 
 export const metadata: Metadata = {
-	title: 'IT Consulting Services & Technology Advisory | aibizmod',
+	title: 'IT Consulting Services | Digital Transformation | aibizmod',
 	description:
-		'IT consulting company providing strategic technology advisory, cloud audits, architecture reviews, and IT project management. Fractional CTO support for businesses in the UK and India. Practical roadmaps, not slide decks.',
+		'IT consulting, digital transformation, cloud advisory, cybersecurity assessments, and managed IT services — with IT project management software recommendations for growing teams.',
 	keywords: [
+		'it consulting services',
+		'digital transformation consulting',
+		'managed it services',
+		'it project management software',
+		'fractional cto services',
 		'IT consulting',
-		'IT consulting services',
 		'IT services',
 		'IT service provider',
 		'technology consulting',
@@ -28,9 +32,9 @@ export const metadata: Metadata = {
 		canonical: 'https://aibizmod.com/services/it-consulting-it-services',
 	},
 	openGraph: {
-		title: 'IT Consulting Services & Technology Advisory | aibizmod',
+		title: 'IT Consulting Services | aibizmod',
 		description:
-			'Strategic IT consulting and technology advisory for businesses. Cloud audits, architecture reviews, and practical technology roadmaps.',
+			'IT consulting, digital transformation, cloud advisory, cybersecurity assessments, and managed IT services for growing teams.',
 		url: '/services/it-consulting-it-services',
 	},
 };

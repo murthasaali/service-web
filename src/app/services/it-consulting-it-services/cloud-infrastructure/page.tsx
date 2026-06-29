@@ -4,10 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title:
-		'Cloud Infrastructure Consulting | AWS, Azure, GCP Migration | aibizmod',
+	title: 'Cloud Infrastructure & Migration Consulting | aibizmod',
 	description:
-		'Cloud services advisory and migration planning. Help organisations design, adopt, and optimise cloud infrastructure on AWS, Azure, and GCP aligned to business requirements.',
+		'Cloud advisory, migration planning, and architecture consulting for AWS, Azure, and GCP — aligned to your technical requirements and business budget.',
 	keywords: [
 		'cloud infrastructure',
 		'cloud consulting',

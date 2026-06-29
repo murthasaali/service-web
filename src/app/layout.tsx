@@ -64,7 +64,7 @@ const entityGraph = {
 			description:
 				'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
 			publisher: { '@id': 'https://aibizmod.com/#organization' },
-			inLanguage: 'en-GB',
+			inLanguage: 'en',
 		},
 	],
 };
@@ -84,25 +84,23 @@ export const metadata: Metadata = {
 	description:
 		'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',
 	keywords: [
+		'ai automation services',
 		'custom software development',
 		'web development company',
 		'mobile app development',
-		'IT consulting services',
-		'digital marketing agency',
 		'cloud hosting services',
+		'it consulting services',
+		'digital marketing agency',
 		'business process automation',
-		'software development',
-		'web development services',
-		'IT services',
-		'technology consulting',
-		'custom web development',
-		'app development',
-		'technology solutions',
+		'digital transformation consulting',
+		'saas development company',
+		'generative ai services',
+		'managed it services',
 	],
 	metadataBase: new URL('https://aibizmod.com'),
 	openGraph: {
 		type: 'website',
-		locale: 'en_GB',
+		locale: 'en',
 		siteName: 'aibizmod',
 		title: 'aibizmod | Intelligent Tech Services',
 		description:

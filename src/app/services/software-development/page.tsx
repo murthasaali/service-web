@@ -9,18 +9,19 @@ import TechStackCarousel, {
 } from '@/components/ui/tech-stack-carousel';
 
 export const metadata: Metadata = {
-	title: 'Custom Software Development Company | ERP & CRM Solutions | aibizmod',
+	title: 'Custom Software Development Services | UK & India | aibizmod',
 	description:
-		'Custom software development company delivering enterprise solutions including ERP systems, CRM platforms, and operational software. We build scalable, documented software for businesses in the UK and India with complete source code ownership.',
+		'Bespoke software development for businesses that have outgrown spreadsheets — ERP, CRM, SaaS dashboards, project management systems, and internal tools.',
 	keywords: [
+		'custom software development company',
+		'bespoke software development',
+		'saas development company',
 		'software development company',
 		'custom software development',
-		'custom software development company',
 		'software development services',
 		'ERP development',
 		'CRM development',
 		'enterprise software development',
-		'bespoke software development',
 		'software engineering company',
 		'business software solutions',
 	],
@@ -28,9 +29,9 @@ export const metadata: Metadata = {
 		canonical: 'https://aibizmod.com/services/software-development',
 	},
 	openGraph: {
-		title: 'Custom Software Development Company | ERP & CRM | aibizmod',
+		title: 'Custom Software Development | aibizmod',
 		description:
-			'We deliver custom software solutions including ERP, CRM, and operational platforms with complete source code ownership.',
+			'Bespoke software development for businesses that have outgrown spreadsheets — ERP, CRM, SaaS dashboards, project management systems, and internal tools.',
 		url: '/services/software-development',
 	},
 };
@@ -197,7 +198,7 @@ const serviceCards: ServiceCard[] = [
 			'IT Planning',
 			'Solution Architecture',
 		],
-		href: '/services/software-development/it-consulting-services',
+		href: '/services/software-development/tech-advisory-services',
 	},
 ];
 

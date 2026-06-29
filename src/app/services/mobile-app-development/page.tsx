@@ -9,12 +9,14 @@ import TechStackCarousel, {
 } from '@/components/ui/tech-stack-carousel';
 
 export const metadata: Metadata = {
-	title: 'Mobile App Development Services | iOS & Android Apps | aibizmod',
+	title: 'Mobile App Development Services | UK & India | aibizmod',
 	description:
-		'Mobile app development company building native iOS and Android applications for businesses. Custom booking apps, portals, and inventory systems from design to App Store launch. UK and India based.',
+		'iOS, Android, Flutter, and React Native app development — consumer apps, enterprise apps, and mobile-first products built and launched to the App Store and Google Play.',
 	keywords: [
-		'mobile app development',
 		'mobile app development company',
+		'flutter app development',
+		'react native development agency',
+		'mobile app development',
 		'iOS app development',
 		'Android app development',
 		'mobile application development',
@@ -28,9 +30,9 @@ export const metadata: Metadata = {
 		canonical: 'https://aibizmod.com/services/mobile-app-development',
 	},
 	openGraph: {
-		title: 'Mobile App Development Services | iOS & Android | aibizmod',
+		title: 'Mobile App Development Services | aibizmod',
 		description:
-			'Custom iOS and Android app development from design to App Store launch. We build booking tools, portals, and business applications.',
+			'iOS, Android, Flutter, and React Native app development — consumer apps, enterprise apps, and mobile-first products built and launched to the App Store and Google Play.',
 		url: '/services/mobile-app-development',
 	},
 };

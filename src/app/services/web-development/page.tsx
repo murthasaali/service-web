@@ -9,12 +9,14 @@ import TechStackCarousel, {
 } from '@/components/ui/tech-stack-carousel';
 
 export const metadata: Metadata = {
-	title: 'Web Development Services UK & India | Custom Websites | aibizmod',
+	title: 'Web Development Services | UK & India | aibizmod',
 	description:
-		'Web development company specializing in custom website design, e-commerce platforms, and web applications. We build fast, scalable, responsive websites for businesses in the UK and India. No templates, full source code ownership.',
+		'Custom web development services — corporate websites, e-commerce, SaaS dashboards, and web applications. Fast, scalable, and built to own, not rent.',
 	keywords: [
-		'web development company',
 		'web development services',
+		'custom web application development',
+		'web app development agency',
+		'web development company',
 		'custom web development',
 		'website development company',
 		'web application development',
@@ -26,9 +28,9 @@ export const metadata: Metadata = {
 	],
 	alternates: { canonical: 'https://aibizmod.com/services/web-development' },
 	openGraph: {
-		title: 'Web Development Services UK & India | aibizmod',
+		title: 'Web Development Services | aibizmod',
 		description:
-			'Custom website development company. We build fast, scalable websites and web applications with full source code ownership.',
+			'Custom web development services — corporate websites, e-commerce, SaaS dashboards, and web applications. Fast, scalable, and built to own, not rent.',
 		url: '/services/web-development',
 	},
 };

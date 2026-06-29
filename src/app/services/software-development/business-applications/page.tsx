@@ -4,10 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title:
-		'Business Applications Development | Custom Software Solutions | aibizmod',
+	title: 'Business Application Development | Project Management Software | aibizmod',
 	description:
-		'Custom business application development for internal operations, workflows, and team productivity. Purpose-built software that fits your actual processes.',
+		'Custom workflow tools, internal applications, billing systems, and project management software built for your exact process — not adapted from a generic off-the-shelf product.',
 	keywords: [
 		'business application development',
 		'business software development',
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
 };
 
 const data: SubservicePageData = {
-	name: 'Business Applications',
+	name: 'Business Application Development',
 	parentName: 'Software Development',
 	parentSlug: 'software-development',
 	slug: 'business-applications',
@@ -197,6 +196,10 @@ const data: SubservicePageData = {
 		{
 			q: 'How long does a business application typically take to build?',
 			a: 'A focused application covering a single operational workflow — a billing system, a returns processor, a commission calculator — typically takes six to twelve weeks. More complex applications with multiple modules and integrations take three to six months. The key determinant is how clearly defined the requirements are at the start and how quickly stakeholders can confirm decisions during development.',
+		},
+		{
+			q: 'Do you build cloud based project management software?',
+			a: 'Yes. Cloud based project management software is one of the most common business applications we develop. We build cloud project management software with task tracking, resource allocation, time logging, and reporting — designed around your team\'s actual workflow rather than adapted from an off-the-shelf product. The resulting system is hosted on your cloud account, owned outright, and free of per-seat licensing fees.',
 		},
 		{
 			q: 'Do you build admin interfaces as part of the application?',

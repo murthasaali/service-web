@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Full Stack Web Development Services | React to Database | aibizmod',
+	title: 'Full Stack Web Development Services | aibizmod',
 	description:
-		'End-to-end full stack web development covering frontend, backend, database, and deployment. React, Node.js, PostgreSQL, and deployment on your infrastructure.',
+		'End-to-end web application development: frontend, backend, database, and deployment — one team, one codebase, one clean handover.',
 	keywords: [
 		'full stack development',
 		'full stack developer',

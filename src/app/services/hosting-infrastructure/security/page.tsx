@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Cloud Security & Infrastructure Security Services | aibizmod',
+	title: 'Infrastructure Security & Disaster Recovery | aibizmod',
 	description:
-		'Cloud and infrastructure security services. Data protection, network security, compliance, and security hardening.',
+		'SSL configuration, backup solutions, disaster recovery planning, and infrastructure security audits that protect your systems and ensure business continuity.',
 	keywords: [
 		'infrastructure security',
 		'cloud security',

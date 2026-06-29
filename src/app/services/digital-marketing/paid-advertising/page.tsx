@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Paid Advertising Services | Google Ads, Social Media Ads | aibizmod',
+	title: 'Google Ads, Meta Ads & PPC Management | aibizmod',
 	description:
-		'Paid advertising campaign management. Google Ads, social media advertising, and multi-channel campaigns that drive conversions.',
+		'Google Ads, Meta Ads, and LinkedIn Ads management focused on qualified lead generation and measurable return on ad spend — not impressions and clicks.',
 	keywords: [
 		'paid advertising',
 		'Google Ads',

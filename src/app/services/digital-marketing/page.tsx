@@ -9,27 +9,29 @@ import TechStackCarousel, {
 } from '@/components/ui/tech-stack-carousel';
 
 export const metadata: Metadata = {
-	title:
-		'Digital Marketing & SEO Services | GA4 Setup & Looker Studio | aibizmod',
+	title: 'Digital Marketing Services | SEO, GEO & Paid Ads | aibizmod',
 	description:
-		'Digital marketing and SEO services with data-driven strategies. GA4 setup, technical SEO audits, Looker Studio dashboards, and keyword research for businesses in the UK and India.',
+		'SEO, GEO, paid advertising, social media, email marketing, and analytics services that generate measurable leads and grow your online presence in UK and India.',
 	keywords: [
+		'digital marketing services',
+		'seo services uk',
+		'geo optimization',
+		'generative engine optimization',
+		'ai seo services',
 		'digital marketing',
 		'digital marketing agency',
 		'SEO services',
 		'GA4 setup',
 		'Looker Studio',
 		'technical SEO',
-		'digital marketing services',
-		'SEO agency',
-		'content marketing',
-		'paid advertising services',
+		'ppc management',
+		'google ads agency',
 	],
 	alternates: { canonical: 'https://aibizmod.com/services/digital-marketing' },
 	openGraph: {
-		title: 'Digital Marketing & SEO Services | aibizmod',
+		title: 'Digital Marketing Services | aibizmod',
 		description:
-			'Data-driven digital marketing with GA4 setup, technical SEO audits, and Looker Studio dashboards for qualified traffic and revenue.',
+			'SEO, GEO, paid advertising, social media, email marketing, and analytics services that generate measurable leads and grow your online presence in UK and India.',
 		url: '/services/digital-marketing',
 	},
 };

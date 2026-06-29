@@ -4,10 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title:
-		'Frontend Development Services | React, Next.js Development | aibizmod',
+	title: 'Frontend Web Development | React & Next.js | aibizmod',
 	description:
-		'Professional frontend development services building responsive websites, landing pages, SPAs, and progressive web apps with React and Next.js. Fast, accessible, and production-ready.',
+		'React and Next.js frontend development — responsive websites, SPAs, landing pages, and progressive web apps that are fast, accessible, and API-ready.',
 	keywords: [
 		'frontend development',
 		'frontend development company',

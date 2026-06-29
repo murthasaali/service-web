@@ -4,10 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title:
-		'IT Security & Compliance Consulting | Cybersecurity Assessment | aibizmod',
+	title: 'Cybersecurity Consulting & Compliance Services | aibizmod',
 	description:
-		'Cybersecurity assessments and compliance support services. Identify risks, close security gaps, and meet regulatory obligations.',
+		'Cybersecurity assessments, penetration testing, and compliance consulting that identify security gaps and help you meet your regulatory obligations.',
 	keywords: [
 		'IT security',
 		'cybersecurity',
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
 };
 
 const data: SubservicePageData = {
-	name: 'Security & Compliance',
+	name: 'Cybersecurity Consulting & Compliance',
 	parentName: 'IT Consulting & IT Services',
 	parentSlug: 'it-consulting-it-services',
 	slug: 'security-compliance',

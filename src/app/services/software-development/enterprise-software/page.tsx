@@ -4,10 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title:
-		'Enterprise Software Development | ERP, CRM, HRMS Solutions | aibizmod',
+	title: 'Enterprise Software Development | ERP, CRM & HRMS | aibizmod',
 	description:
-		'Custom enterprise software development including ERP, CRM, HRMS, and inventory management systems. Built around your actual business processes.',
+		'Custom ERP, CRM, HRMS, and inventory management software development for organisations that need systems built around their processes, not the reverse.',
 	keywords: [
 		'enterprise software development',
 		'ERP development',

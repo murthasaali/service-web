@@ -104,7 +104,7 @@ export const services: ServiceData[] = [
     borderHover: "hover:border-orange-400/40",
   },
   {
-    id: "automation",
+    id: "ai-automation",
     name: "AI & Automation",
     description:
       "We build AI agents, predictive ML models, generative AI pipelines, computer vision systems, and workflow automations that eliminate manual work and unlock intelligent operations.",
@@ -115,14 +115,14 @@ export const services: ServiceData[] = [
       "Computer vision & AI vision pipelines",
       "Process & workflow automation",
     ],
-    href: "/services/automation",
+    href: "/services/ai-automation",
     icon: Zap,
     gradient: "from-yellow-400/15 to-orange-400/15",
     iconColor: "text-yellow-600",
     borderHover: "hover:border-yellow-400/40",
   },
   {
-    id: "customer-exp-management",
+    id: "customer-experience-management",
     name: "Customer Experience Management",
     description:
       "We configure CRM systems like HubSpot, Zoho, and Salesforce, optimize ticket routing, and set up communication channels like WhatsApp Business.",
@@ -133,7 +133,7 @@ export const services: ServiceData[] = [
       "WhatsApp Business & messaging setup",
       "Helpdesk and ticket routing integration",
     ],
-    href: "/services/customer-exp-management",
+    href: "/services/customer-experience-management",
     icon: Users,
     gradient: "from-pink-500/15 to-rose-400/15",
     iconColor: "text-pink-600",

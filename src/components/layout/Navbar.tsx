@@ -118,14 +118,14 @@ const serviceItems: {
     icon: Zap,
     name: "AI & Automation",
     desc: "AI agents, workflows & automation",
-    href: "/services/automation",
+    href: "/services/ai-automation",
   },
 
   {
     icon: Users,
     name: "Customer Experience",
     desc: "CRM setup, ticket routing & support",
-    href: "/services/customer-exp-management",
+    href: "/services/customer-experience-management",
   },
   {
     icon: Lightbulb,

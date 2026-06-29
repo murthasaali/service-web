@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'E-Commerce Development Services | Custom Online Stores | aibizmod',
+	title: 'E-Commerce Website Development | Custom Stores | aibizmod',
 	description:
-		'Custom e-commerce platform development for online stores, marketplaces, and subscription platforms. Built around your product catalogue and fulfilment process — not a template.',
+		'Custom e-commerce stores, multi-vendor marketplaces, and subscription platforms built to your product catalogue — not a Shopify theme.',
 	keywords: [
 		'e-commerce development',
 		'online store development',

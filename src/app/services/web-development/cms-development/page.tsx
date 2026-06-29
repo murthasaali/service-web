@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'CMS Development Services | WordPress, Headless CMS | aibizmod',
+	title: 'CMS Web Development | WordPress & Headless CMS | aibizmod',
 	description:
-		'Custom content management platform development — WordPress, headless CMS, or fully custom builds. Put editorial control back in the hands of your team without developer involvement.',
+		'WordPress, headless CMS, and custom content management platforms built around how your editorial team actually manages content — not how the tool expects them to.',
 	keywords: [
 		'CMS development',
 		'content management system',

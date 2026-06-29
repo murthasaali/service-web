@@ -9,11 +9,15 @@ import IntegrationHero, {
 } from '@/components/ui/integration-hero';
 
 export const metadata: Metadata = {
-	title: 'Cloud Hosting & Infrastructure Services | AWS, GCP, Azure | aibizmod',
+	title: 'Cloud Hosting & Infrastructure Services | aibizmod',
 	description:
-		'Cloud hosting and infrastructure services on AWS, GCP, and Azure. We design, build, and manage scalable, secure infrastructure with automated backups and deployment pipelines.',
+		'Cloud hosting, DevOps, managed infrastructure, and database services — reliable, observable, and built to scale. AWS, Azure, and GCP deployment specialists.',
 	keywords: [
 		'cloud hosting services',
+		'managed cloud hosting',
+		'cloud migration services',
+		'devops services',
+		'aws managed services',
 		'cloud infrastructure',
 		'AWS hosting',
 		'cloud services',
@@ -28,10 +32,9 @@ export const metadata: Metadata = {
 		canonical: 'https://aibizmod.com/services/hosting-infrastructure',
 	},
 	openGraph: {
-		title:
-			'Cloud Hosting & Infrastructure Services | AWS, GCP, Azure | aibizmod',
+		title: 'Cloud Hosting & Infrastructure | aibizmod',
 		description:
-			'Scalable cloud infrastructure on AWS, GCP, and Azure with automated backups, deployment pipelines, and rollback capability.',
+			'Cloud hosting, DevOps, managed infrastructure, and database services — reliable, observable, and built to scale. AWS, Azure, and GCP deployment specialists.',
 		url: '/services/hosting-infrastructure',
 	},
 };

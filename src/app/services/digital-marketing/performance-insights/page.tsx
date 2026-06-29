@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Analytics & Performance Insights Services | GA4 Setup | aibizmod',
+	title: 'Analytics & Conversion Optimisation Services | aibizmod',
 	description:
-		'Analytics and performance measurement services. GA4 setup, tracking implementation, dashboard creation, and data-driven insights.',
+		'GA4, GTM, Looker Studio, and conversion rate optimisation services that turn your marketing data into clear decisions — identifying where revenue is being lost.',
 	keywords: [
 		'analytics services',
 		'GA4 setup',
