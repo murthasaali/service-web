@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Phone, ArrowRight, LayoutGrid } from "lucide-react";
+import { Phone, ArrowRight, LayoutGrid, Globe } from "lucide-react";
 import { StarButton } from "@/components/ui/star-button";
 import {
   FaFacebookF,
@@ -10,6 +10,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { countries } from "@/lib/countries";
 
 const services = [
   { label: "Web Development",              href: "/services/web-development" },
@@ -126,27 +127,35 @@ export default function Footer() {
             <p className="font-sans text-[13px] leading-[1.7] text-white/60 max-w-[280px]">
               aibizmod is a digital growth & intelligent technology firm helping businesses navigate the AI-driven future, build a stronger digital presence and scale with confidence.
             </p>
-            <div className="pt-2 space-y-2.5">
-              <p className="font-sans text-[11px] text-white/40 uppercase tracking-widest mb-1">Inquiries</p>
-              
-              <div className="flex items-center gap-2.5 text-[14px] text-white/60">
-                <Phone size={13} className="text-[#22D3EE] shrink-0" />
-                <a
-                  href="tel:+442079460958"
-                  className="hover:text-white transition-colors"
-                >
-                  +44 (0) 20 7946 0958
-                </a>
-              </div>
-
-              <div className="flex items-center gap-2.5 text-[15px] text-white">
-                <MdEmail size={14} className="text-[#22D3EE] shrink-0" />
-                <a
-                  href="mailto:hello@aibizmod.com"
-                  className="hover:text-[#22D3EE] transition-colors font-semibold"
-                >
-                  hello@aibizmod.com
-                </a>
+            <div className="pt-2 space-y-3">
+              <p className="font-sans text-[11px] text-white/40 uppercase tracking-widest">Global Offices</p>
+              {countries.map((c) => (
+                <div key={c.code} className="space-y-0.5">
+                  <div className="flex items-center gap-2 text-[13px] text-white/70 font-medium">
+                    {c.flag}
+                    <span>{c.code}</span>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-[13px] text-white/50 pl-7">
+                    <Phone size={11} className="text-[#22D3EE] shrink-0" />
+                    <a href={`tel:${c.phone.replace(/\s/g, "")}`} className="hover:text-white transition-colors">
+                      {c.phone}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2.5 text-[13px] text-white/50 pl-7">
+                    <MdEmail size={12} className="text-[#22D3EE] shrink-0" />
+                    <a href={`mailto:${c.email}`} className="hover:text-white transition-colors">
+                      {c.email}
+                    </a>
+                  </div>
+                </div>
+              ))}
+              <div className="pt-2 border-t border-white/10">
+                <div className="flex items-center gap-2.5 text-[13px] text-white/50">
+                  <Globe size={12} className="text-[#22D3EE] shrink-0" />
+                  <a href="mailto:aibizmod@outlook.com" className="hover:text-white transition-colors">
+                    aibizmod@outlook.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>

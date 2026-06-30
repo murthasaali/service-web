@@ -8,6 +8,7 @@ import {
 	ArrowRight,
 	CheckCircle,
 	Clock,
+	Globe,
 	Mail,
 	MessageSquare,
 	Phone,
@@ -16,6 +17,7 @@ import ShaderBackground from '@/components/ui/shader-background';
 import { StarButton } from '@/components/ui/star-button';
 import { TextReveal } from '@/components/ui/cascade-text';
 import { client } from '@/lib/apollo-client';
+import { countries } from '@/lib/countries';
 
 const CREATE_DEMO_REQUEST = gql`
 	mutation CreateDemoRequest($input: CreateDemoRequestInput!) {
@@ -47,18 +49,12 @@ const serviceOptions = [
 ];
 
 const contactDetails = [
-	{
-		icon: Mail,
-		label: 'Email',
-		value: 'aibizmod@outlook.com',
-		href: 'mailto:aibizmod@outlook.com',
-	},
-	{
-		icon: Phone,
-		label: 'Phone',
-		value: '+44 (0) 20 7946 0958',
-		href: 'tel:+442079460958',
-	},
+	...countries.map((c) => ({
+		icon: Globe,
+		label: c.code,
+		value: `${c.phone} · ${c.email}`,
+		href: `mailto:${c.email}`,
+	})),
 	{
 		icon: Clock,
 		label: 'Response time',
