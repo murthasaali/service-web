@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 };
 
 const data: ServicePageData = {
-	name: 'Automation',
+	name: 'AI & Automation',
 	tagline:
 		'For operations teams and growing businesses in the UK, USA, and internationally that lose hours to manual data entry, we build custom automation pipelines — invoice routing, CRM synchronization, weekly reporting, and approval workflows. You receive documented runbooks, error-handling logic, and working integrations, so repetitive tasks run automatically and your team focuses on higher-value work.',
 	heroBullets: [
@@ -227,6 +227,13 @@ const serviceCards: ServiceCard[] = [
 			'Automated Summarization',
 		],
 		href: '/services/ai-automation/llm',
+	},
+	{
+		title: 'AI Visibility Audit',
+		image:
+			'https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=800&q=80&auto=format&fit=crop',
+		bullets: ['Benchmark', 'Roadmap'],
+		href: '/services/ai-automation/ai-visibility-audit',
 	},
 ];
 

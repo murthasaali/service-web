@@ -47,6 +47,11 @@ const INDUSTRY_IMAGE_MAP: Record<string, string | string[]> = {
     U('1441986300917-64674bd600d8'), // Elegant boutique interior
     U('1555529669-e69e7aa0ba9a'), // Product shelves
   ],
+  // Local Businesses — shops and storefronts
+  'local businesses': [
+    U('1441986300917-64674bd600d8'), // Elegant boutique interior
+    U('1555529669-e69e7aa0ba9a'), // Product shelves
+  ],
   // Finance — stock charts & financial analytics desks
   finance: [
     U('1611974789855-9c2a0a7236a3'), // Stock trading screens
@@ -267,6 +272,13 @@ export interface SubserviceFAQ {
   a: string;
 }
 
+export interface SubserviceWhatsIncluded {
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+}
+
 export interface SubservicePageData {
   name: string;
   parentName: string;
@@ -284,6 +296,7 @@ export interface SubservicePageData {
   };
 
   capabilities: SubserviceCapability[];
+  whatsIncluded?: SubserviceWhatsIncluded[];
   useCases: SubserviceUseCase[];
   technologies: string[];
   benefits: SubserviceBenefit[];
@@ -615,6 +628,53 @@ export default function SubservicePageLayout({ data }: { data: SubservicePageDat
           <CapabilitiesRollingSection
             capabilities={data.capabilities}
           />
+
+          {/* ── 3b. What's Included (Cards Grid) ────────────────────────────── */}
+          {data.whatsIncluded && data.whatsIncluded.length > 0 && (
+            <section className="px-6 py-24 bg-white border-b border-[#E0F2FE]">
+              <div className="max-w-7xl mx-auto">
+                <AnimatedSection className="text-center mb-14">
+                  <span className="text-sm font-semibold uppercase tracking-[0.16em] text-cyan-700">
+                    What&apos;s Included
+                  </span>
+                  <h2
+                    className="mt-5 font-display font-thin text-[#0F172A] text-balance"
+                    style={{
+                      fontSize: "clamp(30px, 4vw, 52px)",
+                      lineHeight: 1.08,
+                    }}
+                  >
+                    Everything you need, nothing you don&apos;t
+                  </h2>
+                </AnimatedSection>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {data.whatsIncluded.map((f, i) => (
+                    <AnimatedSection key={f.title} delay={i * 0.05}>
+                      <div className="group flex h-full flex-col rounded-[24px] border border-cyan-100/80 bg-white/75 p-3.5 shadow-[0_12px_36px_-6px_rgba(10,22,40,0.06),0_4px_16px_-4px_rgba(8,145,178,0.03)] backdrop-blur-md transition-all duration-500 hover:-translate-y-1.5 hover:border-cyan-300/60 hover:shadow-[0_0_28px_6px_rgba(6,182,212,0.18),0_32px_64px_-10px_rgba(10,22,40,0.14)]">
+                        <div className="relative w-full h-48 overflow-hidden rounded-[18px] flex-shrink-0 mb-4">
+                          <img
+                            src={f.image}
+                            alt={f.imageAlt}
+                            className="object-cover w-full h-full transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.14]"
+                          />
+                        </div>
+                        <h3
+                          className="font-display font-semibold text-[#0F172A] mb-2 px-1 transition-colors duration-500 group-hover:text-cyan-700"
+                          style={{ fontSize: 17, lineHeight: 1.3 }}
+                        >
+                          {f.title}
+                        </h3>
+                        <p className="text-sm text-slate-600 leading-relaxed flex-1 px-1">
+                          {f.description}
+                        </p>
+                      </div>
+                    </AnimatedSection>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
 
           {/* ── 4. Common Use Cases ─────────────────────────────────────────── */}
           <section
