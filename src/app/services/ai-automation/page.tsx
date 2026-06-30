@@ -192,6 +192,42 @@ const serviceCards: ServiceCard[] = [
 		],
 		href: '/services/ai-automation/ai-powered-apps',
 	},
+	{
+		title: 'AI & Machine Learning (AI/ML)',
+		image:
+			'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80&auto=format&fit=crop',
+		bullets: [
+			'Predictive Analytics',
+			'Resource Optimization',
+			'Data Pipeline Engineering',
+			'Algorithmic Decision Support',
+		],
+		href: '/services/ai-automation/ai-ml',
+	},
+	{
+		title: 'Deep Learning Solutions',
+		image:
+			'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80&auto=format&fit=crop',
+		bullets: [
+			'Computer Vision',
+			'Neural Network Design',
+			'Spatial Pattern Recognition',
+			'Safety Compliance Monitoring',
+		],
+		href: '/services/ai-automation/deep-learning',
+	},
+	{
+		title: 'Large Language Models (LLMs)',
+		image:
+			'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop',
+		bullets: [
+			'Document Intelligence',
+			'RAG Systems',
+			'Domain-Specific Fine-Tuning',
+			'Automated Summarization',
+		],
+		href: '/services/ai-automation/llm',
+	},
 ];
 
 export default function AutomationPage() {
