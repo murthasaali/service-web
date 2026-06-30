@@ -9,14 +9,14 @@ import TechStackCarousel, {
 } from '@/components/ui/tech-stack-carousel';
 
 export const metadata: Metadata = {
-	title: 'AI Automation Services | UK & India | aibizmod',
+	title:
+		'Business Process Automation Services | Workflow Automation | aibizmod',
 	description:
-		'AI automation, workflow automation, and business process automation services that eliminate manual work and accelerate operations — for UK and India-based businesses.',
+		'Business process automation services that eliminate manual work. Custom automation pipelines for invoice routing, CRM sync, reporting, and approval workflows. UK and India based.',
 	keywords: [
-		'ai automation services',
 		'business process automation',
 		'workflow automation',
-		'ai workflow automation',
+		'automation services',
 		'process automation',
 		'RPA services',
 		'custom automation',
@@ -27,15 +27,15 @@ export const metadata: Metadata = {
 	],
 	alternates: { canonical: 'https://aibizmod.com/services/ai-automation' },
 	openGraph: {
-		title: 'AI Automation Services | aibizmod',
+		title: 'Business Process Automation Services | aibizmod',
 		description:
-			'AI automation, workflow automation, and business process automation services that eliminate manual work and accelerate operations.',
+			'Custom automation pipelines for invoice routing, CRM sync, reporting, and approval workflows that eliminate manual work.',
 		url: '/services/ai-automation',
 	},
 };
 
 const data: ServicePageData = {
-	name: 'AI Automation',
+	name: 'Automation',
 	tagline:
 		'For operations teams and growing businesses in the UK, USA, and internationally that lose hours to manual data entry, we build custom automation pipelines — invoice routing, CRM synchronization, weekly reporting, and approval workflows. You receive documented runbooks, error-handling logic, and working integrations, so repetitive tasks run automatically and your team focuses on higher-value work.',
 	heroBullets: [

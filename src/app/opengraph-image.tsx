@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 export const alt = "aibizmod — Intelligent Technology Services";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -16,7 +18,6 @@ export default function OGImage() {
           alignItems: "center",
           justifyContent: "center",
           background: "linear-gradient(135deg, #0A1628, #1E293B)",
-          fontFamily: "Inter",
           padding: "60px 80px",
         }}
       >

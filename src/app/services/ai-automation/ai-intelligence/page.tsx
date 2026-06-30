@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'AI Analytics & Predictive Intelligence | aibizmod',
+	title: 'AI Intelligence & Predictive Analytics Services | aibizmod',
 	description:
-		'Predictive analytics, recommendation systems, anomaly detection, and customer segmentation models that turn raw data into decisions and revenue.',
+		'Extract meaningful insights from operational data using predictive models and recommendation systems. AI that surfaces patterns dashboards cannot show.',
 	keywords: [
 		'AI intelligence',
 		'predictive analytics',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 const data: SubservicePageData = {
-	name: 'AI Analytics & Predictive Intelligence',
+	name: 'AI Intelligence',
 	parentName: 'AI Automation',
 	parentSlug: 'ai-automation',
 	slug: 'ai-intelligence',

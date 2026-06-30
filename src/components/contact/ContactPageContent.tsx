@@ -9,9 +9,7 @@ import {
 	CheckCircle,
 	Clock,
 	Globe,
-	Mail,
 	MessageSquare,
-	Phone,
 } from 'lucide-react';
 import ShaderBackground from '@/components/ui/shader-background';
 import { StarButton } from '@/components/ui/star-button';

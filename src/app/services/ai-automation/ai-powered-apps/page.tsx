@@ -4,9 +4,10 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'AI-Powered Application Development | aibizmod',
+	title:
+		'AI-Powered Application Development | Machine Learning Apps | aibizmod',
 	description:
-		'AI-first app development, model fine-tuning, and AI integration into existing products — production-ready applications that use machine learning as a core feature.',
+		'AI-powered application development that integrates machine learning and AI features. Smart systems that learn and improve over time.',
 	keywords: [
 		'AI applications',
 		'machine learning',
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
 };
 
 const data: SubservicePageData = {
-	name: 'AI-Powered Application Development',
+	name: 'AI-Powered Apps',
 	parentName: 'AI Automation',
 	parentSlug: 'ai-automation',
 	slug: 'ai-powered-apps',

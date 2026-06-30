@@ -4,9 +4,10 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Business Process Automation Services | aibizmod',
+	title:
+		'Business Process Automation Services | Workflow Automation | aibizmod',
 	description:
-		'Workflow automation, invoice routing, CRM sync, and approval process automation that eliminates manual work and connects your existing business tools.',
+		'Custom process automation and workflow automation services. Eliminate manual work with automation pipelines for invoice routing, CRM sync, reporting, and approval workflows.',
 	keywords: [
 		'process automation',
 		'workflow automation',

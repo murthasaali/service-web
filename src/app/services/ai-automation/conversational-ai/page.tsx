@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'AI Chatbot Development & Conversational AI | aibizmod',
+	title: 'Conversational AI & Chatbot Development | aibizmod',
 	description:
-		'AI chatbot development, voice agents, and knowledge assistants built on GPT-4 and Claude — handling repetitive queries so your team handles the rest.',
+		'Conversational AI and chatbot development. Voice and text interfaces that understand natural language and provide intelligent responses.',
 	keywords: [
 		'conversational AI',
 		'chatbot development',

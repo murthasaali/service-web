@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Generative AI Development & LLM Integration | aibizmod',
+	title: 'Generative AI Solutions & Integration Services | aibizmod',
 	description:
-		'Custom GPT development, RAG systems, and LLM integration services that embed generative AI into business products, workflows, and customer-facing tools.',
+		'Generative AI integration and custom solutions. LLM APIs, prompt engineering, and AI-powered systems built into your products.',
 	keywords: [
 		'generative AI',
 		'LLM integration',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 const data: SubservicePageData = {
-	name: 'Generative AI & LLM Integration',
+	name: 'Generative AI',
 	parentName: 'AI Automation',
 	parentSlug: 'ai-automation',
 	slug: 'generative-ai',

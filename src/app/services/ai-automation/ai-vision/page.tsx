@@ -4,9 +4,9 @@ import SubservicePageLayout, {
 } from '@/components/SubservicePageLayout';
 
 export const metadata: Metadata = {
-	title: 'Computer Vision & AI Vision Systems | aibizmod',
+	title: 'AI Vision & Computer Vision Services | Image Recognition | aibizmod',
 	description:
-		'Computer vision pipelines, OCR, document extraction, and quality inspection automation for manufacturing, logistics, healthcare, and document-heavy industries.',
+		'Computer vision and AI vision services. Image recognition, visual analysis, and machine vision systems for automated visual understanding.',
 	keywords: [
 		'computer vision',
 		'AI vision',
