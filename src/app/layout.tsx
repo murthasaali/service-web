@@ -24,8 +24,8 @@ const entityGraph = {
 			logo: {
 				'@type': 'ImageObject',
 				'@id': 'https://aibizmod.com/#logo',
-				url: 'https://aibizmod.com/favicon.ico',
-				contentUrl: 'https://aibizmod.com/favicon.ico',
+				url: 'https://aibizmod.com/logo.svg',
+				contentUrl: 'https://aibizmod.com/logo.svg',
 			},
 			description:
 				'End-to-end technology services for modern businesses — web development, mobile apps, digital marketing, cloud infrastructure, and automation.',

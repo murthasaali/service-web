@@ -61,9 +61,10 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.date).toISOString(),
     author: {
-      "@type": "Organization",
+      "@type": "Person",
       name: blogAuthor.name,
       url: blogAuthor.url,
+      description: blogAuthor.bio,
     },
     publisher: {
       "@type": "Organization",

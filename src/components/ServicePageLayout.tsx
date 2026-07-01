@@ -1,9 +1,8 @@
 "use client";
 
-import { type ReactNode, useState } from "react";
-import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
+import { type ReactNode } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import {
   ChevronRight, CheckCircle, ArrowRight,
   Code2, Database, Server, Network, Cloud, TestTube,
@@ -85,6 +84,7 @@ export interface ServicePageData {
   process: ProcessStep[];    // exactly 4
   techStack?: string[];
   faqs: FAQ[];               // 4–5
+  answerSummary?: string;    // 40–70 word GEO answer block below H1
 }
 
 export type { ServiceCard };
@@ -152,58 +152,26 @@ function buildServiceSchema(data: ServicePageData) {
 // ─── FAQ accordion ────────────────────────────────────────────────────────────
 
 function FAQItem({ faq }: { faq: FAQ }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <div
-      className={cn(
-        "rounded-xl border cursor-pointer transition-all duration-300 overflow-hidden",
-        isOpen
-          ? "border-[#BAE6FD] bg-[#ECFEFF]/80 shadow-[0_2px_16px_rgba(8,145,178,0.06)]"
-          : "border-[#E0F2FE] bg-white hover:border-[#BAE6FD] hover:bg-[#F0FDFF]"
-      )}
-      onClick={() => setIsOpen(!isOpen)}
-    >
-      {/* Question row */}
-      <div className="flex items-center justify-between px-5 py-4 gap-4 select-none">
-        <h3 className={cn(
-          "text-[15.5px] font-medium leading-snug transition-colors duration-200 flex-1",
-          isOpen ? "text-[#0891B2] font-semibold" : "text-[#0F172A]"
-        )}>
+    <details className="group rounded-xl border cursor-pointer transition-all duration-300 overflow-hidden border-[#E0F2FE] bg-white hover:border-[#BAE6FD] hover:bg-[#F0FDFF] open:border-[#BAE6FD] open:bg-[#ECFEFF]/80 open:shadow-[0_2px_16px_rgba(8,145,178,0.06)]">
+      <summary className="flex items-center justify-between px-5 py-4 gap-4 select-none list-none [&::-webkit-details-marker]:hidden">
+        <h3 className="text-[15.5px] font-medium leading-snug transition-colors duration-200 flex-1 text-[#0F172A] group-open:text-[#0891B2] group-open:font-semibold">
           {faq.q}
         </h3>
-        {/* Chevron */}
         <svg
           width="18" height="18" viewBox="0 0 18 18" fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={cn(
-            "transition-all duration-400 ease-in-out shrink-0",
-            isOpen ? "rotate-180 text-[#0891B2]" : "text-[#94A3B8]"
-          )}
+          className="transition-all duration-400 ease-in-out shrink-0 text-[#94A3B8] group-open:rotate-180 group-open:text-[#0891B2]"
         >
           <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
+      </summary>
+      <div className="px-5 pb-5">
+        <p className="text-[14px] leading-relaxed text-slate-500 font-normal">
+          {faq.a}
+        </p>
       </div>
-
-      {/* Answer */}
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden"
-          >
-            <div className="px-5 pb-5">
-              <p className="text-[14px] leading-relaxed text-slate-500 font-normal">
-                {faq.a}
-              </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+    </details>
   );
 }
 
@@ -320,6 +288,13 @@ export default function ServicePageLayout({
                 <Sparkles size={14} aria-hidden="true" />
                 Our Services
               </span>
+
+              {/* Answer summary (GEO block) */}
+              {data.answerSummary && (
+                <p className="mt-6 text-base md:text-lg leading-relaxed text-slate-600 max-w-3xl">
+                  {data.answerSummary}
+                </p>
+              )}
 
               {/* H1 */}
               <h1

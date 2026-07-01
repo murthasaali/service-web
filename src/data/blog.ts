@@ -37,10 +37,20 @@ export interface BlogPost {
   sections: BlogSection[];
 }
 
-export const blogAuthor = {
-  name: "aibizmod Editorial Team",
-  initials: "AE",
-  url: "https://aibizmod.com/blog",
+export interface Author {
+  name: string;
+  initials: string;
+  role: string;
+  bio: string;
+  url: string;
+}
+
+export const blogAuthor: Author = {
+  name: "James Carter",
+  initials: "JC",
+  role: "CEO & Co-Founder",
+  bio: "James Carter is CEO and Co-Founder of aibizmod Ltd., where he leads product strategy and business growth. He writes about AI automation, custom software, and digital transformation for UK and India-based businesses.",
+  url: "https://aibizmod.com/about",
 };
 
 export const categories = [
