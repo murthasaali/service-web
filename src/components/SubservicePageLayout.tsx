@@ -254,6 +254,8 @@ export interface SubserviceCapability {
   icon: IconKey;
   title: string;
   description: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 export interface SubserviceUseCase {

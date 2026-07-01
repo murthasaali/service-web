@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'Legacy Migration',
 			description:
 				'Migrate applications from legacy technology stacks to modern architecture, preserving business logic while eliminating the constraints of outdated infrastructure.',
+			image: '/services/software-development/software-modernization-legacy-migration.jpg',
+			imageAlt: 'Software Development Legacy Migration capability illustration.',
 		},
 		{
 			icon: 'code2',
 			title: 'Application Re-engineering',
 			description:
 				'Rebuild legacy applications from the ground up in modern technology with improved architecture, maintainability, and integration capability — while preserving validated business logic.',
+			image: '/services/software-development/software-modernization-application-reengineering.jpg',
+			imageAlt: 'Software Development Application Re-engineering capability illustration.',
 		},
 		{
 			icon: 'layers',
 			title: 'System Upgrades',
 			description:
 				'Upgrade major version dependencies, frameworks, and infrastructure components with testing and staged rollout to manage risk across the upgrade.',
+			image: '/services/software-development/software-modernization-system-upgrades.jpg',
+			imageAlt: 'Software Development System Upgrades capability illustration.',
 		},
 		{
 			icon: 'database',
 			title: 'Data Migration',
 			description:
 				'Extract, transform, and load legacy data into a new system with full validation, reconciliation, and documented data quality checks before cut-over.',
+			image: '/services/software-development/software-modernization-data-migration.jpg',
+			imageAlt: 'Software Development Data Migration capability illustration.',
 		},
 		{
 			icon: 'workflow',
 			title: 'Integration Modernisation',
 			description:
 				'Replace point-to-point integrations between legacy systems with a modern integration layer that is maintainable, monitored, and does not require specific system knowledge to operate.',
+			image: '/services/software-development/software-modernization-integration-modernisation.jpg',
+			imageAlt: 'Software Development Integration Modernisation capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Technical Debt Assessment',
 			description:
 				'Audit a legacy codebase to document the extent and nature of technical debt, identify the highest-risk components, and produce a prioritised modernisation plan.',
-		},
+			image: '/services/software-development/software-modernization-technical-debt-assessment.jpg',
+			imageAlt: 'Software Development Technical Debt Assessment capability illustration.',
+		}
 	],
 
 	useCases: [

@@ -64,37 +64,49 @@ const data: SubservicePageData = {
 			title: 'CI/CD Pipeline Implementation',
 			description:
 				'Build automated pipelines using GitHub Actions, GitLab CI, or CircleCI that run tests, build artefacts, and deploy to staging and production on each merge.',
+			image: '/services/hosting-infrastructure/devops-cicd-pipeline-implementation.jpg',
+			imageAlt: 'Hosting & Infrastructure CI/CD Pipeline Implementation capability illustration.',
 		},
 		{
 			icon: 'container',
 			title: 'Containerisation',
 			description:
 				'Dockerise your application and its dependencies so it runs consistently across development, staging, and production environments, eliminating environment drift.',
+			image: '/services/hosting-infrastructure/devops-containerisation.jpg',
+			imageAlt: 'Hosting & Infrastructure Containerisation capability illustration.',
 		},
 		{
 			icon: 'server',
 			title: 'Kubernetes Orchestration',
 			description:
 				'Configure Kubernetes clusters for container orchestration, including deployments, services, health checks, autoscaling, and rolling update strategies.',
+			image: '/services/hosting-infrastructure/devops-kubernetes-orchestration.jpg',
+			imageAlt: 'Hosting & Infrastructure Kubernetes Orchestration capability illustration.',
 		},
 		{
 			icon: 'code2',
 			title: 'Infrastructure as Code',
 			description:
 				'Implement Terraform, Pulumi, or AWS CDK to define all infrastructure in version-controlled code, making environments reproducible and changes auditable.',
+			image: '/services/hosting-infrastructure/devops-infrastructure-as-code.jpg',
+			imageAlt: 'Hosting & Infrastructure Infrastructure as Code capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Secrets and Configuration Management',
 			description:
 				'Configure secure secrets management using AWS Secrets Manager, HashiCorp Vault, or GitHub Secrets so sensitive configuration is never stored in code repositories.',
+			image: '/services/hosting-infrastructure/devops-secrets-and-configuration-management.jpg',
+			imageAlt: 'Hosting & Infrastructure Secrets and Configuration Management capability illustration.',
 		},
 		{
 			icon: 'activity',
 			title: 'Deployment Strategy Design',
 			description:
 				'Implement blue-green, canary, or rolling deployment strategies that allow updates to be released gradually with automatic rollback if health checks fail.',
-		},
+			image: '/services/hosting-infrastructure/devops-deployment-strategy-design.jpg',
+			imageAlt: 'Hosting & Infrastructure Deployment Strategy Design capability illustration.',
+		}
 	],
 
 	useCases: [

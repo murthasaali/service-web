@@ -66,37 +66,49 @@ const data: SubservicePageData = {
 			title: 'React & Next.js Development',
 			description:
 				'Component-based frontend built with React and Next.js, with server-side rendering or static generation depending on what the page needs.',
+			image: '/services/web-development/frontend-development-react-nextjs-development.jpg',
+			imageAlt: 'Web Development React & Next.js Development capability illustration.',
 		},
 		{
 			icon: 'smartphone',
 			title: 'Responsive Design Implementation',
 			description:
 				'Layouts that adapt cleanly across screen sizes, tested on physical devices rather than just browser resize.',
+			image: '/services/web-development/frontend-development-responsive-design-implementation.jpg',
+			imageAlt: 'Web Development Responsive Design Implementation capability illustration.',
 		},
 		{
 			icon: 'globe',
 			title: 'Landing Pages',
 			description:
 				'Focused single-page builds for campaigns, product launches, or service areas — fast to load and built to convert.',
+			image: '/services/web-development/frontend-development-landing-pages.jpg',
+			imageAlt: 'Web Development Landing Pages capability illustration.',
 		},
 		{
 			icon: 'layers',
 			title: 'Progressive Web Apps',
 			description:
 				'Web apps that install on a home screen, work offline, and send push notifications — without a separate native app build.',
+			image: '/services/web-development/frontend-development-progressive-web-apps.jpg',
+			imageAlt: 'Web Development Progressive Web Apps capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Accessibility Compliance',
 			description:
 				'Semantic HTML, ARIA attributes, and keyboard navigation built in from the start, not added as an afterthought.',
+			image: '/services/web-development/frontend-development-accessibility-compliance.jpg',
+			imageAlt: 'Web Development Accessibility Compliance capability illustration.',
 		},
 		{
 			icon: 'activity',
 			title: 'Performance Optimisation',
 			description:
 				'Image compression, lazy loading, code splitting, and Core Web Vitals review to keep pages fast after launch.',
-		},
+			image: '/services/web-development/frontend-development-performance-optimisation.jpg',
+			imageAlt: 'Web Development Performance Optimisation capability illustration.',
+		}
 	],
 
 	useCases: [

@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'Google Search Ads',
 			description:
 				'Keyword strategy, match type management, negative keyword lists, and ad copy testing for search campaigns targeting users with active purchase intent.',
+			image: '/services/digital-marketing/paid-advertising-google-search-ads.jpg',
+			imageAlt: 'Digital Marketing Google Search Ads capability illustration.',
 		},
 		{
 			icon: 'monitor',
 			title: 'Meta Ads (Facebook and Instagram)',
 			description:
-				"Audience build, creative strategy, campaign structure, and funnel-stage matching across awareness, consideration, and conversion objectives on Meta's platforms.",
+				'Audience build, creative strategy, campaign structure, and funnel-stage matching across awareness, consideration, and conversion objectives on Meta',
+			image: '/services/digital-marketing/paid-advertising-meta-ads-facebook-and-instagram.jpg',
+			imageAlt: 'Digital Marketing Meta Ads (Facebook and Instagram) capability illustration.',
 		},
 		{
 			icon: 'users',
 			title: 'LinkedIn Ads',
 			description:
-				"B2B campaign management using LinkedIn's professional targeting for account-based marketing, lead generation, and brand awareness among specific industries and job functions.",
+				'B2B campaign management using LinkedIn',
+			image: '/services/digital-marketing/paid-advertising-linkedin-ads.jpg',
+			imageAlt: 'Digital Marketing LinkedIn Ads capability illustration.',
 		},
 		{
 			icon: 'lineChart',
 			title: 'PPC Campaign Management',
 			description:
 				'Ongoing bid management, budget allocation, Quality Score optimisation, and A/B testing to improve cost per click and cost per acquisition across live campaigns.',
+			image: '/services/digital-marketing/paid-advertising-ppc-campaign-management.jpg',
+			imageAlt: 'Digital Marketing PPC Campaign Management capability illustration.',
 		},
 		{
 			icon: 'settings',
 			title: 'Conversion Tracking Setup',
 			description:
 				'Google Tag Manager configuration, Google Ads conversion action setup, Meta Pixel and CAPI integration, and event verification to ensure accurate attribution data.',
+			image: '/services/digital-marketing/paid-advertising-conversion-tracking-setup.jpg',
+			imageAlt: 'Digital Marketing Conversion Tracking Setup capability illustration.',
 		},
 		{
 			icon: 'zap',
 			title: 'Retargeting Campaigns',
 			description:
 				'Audience segmentation and retargeting campaign builds that re-engage visitors who did not convert, with messaging matched to their stage in the buying process.',
-		},
+			image: '/services/digital-marketing/paid-advertising-retargeting-campaigns.jpg',
+			imageAlt: 'Digital Marketing Retargeting Campaigns capability illustration.',
+		}
 	],
 
 	useCases: [

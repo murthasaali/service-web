@@ -10,6 +10,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "framerusercontent.com",
       },
+      {
+        protocol: "https",
+        hostname: "blog.logrocket.com",
+      },
+      {
+        protocol: "https",
+        hostname: "serverpilot.io",
+      },
     ],
   },
   async rewrites() {

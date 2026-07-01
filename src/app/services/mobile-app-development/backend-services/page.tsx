@@ -65,36 +65,48 @@ const data: SubservicePageData = {
 			title: 'Mobile API Development',
 			description:
 				'Build RESTful or GraphQL APIs for mobile clients with proper authentication, input validation, error handling, versioning, and documentation for each endpoint.',
+			image: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Developer workspace showing double monitor setups with running code and development IDEs.',
 		},
 		{
 			icon: 'bell',
 			title: 'Push Notification Infrastructure',
 			description:
 				'Set up APNs (iOS) and FCM (Android) push delivery, segmented notification campaigns, delivery tracking, and opt-in management in the app.',
+			image: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Visual mockup representation of direct message bubbles and notifications layout.',
 		},
 		{
 			icon: 'shield',
 			title: 'Authentication and Identity',
 			description:
 				'Implement secure authentication using JWT tokens, OAuth 2.0, social login providers, or passwordless authentication — with refresh token rotation and session management.',
+			image: '/services/mobile-app-development/backend-services-auth.png',
+			imageAlt: 'Passwordless authentication flow diagram illustrating PINs, Security Key (Yubikey), and Biometrics leading to access granted.',
 		},
 		{
 			icon: 'package',
 			title: 'Payment Integration',
 			description:
 				'Integrate Stripe for card payments, subscriptions, and marketplace payouts, or configure Apple and Google in-app purchase for digital goods and subscription billing.',
+			image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Stack of physical and digital credit cards representing payment gateways and Stripe.',
 		},
 		{
 			icon: 'database',
 			title: 'Data Architecture for Mobile',
 			description:
 				'Design the database schema, caching layer, and data access patterns for mobile workloads, including pagination, optimistic updates, and conflict resolution for offline sync.',
+			image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Glow lines circuit board styling representing technical database caching and systems architecture.',
 		},
 		{
 			icon: 'activity',
 			title: 'Backend Monitoring and Scaling',
 			description:
 				'Configure API monitoring, error tracking, and autoscaling so the backend handles usage spikes and failures are detected and alerted before they affect users.',
+			image: 'https://serverpilot.io/static/images/blog/metrics-announcement/metrics-dashboard-servers-general.png',
+			imageAlt: 'Server metrics dashboard showing system resource utilization, memory usage, and performance graphs.',
 		},
 	],
 

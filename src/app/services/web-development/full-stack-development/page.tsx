@@ -66,37 +66,49 @@ const data: SubservicePageData = {
 			title: 'React & Next.js Applications',
 			description:
 				'Full applications built with Next.js covering both the frontend pages and the backend API routes in a single deployable codebase.',
+			image: '/services/web-development/full-stack-development-react-nextjs-applications.jpg',
+			imageAlt: 'Web Development React & Next.js Applications capability illustration.',
 		},
 		{
 			icon: 'database',
 			title: 'Database Design and Integration',
 			description:
 				'Schema design, migrations, and ORM setup so the data layer is consistent with the application logic from day one.',
+			image: '/services/web-development/full-stack-development-database-design-and-integration.jpg',
+			imageAlt: 'Web Development Database Design and Integration capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Authentication and Authorisation',
 			description:
 				'Login, session management, role-based permissions, and OAuth integration built into the application from the start.',
+			image: '/services/web-development/full-stack-development-authentication-and-authorisation.jpg',
+			imageAlt: 'Web Development Authentication and Authorisation capability illustration.',
 		},
 		{
 			icon: 'layers',
 			title: 'SaaS Product Development',
 			description:
 				'Multi-tenant applications with separate workspaces, subscription management, and plan-based feature access.',
+			image: '/services/web-development/full-stack-development-saas-product-development.jpg',
+			imageAlt: 'Web Development SaaS Product Development capability illustration.',
 		},
 		{
 			icon: 'workflow',
 			title: 'API and Webhook Integration',
 			description:
 				'Connections to third-party tools — payment processors, CRMs, communication platforms — wired in with proper error handling.',
+			image: '/services/web-development/full-stack-development-api-and-webhook-integration.jpg',
+			imageAlt: 'Web Development API and Webhook Integration capability illustration.',
 		},
 		{
 			icon: 'rocket',
 			title: 'Deployment and CI/CD',
 			description:
 				'Automated deployment pipelines with staging and production environments, so releases are consistent and rollbacks are straightforward.',
-		},
+			image: '/services/web-development/full-stack-development-deployment-and-cicd.jpg',
+			imageAlt: 'Web Development Deployment and CI/CD capability illustration.',
+		}
 	],
 
 	useCases: [

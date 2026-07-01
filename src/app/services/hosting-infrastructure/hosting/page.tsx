@@ -64,37 +64,49 @@ const data: SubservicePageData = {
 			title: 'VPS Setup and Configuration',
 			description:
 				'Configure Linux VPS instances with web server, firewall rules, SSL certificates, stack dependencies, and hardening settings for reliable, secure application hosting.',
+			image: '/services/hosting-infrastructure/hosting-vps-setup-and-configuration.jpg',
+			imageAlt: 'Hosting & Infrastructure VPS Setup and Configuration capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Managed Hosting Setup',
 			description:
 				'Configure managed hosting platforms like Vercel, Netlify, Render, or Heroku for application deployments with environment variables, domain configuration, and build pipelines.',
+			image: '/services/hosting-infrastructure/hosting-managed-hosting-setup.jpg',
+			imageAlt: 'Hosting & Infrastructure Managed Hosting Setup capability illustration.',
 		},
 		{
 			icon: 'database',
 			title: 'Dedicated Server Configuration',
 			description:
 				'Set up and configure dedicated server environments for applications requiring guaranteed resources, including RAID configuration, web server setup, and security hardening.',
+			image: '/services/hosting-infrastructure/hosting-dedicated-server-configuration.jpg',
+			imageAlt: 'Hosting & Infrastructure Dedicated Server Configuration capability illustration.',
 		},
 		{
 			icon: 'activity',
 			title: 'Uptime Monitoring',
 			description:
 				'Configure uptime monitoring with alerting covering HTTP response checks, SSL certificate expiry, and performance thresholds, with notifications to appropriate contacts.',
+			image: '/services/hosting-infrastructure/hosting-uptime-monitoring.jpg',
+			imageAlt: 'Hosting & Infrastructure Uptime Monitoring capability illustration.',
 		},
 		{
 			icon: 'refreshCw',
 			title: 'Backup Configuration',
 			description:
 				'Set up automated backup schedules for files and databases with offsite storage and documented restore procedures tested against real recovery scenarios.',
+			image: '/services/hosting-infrastructure/hosting-backup-configuration.jpg',
+			imageAlt: 'Hosting & Infrastructure Backup Configuration capability illustration.',
 		},
 		{
 			icon: 'settings',
 			title: 'SSL Certificate Management',
 			description:
 				'Provision, configure, and manage SSL certificates across all domains, with automated renewal and monitoring for expiry to prevent unexpected certificate failures.',
-		},
+			image: '/services/hosting-infrastructure/hosting-ssl-certificate-management.jpg',
+			imageAlt: 'Hosting & Infrastructure SSL Certificate Management capability illustration.',
+		}
 	],
 
 	useCases: [

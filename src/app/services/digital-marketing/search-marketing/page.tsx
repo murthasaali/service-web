@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'Technical SEO Audit',
 			description:
 				'Systematic crawl analysis identifying indexation errors, redirect chains, page speed issues, structured data gaps, and crawl budget problems with a prioritised remediation plan.',
+			image: '/services/digital-marketing/search-marketing-technical-seo-audit.jpg',
+			imageAlt: 'Digital Marketing Technical SEO Audit capability illustration.',
 		},
 		{
 			icon: 'fileText',
 			title: 'Content Strategy and SEO Writing',
 			description:
 				'Keyword research mapped to commercial intent, with content briefs and written pages targeting queries your current site is not capturing.',
+			image: '/services/digital-marketing/search-marketing-content-strategy-and-seo-writing.jpg',
+			imageAlt: 'Digital Marketing Content Strategy and SEO Writing capability illustration.',
 		},
 		{
 			icon: 'globe',
 			title: 'Local SEO',
 			description:
 				'Google Business Profile optimisation, citation building, review strategy, and localised content for businesses that need visibility in specific geographic markets.',
+			image: '/services/digital-marketing/search-marketing-local-seo.jpg',
+			imageAlt: 'Digital Marketing Local SEO capability illustration.',
 		},
 		{
 			icon: 'code2',
 			title: 'Structured Data Implementation',
 			description:
 				'Schema.org markup for products, services, FAQs, reviews, and breadcrumbs to improve rich result eligibility and AI-powered search understanding.',
+			image: '/services/digital-marketing/search-marketing-structured-data-implementation.jpg',
+			imageAlt: 'Digital Marketing Structured Data Implementation capability illustration.',
 		},
 		{
 			icon: 'activity',
 			title: 'Generative Engine Optimisation',
 			description:
 				'Optimise content structure, entity coverage, and authority signals for discovery and citation in AI-generated answer surfaces like ChatGPT, Gemini, and Perplexity.',
+			image: '/services/digital-marketing/search-marketing-generative-engine-optimisation.jpg',
+			imageAlt: 'Digital Marketing Generative Engine Optimisation capability illustration.',
 		},
 		{
 			icon: 'lineChart',
 			title: 'Rank Tracking and Reporting',
 			description:
 				'Keyword rank tracking with monthly reporting covering visibility changes, traffic attribution, and progress against the target keyword set.',
-		},
+			image: '/services/digital-marketing/search-marketing-rank-tracking-and-reporting.jpg',
+			imageAlt: 'Digital Marketing Rank Tracking and Reporting capability illustration.',
+		}
 	],
 
 	useCases: [

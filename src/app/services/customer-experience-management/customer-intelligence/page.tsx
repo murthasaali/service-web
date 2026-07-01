@@ -66,37 +66,49 @@ const data: SubservicePageData = {
 			title: 'Customer Segmentation',
 			description:
 				'Build RFM (Recency, Frequency, Monetary) and behavioural segments that reflect how your customers actually differ in value and lifecycle stage.',
+			image: '/services/customer-experience-management/customer-intelligence-customer-segmentation.jpg',
+			imageAlt: 'Customer Experience Management Customer Segmentation capability illustration.',
 		},
 		{
 			icon: 'activity',
 			title: 'Churn Risk Modelling',
 			description:
 				'Identify customers showing early signs of disengagement using behavioural signals, so retention campaigns can be triggered before accounts are lost.',
+			image: '/services/customer-experience-management/customer-intelligence-churn-risk-modelling.jpg',
+			imageAlt: 'Customer Experience Management Churn Risk Modelling capability illustration.',
 		},
 		{
 			icon: 'barChart',
 			title: 'Cohort Analysis',
 			description:
 				'Track how customer groups acquired in different periods perform over time, revealing which acquisition channels and campaigns produce the highest long-term value.',
+			image: '/services/customer-experience-management/customer-intelligence-cohort-analysis.jpg',
+			imageAlt: 'Customer Experience Management Cohort Analysis capability illustration.',
 		},
 		{
 			icon: 'database',
 			title: 'Data Consolidation',
 			description:
 				'Combine customer records from CRM, helpdesk, e-commerce, and analytics tools into a single dataset that can be queried and reported on consistently.',
+			image: '/services/customer-experience-management/customer-intelligence-data-consolidation.jpg',
+			imageAlt: 'Customer Experience Management Data Consolidation capability illustration.',
 		},
 		{
 			icon: 'lineChart',
 			title: 'Customer Lifetime Value Reporting',
 			description:
 				'Build CLV models that project long-term revenue per customer segment, informing decisions about acquisition spend, retention investment, and product prioritisation.',
+			image: '/services/customer-experience-management/customer-intelligence-customer-lifetime-value-reporting.jpg',
+			imageAlt: 'Customer Experience Management Customer Lifetime Value Reporting capability illustration.',
 		},
 		{
 			icon: 'bell',
 			title: 'Retention Tracking Dashboards',
 			description:
 				'Dashboards monitoring customer retention, churn rate, NPS trend, and satisfaction scores in one place, updated automatically from your data sources.',
-		},
+			image: '/services/customer-experience-management/customer-intelligence-retention-tracking-dashboards.jpg',
+			imageAlt: 'Customer Experience Management Retention Tracking Dashboards capability illustration.',
+		}
 	],
 
 	useCases: [

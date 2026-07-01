@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'IT Helpdesk Support',
 			description:
 				'Provide responsive first and second-line support for staff IT issues, with defined response and resolution time targets and a ticketing system for visibility and reporting.',
+			image: '/services/it-consulting-it-services/managed-it-operations-it-helpdesk-support.jpg',
+			imageAlt: 'IT Consulting & IT Services IT Helpdesk Support capability illustration.',
 		},
 		{
 			icon: 'database',
 			title: 'IT Asset Management',
 			description:
 				'Build and maintain an inventory of hardware, software, and cloud services with licence tracking, renewal calendars, and cost attribution by team or cost centre.',
+			image: '/services/it-consulting-it-services/managed-it-operations-it-asset-management.jpg',
+			imageAlt: 'IT Consulting & IT Services IT Asset Management capability illustration.',
 		},
 		{
 			icon: 'settings',
 			title: 'Ongoing Infrastructure Management',
 			description:
 				'Regular review and maintenance of your server, network, and cloud environment to ensure patching is current, configurations are correct, and capacity is adequate.',
+			image: '/services/it-consulting-it-services/managed-it-operations-ongoing-infrastructure-management.jpg',
+			imageAlt: 'IT Consulting & IT Services Ongoing Infrastructure Management capability illustration.',
 		},
 		{
 			icon: 'lineChart',
 			title: 'IT Cost Optimisation',
 			description:
 				'Audit technology spend across hardware, software, and cloud services to identify unused licences, over-provisioned resources, and better-value alternatives.',
+			image: '/services/it-consulting-it-services/managed-it-operations-it-cost-optimisation.jpg',
+			imageAlt: 'IT Consulting & IT Services IT Cost Optimisation capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'IT Security Management',
 			description:
 				'Maintain endpoint protection, manage user access reviews, oversee patch management, and handle security incidents as part of ongoing IT operations.',
+			image: '/services/it-consulting-it-services/managed-it-operations-it-security-management.jpg',
+			imageAlt: 'IT Consulting & IT Services IT Security Management capability illustration.',
 		},
 		{
 			icon: 'users',
 			title: 'IT Onboarding and Offboarding',
 			description:
 				'Manage the IT provisioning process for new starters and the deprovisioning process for leavers, including account creation, device setup, and access removal.',
-		},
+			image: '/services/it-consulting-it-services/managed-it-operations-it-onboarding-and-offboarding.jpg',
+			imageAlt: 'IT Consulting & IT Services IT Onboarding and Offboarding capability illustration.',
+		}
 	],
 
 	useCases: [

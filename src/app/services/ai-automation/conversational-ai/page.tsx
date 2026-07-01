@@ -64,37 +64,49 @@ const data: SubservicePageData = {
 			title: 'AI Chatbot Development',
 			description:
 				'Purpose-built AI chatbots for websites and apps that answer real questions using your content rather than generic scripted decision trees.',
+			image: '/services/ai-automation/conversational-ai-ai-chatbot-development.jpg',
+			imageAlt: 'AI Automation AI Chatbot Development capability illustration.',
 		},
 		{
 			icon: 'headphones',
 			title: 'Voice Agent Integration',
 			description:
 				'Phone-based AI agents with speech-to-text input that handle inbound calls, qualify inquiries, and route to the right team member.',
+			image: '/services/ai-automation/conversational-ai-voice-agent-integration.jpg',
+			imageAlt: 'AI Automation Voice Agent Integration capability illustration.',
 		},
 		{
 			icon: 'lightbulb',
 			title: 'Knowledge Base Assistants',
 			description:
 				'AI assistants that index your internal documentation, wikis, and uploaded files to answer staff questions instantly and accurately.',
+			image: '/services/ai-automation/conversational-ai-knowledge-base-assistants.jpg',
+			imageAlt: 'AI Automation Knowledge Base Assistants capability illustration.',
 		},
 		{
 			icon: 'globe',
 			title: 'Multi-channel Deployment',
 			description:
 				'Deploy the same underlying AI assistant across web chat, WhatsApp Business, Slack, Microsoft Teams, and email simultaneously.',
+			image: '/services/ai-automation/conversational-ai-multichannel-deployment.jpg',
+			imageAlt: 'AI Automation Multi-channel Deployment capability illustration.',
 		},
 		{
 			icon: 'users',
 			title: 'Human Handoff Routing',
 			description:
 				'Define rules for when the AI should escalate to a human agent, with full conversation history passed along so nothing needs to be repeated.',
+			image: '/services/ai-automation/conversational-ai-human-handoff-routing.jpg',
+			imageAlt: 'AI Automation Human Handoff Routing capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Guardrails and Content Controls',
 			description:
 				'Configure the AI to stay within defined topics, decline off-topic requests, and respond consistently in your brand voice.',
-		},
+			image: '/services/ai-automation/conversational-ai-guardrails-and-content-controls.jpg',
+			imageAlt: 'AI Automation Guardrails and Content Controls capability illustration.',
+		}
 	],
 
 	useCases: [

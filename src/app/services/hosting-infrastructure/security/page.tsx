@@ -64,37 +64,49 @@ const data: SubservicePageData = {
 			title: 'Infrastructure Security Audit',
 			description:
 				'Systematic review of server configuration, network exposure, access controls, software versions, and security header configuration with a prioritised remediation report.',
+			image: '/services/hosting-infrastructure/security-infrastructure-security-audit.jpg',
+			imageAlt: 'Hosting & Infrastructure Infrastructure Security Audit capability illustration.',
 		},
 		{
 			icon: 'wrench',
 			title: 'Server Hardening',
 			description:
 				'Apply security hardening baseline covering firewall rules, SSH key-only access, disabling unnecessary services, OS patch status, and user privilege review.',
+			image: '/services/hosting-infrastructure/security-server-hardening.jpg',
+			imageAlt: 'Hosting & Infrastructure Server Hardening capability illustration.',
 		},
 		{
 			icon: 'refreshCw',
 			title: 'Backup Solutions',
 			description:
 				'Configure automated backup schedules for databases and file systems with encrypted offsite storage and documented recovery procedures that are tested against real restore scenarios.',
+			image: '/services/hosting-infrastructure/security-backup-solutions.jpg',
+			imageAlt: 'Hosting & Infrastructure Backup Solutions capability illustration.',
 		},
 		{
 			icon: 'activity',
 			title: 'Disaster Recovery Planning',
 			description:
 				'Define recovery time objectives, document recovery procedures, configure failover infrastructure, and run tabletop or live exercises to validate the plan works in practice.',
+			image: '/services/hosting-infrastructure/security-disaster-recovery-planning.jpg',
+			imageAlt: 'Hosting & Infrastructure Disaster Recovery Planning capability illustration.',
 		},
 		{
 			icon: 'globe',
 			title: 'SSL and Security Headers',
 			description:
 				'Implement SSL certificates, HSTS, Content Security Policy, X-Frame-Options, and other security headers, with ongoing monitoring for certificate expiry and configuration regression.',
+			image: '/services/hosting-infrastructure/security-ssl-and-security-headers.jpg',
+			imageAlt: 'Hosting & Infrastructure SSL and Security Headers capability illustration.',
 		},
 		{
 			icon: 'eye',
 			title: 'Vulnerability Scanning',
 			description:
 				'Run automated vulnerability scans against your infrastructure and application surface, with triaged findings and a remediation plan prioritised by risk severity.',
-		},
+			image: '/services/hosting-infrastructure/security-vulnerability-scanning.jpg',
+			imageAlt: 'Hosting & Infrastructure Vulnerability Scanning capability illustration.',
+		}
 	],
 
 	useCases: [

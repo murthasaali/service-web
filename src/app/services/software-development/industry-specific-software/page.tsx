@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'Healthcare Software',
 			description:
 				'Build clinical, administrative, and patient-facing healthcare software with HL7/FHIR integration, NHS system connectivity, patient data governance, and DSPT compliance awareness.',
+			image: '/services/software-development/industry-specific-software-healthcare-software.jpg',
+			imageAlt: 'Software Development Healthcare Software capability illustration.',
 		},
 		{
 			icon: 'settings',
 			title: 'Construction Management Software',
 			description:
 				'Develop project management, cost control, and document management systems for construction businesses with contract value tracking, variation management, and subcontractor workflows.',
+			image: '/services/software-development/industry-specific-software-construction-management-software.jpg',
+			imageAlt: 'Software Development Construction Management Software capability illustration.',
 		},
 		{
 			icon: 'package',
 			title: 'Logistics and Supply Chain Software',
 			description:
 				'Build order management, route planning, carrier integration, and warehouse management systems for logistics operators with the specific workflow and reporting they need.',
+			image: '/services/software-development/industry-specific-software-logistics-and-supply-chain-software.jpg',
+			imageAlt: 'Software Development Logistics and Supply Chain Software capability illustration.',
 		},
 		{
 			icon: 'fileText',
 			title: 'Education and Training Software',
 			description:
 				'Develop learning management systems, student information systems, and course administration tools for education providers with OFSTED, accreditation, or awarding body data requirements.',
+			image: '/services/software-development/industry-specific-software-education-and-training-software.jpg',
+			imageAlt: 'Software Development Education and Training Software capability illustration.',
 		},
 		{
 			icon: 'settings',
 			title: 'Manufacturing Software',
 			description:
 				'Build production management, quality management, and shop floor data collection systems for manufacturers with production tracking, BOM management, and quality reporting.',
+			image: '/services/software-development/industry-specific-software-manufacturing-software.jpg',
+			imageAlt: 'Software Development Manufacturing Software capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Compliance and Audit Systems',
 			description:
 				'Develop compliance management and audit systems for regulated industries covering evidence collection, non-conformance tracking, corrective action workflows, and audit preparation.',
-		},
+			image: '/services/software-development/industry-specific-software-compliance-and-audit-systems.jpg',
+			imageAlt: 'Software Development Compliance and Audit Systems capability illustration.',
+		}
 	],
 
 	useCases: [

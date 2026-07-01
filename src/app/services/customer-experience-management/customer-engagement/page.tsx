@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'Loyalty Programme Design',
 			description:
 				'Design earn-and-redeem loyalty systems with point structures, tier levels, and redemption mechanics configured to your customer purchase patterns and margins.',
+			image: '/services/customer-experience-management/customer-engagement-loyalty-programme-design.jpg',
+			imageAlt: 'Customer Experience Management Loyalty Programme Design capability illustration.',
 		},
 		{
 			icon: 'messageSquare',
 			title: 'WhatsApp Business API Integration',
 			description:
 				'Connect WhatsApp Business API for transactional notifications, order updates, and opt-in marketing campaigns with delivery tracking and opt-out management.',
+			image: '/services/customer-experience-management/customer-engagement-whatsapp-business-api-integration.jpg',
+			imageAlt: 'Customer Experience Management WhatsApp Business API Integration capability illustration.',
 		},
 		{
 			icon: 'layers',
 			title: 'Omnichannel Communication Setup',
 			description:
 				'Unify email, SMS, push notifications, and messaging apps into coordinated lifecycle flows where each channel reinforces rather than duplicates the others.',
+			image: '/services/customer-experience-management/customer-engagement-omnichannel-communication-setup.jpg',
+			imageAlt: 'Customer Experience Management Omnichannel Communication Setup capability illustration.',
 		},
 		{
 			icon: 'bell',
 			title: 'Re-engagement Campaigns',
 			description:
 				'Build automated campaigns that identify lapsing customers from engagement signals and trigger personalised win-back sequences through the most effective channel.',
+			image: '/services/customer-experience-management/customer-engagement-reengagement-campaigns.jpg',
+			imageAlt: 'Customer Experience Management Re-engagement Campaigns capability illustration.',
 		},
 		{
 			icon: 'users',
 			title: 'Referral Programme Setup',
 			description:
 				'Design and implement referral mechanics with unique tracking links, reward triggers, and attribution reporting to turn existing customers into an acquisition channel.',
+			image: '/services/customer-experience-management/customer-engagement-referral-programme-setup.jpg',
+			imageAlt: 'Customer Experience Management Referral Programme Setup capability illustration.',
 		},
 		{
 			icon: 'lineChart',
 			title: 'Engagement Analytics',
 			description:
 				'Set up dashboards tracking open rates, click rates, redemption rates, and customer lifetime value by segment so engagement strategy decisions are evidence-based.',
-		},
+			image: '/services/customer-experience-management/customer-engagement-engagement-analytics.jpg',
+			imageAlt: 'Customer Experience Management Engagement Analytics capability illustration.',
+		}
 	],
 
 	useCases: [

@@ -64,37 +64,49 @@ const data: SubservicePageData = {
 			title: 'Computer Vision Pipelines',
 			description:
 				'Build object detection, image classification, and scene analysis pipelines trained on your specific use case and deployed as scalable inference APIs.',
+			image: '/services/ai-automation/ai-vision-computer-vision-pipelines.jpg',
+			imageAlt: 'AI Automation Computer Vision Pipelines capability illustration.',
 		},
 		{
 			icon: 'fileText',
 			title: 'OCR and Document Extraction',
 			description:
 				'Extract text, tables, form fields, and structured data from PDFs, scanned documents, and photographed forms with accuracy verification.',
+			image: '/services/ai-automation/ai-vision-ocr-and-document-extraction.jpg',
+			imageAlt: 'AI Automation OCR and Document Extraction capability illustration.',
 		},
 		{
 			icon: 'search',
 			title: 'Quality Control Inspection',
 			description:
 				'Train defect detection models on your specific product types and deploy them for automated visual quality checks in manufacturing or logistics workflows.',
+			image: '/services/ai-automation/ai-vision-quality-control-inspection.jpg',
+			imageAlt: 'AI Automation Quality Control Inspection capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Document and ID Verification',
 			description:
 				'Automated KYC workflows that read identity documents, extract fields, check for tampering indicators, and flag anomalies for review.',
+			image: '/services/ai-automation/ai-vision-document-and-id-verification.jpg',
+			imageAlt: 'AI Automation Document and ID Verification capability illustration.',
 		},
 		{
 			icon: 'monitor',
 			title: 'Video Stream Analysis',
 			description:
 				'Frame-level analysis pipelines for security, retail foot traffic, or operational event detection using real-time or batch video processing.',
+			image: '/services/ai-automation/ai-vision-video-stream-analysis.jpg',
+			imageAlt: 'AI Automation Video Stream Analysis capability illustration.',
 		},
 		{
 			icon: 'zap',
 			title: 'Real-time Vision APIs',
 			description:
 				'Deploy vision inference endpoints your existing applications can call at request time, with response times suited to interactive or near-real-time workflows.',
-		},
+			image: '/services/ai-automation/ai-vision-realtime-vision-apis.jpg',
+			imageAlt: 'AI Automation Real-time Vision APIs capability illustration.',
+		}
 	],
 
 	useCases: [

@@ -65,36 +65,48 @@ const data: SubservicePageData = {
 			title: 'OS Compatibility Updates',
 			description:
 				'Test the application against new iOS and Android releases before they ship, identify breaking changes, and implement updates to maintain compatibility.',
+			image: '/services/mobile-app-development/maintenance-os-compatibility.png',
+			imageAlt: 'Desk setup with three monitors displaying macOS, Windows, and Linux interfaces, representing cross-operating system compatibility testing and updates.',
 		},
 		{
 			icon: 'zap',
 			title: 'Performance Optimisation',
 			description:
 				'Profile application performance covering startup time, frame rate, memory usage, and battery consumption, with targeted optimisations based on measured baselines.',
+			image: '/services/mobile-app-development/maintenance-performance-optimization.png',
+			imageAlt: 'Performance optimization diagram displaying dashboard charts, speedometer gauge indicator, settings gear, and upward growth arrows.',
 		},
 		{
 			icon: 'settings',
 			title: 'Bug Fixing and Troubleshooting',
 			description:
 				'Triage, diagnose, and fix bug reports from user feedback, crash reports, and monitoring tools, with priority classification and documented resolution.',
+			image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Development workspace showing code editor and debugger running on laptop.',
 		},
 		{
 			icon: 'shield',
 			title: 'App Store Compliance Updates',
 			description:
 				'Monitor App Store and Google Play policy updates, assess their impact on your app, and implement required changes before compliance deadlines.',
+			image: 'https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Two business colleagues reviewing lists and requirements, representing compliance checks.',
 		},
 		{
 			icon: 'layers',
 			title: 'Dependency and SDK Updates',
 			description:
 				'Keep third-party libraries, SDKs, and backend integrations updated to current stable versions to avoid deprecated API issues and security vulnerabilities.',
+			image: '/services/mobile-app-development/maintenance-dependency-sdk-updates.png',
+			imageAlt: 'Diagram showing dependency and SDK updates including automated updates, library version updates, platform SDK updates (iOS, Android, Flutter, Unity, Google Cloud), and key benefits (security, compatibility, performance, reliability).',
 		},
 		{
 			icon: 'activity',
 			title: 'Crash Monitoring and Analytics Review',
 			description:
 				'Review crash reports and analytics data on a regular cadence to identify and address the issues affecting the largest number of users.',
+			image: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Mobile smartphone screen showing telemetry and diagnostic graphs.',
 		},
 	],
 

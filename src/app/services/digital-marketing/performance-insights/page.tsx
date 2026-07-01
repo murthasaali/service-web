@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'Analytics Audit and Implementation',
 			description:
 				'Audit your GA4 and Tag Manager setup, identify tracking gaps and misconfiguration, and implement the corrections needed for reliable data.',
+			image: '/services/digital-marketing/performance-insights-analytics-audit-and-implementation.jpg',
+			imageAlt: 'Digital Marketing Analytics Audit and Implementation capability illustration.',
 		},
 		{
 			icon: 'lineChart',
 			title: 'Conversion Tracking Setup',
 			description:
 				'Configure goal and conversion events covering form submissions, purchases, sign-ups, and phone calls so every marketing channel is attributed against real business outcomes.',
+			image: '/services/digital-marketing/performance-insights-conversion-tracking-setup.jpg',
+			imageAlt: 'Digital Marketing Conversion Tracking Setup capability illustration.',
 		},
 		{
 			icon: 'activity',
 			title: 'Funnel Analysis',
 			description:
 				'Map the stages of your conversion funnel from traffic source through to purchase and identify where users are dropping out, with segmentation by channel, device, and audience.',
+			image: '/services/digital-marketing/performance-insights-funnel-analysis.jpg',
+			imageAlt: 'Digital Marketing Funnel Analysis capability illustration.',
 		},
 		{
 			icon: 'zap',
 			title: 'Conversion Rate Optimisation',
 			description:
 				'Use heatmap data, session recordings, and A/B testing to identify and validate changes to landing pages, checkout flows, and key conversion points.',
+			image: '/services/digital-marketing/performance-insights-conversion-rate-optimisation.jpg',
+			imageAlt: 'Digital Marketing Conversion Rate Optimisation capability illustration.',
 		},
 		{
 			icon: 'barChart',
 			title: 'Marketing Dashboards',
 			description:
 				'Build Looker Studio dashboards connecting your paid, organic, email, and social channel performance in a single view, updated automatically from connected data sources.',
+			image: '/services/digital-marketing/performance-insights-marketing-dashboards.jpg',
+			imageAlt: 'Digital Marketing Marketing Dashboards capability illustration.',
 		},
 		{
 			icon: 'target',
 			title: 'Attribution Modelling',
 			description:
 				'Review how marketing touchpoints are credited for conversions, moving beyond last-click attribution to provide a more accurate picture of which channels are contributing.',
-		},
+			image: '/services/digital-marketing/performance-insights-attribution-modelling.jpg',
+			imageAlt: 'Digital Marketing Attribution Modelling capability illustration.',
+		}
 	],
 
 	useCases: [

@@ -63,67 +63,87 @@ const data: SubservicePageData = {
   },
 
   capabilities: [
-    {
-      icon: "eye",
-      title: "AI Visibility Benchmark",
-      description:
-        "Measure your visibility across AI search platforms and understand where your brand stands today.",
-    },
-    {
-      icon: "users",
-      title: "Competitor Analysis",
-      description:
-        "Compare your AI presence with industry competitors and identify opportunities to outperform them.",
-    },
-    {
-      icon: "search",
-      title: "Citation Gap Analysis",
-      description:
-        "Discover where AI models obtain information and identify missing citations affecting your credibility.",
-    },
-    {
-      icon: "target",
-      title: "Prompt Mapping",
-      description:
-        "Understand which prompts trigger your brand and discover where you are missing from AI-generated responses.",
-    },
-    {
-      icon: "fileText",
-      title: "Site Readiness Review",
-      description:
-        "Evaluate your website's technical readiness for AI crawling, indexing, and content understanding.",
-    },
-    {
-      icon: "database",
-      title: "Structured Data Assessment",
-      description:
-        "Review Schema.org implementation and entity markup to improve AI comprehension.",
-    },
-    {
-      icon: "cpu",
-      title: "Content Intelligence Review",
-      description:
-        "Analyze whether your content answers user intent in a way AI assistants can understand and recommend.",
-    },
-    {
-      icon: "shield",
-      title: "Authority Signal Analysis",
-      description:
-        "Evaluate backlinks, brand mentions, trust indicators, and domain authority influencing AI recommendations.",
-    },
-    {
-      icon: "compass",
-      title: "Opportunity Identification",
-      description:
-        "Prioritize high-impact improvements that can quickly increase your AI visibility.",
-    },
-    {
-      icon: "rocket",
-      title: "90-Day Implementation Roadmap",
-      description:
-        "Receive a step-by-step action plan with priorities, timelines, and measurable goals.",
-    },
-  ],
+		{
+			icon: 'eye',
+			title: 'AI Visibility Benchmark',
+			description:
+				'Measure your visibility across AI search platforms and understand where your brand stands today.',
+			image: '/services/ai-automation/ai-visibility-audit-ai-visibility-benchmark.jpg',
+			imageAlt: 'AI & Automation AI Visibility Benchmark capability illustration.',
+		},
+		{
+			icon: 'users',
+			title: 'Competitor Analysis',
+			description:
+				'Compare your AI presence with industry competitors and identify opportunities to outperform them.',
+			image: '/services/ai-automation/ai-visibility-audit-competitor-analysis.jpg',
+			imageAlt: 'AI & Automation Competitor Analysis capability illustration.',
+		},
+		{
+			icon: 'search',
+			title: 'Citation Gap Analysis',
+			description:
+				'Discover where AI models obtain information and identify missing citations affecting your credibility.',
+			image: '/services/ai-automation/ai-visibility-audit-citation-gap-analysis.jpg',
+			imageAlt: 'AI & Automation Citation Gap Analysis capability illustration.',
+		},
+		{
+			icon: 'target',
+			title: 'Prompt Mapping',
+			description:
+				'Understand which prompts trigger your brand and discover where you are missing from AI-generated responses.',
+			image: '/services/ai-automation/ai-visibility-audit-prompt-mapping.jpg',
+			imageAlt: 'AI & Automation Prompt Mapping capability illustration.',
+		},
+		{
+			icon: 'fileText',
+			title: 'Site Readiness Review',
+			description:
+				'Evaluate your website',
+			image: '/services/ai-automation/ai-visibility-audit-site-readiness-review.jpg',
+			imageAlt: 'AI & Automation Site Readiness Review capability illustration.',
+		},
+		{
+			icon: 'database',
+			title: 'Structured Data Assessment',
+			description:
+				'Review Schema.org implementation and entity markup to improve AI comprehension.',
+			image: '/services/ai-automation/ai-visibility-audit-structured-data-assessment.jpg',
+			imageAlt: 'AI & Automation Structured Data Assessment capability illustration.',
+		},
+		{
+			icon: 'cpu',
+			title: 'Content Intelligence Review',
+			description:
+				'Analyze whether your content answers user intent in a way AI assistants can understand and recommend.',
+			image: '/services/ai-automation/ai-visibility-audit-content-intelligence-review.jpg',
+			imageAlt: 'AI & Automation Content Intelligence Review capability illustration.',
+		},
+		{
+			icon: 'shield',
+			title: 'Authority Signal Analysis',
+			description:
+				'Evaluate backlinks, brand mentions, trust indicators, and domain authority influencing AI recommendations.',
+			image: '/services/ai-automation/ai-visibility-audit-authority-signal-analysis.jpg',
+			imageAlt: 'AI & Automation Authority Signal Analysis capability illustration.',
+		},
+		{
+			icon: 'compass',
+			title: 'Opportunity Identification',
+			description:
+				'Prioritize high-impact improvements that can quickly increase your AI visibility.',
+			image: '/services/ai-automation/ai-visibility-audit-opportunity-identification.jpg',
+			imageAlt: 'AI & Automation Opportunity Identification capability illustration.',
+		},
+		{
+			icon: 'rocket',
+			title: '90-Day Implementation Roadmap',
+			description:
+				'Receive a step-by-step action plan with priorities, timelines, and measurable goals.',
+			image: '/services/ai-automation/ai-visibility-audit-90day-implementation-roadmap.jpg',
+			imageAlt: 'AI & Automation 90-Day Implementation Roadmap capability illustration.',
+		}
+	],
 
   whatsIncluded: [
     {

@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'Workflow Automation Tools',
 			description:
 				'Build applications that automate multi-step operational workflows — approvals, status tracking, notifications, and data collection — replacing manual coordination between systems.',
+			image: '/services/software-development/business-applications-workflow-automation-tools.jpg',
+			imageAlt: 'Software Development Workflow Automation Tools capability illustration.',
 		},
 		{
 			icon: 'layers',
 			title: 'Internal Tooling',
 			description:
 				'Develop internal dashboards, admin interfaces, and operational tools optimised for the specific needs of operations, finance, or technical teams.',
+			image: '/services/software-development/business-applications-internal-tooling.jpg',
+			imageAlt: 'Software Development Internal Tooling capability illustration.',
 		},
 		{
 			icon: 'package',
 			title: 'Billing and Invoicing Systems',
 			description:
 				'Build billing engines and invoicing systems with calculation logic, payment tracking, and reporting matched to your specific pricing model and business rules.',
+			image: '/services/software-development/business-applications-billing-and-invoicing-systems.jpg',
+			imageAlt: 'Software Development Billing and Invoicing Systems capability illustration.',
 		},
 		{
 			icon: 'clock',
 			title: 'Project and Task Management Systems',
 			description:
 				'Develop project tracking tools with the specific fields, statuses, and reporting your team needs — without the overhead of a general-purpose platform that covers use cases you will never use.',
+			image: '/services/software-development/business-applications-project-and-task-management-systems.jpg',
+			imageAlt: 'Software Development Project and Task Management Systems capability illustration.',
 		},
 		{
 			icon: 'database',
 			title: 'Data Processing Applications',
 			description:
 				'Build applications that ingest, validate, transform, and process data from external sources or internal systems, replacing manual import and manipulation work.',
+			image: '/services/software-development/business-applications-data-processing-applications.jpg',
+			imageAlt: 'Software Development Data Processing Applications capability illustration.',
 		},
 		{
 			icon: 'settings',
 			title: 'Integration Applications',
 			description:
 				'Build connector applications that bridge systems whose native integrations are insufficient, automating data flow and reducing the manual reconciliation work between systems.',
-		},
+			image: '/services/software-development/business-applications-integration-applications.jpg',
+			imageAlt: 'Software Development Integration Applications capability illustration.',
+		}
 	],
 
 	useCases: [

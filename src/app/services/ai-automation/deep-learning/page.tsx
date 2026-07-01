@@ -56,43 +56,55 @@ const data: SubservicePageData = {
   },
 
   capabilities: [
-    {
-      icon: "eye",
-      title: "Computer Vision & Visual Analytics",
-      description:
-        "Deploy advanced convolutional neural networks (CNNs) for real-time object detection, safety compliance monitoring, and automated physical progress tracking.",
-    },
-    {
-      icon: "cpu",
-      title: "Neural Network Design & Custom Architectures",
-      description:
-        "Engineer deep, multi-layered neural frameworks calibrated precisely to process highly complex, non-linear datasets.",
-    },
-    {
-      icon: "search",
-      title: "Advanced Spatial Pattern Recognition",
-      description:
-        "Identify microscopic structural anomalies, machinery wear-and-tear, or quality deviations across massive imagery and sensor streams.",
-    },
-    {
-      icon: "layers",
-      title: "Cognitive Feature Extraction",
-      description:
-        "Automatically isolate and extract high-dimensional features from unstructured audio, visual, and environmental feeds without manual data engineering.",
-    },
-    {
-      icon: "monitor",
-      title: "Real-Time Video Stream Processing",
-      description:
-        "Process live camera feeds with intelligent frame analysis, motion-triggered processing, and edge-optimized inference for low-latency results.",
-    },
-    {
-      icon: "shield",
-      title: "Safety Compliance Monitoring",
-      description:
-        "Automated detection of PPE violations, restricted zone incursions, and hazardous conditions with instant supervisor alerts.",
-    },
-  ],
+		{
+			icon: 'eye',
+			title: 'Computer Vision & Visual Analytics',
+			description:
+				'Deploy advanced convolutional neural networks (CNNs) for real-time object detection, safety compliance monitoring, and automated physical progress tracking.',
+			image: '/services/ai-automation/deep-learning-computer-vision-visual-analytics.jpg',
+			imageAlt: 'AI & Automation Computer Vision & Visual Analytics capability illustration.',
+		},
+		{
+			icon: 'cpu',
+			title: 'Neural Network Design & Custom Architectures',
+			description:
+				'Engineer deep, multi-layered neural frameworks calibrated precisely to process highly complex, non-linear datasets.',
+			image: '/services/ai-automation/deep-learning-neural-network-design-custom-architectures.jpg',
+			imageAlt: 'AI & Automation Neural Network Design & Custom Architectures capability illustration.',
+		},
+		{
+			icon: 'search',
+			title: 'Advanced Spatial Pattern Recognition',
+			description:
+				'Identify microscopic structural anomalies, machinery wear-and-tear, or quality deviations across massive imagery and sensor streams.',
+			image: '/services/ai-automation/deep-learning-advanced-spatial-pattern-recognition.jpg',
+			imageAlt: 'AI & Automation Advanced Spatial Pattern Recognition capability illustration.',
+		},
+		{
+			icon: 'layers',
+			title: 'Cognitive Feature Extraction',
+			description:
+				'Automatically isolate and extract high-dimensional features from unstructured audio, visual, and environmental feeds without manual data engineering.',
+			image: '/services/ai-automation/deep-learning-cognitive-feature-extraction.jpg',
+			imageAlt: 'AI & Automation Cognitive Feature Extraction capability illustration.',
+		},
+		{
+			icon: 'monitor',
+			title: 'Real-Time Video Stream Processing',
+			description:
+				'Process live camera feeds with intelligent frame analysis, motion-triggered processing, and edge-optimized inference for low-latency results.',
+			image: '/services/ai-automation/deep-learning-realtime-video-stream-processing.jpg',
+			imageAlt: 'AI & Automation Real-Time Video Stream Processing capability illustration.',
+		},
+		{
+			icon: 'shield',
+			title: 'Safety Compliance Monitoring',
+			description:
+				'Automated detection of PPE violations, restricted zone incursions, and hazardous conditions with instant supervisor alerts.',
+			image: '/services/ai-automation/deep-learning-safety-compliance-monitoring.jpg',
+			imageAlt: 'AI & Automation Safety Compliance Monitoring capability illustration.',
+		}
+	],
 
   useCases: [
     {

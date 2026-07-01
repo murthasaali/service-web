@@ -56,43 +56,55 @@ const data: SubservicePageData = {
   },
 
   capabilities: [
-    {
-      icon: "cpu",
-      title: "Autonomous Digital Agents",
-      description:
-        "Build goal-oriented software entities capable of executing multi-stage administrative and logistical workflows with zero human overhead.",
-    },
-    {
-      icon: "network",
-      title: "Cross-Platform Tool Integration",
-      description:
-        "Connect autonomous agents securely to your existing software stack, databases, and third-party APIs so they can execute actions directly across systems.",
-    },
-    {
-      icon: "refreshCw",
-      title: "Continuous Learning Loops (The Feedback Flow)",
-      description:
-        "Deploy a self-correcting cycle where the agent Executes an action, Evaluates the real-world outcome data against operational targets, and instantly Optimizes its planning logic for subsequent tasks.",
-    },
-    {
-      icon: "shield",
-      title: "Human-in-the-Loop Oversight",
-      description:
-        "Integrate strict programmatic guardrails and human authorization touchpoints for high-priority executive or financial tasks, ensuring complete system safety.",
-    },
-    {
-      icon: "workflow",
-      title: "Multi-Agent Orchestration",
-      description:
-        "Collaborative agent systems where a manager agent splits complex objectives and routes sub-tasks to specialized worker agents.",
-    },
-    {
-      icon: "bell",
-      title: "Intelligent Exception Handling",
-      description:
-        "Self-correcting code that logs unexpected API errors, tries alternate routing paths, and alerts a human only when it cannot safely proceed.",
-    },
-  ],
+		{
+			icon: 'cpu',
+			title: 'Autonomous Digital Agents',
+			description:
+				'Build goal-oriented software entities capable of executing multi-stage administrative and logistical workflows with zero human overhead.',
+			image: '/services/ai-automation/agentic-ai-autonomous-digital-agents.jpg',
+			imageAlt: 'AI & Automation Autonomous Digital Agents capability illustration.',
+		},
+		{
+			icon: 'network',
+			title: 'Cross-Platform Tool Integration',
+			description:
+				'Connect autonomous agents securely to your existing software stack, databases, and third-party APIs so they can execute actions directly across systems.',
+			image: '/services/ai-automation/agentic-ai-crossplatform-tool-integration.jpg',
+			imageAlt: 'AI & Automation Cross-Platform Tool Integration capability illustration.',
+		},
+		{
+			icon: 'refreshCw',
+			title: 'Continuous Learning Loops (The Feedback Flow)',
+			description:
+				'Deploy a self-correcting cycle where the agent Executes an action, Evaluates the real-world outcome data against operational targets, and instantly Optimizes its planning logic for subsequent tasks.',
+			image: '/services/ai-automation/agentic-ai-continuous-learning-loops-the-feedback-flow.jpg',
+			imageAlt: 'AI & Automation Continuous Learning Loops (The Feedback Flow) capability illustration.',
+		},
+		{
+			icon: 'shield',
+			title: 'Human-in-the-Loop Oversight',
+			description:
+				'Integrate strict programmatic guardrails and human authorization touchpoints for high-priority executive or financial tasks, ensuring complete system safety.',
+			image: '/services/ai-automation/agentic-ai-humanintheloop-oversight.jpg',
+			imageAlt: 'AI & Automation Human-in-the-Loop Oversight capability illustration.',
+		},
+		{
+			icon: 'workflow',
+			title: 'Multi-Agent Orchestration',
+			description:
+				'Collaborative agent systems where a manager agent splits complex objectives and routes sub-tasks to specialized worker agents.',
+			image: '/services/ai-automation/agentic-ai-multiagent-orchestration.jpg',
+			imageAlt: 'AI & Automation Multi-Agent Orchestration capability illustration.',
+		},
+		{
+			icon: 'bell',
+			title: 'Intelligent Exception Handling',
+			description:
+				'Self-correcting code that logs unexpected API errors, tries alternate routing paths, and alerts a human only when it cannot safely proceed.',
+			image: '/services/ai-automation/agentic-ai-intelligent-exception-handling.jpg',
+			imageAlt: 'AI & Automation Intelligent Exception Handling capability illustration.',
+		}
+	],
 
   useCases: [
     {

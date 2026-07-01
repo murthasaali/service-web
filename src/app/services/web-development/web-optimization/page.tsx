@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'Performance Audit',
 			description:
 				'Full Lighthouse and WebPageTest baseline covering load time, Time to First Byte, Largest Contentful Paint, and Total Blocking Time, with a prioritised fix list.',
+			image: '/services/web-development/web-optimization-performance-audit.jpg',
+			imageAlt: 'Web Development Performance Audit capability illustration.',
 		},
 		{
 			icon: 'zap',
 			title: 'Image and Asset Optimisation',
 			description:
 				'Convert images to modern formats, apply compression, configure lazy loading, and set correct cache headers to reduce page weight and improve render times.',
+			image: '/services/web-development/web-optimization-image-and-asset-optimisation.jpg',
+			imageAlt: 'Web Development Image and Asset Optimisation capability illustration.',
 		},
 		{
 			icon: 'code2',
 			title: 'Script and CSS Optimisation',
 			description:
 				'Identify and defer or remove render-blocking scripts, split code bundles, and inline critical CSS to improve First Contentful Paint and Interaction to Next Paint.',
+			image: '/services/web-development/web-optimization-script-and-css-optimisation.jpg',
+			imageAlt: 'Web Development Script and CSS Optimisation capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Security Hardening',
 			description:
 				'Configure security headers, review SSL certificates, audit third-party scripts, and flag outdated dependencies with known vulnerabilities.',
+			image: '/services/web-development/web-optimization-security-hardening.jpg',
+			imageAlt: 'Web Development Security Hardening capability illustration.',
 		},
 		{
 			icon: 'eye',
 			title: 'Accessibility Audit and Fixes',
 			description:
 				'WCAG 2.1 AA audit covering semantic markup, ARIA attributes, colour contrast ratios, keyboard navigation, and focus management, with documented fixes.',
+			image: '/services/web-development/web-optimization-accessibility-audit-and-fixes.jpg',
+			imageAlt: 'Web Development Accessibility Audit and Fixes capability illustration.',
 		},
 		{
 			icon: 'lineChart',
 			title: 'Ongoing Monitoring Setup',
 			description:
 				'Configure automated performance monitoring and alerting so regressions are caught before they affect rankings or user experience.',
-		},
+			image: '/services/web-development/web-optimization-ongoing-monitoring-setup.jpg',
+			imageAlt: 'Web Development Ongoing Monitoring Setup capability illustration.',
+		}
 	],
 
 	useCases: [

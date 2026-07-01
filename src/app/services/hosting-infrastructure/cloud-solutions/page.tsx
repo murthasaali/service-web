@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'Cloud Architecture Design',
 			description:
 				'Design multi-tier cloud architectures on AWS, Azure, or GCP that balance performance, availability, security, and cost for your specific workload.',
+			image: '/services/hosting-infrastructure/cloud-solutions-cloud-architecture-design.jpg',
+			imageAlt: 'Hosting & Infrastructure Cloud Architecture Design capability illustration.',
 		},
 		{
 			icon: 'server',
 			title: 'Cloud Migration',
 			description:
 				'Plan and execute the migration of existing applications, databases, and infrastructure from on-premise or legacy hosting to cloud with minimal service disruption.',
+			image: '/services/hosting-infrastructure/cloud-solutions-cloud-migration.jpg',
+			imageAlt: 'Hosting & Infrastructure Cloud Migration capability illustration.',
 		},
 		{
 			icon: 'layers',
 			title: 'Serverless Architecture',
 			description:
 				'Design and deploy serverless applications using AWS Lambda, Azure Functions, or GCP Cloud Run for workloads that benefit from event-driven, auto-scaling compute.',
+			image: '/services/hosting-infrastructure/cloud-solutions-serverless-architecture.jpg',
+			imageAlt: 'Hosting & Infrastructure Serverless Architecture capability illustration.',
 		},
 		{
 			icon: 'settings',
 			title: 'Infrastructure as Code',
 			description:
 				'Implement Terraform or AWS CloudFormation to define and manage cloud infrastructure in version-controlled code, enabling reproducible environments and automated provisioning.',
+			image: '/services/hosting-infrastructure/cloud-solutions-infrastructure-as-code.jpg',
+			imageAlt: 'Hosting & Infrastructure Infrastructure as Code capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Cloud Security Configuration',
 			description:
 				'Configure IAM policies, security groups, VPC architecture, encryption, and audit logging to ensure cloud environments meet your security and compliance requirements.',
+			image: '/services/hosting-infrastructure/cloud-solutions-cloud-security-configuration.jpg',
+			imageAlt: 'Hosting & Infrastructure Cloud Security Configuration capability illustration.',
 		},
 		{
 			icon: 'lineChart',
 			title: 'Cost Optimisation',
 			description:
 				'Audit existing cloud spend, identify over-provisioned resources and unused services, and implement right-sizing and reserved instance strategies to reduce monthly costs.',
-		},
+			image: '/services/hosting-infrastructure/cloud-solutions-cost-optimisation.jpg',
+			imageAlt: 'Hosting & Infrastructure Cost Optimisation capability illustration.',
+		}
 	],
 
 	useCases: [

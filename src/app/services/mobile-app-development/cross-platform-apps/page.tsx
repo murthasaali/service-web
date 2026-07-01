@@ -65,36 +65,48 @@ const data: SubservicePageData = {
 			title: 'Flutter Development',
 			description:
 				'Build iOS and Android apps using Flutter and Dart, with a single codebase, custom widget rendering, and genuine 60fps performance across both platforms.',
+			image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Laptop screen displaying Dart programming code for cross-platform Flutter application development.',
 		},
 		{
 			icon: 'code2',
 			title: 'React Native Development',
 			description:
 				'Build iOS and Android apps using React Native with JavaScript or TypeScript, sharing business logic and UI components while rendering through platform-native components.',
+			image: '/services/mobile-app-development/cross-platform-react-native.png',
+			imageAlt: 'Illustration displaying a smartphone with the React Native logo, showing connections to iOS, Android, and Windows platform options.',
 		},
 		{
 			icon: 'layers',
 			title: 'Platform-specific Adaptations',
 			description:
 				'Implement platform-specific navigation patterns, styling, and interaction behaviour where the experience should differ between iOS and Android.',
+			image: '/services/mobile-app-development/cross-platform-adaptation.png',
+			imageAlt: '3D illustration showing a laptop display with various code windows, file folders, and a desk lamp, representing platform-specific coding and adaptations.',
 		},
 		{
 			icon: 'zap',
 			title: 'Native Module Integration',
 			description:
 				'Access platform-specific functionality through native modules or plugins when the cross-platform layer does not cover a required capability.',
+			image: 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'A computer terminal displaying system code execution, representing low-level native modules bridge.',
 		},
 		{
 			icon: 'settings',
 			title: 'Performance Optimisation',
 			description:
 				'Profile and optimise app performance covering render performance, memory usage, startup time, and network efficiency for a smooth user experience on both platforms.',
+			image: '/services/mobile-app-development/cross-platform-performance.png',
+			imageAlt: 'Laptop screen displaying a line graph showing performance metrics over time, representing performance optimization.',
 		},
 		{
 			icon: 'globe',
 			title: 'App Store and Play Store Release',
 			description:
 				'Handle code signing, build configuration, store listing preparation, and the full submission process for both the App Store and Google Play.',
+			image: 'https://images.unsplash.com/photo-1601972599720-36938d4ecd31?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Multiple mobile phones showing applications ready to be downloaded from the App Store and Play Store.',
 		},
 	],
 

@@ -57,43 +57,55 @@ const data: SubservicePageData = {
   },
 
   capabilities: [
-    {
-      icon: "cpu",
-      title: "Domain-Specific Fine-Tuning",
-      description:
-        "Adapt powerful foundation models (like GPT-4, Gemini, or open-source variants) to align perfectly with your industry's technical lexicon, acronyms, and operational rules.",
-    },
-    {
-      icon: "database",
-      title: "Retrieval-Augmented Generation (RAG)",
-      description:
-        "Securely tether generative AI to your private repositories and document servers for factual, context-aware answers without compromising data privacy.",
-    },
-    {
-      icon: "fileText",
-      title: "Automated Document Ingestion & Summarization",
-      description:
-        "Instantly scan, categorize, and extract critical parameters or liability clauses from multi-hundred-page technical contracts, specifications, and submittals.",
-    },
-    {
-      icon: "zap",
-      title: "Generative Administrative Automation",
-      description:
-        "Streamline administrative workloads by automating the drafting of technical responses, daily logs, and context-rich project documentation.",
-    },
-    {
-      icon: "search",
-      title: "Intelligent Knowledge Retrieval",
-      description:
-        "Natural language search across thousands of past project reports, SOPs, and technical manuals for immediate technical solutions.",
-    },
-    {
-      icon: "messageSquare",
-      title: "Conversational Document Interface",
-      description:
-        "Allow teams to ask questions in plain language and receive answers grounded in your private documentation with source citations.",
-    },
-  ],
+		{
+			icon: 'cpu',
+			title: 'Domain-Specific Fine-Tuning',
+			description:
+				'Adapt powerful foundation models (like GPT-4, Gemini, or open-source variants) to align perfectly with your industry',
+			image: '/services/ai-automation/llm-domainspecific-finetuning.jpg',
+			imageAlt: 'AI & Automation Domain-Specific Fine-Tuning capability illustration.',
+		},
+		{
+			icon: 'database',
+			title: 'Retrieval-Augmented Generation (RAG)',
+			description:
+				'Securely tether generative AI to your private repositories and document servers for factual, context-aware answers without compromising data privacy.',
+			image: '/services/ai-automation/llm-retrievalaugmented-generation-rag.jpg',
+			imageAlt: 'AI & Automation Retrieval-Augmented Generation (RAG) capability illustration.',
+		},
+		{
+			icon: 'fileText',
+			title: 'Automated Document Ingestion & Summarization',
+			description:
+				'Instantly scan, categorize, and extract critical parameters or liability clauses from multi-hundred-page technical contracts, specifications, and submittals.',
+			image: '/services/ai-automation/llm-automated-document-ingestion-summarization.jpg',
+			imageAlt: 'AI & Automation Automated Document Ingestion & Summarization capability illustration.',
+		},
+		{
+			icon: 'zap',
+			title: 'Generative Administrative Automation',
+			description:
+				'Streamline administrative workloads by automating the drafting of technical responses, daily logs, and context-rich project documentation.',
+			image: '/services/ai-automation/llm-generative-administrative-automation.jpg',
+			imageAlt: 'AI & Automation Generative Administrative Automation capability illustration.',
+		},
+		{
+			icon: 'search',
+			title: 'Intelligent Knowledge Retrieval',
+			description:
+				'Natural language search across thousands of past project reports, SOPs, and technical manuals for immediate technical solutions.',
+			image: '/services/ai-automation/llm-intelligent-knowledge-retrieval.jpg',
+			imageAlt: 'AI & Automation Intelligent Knowledge Retrieval capability illustration.',
+		},
+		{
+			icon: 'messageSquare',
+			title: 'Conversational Document Interface',
+			description:
+				'Allow teams to ask questions in plain language and receive answers grounded in your private documentation with source citations.',
+			image: '/services/ai-automation/llm-conversational-document-interface.jpg',
+			imageAlt: 'AI & Automation Conversational Document Interface capability illustration.',
+		}
+	],
 
   useCases: [
     {

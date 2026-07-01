@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'ERP Development',
 			description:
 				'Build enterprise resource planning systems covering purchasing, inventory, production, finance, and reporting — modelled on your actual operational process.',
+			image: '/services/software-development/enterprise-software-erp-development.jpg',
+			imageAlt: 'Software Development ERP Development capability illustration.',
 		},
 		{
 			icon: 'users',
 			title: 'CRM Development',
 			description:
 				'Develop custom CRM systems for organisations whose customer management requirements cannot be served by off-the-shelf platforms without significant workflow compromises.',
+			image: '/services/software-development/enterprise-software-crm-development.jpg',
+			imageAlt: 'Software Development CRM Development capability illustration.',
 		},
 		{
 			icon: 'layers',
 			title: 'HRMS Development',
 			description:
 				'Build human resources management systems covering employee records, leave management, payroll processing, performance management, and compliance reporting.',
+			image: '/services/software-development/enterprise-software-hrms-development.jpg',
+			imageAlt: 'Software Development HRMS Development capability illustration.',
 		},
 		{
 			icon: 'settings',
 			title: 'Inventory Management Systems',
 			description:
 				'Develop inventory and warehouse management systems with real-time stock visibility, multi-location tracking, reorder management, and supplier integration.',
+			image: '/services/software-development/enterprise-software-inventory-management-systems.jpg',
+			imageAlt: 'Software Development Inventory Management Systems capability illustration.',
 		},
 		{
 			icon: 'workflow',
 			title: 'Workflow and Approval Engine',
 			description:
 				'Build configurable workflow and approval systems that model multi-stage business processes with conditional routing, escalation, and audit trail.',
+			image: '/services/software-development/enterprise-software-workflow-and-approval-engine.jpg',
+			imageAlt: 'Software Development Workflow and Approval Engine capability illustration.',
 		},
 		{
 			icon: 'lineChart',
 			title: 'Enterprise Reporting and Dashboards',
 			description:
 				'Develop operational reporting and executive dashboards pulling from enterprise system data, replacing manual export and reconciliation processes.',
-		},
+			image: '/services/software-development/enterprise-software-enterprise-reporting-and-dashboards.jpg',
+			imageAlt: 'Software Development Enterprise Reporting and Dashboards capability illustration.',
+		}
 	],
 
 	useCases: [

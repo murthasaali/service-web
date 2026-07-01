@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'Digital Transformation Consulting',
 			description:
 				'Independent assessment and advisory for digital transformation initiatives — defining the scope, approach, and success criteria for technology-driven business change.',
+			image: '/services/software-development/tech-advisory-services-digital-transformation-consulting.jpg',
+			imageAlt: 'Software Development Digital Transformation Consulting capability illustration.',
 		},
 		{
 			icon: 'layers',
 			title: 'Technology Roadmapping',
 			description:
 				'Produce multi-year technology investment roadmaps sequenced by business priority, integration dependencies, and implementation capacity.',
+			image: '/services/software-development/tech-advisory-services-technology-roadmapping.jpg',
+			imageAlt: 'Software Development Technology Roadmapping capability illustration.',
 		},
 		{
 			icon: 'search',
 			title: 'Build vs Buy Analysis',
 			description:
 				'Evaluate whether a custom build or an existing product is the right choice for a specific requirement, with structured assessment against your requirements, budget, and timeline.',
+			image: '/services/software-development/tech-advisory-services-build-vs-buy-analysis.jpg',
+			imageAlt: 'Software Development Build vs Buy Analysis capability illustration.',
 		},
 		{
 			icon: 'code2',
 			title: 'Solution Architecture',
 			description:
 				'Design the technical architecture for a planned software investment before development begins, covering component structure, data model, API design, and integration patterns.',
+			image: '/services/software-development/tech-advisory-services-solution-architecture.jpg',
+			imageAlt: 'Software Development Solution Architecture capability illustration.',
 		},
 		{
 			icon: 'users',
 			title: 'Requirements Definition',
 			description:
 				'Run structured workshops to produce clear, complete requirements that development can build against — reducing the rework that comes from ambiguous or incomplete specifications.',
+			image: '/services/software-development/tech-advisory-services-requirements-definition.jpg',
+			imageAlt: 'Software Development Requirements Definition capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Technical Due Diligence',
 			description:
 				'Conduct technical due diligence on existing software assets for acquisition, investment, or partnership decisions — covering architecture quality, technical debt, and development team capability.',
-		},
+			image: '/services/software-development/tech-advisory-services-technical-due-diligence.jpg',
+			imageAlt: 'Software Development Technical Due Diligence capability illustration.',
+		}
 	],
 
 	useCases: [

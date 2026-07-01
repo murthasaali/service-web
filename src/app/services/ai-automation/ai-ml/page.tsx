@@ -57,43 +57,55 @@ const data: SubservicePageData = {
   },
 
   capabilities: [
-    {
-      icon: "lineChart",
-      title: "Predictive Analytics & Forecasting",
-      description:
-        "Move beyond baseline metrics to anticipate market shifts, timeline risks, and demand cycles using models trained on your historical patterns.",
-    },
-    {
-      icon: "target",
-      title: "Resource & Asset Optimization",
-      description:
-        "Automate the allocation of labor, machinery, and capital based on high-probability performance forecasting and real-time demand signals.",
-    },
-    {
-      icon: "database",
-      title: "Data Pipeline Engineering",
-      description:
-        "Architect scalable cloud infrastructure to collect, govern, and process massive volumes of operational data from fragmented sources.",
-    },
-    {
-      icon: "barChart",
-      title: "Algorithmic Decision Support",
-      description:
-        "Build data models that calculate the best path forward, providing instant recommendations to project managers and operations teams.",
-    },
-    {
-      icon: "refreshCw",
-      title: "Continuous Model Retraining",
-      description:
-        "Automated pipelines that retrain models as new data arrives, ensuring predictive accuracy improves over time rather than degrading.",
-    },
-    {
-      icon: "bell",
-      title: "Automated Insight Alerts",
-      description:
-        "Schedule model outputs as digests or alerts delivered automatically to stakeholders on whatever cadence is useful.",
-    },
-  ],
+		{
+			icon: 'lineChart',
+			title: 'Predictive Analytics & Forecasting',
+			description:
+				'Move beyond baseline metrics to anticipate market shifts, timeline risks, and demand cycles using models trained on your historical patterns.',
+			image: '/services/ai-automation/ai-ml-predictive-analytics-forecasting.jpg',
+			imageAlt: 'AI & Automation Predictive Analytics & Forecasting capability illustration.',
+		},
+		{
+			icon: 'target',
+			title: 'Resource & Asset Optimization',
+			description:
+				'Automate the allocation of labor, machinery, and capital based on high-probability performance forecasting and real-time demand signals.',
+			image: '/services/ai-automation/ai-ml-resource-asset-optimization.jpg',
+			imageAlt: 'AI & Automation Resource & Asset Optimization capability illustration.',
+		},
+		{
+			icon: 'database',
+			title: 'Data Pipeline Engineering',
+			description:
+				'Architect scalable cloud infrastructure to collect, govern, and process massive volumes of operational data from fragmented sources.',
+			image: '/services/ai-automation/ai-ml-data-pipeline-engineering.jpg',
+			imageAlt: 'AI & Automation Data Pipeline Engineering capability illustration.',
+		},
+		{
+			icon: 'barChart',
+			title: 'Algorithmic Decision Support',
+			description:
+				'Build data models that calculate the best path forward, providing instant recommendations to project managers and operations teams.',
+			image: '/services/ai-automation/ai-ml-algorithmic-decision-support.jpg',
+			imageAlt: 'AI & Automation Algorithmic Decision Support capability illustration.',
+		},
+		{
+			icon: 'refreshCw',
+			title: 'Continuous Model Retraining',
+			description:
+				'Automated pipelines that retrain models as new data arrives, ensuring predictive accuracy improves over time rather than degrading.',
+			image: '/services/ai-automation/ai-ml-continuous-model-retraining.jpg',
+			imageAlt: 'AI & Automation Continuous Model Retraining capability illustration.',
+		},
+		{
+			icon: 'bell',
+			title: 'Automated Insight Alerts',
+			description:
+				'Schedule model outputs as digests or alerts delivered automatically to stakeholders on whatever cadence is useful.',
+			image: '/services/ai-automation/ai-ml-automated-insight-alerts.jpg',
+			imageAlt: 'AI & Automation Automated Insight Alerts capability illustration.',
+		}
+	],
 
   useCases: [
     {

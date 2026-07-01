@@ -65,36 +65,48 @@ const data: SubservicePageData = {
 			title: 'E-commerce App Development',
 			description:
 				'Build mobile e-commerce apps with product catalogue, search, cart, saved lists, checkout, and order tracking — integrated with your existing e-commerce backend or Shopify.',
+			image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Online shopping discount and credit card payment mockup displayed on a device screen.',
 		},
 		{
 			icon: 'users',
 			title: 'Social and Community App Development',
 			description:
 				'Build apps with user profiles, content feeds, social interactions, direct messaging, and notification systems for community-centred products.',
+			image: 'https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Mockups of user direct messages and network feeds on screen representing community social apps.',
 		},
 		{
 			icon: 'clock',
 			title: 'Booking and Scheduling Apps',
 			description:
 				'Build apps for service booking, appointment scheduling, and resource management with calendar integration, availability display, and confirmation flows.',
+			image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Monthly grid view of calendar highlighting appointments and event scheduling.',
 		},
 		{
 			icon: 'zap',
 			title: 'On-demand Service Apps',
 			description:
 				'Build marketplace and on-demand service apps with provider and customer sides, real-time dispatch, location tracking, and payment processing.',
+			image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Map pin icon overlaying dynamic street patterns representing on-demand dispatch and tracking.',
 		},
 		{
 			icon: 'bell',
 			title: 'Push Notification and Re-engagement',
 			description:
 				'Configure push notification strategy including permission prompts, segmented notification campaigns, and in-app messaging to drive habitual app use after initial download.',
+			image: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'Visual representing incoming message alerts and email notifications on a dark UI screen.',
 		},
 		{
 			icon: 'lineChart',
 			title: 'App Store Optimisation',
 			description:
 				'Optimise app store listings with keyword research, screenshot design, preview video, and A/B testing of store listing elements to improve organic download rates.',
+			image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&auto=format&fit=crop&q=60',
+			imageAlt: 'A search engine optimization report diagram displayed on screen with key metrics.',
 		},
 	],
 

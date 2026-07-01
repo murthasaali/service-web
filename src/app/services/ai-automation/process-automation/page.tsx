@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'Workflow Automation',
 			description:
 				'Design and build multi-step automated pipelines triggered by events across your tools, from form submissions and database writes to scheduled time intervals.',
+			image: '/services/ai-automation/process-automation-workflow-automation.jpg',
+			imageAlt: 'AI Automation Workflow Automation capability illustration.',
 		},
 		{
 			icon: 'network',
 			title: 'API and Webhook Integration',
 			description:
 				'Connect SaaS tools, internal databases, and external services using REST APIs and webhooks, removing the need for manual exports and imports between systems.',
+			image: '/services/ai-automation/process-automation-api-and-webhook-integration.jpg',
+			imageAlt: 'AI Automation API and Webhook Integration capability illustration.',
 		},
 		{
 			icon: 'fileText',
 			title: 'Document and Invoice Processing',
 			description:
 				'Parse incoming emails and attachments to extract fields, route documents, and write records into your accounting or ERP system without manual handling.',
+			image: '/services/ai-automation/process-automation-document-and-invoice-processing.jpg',
+			imageAlt: 'AI Automation Document and Invoice Processing capability illustration.',
 		},
 		{
 			icon: 'barChart',
 			title: 'Scheduled Reporting',
 			description:
 				'Query databases on a schedule, format results, and deliver reports by email or Slack to the right people automatically on whatever cadence the business needs.',
+			image: '/services/ai-automation/process-automation-scheduled-reporting.jpg',
+			imageAlt: 'AI Automation Scheduled Reporting capability illustration.',
 		},
 		{
 			icon: 'users',
 			title: 'Approval Workflow Routing',
 			description:
 				'Route approval requests to the right person based on configurable rules, with Slack button or email form responses that update records directly without manual data entry.',
+			image: '/services/ai-automation/process-automation-approval-workflow-routing.jpg',
+			imageAlt: 'AI Automation Approval Workflow Routing capability illustration.',
 		},
 		{
 			icon: 'refreshCw',
 			title: 'Error Handling and Retry Logic',
 			description:
 				'Every automation includes fallback handling, retry attempts, and notification alerts so your team knows immediately when something needs attention.',
-		},
+			image: '/services/ai-automation/process-automation-error-handling-and-retry-logic.jpg',
+			imageAlt: 'AI Automation Error Handling and Retry Logic capability illustration.',
+		}
 	],
 
 	useCases: [

@@ -66,37 +66,49 @@ const data: SubservicePageData = {
 			title: 'Solution Architecture Design',
 			description:
 				'Define the component structure, integration patterns, data flows, and technology choices for a new system or significant new capability before development begins.',
+			image: '/services/it-consulting-it-services/architecture-design-solution-architecture-design.jpg',
+			imageAlt: 'IT Consulting & IT Services Solution Architecture Design capability illustration.',
 		},
 		{
 			icon: 'database',
 			title: 'Data Architecture',
 			description:
 				'Design data models, database schemas, and data flow patterns for applications requiring careful attention to data structure, integrity, and query performance.',
+			image: '/services/it-consulting-it-services/architecture-design-data-architecture.jpg',
+			imageAlt: 'IT Consulting & IT Services Data Architecture capability illustration.',
 		},
 		{
 			icon: 'code2',
 			title: 'API Design and Contract Review',
 			description:
 				'Design RESTful or GraphQL API contracts, review proposed API structures for consistency and correctness, and document endpoint specifications for development teams.',
+			image: '/services/it-consulting-it-services/architecture-design-api-design-and-contract-review.jpg',
+			imageAlt: 'IT Consulting & IT Services API Design and Contract Review capability illustration.',
 		},
 		{
 			icon: 'search',
 			title: 'Technology Evaluation',
 			description:
 				'Evaluate technology options against documented requirements using structured assessment criteria, producing a recommendation with clear rationale.',
+			image: '/services/it-consulting-it-services/architecture-design-technology-evaluation.jpg',
+			imageAlt: 'IT Consulting & IT Services Technology Evaluation capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Architecture Review',
 			description:
 				'Review the architecture of an existing or proposed system for security risks, scalability constraints, maintainability concerns, and alignment with requirements.',
+			image: '/services/it-consulting-it-services/architecture-design-architecture-review.jpg',
+			imageAlt: 'IT Consulting & IT Services Architecture Review capability illustration.',
 		},
 		{
 			icon: 'fileText',
 			title: 'Architecture Documentation',
 			description:
 				'Produce or update architecture documentation covering system diagrams, component descriptions, data flow maps, and architecture decision records.',
-		},
+			image: '/services/it-consulting-it-services/architecture-design-architecture-documentation.jpg',
+			imageAlt: 'IT Consulting & IT Services Architecture Documentation capability illustration.',
+		}
 	],
 
 	useCases: [

@@ -5,6 +5,8 @@ import { RollingTextList, type ThemeColor } from "@/components/ui/rolling-list";
 interface CapabilityItem {
   title: string;
   description: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 const capabilityImages: string[] = [
@@ -66,8 +68,8 @@ export default function CapabilitiesRollingSection({
     id: i + 1,
     title: cap.title,
     description: cap.description,
-    src: capabilityImages[i % capabilityImages.length],
-    alt: getCapabilityAltText(i % capabilityImages.length, cap.title),
+    src: cap.image || capabilityImages[i % capabilityImages.length],
+    alt: cap.imageAlt || getCapabilityAltText(i % capabilityImages.length, cap.title),
     color,
   }));
 

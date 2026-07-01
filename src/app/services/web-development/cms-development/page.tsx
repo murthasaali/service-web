@@ -65,37 +65,49 @@ const data: SubservicePageData = {
 			title: 'WordPress Development',
 			description:
 				'Custom WordPress builds including theme development, plugin configuration, performance hardening, and security setup — without the bloat of page builders.',
+			image: '/services/web-development/cms-development-wordpress-development.jpg',
+			imageAlt: 'Web Development WordPress Development capability illustration.',
 		},
 		{
 			icon: 'layers',
 			title: 'Headless CMS Integration',
 			description:
 				'Connect a structured CMS like Sanity, Contentful, or Strapi to a Next.js frontend for fast, decoupled content delivery with full editorial control.',
+			image: '/services/web-development/cms-development-headless-cms-integration.jpg',
+			imageAlt: 'Web Development Headless CMS Integration capability illustration.',
 		},
 		{
 			icon: 'code2',
 			title: 'Custom CMS Builds',
 			description:
 				'When existing platforms do not fit your content model, we build a lightweight custom CMS tailored exactly to your data structure and publishing workflow.',
+			image: '/services/web-development/cms-development-custom-cms-builds.jpg',
+			imageAlt: 'Web Development Custom CMS Builds capability illustration.',
 		},
 		{
 			icon: 'database',
 			title: 'Content Migration',
 			description:
 				'Move existing content from legacy CMS platforms, flat files, or spreadsheets into your new system with field mapping, validation, and redirects handled.',
+			image: '/services/web-development/cms-development-content-migration.jpg',
+			imageAlt: 'Web Development Content Migration capability illustration.',
 		},
 		{
 			icon: 'users',
 			title: 'Multi-author Workflows',
 			description:
 				'Configure draft, review, and publish stages with role-based permissions so content goes through the right approval steps before it goes live.',
+			image: '/services/web-development/cms-development-multiauthor-workflows.jpg',
+			imageAlt: 'Web Development Multi-author Workflows capability illustration.',
 		},
 		{
 			icon: 'settings',
 			title: 'Ongoing CMS Maintenance',
 			description:
 				'Core updates, plugin audits, backup configuration, and security hardening to keep your CMS installation stable and protected over time.',
-		},
+			image: '/services/web-development/cms-development-ongoing-cms-maintenance.jpg',
+			imageAlt: 'Web Development Ongoing CMS Maintenance capability illustration.',
+		}
 	],
 
 	useCases: [

@@ -64,37 +64,49 @@ const data: SubservicePageData = {
 			title: 'Predictive Analytics',
 			description:
 				'Build models that forecast demand, revenue, customer churn, or operational metrics using patterns in your historical records.',
+			image: '/services/ai-automation/ai-intelligence-predictive-analytics.jpg',
+			imageAlt: 'AI Automation Predictive Analytics capability illustration.',
 		},
 		{
 			icon: 'target',
 			title: 'Recommendation Systems',
 			description:
 				'Serve personalised product recommendations, content suggestions, or next-best actions based on individual user behaviour and history.',
+			image: '/services/ai-automation/ai-intelligence-recommendation-systems.jpg',
+			imageAlt: 'AI Automation Recommendation Systems capability illustration.',
 		},
 		{
 			icon: 'eye',
 			title: 'Anomaly Detection',
 			description:
 				'Flag unusual patterns in financial transactions, system performance, or operational data before they escalate into larger problems.',
+			image: '/services/ai-automation/ai-intelligence-anomaly-detection.jpg',
+			imageAlt: 'AI Automation Anomaly Detection capability illustration.',
 		},
 		{
 			icon: 'users',
 			title: 'Customer Segmentation',
 			description:
 				'Cluster customers by purchasing behaviour, engagement level, or lifetime value to inform targeted retention and acquisition strategies.',
+			image: '/services/ai-automation/ai-intelligence-customer-segmentation.jpg',
+			imageAlt: 'AI Automation Customer Segmentation capability illustration.',
 		},
 		{
 			icon: 'barChart',
 			title: 'Demand Forecasting',
 			description:
 				'Model future demand for inventory, staffing, or capacity planning using seasonal patterns, trend lines, and external signals.',
+			image: '/services/ai-automation/ai-intelligence-demand-forecasting.jpg',
+			imageAlt: 'AI Automation Demand Forecasting capability illustration.',
 		},
 		{
 			icon: 'bell',
 			title: 'Automated Insight Delivery',
 			description:
 				'Schedule model outputs as digests or alerts, delivered automatically to the right stakeholders on whatever cadence is useful.',
-		},
+			image: '/services/ai-automation/ai-intelligence-automated-insight-delivery.jpg',
+			imageAlt: 'AI Automation Automated Insight Delivery capability illustration.',
+		}
 	],
 
 	useCases: [

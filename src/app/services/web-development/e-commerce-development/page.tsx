@@ -66,37 +66,49 @@ const data: SubservicePageData = {
 			title: 'Online Store Development',
 			description:
 				'Product pages, category listings, search, filters, cart, and checkout built to your spec with your brand — not a modified theme.',
+			image: '/services/web-development/e-commerce-development-online-store-development.jpg',
+			imageAlt: 'Web Development Online Store Development capability illustration.',
 		},
 		{
 			icon: 'workflow',
 			title: 'Marketplace Development',
 			description:
 				'Two-sided marketplaces with seller accounts, product listings, offer management, escrow, and payout processing.',
+			image: '/services/web-development/e-commerce-development-marketplace-development.jpg',
+			imageAlt: 'Web Development Marketplace Development capability illustration.',
 		},
 		{
 			icon: 'refreshCw',
 			title: 'Subscription Platforms',
 			description:
 				'Recurring billing, plan management, trial periods, upgrade and downgrade flows, and dunning for failed payments.',
+			image: '/services/web-development/e-commerce-development-subscription-platforms.jpg',
+			imageAlt: 'Web Development Subscription Platforms capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Payment Integration',
 			description:
 				'Stripe, PayPal, or Braintree for one-time and recurring payments, with proper webhook handling for payment events and order fulfilment triggers.',
+			image: '/services/web-development/e-commerce-development-payment-integration.jpg',
+			imageAlt: 'Web Development Payment Integration capability illustration.',
 		},
 		{
 			icon: 'database',
 			title: 'Inventory Management',
 			description:
 				'Stock tracking, low-stock alerts, variant management, and connections to internal warehouse or ERP systems.',
+			image: '/services/web-development/e-commerce-development-inventory-management.jpg',
+			imageAlt: 'Web Development Inventory Management capability illustration.',
 		},
 		{
 			icon: 'barChart',
 			title: 'Order Management',
 			description:
 				'Order creation, status tracking, fulfilment updates, returns handling, and customer notification triggers.',
-		},
+			image: '/services/web-development/e-commerce-development-order-management.jpg',
+			imageAlt: 'Web Development Order Management capability illustration.',
+		}
 	],
 
 	useCases: [

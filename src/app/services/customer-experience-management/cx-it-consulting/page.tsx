@@ -66,37 +66,49 @@ const data: SubservicePageData = {
 			title: 'CX Technology Roadmapping',
 			description:
 				'Define a structured 12 to 24 month plan for CX technology investments, sequenced by business priority, integration complexity, and dependencies.',
+			image: '/services/customer-experience-management/cx-it-consulting-cx-technology-roadmapping.jpg',
+			imageAlt: 'Customer Experience Management CX Technology Roadmapping capability illustration.',
 		},
 		{
 			icon: 'search',
 			title: 'Platform Selection Advisory',
 			description:
 				'Evaluate CRM, helpdesk, engagement, and analytics platforms against your requirements through structured assessments, demos, and technical due diligence — independent of vendor relationships.',
+			image: '/services/customer-experience-management/cx-it-consulting-platform-selection-advisory.jpg',
+			imageAlt: 'Customer Experience Management Platform Selection Advisory capability illustration.',
 		},
 		{
 			icon: 'workflow',
 			title: 'Integration Architecture Design',
 			description:
 				'Design the data flows and integration patterns between your CRM, helpdesk, marketing, and analytics tools before implementation begins, avoiding common post-purchase surprises.',
+			image: '/services/customer-experience-management/cx-it-consulting-integration-architecture-design.jpg',
+			imageAlt: 'Customer Experience Management Integration Architecture Design capability illustration.',
 		},
 		{
 			icon: 'settings',
 			title: 'Digital Transformation Planning',
 			description:
 				'Translate business objectives into a structured technology change programme with defined phases, stakeholder requirements, success metrics, and risk assessments.',
+			image: '/services/customer-experience-management/cx-it-consulting-digital-transformation-planning.jpg',
+			imageAlt: 'Customer Experience Management Digital Transformation Planning capability illustration.',
 		},
 		{
 			icon: 'shield',
 			title: 'Implementation Oversight',
 			description:
 				'Provide technical governance during third-party or in-house CX platform implementations to ensure delivery stays aligned with the original requirements and architecture.',
+			image: '/services/customer-experience-management/cx-it-consulting-implementation-oversight.jpg',
+			imageAlt: 'Customer Experience Management Implementation Oversight capability illustration.',
 		},
 		{
 			icon: 'users',
 			title: 'IT Planning for CX Teams',
 			description:
 				'Work with CX and IT leadership to align technology investment decisions with operational capacity, security requirements, and long-term platform strategy.',
-		},
+			image: '/services/customer-experience-management/cx-it-consulting-it-planning-for-cx-teams.jpg',
+			imageAlt: 'Customer Experience Management IT Planning for CX Teams capability illustration.',
+		}
 	],
 
 	useCases: [
