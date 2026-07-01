@@ -583,8 +583,7 @@ export default function CapabilityShowcase() {
 
   return (
     <div id="ai-showcases" className="w-full relative pt-0 pb-16 md:pb-24 overflow-hidden -mt-16 md:-mt-24">
-      {/* CSS Styles block reproducing exact hover-gradients, mask borders */}
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .stage-card {
           --mx: 50%;
           --my: 50%;
@@ -641,7 +640,7 @@ export default function CapabilityShowcase() {
           color: #ffffff;
           box-shadow: 0 0 0 1.5px transparent inset !important;
         }
-      `}</style>
+      ` }} />
 
       {/* Main Outer Grid Setup */}
       <div className="max-w-7xl mx-auto px-6 w-full">
