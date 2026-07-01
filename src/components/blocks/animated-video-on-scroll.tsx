@@ -30,14 +30,31 @@ export function usePrefersReducedMotion() {
   return prefersReducedMotion;
 }
 
+// Responsive hook to detect mobile screens (< 768px) or short screens (< 780px height)
+export function useIsShortOrMobile() {
+  const [isShortOrMobile, setIsShortOrMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkViewport = () => {
+      setIsShortOrMobile(window.innerWidth < 768 || window.innerHeight < 780);
+    };
+    checkViewport();
+    window.addEventListener("resize", checkViewport);
+    return () => window.removeEventListener("resize", checkViewport);
+  }, []);
+  
+  return isShortOrMobile;
+}
+
 export const ContainerScroll = ({ 
   children, 
-  className 
+  className = ""
 }: { 
   children: React.ReactNode; 
   className?: string;
 }) => {
   const targetRef = useRef<HTMLDivElement>(null);
+  const isShortOrMobile = useIsShortOrMobile();
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start center", "end end"],
@@ -45,7 +62,10 @@ export const ContainerScroll = ({
   
   return (
     <ScrollProgressContext.Provider value={scrollYProgress}>
-      <div ref={targetRef} className={className}>
+      <div 
+        ref={targetRef} 
+        className={`relative w-full bg-transparent ${isShortOrMobile ? "h-auto" : "md:h-[125vh]"} ${className}`}
+      >
         {children}
       </div>
     </ScrollProgressContext.Provider>
@@ -59,8 +79,9 @@ export const ContainerSticky = ({
   children: React.ReactNode; 
   className?: string;
 }) => {
+  const isShortOrMobile = useIsShortOrMobile();
   return (
-    <div className={`sticky left-0 top-0 min-h-svh w-full flex flex-col justify-center overflow-hidden ${className || ""}`}>
+    <div className={`${isShortOrMobile ? "relative h-auto overflow-visible" : "sticky left-0 top-0 h-svh w-full flex flex-col justify-center overflow-hidden"} ${className || ""}`}>
       {children}
     </div>
   );
@@ -78,6 +99,7 @@ export const ContainerAnimated = ({
   outputRange?: number[];
 }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
+  const isShortOrMobile = useIsShortOrMobile();
   const scrollYProgress = useScrollProgress();
   
   const rawY = useTransform(scrollYProgress, inputRange, outputRange);
@@ -87,7 +109,7 @@ export const ContainerAnimated = ({
   const rawBlur = useTransform(scrollYProgress, [0.0, 0.25], [10, 0]);
   const blurTemplate = useMotionTemplate`blur(${rawBlur}px)`;
   
-  const style = prefersReducedMotion 
+  const style = (prefersReducedMotion || isShortOrMobile) 
     ? {} 
     : {
         y: springY,
@@ -116,6 +138,7 @@ export const HeroVideo = ({
   scrollControlled?: boolean;
 }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
+  const isShortOrMobile = useIsShortOrMobile();
   const scrollYProgress = useScrollProgress();
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -167,7 +190,7 @@ export const HeroVideo = ({
 
   // Adjust playbackRate and currentTime based on scroll position and velocity
   useEffect(() => {
-    if (!scrollControlled) return;
+    if (!scrollControlled || isShortOrMobile) return;
     const video = videoRef.current;
     if (!video) return;
 
@@ -211,12 +234,12 @@ export const HeroVideo = ({
       unsubscribe();
       video.removeEventListener("loadedmetadata", startPlay);
     };
-  }, [smoothProgress, smoothVelocity, scrollControlled, startTime]);
+  }, [smoothProgress, smoothVelocity, scrollControlled, startTime, isShortOrMobile]);
 
   const rawScale = useTransform(scrollYProgress, [0, 0.45], [0.7, 1.0]);
   const springScale = useSpring(rawScale, { stiffness: 100, damping: 16, mass: 0.75 });
 
-  const style = prefersReducedMotion ? {} : { scale: springScale };
+  const style = (prefersReducedMotion || isShortOrMobile) ? {} : { scale: springScale };
 
   return (
     <motion.video
@@ -269,6 +292,7 @@ export const ContainerInset = ({
   roundednessRange?: number[];
 }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
+  const isShortOrMobile = useIsShortOrMobile();
   const scrollYProgress = useScrollProgress();
   
   const yVal = useTransform(scrollYProgress, [0, 0.45], insetYRange);
@@ -281,7 +305,7 @@ export const ContainerInset = ({
   
   const clipPath = useMotionTemplate`inset(${springY}% ${springX}% round ${springR}px)`;
   
-  const style = prefersReducedMotion ? {} : { clipPath };
+  const style = (prefersReducedMotion || isShortOrMobile) ? {} : { clipPath };
   
   return (
     <motion.div className={className} style={style}>

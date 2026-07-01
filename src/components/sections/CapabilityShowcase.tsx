@@ -582,7 +582,7 @@ export default function CapabilityShowcase() {
   const currentService = services[active];
 
   return (
-    <div id="ai-showcases" className="w-full relative pt-0 pb-16 md:pb-24 overflow-hidden -mt-16 md:-mt-24">
+    <div id="ai-showcases" className="w-full relative pt-8 md:pt-4 pb-16 md:pb-24 overflow-hidden mt-0 md:-mt-8 lg:-mt-12 xl:-mt-16">
       <style dangerouslySetInnerHTML={{ __html: `
         .stage-card {
           --mx: 50%;
@@ -708,7 +708,7 @@ export default function CapabilityShowcase() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           onMouseMove={handleMouseMove}
-          className="stage-card bg-[#0F172A] rounded-[28px] p-8 md:p-12 relative overflow-hidden min-h-[460px] md:h-[450px]"
+          className="stage-card bg-[#0F172A] rounded-[28px] p-6 sm:p-8 md:p-12 relative overflow-hidden min-h-[460px] md:h-[450px]"
         >
           {/* Glowing dotted overlay - localized hologram effect */}
           <div 
@@ -775,7 +775,7 @@ export default function CapabilityShowcase() {
             </div>
 
             {/* Right Column: Visual Pane containing the WebGL Canvas */}
-            <div className={`visual-pane-anim h-[250px] md:h-[300px] relative ${visualFading ? "opacity-0" : "opacity-100"}`}>
+            <div className={`visual-pane-anim h-[180px] sm:h-[220px] md:h-[300px] relative ${visualFading ? "opacity-0" : "opacity-100"}`}>
               <canvas ref={canvasRef} className="w-full h-full block cursor-grab active:cursor-grabbing touch-none select-none" />
             </div>
 
