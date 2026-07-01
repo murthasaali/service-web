@@ -79,6 +79,8 @@ const config: Config = {
         sans:    ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
         display: ["var(--font-general-sans)", "var(--font-inter)", "Inter", "sans-serif"],
         inter:   ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+        manrope: ["var(--font-manrope)", "sans-serif"],
+        fraunces: ["var(--font-fraunces)", "serif"],
       },
 
       fontSize: {

@@ -141,6 +141,13 @@ const data: ServicePageData = {
 
 const serviceCards: ServiceCard[] = [
 	{
+		title: 'AI Visibility Audit',
+		image:
+			'https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=800&q=80&auto=format&fit=crop',
+		bullets: ['Benchmark', 'Roadmap'],
+		href: '/services/ai-automation/ai-visibility-audit',
+	},
+	{
 		title: 'Process Automation',
 		image:
 			'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80&auto=format&fit=crop',
@@ -227,13 +234,6 @@ const serviceCards: ServiceCard[] = [
 			'Automated Summarization',
 		],
 		href: '/services/ai-automation/llm',
-	},
-	{
-		title: 'AI Visibility Audit',
-		image:
-			'https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=800&q=80&auto=format&fit=crop',
-		bullets: ['Benchmark', 'Roadmap'],
-		href: '/services/ai-automation/ai-visibility-audit',
 	},
 ];
 

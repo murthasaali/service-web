@@ -49,7 +49,7 @@ export function StarButton({
       )}
       {...props}
     >
-      <div
+      <span
         className={cn(
           "animate-spark-border absolute -inset-3 rounded-[inherit]",
           glow && "blur-[1px]",

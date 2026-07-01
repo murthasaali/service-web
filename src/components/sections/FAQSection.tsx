@@ -118,6 +118,7 @@ export default function FAQSection() {
             {/* View All Button */}
             <Link href="/faq" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded-3xl inline-flex mt-2">
               <StarButton
+                as="span"
                 lightColor="#38bdf8"
                 backgroundColor="#0f172a"
                 className="font-sans font-semibold text-[11px] uppercase tracking-[0.2em]"

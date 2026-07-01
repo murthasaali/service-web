@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Phone, ArrowRight, LayoutGrid, Globe } from "lucide-react";
+import { ArrowRight, LayoutGrid, Globe } from "lucide-react";
 import { StarButton } from "@/components/ui/star-button";
 import {
   FaFacebookF,
@@ -72,7 +72,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy text-white/70 transition-colors duration-300 w-full">
       {/* Start Today Section */}
-      <div className="max-w-7xl mx-auto px-6 border-b border-white/10 py-6 md:py-8">
+      <div className="max-w-7xl mx-auto px-6 border-b border-white/10 py-5 md:py-6">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
           <div className="max-w-3xl space-y-2">
             <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#22D3EE] block">
@@ -88,6 +88,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-4 shrink-0">
             <Link href="/contact" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded-3xl shrink-0">
               <StarButton
+                as="span"
                 lightColor="#22D3EE"
                 backgroundColor="#ffffff"
                 textColor="text-black"
@@ -99,6 +100,7 @@ export default function Footer() {
             </Link>
             <Link href="/services" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 rounded-3xl shrink-0">
               <StarButton
+                as="span"
                 lightColor="#FAFAFA"
                 backgroundColor="#ffffff"
                 textColor="text-black"
@@ -112,7 +114,7 @@ export default function Footer() {
       </div>
 
       {/* Main Grid Section */}
-      <div className="max-w-7xl mx-auto px-6 py-6 md:py-8">
+      <div className="max-w-7xl mx-auto px-6 py-5 md:py-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6">
           {/* Brand & Inquiries Column */}
           <div className="md:col-span-3 space-y-4">
@@ -127,35 +129,14 @@ export default function Footer() {
             <p className="font-sans text-[13px] leading-[1.7] text-white/60 max-w-[280px]">
               aibizmod is a digital growth & intelligent technology firm helping businesses navigate the AI-driven future, build a stronger digital presence and scale with confidence.
             </p>
-            <div className="pt-2 space-y-3">
-              <p className="font-sans text-[11px] text-white/40 uppercase tracking-widest">Global Offices</p>
-              {countries.map((c) => (
-                <div key={c.code} className="space-y-0.5">
-                  <div className="flex items-center gap-2 text-[13px] text-white/70 font-medium">
-                    {c.flag}
-                    <span>{c.code}</span>
-                  </div>
-                  <div className="flex items-center gap-2.5 text-[13px] text-white/50 pl-7">
-                    <Phone size={11} className="text-[#22D3EE] shrink-0" />
-                    <a href={`tel:${c.phone.replace(/\s/g, "")}`} className="hover:text-white transition-colors">
-                      {c.phone}
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-2.5 text-[13px] text-white/50 pl-7">
-                    <MdEmail size={12} className="text-[#22D3EE] shrink-0" />
-                    <a href={`mailto:${c.email}`} className="hover:text-white transition-colors">
-                      {c.email}
-                    </a>
-                  </div>
-                </div>
-              ))}
-              <div className="pt-2 border-t border-white/10">
-                <div className="flex items-center gap-2.5 text-[13px] text-white/50">
-                  <Globe size={12} className="text-[#22D3EE] shrink-0" />
-                  <a href="mailto:aibizmod@outlook.com" className="hover:text-white transition-colors">
-                    aibizmod@outlook.com
-                  </a>
-                </div>
+            
+            {/* General Outlook Inquiry Email */}
+            <div className="pt-3 border-t border-white/10 w-fit">
+              <div className="flex items-center gap-2 text-[13px] text-white/50 font-sans">
+                <Globe size={12} className="text-[#22D3EE] shrink-0" />
+                <a href="mailto:aibizmod@outlook.com" className="hover:text-white transition-colors">
+                  aibizmod@outlook.com
+                </a>
               </div>
             </div>
           </div>
@@ -215,7 +196,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Column */}
-          <div className="md:col-span-3 flex flex-col justify-between h-full space-y-6">
+          <div className="md:col-span-3 space-y-6">
             <div>
               <h5 className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50 mb-4">Newsletter</h5>
               <p className="font-sans text-[12px] text-white/50 leading-relaxed">
@@ -223,8 +204,29 @@ export default function Footer() {
               </p>
             </div>
 
+            {/* Global Offices */}
+            <div className="pt-4 border-t border-white/10 space-y-3">
+              <p className="font-sans text-[11px] text-white/40 uppercase tracking-widest">Global Offices</p>
+              {countries.map((c) => (
+                <div key={c.code} className="space-y-0.5 font-sans">
+                  <div className="flex items-center gap-1.5 text-[13px] text-white/80 font-medium">
+                    {c.flag}
+                    <span>{c.code}</span>
+                  </div>
+                  <div className="pl-6 text-[12.5px] text-white/50 space-y-0.5">
+                    <a href={`tel:${c.phone.replace(/\s/g, "")}`} className="hover:text-white transition-colors block">
+                      {c.phone}
+                    </a>
+                    <a href={`mailto:${c.email}`} className="hover:text-white transition-colors block">
+                      {c.email}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
             {/* Social Links */}
-            <div className="pt-6 flex gap-4 flex-wrap md:justify-start items-center">
+            <div className="pt-4 border-t border-white/10 flex gap-4 flex-wrap md:justify-start items-center">
               {socials.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -255,7 +257,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar Section */}
-      <div className="max-w-7xl mx-auto px-6 border-t border-white/10 py-4">
+      <div className="max-w-7xl mx-auto px-6 border-t border-white/10 py-3">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[11px] text-white/40">
           <p>&copy; {new Date().getFullYear()} aibizmod Ltd. All rights reserved.</p>
         </div>

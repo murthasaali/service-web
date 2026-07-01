@@ -51,6 +51,7 @@ export default function ServicesGrid() {
                 className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 rounded-3xl inline-flex"
               >
                 <StarButton
+                  as="span"
                   lightColor="#00f0ff"
                   backgroundColor="#0f172a"
                   borderWidth={2.2}

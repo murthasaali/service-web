@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Manrope, Fraunces } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 import SmoothScroll from '@/components/providers/SmoothScroll';
@@ -76,6 +76,20 @@ const inter = Inter({
 	weight: ['400', '500', '600', '700'],
 });
 
+const manrope = Manrope({
+	subsets: ['latin'],
+	variable: '--font-manrope',
+	display: 'swap',
+	weight: ['300', '400', '600', '700'],
+});
+
+const fraunces = Fraunces({
+	subsets: ['latin'],
+	variable: '--font-fraunces',
+	display: 'swap',
+	weight: ['400', '500', '600'],
+});
+
 export const metadata: Metadata = {
 	title: {
 		default: 'aibizmod | Intelligent Tech Services',
@@ -120,7 +134,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en' className={`${inter.variable} ${generalSans.variable}`}>
+		<html lang='en' className={`${inter.variable} ${generalSans.variable} ${manrope.variable} ${fraunces.variable}`}>
 			<head>
 				<script
 					type='application/ld+json'

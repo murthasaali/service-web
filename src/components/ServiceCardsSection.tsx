@@ -3,9 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { iconMap, type IconKey } from "./ServicePageLayout";
 import SectionHeading from "@/components/common/SectionHeading";
 import TargetCursor from "@/components/ui/TargetCursor";
+import AnimatedSection from "@/components/common/AnimatedSection";
 
 export interface ServiceCard {
   iconKey?: IconKey;
@@ -96,6 +98,41 @@ function Card({
 
 export default function ServiceCardsSection({ cards }: { cards: ServiceCard[] }) {
   const [inSection, setInSection] = React.useState(false);
+  const prefersReduced = useReducedMotion();
+
+  const containerVariants: Variants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.12,
+      },
+    },
+  };
+
+  const cardVariants: Variants = {
+    hidden: prefersReduced
+      ? { opacity: 0 }
+      : {
+          opacity: 0,
+          y: 120,
+          scale: 0.88,
+          rotateX: 15,
+        },
+    visible: prefersReduced
+      ? { opacity: 1, transition: { duration: 0.3 } }
+      : {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          rotateX: 0,
+          transition: {
+            type: "spring" as const,
+            stiffness: 22,
+            damping: 13,
+            mass: 1.3,
+          },
+        },
+  };
 
   return (
     <section
@@ -125,18 +162,33 @@ export default function ServiceCardsSection({ cards }: { cards: ServiceCard[] })
       <div className="absolute -bottom-16 -right-16 w-[400px] h-[400px] rounded-full bg-blue-200/22 blur-3xl pointer-events-none" />
 
       <div style={{ position: "relative", zIndex: 10, maxWidth: "1200px", margin: "0 auto" }}>
-        <SectionHeading
-          eyebrow="What We Offer"
-          heading="End-to-end digital services for modern businesses"
-          centered
-          className="mb-14"
-        />
+        <AnimatedSection direction="up" className="mb-14">
+          <SectionHeading
+            eyebrow="What We Offer"
+            heading="End-to-end digital services for modern businesses"
+            centered
+          />
+        </AnimatedSection>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          style={{ perspective: "1200px" }}
+        >
           {cards.map((card) => (
-            <Card key={card.title} card={card} />
+            <motion.div
+              key={card.title}
+              variants={cardVariants}
+              className="flex w-full justify-center"
+              style={{ transformStyle: "preserve-3d" }}
+            >
+              <Card card={card} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

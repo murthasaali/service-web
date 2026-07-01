@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import StickyFooterLayout from '@/components/layout/StickyFooterLayout';
 import HeroSection from '@/components/sections/HeroSection';
 import ServicesGrid from '@/components/sections/ServicesGrid';
+import AIAutomationHero from '@/components/sections/ai-automation-hero';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
 import GlobalPresence from '@/components/sections/GlobalPresence';
 import HowWeWork from '@/components/sections/HowWeWork';
@@ -33,6 +34,7 @@ export default function Home() {
 				<main>
 					<HeroSection />
 					<ServicesGrid />
+					<AIAutomationHero />
 					<WhyChooseUs />
 					<GlobalPresence />
 					<HowWeWork />
