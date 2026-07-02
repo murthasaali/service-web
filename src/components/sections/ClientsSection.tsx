@@ -34,7 +34,7 @@ const logos = [
   },
   {
     src: "/clients/texastech.svg",
-    alt: "Texas Tech Services enterprise logo representing technology sector partner",
+    alt: "Texas ",
     website: "https://texastechserv.com/",
     gradient: { from: "#2563EB", via: "#3B82F6", to: "#DBEAFE" },
   },
